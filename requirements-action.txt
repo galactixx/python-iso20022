@@ -1,2 +1,3 @@
+libcst
 xsdata>=24.12
 xsdata[cli]>=24.12
