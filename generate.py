@@ -167,10 +167,6 @@ class EnumMetadata:
     message_sets: Set[str]
 
     @property
-    def name(self) -> str:
-        return self.enum.name.value
-
-    @property
     def in_multiple_sets(self) -> bool:
         return len(self.message_sets) > 1
     
@@ -716,7 +712,7 @@ def generate_dataclass_models(
     path_new_name = path_without_extension.name.replace('.', '_')
     path_with_new_name = path_without_extension.with_name(path_new_name)
     path_components = list(path_with_new_name.parts)
-    del path_components[0:2]
+    path_components = path_components[path_components.index(REPO_SCHEMA_DIR) + 1:]
     path_components.insert(0, PACKAGE_DIR)
     package = '.'.join(path_components)
 
@@ -764,7 +760,7 @@ def generate_dataclass_models(
         ]
     )
 
-    # Add function to api.py file
+    # Add function to _api.py file
     api_python_file.add_function(dst, src.stem, model_name)
     iso_message_files.append(iso_message)
 
@@ -826,7 +822,7 @@ def main(schema_paths: List[Path]) -> None:
             # Write common enums to respective files
             write_common_enum_files(enum_common_files=enum_common_files)
 
-            # Close and save api.py file
+            # Close and save _api.py file
             api_python_file.save_file()
 
 
