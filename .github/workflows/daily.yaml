@@ -2,7 +2,7 @@ name: Daily ISO20022 Model Generation
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 15 * * *' # 9:00 AM CST (15:00 UTC)
   workflow_dispatch:
 
 permissions:
