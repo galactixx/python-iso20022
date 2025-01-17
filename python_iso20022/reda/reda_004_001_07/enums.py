@@ -1,11 +1,83 @@
 from enum import Enum
 
 
-class InvestorType4Code(Enum):
-    BOT3 = "BOT3"
-    NPRF = "NPRF"
-    PRF3 = "PRF3"
-    PRF4 = "PRF4"
+class AnnualChargePaymentType1Code(Enum):
+    CAPL = "CAPL"
+    INCO = "INCO"
+
+
+class AssessmentOfValueRequiredUnderColluktype1Code(Enum):
+    YSCO = "YSCO"
+    NSCO = "NSCO"
+
+
+class DividendPolicy1Code(Enum):
+    CASH = "CASH"
+    UNIT = "UNIT"
+    BOTH = "BOTH"
+
+
+class EmtdataReportingVfmuktype1Code(Enum):
+    YSCO = "YSCO"
+
+
+class EusavingsDirective1Code(Enum):
+    EUSI = "EUSI"
+    EUSO = "EUSO"
+    VARI = "VARI"
+
+
+class EventFrequency5Code(Enum):
+    YEAR = "YEAR"
+    SEMI = "SEMI"
+    QUTR = "QUTR"
+    MNTH = "MNTH"
+    WEEK = "WEEK"
+    DAIL = "DAIL"
+    CLOS = "CLOS"
+    TOMN = "TOMN"
+    TOWK = "TOWK"
+    TWMN = "TWMN"
+
+
+class ExPostCostCalculationBasis1Code(Enum):
+    FIXB = "FIXB"
+    ROLL = "ROLL"
+
+
+class FundOrderType10Code(Enum):
+    SUBS = "SUBS"
+    RDIV = "RDIV"
+    REDM = "REDM"
+    RGSV = "RGSV"
+    WIDP = "WIDP"
+
+
+class FundPaymentType1Code(Enum):
+    DRAF = "DRAF"
+    CACC = "CACC"
+    CHEQ = "CHEQ"
+    CRDT = "CRDT"
+    DDEB = "DDEB"
+    CARD = "CARD"
+
+
+class GovernanceProcessType1Code(Enum):
+    BMIF = "BMIF"
+    NINF = "NINF"
+    CMIF = "CMIF"
+    AMIF = "AMIF"
+
+
+class HoldingTransferable1Code(Enum):
+    TRAL = "TRAL"
+    TRNA = "TRNA"
+    RFOD = "RFOD"
+
+
+class IntendedOrActual2Code(Enum):
+    ANTE = "ANTE"
+    POST = "POST"
 
 
 class InvestmentFundMiFidfee2Code(Enum):
@@ -40,56 +112,10 @@ class InvestmentFundMiFidfee2Code(Enum):
     TRS1 = "TRS1"
 
 
-class TargetMarket2Code(Enum):
-    NEUT = "NEUT"
-    YSCO = "YSCO"
-
-
-class GovernanceProcessType1Code(Enum):
-    BMIF = "BMIF"
-    NINF = "NINF"
-    CMIF = "CMIF"
-    AMIF = "AMIF"
-
-
-class ExPostCostCalculationBasis1Code(Enum):
-    FIXB = "FIXB"
-    ROLL = "ROLL"
-
-
-class QuotationType1Code(Enum):
-    ACTU = "ACTU"
-    PRCT = "PRCT"
-
-
-class DividendPolicy1Code(Enum):
-    CASH = "CASH"
-    UNIT = "UNIT"
-    BOTH = "BOTH"
-
-
-class InvestorType2Code(Enum):
-    BOT3 = "BOT3"
-    EPRO = "EPRO"
-    PRF2 = "PRF2"
-
-
-class AnnualChargePaymentType1Code(Enum):
-    CAPL = "CAPL"
-    INCO = "INCO"
-
-
-class EventFrequency5Code(Enum):
-    YEAR = "YEAR"
-    SEMI = "SEMI"
-    QUTR = "QUTR"
-    MNTH = "MNTH"
-    WEEK = "WEEK"
-    DAIL = "DAIL"
-    CLOS = "CLOS"
-    TOMN = "TOMN"
-    TOWK = "TOWK"
-    TWMN = "TWMN"
+class InvestmentFundPlanType1Code(Enum):
+    INVP = "INVP"
+    SWIP = "SWIP"
+    WTHP = "WTHP"
 
 
 class InvestmentNeed2Code(Enum):
@@ -98,32 +124,44 @@ class InvestmentNeed2Code(Enum):
     ISLB = "ISLB"
 
 
+class InvestorType2Code(Enum):
+    BOT3 = "BOT3"
+    EPRO = "EPRO"
+    PRF2 = "PRF2"
+
+
+class InvestorType3Code(Enum):
+    RETL = "RETL"
+    PRF2 = "PRF2"
+    NEI1 = "NEI1"
+    BOT2 = "BOT2"
+
+
+class InvestorType4Code(Enum):
+    BOT3 = "BOT3"
+    NPRF = "NPRF"
+    PRF3 = "PRF3"
+    PRF4 = "PRF4"
+
+
+class NotionalOrUnitBased1Code(Enum):
+    UNIT = "UNIT"
+    NOTI = "NOTI"
+
+
+class OtherReviewRelatedToValueAndOrChargesUktype1Code(Enum):
+    REVA = "REVA"
+    REVO = "REVO"
+
+
 class OutcomeOfCollassessmentOfValueUktype1Code(Enum):
     COL1 = "COL1"
     COL2 = "COL2"
 
 
-class ReferToFundOrderDesk1Code(Enum):
-    RFOD = "RFOD"
-
-
-class TimeFrame2Code(Enum):
-    HOLD = "HOLD"
-    LONG = "LONG"
-    MEDM = "MEDM"
-    SHOR = "SHOR"
-    VSHT = "VSHT"
-
-
-class EusavingsDirective1Code(Enum):
-    EUSI = "EUSI"
-    EUSO = "EUSO"
-    VARI = "VARI"
-
-
-class TargetMarket3Code(Enum):
-    YSCO = "YSCO"
-    NSCO = "NSCO"
+class OutcomeOfPrinvalueAssessmentOrReviewUktype1Code(Enum):
+    PRI2 = "PRI2"
+    PRI1 = "PRI1"
 
 
 class ProductStructure1Code(Enum):
@@ -137,56 +175,13 @@ class ProductStructure1Code(Enum):
     NUCI = "NUCI"
 
 
-class AssessmentOfValueRequiredUnderColluktype1Code(Enum):
-    YSCO = "YSCO"
-    NSCO = "NSCO"
+class QuotationType1Code(Enum):
+    ACTU = "ACTU"
+    PRCT = "PRCT"
 
 
-class SustainabilityPreferences2Code(Enum):
-    NEUT = "NEUT"
-    YSCO = "YSCO"
-
-
-class FundOrderType10Code(Enum):
-    SUBS = "SUBS"
-    RDIV = "RDIV"
-    REDM = "REDM"
-    RGSV = "RGSV"
-    WIDP = "WIDP"
-
-
-class EmtdataReportingVfmuktype1Code(Enum):
-    YSCO = "YSCO"
-
-
-class NotionalOrUnitBased1Code(Enum):
-    UNIT = "UNIT"
-    NOTI = "NOTI"
-
-
-class OtherReviewRelatedToValueAndOrChargesUktype1Code(Enum):
-    REVA = "REVA"
-    REVO = "REVO"
-
-
-class HoldingTransferable1Code(Enum):
-    TRAL = "TRAL"
-    TRNA = "TRNA"
+class ReferToFundOrderDesk1Code(Enum):
     RFOD = "RFOD"
-
-
-class FundPaymentType1Code(Enum):
-    DRAF = "DRAF"
-    CACC = "CACC"
-    CHEQ = "CHEQ"
-    CRDT = "CRDT"
-    DDEB = "DDEB"
-    CARD = "CARD"
-
-
-class OutcomeOfPrinvalueAssessmentOrReviewUktype1Code(Enum):
-    PRI2 = "PRI2"
-    PRI1 = "PRI1"
 
 
 class SignatureType1Code(Enum):
@@ -196,17 +191,9 @@ class SignatureType1Code(Enum):
     NONE = "NONE"
 
 
-class InvestorType3Code(Enum):
-    RETL = "RETL"
-    PRF2 = "PRF2"
-    NEI1 = "NEI1"
-    BOT2 = "BOT2"
-
-
-class InvestmentFundPlanType1Code(Enum):
-    INVP = "INVP"
-    SWIP = "SWIP"
-    WTHP = "WTHP"
+class SustainabilityPreferences2Code(Enum):
+    NEUT = "NEUT"
+    YSCO = "YSCO"
 
 
 class TargetMarket1Code(Enum):
@@ -215,6 +202,19 @@ class TargetMarket1Code(Enum):
     NSCO = "NSCO"
 
 
-class IntendedOrActual2Code(Enum):
-    ANTE = "ANTE"
-    POST = "POST"
+class TargetMarket2Code(Enum):
+    NEUT = "NEUT"
+    YSCO = "YSCO"
+
+
+class TargetMarket3Code(Enum):
+    YSCO = "YSCO"
+    NSCO = "NSCO"
+
+
+class TimeFrame2Code(Enum):
+    HOLD = "HOLD"
+    LONG = "LONG"
+    MEDM = "MEDM"
+    SHOR = "SHOR"
+    VSHT = "VSHT"

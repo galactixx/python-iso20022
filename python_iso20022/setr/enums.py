@@ -1,76 +1,26 @@
 from enum import Enum
 
 
-class IncomePreference1Code(Enum):
-    CASH = "CASH"
-    DRIP = "DRIP"
+class BestExecution1Code(Enum):
+    BTEX = "BTEX"
 
 
-class FinancialAdvice1Code(Enum):
-    RECE = "RECE"
-    NREC = "NREC"
-    UKWN = "UKWN"
+class BusinessProcessType1Code(Enum):
+    ISUP = "ISUP"
+    NISP = "NISP"
+    PRAC = "PRAC"
+    RSAL = "RSAL"
+    PROP = "PROP"
+    THRU = "THRU"
+    IDEL = "IDEL"
+    DPLX = "DPLX"
 
 
-class GateHoldBack1Code(Enum):
-    GATE = "GATE"
-    HOLD = "HOLD"
-
-
-class PersonIdentificationType2Code(Enum):
-    PASS = "PASS"
-    CPFA = "CPFA"
-    SRSA = "SRSA"
-    NRIN = "NRIN"
-    DRLC = "DRLC"
-    SOCS = "SOCS"
-    AREG = "AREG"
-    IDCD = "IDCD"
-    EMID = "EMID"
-
-
-class FundOrderType5Code(Enum):
-    NSPN = "NSPN"
-    NCPN = "NCPN"
-    SWSP = "SWSP"
-    CWSP = "CWSP"
-
-
-class TradingCapacity8Code(Enum):
-    AGEN = "AGEN"
-    PRIN = "PRIN"
-
-
-class EqualisationMethodologyType1Code(Enum):
-    COLI = "COLI"
-    DDEP = "DDEP"
-    EQCR = "EQCR"
-
-
-class ClearingSide1Code(Enum):
-    BUYI = "BUYI"
-    SELL = "SELL"
-    LEND = "LEND"
-    BORW = "BORW"
-
-
-class MarketType6Code(Enum):
-    OTCO = "OTCO"
-    VARI = "VARI"
-    EXCH = "EXCH"
-
-
-class PositionEffect2Code(Enum):
-    OPEN = "OPEN"
-    CLOS = "CLOS"
-    ROLL = "ROLL"
-    FIFO = "FIFO"
-    CLOA = "CLOA"
-
-
-class ChargeTaxBasis1Code(Enum):
-    FLAT = "FLAT"
-    PERU = "PERU"
+class CancellationRight1Code(Enum):
+    VALI = "VALI"
+    NOXO = "NOXO"
+    NOWA = "NOWA"
+    NOIN = "NOIN"
 
 
 class CashMarginOrder1Code(Enum):
@@ -79,9 +29,9 @@ class CashMarginOrder1Code(Enum):
     MRGC = "MRGC"
 
 
-class InterestType2Code(Enum):
-    CINT = "CINT"
-    XINT = "XINT"
+class ChargeTaxBasis1Code(Enum):
+    FLAT = "FLAT"
+    PERU = "PERU"
 
 
 class ChargeType11Code(Enum):
@@ -103,42 +53,25 @@ class ChargeType11Code(Enum):
     UCIC = "UCIC"
 
 
-class CancellationRight1Code(Enum):
-    VALI = "VALI"
-    NOXO = "NOXO"
-    NOWA = "NOWA"
-    NOIN = "NOIN"
+class ClearingSide1Code(Enum):
+    BUYI = "BUYI"
+    SELL = "SELL"
+    LEND = "LEND"
+    BORW = "BORW"
 
 
-class OrderWaiverReason1Code(Enum):
-    LATE = "LATE"
-    FEND = "FEND"
-    BMIN = "BMIN"
-    CUTO = "CUTO"
-    COMW = "COMW"
-
-
-class SignatureType2Code(Enum):
-    DIGI = "DIGI"
-    ELEC = "ELEC"
-    NONE = "NONE"
-    ORIG = "ORIG"
-
-
-class NegotiatedTrade1Code(Enum):
-    NEGO = "NEGO"
-    NNGO = "NNGO"
-    UNKW = "UNKW"
-
-
-class TypeOfPrice3Code(Enum):
-    AVER = "AVER"
-    AVOV = "AVOV"
-    GREX = "GREX"
-    NET2 = "NET2"
-    NET1 = "NET1"
-    PARV = "PARV"
-    RDAV = "RDAV"
+class CommissionType9Code(Enum):
+    CLDI = "CLDI"
+    STEP = "STEP"
+    SOFT = "SOFT"
+    PERN = "PERN"
+    FLAT = "FLAT"
+    PERU = "PERU"
+    PWCD = "PWCD"
+    PWEU = "PWEU"
+    BRKR = "BRKR"
+    DFDP = "DFDP"
+    PBOC = "PBOC"
 
 
 class ConfirmationCancellationReason1Code(Enum):
@@ -166,6 +99,25 @@ class ConfirmationCancellationReason1Code(Enum):
     REFE = "REFE"
 
 
+class EqualisationMethodologyType1Code(Enum):
+    COLI = "COLI"
+    DDEP = "DDEP"
+    EQCR = "EQCR"
+
+
+class FinancialAdvice1Code(Enum):
+    RECE = "RECE"
+    NREC = "NREC"
+    UKWN = "UKWN"
+
+
+class FundCashAccount2Code(Enum):
+    CASH = "CASH"
+    CPFO = "CPFO"
+    CPFS = "CPFS"
+    SRSA = "SRSA"
+
+
 class FundOrderType4Code(Enum):
     BEDB = "BEDB"
     INVP = "INVP"
@@ -176,51 +128,11 @@ class FundOrderType4Code(Enum):
     RDIV = "RDIV"
 
 
-class LateReport1Code(Enum):
-    LAT1 = "LAT1"
-    LAT2 = "LAT2"
-
-
-class TradeRegulatoryConditions1Code(Enum):
-    SOLI = "SOLI"
-    USOL = "USOL"
-
-
-class CommissionType9Code(Enum):
-    CLDI = "CLDI"
-    STEP = "STEP"
-    SOFT = "SOFT"
-    PERN = "PERN"
-    FLAT = "FLAT"
-    PERU = "PERU"
-    PWCD = "PWCD"
-    PWEU = "PWEU"
-    BRKR = "BRKR"
-    DFDP = "DFDP"
-    PBOC = "PBOC"
-
-
-class BusinessProcessType1Code(Enum):
-    ISUP = "ISUP"
-    NISP = "NISP"
-    PRAC = "PRAC"
-    RSAL = "RSAL"
-    PROP = "PROP"
-    THRU = "THRU"
-    IDEL = "IDEL"
-    DPLX = "DPLX"
-
-
-class TaxationBasis4Code(Enum):
-    FLAT = "FLAT"
-    PERU = "PERU"
-    GRAM = "GRAM"
-    NEAM = "NEAM"
-
-
-class UktaxGroupUnitCode(Enum):
-    GRP1 = "GRP1"
-    GRP2 = "GRP2"
+class FundOrderType5Code(Enum):
+    NSPN = "NSPN"
+    NCPN = "NCPN"
+    SWSP = "SWSP"
+    CWSP = "CWSP"
 
 
 class FundOrderType8Code(Enum):
@@ -234,12 +146,69 @@ class FundOrderType8Code(Enum):
     WIDP = "WIDP"
 
 
-class BestExecution1Code(Enum):
-    BTEX = "BTEX"
+class GateHoldBack1Code(Enum):
+    GATE = "GATE"
+    HOLD = "HOLD"
 
 
-class UnaffirmedReason1Code(Enum):
-    NAFF = "NAFF"
+class IncomePreference1Code(Enum):
+    CASH = "CASH"
+    DRIP = "DRIP"
+
+
+class InterestType2Code(Enum):
+    CINT = "CINT"
+    XINT = "XINT"
+
+
+class LateReport1Code(Enum):
+    LAT1 = "LAT1"
+    LAT2 = "LAT2"
+
+
+class MarketType6Code(Enum):
+    OTCO = "OTCO"
+    VARI = "VARI"
+    EXCH = "EXCH"
+
+
+class NegotiatedTrade1Code(Enum):
+    NEGO = "NEGO"
+    NNGO = "NNGO"
+    UNKW = "UNKW"
+
+
+class OrderWaiverReason1Code(Enum):
+    LATE = "LATE"
+    FEND = "FEND"
+    BMIN = "BMIN"
+    CUTO = "CUTO"
+    COMW = "COMW"
+
+
+class PersonIdentificationType2Code(Enum):
+    PASS = "PASS"
+    CPFA = "CPFA"
+    SRSA = "SRSA"
+    NRIN = "NRIN"
+    DRLC = "DRLC"
+    SOCS = "SOCS"
+    AREG = "AREG"
+    IDCD = "IDCD"
+    EMID = "EMID"
+
+
+class PositionEffect2Code(Enum):
+    OPEN = "OPEN"
+    CLOS = "CLOS"
+    ROLL = "ROLL"
+    FIFO = "FIFO"
+    CLOA = "CLOA"
+
+
+class RedemptionCompletion1Code(Enum):
+    RED0 = "RED0"
+    RED1 = "RED1"
 
 
 class SettlementDate5Code(Enum):
@@ -277,6 +246,63 @@ class Side3Code(Enum):
     OPEX = "OPEX"
 
 
+class SignatureType2Code(Enum):
+    DIGI = "DIGI"
+    ELEC = "ELEC"
+    NONE = "NONE"
+    ORIG = "ORIG"
+
+
+class SourceOfCash1Code(Enum):
+    ALMY = "ALMY"
+    CASH = "CASH"
+    COMP = "COMP"
+    EMIN = "EMIN"
+    GIFT = "GIFT"
+    INHE = "INHE"
+    INLQ = "INLQ"
+    REST = "REST"
+    REDM = "REDM"
+    REPY = "REPY"
+    SEAQ = "SEAQ"
+    SALE = "SALE"
+    SVGS = "SVGS"
+    SELF = "SELF"
+    WINS = "WINS"
+
+
+class TaxType11Code(Enum):
+    PROV = "PROV"
+    NATI = "NATI"
+    STAT = "STAT"
+    WITH = "WITH"
+    KAPA = "KAPA"
+    INPO = "INPO"
+    STAM = "STAM"
+    WTAX = "WTAX"
+    INHT = "INHT"
+    SOSU = "SOSU"
+    CTAX = "CTAX"
+    GIFT = "GIFT"
+    COAX = "COAX"
+    EUTR = "EUTR"
+    AKT1 = "AKT1"
+    AKT2 = "AKT2"
+    ZWIS = "ZWIS"
+
+
+class TaxationBasis4Code(Enum):
+    FLAT = "FLAT"
+    PERU = "PERU"
+    GRAM = "GRAM"
+    NEAM = "NEAM"
+
+
+class TradeRegulatoryConditions1Code(Enum):
+    SOLI = "SOLI"
+    USOL = "USOL"
+
+
 class TradeType3Code(Enum):
     BSKT = "BSKT"
     INDX = "INDX"
@@ -304,60 +330,34 @@ class TradeType3Code(Enum):
     FUTR = "FUTR"
 
 
-class TaxType11Code(Enum):
-    PROV = "PROV"
-    NATI = "NATI"
-    STAT = "STAT"
-    WITH = "WITH"
-    KAPA = "KAPA"
-    INPO = "INPO"
-    STAM = "STAM"
-    WTAX = "WTAX"
-    INHT = "INHT"
-    SOSU = "SOSU"
-    CTAX = "CTAX"
-    GIFT = "GIFT"
-    COAX = "COAX"
-    EUTR = "EUTR"
-    AKT1 = "AKT1"
-    AKT2 = "AKT2"
-    ZWIS = "ZWIS"
+class TradingCapacity2Code(Enum):
+    PRIN = "PRIN"
+    TAGN = "TAGN"
 
 
-class FundCashAccount2Code(Enum):
-    CASH = "CASH"
-    CPFO = "CPFO"
-    CPFS = "CPFS"
-    SRSA = "SRSA"
-
-
-class RedemptionCompletion1Code(Enum):
-    RED0 = "RED0"
-    RED1 = "RED1"
-
-
-class SourceOfCash1Code(Enum):
-    ALMY = "ALMY"
-    CASH = "CASH"
-    COMP = "COMP"
-    EMIN = "EMIN"
-    GIFT = "GIFT"
-    INHE = "INHE"
-    INLQ = "INLQ"
-    REST = "REST"
-    REDM = "REDM"
-    REPY = "REPY"
-    SEAQ = "SEAQ"
-    SALE = "SALE"
-    SVGS = "SVGS"
-    SELF = "SELF"
-    WINS = "WINS"
+class TradingCapacity8Code(Enum):
+    AGEN = "AGEN"
+    PRIN = "PRIN"
 
 
 class TradingDate1Code(Enum):
     VARI = "VARI"
 
 
-class TradingCapacity2Code(Enum):
-    PRIN = "PRIN"
-    TAGN = "TAGN"
+class TypeOfPrice3Code(Enum):
+    AVER = "AVER"
+    AVOV = "AVOV"
+    GREX = "GREX"
+    NET2 = "NET2"
+    NET1 = "NET1"
+    PARV = "PARV"
+    RDAV = "RDAV"
+
+
+class UktaxGroupUnitCode(Enum):
+    GRP1 = "GRP1"
+    GRP2 = "GRP2"
+
+
+class UnaffirmedReason1Code(Enum):
+    NAFF = "NAFF"

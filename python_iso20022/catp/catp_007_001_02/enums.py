@@ -1,16 +1,6 @@
 from enum import Enum
 
 
-class CurrencyConversionResponse2Code(Enum):
-    ODCC = "ODCC"
-    ICRD = "ICRD"
-    IPRD = "IPRD"
-    IRAT = "IRAT"
-    NDCC = "NDCC"
-    IAMG = "IAMG"
-    IATM = "IATM"
-
-
 class AtmserviceType8Code(Enum):
     ASTS = "ASTS"
     BLCQ = "BLCQ"
@@ -28,3 +18,13 @@ class AtmserviceType8Code(Enum):
     SPRV = "SPRV"
     DPSV = "DPSV"
     TRFP = "TRFP"
+
+
+class CurrencyConversionResponse2Code(Enum):
+    ODCC = "ODCC"
+    ICRD = "ICRD"
+    IPRD = "IPRD"
+    IRAT = "IRAT"
+    NDCC = "NDCC"
+    IAMG = "IAMG"
+    IATM = "IATM"

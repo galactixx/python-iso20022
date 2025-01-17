@@ -1,6 +1,11 @@
 from enum import Enum
 
 
+class CashPaymentStatus2Code(Enum):
+    PDNG = "PDNG"
+    FINL = "FINL"
+
+
 class FinalStatusCode(Enum):
     STLD = "STLD"
     RJTD = "RJTD"
@@ -11,8 +16,3 @@ class FinalStatusCode(Enum):
 class ReportIndicator1Code(Enum):
     STND = "STND"
     PRPR = "PRPR"
-
-
-class CashPaymentStatus2Code(Enum):
-    PDNG = "PDNG"
-    FINL = "FINL"

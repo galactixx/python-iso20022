@@ -1,10 +1,70 @@
 from enum import Enum
 
 
-class UserInterface7Code(Enum):
-    OCAI = "OCAI"
-    CLRL = "CLRL"
+class AdministrativeType1Code(Enum):
+    OTHN = "OTHN"
+    OTHP = "OTHP"
+    TEXT = "TEXT"
+
+
+class BatchManagementType2Code(Enum):
+    AKRQ = "AKRQ"
+    AKRP = "AKRP"
+    ENDB = "ENDB"
+    IDNT = "IDNT"
+    OTHN = "OTHN"
+    OTHP = "OTHP"
+    RERQ = "RERQ"
+    STRT = "STRT"
+
+
+class CardServiceType4Code(Enum):
+    PART = "PART"
+    FINL = "FINL"
+    OTHN = "OTHN"
+    OTHP = "OTHP"
+
+
+class ClearingMethod2Code(Enum):
+    DAYC = "DAYC"
+    DFRD = "DFRD"
+    INST = "INST"
+    OTHN = "OTHN"
+    OTHP = "OTHP"
+    RLTM = "RLTM"
+
+
+class PartyType23Code(Enum):
+    OTHN = "OTHN"
+    OTHP = "OTHP"
     CLRA = "CLRA"
+
+
+class ReconciliationActivityType1Code(Enum):
+    ACQG = "ACQG"
+    CNSD = "CNSD"
+    ISSG = "ISSG"
+    OTHN = "OTHN"
+    OTHP = "OTHP"
+
+
+class ReconciliationCategory1Code(Enum):
+    RVSL = "RVSL"
+    OTHP = "OTHP"
+    OTHN = "OTHN"
+    FNCL = "FNCL"
+    CGBK = "CGBK"
+
+
+class ReconciliationFunction1Code(Enum):
+    INQR = "INQR"
+    INCU = "INCU"
+    CNVY = "CNVY"
+
+
+class ReconciliationImpact1Code(Enum):
+    DEBT = "DEBT"
+    CRDT = "CRDT"
 
 
 class ReconciliationMessageType2Code(Enum):
@@ -52,67 +112,7 @@ class ReconciliationMessageType2Code(Enum):
     RTVI = "RTVI"
 
 
-class ReconciliationActivityType1Code(Enum):
-    ACQG = "ACQG"
-    CNSD = "CNSD"
-    ISSG = "ISSG"
-    OTHN = "OTHN"
-    OTHP = "OTHP"
-
-
-class ReconciliationCategory1Code(Enum):
-    RVSL = "RVSL"
-    OTHP = "OTHP"
-    OTHN = "OTHN"
-    FNCL = "FNCL"
-    CGBK = "CGBK"
-
-
-class ReconciliationImpact1Code(Enum):
-    DEBT = "DEBT"
-    CRDT = "CRDT"
-
-
-class CardServiceType4Code(Enum):
-    PART = "PART"
-    FINL = "FINL"
-    OTHN = "OTHN"
-    OTHP = "OTHP"
-
-
-class BatchManagementType2Code(Enum):
-    AKRQ = "AKRQ"
-    AKRP = "AKRP"
-    ENDB = "ENDB"
-    IDNT = "IDNT"
-    OTHN = "OTHN"
-    OTHP = "OTHP"
-    RERQ = "RERQ"
-    STRT = "STRT"
-
-
-class ClearingMethod2Code(Enum):
-    DAYC = "DAYC"
-    DFRD = "DFRD"
-    INST = "INST"
-    OTHN = "OTHN"
-    OTHP = "OTHP"
-    RLTM = "RLTM"
-
-
-class PartyType23Code(Enum):
-    OTHN = "OTHN"
-    OTHP = "OTHP"
+class UserInterface7Code(Enum):
+    OCAI = "OCAI"
+    CLRL = "CLRL"
     CLRA = "CLRA"
-
-
-class ReconciliationFunction1Code(Enum):
-    INQR = "INQR"
-    INCU = "INCU"
-    CNVY = "CNVY"
-
-
-class AdministrativeType1Code(Enum):
-    OTHN = "OTHN"
-    OTHP = "OTHP"
-    TEXT = "TEXT"

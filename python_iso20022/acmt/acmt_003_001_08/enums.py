@@ -6,10 +6,10 @@ class AccountStatusUpdateInstruction1Code(Enum):
     REAC = "REAC"
 
 
+class AccountStatusUpdateRequestReason1Code(Enum):
+    CLOE = "CLOE"
+
+
 class DataModification2Code(Enum):
     INSE = "INSE"
     DELT = "DELT"
-
-
-class AccountStatusUpdateRequestReason1Code(Enum):
-    CLOE = "CLOE"

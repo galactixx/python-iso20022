@@ -16,13 +16,6 @@ class CardPaymentServiceType13Code(Enum):
     VCAU = "VCAU"
 
 
-class ReversalReason1Code(Enum):
-    CUSC = "CUSC"
-    MALF = "MALF"
-    MERC = "MERC"
-    UNAB = "UNAB"
-
-
 class LoyaltyTransactionType1Code(Enum):
     AWRD = "AWRD"
     AWRR = "AWRR"
@@ -30,6 +23,13 @@ class LoyaltyTransactionType1Code(Enum):
     REBA = "REBA"
     REDE = "REDE"
     REDR = "REDR"
+
+
+class ReversalReason1Code(Enum):
+    CUSC = "CUSC"
+    MALF = "MALF"
+    MERC = "MERC"
+    UNAB = "UNAB"
 
 
 class TransactionAction1Code(Enum):

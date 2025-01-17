@@ -1,6 +1,21 @@
 from enum import Enum
 
 
+class CancelledStatusReason2Code(Enum):
+    CANH = "CANH"
+    CANP = "CANP"
+    CXLR = "CXLR"
+    CANO = "CANO"
+
+
+class ConditionallyAcceptedStatusReason2Code(Enum):
+    DOCC = "DOCC"
+    AWRM = "AWRM"
+    AWSM = "AWSM"
+    DUPL = "DUPL"
+    CRED = "CRED"
+
+
 class InRepairStatusReason1Code(Enum):
     COMA = "COMA"
 
@@ -17,29 +32,6 @@ class OrderStatus4Code(Enum):
     DONF = "DONF"
     OPOD = "OPOD"
     IACO = "IACO"
-
-
-class SettledStatusReason2Code(Enum):
-    CPST = "CPST"
-    GATM = "GATM"
-    GAT1 = "GAT1"
-    UCPS = "UCPS"
-    UPST = "UPST"
-
-
-class ConditionallyAcceptedStatusReason2Code(Enum):
-    DOCC = "DOCC"
-    AWRM = "AWRM"
-    AWSM = "AWSM"
-    DUPL = "DUPL"
-    CRED = "CRED"
-
-
-class CancelledStatusReason2Code(Enum):
-    CANH = "CANH"
-    CANP = "CANP"
-    CXLR = "CXLR"
-    CANO = "CANO"
 
 
 class RejectedStatusReason11Code(Enum):
@@ -99,6 +91,14 @@ class RejectedStatusReason11Code(Enum):
     ULNK = "ULNK"
     UNSC = "UNSC"
     POIN = "POIN"
+
+
+class SettledStatusReason2Code(Enum):
+    CPST = "CPST"
+    GATM = "GATM"
+    GAT1 = "GAT1"
+    UCPS = "UCPS"
+    UPST = "UPST"
 
 
 class SuspendedStatusReason3Code(Enum):

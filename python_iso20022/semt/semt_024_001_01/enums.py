@@ -1,16 +1,6 @@
 from enum import Enum
 
 
-class StatementSource1Code(Enum):
-    ACCT = "ACCT"
-    CUST = "CUST"
-
-
-class Unrealised1Code(Enum):
-    GAIN = "GAIN"
-    LOSS = "LOSS"
-
-
 class BalanceType13Code(Enum):
     INVE = "INVE"
     CASE = "CASE"
@@ -86,6 +76,20 @@ class FinancialAssetBalanceType1Code(Enum):
     FXSP = "FXSP"
 
 
+class FinancialAssetTypeCategory1Code(Enum):
+    EQTY = "EQTY"
+    DEBT = "DEBT"
+    ENTL = "ENTL"
+    DERV = "DERV"
+    MMKT = "MMKT"
+    OTHR = "OTHR"
+
+
+class StatementSource1Code(Enum):
+    ACCT = "ACCT"
+    CUST = "CUST"
+
+
 class TypeOfPrice30Code(Enum):
     BIDE = "BIDE"
     OFFR = "OFFR"
@@ -106,10 +110,6 @@ class TypeOfPrice30Code(Enum):
     SUBN = "SUBN"
 
 
-class FinancialAssetTypeCategory1Code(Enum):
-    EQTY = "EQTY"
-    DEBT = "DEBT"
-    ENTL = "ENTL"
-    DERV = "DERV"
-    MMKT = "MMKT"
-    OTHR = "OTHR"
+class Unrealised1Code(Enum):
+    GAIN = "GAIN"
+    LOSS = "LOSS"

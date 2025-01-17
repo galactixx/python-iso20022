@@ -1,54 +1,11 @@
 from enum import Enum
 
 
-class MessageItemCondition2Code(Enum):
-    MNDT = "MNDT"
-    CFVL = "CFVL"
-    DFLT = "DFLT"
-    ALWV = "ALWV"
-    IFAV = "IFAV"
-    COPY = "COPY"
-    UNSP = "UNSP"
-    LMNV = "LMNV"
-
-
-class TerminalManagementActionTrigger1Code(Enum):
-    DATE = "DATE"
-    HOST = "HOST"
-    MANU = "MANU"
-    SALE = "SALE"
-
-
-class DataSetCategory10Code(Enum):
-    AQPR = "AQPR"
-    APPR = "APPR"
-    MTMG = "MTMG"
-    MRPR = "MRPR"
-    MTOR = "MTOR"
-    SCPR = "SCPR"
-    SWPK = "SWPK"
-    TRPR = "TRPR"
-    CRTF = "CRTF"
-    TMSP = "TMSP"
-
-
-class TerminalManagementAction3Code(Enum):
-    CREA = "CREA"
-    DELT = "DELT"
-    UPDT = "UPDT"
-
-
 class BatchTransactionType1Code(Enum):
     DTCT = "DTCT"
     CNCL = "CNCL"
     FAIL = "FAIL"
     DCLN = "DCLN"
-
-
-class ReconciliationCriteria1Code(Enum):
-    BRND = "BRND"
-    PROF = "PROF"
-    GRUP = "GRUP"
 
 
 class CancellationProcess2Code(Enum):
@@ -66,64 +23,17 @@ class CardPaymentServiceType10Code(Enum):
     WLSA = "WLSA"
 
 
-class ExchangePolicy2Code(Enum):
-    ONDM = "ONDM"
-    IMMD = "IMMD"
-    ASAP = "ASAP"
-    AGRP = "AGRP"
-    NBLT = "NBLT"
-    TTLT = "TTLT"
-    CYCL = "CYCL"
-    NONE = "NONE"
-    BLCK = "BLCK"
-
-
-class TerminalManagementErrorAction2Code(Enum):
-    SDSR = "SDSR"
-    STOP = "STOP"
-
-
-class TerminalManagementAdditionalProcess1Code(Enum):
-    MANC = "MANC"
-    RCNC = "RCNC"
-    RSRT = "RSRT"
-
-
-class NetworkType2Code(Enum):
-    SCK5 = "SCK5"
-    SCK4 = "SCK4"
-    HTTP = "HTTP"
-
-
-class FinancialCapture1Code(Enum):
-    AUTH = "AUTH"
-    COMP = "COMP"
-    BTCH = "BTCH"
-
-
-class PartyType15Code(Enum):
-    PGRP = "PGRP"
-    PSYS = "PSYS"
-    PSNG = "PSNG"
-
-
-class MessageFunction43Code(Enum):
-    FAUQ = "FAUQ"
-    CCAQ = "CCAQ"
-    CMPV = "CMPV"
-    DGNP = "DGNP"
-    RCLQ = "RCLQ"
-    CCAV = "CCAV"
-    BTCH = "BTCH"
-    FRVA = "FRVA"
-    AUTQ = "AUTQ"
-    FCMV = "FCMV"
-    DCCQ = "DCCQ"
-    RVRA = "RVRA"
-    DCAV = "DCAV"
-    TRNA = "TRNA"
-    NFRQ = "NFRQ"
-    TRPQ = "TRPQ"
+class DataSetCategory10Code(Enum):
+    AQPR = "AQPR"
+    APPR = "APPR"
+    MTMG = "MTMG"
+    MRPR = "MRPR"
+    MTOR = "MTOR"
+    SCPR = "SCPR"
+    SWPK = "SWPK"
+    TRPR = "TRPR"
+    CRTF = "CRTF"
+    TMSP = "TMSP"
 
 
 class DataSetCategory19Code(Enum):
@@ -145,3 +55,93 @@ class DataSetCategory19Code(Enum):
     CONF = "CONF"
     SPRP = "SPRP"
     TPKG = "TPKG"
+
+
+class ExchangePolicy2Code(Enum):
+    ONDM = "ONDM"
+    IMMD = "IMMD"
+    ASAP = "ASAP"
+    AGRP = "AGRP"
+    NBLT = "NBLT"
+    TTLT = "TTLT"
+    CYCL = "CYCL"
+    NONE = "NONE"
+    BLCK = "BLCK"
+
+
+class FinancialCapture1Code(Enum):
+    AUTH = "AUTH"
+    COMP = "COMP"
+    BTCH = "BTCH"
+
+
+class MessageFunction43Code(Enum):
+    FAUQ = "FAUQ"
+    CCAQ = "CCAQ"
+    CMPV = "CMPV"
+    DGNP = "DGNP"
+    RCLQ = "RCLQ"
+    CCAV = "CCAV"
+    BTCH = "BTCH"
+    FRVA = "FRVA"
+    AUTQ = "AUTQ"
+    FCMV = "FCMV"
+    DCCQ = "DCCQ"
+    RVRA = "RVRA"
+    DCAV = "DCAV"
+    TRNA = "TRNA"
+    NFRQ = "NFRQ"
+    TRPQ = "TRPQ"
+
+
+class MessageItemCondition2Code(Enum):
+    MNDT = "MNDT"
+    CFVL = "CFVL"
+    DFLT = "DFLT"
+    ALWV = "ALWV"
+    IFAV = "IFAV"
+    COPY = "COPY"
+    UNSP = "UNSP"
+    LMNV = "LMNV"
+
+
+class NetworkType2Code(Enum):
+    SCK5 = "SCK5"
+    SCK4 = "SCK4"
+    HTTP = "HTTP"
+
+
+class PartyType15Code(Enum):
+    PGRP = "PGRP"
+    PSYS = "PSYS"
+    PSNG = "PSNG"
+
+
+class ReconciliationCriteria1Code(Enum):
+    BRND = "BRND"
+    PROF = "PROF"
+    GRUP = "GRUP"
+
+
+class TerminalManagementAction3Code(Enum):
+    CREA = "CREA"
+    DELT = "DELT"
+    UPDT = "UPDT"
+
+
+class TerminalManagementActionTrigger1Code(Enum):
+    DATE = "DATE"
+    HOST = "HOST"
+    MANU = "MANU"
+    SALE = "SALE"
+
+
+class TerminalManagementAdditionalProcess1Code(Enum):
+    MANC = "MANC"
+    RCNC = "RCNC"
+    RSRT = "RSRT"
+
+
+class TerminalManagementErrorAction2Code(Enum):
+    SDSR = "SDSR"
+    STOP = "STOP"

@@ -1,6 +1,82 @@
 from enum import Enum
 
 
+class AccountInformationType1Code(Enum):
+    IBND = "IBND"
+    IBCC = "IBCC"
+    IBDC = "IBDC"
+    BIBC = "BIBC"
+    BIBD = "BIBD"
+    BINC = "BINC"
+    BIND = "BIND"
+    BICC = "BICC"
+    BIDC = "BIDC"
+    CMSA = "CMSA"
+    CBBC = "CBBC"
+    CBBD = "CBBD"
+    CBNC = "CBNC"
+    CBND = "CBND"
+    CBCC = "CBCC"
+    CBDC = "CBDC"
+    CUAC = "CUAC"
+    DEAC = "DEAC"
+    FCAA = "FCAA"
+    FCAN = "FCAN"
+    FCBN = "FCBN"
+    IBBC = "IBBC"
+    IBBD = "IBBD"
+    IBNC = "IBNC"
+    MCAA = "MCAA"
+    MCAN = "MCAN"
+    MCIC = "MCIC"
+    MCIN = "MCIN"
+    MSAA = "MSAA"
+    MSBN = "MSBN"
+    MCAD = "MCAD"
+    NODC = "NODC"
+    SCAC = "SCAC"
+    SCAA = "SCAA"
+    OMSA = "OMSA"
+    NOCC = "NOCC"
+    MSBS = "MSBS"
+    MSAN = "MSAN"
+    SCAN = "SCAN"
+    SCIC = "SCIC"
+    SCIN = "SCIN"
+    SOCA = "SOCA"
+    SSCA = "SSCA"
+
+
+class ClearingMethod1Code(Enum):
+    GRNE = "GRNE"
+    NEMA = "NEMA"
+    NENE = "NENE"
+
+
+class CollateralisationIndicator1Code(Enum):
+    FULL = "FULL"
+    ONEW = "ONEW"
+    PART = "PART"
+    UNCO = "UNCO"
+
+
+class ConfirmationRequest1Code(Enum):
+    CONF = "CONF"
+    CNRR = "CNRR"
+    STAT = "STAT"
+
+
+class CorporateSectorIdentifier1Code(Enum):
+    L = "L"
+    A = "A"
+    C = "C"
+    I = "I"
+    F = "F"
+    O = "O"
+    R = "R"
+    U = "U"
+
+
 class FxamountType1Code(Enum):
     ZWIS = "ZWIS"
     WITH = "WITH"
@@ -56,58 +132,10 @@ class FxamountType1Code(Enum):
     RSCH = "RSCH"
 
 
-class SettlementDateCode(Enum):
-    REGU = "REGU"
-    CASH = "CASH"
-    NXTD = "NXTD"
-    TONE = "TONE"
-    TTWO = "TTWO"
-    TTRE = "TTRE"
-    TFOR = "TFOR"
-    TFIV = "TFIV"
-    SELL = "SELL"
-    FUTU = "FUTU"
-    ASAP = "ASAP"
-    ENDC = "ENDC"
-    WHIF = "WHIF"
-    WDIS = "WDIS"
-    WHID = "WHID"
-    TBAT = "TBAT"
-    MONT = "MONT"
-    CLEA = "CLEA"
-    SAVE = "SAVE"
-    WISS = "WISS"
-
-
-class ClearingMethod1Code(Enum):
-    GRNE = "GRNE"
-    NEMA = "NEMA"
-    NENE = "NENE"
-
-
-class UnderlyingProductIdentifier1Code(Enum):
-    FORW = "FORW"
-    NDFO = "NDFO"
-    SPOT = "SPOT"
-    SWAP = "SWAP"
-
-
-class CorporateSectorIdentifier1Code(Enum):
-    L = "L"
-    A = "A"
-    C = "C"
-    I = "I"
-    F = "F"
-    O = "O"
-    R = "R"
-    U = "U"
-
-
-class CollateralisationIndicator1Code(Enum):
-    FULL = "FULL"
-    ONEW = "ONEW"
-    PART = "PART"
-    UNCO = "UNCO"
+class IdentificationType1Code(Enum):
+    BASC = "BASC"
+    BICO = "BICO"
+    CFET = "CFET"
 
 
 class IdentificationType2Code(Enum):
@@ -115,103 +143,6 @@ class IdentificationType2Code(Enum):
     CFET = "CFET"
     RICC = "RICC"
     USDE = "USDE"
-
-
-class TradeConfirmationStatus1Code(Enum):
-    ALST = "ALST"
-    CONF = "CONF"
-    DISA = "DISA"
-    EMCN = "EMCN"
-    MISM = "MISM"
-    SCCN = "SCCN"
-    SNCC = "SNCC"
-    SNCN = "SNCN"
-    UNCN = "UNCN"
-
-
-class StatusSubType2Code(Enum):
-    SMDY = "SMDY"
-
-
-class TradingMethodType1Code(Enum):
-    BITR = "BITR"
-    CERB = "CERB"
-    CUMA = "CUMA"
-    LIOR = "LIOR"
-    NETR = "NETR"
-    ONCT = "ONCT"
-    QUAU = "QUAU"
-    TEAU = "TEAU"
-    ANCL = "ANCL"
-
-
-class IdentificationType1Code(Enum):
-    BASC = "BASC"
-    BICO = "BICO"
-    CFET = "CFET"
-
-
-class TradeStatus6Code(Enum):
-    INVA = "INVA"
-    FMTC = "FMTC"
-    SMAP = "SMAP"
-    RJCT = "RJCT"
-    RSCD = "RSCD"
-    STLD = "STLD"
-    SPLI = "SPLI"
-    UMTC = "UMTC"
-    SMAT = "SMAT"
-    FUMT = "FUMT"
-    NETT = "NETT"
-    PFIX = "PFIX"
-    OMTC = "OMTC"
-
-
-class TradeStatus7Code(Enum):
-    INVA = "INVA"
-    UMTC = "UMTC"
-    FMTC = "FMTC"
-    SMAT = "SMAT"
-    SUSP = "SUSP"
-    SMAP = "SMAP"
-    PFIX = "PFIX"
-    FUMT = "FUMT"
-
-
-class ConfirmationRequest1Code(Enum):
-    CONF = "CONF"
-    CNRR = "CNRR"
-    STAT = "STAT"
-
-
-class TradingModeType1Code(Enum):
-    QUDR = "QUDR"
-    ORDR = "ORDR"
-    NETR = "NETR"
-    AUCT = "AUCT"
-    MARC = "MARC"
-    BILA = "BILA"
-    ANON = "ANON"
-
-
-class QueryTradeStatus1Code(Enum):
-    QAST = "QAST"
-    QCTR = "QCTR"
-    QCIR = "QCIR"
-    QETR = "QETR"
-    QNTR = "QNTR"
-    QRTR = "QRTR"
-
-
-class SideIndicator1Code(Enum):
-    CCPL = "CCPL"
-    CLNT = "CLNT"
-
-
-class Trading1MethodCode(Enum):
-    ELEC = "ELEC"
-    PHON = "PHON"
-    BROK = "BROK"
 
 
 class PartyIdentificationType1Code(Enum):
@@ -254,47 +185,116 @@ class PartyIdentificationType1Code(Enum):
     FLNF = "FLNF"
 
 
-class AccountInformationType1Code(Enum):
-    IBND = "IBND"
-    IBCC = "IBCC"
-    IBDC = "IBDC"
-    BIBC = "BIBC"
-    BIBD = "BIBD"
-    BINC = "BINC"
-    BIND = "BIND"
-    BICC = "BICC"
-    BIDC = "BIDC"
-    CMSA = "CMSA"
-    CBBC = "CBBC"
-    CBBD = "CBBD"
-    CBNC = "CBNC"
-    CBND = "CBND"
-    CBCC = "CBCC"
-    CBDC = "CBDC"
-    CUAC = "CUAC"
-    DEAC = "DEAC"
-    FCAA = "FCAA"
-    FCAN = "FCAN"
-    FCBN = "FCBN"
-    IBBC = "IBBC"
-    IBBD = "IBBD"
-    IBNC = "IBNC"
-    MCAA = "MCAA"
-    MCAN = "MCAN"
-    MCIC = "MCIC"
-    MCIN = "MCIN"
-    MSAA = "MSAA"
-    MSBN = "MSBN"
-    MCAD = "MCAD"
-    NODC = "NODC"
-    SCAC = "SCAC"
-    SCAA = "SCAA"
-    OMSA = "OMSA"
-    NOCC = "NOCC"
-    MSBS = "MSBS"
-    MSAN = "MSAN"
-    SCAN = "SCAN"
-    SCIC = "SCIC"
-    SCIN = "SCIN"
-    SOCA = "SOCA"
-    SSCA = "SSCA"
+class QueryTradeStatus1Code(Enum):
+    QAST = "QAST"
+    QCTR = "QCTR"
+    QCIR = "QCIR"
+    QETR = "QETR"
+    QNTR = "QNTR"
+    QRTR = "QRTR"
+
+
+class SettlementDateCode(Enum):
+    REGU = "REGU"
+    CASH = "CASH"
+    NXTD = "NXTD"
+    TONE = "TONE"
+    TTWO = "TTWO"
+    TTRE = "TTRE"
+    TFOR = "TFOR"
+    TFIV = "TFIV"
+    SELL = "SELL"
+    FUTU = "FUTU"
+    ASAP = "ASAP"
+    ENDC = "ENDC"
+    WHIF = "WHIF"
+    WDIS = "WDIS"
+    WHID = "WHID"
+    TBAT = "TBAT"
+    MONT = "MONT"
+    CLEA = "CLEA"
+    SAVE = "SAVE"
+    WISS = "WISS"
+
+
+class SideIndicator1Code(Enum):
+    CCPL = "CCPL"
+    CLNT = "CLNT"
+
+
+class StatusSubType2Code(Enum):
+    SMDY = "SMDY"
+
+
+class TradeConfirmationStatus1Code(Enum):
+    ALST = "ALST"
+    CONF = "CONF"
+    DISA = "DISA"
+    EMCN = "EMCN"
+    MISM = "MISM"
+    SCCN = "SCCN"
+    SNCC = "SNCC"
+    SNCN = "SNCN"
+    UNCN = "UNCN"
+
+
+class TradeStatus6Code(Enum):
+    INVA = "INVA"
+    FMTC = "FMTC"
+    SMAP = "SMAP"
+    RJCT = "RJCT"
+    RSCD = "RSCD"
+    STLD = "STLD"
+    SPLI = "SPLI"
+    UMTC = "UMTC"
+    SMAT = "SMAT"
+    FUMT = "FUMT"
+    NETT = "NETT"
+    PFIX = "PFIX"
+    OMTC = "OMTC"
+
+
+class TradeStatus7Code(Enum):
+    INVA = "INVA"
+    UMTC = "UMTC"
+    FMTC = "FMTC"
+    SMAT = "SMAT"
+    SUSP = "SUSP"
+    SMAP = "SMAP"
+    PFIX = "PFIX"
+    FUMT = "FUMT"
+
+
+class Trading1MethodCode(Enum):
+    ELEC = "ELEC"
+    PHON = "PHON"
+    BROK = "BROK"
+
+
+class TradingMethodType1Code(Enum):
+    BITR = "BITR"
+    CERB = "CERB"
+    CUMA = "CUMA"
+    LIOR = "LIOR"
+    NETR = "NETR"
+    ONCT = "ONCT"
+    QUAU = "QUAU"
+    TEAU = "TEAU"
+    ANCL = "ANCL"
+
+
+class TradingModeType1Code(Enum):
+    QUDR = "QUDR"
+    ORDR = "ORDR"
+    NETR = "NETR"
+    AUCT = "AUCT"
+    MARC = "MARC"
+    BILA = "BILA"
+    ANON = "ANON"
+
+
+class UnderlyingProductIdentifier1Code(Enum):
+    FORW = "FORW"
+    NDFO = "NDFO"
+    SPOT = "SPOT"
+    SWAP = "SWAP"

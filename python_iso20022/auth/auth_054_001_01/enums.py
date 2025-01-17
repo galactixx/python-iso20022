@@ -1,6 +1,13 @@
 from enum import Enum
 
 
+class ClearingAccountType3Code(Enum):
+    NOSA = "NOSA"
+    ISEG = "ISEG"
+    HOUS = "HOUS"
+    GOSA = "GOSA"
+
+
 class CreditQuality1Code(Enum):
     DFIM = "DFIM"
     EXSP = "EXSP"
@@ -12,10 +19,3 @@ class CreditQuality1Code(Enum):
     PRIM = "PRIM"
     SURI = "SURI"
     UMGR = "UMGR"
-
-
-class ClearingAccountType3Code(Enum):
-    NOSA = "NOSA"
-    ISEG = "ISEG"
-    HOUS = "HOUS"
-    GOSA = "GOSA"

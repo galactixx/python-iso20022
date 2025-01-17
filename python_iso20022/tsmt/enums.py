@@ -1,11 +1,156 @@
 from enum import Enum
 
 
+class Action2Code(Enum):
+    SBTW = "SBTW"
+    RSTW = "RSTW"
+    RSBS = "RSBS"
+    ARDM = "ARDM"
+    ARCS = "ARCS"
+    ARES = "ARES"
+    WAIT = "WAIT"
+    UPDT = "UPDT"
+    SBDS = "SBDS"
+    ARBA = "ARBA"
+    ARRO = "ARRO"
+    CINR = "CINR"
+
+
+class AdjustmentType2Code(Enum):
+    REBA = "REBA"
+    DISC = "DISC"
+    CREN = "CREN"
+    SURC = "SURC"
+
+
 class AssuredType1Code(Enum):
     BUYE = "BUYE"
     SELL = "SELL"
     BUBA = "BUBA"
     SEBA = "SEBA"
+
+
+class BankRole1Code(Enum):
+    BUYB = "BUYB"
+    OBLB = "OBLB"
+    RECB = "RECB"
+    SELB = "SELB"
+
+
+class BaselineStatus2Code(Enum):
+    COMP = "COMP"
+    CLSD = "CLSD"
+    ACTV = "ACTV"
+
+
+class BaselineStatus3Code(Enum):
+    PROP = "PROP"
+    CLSD = "CLSD"
+    PMTC = "PMTC"
+    ESTD = "ESTD"
+    ACTV = "ACTV"
+    COMP = "COMP"
+    AMRQ = "AMRQ"
+    RARQ = "RARQ"
+    CLRQ = "CLRQ"
+    SCRQ = "SCRQ"
+    SERQ = "SERQ"
+    DARQ = "DARQ"
+
+
+class ChargeType8Code(Enum):
+    SIGN = "SIGN"
+    STDE = "STDE"
+    STOR = "STOR"
+    PACK = "PACK"
+    PICK = "PICK"
+    DNGR = "DNGR"
+    SECU = "SECU"
+    INSU = "INSU"
+    COLF = "COLF"
+    CHOR = "CHOR"
+    CHDE = "CHDE"
+    AIRF = "AIRF"
+    TRPT = "TRPT"
+
+
+class FreightCharges1Code(Enum):
+    CLCT = "CLCT"
+    PRPD = "PRPD"
+
+
+class InstructionType3Code(Enum):
+    MTCH = "MTCH"
+    PMTC = "PMTC"
+
+
+class InsuranceClauses1Code(Enum):
+    ICCA = "ICCA"
+    ICCB = "ICCB"
+    ICCC = "ICCC"
+    ICAI = "ICAI"
+    IWCC = "IWCC"
+    ISCC = "ISCC"
+    IREC = "IREC"
+    ICLC = "ICLC"
+    ISMC = "ISMC"
+    CMCC = "CMCC"
+    IRCE = "IRCE"
+
+
+class NotificationType1Code(Enum):
+    MWFT = "MWFT"
+    CSDS = "CSDS"
+
+
+class PaymentTime1Code(Enum):
+    CASH = "CASH"
+    EMTD = "EMTD"
+    EPRD = "EPRD"
+    PRMD = "PRMD"
+    IREC = "IREC"
+    PRMR = "PRMR"
+    EPRR = "EPRR"
+    EMTR = "EMTR"
+
+
+class PaymentTime3Code(Enum):
+    EMTD = "EMTD"
+    EMTR = "EMTR"
+    EPBE = "EPBE"
+    EPRD = "EPRD"
+    PRMD = "PRMD"
+    PRMR = "PRMR"
+    EPIN = "EPIN"
+    EPAM = "EPAM"
+    EPPO = "EPPO"
+    EPRR = "EPRR"
+    EPSD = "EPSD"
+    CASH = "CASH"
+    IREC = "IREC"
+
+
+class PaymentTime4Code(Enum):
+    IREC = "IREC"
+    CASH = "CASH"
+    EPSD = "EPSD"
+    EPRR = "EPRR"
+    EPPO = "EPPO"
+    EPIN = "EPIN"
+    PRMR = "PRMR"
+    PRMD = "PRMD"
+    EPRD = "EPRD"
+    EPBE = "EPBE"
+    EMTR = "EMTR"
+    EMTD = "EMTD"
+
+
+class ProductCategory1Code(Enum):
+    HRTR = "HRTR"
+    QOTA = "QOTA"
+    PRGP = "PRGP"
+    LOBU = "LOBU"
+    GNDR = "GNDR"
 
 
 class ProductCharacteristics1Code(Enum):
@@ -25,64 +170,45 @@ class ProductCharacteristics1Code(Enum):
     VINR = "VINR"
 
 
-class ProductCategory1Code(Enum):
+class ProductIdentifier2Code(Enum):
+    BINR = "BINR"
+    COMD = "COMD"
+    EANC = "EANC"
     HRTR = "HRTR"
+    MANI = "MANI"
+    MODL = "MODL"
+    PART = "PART"
     QOTA = "QOTA"
-    PRGP = "PRGP"
-    LOBU = "LOBU"
-    GNDR = "GNDR"
+    STYL = "STYL"
+    SUPI = "SUPI"
+    UPCC = "UPCC"
 
 
-class AdjustmentType2Code(Enum):
-    REBA = "REBA"
-    DISC = "DISC"
-    CREN = "CREN"
-    SURC = "SURC"
+class TaxType9Code(Enum):
+    PROV = "PROV"
+    NATI = "NATI"
+    STAT = "STAT"
+    WITH = "WITH"
+    STAM = "STAM"
+    COAX = "COAX"
+    VATA = "VATA"
+    CUST = "CUST"
 
 
-class InsuranceClauses1Code(Enum):
-    ICCA = "ICCA"
-    ICCB = "ICCB"
-    ICCC = "ICCC"
-    ICAI = "ICAI"
-    IWCC = "IWCC"
-    ISCC = "ISCC"
-    IREC = "IREC"
-    ICLC = "ICLC"
-    ISMC = "ISMC"
-    CMCC = "CMCC"
-    IRCE = "IRCE"
-
-
-class Action2Code(Enum):
-    SBTW = "SBTW"
-    RSTW = "RSTW"
-    RSBS = "RSBS"
-    ARDM = "ARDM"
-    ARCS = "ARCS"
-    ARES = "ARES"
-    WAIT = "WAIT"
-    UPDT = "UPDT"
-    SBDS = "SBDS"
-    ARBA = "ARBA"
-    ARRO = "ARRO"
-    CINR = "CINR"
-
-
-class InstructionType3Code(Enum):
-    MTCH = "MTCH"
-    PMTC = "PMTC"
+class TradeCertificateType1Code(Enum):
+    ANLY = "ANLY"
+    QUAL = "QUAL"
+    QUAN = "QUAN"
+    WEIG = "WEIG"
+    ORIG = "ORIG"
+    HEAL = "HEAL"
+    PHYT = "PHYT"
 
 
 class TradeFinanceService2Code(Enum):
     LEV1 = "LEV1"
     LEV2 = "LEV2"
     LEV3 = "LEV3"
-
-
-class FreightCharges1Code(Enum):
-    CLCT = "CLCT"
-    PRPD = "PRPD"
 
 
 class UnitOfMeasure4Code(Enum):
@@ -131,129 +257,3 @@ class UnitOfMeasure4Code(Enum):
     BG = "BG"
     BL = "BL"
     TNE = "TNE"
-
-
-class TradeCertificateType1Code(Enum):
-    ANLY = "ANLY"
-    QUAL = "QUAL"
-    QUAN = "QUAN"
-    WEIG = "WEIG"
-    ORIG = "ORIG"
-    HEAL = "HEAL"
-    PHYT = "PHYT"
-
-
-class BaselineStatus2Code(Enum):
-    COMP = "COMP"
-    CLSD = "CLSD"
-    ACTV = "ACTV"
-
-
-class NotificationType1Code(Enum):
-    MWFT = "MWFT"
-    CSDS = "CSDS"
-
-
-class BaselineStatus3Code(Enum):
-    PROP = "PROP"
-    CLSD = "CLSD"
-    PMTC = "PMTC"
-    ESTD = "ESTD"
-    ACTV = "ACTV"
-    COMP = "COMP"
-    AMRQ = "AMRQ"
-    RARQ = "RARQ"
-    CLRQ = "CLRQ"
-    SCRQ = "SCRQ"
-    SERQ = "SERQ"
-    DARQ = "DARQ"
-
-
-class ChargeType8Code(Enum):
-    SIGN = "SIGN"
-    STDE = "STDE"
-    STOR = "STOR"
-    PACK = "PACK"
-    PICK = "PICK"
-    DNGR = "DNGR"
-    SECU = "SECU"
-    INSU = "INSU"
-    COLF = "COLF"
-    CHOR = "CHOR"
-    CHDE = "CHDE"
-    AIRF = "AIRF"
-    TRPT = "TRPT"
-
-
-class TaxType9Code(Enum):
-    PROV = "PROV"
-    NATI = "NATI"
-    STAT = "STAT"
-    WITH = "WITH"
-    STAM = "STAM"
-    COAX = "COAX"
-    VATA = "VATA"
-    CUST = "CUST"
-
-
-class ProductIdentifier2Code(Enum):
-    BINR = "BINR"
-    COMD = "COMD"
-    EANC = "EANC"
-    HRTR = "HRTR"
-    MANI = "MANI"
-    MODL = "MODL"
-    PART = "PART"
-    QOTA = "QOTA"
-    STYL = "STYL"
-    SUPI = "SUPI"
-    UPCC = "UPCC"
-
-
-class PaymentTime1Code(Enum):
-    CASH = "CASH"
-    EMTD = "EMTD"
-    EPRD = "EPRD"
-    PRMD = "PRMD"
-    IREC = "IREC"
-    PRMR = "PRMR"
-    EPRR = "EPRR"
-    EMTR = "EMTR"
-
-
-class BankRole1Code(Enum):
-    BUYB = "BUYB"
-    OBLB = "OBLB"
-    RECB = "RECB"
-    SELB = "SELB"
-
-
-class PaymentTime4Code(Enum):
-    IREC = "IREC"
-    CASH = "CASH"
-    EPSD = "EPSD"
-    EPRR = "EPRR"
-    EPPO = "EPPO"
-    EPIN = "EPIN"
-    PRMR = "PRMR"
-    PRMD = "PRMD"
-    EPRD = "EPRD"
-    EPBE = "EPBE"
-    EMTR = "EMTR"
-    EMTD = "EMTD"
-
-
-class PaymentTime3Code(Enum):
-    EMTD = "EMTD"
-    EMTR = "EMTR"
-    EPBE = "EPBE"
-    EPRD = "EPRD"
-    PRMD = "PRMD"
-    PRMR = "PRMR"
-    EPIN = "EPIN"
-    EPAM = "EPAM"
-    EPPO = "EPPO"
-    EPRR = "EPRR"
-    EPSD = "EPSD"
-    CASH = "CASH"
-    IREC = "IREC"

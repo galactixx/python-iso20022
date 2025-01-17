@@ -1,6 +1,13 @@
 from enum import Enum
 
 
+class ExoticOptionStyle1Code(Enum):
+    BINA = "BINA"
+    DIGI = "DIGI"
+    NOTO = "NOTO"
+    VANI = "VANI"
+
+
 class Frequency11Code(Enum):
     YEAR = "YEAR"
     DAIL = "DAIL"
@@ -14,13 +21,6 @@ class Frequency11Code(Enum):
     CRED = "CRED"
 
 
-class ExoticOptionStyle1Code(Enum):
-    BINA = "BINA"
-    DIGI = "DIGI"
-    NOTO = "NOTO"
-    VANI = "VANI"
-
-
 class OptionEventType1Code(Enum):
     CLST = "CLST"
     CONF = "CONF"
@@ -28,6 +28,13 @@ class OptionEventType1Code(Enum):
     KNOC = "KNOC"
     OTHR = "OTHR"
     TRIG = "TRIG"
+
+
+class OptionStyle5Code(Enum):
+    AMER = "AMER"
+    ASIA = "ASIA"
+    BERM = "BERM"
+    EURO = "EURO"
 
 
 class UnitOfMeasure8Code(Enum):
@@ -106,10 +113,3 @@ class UnitOfMeasure8Code(Enum):
     IPNT = "IPNT"
     FUTU = "FUTU"
     USTN = "USTN"
-
-
-class OptionStyle5Code(Enum):
-    AMER = "AMER"
-    ASIA = "ASIA"
-    BERM = "BERM"
-    EURO = "EURO"

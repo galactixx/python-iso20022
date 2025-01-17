@@ -1,6 +1,17 @@
 from enum import Enum
 
 
+class CancelledStatusReason17Code(Enum):
+    CANI = "CANI"
+    OTHR = "OTHR"
+    CSUB = "CSUB"
+    CANS = "CANS"
+
+
+class PendingReason17Code(Enum):
+    CONF = "CONF"
+
+
 class RejectionReason62Code(Enum):
     REFE = "REFE"
     ADEA = "ADEA"
@@ -37,6 +48,26 @@ class RejectionReason62Code(Enum):
     CTRA = "CTRA"
 
 
+class RejectionReason63Code(Enum):
+    REFE = "REFE"
+    ADEA = "ADEA"
+    CCIX = "CCIX"
+    CCTI = "CCTI"
+    IIND = "IIND"
+    PTYA = "PTYA"
+    PTYB = "PTYB"
+    LATE = "LATE"
+    ITPA = "ITPA"
+    SAFA = "SAFA"
+    SAFB = "SAFB"
+    REDT = "REDT"
+    DCAN = "DCAN"
+    DPRG = "DPRG"
+    RSET = "RSET"
+    RREP = "RREP"
+    NRJN = "NRJN"
+
+
 class UnmatchedReason15Code(Enum):
     CPCA = "CPCA"
     DCBS = "DCBS"
@@ -64,34 +95,3 @@ class UnmatchedReason15Code(Enum):
     CRYD = "CRYD"
     TENO = "TENO"
     SEPR = "SEPR"
-
-
-class CancelledStatusReason17Code(Enum):
-    CANI = "CANI"
-    OTHR = "OTHR"
-    CSUB = "CSUB"
-    CANS = "CANS"
-
-
-class RejectionReason63Code(Enum):
-    REFE = "REFE"
-    ADEA = "ADEA"
-    CCIX = "CCIX"
-    CCTI = "CCTI"
-    IIND = "IIND"
-    PTYA = "PTYA"
-    PTYB = "PTYB"
-    LATE = "LATE"
-    ITPA = "ITPA"
-    SAFA = "SAFA"
-    SAFB = "SAFB"
-    REDT = "REDT"
-    DCAN = "DCAN"
-    DPRG = "DPRG"
-    RSET = "RSET"
-    RREP = "RREP"
-    NRJN = "NRJN"
-
-
-class PendingReason17Code(Enum):
-    CONF = "CONF"

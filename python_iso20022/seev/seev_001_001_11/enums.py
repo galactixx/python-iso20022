@@ -1,44 +1,10 @@
 from enum import Enum
 
 
-class DateMode1Code(Enum):
-    BODY = "BODY"
-    EODY = "EODY"
-
-
-class ProxyNotAllowed1Code(Enum):
-    NPRO = "NPRO"
-
-
-class ResolutionStatus1Code(Enum):
-    ACTV = "ACTV"
-    WDRA = "WDRA"
-
-
-class ResolutionType2Code(Enum):
-    EXTR = "EXTR"
-    SPCL = "SPCL"
-
-
-class MeetingDateStatus2Code(Enum):
-    CNFR = "CNFR"
-    TNTA = "TNTA"
-
-
-class PlaceType1Code(Enum):
-    UKWN = "UKWN"
-
-
-class NotificationType3Code(Enum):
-    NEWM = "NEWM"
-    REPL = "REPL"
-    RMDR = "RMDR"
-
-
-class ThresholdBasis1Code(Enum):
-    ALSH = "ALSH"
-    ALSM = "ALSM"
-    ALVO = "ALVO"
+class AdditionalRight1Code(Enum):
+    WQPS = "WQPS"
+    RSPS = "RSPS"
+    AIPS = "AIPS"
 
 
 class AgentRole1Code(Enum):
@@ -58,6 +24,11 @@ class AttendanceAdmissionConditions2Code(Enum):
     MANP = "MANP"
 
 
+class DateMode1Code(Enum):
+    BODY = "BODY"
+    EODY = "EODY"
+
+
 class DateType10Code(Enum):
     MEET = "MEET"
     UKWN = "UKWN"
@@ -66,15 +37,19 @@ class DateType10Code(Enum):
     PPYD = "PPYD"
 
 
-class VoteChannel1Code(Enum):
-    VOPI = "VOPI"
-    VOCI = "VOCI"
+class MeetingDateStatus2Code(Enum):
+    CNFR = "CNFR"
+    TNTA = "TNTA"
 
 
-class AdditionalRight1Code(Enum):
-    WQPS = "WQPS"
-    RSPS = "RSPS"
-    AIPS = "AIPS"
+class NotificationType3Code(Enum):
+    NEWM = "NEWM"
+    REPL = "REPL"
+    RMDR = "RMDR"
+
+
+class PlaceType1Code(Enum):
+    UKWN = "UKWN"
 
 
 class PowerOfAttorneyLegalisation1Code(Enum):
@@ -84,9 +59,29 @@ class PowerOfAttorneyLegalisation1Code(Enum):
     COUN = "COUN"
 
 
-class VoteType1Code(Enum):
-    ADVI = "ADVI"
-    BNDG = "BNDG"
+class ProxyNotAllowed1Code(Enum):
+    NPRO = "NPRO"
+
+
+class ResolutionStatus1Code(Enum):
+    ACTV = "ACTV"
+    WDRA = "WDRA"
+
+
+class ResolutionType2Code(Enum):
+    EXTR = "EXTR"
+    SPCL = "SPCL"
+
+
+class ThresholdBasis1Code(Enum):
+    ALSH = "ALSH"
+    ALSM = "ALSM"
+    ALVO = "ALVO"
+
+
+class VoteChannel1Code(Enum):
+    VOPI = "VOPI"
+    VOCI = "VOCI"
 
 
 class VoteInstruction5Code(Enum):
@@ -101,3 +96,8 @@ class VoteInstruction5Code(Enum):
     TWOY = "TWOY"
     BLNK = "BLNK"
     NREC = "NREC"
+
+
+class VoteType1Code(Enum):
+    ADVI = "ADVI"
+    BNDG = "BNDG"

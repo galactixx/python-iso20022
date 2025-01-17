@@ -1,9 +1,17 @@
 from enum import Enum
 
 
-class ReportItemStatus1Code(Enum):
-    ACPD = "ACPD"
-    REJT = "REJT"
+class HoldingAccountLevel1Code(Enum):
+    SAFE = "SAFE"
+    LVL1 = "LVL1"
+    LVL2 = "LVL2"
+    LVL3 = "LVL3"
+    LVL4 = "LVL4"
+    LVL5 = "LVL5"
+    LVL6 = "LVL6"
+    LVL7 = "LVL7"
+    LVL8 = "LVL8"
+    LVL9 = "LVL9"
 
 
 class HoldingRejectionReason41Code(Enum):
@@ -83,14 +91,6 @@ class HoldingRejectionReason41Code(Enum):
     NTAV = "NTAV"
 
 
-class HoldingAccountLevel1Code(Enum):
-    SAFE = "SAFE"
-    LVL1 = "LVL1"
-    LVL2 = "LVL2"
-    LVL3 = "LVL3"
-    LVL4 = "LVL4"
-    LVL5 = "LVL5"
-    LVL6 = "LVL6"
-    LVL7 = "LVL7"
-    LVL8 = "LVL8"
-    LVL9 = "LVL9"
+class ReportItemStatus1Code(Enum):
+    ACPD = "ACPD"
+    REJT = "REJT"

@@ -1,6 +1,37 @@
 from enum import Enum
 
 
+class BorrowingReason1Code(Enum):
+    SFCT = "SFCT"
+    TTTP = "TTTP"
+    MMPP = "MMPP"
+
+
+class ClosingType1Code(Enum):
+    OVER = "OVER"
+    TERM = "TERM"
+    FLEX = "FLEX"
+    OPEN = "OPEN"
+
+
+class CollateralType3Code(Enum):
+    CASH = "CASH"
+    SECU = "SECU"
+    PHYS = "PHYS"
+    INSU = "INSU"
+    STCF = "STCF"
+    BOND = "BOND"
+    GBBK = "GBBK"
+    OTHR = "OTHR"
+
+
+class DeliveryType2Code(Enum):
+    APMT = "APMT"
+    FREE = "FREE"
+    TRIP = "TRIP"
+    HOIC = "HOIC"
+
+
 class ExposureType3Code(Enum):
     CCIR = "CCIR"
     COMM = "COMM"
@@ -34,58 +65,15 @@ class ExposureType3Code(Enum):
     TBAS = "TBAS"
 
 
-class Reversible1Code(Enum):
-    REVL = "REVL"
-    FIXD = "FIXD"
-    CABK = "CABK"
+class FutureAndOptionContractType1Code(Enum):
+    ORDY = "ORDY"
+    INDX = "INDX"
+    EXFU = "EXFU"
 
 
-class SettlingCapacity1Code(Enum):
-    CUST = "CUST"
-    SAGE = "SAGE"
-    SPRI = "SPRI"
-
-
-class OptionStyle4Code(Enum):
-    AMER = "AMER"
-    EURO = "EURO"
-    BERM = "BERM"
-
-
-class DeliveryType2Code(Enum):
-    APMT = "APMT"
-    FREE = "FREE"
-    TRIP = "TRIP"
-    HOIC = "HOIC"
-
-
-class BorrowingReason1Code(Enum):
-    SFCT = "SFCT"
-    TTTP = "TTTP"
-    MMPP = "MMPP"
-
-
-class ClosingType1Code(Enum):
-    OVER = "OVER"
-    TERM = "TERM"
-    FLEX = "FLEX"
-    OPEN = "OPEN"
-
-
-class SettlementInstructionGeneration1Code(Enum):
-    GENS = "GENS"
-    NOGE = "NOGE"
-
-
-class CollateralType3Code(Enum):
-    CASH = "CASH"
-    SECU = "SECU"
-    PHYS = "PHYS"
-    INSU = "INSU"
-    STCF = "STCF"
-    BOND = "BOND"
-    GBBK = "GBBK"
-    OTHR = "OTHR"
+class LendingTransactionMethod1Code(Enum):
+    ODTR = "ODTR"
+    EXTR = "EXTR"
 
 
 class OptionRight1Code(Enum):
@@ -95,10 +83,16 @@ class OptionRight1Code(Enum):
     EXPI = "EXPI"
 
 
-class FutureAndOptionContractType1Code(Enum):
-    ORDY = "ORDY"
-    INDX = "INDX"
-    EXFU = "EXFU"
+class OptionStyle4Code(Enum):
+    AMER = "AMER"
+    EURO = "EURO"
+    BERM = "BERM"
+
+
+class Reversible1Code(Enum):
+    REVL = "REVL"
+    FIXD = "FIXD"
+    CABK = "CABK"
 
 
 class SecuritiesLendingType1Code(Enum):
@@ -107,9 +101,26 @@ class SecuritiesLendingType1Code(Enum):
     CABK = "CABK"
 
 
-class LendingTransactionMethod1Code(Enum):
-    ODTR = "ODTR"
-    EXTR = "EXTR"
+class SettlementInstructionGeneration1Code(Enum):
+    GENS = "GENS"
+    NOGE = "NOGE"
+
+
+class SettlementTransactionCondition7Code(Enum):
+    ASGN = "ASGN"
+    CLEN = "CLEN"
+    DIRT = "DIRT"
+    DLWM = "DLWM"
+    DRAW = "DRAW"
+    EXER = "EXER"
+    FRCL = "FRCL"
+    KNOC = "KNOC"
+    PHYS = "PHYS"
+    CSDP = "CSDP"
+    SPCS = "SPCS"
+    SPDL = "SPDL"
+    SPST = "SPST"
+    UNEX = "UNEX"
 
 
 class SettlementTransactionType7Code(Enum):
@@ -149,18 +160,7 @@ class SettlementTransactionType7Code(Enum):
     OFIT = "OFIT"
 
 
-class SettlementTransactionCondition7Code(Enum):
-    ASGN = "ASGN"
-    CLEN = "CLEN"
-    DIRT = "DIRT"
-    DLWM = "DLWM"
-    DRAW = "DRAW"
-    EXER = "EXER"
-    FRCL = "FRCL"
-    KNOC = "KNOC"
-    PHYS = "PHYS"
-    CSDP = "CSDP"
-    SPCS = "SPCS"
-    SPDL = "SPDL"
-    SPST = "SPST"
-    UNEX = "UNEX"
+class SettlingCapacity1Code(Enum):
+    CUST = "CUST"
+    SAGE = "SAGE"
+    SPRI = "SPRI"

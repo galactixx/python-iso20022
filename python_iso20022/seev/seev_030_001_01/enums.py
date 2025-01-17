@@ -1,6 +1,12 @@
 from enum import Enum
 
 
+class ProcessedStatus6Code(Enum):
+    RECE = "RECE"
+    DEAC = "DEAC"
+    COMP = "COMP"
+
+
 class RejectionReason12Code(Enum):
     DEAC = "DEAC"
     FAIL = "FAIL"
@@ -18,12 +24,6 @@ class RejectionReason12Code(Enum):
     SAID = "SAID"
     MICA = "MICA"
     NOAP = "NOAP"
-
-
-class ProcessedStatus6Code(Enum):
-    RECE = "RECE"
-    DEAC = "DEAC"
-    COMP = "COMP"
 
 
 class RejectionReason7Code(Enum):

@@ -1,6 +1,12 @@
 from enum import Enum
 
 
+class AcknowledgementReason10Code(Enum):
+    ADEA = "ADEA"
+    SMPG = "SMPG"
+    OTHR = "OTHR"
+
+
 class RejectionReason27Code(Enum):
     ADEA = "ADEA"
     LATE = "LATE"
@@ -11,9 +17,3 @@ class RejectionReason27Code(Enum):
     REFE = "REFE"
     INVM = "INVM"
     INVL = "INVL"
-
-
-class AcknowledgementReason10Code(Enum):
-    ADEA = "ADEA"
-    SMPG = "SMPG"
-    OTHR = "OTHR"

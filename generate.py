@@ -124,7 +124,9 @@ class Import:
 
     def __post_init__(self) -> None:
         if not self.is_std_lib:
-            subprocess.check_call([sys.executable, "-m", "pip", "install", self.package])
+            subprocess.check_call(
+                [sys.executable, "-m", "pip", "install", self.package]
+            )
 
         module = importlib.import_module(self.module)
 
@@ -252,7 +254,7 @@ class UtilsPythonFile(PythonFile):
     def update_file(self) -> None:
         API_IMPORTS: List[Import] = [
             Import("os"),
-            Import('requests'),
+            Import("requests"),
             Import("typing", ["IO", "Type", "TypeAlias", "TypeVar", "Union"]),
             Import("pathlib", ["Path"]),
             Import("urllib.parse", ["urlparse"]),
@@ -264,7 +266,7 @@ class UtilsPythonFile(PythonFile):
             self.add_import(import_statement)
 
         self.add_function(XML_UTILS_FUNCTION)
-        
+
 
 class ParsePythonFiles(Dict[str, PythonFile]):
     def write_files(self) -> None:

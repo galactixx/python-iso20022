@@ -1,6 +1,13 @@
 from enum import Enum
 
 
+class FinalStatus1Code(Enum):
+    STLD = "STLD"
+    RJTD = "RJTD"
+    CAND = "CAND"
+    FNLD = "FNLD"
+
+
 class PendingFailingSettlement1Code(Enum):
     AWMO = "AWMO"
     AWSH = "AWSH"
@@ -47,13 +54,6 @@ class PendingFailingSettlement1Code(Enum):
     GLOB = "GLOB"
     CPEC = "CPEC"
     MUNO = "MUNO"
-
-
-class FinalStatus1Code(Enum):
-    STLD = "STLD"
-    RJTD = "RJTD"
-    CAND = "CAND"
-    FNLD = "FNLD"
 
 
 class PendingSettlement2Code(Enum):

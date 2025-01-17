@@ -1,13 +1,22 @@
 from enum import Enum
 
 
+class CancelledStatusReason15Code(Enum):
+    CANI = "CANI"
+    CSUB = "CSUB"
+
+
 class InternalPartyRole1Code(Enum):
     INTC = "INTC"
 
 
-class CancelledStatusReason15Code(Enum):
-    CANI = "CANI"
-    CSUB = "CSUB"
+class ReportingWaiverType1Code(Enum):
+    OILQ = "OILQ"
+    NLIQ = "NLIQ"
+    PRIC = "PRIC"
+    ILQD = "ILQD"
+    RFPT = "RFPT"
+    SIZE = "SIZE"
 
 
 class ReportingWaiverType3Code(Enum):
@@ -24,15 +33,6 @@ class ReportingWaiverType3Code(Enum):
     TNCP = "TNCP"
     TPAC = "TPAC"
     XFPH = "XFPH"
-
-
-class ReportingWaiverType1Code(Enum):
-    OILQ = "OILQ"
-    NLIQ = "NLIQ"
-    PRIC = "PRIC"
-    ILQD = "ILQD"
-    RFPT = "RFPT"
-    SIZE = "SIZE"
 
 
 class Side5Code(Enum):

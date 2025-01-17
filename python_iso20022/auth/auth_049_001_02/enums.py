@@ -1,6 +1,11 @@
 from enum import Enum
 
 
+class MarketIdentification1Code(Enum):
+    SGMT = "SGMT"
+    OPRT = "OPRT"
+
+
 class MicentityType1Code(Enum):
     APPA = "APPA"
     CTPS = "CTPS"
@@ -8,8 +13,3 @@ class MicentityType1Code(Enum):
     OTFS = "OTFS"
     RMKT = "RMKT"
     SINT = "SINT"
-
-
-class MarketIdentification1Code(Enum):
-    SGMT = "SGMT"
-    OPRT = "OPRT"

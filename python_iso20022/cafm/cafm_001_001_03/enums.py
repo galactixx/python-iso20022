@@ -1,6 +1,11 @@
 from enum import Enum
 
 
+class FileActionScope1Code(Enum):
+    FILE = "FILE"
+    RECD = "RECD"
+
+
 class FileActionType2Code(Enum):
     ADDD = "ADDD"
     BRPT = "BRPT"
@@ -12,8 +17,3 @@ class FileActionType2Code(Enum):
     REPL = "REPL"
     REQU = "REQU"
     UPDT = "UPDT"
-
-
-class FileActionScope1Code(Enum):
-    FILE = "FILE"
-    RECD = "RECD"

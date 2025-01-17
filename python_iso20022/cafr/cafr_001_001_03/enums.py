@@ -1,15 +1,6 @@
 from enum import Enum
 
 
-class CardSecurityCapability1Code(Enum):
-    ICCD = "ICCD"
-    MWOS = "MWOS"
-    MSWS = "MSWS"
-    OTHN = "OTHN"
-    OTHP = "OTHP"
-    OLPN = "OLPN"
-
-
 class AuthenticationMethod12Code(Enum):
     APKI = "APKI"
     ADVF = "ADVF"
@@ -74,3 +65,12 @@ class AuthenticationMethod12Code(Enum):
     NTID = "NTID"
     ACSN = "ACSN"
     CHSN = "CHSN"
+
+
+class CardSecurityCapability1Code(Enum):
+    ICCD = "ICCD"
+    MWOS = "MWOS"
+    MSWS = "MSWS"
+    OTHN = "OTHN"
+    OTHP = "OTHP"
+    OLPN = "OLPN"

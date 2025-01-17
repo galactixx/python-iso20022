@@ -1,14 +1,6 @@
 from enum import Enum
 
 
-class RejectionReason13Code(Enum):
-    FAIL = "FAIL"
-    SAID = "SAID"
-    INID = "INID"
-    REFI = "REFI"
-    MICA = "MICA"
-
-
 class FailedSettlementReason1Code(Enum):
     CANE = "CANE"
     CADI = "CADI"
@@ -17,6 +9,14 @@ class FailedSettlementReason1Code(Enum):
     INSE = "INSE"
     INDI = "INDI"
     INCA = "INCA"
+
+
+class RejectionReason13Code(Enum):
+    FAIL = "FAIL"
+    SAID = "SAID"
+    INID = "INID"
+    REFI = "REFI"
+    MICA = "MICA"
 
 
 class RejectionReason14Code(Enum):

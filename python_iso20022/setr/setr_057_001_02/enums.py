@@ -1,6 +1,13 @@
 from enum import Enum
 
 
+class OrderConfirmationStatus1Code(Enum):
+    STNP = "STNP"
+    CPNP = "CPNP"
+    COAC = "COAC"
+    CREC = "CREC"
+
+
 class RejectedConfirmationStatusReason1Code(Enum):
     DSAF = "DSAF"
     DFIN = "DFIN"
@@ -58,10 +65,3 @@ class RejectedConfirmationStatusReason1Code(Enum):
     MTAX = "MTAX"
     NATA = "NATA"
     ALAT = "ALAT"
-
-
-class OrderConfirmationStatus1Code(Enum):
-    STNP = "STNP"
-    CPNP = "CPNP"
-    COAC = "COAC"
-    CREC = "CREC"

@@ -1,18 +1,21 @@
 from enum import Enum
 
 
-class TransferStatusType2Code(Enum):
-    S019 = "S019"
-    BCEV = "BCEV"
-    SETT = "SETT"
-    DRAW = "DRAW"
-    PAYA = "PAYA"
-    S012 = "S012"
-    INFO = "INFO"
-    STAT = "STAT"
-    S005 = "S005"
-    S001 = "S001"
-    CONV = "CONV"
+class ApplicableRules1Code(Enum):
+    NPRE = "NPRE"
+    YPRE = "YPRE"
+
+
+class BeneficiaryType1Code(Enum):
+    DEPE = "DEPE"
+    NOMI = "NOMI"
+    SUCC = "SUCC"
+
+
+class CancelledStatusReason3Code(Enum):
+    CNTA = "CNTA"
+    CNCL = "CNCL"
+    CNIN = "CNIN"
 
 
 class PendingSettlementStatusReason2Code(Enum):
@@ -53,20 +56,6 @@ class PendingSettlementStatusReason2Code(Enum):
     ESCA = "ESCA"
     NRCP = "NRCP"
     FVER = "FVER"
-
-
-class TransferUnmatchedReason3Code(Enum):
-    CMIS = "CMIS"
-    CPCA = "CPCA"
-    DELN = "DELN"
-    DSEC = "DSEC"
-    PHYS = "PHYS"
-    PODU = "PODU"
-    DEPT = "DEPT"
-    DDAT = "DDAT"
-    DQUA = "DQUA"
-    ICUS = "ICUS"
-    SAFE = "SAFE"
 
 
 class RejectedStatusReason13Code(Enum):
@@ -119,12 +108,6 @@ class RejectedStatusReason13Code(Enum):
     NCMP = "NCMP"
 
 
-class CancelledStatusReason3Code(Enum):
-    CNTA = "CNTA"
-    CNCL = "CNCL"
-    CNIN = "CNIN"
-
-
 class TransferStatus6Code(Enum):
     PACK = "PACK"
     COSE = "COSE"
@@ -136,12 +119,29 @@ class TransferStatus6Code(Enum):
     SETT = "SETT"
 
 
-class BeneficiaryType1Code(Enum):
-    DEPE = "DEPE"
-    NOMI = "NOMI"
-    SUCC = "SUCC"
+class TransferStatusType2Code(Enum):
+    S019 = "S019"
+    BCEV = "BCEV"
+    SETT = "SETT"
+    DRAW = "DRAW"
+    PAYA = "PAYA"
+    S012 = "S012"
+    INFO = "INFO"
+    STAT = "STAT"
+    S005 = "S005"
+    S001 = "S001"
+    CONV = "CONV"
 
 
-class ApplicableRules1Code(Enum):
-    NPRE = "NPRE"
-    YPRE = "YPRE"
+class TransferUnmatchedReason3Code(Enum):
+    CMIS = "CMIS"
+    CPCA = "CPCA"
+    DELN = "DELN"
+    DSEC = "DSEC"
+    PHYS = "PHYS"
+    PODU = "PODU"
+    DEPT = "DEPT"
+    DDAT = "DDAT"
+    DQUA = "DQUA"
+    ICUS = "ICUS"
+    SAFE = "SAFE"

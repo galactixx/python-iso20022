@@ -1,22 +1,14 @@
 from enum import Enum
 
 
-class TypeOfPrice13Code(Enum):
-    BIDE = "BIDE"
-    OFFR = "OFFR"
-    NAVL = "NAVL"
-    CREA = "CREA"
-    CANC = "CANC"
-    INTE = "INTE"
-    SWNG = "SWNG"
-    MIDD = "MIDD"
-    RINV = "RINV"
-    NAVS = "NAVS"
-    SWIC = "SWIC"
-    GAVL = "GAVL"
-    DDVR = "DDVR"
-    ACTU = "ACTU"
-    EGAV = "EGAV"
+class FrequencyGranularityType1Code(Enum):
+    EMON = "EMON"
+    EWEK = "EWEK"
+    ESEM = "ESEM"
+    EQRT = "EQRT"
+    EFRT = "EFRT"
+    EDAY = "EDAY"
+    ENDY = "ENDY"
 
 
 class PersonIdentificationType6Code(Enum):
@@ -77,16 +69,24 @@ class SecuritiesBalanceType14Code(Enum):
     GRP2 = "GRP2"
 
 
-class FrequencyGranularityType1Code(Enum):
-    EMON = "EMON"
-    EWEK = "EWEK"
-    ESEM = "ESEM"
-    EQRT = "EQRT"
-    EFRT = "EFRT"
-    EDAY = "EDAY"
-    ENDY = "ENDY"
-
-
 class SenderBusinessRole1Code(Enum):
     AOWN = "AOWN"
     ASER = "ASER"
+
+
+class TypeOfPrice13Code(Enum):
+    BIDE = "BIDE"
+    OFFR = "OFFR"
+    NAVL = "NAVL"
+    CREA = "CREA"
+    CANC = "CANC"
+    INTE = "INTE"
+    SWNG = "SWNG"
+    MIDD = "MIDD"
+    RINV = "RINV"
+    NAVS = "NAVS"
+    SWIC = "SWIC"
+    GAVL = "GAVL"
+    DDVR = "DDVR"
+    ACTU = "ACTU"
+    EGAV = "EGAV"

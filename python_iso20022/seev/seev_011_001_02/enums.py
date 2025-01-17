@@ -1,6 +1,15 @@
 from enum import Enum
 
 
+class ProcessedStatus7Code(Enum):
+    RECE = "RECE"
+    SENT = "SENT"
+    SNAV = "SNAV"
+    WARN = "WARN"
+    PACK = "PACK"
+    PEND = "PEND"
+
+
 class RejectionReason80Code(Enum):
     PDAY = "PDAY"
     FAIL = "FAIL"
@@ -54,15 +63,6 @@ class RejectionReason80Code(Enum):
     ROUN = "ROUN"
     ISSR = "ISSR"
     ISSC = "ISSC"
-
-
-class ProcessedStatus7Code(Enum):
-    RECE = "RECE"
-    SENT = "SENT"
-    SNAV = "SNAV"
-    WARN = "WARN"
-    PACK = "PACK"
-    PEND = "PEND"
 
 
 class RejectionReason81Code(Enum):
