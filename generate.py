@@ -15,7 +15,7 @@ from functools import lru_cache
 from multiprocessing import Manager
 from multiprocessing.managers import BaseManager, ListProxy
 from pathlib import Path
-from typing import Callable, Dict, List, Optional, Set, TypeAlias, Union
+from typing import Callable, Dict, List, Optional, Set, Type, TypeAlias, Union
 
 import libcst as cst
 
@@ -341,11 +341,7 @@ class InitImportModifyTransformer(cst.CSTTransformer):
         self.message_file = message_file
 
     def leave_Assign(self, old_node: cst.Assign, new_node: cst.Assign) -> cst.Assign:
-        if (
-            isinstance(old_node.targets[0].target, cst.Name)
-            and old_node.targets[0].target.value == "__all__"
-            and isinstance(old_node.value, cst.List)
-        ):
+        if assignment_check(node=old_node, name='__all__', value=cst.List):
             # Rewrite the __all__ values to be just the main dataclass
             # for the message
             new_list_elements = cst.List(
@@ -521,6 +517,16 @@ def decorator_is_dataclass(decorator: cst.Decorator) -> bool:
     return (
         isinstance(decorator.decorator, cst.Name)
         and decorator.decorator.value == "dataclass"
+    )
+
+
+def assignment_check(
+    node: cst.Assign, name: str, value: Type[cst.BaseExpression]
+) -> bool:
+    return (
+        isinstance(node.targets[0].target, cst.Name)
+        and node.targets[0].target.value == name
+        and isinstance(node.value, value)
     )
 
 
@@ -710,7 +716,7 @@ def generate_dataclass_models(
         ],
     )
 
-    # Add function to _api.py file
+    # Add function to parse.py file
     parse_python_file.update_file(dst, src.stem, model_name)
     iso_message_files.append(iso_message)
 
@@ -772,7 +778,7 @@ def main(schema_paths: List[Path]) -> None:
             # Write common enums to respective files
             write_common_enum_files(enum_common_files=enum_common_files)
 
-            # Close and save _api.py file
+            # Close and save parse.py files
             parse_python_file.write_files()
 
 
@@ -785,5 +791,9 @@ if __name__ == "__main__":
     BaseManager.register("ParsePythonFiles", ParsePythonFiles)
     BaseManager.register("EnumTracker", EnumTracker)
 
+    # Generates the utils file which has functions that are imported
+    # into each parse.py file for each message set
     generate_utils_file()
+
+    # Generate all dataclasses and apply refactoring
     main(schema_paths=schema_paths)
