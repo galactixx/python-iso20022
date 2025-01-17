@@ -79,7 +79,7 @@ class PythonFile:
     @property
     def code(self) -> str:
         self.functions.sort()
-        return "".join(self.imports) + "\n".join(sorted(self.functions))
+        return "".join(self.imports) + "\n".join(self.functions)
 
     @staticmethod
     def generate_import(import_name: Import) -> cst.SimpleStatementLine:
@@ -234,6 +234,7 @@ class EnumTracker(Dict[str, EnumMetadata]):
         return enum_hash
 
 
+@dataclass
 class UtilsPythonFile(PythonFile):
     def update_file(self) -> None:
         API_IMPORTS: List[Import] = [
@@ -580,7 +581,9 @@ def write_enums_to_file(path: Path, enums: Set[cst.ClassDef]) -> None:
     enum_import_statement = generate_import_from_statement(
         module=cst.Name("enum"), names=["Enum"]
     )
-    body = [enum_import_statement] + list(enums)
+    enums_sorted = sorted(list(enums), key=lambda x: x.name.value)
+
+    body = [enum_import_statement] + enums_sorted
     module = cst.Module(body=body)
     write_cst_to_python(path=path, module=module)
 
