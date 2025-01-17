@@ -28,20 +28,33 @@ REPOSITORY_PATH = Path.cwd().resolve()
 PACKAGE_PATH = REPOSITORY_PATH / PACKAGE_DIR
 UTILS_PATH = PACKAGE_PATH / "utils.py"
 XML_UTILS_FUNCTION = """
-_Model = TypeVar('_Model')
-
-XmlSource: TypeAlias = Union[str, Path]
+_Model = TypeVar("_Model")
+XmlSource: TypeAlias = Union[str, Path, bytes, IO]
 
 def read_xml_source(source: XmlSource, model: Type[_Model]) -> _Model:
     parser = XmlParser()
 
-    if os.path.isfile(source):
+    # Determine source type and read content
+    if isinstance(source, Path) or (isinstance(source, str) and os.path.isfile(source)):
         with open(source, "r") as xml_file:
             read_xml_file = xml_file.read()
-    else:
+    elif isinstance(source, (bytes, str)):
         read_xml_file = source
+    elif hasattr(source, "read"):
+        read_xml_file = source.read()
+    elif isinstance(source, str) and urlparse(source).scheme in {"http", "https"}:
+        response = requests.get(source)
+        response.raise_for_status()
+        read_xml_file = response.text
+    else:
+        raise ValueError("Unsupported XML source type.")
 
-    parsed_xml = parser.from_string(read_xml_file, model)
+    # Parse the XML content into the specified dataclass model
+    try:
+        parsed_xml = parser.from_string(read_xml_file, model)
+    except Exception as e:
+        raise ValueError(f"Failed to parse XML: {e}")
+
     return parsed_xml
 """
 
@@ -225,8 +238,10 @@ class UtilsPythonFile(PythonFile):
     def update_file(self) -> None:
         API_IMPORTS: List[Import] = [
             Import("os"),
-            Import("typing", ["Union", "Type", "TypeAlias", "TypeVar"]),
+            Import('requests'),
+            Import("typing", ["IO", "Type", "TypeAlias", "TypeVar", "Union"]),
             Import("pathlib", ["Path"]),
+            Import("urllib.parse", ["urlparse"]),
             Import("xsdata.formats.dataclass.parsers", ["XmlParser"]),
         ]
 
@@ -235,7 +250,7 @@ class UtilsPythonFile(PythonFile):
             self.add_import(import_statement)
 
         self.add_function(XML_UTILS_FUNCTION)
-
+        
 
 class ParsePythonFiles(Dict[str, PythonFile]):
     def write_files(self) -> None:
