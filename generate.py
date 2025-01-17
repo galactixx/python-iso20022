@@ -18,6 +18,7 @@ from pathlib import Path
 from typing import Callable, Dict, List, Optional, Set, Type, TypeAlias, Union
 
 import libcst as cst
+from tomlkit_extras import load_toml_file, get_attribute_from_toml_source
 
 _LeaveReturn: TypeAlias = Union[cst.CSTNode, cst.RemovalSentinel]
 
@@ -300,7 +301,21 @@ class ParsePythonFiles(Dict[str, PythonFile]):
             function_name=function_name, model_name=model
         )
 
-        self[message_set].add_function(api_function)
+        python_file.add_function(api_function)
+
+
+class InitAddPackageVersion(cst.CSTTransformer):
+    def __init__(self, pyproject_version: str) -> None:
+        self.pyproject_version = pyproject_version
+
+    def leave_Module(self, _: cst.Module, new_node: cst.Module) -> cst.Module:
+        version_var = cst.SimpleStatementLine(
+            body=[cst.Assign(
+                targets=[cst.AssignTarget(cst.Name("__version__"))],
+                value=cst.SimpleString(value=f'"{self.pyproject_version}"')
+            )]
+        )
+        return new_node.with_changes(body=[version_var])
 
 
 class ModelImportsTransformer(cst.CSTTransformer):
@@ -614,6 +629,21 @@ def write_common_enum_files(enum_common_files: Dict[Path, SimpleEnumSet]) -> Non
         write_enums_to_file(path=path, enums=enum_set.enums)
 
 
+def add_package_version_to_init() -> None:
+    pyproject_path = REPOSITORY_PATH / 'pyproject.toml'
+    pyproject_toml = load_toml_file(toml_source=pyproject_path)
+    pyproject_version = get_attribute_from_toml_source(
+        hierarchy='tool.poetry.version', toml_source=pyproject_toml
+    )
+    init_path = PACKAGE_PATH / '__init__.py'
+    modify_python_file_as_cst(
+        path=init_path,
+        transformers=[
+            InitAddPackageVersion(pyproject_version=pyproject_version)
+        ],
+    )
+
+
 def code_refactoring(
     get_cached_metadata: Callable[[str], EnumMetadata],
     iso_message_file: ISO20022MessageFile,
@@ -797,3 +827,7 @@ if __name__ == "__main__":
 
     # Generate all dataclasses and apply refactoring
     main(schema_paths=schema_paths)
+
+    # Add the version to the __init__.py file in the top-level
+    # package directory
+    add_package_version_to_init()

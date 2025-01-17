@@ -3,3 +3,4 @@ xsdata>=21.11
 xsdata[cli]>=21.11
 isort>=5.13.2
 black>=24.10.0
+tomlkit-extras>=0.1.0
