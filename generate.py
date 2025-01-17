@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import importlib
+import importlib.util
 import logging
 import os
 import re
@@ -112,7 +113,19 @@ class Import:
     def module_parts(self) -> List[str]:
         return self.module.split(".")
 
+    @property
+    def package(self) -> str:
+        return self.module_parts[0]
+
+    @property
+    def is_std_lib(self) -> bool:
+        module_spec = importlib.util.find_spec(self.package)
+        return module_spec and module_spec.origin
+
     def __post_init__(self) -> None:
+        if not self.is_std_lib:
+            subprocess.check_call([sys.executable, "-m", "pip", "install", self.package])
+
         module = importlib.import_module(self.module)
 
         if self.identifiers is not None:
