@@ -5,6 +5,8 @@ description = "A Python package that automatically generates and updates datacla
 authors = ["galactixx"]
 license = "MIT License"
 readme = "README.md"
+homepage = "https://github.com/galactixx/python-iso20022"
+repository = "https://github.com/galactixx/python-iso20022"
 keywords = [
     "iso20022",
     "parsing",
