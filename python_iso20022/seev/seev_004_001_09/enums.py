@@ -1,22 +1,6 @@
 from enum import Enum
 
 
-class VotingParticipationMethod2Code(Enum):
-    PHNV = "PHNV"
-
-
-class PartyRole3Code(Enum):
-    GATR = "GATR"
-
-
-class DeliveryPlace3Code(Enum):
-    EMAL = "EMAL"
-    EMPL = "EMPL"
-    INDI = "INDI"
-    ENTR = "ENTR"
-    OADR = "OADR"
-
-
 class VoteInstruction7Code(Enum):
     ABST = "ABST"
     CAGS = "CAGS"
@@ -29,3 +13,19 @@ class VoteInstruction7Code(Enum):
     TWOY = "TWOY"
     WTHH = "WTHH"
     WMGT = "WMGT"
+
+
+class DeliveryPlace3Code(Enum):
+    EMAL = "EMAL"
+    EMPL = "EMPL"
+    INDI = "INDI"
+    ENTR = "ENTR"
+    OADR = "OADR"
+
+
+class VotingParticipationMethod2Code(Enum):
+    PHNV = "PHNV"
+
+
+class PartyRole3Code(Enum):
+    GATR = "GATR"

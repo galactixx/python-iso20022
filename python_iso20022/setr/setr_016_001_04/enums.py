@@ -1,6 +1,10 @@
 from enum import Enum
 
 
+class InRepairStatusReason1Code(Enum):
+    COMA = "COMA"
+
+
 class OrderStatus4Code(Enum):
     PACK = "PACK"
     COSE = "COSE"
@@ -15,14 +19,6 @@ class OrderStatus4Code(Enum):
     IACO = "IACO"
 
 
-class ConditionallyAcceptedStatusReason2Code(Enum):
-    DOCC = "DOCC"
-    AWRM = "AWRM"
-    AWSM = "AWSM"
-    DUPL = "DUPL"
-    CRED = "CRED"
-
-
 class SettledStatusReason2Code(Enum):
     CPST = "CPST"
     GATM = "GATM"
@@ -31,13 +27,12 @@ class SettledStatusReason2Code(Enum):
     UPST = "UPST"
 
 
-class InRepairStatusReason1Code(Enum):
-    COMA = "COMA"
-
-
-class SuspendedStatusReason3Code(Enum):
-    PRIC = "PRIC"
-    FLOW = "FLOW"
+class ConditionallyAcceptedStatusReason2Code(Enum):
+    DOCC = "DOCC"
+    AWRM = "AWRM"
+    AWSM = "AWSM"
+    DUPL = "DUPL"
+    CRED = "CRED"
 
 
 class CancelledStatusReason2Code(Enum):
@@ -104,3 +99,8 @@ class RejectedStatusReason11Code(Enum):
     ULNK = "ULNK"
     UNSC = "UNSC"
     POIN = "POIN"
+
+
+class SuspendedStatusReason3Code(Enum):
+    PRIC = "PRIC"
+    FLOW = "FLOW"

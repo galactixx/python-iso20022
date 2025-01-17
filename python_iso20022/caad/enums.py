@@ -1,15 +1,10 @@
 from enum import Enum
 
 
-class BatchManagementType2Code(Enum):
-    AKRQ = "AKRQ"
-    AKRP = "AKRP"
-    ENDB = "ENDB"
-    IDNT = "IDNT"
-    OTHN = "OTHN"
-    OTHP = "OTHP"
-    RERQ = "RERQ"
-    STRT = "STRT"
+class UserInterface7Code(Enum):
+    OCAI = "OCAI"
+    CLRL = "CLRL"
+    CLRA = "CLRA"
 
 
 class ReconciliationMessageType2Code(Enum):
@@ -57,21 +52,12 @@ class ReconciliationMessageType2Code(Enum):
     RTVI = "RTVI"
 
 
-class PartyType23Code(Enum):
+class ReconciliationActivityType1Code(Enum):
+    ACQG = "ACQG"
+    CNSD = "CNSD"
+    ISSG = "ISSG"
     OTHN = "OTHN"
     OTHP = "OTHP"
-    CLRA = "CLRA"
-
-
-class UserInterface7Code(Enum):
-    OCAI = "OCAI"
-    CLRL = "CLRL"
-    CLRA = "CLRA"
-
-
-class ReconciliationImpact1Code(Enum):
-    DEBT = "DEBT"
-    CRDT = "CRDT"
 
 
 class ReconciliationCategory1Code(Enum):
@@ -82,10 +68,9 @@ class ReconciliationCategory1Code(Enum):
     CGBK = "CGBK"
 
 
-class ReconciliationFunction1Code(Enum):
-    INQR = "INQR"
-    INCU = "INCU"
-    CNVY = "CNVY"
+class ReconciliationImpact1Code(Enum):
+    DEBT = "DEBT"
+    CRDT = "CRDT"
 
 
 class CardServiceType4Code(Enum):
@@ -95,10 +80,15 @@ class CardServiceType4Code(Enum):
     OTHP = "OTHP"
 
 
-class AdministrativeType1Code(Enum):
+class BatchManagementType2Code(Enum):
+    AKRQ = "AKRQ"
+    AKRP = "AKRP"
+    ENDB = "ENDB"
+    IDNT = "IDNT"
     OTHN = "OTHN"
     OTHP = "OTHP"
-    TEXT = "TEXT"
+    RERQ = "RERQ"
+    STRT = "STRT"
 
 
 class ClearingMethod2Code(Enum):
@@ -110,9 +100,19 @@ class ClearingMethod2Code(Enum):
     RLTM = "RLTM"
 
 
-class ReconciliationActivityType1Code(Enum):
-    ACQG = "ACQG"
-    CNSD = "CNSD"
-    ISSG = "ISSG"
+class PartyType23Code(Enum):
     OTHN = "OTHN"
     OTHP = "OTHP"
+    CLRA = "CLRA"
+
+
+class ReconciliationFunction1Code(Enum):
+    INQR = "INQR"
+    INCU = "INCU"
+    CNVY = "CNVY"
+
+
+class AdministrativeType1Code(Enum):
+    OTHN = "OTHN"
+    OTHP = "OTHP"
+    TEXT = "TEXT"

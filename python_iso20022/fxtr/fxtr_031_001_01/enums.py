@@ -6,12 +6,6 @@ class DataType1Code(Enum):
     TRDA = "TRDA"
 
 
-class OptionPayoutType1Code(Enum):
-    BINA = "BINA"
-    CAPP = "CAPP"
-    VANI = "VANI"
-
-
 class OrderStatus8Code(Enum):
     CANC = "CANC"
     NEWW = "NEWW"
@@ -28,3 +22,9 @@ class DerivativeExerciseStatus1Code(Enum):
     EXEC = "EXEC"
     EXPI = "EXPI"
     VALI = "VALI"
+
+
+class OptionPayoutType1Code(Enum):
+    BINA = "BINA"
+    CAPP = "CAPP"
+    VANI = "VANI"

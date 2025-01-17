@@ -1,39 +1,6 @@
 from enum import Enum
 
 
-class PendingReason17Code(Enum):
-    CONF = "CONF"
-
-
-class UnmatchedReason15Code(Enum):
-    CPCA = "CPCA"
-    DCBS = "DCBS"
-    TMOP = "TMOP"
-    OPTP = "OPTP"
-    OFRF = "OFRF"
-    SPRD = "SPRD"
-    RITP = "RITP"
-    RATE = "RATE"
-    TMCY = "TMCY"
-    TXCY = "TXCY"
-    TXAM = "TXAM"
-    MNTP = "MNTP"
-    EGSP = "EGSP"
-    EXPO = "EXPO"
-    DTRD = "DTRD"
-    REDT = "REDT"
-    CMIS = "CMIS"
-    TFRT = "TFRT"
-    TERM = "TERM"
-    INPD = "INPD"
-    PYFQ = "PYFQ"
-    CSAC = "CSAC"
-    LBKD = "LBKD"
-    CRYD = "CRYD"
-    TENO = "TENO"
-    SEPR = "SEPR"
-
-
 class RejectionReason62Code(Enum):
     REFE = "REFE"
     ADEA = "ADEA"
@@ -70,6 +37,42 @@ class RejectionReason62Code(Enum):
     CTRA = "CTRA"
 
 
+class UnmatchedReason15Code(Enum):
+    CPCA = "CPCA"
+    DCBS = "DCBS"
+    TMOP = "TMOP"
+    OPTP = "OPTP"
+    OFRF = "OFRF"
+    SPRD = "SPRD"
+    RITP = "RITP"
+    RATE = "RATE"
+    TMCY = "TMCY"
+    TXCY = "TXCY"
+    TXAM = "TXAM"
+    MNTP = "MNTP"
+    EGSP = "EGSP"
+    EXPO = "EXPO"
+    DTRD = "DTRD"
+    REDT = "REDT"
+    CMIS = "CMIS"
+    TFRT = "TFRT"
+    TERM = "TERM"
+    INPD = "INPD"
+    PYFQ = "PYFQ"
+    CSAC = "CSAC"
+    LBKD = "LBKD"
+    CRYD = "CRYD"
+    TENO = "TENO"
+    SEPR = "SEPR"
+
+
+class CancelledStatusReason17Code(Enum):
+    CANI = "CANI"
+    OTHR = "OTHR"
+    CSUB = "CSUB"
+    CANS = "CANS"
+
+
 class RejectionReason63Code(Enum):
     REFE = "REFE"
     ADEA = "ADEA"
@@ -90,8 +93,5 @@ class RejectionReason63Code(Enum):
     NRJN = "NRJN"
 
 
-class CancelledStatusReason17Code(Enum):
-    CANI = "CANI"
-    OTHR = "OTHR"
-    CSUB = "CSUB"
-    CANS = "CANS"
+class PendingReason17Code(Enum):
+    CONF = "CONF"

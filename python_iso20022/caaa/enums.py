@@ -1,43 +1,6 @@
 from enum import Enum
 
 
-class TypeTransactionTotals2Code(Enum):
-    CRDT = "CRDT"
-    CRDR = "CRDR"
-    DEBT = "DEBT"
-    DBTR = "DBTR"
-    DECL = "DECL"
-    FAIL = "FAIL"
-
-
-class FailureReason3Code(Enum):
-    CDCL = "CDCL"
-    CUCL = "CUCL"
-    MALF = "MALF"
-    FDCL = "FDCL"
-    NDCL = "NDCL"
-    PART = "PART"
-    SFRD = "SFRD"
-    TIMO = "TIMO"
-    LATE = "LATE"
-    UCMP = "UCMP"
-    USND = "USND"
-    SECU = "SECU"
-
-
-class DataSetCategory8Code(Enum):
-    SWPK = "SWPK"
-    VDPR = "VDPR"
-    AQPR = "AQPR"
-    MRPR = "MRPR"
-    TXCP = "TXCP"
-    AKCP = "AKCP"
-    STRP = "STRP"
-    DLGT = "DLGT"
-    MGTP = "MGTP"
-    RCLE = "RCLE"
-
-
 class MessageFunction46Code(Enum):
     AUTQ = "AUTQ"
     AUTP = "AUTP"
@@ -77,8 +40,45 @@ class MessageFunction46Code(Enum):
     DCRP = "DCRP"
 
 
+class DataSetCategory8Code(Enum):
+    SWPK = "SWPK"
+    VDPR = "VDPR"
+    AQPR = "AQPR"
+    MRPR = "MRPR"
+    TXCP = "TXCP"
+    AKCP = "AKCP"
+    STRP = "STRP"
+    DLGT = "DLGT"
+    MGTP = "MGTP"
+    RCLE = "RCLE"
+
+
 class Response1Code(Enum):
     DECL = "DECL"
     APPR = "APPR"
     PART = "PART"
     TECH = "TECH"
+
+
+class FailureReason3Code(Enum):
+    CDCL = "CDCL"
+    CUCL = "CUCL"
+    MALF = "MALF"
+    FDCL = "FDCL"
+    NDCL = "NDCL"
+    PART = "PART"
+    SFRD = "SFRD"
+    TIMO = "TIMO"
+    LATE = "LATE"
+    UCMP = "UCMP"
+    USND = "USND"
+    SECU = "SECU"
+
+
+class TypeTransactionTotals2Code(Enum):
+    CRDT = "CRDT"
+    CRDR = "CRDR"
+    DEBT = "DEBT"
+    DBTR = "DBTR"
+    DECL = "DECL"
+    FAIL = "FAIL"

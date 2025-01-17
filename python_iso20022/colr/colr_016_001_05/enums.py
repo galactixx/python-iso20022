@@ -1,36 +1,23 @@
 from enum import Enum
 
 
+class SettlementStatus3Code(Enum):
+    ASTL = "ASTL"
+    AAUT = "AAUT"
+    ACCF = "ACCF"
+    ARCF = "ARCF"
+    MTCH = "MTCH"
+    PSTL = "PSTL"
+    RJCT = "RJCT"
+    STLD = "STLD"
+    STCR = "STCR"
+    SPLT = "SPLT"
+    NMAT = "NMAT"
+
+
 class CollateralDirection1Code(Enum):
     CDPA = "CDPA"
     CDPB = "CDPB"
-
-
-class CollateralType8Code(Enum):
-    COMO = "COMO"
-    CCCL = "CCCL"
-    CEMC = "CEMC"
-    CXCC = "CXCC"
-    CFTD = "CFTD"
-    CFTI = "CFTI"
-    CTRC = "CTRC"
-    CASH = "CASH"
-    LCRE = "LCRE"
-    OTHR = "OTHR"
-    SECU = "SECU"
-    CTCO = "CTCO"
-    CCVR = "CCVR"
-
-
-class CollateralAppliedExcess1Code(Enum):
-    APLD = "APLD"
-    EXCS = "EXCS"
-
-
-class ReturnExcessCash1Code(Enum):
-    RTND = "RTND"
-    RTDN = "RTDN"
-    SSPD = "SSPD"
 
 
 class ExposureType13Code(Enum):
@@ -90,15 +77,28 @@ class CcpmemberType1Code(Enum):
     SCMB = "SCMB"
 
 
-class SettlementStatus3Code(Enum):
-    ASTL = "ASTL"
-    AAUT = "AAUT"
-    ACCF = "ACCF"
-    ARCF = "ARCF"
-    MTCH = "MTCH"
-    PSTL = "PSTL"
-    RJCT = "RJCT"
-    STLD = "STLD"
-    STCR = "STCR"
-    SPLT = "SPLT"
-    NMAT = "NMAT"
+class ReturnExcessCash1Code(Enum):
+    RTND = "RTND"
+    RTDN = "RTDN"
+    SSPD = "SSPD"
+
+
+class CollateralAppliedExcess1Code(Enum):
+    APLD = "APLD"
+    EXCS = "EXCS"
+
+
+class CollateralType8Code(Enum):
+    COMO = "COMO"
+    CCCL = "CCCL"
+    CEMC = "CEMC"
+    CXCC = "CXCC"
+    CFTD = "CFTD"
+    CFTI = "CFTI"
+    CTRC = "CTRC"
+    CASH = "CASH"
+    LCRE = "LCRE"
+    OTHR = "OTHR"
+    SECU = "SECU"
+    CTCO = "CTCO"
+    CCVR = "CCVR"

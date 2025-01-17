@@ -1,6 +1,11 @@
 from enum import Enum
 
 
+class ReportItemStatus1Code(Enum):
+    ACPD = "ACPD"
+    REJT = "REJT"
+
+
 class HoldingRejectionReason41Code(Enum):
     INPR = "INPR"
     INID = "INID"
@@ -89,8 +94,3 @@ class HoldingAccountLevel1Code(Enum):
     LVL7 = "LVL7"
     LVL8 = "LVL8"
     LVL9 = "LVL9"
-
-
-class ReportItemStatus1Code(Enum):
-    ACPD = "ACPD"
-    REJT = "REJT"

@@ -1,6 +1,15 @@
 from enum import Enum
 
 
+class InternalPartyRole1Code(Enum):
+    INTC = "INTC"
+
+
+class CancelledStatusReason15Code(Enum):
+    CANI = "CANI"
+    CSUB = "CSUB"
+
+
 class ReportingWaiverType3Code(Enum):
     BENC = "BENC"
     ACTX = "ACTX"
@@ -24,15 +33,6 @@ class ReportingWaiverType1Code(Enum):
     ILQD = "ILQD"
     RFPT = "RFPT"
     SIZE = "SIZE"
-
-
-class CancelledStatusReason15Code(Enum):
-    CANI = "CANI"
-    CSUB = "CSUB"
-
-
-class InternalPartyRole1Code(Enum):
-    INTC = "INTC"
 
 
 class Side5Code(Enum):

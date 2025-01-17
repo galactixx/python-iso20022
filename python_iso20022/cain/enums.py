@@ -1,14 +1,59 @@
 from enum import Enum
 
 
-class UnitOfMeasure10Code(Enum):
-    KMET = "KMET"
-    MILE = "MILE"
+class PeriodUnit2Code(Enum):
+    HOUR = "HOUR"
+    HFDA = "HFDA"
+    DAYS = "DAYS"
+    WEEK = "WEEK"
+    MNTH = "MNTH"
+    YEAR = "YEAR"
+    MINU = "MINU"
+    OTHR = "OTHR"
 
 
-class TimeSegment1Code(Enum):
-    AMBN = "AMBN"
-    PMAN = "PMAN"
+class LegalStructure1Code(Enum):
+    STAE = "STAE"
+    PVIN = "PVIN"
+    MUNI = "MUNI"
+    CNTY = "CNTY"
+    NATI = "NATI"
+
+
+class PeriodUnit4Code(Enum):
+    OTHP = "OTHP"
+    OTHN = "OTHN"
+    MNTH = "MNTH"
+    WEEK = "WEEK"
+    YEAR = "YEAR"
+    DAYS = "DAYS"
+    EXDY = "EXDY"
+    MINU = "MINU"
+    HFDA = "HFDA"
+    HOUR = "HOUR"
+    OTHR = "OTHR"
+
+
+class CarRentalActivity1Code(Enum):
+    CARS = "CARS"
+    GLBL = "GLBL"
+    INDV = "INDV"
+    PETP = "PETP"
+    OTHP = "OTHP"
+    OTHN = "OTHN"
+    OTHR = "OTHR"
+
+
+class TemporaryServicesCharge1Code(Enum):
+    WKND = "WKND"
+    REGL = "REGL"
+    OVRT = "OVRT"
+    OTHP = "OTHP"
+    OTHN = "OTHN"
+    ONCL = "ONCL"
+    NITE = "NITE"
+    HOLI = "HOLI"
+    HAZD = "HAZD"
 
 
 class PeriodUnit3Code(Enum):
@@ -19,6 +64,241 @@ class PeriodUnit3Code(Enum):
     YEAR = "YEAR"
     DAYS = "DAYS"
     EXDY = "EXDY"
+
+
+class Exemption2Code(Enum):
+    PKGE = "PKGE"
+    TMBE = "TMBE"
+    RECP = "RECP"
+    LOWA = "LOWA"
+    SCPE = "SCPE"
+    TRAE = "TRAE"
+    CTLS = "CTLS"
+    PAAC = "PAAC"
+    TRSP = "TRSP"
+
+
+class JourneyType1Code(Enum):
+    COAC = "COAC"
+    EARL = "EARL"
+    FLGT = "FLGT"
+    LATE = "LATE"
+    ONTM = "ONTM"
+    OTHR = "OTHR"
+    TRAN = "TRAN"
+    VESS = "VESS"
+
+
+class PresentationMedium2Code(Enum):
+    BIOM = "BIOM"
+    ELEC = "ELEC"
+    PAPR = "PAPR"
+    BOTH = "BOTH"
+
+
+class CompanyAssigner2Code(Enum):
+    ASSO = "ASSO"
+    AUTH = "AUTH"
+    CPNY = "CPNY"
+    LEII = "LEII"
+    TRAG = "TRAG"
+    OTHP = "OTHP"
+    OTHN = "OTHN"
+
+
+class LocationAmenity1Code(Enum):
+    AADA = "AADA"
+    AFLA = "AFLA"
+    AVLA = "AVLA"
+    CRWA = "CRWA"
+    CVSA = "CVSA"
+    DISA = "DISA"
+    EWAA = "EWAA"
+    MRLA = "MRLA"
+    OTHN = "OTHN"
+    OTHP = "OTHP"
+    PAPA = "PAPA"
+    TSHA = "TSHA"
+    TSRA = "TSRA"
+    TSSA = "TSSA"
+    TFHA = "TFHA"
+    VSWA = "VSWA"
+    VHPA = "VHPA"
+    VMRA = "VMRA"
+
+
+class ProductCodeType1Code(Enum):
+    EA13 = "EA13"
+    EAN8 = "EAN8"
+    GTIN = "GTIN"
+    OTHR = "OTHR"
+    PLUP = "PLUP"
+    RS14 = "RS14"
+    UPCA = "UPCA"
+    UPCE = "UPCE"
+
+
+class LoyaltyValueType1Code(Enum):
+    MILE = "MILE"
+    MONE = "MONE"
+    OTHR = "OTHR"
+    POIN = "POIN"
+    PRIV = "PRIV"
+
+
+class TypeOfAmount19Code(Enum):
+    CONN = "CONN"
+    INSU = "INSU"
+    LNDS = "LNDS"
+    MISC = "MISC"
+    OTHN = "OTHN"
+    OTHP = "OTHP"
+    USGE = "USGE"
+
+
+class FleetPurchaseType1Code(Enum):
+    FUEL = "FUEL"
+    NONF = "NONF"
+    FANF = "FANF"
+
+
+class FleetServiceType1Code(Enum):
+    SLSV = "SLSV"
+    HSDI = "HSDI"
+    FLSV = "FLSV"
+
+
+class LodgingActivity1Code(Enum):
+    APTM = "APTM"
+    BEBR = "BEBR"
+    COTT = "COTT"
+    CRUI = "CRUI"
+    HOME = "HOME"
+    HOST = "HOST"
+    HOTL = "HOTL"
+    LODG = "LODG"
+    MOTL = "MOTL"
+    OTHN = "OTHN"
+    OTHP = "OTHP"
+    RESO = "RESO"
+    ROAB = "ROAB"
+    TOSH = "TOSH"
+
+
+class OfficialDocumentType1Code(Enum):
+    ARNU = "ARNU"
+    AUTH = "AUTH"
+    DIPL = "DIPL"
+    DVLC = "DVLC"
+    EURO = "EURO"
+    IDEN = "IDEN"
+    INTE = "INTE"
+    INPO = "INPO"
+    LZPR = "LZPR"
+    OTHN = "OTHN"
+    OTHP = "OTHP"
+    PASS = "PASS"
+    VISA = "VISA"
+    PERM = "PERM"
+    REFU = "REFU"
+
+
+class AttestationValue1Code(Enum):
+    CLAI = "CLAI"
+    HONO = "HONO"
+    NCLA = "NCLA"
+    NHON = "NHON"
+
+
+class CustomerAssigner1Code(Enum):
+    AUTH = "AUTH"
+    CRCY = "CRCY"
+    CUST = "CUST"
+    ONFL = "ONFL"
+    OTHR = "OTHR"
+    TRAY = "TRAY"
+
+
+class UnitOfMeasure10Code(Enum):
+    KMET = "KMET"
+    MILE = "MILE"
+
+
+class TypeTypeOfAmount23Code(Enum):
+    AMTH = "AMTH"
+    BAGG = "BAGG"
+    CARG = "CARG"
+    CHTC = "CHTC"
+    CLUB = "CLUB"
+    DUTY = "DUTY"
+    EXTK = "EXTK"
+    EXTF = "EXTF"
+    EXTR = "EXTR"
+    FARE = "FARE"
+    FDBV = "FDBV"
+    INSU = "INSU"
+    MISC = "MISC"
+    OTHN = "OTHN"
+    OTHP = "OTHP"
+    PETC = "PETC"
+    PHNE = "PHNE"
+    PRPY = "PRPY"
+    TOTL = "TOTL"
+    TOUR = "TOUR"
+    UPGD = "UPGD"
+    TKDL = "TKDL"
+    FEES = "FEES"
+
+
+class TimeSegment1Code(Enum):
+    AMBN = "AMBN"
+    PMAN = "PMAN"
+
+
+class CarRentalServiceType2Code(Enum):
+    ADJM = "ADJM"
+    AUTH = "AUTH"
+    BAST = "BAST"
+    CLEA = "CLEA"
+    DMGS = "DMGS"
+    DLVR = "DLVR"
+    DPOF = "DPOF"
+    ENTE = "ENTE"
+    EXTC = "EXTC"
+    EXDY = "EXDY"
+    EXDI = "EXDI"
+    EXHR = "EXHR"
+    FINE = "FINE"
+    FUEL = "FUEL"
+    GARA = "GARA"
+    GPSY = "GPSY"
+    INSU = "INSU"
+    LATE = "LATE"
+    LIIN = "LIIN"
+    LDIN = "LDIN"
+    MISC = "MISC"
+    NAVI = "NAVI"
+    NOSH = "NOSH"
+    ONEW = "ONEW"
+    OTHN = "OTHN"
+    OTHP = "OTHP"
+    PARK = "PARK"
+    PRIN = "PRIN"
+    PFIN = "PFIN"
+    PHON = "PHON"
+    REGD = "REGD"
+    SMOK = "SMOK"
+    TOLL = "TOLL"
+    TOWI = "TOWI"
+
+
+class TransportType1Code(Enum):
+    AIRR = "AIRR"
+    BUSS = "BUSS"
+    OTHN = "OTHN"
+    OTHP = "OTHP"
+    RAIL = "RAIL"
+    SHIP = "SHIP"
 
 
 class BalanceType15Code(Enum):
@@ -34,26 +314,11 @@ class BalanceType15Code(Enum):
     PNTS = "PNTS"
 
 
-class JourneyType1Code(Enum):
-    COAC = "COAC"
-    EARL = "EARL"
-    FLGT = "FLGT"
-    LATE = "LATE"
-    ONTM = "ONTM"
+class TaxReclaimMethod1Code(Enum):
+    INPP = "INPP"
+    INPS = "INPS"
+    INSU = "INSU"
     OTHR = "OTHR"
-    TRAN = "TRAN"
-    VESS = "VESS"
-
-
-class ProductCodeType1Code(Enum):
-    EA13 = "EA13"
-    EAN8 = "EAN8"
-    GTIN = "GTIN"
-    OTHR = "OTHR"
-    PLUP = "PLUP"
-    RS14 = "RS14"
-    UPCA = "UPCA"
-    UPCE = "UPCE"
 
 
 class AddendumTaxType3Code(Enum):
@@ -177,43 +442,6 @@ class AddendumTaxType3Code(Enum):
     DPTX = "DPTX"
 
 
-class CarRentalServiceType2Code(Enum):
-    ADJM = "ADJM"
-    AUTH = "AUTH"
-    BAST = "BAST"
-    CLEA = "CLEA"
-    DMGS = "DMGS"
-    DLVR = "DLVR"
-    DPOF = "DPOF"
-    ENTE = "ENTE"
-    EXTC = "EXTC"
-    EXDY = "EXDY"
-    EXDI = "EXDI"
-    EXHR = "EXHR"
-    FINE = "FINE"
-    FUEL = "FUEL"
-    GARA = "GARA"
-    GPSY = "GPSY"
-    INSU = "INSU"
-    LATE = "LATE"
-    LIIN = "LIIN"
-    LDIN = "LDIN"
-    MISC = "MISC"
-    NAVI = "NAVI"
-    NOSH = "NOSH"
-    ONEW = "ONEW"
-    OTHN = "OTHN"
-    OTHP = "OTHP"
-    PARK = "PARK"
-    PRIN = "PRIN"
-    PFIN = "PFIN"
-    PHON = "PHON"
-    REGD = "REGD"
-    SMOK = "SMOK"
-    TOLL = "TOLL"
-    TOWI = "TOWI"
-
-
 class TelephonyCallType1Code(Enum):
     VCML = "VCML"
     TFPC = "TFPC"
@@ -223,193 +451,6 @@ class TelephonyCallType1Code(Enum):
     OTHN = "OTHN"
     OTCL = "OTCL"
     ICPC = "ICPC"
-
-
-class TypeOfAmount19Code(Enum):
-    CONN = "CONN"
-    INSU = "INSU"
-    LNDS = "LNDS"
-    MISC = "MISC"
-    OTHN = "OTHN"
-    OTHP = "OTHP"
-    USGE = "USGE"
-
-
-class OfficialDocumentType1Code(Enum):
-    ARNU = "ARNU"
-    AUTH = "AUTH"
-    DIPL = "DIPL"
-    DVLC = "DVLC"
-    EURO = "EURO"
-    IDEN = "IDEN"
-    INTE = "INTE"
-    INPO = "INPO"
-    LZPR = "LZPR"
-    OTHN = "OTHN"
-    OTHP = "OTHP"
-    PASS = "PASS"
-    VISA = "VISA"
-    PERM = "PERM"
-    REFU = "REFU"
-
-
-class CompanyAssigner2Code(Enum):
-    ASSO = "ASSO"
-    AUTH = "AUTH"
-    CPNY = "CPNY"
-    LEII = "LEII"
-    TRAG = "TRAG"
-    OTHP = "OTHP"
-    OTHN = "OTHN"
-
-
-class FleetPurchaseType1Code(Enum):
-    FUEL = "FUEL"
-    NONF = "NONF"
-    FANF = "FANF"
-
-
-class TypeTypeOfAmount23Code(Enum):
-    AMTH = "AMTH"
-    BAGG = "BAGG"
-    CARG = "CARG"
-    CHTC = "CHTC"
-    CLUB = "CLUB"
-    DUTY = "DUTY"
-    EXTK = "EXTK"
-    EXTF = "EXTF"
-    EXTR = "EXTR"
-    FARE = "FARE"
-    FDBV = "FDBV"
-    INSU = "INSU"
-    MISC = "MISC"
-    OTHN = "OTHN"
-    OTHP = "OTHP"
-    PETC = "PETC"
-    PHNE = "PHNE"
-    PRPY = "PRPY"
-    TOTL = "TOTL"
-    TOUR = "TOUR"
-    UPGD = "UPGD"
-    TKDL = "TKDL"
-    FEES = "FEES"
-
-
-class PeriodUnit2Code(Enum):
-    HOUR = "HOUR"
-    HFDA = "HFDA"
-    DAYS = "DAYS"
-    WEEK = "WEEK"
-    MNTH = "MNTH"
-    YEAR = "YEAR"
-    MINU = "MINU"
-    OTHR = "OTHR"
-
-
-class LocationAmenity1Code(Enum):
-    AADA = "AADA"
-    AFLA = "AFLA"
-    AVLA = "AVLA"
-    CRWA = "CRWA"
-    CVSA = "CVSA"
-    DISA = "DISA"
-    EWAA = "EWAA"
-    MRLA = "MRLA"
-    OTHN = "OTHN"
-    OTHP = "OTHP"
-    PAPA = "PAPA"
-    TSHA = "TSHA"
-    TSRA = "TSRA"
-    TSSA = "TSSA"
-    TFHA = "TFHA"
-    VSWA = "VSWA"
-    VHPA = "VHPA"
-    VMRA = "VMRA"
-
-
-class PresentationMedium2Code(Enum):
-    BIOM = "BIOM"
-    ELEC = "ELEC"
-    PAPR = "PAPR"
-    BOTH = "BOTH"
-
-
-class FleetServiceType1Code(Enum):
-    SLSV = "SLSV"
-    HSDI = "HSDI"
-    FLSV = "FLSV"
-
-
-class Exemption2Code(Enum):
-    PKGE = "PKGE"
-    TMBE = "TMBE"
-    RECP = "RECP"
-    LOWA = "LOWA"
-    SCPE = "SCPE"
-    TRAE = "TRAE"
-    CTLS = "CTLS"
-    PAAC = "PAAC"
-    TRSP = "TRSP"
-
-
-class AttestationValue1Code(Enum):
-    CLAI = "CLAI"
-    HONO = "HONO"
-    NCLA = "NCLA"
-    NHON = "NHON"
-
-
-class TemporaryServicesCharge1Code(Enum):
-    WKND = "WKND"
-    REGL = "REGL"
-    OVRT = "OVRT"
-    OTHP = "OTHP"
-    OTHN = "OTHN"
-    ONCL = "ONCL"
-    NITE = "NITE"
-    HOLI = "HOLI"
-    HAZD = "HAZD"
-
-
-class TransportType1Code(Enum):
-    AIRR = "AIRR"
-    BUSS = "BUSS"
-    OTHN = "OTHN"
-    OTHP = "OTHP"
-    RAIL = "RAIL"
-    SHIP = "SHIP"
-
-
-class LegalStructure1Code(Enum):
-    STAE = "STAE"
-    PVIN = "PVIN"
-    MUNI = "MUNI"
-    CNTY = "CNTY"
-    NATI = "NATI"
-
-
-class TaxReclaimMethod1Code(Enum):
-    INPP = "INPP"
-    INPS = "INPS"
-    INSU = "INSU"
-    OTHR = "OTHR"
-
-
-class LodgingActivity1Code(Enum):
-    APTM = "APTM"
-    BEBR = "BEBR"
-    COTT = "COTT"
-    CRUI = "CRUI"
-    HOME = "HOME"
-    HOST = "HOST"
-    HOTL = "HOTL"
-    LODG = "LODG"
-    MOTL = "MOTL"
-    OTHN = "OTHN"
-    OTHP = "OTHP"
-    RESO = "RESO"
-    ROAB = "ROAB"
-    TOSH = "TOSH"
 
 
 class LodgingService1Code(Enum):
@@ -441,44 +482,3 @@ class LodgingService1Code(Enum):
     THRD = "THRD"
     TRAN = "TRAN"
     VODS = "VODS"
-
-
-class LoyaltyValueType1Code(Enum):
-    MILE = "MILE"
-    MONE = "MONE"
-    OTHR = "OTHR"
-    POIN = "POIN"
-    PRIV = "PRIV"
-
-
-class CarRentalActivity1Code(Enum):
-    CARS = "CARS"
-    GLBL = "GLBL"
-    INDV = "INDV"
-    PETP = "PETP"
-    OTHP = "OTHP"
-    OTHN = "OTHN"
-    OTHR = "OTHR"
-
-
-class CustomerAssigner1Code(Enum):
-    AUTH = "AUTH"
-    CRCY = "CRCY"
-    CUST = "CUST"
-    ONFL = "ONFL"
-    OTHR = "OTHR"
-    TRAY = "TRAY"
-
-
-class PeriodUnit4Code(Enum):
-    OTHP = "OTHP"
-    OTHN = "OTHN"
-    MNTH = "MNTH"
-    WEEK = "WEEK"
-    YEAR = "YEAR"
-    DAYS = "DAYS"
-    EXDY = "EXDY"
-    MINU = "MINU"
-    HFDA = "HFDA"
-    HOUR = "HOUR"
-    OTHR = "OTHR"

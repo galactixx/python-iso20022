@@ -18,16 +18,16 @@ class NetworkManagementType1Code(Enum):
     ERBI = "ERBI"
 
 
+class KeyType1Code(Enum):
+    OTHN = "OTHN"
+    OTHP = "OTHP"
+    PTKA = "PTKA"
+    PTKI = "PTKI"
+
+
 class CardServiceType5Code(Enum):
     KYDL = "KYDL"
     OTHN = "OTHN"
     OTHP = "OTHP"
     DEKY = "DEKY"
     RQKY = "RQKY"
-
-
-class KeyType1Code(Enum):
-    OTHN = "OTHN"
-    OTHP = "OTHP"
-    PTKA = "PTKA"
-    PTKI = "PTKI"

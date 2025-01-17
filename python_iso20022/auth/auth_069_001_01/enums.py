@@ -1,11 +1,17 @@
 from enum import Enum
 
 
-class OptionStyle5Code(Enum):
-    AMER = "AMER"
-    ASIA = "ASIA"
-    BERM = "BERM"
-    EURO = "EURO"
+class Frequency11Code(Enum):
+    YEAR = "YEAR"
+    DAIL = "DAIL"
+    MNTH = "MNTH"
+    EXPI = "EXPI"
+    OVNG = "OVNG"
+    QURT = "QURT"
+    MIAN = "MIAN"
+    UPFR = "UPFR"
+    WEEK = "WEEK"
+    CRED = "CRED"
 
 
 class ExoticOptionStyle1Code(Enum):
@@ -102,14 +108,8 @@ class UnitOfMeasure8Code(Enum):
     USTN = "USTN"
 
 
-class Frequency11Code(Enum):
-    YEAR = "YEAR"
-    DAIL = "DAIL"
-    MNTH = "MNTH"
-    EXPI = "EXPI"
-    OVNG = "OVNG"
-    QURT = "QURT"
-    MIAN = "MIAN"
-    UPFR = "UPFR"
-    WEEK = "WEEK"
-    CRED = "CRED"
+class OptionStyle5Code(Enum):
+    AMER = "AMER"
+    ASIA = "ASIA"
+    BERM = "BERM"
+    EURO = "EURO"

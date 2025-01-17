@@ -1,23 +1,6 @@
 from enum import Enum
 
 
-class NonEquityAssetClass1Code(Enum):
-    SDRV = "SDRV"
-    IRDV = "IRDV"
-    FEXD = "FEXD"
-    EQDV = "EQDV"
-    EADV = "EADV"
-    EMAL = "EMAL"
-    CRDV = "CRDV"
-    CFDS = "CFDS"
-    COMD = "COMD"
-    C10_D = "C10D"
-    BOND = "BOND"
-    ETCS = "ETCS"
-    ETNS = "ETNS"
-    SFPS = "SFPS"
-
-
 class NonEquitySubClassSegmentationCriteria1Code(Enum):
     ASCL = "ASCL"
     BSPD = "BSPD"
@@ -55,3 +38,20 @@ class NonEquitySubClassSegmentationCriteria1Code(Enum):
     UIRT = "UIRT"
     REOU = "REOU"
     UTYP = "UTYP"
+
+
+class NonEquityAssetClass1Code(Enum):
+    SDRV = "SDRV"
+    IRDV = "IRDV"
+    FEXD = "FEXD"
+    EQDV = "EQDV"
+    EADV = "EADV"
+    EMAL = "EMAL"
+    CRDV = "CRDV"
+    CFDS = "CFDS"
+    COMD = "COMD"
+    C10_D = "C10D"
+    BOND = "BOND"
+    ETCS = "ETCS"
+    ETNS = "ETNS"
+    SFPS = "SFPS"

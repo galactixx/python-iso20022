@@ -1,6 +1,11 @@
 from enum import Enum
 
 
+class MarginProduct1Code(Enum):
+    EQUI = "EQUI"
+    FIXI = "FIXI"
+
+
 class MarginType1Code(Enum):
     SEMA = "SEMA"
     ADFM = "ADFM"
@@ -13,8 +18,3 @@ class MarginType1Code(Enum):
     INMA = "INMA"
     VAMA = "VAMA"
     INCA = "INCA"
-
-
-class MarginProduct1Code(Enum):
-    EQUI = "EQUI"
-    FIXI = "FIXI"

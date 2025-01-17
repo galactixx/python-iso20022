@@ -1,6 +1,16 @@
 from enum import Enum
 
 
+class FraudReportingAction1Code(Enum):
+    DUPL = "DUPL"
+    CLSE = "CLSE"
+    NEWF = "NEWF"
+    OTHN = "OTHN"
+    OTHP = "OTHP"
+    REOP = "REOP"
+    UPDT = "UPDT"
+
+
 class FraudType1Code(Enum):
     ACTO = "ACTO"
     CWUI = "CWUI"
@@ -16,13 +26,3 @@ class FraudType1Code(Enum):
     CNPA = "CNPA"
     MUFD = "MUFD"
     COSN = "COSN"
-
-
-class FraudReportingAction1Code(Enum):
-    DUPL = "DUPL"
-    CLSE = "CLSE"
-    NEWF = "NEWF"
-    OTHN = "OTHN"
-    OTHP = "OTHP"
-    REOP = "REOP"
-    UPDT = "UPDT"

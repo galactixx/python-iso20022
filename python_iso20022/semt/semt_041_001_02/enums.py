@@ -19,21 +19,6 @@ class TypeOfPrice13Code(Enum):
     EGAV = "EGAV"
 
 
-class SenderBusinessRole1Code(Enum):
-    AOWN = "AOWN"
-    ASER = "ASER"
-
-
-class FrequencyGranularityType1Code(Enum):
-    EMON = "EMON"
-    EWEK = "EWEK"
-    ESEM = "ESEM"
-    EQRT = "EQRT"
-    EFRT = "EFRT"
-    EDAY = "EDAY"
-    ENDY = "ENDY"
-
-
 class PersonIdentificationType6Code(Enum):
     AREG = "AREG"
     CPFA = "CPFA"
@@ -90,3 +75,18 @@ class SecuritiesBalanceType14Code(Enum):
     WDOC = "WDOC"
     GRP1 = "GRP1"
     GRP2 = "GRP2"
+
+
+class FrequencyGranularityType1Code(Enum):
+    EMON = "EMON"
+    EWEK = "EWEK"
+    ESEM = "ESEM"
+    EQRT = "EQRT"
+    EFRT = "EFRT"
+    EDAY = "EDAY"
+    ENDY = "ENDY"
+
+
+class SenderBusinessRole1Code(Enum):
+    AOWN = "AOWN"
+    ASER = "ASER"

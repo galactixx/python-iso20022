@@ -1,8 +1,9 @@
 from enum import Enum
 
 
-class AccountStatusUpdateRequestReason1Code(Enum):
-    CLOE = "CLOE"
+class AccountStatusUpdateInstruction1Code(Enum):
+    CLOS = "CLOS"
+    REAC = "REAC"
 
 
 class DataModification2Code(Enum):
@@ -10,6 +11,5 @@ class DataModification2Code(Enum):
     DELT = "DELT"
 
 
-class AccountStatusUpdateInstruction1Code(Enum):
-    CLOS = "CLOS"
-    REAC = "REAC"
+class AccountStatusUpdateRequestReason1Code(Enum):
+    CLOE = "CLOE"

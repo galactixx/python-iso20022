@@ -1,35 +1,22 @@
 from enum import Enum
 
 
-class Atmcommand6Code(Enum):
-    ABAL = "ABAL"
-    ASTS = "ASTS"
-    CFGT = "CFGT"
-    CCNT = "CCNT"
-    DISC = "DISC"
-    KACT = "KACT"
-    KDAC = "KDAC"
-    KDWL = "KDWL"
-    KRMV = "KRMV"
-    SCFU = "SCFU"
-    SSCU = "SSCU"
-    SSTU = "SSTU"
-    SNDM = "SNDM"
-    HKCG = "HKCG"
-    HKRV = "HKRV"
-    KCHG = "KCHG"
+class Atmstatus2Code(Enum):
+    OPER = "OPER"
+    OUTS = "OUTS"
 
 
-class TerminalManagementActionResult2Code(Enum):
-    CNTE = "CNTE"
-    FMTE = "FMTE"
-    HRDW = "HRDW"
-    NSUP = "NSUP"
-    SECR = "SECR"
-    SUCC = "SUCC"
-    SYNE = "SYNE"
-    TIMO = "TIMO"
-    UKRF = "UKRF"
+class AtmsecurityScheme3Code(Enum):
+    APPK = "APPK"
+    CERT = "CERT"
+    FRAN = "FRAN"
+    DTCH = "DTCH"
+    LUXG = "LUXG"
+    MANU = "MANU"
+    PKIP = "PKIP"
+    SIGN = "SIGN"
+    NONE = "NONE"
+    TR34 = "TR34"
 
 
 class Algorithm13Code(Enum):
@@ -73,125 +60,33 @@ class Algorithm13Code(Enum):
     EA5_C = "EA5C"
 
 
-class ContentType2Code(Enum):
+class Algorithm7Code(Enum):
     """
-    ContentType2Code Identification of the type of a Cryptographic Message Syntax
-    (CMS) data structure.
+    Algorithm7Code Asymmetric encryption algorithm of a transport key.
 
-    :cvar DATA: PlainData Generic, non cryptographic, or unqualified
-        data content - (ASN.1 Object Identifier: id-data).
-    :cvar SIGN: SignedData Digital signature - (ASN.1 Object Identifier:
-        id-signedData).
-    :cvar EVLP: EnvelopedData Encrypted data, with encryption key -
-        (ASN.1 Object Identifier: id-envelopedData).
-    :cvar DGST: DigestedData Message digest - (ASN.1 Object Identifier:
-        id-digestedData).
-    :cvar AUTH: AuthenticatedData MAC (Message Authentication Code),
-        with encryption key - (ASN.1 Object Identifier: id-ct-authData).
+    :cvar ERSA: RSAEncryption RSA encryption algorithm - (ASN.1 Object
+        Identifier: rsaEncryption).
+    :cvar RSAO: RSAES-OAEP RSA encryption scheme based on Optimal
+        Asymmetric Encryption scheme (PKCS #1 version 2.1) - (ASN.1
+        Object Identifier: id-RSAES-OAEP).
     """
 
-    DATA = "DATA"
-    SIGN = "SIGN"
-    EVLP = "EVLP"
-    DGST = "DGST"
-    AUTH = "AUTH"
+    ERSA = "ERSA"
+    RSAO = "RSAO"
 
 
-class BytePadding1Code(Enum):
-    """
-    BytePadding1Code Byte padding for a cypher block chaining mode encryption, if
-    the padding is not implicit.
-
-    :cvar LNGT: LengthPadding Message to encrypt is completed by a byte
-        value containing the total number of added bytes.
-    :cvar NUL8: Null80Padding Message to encrypt is completed by one bit
-        of value 1, followed by null bits until the encryption block
-        length is reached.
-    :cvar NULG: NullLengthPadding Message to encrypt is completed by
-        null byte values, the last byte containing the total number of
-        added bytes.
-    :cvar NULL: NullPadding Message to encrypt is completed by null
-        bytes.
-    :cvar RAND: RandomPadding Message to encrypt is completed by random
-        value, the last byte containing the total number of added bytes.
-    """
-
-    LNGT = "LNGT"
-    NUL8 = "NUL8"
-    NULG = "NULG"
-    NULL = "NULL"
-    RAND = "RAND"
+class Atmoperation1Code(Enum):
+    ADJU = "ADJU"
+    INSR = "INSR"
+    LOAD = "LOAD"
+    REMV = "REMV"
+    UNLD = "UNLD"
 
 
-class AttributeType1Code(Enum):
-    """
-    AttributeType1Code Type of attribute of a distinguished name (DN).
-
-    :cvar CNAT: CommonName Common name of the attribute (ASN.1 Object
-        Identifier: id-at-commonName).
-    :cvar LATT: Locality Locality of the attribute (ASN.1 Object
-        Identifier: id-at-localityName).
-    :cvar OATT: OrganisationName Organization name of the attribute
-        (ASN.1 Object Identifier: id-at-organizationName).
-    :cvar OUAT: OrganisationUnitName Organization unit name of the
-        attribute (ASN.1 Object Identifier: id-at-
-        organizationalUnitName).
-    :cvar CATT: CountryName Country name of the attribute (ASN.1 Object
-        Identifier: id-at-countryName).
-    """
-
-    CNAT = "CNAT"
-    LATT = "LATT"
-    OATT = "OATT"
-    OUAT = "OUAT"
-    CATT = "CATT"
-
-
-class Algorithm12Code(Enum):
-    """
-    Algorithm12Code Cryptographic algorithms for the MAC (Message Authentication
-    Code).
-
-    :cvar MACC: RetailCBCMAC Retail CBC (Chaining Block Cypher) MAC
-        (Message Authentication Code) (cf. ISO 9807, ANSI X9.19) -
-        (ASN.1 Object Identifier: id-retail-cbc-mac).
-    :cvar MCCS: RetailSHA256MAC Retail-CBC-MAC with SHA-256 (Secure HAsh
-        standard)  - (ASN.1 Object Identifier: id-retail-cbc-mac-
-        sha-256).
-    :cvar CMA1: SHA256CMACwithAES128 CMAC (Cipher based Message
-        Authentication Code) defined by the National Institute of
-        Standards and Technology (NIST 800-38B - May 2005), using the
-        block cipher Advanced Encryption Standard with a 128 bits
-        cryptographic key, approved by the Federal Information
-        Processing Standards (FIPS 197 - November 6, 2001 - Advanced
-        Encryption Standard). The CMAC algorithm is computed on the
-        SHA-256 digest of the message.
-    :cvar MCC1: RetailSHA1MAC Retail-CBC-MAC with SHA-1 (Secure Hash
-        standard) - (ASN.1 Object Identifier: id-retail-cbc-mac-sha-1).
-    :cvar CMA9: SHA384CMACwithAES192 CMAC (Cipher based Message
-        Authentication Code) defined by the National Institute of
-        Standards and Technology (NIST 800-38B - May 2005), using the
-        block cipher Advanced Encryption Standard with a 192 bits
-        cryptographic key, approved by the Federal Information
-        Processing Standards (FIPS 197 - November 6, 2001 - Advanced
-        Encryption Standard). The CMAC algorithm is computed on the
-        SHA-384 digest of the message.
-    :cvar CMA5: SHA512CMACwithAES256 CMAC (Cipher based Message
-        Authentication Code) defined by the National Institute of
-        Standards and Technology (NIST 800-38B - May 2005), using the
-        block cipher Advanced Encryption Standard with a 256 bits
-        cryptographic key, approved by the Federal Information
-        Processing Standards (FIPS 197 - November 6, 2001 - Advanced
-        Encryption Standard). The CMAC algorithm is computed on the
-        SHA-512 digest of the message.
-    """
-
-    MACC = "MACC"
-    MCCS = "MCCS"
-    CMA1 = "CMA1"
-    MCC1 = "MCC1"
-    CMA9 = "CMA9"
-    CMA5 = "CMA5"
+class Algorithm14Code(Enum):
+    ERS2 = "ERS2"
+    ERS1 = "ERS1"
+    RPSS = "RPSS"
 
 
 class MessageFunction7Code(Enum):
@@ -271,47 +166,69 @@ class MessageFunction7Code(Enum):
     SSTS = "SSTS"
 
 
-class AtmserviceType10Code(Enum):
-    TRFC = "TRFC"
-    TRFI = "TRFI"
-    TRFP = "TRFP"
+class MessageProtection1Code(Enum):
+    EVLP = "EVLP"
+    MACB = "MACB"
+    MACM = "MACM"
+    UNPR = "UNPR"
+
+
+class Algorithm8Code(Enum):
+    """
+    Algorithm8Code Mask generator functions of the RSAES-OAEP encryption algorithm
+    (RSA Encryption Scheme: Optimal Asymmetric Encryption Padding).
+
+    :cvar MGF1: MGF1 Generator Function, used for RSA encryption and RSA
+        igital signature (PKCS #1 version 2.1) - (ASN.1 Object
+        Identifier: id-mgf1).
+    """
+
+    MGF1 = "MGF1"
+
+
+class BytePadding1Code(Enum):
+    """
+    BytePadding1Code Byte padding for a cypher block chaining mode encryption, if
+    the padding is not implicit.
+
+    :cvar LNGT: LengthPadding Message to encrypt is completed by a byte
+        value containing the total number of added bytes.
+    :cvar NUL8: Null80Padding Message to encrypt is completed by one bit
+        of value 1, followed by null bits until the encryption block
+        length is reached.
+    :cvar NULG: NullLengthPadding Message to encrypt is completed by
+        null byte values, the last byte containing the total number of
+        added bytes.
+    :cvar NULL: NullPadding Message to encrypt is completed by null
+        bytes.
+    :cvar RAND: RandomPadding Message to encrypt is completed by random
+        value, the last byte containing the total number of added bytes.
+    """
+
+    LNGT = "LNGT"
+    NUL8 = "NUL8"
+    NULG = "NULG"
+    NULL = "NULL"
+    RAND = "RAND"
+
+
+class Atmcommand6Code(Enum):
+    ABAL = "ABAL"
     ASTS = "ASTS"
-    BLCQ = "BLCQ"
-    CDVF = "CDVF"
-    CHSN = "CHSN"
-    CMPF = "CMPF"
-    DCCS = "DCCS"
-    XRTD = "XRTD"
-    XRTW = "XRTW"
-    MCHG = "MCHG"
-    DPSN = "DPSN"
-    PINC = "PINC"
-    PINR = "PINR"
-    PINU = "PINU"
-    PATH = "PATH"
-    PRFL = "PRFL"
-    EMVS = "EMVS"
-    STDR = "STDR"
-    SPRV = "SPRV"
-    DPSV = "DPSV"
-
-
-class Atmstatus2Code(Enum):
-    OPER = "OPER"
-    OUTS = "OUTS"
-
-
-class AtmsecurityScheme3Code(Enum):
-    APPK = "APPK"
-    CERT = "CERT"
-    FRAN = "FRAN"
-    DTCH = "DTCH"
-    LUXG = "LUXG"
-    MANU = "MANU"
-    PKIP = "PKIP"
-    SIGN = "SIGN"
-    NONE = "NONE"
-    TR34 = "TR34"
+    CFGT = "CFGT"
+    CCNT = "CCNT"
+    DISC = "DISC"
+    KACT = "KACT"
+    KDAC = "KDAC"
+    KDWL = "KDWL"
+    KRMV = "KRMV"
+    SCFU = "SCFU"
+    SSCU = "SSCU"
+    SSTU = "SSTU"
+    SNDM = "SNDM"
+    HKCG = "HKCG"
+    HKRV = "HKRV"
+    KCHG = "KCHG"
 
 
 class Tr34Command1Code(Enum):
@@ -320,6 +237,54 @@ class Tr34Command1Code(Enum):
     HILU = "HILU"
     RBND = "RBND"
     UBND = "UBND"
+
+
+class AttributeType1Code(Enum):
+    """
+    AttributeType1Code Type of attribute of a distinguished name (DN).
+
+    :cvar CNAT: CommonName Common name of the attribute (ASN.1 Object
+        Identifier: id-at-commonName).
+    :cvar LATT: Locality Locality of the attribute (ASN.1 Object
+        Identifier: id-at-localityName).
+    :cvar OATT: OrganisationName Organization name of the attribute
+        (ASN.1 Object Identifier: id-at-organizationName).
+    :cvar OUAT: OrganisationUnitName Organization unit name of the
+        attribute (ASN.1 Object Identifier: id-at-
+        organizationalUnitName).
+    :cvar CATT: CountryName Country name of the attribute (ASN.1 Object
+        Identifier: id-at-countryName).
+    """
+
+    CNAT = "CNAT"
+    LATT = "LATT"
+    OATT = "OATT"
+    OUAT = "OUAT"
+    CATT = "CATT"
+
+
+class TerminalManagementActionResult2Code(Enum):
+    CNTE = "CNTE"
+    FMTE = "FMTE"
+    HRDW = "HRDW"
+    NSUP = "NSUP"
+    SECR = "SECR"
+    SUCC = "SUCC"
+    SYNE = "SYNE"
+    TIMO = "TIMO"
+    UKRF = "UKRF"
+
+
+class AtmsecurityScheme4Code(Enum):
+    APPK = "APPK"
+    CERT = "CERT"
+    FRAN = "FRAN"
+    DTCH = "DTCH"
+    LUXG = "LUXG"
+    MANU = "MANU"
+    PKIP = "PKIP"
+    SIGN = "SIGN"
+    TR34 = "TR34"
 
 
 class EncryptionFormat1Code(Enum):
@@ -337,57 +302,120 @@ class EncryptionFormat1Code(Enum):
     TR34 = "TR34"
 
 
-class Algorithm8Code(Enum):
+class ContentType2Code(Enum):
     """
-    Algorithm8Code Mask generator functions of the RSAES-OAEP encryption algorithm
-    (RSA Encryption Scheme: Optimal Asymmetric Encryption Padding).
+    ContentType2Code Identification of the type of a Cryptographic Message Syntax
+    (CMS) data structure.
 
-    :cvar MGF1: MGF1 Generator Function, used for RSA encryption and RSA
-        igital signature (PKCS #1 version 2.1) - (ASN.1 Object
-        Identifier: id-mgf1).
-    """
-
-    MGF1 = "MGF1"
-
-
-class Algorithm7Code(Enum):
-    """
-    Algorithm7Code Asymmetric encryption algorithm of a transport key.
-
-    :cvar ERSA: RSAEncryption RSA encryption algorithm - (ASN.1 Object
-        Identifier: rsaEncryption).
-    :cvar RSAO: RSAES-OAEP RSA encryption scheme based on Optimal
-        Asymmetric Encryption scheme (PKCS #1 version 2.1) - (ASN.1
-        Object Identifier: id-RSAES-OAEP).
+    :cvar DATA: PlainData Generic, non cryptographic, or unqualified
+        data content - (ASN.1 Object Identifier: id-data).
+    :cvar SIGN: SignedData Digital signature - (ASN.1 Object Identifier:
+        id-signedData).
+    :cvar EVLP: EnvelopedData Encrypted data, with encryption key -
+        (ASN.1 Object Identifier: id-envelopedData).
+    :cvar DGST: DigestedData Message digest - (ASN.1 Object Identifier:
+        id-digestedData).
+    :cvar AUTH: AuthenticatedData MAC (Message Authentication Code),
+        with encryption key - (ASN.1 Object Identifier: id-ct-authData).
     """
 
-    ERSA = "ERSA"
-    RSAO = "RSAO"
-
-
-class Algorithm14Code(Enum):
-    ERS2 = "ERS2"
-    ERS1 = "ERS1"
-    RPSS = "RPSS"
-
-
-class MessageProtection1Code(Enum):
-    EVLP = "EVLP"
-    MACB = "MACB"
-    MACM = "MACM"
-    UNPR = "UNPR"
-
-
-class AtmsecurityScheme4Code(Enum):
-    APPK = "APPK"
-    CERT = "CERT"
-    FRAN = "FRAN"
-    DTCH = "DTCH"
-    LUXG = "LUXG"
-    MANU = "MANU"
-    PKIP = "PKIP"
+    DATA = "DATA"
     SIGN = "SIGN"
-    TR34 = "TR34"
+    EVLP = "EVLP"
+    DGST = "DGST"
+    AUTH = "AUTH"
+
+
+class Algorithm11Code(Enum):
+    """
+    Algorithm11Code Identification of a digest algorithm.
+
+    :cvar HS25: SHA256 Message digest algorithm SHA-256 as defined in
+        FIPS 180-1 and 2 - (ASN.1 Object Identifier: id-sha256).
+    :cvar HS38: SHA384 Message digest algorithm SHA-384 as defined in
+        FIPS 180-1 and 2 - (ASN.1 Object Identifier: id-sha384).
+    :cvar HS51: SHA512 Message digest algorithm SHA-512 as defined in
+        FIPS 180-1 and 2 - (ASN.1 Object Identifier: id-sha512).
+    :cvar HS01: SHA1 Message digest algorithm SHA-1 as defined in FIPS
+        180-1 - (ASN.1 Object Identifier: id-sha1).
+    """
+
+    HS25 = "HS25"
+    HS38 = "HS38"
+    HS51 = "HS51"
+    HS01 = "HS01"
+
+
+class Algorithm12Code(Enum):
+    """
+    Algorithm12Code Cryptographic algorithms for the MAC (Message Authentication
+    Code).
+
+    :cvar MACC: RetailCBCMAC Retail CBC (Chaining Block Cypher) MAC
+        (Message Authentication Code) (cf. ISO 9807, ANSI X9.19) -
+        (ASN.1 Object Identifier: id-retail-cbc-mac).
+    :cvar MCCS: RetailSHA256MAC Retail-CBC-MAC with SHA-256 (Secure HAsh
+        standard)  - (ASN.1 Object Identifier: id-retail-cbc-mac-
+        sha-256).
+    :cvar CMA1: SHA256CMACwithAES128 CMAC (Cipher based Message
+        Authentication Code) defined by the National Institute of
+        Standards and Technology (NIST 800-38B - May 2005), using the
+        block cipher Advanced Encryption Standard with a 128 bits
+        cryptographic key, approved by the Federal Information
+        Processing Standards (FIPS 197 - November 6, 2001 - Advanced
+        Encryption Standard). The CMAC algorithm is computed on the
+        SHA-256 digest of the message.
+    :cvar MCC1: RetailSHA1MAC Retail-CBC-MAC with SHA-1 (Secure Hash
+        standard) - (ASN.1 Object Identifier: id-retail-cbc-mac-sha-1).
+    :cvar CMA9: SHA384CMACwithAES192 CMAC (Cipher based Message
+        Authentication Code) defined by the National Institute of
+        Standards and Technology (NIST 800-38B - May 2005), using the
+        block cipher Advanced Encryption Standard with a 192 bits
+        cryptographic key, approved by the Federal Information
+        Processing Standards (FIPS 197 - November 6, 2001 - Advanced
+        Encryption Standard). The CMAC algorithm is computed on the
+        SHA-384 digest of the message.
+    :cvar CMA5: SHA512CMACwithAES256 CMAC (Cipher based Message
+        Authentication Code) defined by the National Institute of
+        Standards and Technology (NIST 800-38B - May 2005), using the
+        block cipher Advanced Encryption Standard with a 256 bits
+        cryptographic key, approved by the Federal Information
+        Processing Standards (FIPS 197 - November 6, 2001 - Advanced
+        Encryption Standard). The CMAC algorithm is computed on the
+        SHA-512 digest of the message.
+    """
+
+    MACC = "MACC"
+    MCCS = "MCCS"
+    CMA1 = "CMA1"
+    MCC1 = "MCC1"
+    CMA9 = "CMA9"
+    CMA5 = "CMA5"
+
+
+class PartyType12Code(Enum):
+    """
+    PartyType12Code Type of identified entity.
+
+    :cvar ACQR: Acquirer Entity acquiring card transactions.
+    :cvar ATMG: ATMManager Entity managing the ATM.
+    :cvar CISP: CardIssuerProcessor Entity providing issuing card
+        payment processing services on behalf on an issuer.
+    :cvar DLIS: DelegateIssuer Party to whom the card issuer delegates
+        to authorise card payment transactions.
+    :cvar HSTG: HostingEntity Entity hosting the ATM.
+    :cvar ITAG: IntermediaryAgent Party acting on behalf of other
+        parties to process or forward data to other parties.
+    :cvar OATM: OriginatingATM ATM initiating the transaction.
+    """
+
+    ACQR = "ACQR"
+    ATMG = "ATMG"
+    CISP = "CISP"
+    DLIS = "DLIS"
+    HSTG = "HSTG"
+    ITAG = "ITAG"
+    OATM = "OATM"
 
 
 class Algorithm15Code(Enum):
@@ -419,54 +447,26 @@ class Algorithm15Code(Enum):
     EA5_C = "EA5C"
 
 
-class PartyType12Code(Enum):
-    """
-    PartyType12Code Type of identified entity.
-
-    :cvar ACQR: Acquirer Entity acquiring card transactions.
-    :cvar ATMG: ATMManager Entity managing the ATM.
-    :cvar CISP: CardIssuerProcessor Entity providing issuing card
-        payment processing services on behalf on an issuer.
-    :cvar DLIS: DelegateIssuer Party to whom the card issuer delegates
-        to authorise card payment transactions.
-    :cvar HSTG: HostingEntity Entity hosting the ATM.
-    :cvar ITAG: IntermediaryAgent Party acting on behalf of other
-        parties to process or forward data to other parties.
-    :cvar OATM: OriginatingATM ATM initiating the transaction.
-    """
-
-    ACQR = "ACQR"
-    ATMG = "ATMG"
-    CISP = "CISP"
-    DLIS = "DLIS"
-    HSTG = "HSTG"
-    ITAG = "ITAG"
-    OATM = "OATM"
-
-
-class Algorithm11Code(Enum):
-    """
-    Algorithm11Code Identification of a digest algorithm.
-
-    :cvar HS25: SHA256 Message digest algorithm SHA-256 as defined in
-        FIPS 180-1 and 2 - (ASN.1 Object Identifier: id-sha256).
-    :cvar HS38: SHA384 Message digest algorithm SHA-384 as defined in
-        FIPS 180-1 and 2 - (ASN.1 Object Identifier: id-sha384).
-    :cvar HS51: SHA512 Message digest algorithm SHA-512 as defined in
-        FIPS 180-1 and 2 - (ASN.1 Object Identifier: id-sha512).
-    :cvar HS01: SHA1 Message digest algorithm SHA-1 as defined in FIPS
-        180-1 - (ASN.1 Object Identifier: id-sha1).
-    """
-
-    HS25 = "HS25"
-    HS38 = "HS38"
-    HS51 = "HS51"
-    HS01 = "HS01"
-
-
-class Atmoperation1Code(Enum):
-    ADJU = "ADJU"
-    INSR = "INSR"
-    LOAD = "LOAD"
-    REMV = "REMV"
-    UNLD = "UNLD"
+class AtmserviceType10Code(Enum):
+    TRFC = "TRFC"
+    TRFI = "TRFI"
+    TRFP = "TRFP"
+    ASTS = "ASTS"
+    BLCQ = "BLCQ"
+    CDVF = "CDVF"
+    CHSN = "CHSN"
+    CMPF = "CMPF"
+    DCCS = "DCCS"
+    XRTD = "XRTD"
+    XRTW = "XRTW"
+    MCHG = "MCHG"
+    DPSN = "DPSN"
+    PINC = "PINC"
+    PINR = "PINR"
+    PINU = "PINU"
+    PATH = "PATH"
+    PRFL = "PRFL"
+    EMVS = "EMVS"
+    STDR = "STDR"
+    SPRV = "SPRV"
+    DPSV = "DPSV"

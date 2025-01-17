@@ -1,15 +1,9 @@
 from enum import Enum
 
 
-class CollateralStatus1Code(Enum):
-    EXCS = "EXCS"
-    DEFI = "DEFI"
-    FLAT = "FLAT"
-
-
-class StatementStatusType1Code(Enum):
-    CONF = "CONF"
-    PEND = "PEND"
+class ExecutionStatus1Code(Enum):
+    INTD = "INTD"
+    PINT = "PINT"
 
 
 class SecuritiesSettlementStatus3Code(Enum):
@@ -17,11 +11,17 @@ class SecuritiesSettlementStatus3Code(Enum):
     SETT = "SETT"
 
 
-class ExecutionStatus1Code(Enum):
-    INTD = "INTD"
-    PINT = "PINT"
-
-
 class StatementBasis3Code(Enum):
     EOSP = "EOSP"
     FUTM = "FUTM"
+
+
+class StatementStatusType1Code(Enum):
+    CONF = "CONF"
+    PEND = "PEND"
+
+
+class CollateralStatus1Code(Enum):
+    EXCS = "EXCS"
+    DEFI = "DEFI"
+    FLAT = "FLAT"

@@ -1,11 +1,6 @@
 from enum import Enum
 
 
-class TransactionAction1Code(Enum):
-    STAR = "STAR"
-    STOP = "STOP"
-
-
 class CardPaymentServiceType13Code(Enum):
     CRDP = "CRDP"
     CSHW = "CSHW"
@@ -21,6 +16,13 @@ class CardPaymentServiceType13Code(Enum):
     VCAU = "VCAU"
 
 
+class ReversalReason1Code(Enum):
+    CUSC = "CUSC"
+    MALF = "MALF"
+    MERC = "MERC"
+    UNAB = "UNAB"
+
+
 class LoyaltyTransactionType1Code(Enum):
     AWRD = "AWRD"
     AWRR = "AWRR"
@@ -30,8 +32,6 @@ class LoyaltyTransactionType1Code(Enum):
     REDR = "REDR"
 
 
-class ReversalReason1Code(Enum):
-    CUSC = "CUSC"
-    MALF = "MALF"
-    MERC = "MERC"
-    UNAB = "UNAB"
+class TransactionAction1Code(Enum):
+    STAR = "STAR"
+    STOP = "STOP"

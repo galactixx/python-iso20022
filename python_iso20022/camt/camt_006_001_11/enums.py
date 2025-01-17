@@ -1,60 +1,6 @@
 from enum import Enum
 
 
-class SuspendedStatusReason1Code(Enum):
-    SUBY = "SUBY"
-    SUBS = "SUBS"
-
-
-class PendingSettlement2Code(Enum):
-    AWMO = "AWMO"
-    CAIS = "CAIS"
-    REFU = "REFU"
-    AWSH = "AWSH"
-    PHSE = "PHSE"
-    TAMM = "TAMM"
-    DOCY = "DOCY"
-    DOCC = "DOCC"
-    BLOC = "BLOC"
-    CHAS = "CHAS"
-    NEWI = "NEWI"
-    CLAC = "CLAC"
-    MUNO = "MUNO"
-    GLOB = "GLOB"
-    PREA = "PREA"
-    GUAD = "GUAD"
-    PART = "PART"
-    NMAS = "NMAS"
-    CMON = "CMON"
-    YCOL = "YCOL"
-    COLL = "COLL"
-    DEPO = "DEPO"
-    FLIM = "FLIM"
-    NOFX = "NOFX"
-    INCA = "INCA"
-    LINK = "LINK"
-    FUTU = "FUTU"
-    LACK = "LACK"
-    LALO = "LALO"
-    MONY = "MONY"
-    NCON = "NCON"
-    REFS = "REFS"
-    SDUT = "SDUT"
-    BATC = "BATC"
-    CYCL = "CYCL"
-    SBLO = "SBLO"
-    CPEC = "CPEC"
-    MINO = "MINO"
-    PCAP = "PCAP"
-
-
-class FinalStatus1Code(Enum):
-    STLD = "STLD"
-    RJTD = "RJTD"
-    CAND = "CAND"
-    FNLD = "FNLD"
-
-
 class PendingFailingSettlement1Code(Enum):
     AWMO = "AWMO"
     AWSH = "AWSH"
@@ -101,6 +47,60 @@ class PendingFailingSettlement1Code(Enum):
     GLOB = "GLOB"
     CPEC = "CPEC"
     MUNO = "MUNO"
+
+
+class FinalStatus1Code(Enum):
+    STLD = "STLD"
+    RJTD = "RJTD"
+    CAND = "CAND"
+    FNLD = "FNLD"
+
+
+class PendingSettlement2Code(Enum):
+    AWMO = "AWMO"
+    CAIS = "CAIS"
+    REFU = "REFU"
+    AWSH = "AWSH"
+    PHSE = "PHSE"
+    TAMM = "TAMM"
+    DOCY = "DOCY"
+    DOCC = "DOCC"
+    BLOC = "BLOC"
+    CHAS = "CHAS"
+    NEWI = "NEWI"
+    CLAC = "CLAC"
+    MUNO = "MUNO"
+    GLOB = "GLOB"
+    PREA = "PREA"
+    GUAD = "GUAD"
+    PART = "PART"
+    NMAS = "NMAS"
+    CMON = "CMON"
+    YCOL = "YCOL"
+    COLL = "COLL"
+    DEPO = "DEPO"
+    FLIM = "FLIM"
+    NOFX = "NOFX"
+    INCA = "INCA"
+    LINK = "LINK"
+    FUTU = "FUTU"
+    LACK = "LACK"
+    LALO = "LALO"
+    MONY = "MONY"
+    NCON = "NCON"
+    REFS = "REFS"
+    SDUT = "SDUT"
+    BATC = "BATC"
+    CYCL = "CYCL"
+    SBLO = "SBLO"
+    CPEC = "CPEC"
+    MINO = "MINO"
+    PCAP = "PCAP"
+
+
+class SuspendedStatusReason1Code(Enum):
+    SUBY = "SUBY"
+    SUBS = "SUBS"
 
 
 class UnmatchedStatusReason1Code(Enum):

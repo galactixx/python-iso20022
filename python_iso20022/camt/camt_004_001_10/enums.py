@@ -1,6 +1,23 @@
 from enum import Enum
 
 
+class BalanceStatus1Code(Enum):
+    PDNG = "PDNG"
+    STLD = "STLD"
+
+
+class ProcessingType1Code(Enum):
+    RJCT = "RJCT"
+    CVHD = "CVHD"
+    RSVT = "RSVT"
+    BLCK = "BLCK"
+    EARM = "EARM"
+    EFAC = "EFAC"
+    DLVR = "DLVR"
+    COLD = "COLD"
+    CSDB = "CSDB"
+
+
 class SystemBalanceType2Code(Enum):
     OPNG = "OPNG"
     INTM = "INTM"
@@ -67,20 +84,3 @@ class SystemBalanceType2Code(Enum):
     DWRD = "DWRD"
     ADWR = "ADWR"
     AIDR = "AIDR"
-
-
-class ProcessingType1Code(Enum):
-    RJCT = "RJCT"
-    CVHD = "CVHD"
-    RSVT = "RSVT"
-    BLCK = "BLCK"
-    EARM = "EARM"
-    EFAC = "EFAC"
-    DLVR = "DLVR"
-    COLD = "COLD"
-    CSDB = "CSDB"
-
-
-class BalanceStatus1Code(Enum):
-    PDNG = "PDNG"
-    STLD = "STLD"

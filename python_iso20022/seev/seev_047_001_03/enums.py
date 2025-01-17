@@ -7,14 +7,14 @@ class PartyRole2Code(Enum):
     DECM = "DECM"
 
 
+class AccountOwnershipType5Code(Enum):
+    USUF = "USUF"
+    OWNR = "OWNR"
+    BOWN = "BOWN"
+
+
 class ShareholdingType1Code(Enum):
     BENE = "BENE"
     NOMI = "NOMI"
     OOAC = "OOAC"
     UKWN = "UKWN"
-
-
-class AccountOwnershipType5Code(Enum):
-    USUF = "USUF"
-    OWNR = "OWNR"
-    BOWN = "BOWN"

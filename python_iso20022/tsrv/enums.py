@@ -1,6 +1,18 @@
 from enum import Enum
 
 
+class UndertakingIssuanceName1Code(Enum):
+    STBY = "STBY"
+    DGAR = "DGAR"
+
+
+class TerminationReason1Code(Enum):
+    REFU = "REFU"
+    NOAC = "NOAC"
+    BUFI = "BUFI"
+    WOEX = "WOEX"
+
+
 class PresentationParty1Code(Enum):
     ETHR = "ETHR"
     EXCN = "EXCN"
@@ -12,21 +24,9 @@ class UndertakingStatus2Code(Enum):
     REJT = "REJT"
 
 
-class UndertakingIssuanceName1Code(Enum):
-    STBY = "STBY"
-    DGAR = "DGAR"
-
-
 class IssuanceType1Code(Enum):
     CRQL = "CRQL"
     CRQC = "CRQC"
     ISSU = "ISSU"
     ISCO = "ISCO"
     ISAD = "ISAD"
-
-
-class TerminationReason1Code(Enum):
-    REFU = "REFU"
-    NOAC = "NOAC"
-    BUFI = "BUFI"
-    WOEX = "WOEX"

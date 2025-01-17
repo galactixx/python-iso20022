@@ -1,24 +1,16 @@
 from enum import Enum
 
 
-class AccountLevel1Code(Enum):
-    INTM = "INTM"
-    SMRY = "SMRY"
+class ServiceAdjustmentType1Code(Enum):
+    COMP = "COMP"
+    NCMP = "NCMP"
 
 
-class AccountLevel2Code(Enum):
-    INTM = "INTM"
-    SMRY = "SMRY"
-    DETL = "DETL"
-
-
-class BillingTaxCalculationMethod1Code(Enum):
-    NTAX = "NTAX"
-    MTDA = "MTDA"
-    MTDB = "MTDB"
-    MTDC = "MTDC"
-    MTDD = "MTDD"
-    UDFD = "UDFD"
+class BillingCurrencyType2Code(Enum):
+    ACCT = "ACCT"
+    STLM = "STLM"
+    PRCG = "PRCG"
+    HOST = "HOST"
 
 
 class CompensationMethod1Code(Enum):
@@ -26,15 +18,6 @@ class CompensationMethod1Code(Enum):
     DBTD = "DBTD"
     INVD = "INVD"
     DDBT = "DDBT"
-
-
-class ServicePaymentMethod1Code(Enum):
-    BCMP = "BCMP"
-    FLAT = "FLAT"
-    PVCH = "PVCH"
-    INVS = "INVS"
-    WVED = "WVED"
-    FREE = "FREE"
 
 
 class BillingSubServiceQualifier1Code(Enum):
@@ -45,21 +28,16 @@ class BillingSubServiceQualifier1Code(Enum):
     MACT = "MACT"
 
 
-class BillingCurrencyType1Code(Enum):
-    ACCT = "ACCT"
-    STLM = "STLM"
-    PRCG = "PRCG"
-
-
-class ServiceAdjustmentType1Code(Enum):
-    COMP = "COMP"
-    NCMP = "NCMP"
-
-
 class BalanceAdjustmentType1Code(Enum):
     LDGR = "LDGR"
     FLOT = "FLOT"
     CLLD = "CLLD"
+
+
+class BillingStatementStatus1Code(Enum):
+    ORGN = "ORGN"
+    RPLC = "RPLC"
+    TEST = "TEST"
 
 
 class BillingChargeMethod1Code(Enum):
@@ -85,20 +63,42 @@ class BillingChargeMethod1Code(Enum):
     BBSE = "BBSE"
 
 
-class BillingStatementStatus1Code(Enum):
-    ORGN = "ORGN"
-    RPLC = "RPLC"
-    TEST = "TEST"
+class ServicePaymentMethod1Code(Enum):
+    BCMP = "BCMP"
+    FLAT = "FLAT"
+    PVCH = "PVCH"
+    INVS = "INVS"
+    WVED = "WVED"
+    FREE = "FREE"
 
 
-class BillingCurrencyType2Code(Enum):
-    ACCT = "ACCT"
-    STLM = "STLM"
-    PRCG = "PRCG"
-    HOST = "HOST"
+class BillingTaxCalculationMethod1Code(Enum):
+    NTAX = "NTAX"
+    MTDA = "MTDA"
+    MTDB = "MTDB"
+    MTDC = "MTDC"
+    MTDD = "MTDD"
+    UDFD = "UDFD"
+
+
+class AccountLevel1Code(Enum):
+    INTM = "INTM"
+    SMRY = "SMRY"
 
 
 class ServiceTaxDesignation1Code(Enum):
     XMPT = "XMPT"
     ZERO = "ZERO"
     TAXE = "TAXE"
+
+
+class BillingCurrencyType1Code(Enum):
+    ACCT = "ACCT"
+    STLM = "STLM"
+    PRCG = "PRCG"
+
+
+class AccountLevel2Code(Enum):
+    INTM = "INTM"
+    SMRY = "SMRY"
+    DETL = "DETL"

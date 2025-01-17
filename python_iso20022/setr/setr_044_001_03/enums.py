@@ -1,16 +1,56 @@
 from enum import Enum
 
 
-class AwaitingAffirmationReason1Code(Enum):
-    WAFF = "WAFF"
-
-
 class AwaitingCancellationReason1Code(Enum):
     WCAN = "WCAN"
 
 
-class AllegementReason1Code(Enum):
-    ALG1 = "ALG1"
+class AwaitingAffirmationReason1Code(Enum):
+    WAFF = "WAFF"
+
+
+class RepairReason7Code(Enum):
+    ADEA = "ADEA"
+    BATC = "BATC"
+    BUSE = "BUSE"
+    CADE = "CADE"
+    CASH = "CASH"
+    CASY = "CASY"
+    COMC = "COMC"
+    DDAT = "DDAT"
+    DDEA = "DDEA"
+    DEPT = "DEPT"
+    DMON = "DMON"
+    DQUA = "DQUA"
+    DSEC = "DSEC"
+    DTRD = "DTRD"
+    FEEE = "FEEE"
+    FORF = "FORF"
+    ICAG = "ICAG"
+    ICUS = "ICUS"
+    IEXE = "IEXE"
+    IIND = "IIND"
+    INNA = "INNA"
+    LEOG = "LEOG"
+    NARR = "NARR"
+    NCRR = "NCRR"
+    NRGM = "NRGM"
+    NRGN = "NRGN"
+    PHYS = "PHYS"
+    PLCE = "PLCE"
+    CTRA = "CTRA"
+    REPO = "REPO"
+    REPP = "REPP"
+    RERT = "RERT"
+    RSPR = "RSPR"
+    RTGS = "RTGS"
+    SAFE = "SAFE"
+    SETR = "SETR"
+    SETS = "SETS"
+    TERM = "TERM"
+    TXST = "TXST"
+    ULNK = "ULNK"
+    VASU = "VASU"
 
 
 class UnmatchedReason4Code(Enum):
@@ -144,45 +184,5 @@ class RejectionReason78Code(Enum):
     ICAG = "ICAG"
 
 
-class RepairReason7Code(Enum):
-    ADEA = "ADEA"
-    BATC = "BATC"
-    BUSE = "BUSE"
-    CADE = "CADE"
-    CASH = "CASH"
-    CASY = "CASY"
-    COMC = "COMC"
-    DDAT = "DDAT"
-    DDEA = "DDEA"
-    DEPT = "DEPT"
-    DMON = "DMON"
-    DQUA = "DQUA"
-    DSEC = "DSEC"
-    DTRD = "DTRD"
-    FEEE = "FEEE"
-    FORF = "FORF"
-    ICAG = "ICAG"
-    ICUS = "ICUS"
-    IEXE = "IEXE"
-    IIND = "IIND"
-    INNA = "INNA"
-    LEOG = "LEOG"
-    NARR = "NARR"
-    NCRR = "NCRR"
-    NRGM = "NRGM"
-    NRGN = "NRGN"
-    PHYS = "PHYS"
-    PLCE = "PLCE"
-    CTRA = "CTRA"
-    REPO = "REPO"
-    REPP = "REPP"
-    RERT = "RERT"
-    RSPR = "RSPR"
-    RTGS = "RTGS"
-    SAFE = "SAFE"
-    SETR = "SETR"
-    SETS = "SETS"
-    TERM = "TERM"
-    TXST = "TXST"
-    ULNK = "ULNK"
-    VASU = "VASU"
+class AllegementReason1Code(Enum):
+    ALG1 = "ALG1"

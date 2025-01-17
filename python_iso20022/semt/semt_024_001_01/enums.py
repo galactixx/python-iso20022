@@ -11,6 +11,18 @@ class Unrealised1Code(Enum):
     LOSS = "LOSS"
 
 
+class BalanceType13Code(Enum):
+    INVE = "INVE"
+    CASE = "CASE"
+    BORR = "BORR"
+    REVE = "REVE"
+    EXPN = "EXPN"
+    IIOF = "IIOF"
+    OTHR = "OTHR"
+    PAYA = "PAYA"
+    RECE = "RECE"
+
+
 class FinancialAssetBalanceType1Code(Enum):
     ACRU = "ACRU"
     OINT = "OINT"
@@ -72,18 +84,6 @@ class FinancialAssetBalanceType1Code(Enum):
     RXRP = "RXRP"
     FXFD = "FXFD"
     FXSP = "FXSP"
-
-
-class BalanceType13Code(Enum):
-    INVE = "INVE"
-    CASE = "CASE"
-    BORR = "BORR"
-    REVE = "REVE"
-    EXPN = "EXPN"
-    IIOF = "IIOF"
-    OTHR = "OTHR"
-    PAYA = "PAYA"
-    RECE = "RECE"
 
 
 class TypeOfPrice30Code(Enum):

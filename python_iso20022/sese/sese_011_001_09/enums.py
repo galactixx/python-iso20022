@@ -1,11 +1,6 @@
 from enum import Enum
 
 
-class ApplicableRules1Code(Enum):
-    NPRE = "NPRE"
-    YPRE = "YPRE"
-
-
 class TransferStatusType2Code(Enum):
     S019 = "S019"
     BCEV = "BCEV"
@@ -18,43 +13,6 @@ class TransferStatusType2Code(Enum):
     S005 = "S005"
     S001 = "S001"
     CONV = "CONV"
-
-
-class TransferStatus6Code(Enum):
-    PACK = "PACK"
-    COSE = "COSE"
-    COMP = "COMP"
-    DELY = "DELY"
-    MACH = "MACH"
-    RECE = "RECE"
-    STNP = "STNP"
-    SETT = "SETT"
-
-
-class TransferUnmatchedReason3Code(Enum):
-    CMIS = "CMIS"
-    CPCA = "CPCA"
-    DELN = "DELN"
-    DSEC = "DSEC"
-    PHYS = "PHYS"
-    PODU = "PODU"
-    DEPT = "DEPT"
-    DDAT = "DDAT"
-    DQUA = "DQUA"
-    ICUS = "ICUS"
-    SAFE = "SAFE"
-
-
-class CancelledStatusReason3Code(Enum):
-    CNTA = "CNTA"
-    CNCL = "CNCL"
-    CNIN = "CNIN"
-
-
-class BeneficiaryType1Code(Enum):
-    DEPE = "DEPE"
-    NOMI = "NOMI"
-    SUCC = "SUCC"
 
 
 class PendingSettlementStatusReason2Code(Enum):
@@ -95,6 +53,20 @@ class PendingSettlementStatusReason2Code(Enum):
     ESCA = "ESCA"
     NRCP = "NRCP"
     FVER = "FVER"
+
+
+class TransferUnmatchedReason3Code(Enum):
+    CMIS = "CMIS"
+    CPCA = "CPCA"
+    DELN = "DELN"
+    DSEC = "DSEC"
+    PHYS = "PHYS"
+    PODU = "PODU"
+    DEPT = "DEPT"
+    DDAT = "DDAT"
+    DQUA = "DQUA"
+    ICUS = "ICUS"
+    SAFE = "SAFE"
 
 
 class RejectedStatusReason13Code(Enum):
@@ -145,3 +117,31 @@ class RejectedStatusReason13Code(Enum):
     UPAY = "UPAY"
     URSC = "URSC"
     NCMP = "NCMP"
+
+
+class CancelledStatusReason3Code(Enum):
+    CNTA = "CNTA"
+    CNCL = "CNCL"
+    CNIN = "CNIN"
+
+
+class TransferStatus6Code(Enum):
+    PACK = "PACK"
+    COSE = "COSE"
+    COMP = "COMP"
+    DELY = "DELY"
+    MACH = "MACH"
+    RECE = "RECE"
+    STNP = "STNP"
+    SETT = "SETT"
+
+
+class BeneficiaryType1Code(Enum):
+    DEPE = "DEPE"
+    NOMI = "NOMI"
+    SUCC = "SUCC"
+
+
+class ApplicableRules1Code(Enum):
+    NPRE = "NPRE"
+    YPRE = "YPRE"
