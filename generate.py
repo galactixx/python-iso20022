@@ -18,7 +18,7 @@ from pathlib import Path
 from typing import Callable, Dict, List, Optional, Set, Type, TypeAlias, Union
 
 import libcst as cst
-from tomlkit_extras import load_toml_file, get_attribute_from_toml_source
+from tomlkit_extras import get_attribute_from_toml_source, load_toml_file
 
 _LeaveReturn: TypeAlias = Union[cst.CSTNode, cst.RemovalSentinel]
 
@@ -310,10 +310,12 @@ class InitAddPackageVersion(cst.CSTTransformer):
 
     def leave_Module(self, _: cst.Module, new_node: cst.Module) -> cst.Module:
         version_var = cst.SimpleStatementLine(
-            body=[cst.Assign(
-                targets=[cst.AssignTarget(cst.Name("__version__"))],
-                value=cst.SimpleString(value=f'"{self.pyproject_version}"')
-            )]
+            body=[
+                cst.Assign(
+                    targets=[cst.AssignTarget(cst.Name("__version__"))],
+                    value=cst.SimpleString(value=f'"{self.pyproject_version}"'),
+                )
+            ]
         )
         return new_node.with_changes(body=[version_var])
 
@@ -356,7 +358,7 @@ class InitImportModifyTransformer(cst.CSTTransformer):
         self.message_file = message_file
 
     def leave_Assign(self, old_node: cst.Assign, new_node: cst.Assign) -> cst.Assign:
-        if assignment_check(node=old_node, name='__all__', value=cst.List):
+        if assignment_check(node=old_node, name="__all__", value=cst.List):
             # Rewrite the __all__ values to be just the main dataclass
             # for the message
             new_list_elements = cst.List(
@@ -630,17 +632,15 @@ def write_common_enum_files(enum_common_files: Dict[Path, SimpleEnumSet]) -> Non
 
 
 def add_package_version_to_init() -> None:
-    pyproject_path = REPOSITORY_PATH / 'pyproject.toml'
+    pyproject_path = REPOSITORY_PATH / "pyproject.toml"
     pyproject_toml = load_toml_file(toml_source=pyproject_path)
     pyproject_version = get_attribute_from_toml_source(
-        hierarchy='tool.poetry.version', toml_source=pyproject_toml
+        hierarchy="tool.poetry.version", toml_source=pyproject_toml
     )
-    init_path = PACKAGE_PATH / '__init__.py'
+    init_path = PACKAGE_PATH / "__init__.py"
     modify_python_file_as_cst(
         path=init_path,
-        transformers=[
-            InitAddPackageVersion(pyproject_version=pyproject_version)
-        ],
+        transformers=[InitAddPackageVersion(pyproject_version=pyproject_version)],
     )
 
 
