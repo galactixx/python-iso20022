@@ -26,7 +26,7 @@ REPO_SCHEMA_DIR = "iso20022-schemas"
 PACKAGE_DIR = "python_iso20022"
 REPOSITORY_PATH = Path.cwd().resolve()
 PACKAGE_PATH = REPOSITORY_PATH / PACKAGE_DIR
-UTILS_PATH = PACKAGE_PATH / 'utils.py'
+UTILS_PATH = PACKAGE_PATH / "utils.py"
 XML_UTILS_FUNCTION = """
 _Model = TypeVar('_Model')
 
@@ -73,9 +73,7 @@ class PythonFile:
         if import_name.identifiers is None:
             import_statement = generate_import_statement(names=[import_name.module])
         else:
-            attribute = generate_attribute_from_module(
-                modules=import_name.module_parts
-            )
+            attribute = generate_attribute_from_module(modules=import_name.module_parts)
 
             import_statement = generate_import_from_statement(
                 module=attribute, names=import_name.identifiers
@@ -243,20 +241,20 @@ class ParsePythonFiles(Dict[str, PythonFile]):
     def write_files(self) -> None:
         for message_set, python_file in self.items():
             python_file.write_file()
-            logger.info(f'{message_set} parse.py file successfully generated')
+            logger.info(f"{message_set} parse.py file successfully generated")
 
     def update_file(self, path: Path, function_suffix: str, model: str) -> None:
         message_set = function_suffix[:4]
 
         if message_set not in self:
-            parse_path = path.parent.parent / 'parse.py'
+            parse_path = path.parent.parent / "parse.py"
             python_file = PythonFile(path=parse_path)
             self[message_set] = python_file
 
-            module = '.'.join(get_module_levels_from_path(path=UTILS_PATH))
+            module = ".".join(get_module_levels_from_path(path=UTILS_PATH))
             python_file.add_import(
                 PythonFile.generate_import(
-                    import_name=Import(module, ['read_xml_source', 'XmlSource'])
+                    import_name=Import(module, ["read_xml_source", "XmlSource"])
                 )
             )
         else:
@@ -322,9 +320,7 @@ class InitImportModifyTransformer(cst.CSTTransformer):
             new_list_elements = cst.List(
                 [
                     cst.Element(
-                        cst.SimpleString(
-                            f'"{self.message_file.class_name_change.new}"'
-                        )
+                        cst.SimpleString(f'"{self.message_file.class_name_change.new}"')
                     )
                 ]
             )
@@ -342,9 +338,7 @@ class InitImportModifyTransformer(cst.CSTTransformer):
                 module = cst.Attribute(value=new_node.module.value, attr=module)
 
             import_names: List[cst.ImportAlias] = [
-                cst.ImportAlias(
-                    cst.Name(value=self.message_file.class_name_change.new)
-                )
+                cst.ImportAlias(cst.Name(value=self.message_file.class_name_change.new))
             ]
             return new_node.with_changes(module=module, names=import_names)
         return new_node
@@ -352,7 +346,9 @@ class InitImportModifyTransformer(cst.CSTTransformer):
 
 class MultiClassTransformer(cst.CSTTransformer):
     def __init__(
-        self, iso_message: ISO20022MessageFile, enum_tracker: EnumTracker,
+        self,
+        iso_message: ISO20022MessageFile,
+        enum_tracker: EnumTracker,
     ) -> None:
         self.iso_message = iso_message
         self.enum_tracker = enum_tracker
@@ -607,9 +603,7 @@ def code_refactoring(
     # changing the imports within generated __init__ file
     modify_python_file_as_cst(
         path=iso_message_file.init_path,
-        transformers=[
-            InitImportModifyTransformer(message_file=iso_message_file)
-        ],
+        transformers=[InitImportModifyTransformer(message_file=iso_message_file)],
     )
 
     # Edit the models.py file for the message
@@ -671,13 +665,14 @@ def generate_dataclass_models(
     iso_message = ISO20022MessageFile(
         path=dst,
         class_name_change=class_name_change,
-        module_name_change=module_name_change
+        module_name_change=module_name_change,
     )
     modify_python_file_as_cst(
         path=dst,
         transformers=[
             MultiClassTransformer(
-                iso_message=iso_message, enum_tracker=enum_tracker,
+                iso_message=iso_message,
+                enum_tracker=enum_tracker,
             )
         ],
     )
