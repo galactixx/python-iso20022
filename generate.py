@@ -1,8 +1,6 @@
 from __future__ import annotations
 
 import hashlib
-import importlib
-import importlib.util
 import logging
 import os
 import re
@@ -28,114 +26,15 @@ REPO_SCHEMA_DIR = "iso20022-schemas"
 PACKAGE_DIR = "python_iso20022"
 REPOSITORY_PATH = Path.cwd().resolve()
 PACKAGE_PATH = REPOSITORY_PATH / PACKAGE_DIR
-UTILS_PATH = PACKAGE_PATH / "utils.py"
-XML_UTILS_FUNCTION = """
-_Model = TypeVar("_Model")
-XmlSource: TypeAlias = Union[str, Path, bytes, IO]
-
-def read_xml_source(source: XmlSource, model: Type[_Model]) -> _Model:
-    parser = XmlParser()
-
-    # Determine source type and read content
-    if isinstance(source, Path) or (isinstance(source, str) and os.path.isfile(source)):
-        with open(source, "r") as xml_file:
-            read_xml_file = xml_file.read()
-    elif isinstance(source, (bytes, str)):
-        read_xml_file = source
-    elif hasattr(source, "read"):
-        read_xml_file = source.read()
-    elif isinstance(source, str) and urlparse(source).scheme in {"http", "https"}:
-        response = requests.get(source)
-        response.raise_for_status()
-        read_xml_file = response.text
-    else:
-        raise ValueError("Unsupported XML source type.")
-
-    # Parse the XML content into the specified dataclass model
-    try:
-        parsed_xml = parser.from_string(read_xml_file, model)
-    except Exception as e:
-        raise ValueError(f"Failed to parse XML: {e}")
-
-    return parsed_xml
-"""
-
-api_function_template = """
-def {function_name}(source: XmlSource) -> {model_name}:
-    return read_xml_source(source, {model_name})
-"""
+BASE_MODEL_PATH = PACKAGE_PATH / "base.py"
+MESSAGE_MODEL_NAME = 'ISO20022Message'
+ELEMENT_MODEL_NAME = 'ISO20022MessageElement'
 
 
 @dataclass(frozen=True)
 class NameChange:
     old: str
     new: str
-
-
-@dataclass
-class PythonFile:
-    path: Path
-    imports: List[str] = field(default_factory=list)
-    functions: List[str] = field(default_factory=list)
-
-    @property
-    def code(self) -> str:
-        self.functions.sort()
-        return "".join(self.imports) + "\n".join(self.functions)
-
-    @staticmethod
-    def generate_import(import_name: Import) -> cst.SimpleStatementLine:
-        if import_name.identifiers is None:
-            import_statement = generate_import_statement(names=[import_name.module])
-        else:
-            attribute = generate_attribute_from_module(modules=import_name.module_parts)
-
-            import_statement = generate_import_from_statement(
-                module=attribute, names=import_name.identifiers
-            )
-        return import_statement
-
-    def write_file(self) -> None:
-        write_to_python(path=self.path, code=self.code)
-
-    def add_import(self, statement: cst.SimpleStatementLine) -> None:
-        self.imports.append(cst.Module(body=[statement]).code)
-
-    def add_function(self, function: str) -> None:
-        self.functions.append(function)
-
-
-@dataclass(frozen=True)
-class Import:
-    module: str
-    identifiers: Optional[List[str]] = None
-
-    @property
-    def module_parts(self) -> List[str]:
-        return self.module.split(".")
-
-    @property
-    def package(self) -> str:
-        return self.module_parts[0]
-
-    @property
-    def is_std_lib(self) -> bool:
-        module_spec = importlib.util.find_spec(self.package)
-        return module_spec and module_spec.origin
-
-    def __post_init__(self) -> None:
-        if not self.is_std_lib:
-            subprocess.check_call(
-                [sys.executable, "-m", "pip", "install", self.package]
-            )
-
-        module = importlib.import_module(self.module)
-
-        if self.identifiers is not None:
-            for identifier in self.identifiers:
-                assert hasattr(
-                    module, identifier
-                ), f"idenfier ({identifier}) not found in module"
 
 
 @dataclass
@@ -250,60 +149,6 @@ class EnumTracker(Dict[str, EnumMetadata]):
         return enum_hash
 
 
-@dataclass
-class UtilsPythonFile(PythonFile):
-    def update_file(self) -> None:
-        API_IMPORTS: List[Import] = [
-            Import("os"),
-            Import("requests"),
-            Import("typing", ["IO", "Type", "TypeAlias", "TypeVar", "Union"]),
-            Import("pathlib", ["Path"]),
-            Import("urllib.parse", ["urlparse"]),
-            Import("xsdata.formats.dataclass.parsers", ["XmlParser"]),
-        ]
-
-        for import_name in API_IMPORTS:
-            import_statement = PythonFile.generate_import(import_name)
-            self.add_import(import_statement)
-
-        self.add_function(XML_UTILS_FUNCTION)
-
-
-class ParsePythonFiles(Dict[str, PythonFile]):
-    def write_files(self) -> None:
-        for message_set, python_file in self.items():
-            python_file.write_file()
-            logger.info(f"{message_set} parse.py file successfully generated")
-
-    def update_file(self, path: Path, function_suffix: str, model: str) -> None:
-        message_set = function_suffix[:4]
-
-        if message_set not in self:
-            parse_path = path.parent.parent / "parse.py"
-            python_file = PythonFile(path=parse_path)
-            self[message_set] = python_file
-
-            module = ".".join(get_module_levels_from_path(path=UTILS_PATH))
-            python_file.add_import(
-                PythonFile.generate_import(
-                    import_name=Import(module, ["read_xml_source", "XmlSource"])
-                )
-            )
-        else:
-            python_file = self[message_set]
-
-        import_statement = generate_import_from_path(path=path, names=[model])
-        python_file.add_import(import_statement)
-
-        # Dynamically generate the function to include for model
-        function_name = f"parse_{function_suffix}"
-        api_function = api_function_template.format(
-            function_name=function_name, model_name=model
-        )
-
-        python_file.add_function(api_function)
-
-
 class InitAddPackageVersion(cst.CSTTransformer):
     def __init__(self, pyproject_version: str) -> None:
         self.pyproject_version = pyproject_version
@@ -333,6 +178,8 @@ class ModelImportsTransformer(cst.CSTTransformer):
 
     def leave_Module(self, old_node: cst.Module, new_node: cst.Module) -> cst.Module:
         import_statements: List[cst.SimpleStatementLine] = []
+
+        # Add any imports of enums that are specific to the message (local)
         if self.enum_collections.single.names:
             import_statements += [
                 generate_import_from_path(
@@ -341,16 +188,22 @@ class ModelImportsTransformer(cst.CSTTransformer):
                 )
             ]
 
+        # Add any imports of enums that are common to at least one other message
         import_statements += [
             generate_import_from_path(path=enum_set.path, names=enum_set.names)
             for enum_set in self.enum_sets
             if enum_set
         ]
 
-        if import_statements:
-            module_body = import_statements + list(old_node.body)
-            return new_node.with_changes(body=module_body)
-        return new_node
+        # Add import of custom dataclass base model
+        import_statements.append(
+            generate_import_from_path(
+                path=BASE_MODEL_PATH, names={MESSAGE_MODEL_NAME, ELEMENT_MODEL_NAME}
+            )
+        )
+
+        module_body = import_statements + list(old_node.body)
+        return new_node.with_changes(body=module_body)
 
 
 class InitImportModifyTransformer(cst.CSTTransformer):
@@ -440,18 +293,26 @@ class MultiClassTransformer(cst.CSTTransformer):
     ) -> _LeaveReturn:
         updated_node = self._remove_enums(node=new_node)
         if updated_node is not cst.RemovalSentinel.REMOVE:
-            if old_node.name.value == self.iso_message.class_name_change.old:
-                updated_node = self._rename_schema_element(updated_node)
-            else:
-                updated_node = self._rename_dataclasses(updated_node)
+            if any(
+                decorator_is_dataclass(decorator=decorator)
+                for decorator in new_node.decorators
+            ):
+                if old_node.name.value == self.iso_message.class_name_change.old:
+                    base_model_name = MESSAGE_MODEL_NAME
+                    updated_node = self._rename_schema_element(updated_node)
+                else:
+                    base_model_name = ELEMENT_MODEL_NAME
+                    updated_node = self._rename_dataclasses(updated_node)
+                updated_node = self._add_inherited_base_model(
+                    node=updated_node, name=base_model_name
+                )
         return updated_node
 
     def _remove_enums(self, node: cst.ClassDef) -> _LeaveReturn:
-        is_enum = any(
+        if any(
             isinstance(base.value, cst.Name) and base.value.value == "Enum"
             for base in node.bases
-        )
-        if is_enum:
+        ):
             enum_hash = self.enum_tracker.add_enum(
                 node, self.iso_message.message_set, self.iso_message.path
             )
@@ -459,20 +320,19 @@ class MultiClassTransformer(cst.CSTTransformer):
             return cst.RemovalSentinel.REMOVE
         return node
 
+    def _add_inherited_base_model(self, node: cst.ClassDef, name: str) -> cst.ClassDef:
+        new_bases = list(node.bases) + [cst.Arg(cst.Name(name))]
+        return node.with_changes(bases=new_bases)
+
     def _rename_schema_element(self, node: cst.ClassDef) -> cst.ClassDef:
         new_name = self.iso_message.class_name_change.new
         self.iso_message.add_name_change(node, new_name)
         return node.with_changes(name=cst.Name(new_name))
 
     def _rename_dataclasses(self, node: cst.ClassDef) -> cst.ClassDef:
-        is_dataclass = any(
-            decorator_is_dataclass(decorator=decorator) for decorator in node.decorators
-        )
-        if is_dataclass:
-            new_name = node.name.value + self.iso_message.class_name_change.new
-            self.iso_message.add_name_change(node, new_name)
-            return node.with_changes(name=cst.Name(new_name))
-        return node
+        new_name = node.name.value + self.iso_message.class_name_change.new
+        self.iso_message.add_name_change(node, new_name)
+        return node.with_changes(name=cst.Name(new_name))
 
 
 def setup_logger(name: str) -> logging.Logger:
@@ -494,15 +354,9 @@ def setup_logger(name: str) -> logging.Logger:
     return logger
 
 
-def generate_utils_file() -> None:
-    utils_file = UtilsPythonFile(path=UTILS_PATH)
-    utils_file.update_file()
-    utils_file.write_file()
-
-
 def generate_import_from_path(path: Path, names: Set[str]) -> cst.SimpleStatementLine:
     module = generate_module_from_path(path=path)
-    return generate_import_from_statement(module=module, names=names)
+    return generate_import_statement(module=module, names=names)
 
 
 def generate_attribute_from_module(modules: List[str]) -> cst.Attribute:
@@ -517,17 +371,11 @@ def generate_attribute_from_module(modules: List[str]) -> cst.Attribute:
     return attribute
 
 
-def get_module_levels_from_path(path: Path) -> List[str]:
+def generate_module_from_path(path: Path) -> str:
     module = path.with_suffix("")
     module = re.search(f"{PACKAGE_DIR}.*", module.as_posix()).group()
     modules = module.strip("/").split("/")
-    return modules
-
-
-def generate_module_from_path(path: Path) -> cst.Attribute:
-    modules = get_module_levels_from_path(path=path)
-    attribute = generate_attribute_from_module(modules=modules)
-    return attribute
+    return '.'.join(modules)
 
 
 def decorator_is_dataclass(decorator: cst.Decorator) -> bool:
@@ -548,8 +396,13 @@ def assignment_check(
 
 
 def clear_all_items_in_path(path: Path) -> None:
-    shutil.rmtree(path)
-    path.mkdir(exist_ok=True)
+    for top_level_path in path.iterdir():
+        if top_level_path != BASE_MODEL_PATH:
+            if top_level_path.is_file():
+                top_level_path.unlink()
+            else:
+                shutil.rmtree(top_level_path)
+                path.mkdir(exist_ok=True)
 
 
 def is_import_module_name(name: str, node: cst.ImportFrom) -> bool:
@@ -583,7 +436,20 @@ def write_to_python(path: Path, code: str) -> None:
         gen_py_file.write(code)
 
 
-def generate_import_statement(names: List[str]) -> cst.SimpleStatementLine:
+def generate_import_statement(module: str, names: Optional[List[str]] = None) -> cst.SimpleStatementLine:
+    if names  is None:
+        import_statement = generate_cst_import(names=[module])
+    else:
+        modules = module.split('.')
+        attribute = generate_attribute_from_module(modules=modules)
+
+        import_statement = generate_cst_import_from(
+            module=attribute, names=names
+        )
+    return import_statement
+
+
+def generate_cst_import(names: List[str]) -> cst.SimpleStatementLine:
     return cst.SimpleStatementLine(
         body=[
             cst.Import(
@@ -593,7 +459,7 @@ def generate_import_statement(names: List[str]) -> cst.SimpleStatementLine:
     )
 
 
-def generate_import_from_statement(
+def generate_cst_import_from(
     module: Union[cst.Attribute, cst.Name], names: List[str]
 ) -> cst.SimpleStatementLine:
     return cst.SimpleStatementLine(
@@ -616,8 +482,8 @@ def modify_python_file_as_cst(
 
 
 def write_enums_to_file(path: Path, enums: Set[cst.ClassDef]) -> None:
-    enum_import_statement = generate_import_from_statement(
-        module=cst.Name("enum"), names=["Enum"]
+    enum_import_statement = generate_import_statement(
+        module="enum", names=["Enum"]
     )
     enums_sorted = sorted(list(enums), key=lambda x: x.name.value)
 
@@ -695,7 +561,6 @@ logger = setup_logger(__name__)
 
 def generate_dataclass_models(
     path: Path,
-    parse_python_file: ParsePythonFiles,
     iso_message_files: ListProxy[ISO20022MessageFile],
     enum_tracker: EnumTracker,
 ) -> None:
@@ -747,7 +612,6 @@ def generate_dataclass_models(
     )
 
     # Add function to parse.py file
-    parse_python_file.update_file(dst, src.stem, model_name)
     iso_message_files.append(iso_message)
 
 
@@ -772,7 +636,6 @@ def gather_message_schema_paths(repo_path: Path) -> List[Path]:
 
 def main(schema_paths: List[Path]) -> None:
     with BaseManager() as base_manager:
-        parse_python_file: ParsePythonFiles = base_manager.ParsePythonFiles()
         enum_tracker: EnumTracker = base_manager.EnumTracker()
 
         with Manager() as manager:
@@ -784,7 +647,6 @@ def main(schema_paths: List[Path]) -> None:
                     process_executor.submit(
                         generate_dataclass_models,
                         path,
-                        parse_python_file,
                         iso_message_files,
                         enum_tracker,
                     )
@@ -808,24 +670,16 @@ def main(schema_paths: List[Path]) -> None:
             # Write common enums to respective files
             write_common_enum_files(enum_common_files=enum_common_files)
 
-            # Close and save parse.py files
-            parse_python_file.write_files()
-
 
 if __name__ == "__main__":
     cloned_repo_path = Path(sys.argv[1], REPO_SCHEMA_DIR)
     schema_paths = gather_message_schema_paths(repo_path=cloned_repo_path)
 
+    # Remove all items in package directory for xsdata generation
     clear_all_items_in_path(path=PACKAGE_PATH)
 
-    BaseManager.register("ParsePythonFiles", ParsePythonFiles)
-    BaseManager.register("EnumTracker", EnumTracker)
-
-    # Generates the utils file which has functions that are imported
-    # into each parse.py file for each message set
-    generate_utils_file()
-
     # Generate all dataclasses and apply refactoring
+    BaseManager.register("EnumTracker", EnumTracker)
     main(schema_paths=schema_paths)
 
     # Add the version to the __init__.py file in the top-level
