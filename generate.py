@@ -30,6 +30,7 @@ BASE_MODEL_PATH = PACKAGE_PATH / "base.py"
 MESSAGE_MODEL_NAME = "ISO20022Message"
 ELEMENT_MODEL_NAME = "ISO20022MessageElement"
 
+
 @dataclass(frozen=True)
 class MessageSetImports:
     imports: List[cst.SimpleStatementLine] = field(default_factory=list)
@@ -40,9 +41,7 @@ class MessageSetImports:
         self.public_api_elements.sort(key=lambda x: x.value.value)
 
     def add_import(self, path: Path, model_name: str) -> None:
-        self.imports.append(
-            generate_import_from_path(path=path, names={model_name})
-        )
+        self.imports.append(generate_import_from_path(path=path, names={model_name}))
         self.public_api_elements.append(
             cst.Element(cst.SimpleString(f'"{model_name}"'))
         )
@@ -164,7 +163,7 @@ class EnumTracker(Dict[str, EnumMetadata]):
             enum_metadata.message_sets.add(message_set)
             enum_metadata.paths.add(path)
         return enum_hash
-    
+
 
 class InitDefaultCommentTransformer(cst.CSTTransformer):
     def leave_EmptyLine(
@@ -186,14 +185,12 @@ class InitMessageSetTransformer(cst.CSTTransformer):
                 body=[
                     cst.Assign(
                         targets=[cst.AssignTarget(cst.Name("__all__"))],
-                        value=cst.List(self.model_imports.public_api_elements)
+                        value=cst.List(self.model_imports.public_api_elements),
                     )
                 ]
             )
         ]
-        return new_node.with_changes(
-            body=self.model_imports.imports + public_api_list
-        )
+        return new_node.with_changes(body=self.model_imports.imports + public_api_list)
 
 
 class InitAddVersionTransformer(cst.CSTTransformer):
@@ -497,11 +494,7 @@ def generate_import_statement(
 
 def generate_cst_import(names: List[str]) -> cst.SimpleStatementLine:
     return cst.SimpleStatementLine(
-        body=[
-            cst.Import(
-                names=[cst.ImportAlias(cst.Name(name)) for name in names]
-            )
-        ]
+        body=[cst.Import(names=[cst.ImportAlias(cst.Name(name)) for name in names])]
     )
 
 
@@ -551,20 +544,20 @@ def add_package_version_to_init() -> None:
         path=init_path,
         transformers=[
             InitAddVersionTransformer(pyproject_version),
-            InitDefaultCommentTransformer()
+            InitDefaultCommentTransformer(),
         ],
     )
 
 
 def add_model_imports_to_init(set_imports: Dict[str, MessageSetImports]) -> None:
     for message_set, model_imports in set_imports.items():
-        message_set_path = PACKAGE_PATH / message_set / '__init__.py'
+        message_set_path = PACKAGE_PATH / message_set / "__init__.py"
         modify_python_file_as_cst(
             path=message_set_path,
             transformers=[
                 InitMessageSetTransformer(model_imports),
-                InitDefaultCommentTransformer()
-            ]
+                InitDefaultCommentTransformer(),
+            ],
         )
 
 
@@ -662,9 +655,7 @@ def generate_dataclass_models(
     modify_python_file_as_cst(
         path=dst,
         transformers=[
-            MultiClassTransformer(
-                iso_message=iso_message, enum_tracker=enum_tracker
-            )
+            MultiClassTransformer(iso_message=iso_message, enum_tracker=enum_tracker)
         ],
     )
 
@@ -728,7 +719,7 @@ def main(schema_paths: List[Path]) -> None:
 
                 imports_for_set.add_import(
                     path=iso_message_file.path,
-                    model_name=iso_message_file.class_name_change.new
+                    model_name=iso_message_file.class_name_change.new,
                 )
 
                 code_refactoring(
