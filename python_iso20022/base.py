@@ -30,11 +30,25 @@ class AbstractISO20022Model(ABC):
     def deep_copy(self: _Model) -> _Model:
         """Return a deep copy of the instance."""
         return copy.deepcopy(self)
+    
+    def _render(self, pretty_print: bool, xml_declaration: bool) -> str:
+        """Private method that renders the XML string."""
+        serializer = AbstractISO20022Model._get_serializer(
+            pretty_print=pretty_print, xml_declaration=xml_declaration
+        )
+        xml_string = self._render_xml_from_serializer(serializer)
+        return xml_string
 
+    def _render_xml_from_serializer(self, serializer: XmlSerializer) -> str:
+        """Private method to render the XML string a `XmlSerializer` object."""
+        xml_string = serializer.render(self)
+        return xml_string
+        
+    @staticmethod
     def _get_serializer(
-        self, pretty_print: bool, xml_declaration: bool = False
+        pretty_print: bool, xml_declaration: bool = True
     ) -> XmlSerializer:
-        """Private method to get `XmlSerializer` object from few arguments."""
+        """Private method to get XmlSerializer object with dynamic namespace control."""
         context = XmlContext()
         serializer = XmlSerializer(
             context=context,
@@ -84,7 +98,6 @@ class AbstractISO20022Model(ABC):
     def is_equal_to(self, other: AbstractISO20022Model) -> bool:
         """Check if two ISO20022 messages are equal by comparing their XML representations."""
         if not isinstance(other, self.__class__):
-            print(self.__class__)
             return False
         return self.to_iso20022_xml() == other.to_iso20022_xml()
 
@@ -93,8 +106,7 @@ class AbstractISO20022Model(ABC):
 class ISO20022Message(AbstractISO20022Model):
     def to_iso20022_xml(self, pretty_print: bool = True):
         """Serialize the dataclass instance into an ISO20022 XML string."""
-        serializer = self._get_serializer(pretty_print=pretty_print)
-        xml_string = serializer.render(self)
+        xml_string = self._render(pretty_print, True)
         return xml_string
 
     def write_to_iso20022_xml(self, path: Path) -> None:
@@ -106,10 +118,7 @@ class ISO20022Message(AbstractISO20022Model):
 
 @dataclass
 class ISO20022MessageElement(AbstractISO20022Model):
-    def to_iso20022_xml(self, pretty_print: bool = True) -> str:
+    def to_iso20022_xml(self, pretty_print: bool = True):
         """Serialize the dataclass instance into an ISO20022 XML string."""
-        serializer = self._get_serializer(
-            pretty_print=pretty_print, xml_declaration=False
-        )
-        xml_string = serializer.render(self)
+        xml_string = self._render(pretty_print, False)
         return xml_string
