@@ -3,12 +3,13 @@ from decimal import Decimal
 from typing import Optional
 
 from python_iso20022.auth.enums import SchemeIdentificationType1Code
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.066.001.01"
 
 
 @dataclass
-class ActiveCurrencyAndAmountAuth06600101:
+class ActiveCurrencyAndAmountAuth06600101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -30,7 +31,7 @@ class ActiveCurrencyAndAmountAuth06600101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth06600101:
+class SupplementaryDataEnvelope1Auth06600101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -41,7 +42,7 @@ class SupplementaryDataEnvelope1Auth06600101:
 
 
 @dataclass
-class GenericIdentification165Auth06600101:
+class GenericIdentification165Auth06600101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -84,7 +85,7 @@ class GenericIdentification165Auth06600101:
 
 
 @dataclass
-class SupplementaryData1Auth06600101:
+class SupplementaryData1Auth06600101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -107,7 +108,7 @@ class SupplementaryData1Auth06600101:
 
 
 @dataclass
-class MonthlyResult1Auth06600101:
+class MonthlyResult1Auth06600101(ISO20022MessageElement):
     nb_of_obsrvtns: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -172,7 +173,7 @@ class MonthlyResult1Auth06600101:
 
 
 @dataclass
-class CcpbackTestingResultReportV01Auth06600101:
+class CcpbackTestingResultReportV01Auth06600101(ISO20022MessageElement):
     class Meta:
         name = "CCPBackTestingResultReportV01"
 
@@ -196,7 +197,7 @@ class CcpbackTestingResultReportV01Auth06600101:
 
 
 @dataclass
-class Auth06600101:
+class Auth06600101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.066.001.01"
 

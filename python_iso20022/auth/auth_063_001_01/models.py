@@ -3,12 +3,13 @@ from decimal import Decimal
 from typing import Optional
 
 from python_iso20022.auth.auth_063_001_01.enums import SettlementDate6Code
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.063.001.01"
 
 
 @dataclass
-class ActiveCurrencyAndAmountAuth06300101:
+class ActiveCurrencyAndAmountAuth06300101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -30,7 +31,7 @@ class ActiveCurrencyAndAmountAuth06300101:
 
 
 @dataclass
-class CoverTwoDefaulters1Auth06300101:
+class CoverTwoDefaulters1Auth06300101(ISO20022MessageElement):
     cover1_id: Optional[str] = field(
         default=None,
         metadata={
@@ -54,7 +55,7 @@ class CoverTwoDefaulters1Auth06300101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth06300101:
+class SupplementaryDataEnvelope1Auth06300101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -65,7 +66,7 @@ class SupplementaryDataEnvelope1Auth06300101:
 
 
 @dataclass
-class AmountAndDirection102Auth06300101:
+class AmountAndDirection102Auth06300101(ISO20022MessageElement):
     amt: Optional[ActiveCurrencyAndAmountAuth06300101] = field(
         default=None,
         metadata={
@@ -87,7 +88,7 @@ class AmountAndDirection102Auth06300101:
 
 
 @dataclass
-class SupplementaryData1Auth06300101:
+class SupplementaryData1Auth06300101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -110,7 +111,7 @@ class SupplementaryData1Auth06300101:
 
 
 @dataclass
-class LiquidResourceInformation1Auth06300101:
+class LiquidResourceInformation1Auth06300101(ISO20022MessageElement):
     cntr_pty_id: Optional[str] = field(
         default=None,
         metadata={
@@ -177,7 +178,7 @@ class LiquidResourceInformation1Auth06300101:
 
 
 @dataclass
-class StressLiquidResourceRequirement1Auth06300101:
+class StressLiquidResourceRequirement1Auth06300101(ISO20022MessageElement):
     oprl_outflw: Optional[AmountAndDirection102Auth06300101] = field(
         default=None,
         metadata={
@@ -217,7 +218,7 @@ class StressLiquidResourceRequirement1Auth06300101:
 
 
 @dataclass
-class LiquidResources1Auth06300101:
+class LiquidResources1Auth06300101(ISO20022MessageElement):
     csh_due: list[LiquidResourceInformation1Auth06300101] = field(
         default_factory=list,
         metadata={
@@ -304,7 +305,7 @@ class LiquidResources1Auth06300101:
 
 
 @dataclass
-class LiquidityRequiredAndAvailable1Auth06300101:
+class LiquidityRequiredAndAvailable1Auth06300101(ISO20022MessageElement):
     lqd_rsrcs: Optional[LiquidResources1Auth06300101] = field(
         default=None,
         metadata={
@@ -337,7 +338,7 @@ class LiquidityRequiredAndAvailable1Auth06300101:
 
 
 @dataclass
-class LiquidityStressTestResult1Auth06300101:
+class LiquidityStressTestResult1Auth06300101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -371,7 +372,7 @@ class LiquidityStressTestResult1Auth06300101:
 
 
 @dataclass
-class CcpliquidityStressTestingResultReportV01Auth06300101:
+class CcpliquidityStressTestingResultReportV01Auth06300101(ISO20022MessageElement):
     class Meta:
         name = "CCPLiquidityStressTestingResultReportV01"
 
@@ -395,7 +396,7 @@ class CcpliquidityStressTestingResultReportV01Auth06300101:
 
 
 @dataclass
-class Auth06300101:
+class Auth06300101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.063.001.01"
 

@@ -4,11 +4,13 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
+
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:head.002.001.01"
 
 
 @dataclass
-class LaxPayloadHead00200101:
+class LaxPayloadHead00200101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -19,7 +21,7 @@ class LaxPayloadHead00200101:
 
 
 @dataclass
-class ManifestData2Head00200101:
+class ManifestData2Head00200101(ISO20022MessageElement):
     doc_tp: Optional[str] = field(
         default=None,
         metadata={
@@ -45,7 +47,7 @@ class ManifestData2Head00200101:
 
 
 @dataclass
-class PayloadData2Head00200101:
+class PayloadData2Head00200101(ISO20022MessageElement):
     pyld_idr: Optional[str] = field(
         default=None,
         metadata={
@@ -77,7 +79,7 @@ class PayloadData2Head00200101:
 
 
 @dataclass
-class SignatureEnvelopeHead00200101:
+class SignatureEnvelopeHead00200101(ISO20022MessageElement):
     w3_org_2000_09_xmldsig_element: Optional[object] = field(
         default=None,
         metadata={
@@ -88,7 +90,7 @@ class SignatureEnvelopeHead00200101:
 
 
 @dataclass
-class ApplicationSpecifics1Head00200101:
+class ApplicationSpecifics1Head00200101(ISO20022MessageElement):
     sys_usr: Optional[str] = field(
         default=None,
         metadata={
@@ -121,7 +123,7 @@ class ApplicationSpecifics1Head00200101:
 
 
 @dataclass
-class PayloadDescription2Head00200101:
+class PayloadDescription2Head00200101(ISO20022MessageElement):
     pyld_data: Optional[PayloadData2Head00200101] = field(
         default=None,
         metadata={
@@ -161,7 +163,7 @@ class PayloadDescription2Head00200101:
 
 
 @dataclass
-class BusinessFileHeaderV01Head00200101:
+class BusinessFileHeaderV01Head00200101(ISO20022MessageElement):
     pyld_desc: Optional[PayloadDescription2Head00200101] = field(
         default=None,
         metadata={
@@ -182,6 +184,6 @@ class BusinessFileHeaderV01Head00200101:
 
 
 @dataclass
-class XchgHead00200101(BusinessFileHeaderV01):
+class XchgHead00200101(BusinessFileHeaderV01, ISO20022MessageElement):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:head.002.001.01"

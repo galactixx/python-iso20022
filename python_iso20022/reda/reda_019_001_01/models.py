@@ -3,6 +3,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import AddressType2Code, RequestType1Code, RequestType2Code
 from python_iso20022.reda.enums import SystemSecuritiesAccountType1Code
 
@@ -10,7 +11,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:reda.019.001.01"
 
 
 @dataclass
-class DatePeriod2Reda01900101:
+class DatePeriod2Reda01900101(ISO20022MessageElement):
     fr_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -32,7 +33,7 @@ class DatePeriod2Reda01900101:
 
 
 @dataclass
-class GenericIdentification1Reda01900101:
+class GenericIdentification1Reda01900101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -67,7 +68,7 @@ class GenericIdentification1Reda01900101:
 
 
 @dataclass
-class GenericIdentification30Reda01900101:
+class GenericIdentification30Reda01900101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -102,7 +103,7 @@ class GenericIdentification30Reda01900101:
 
 
 @dataclass
-class GenericIdentification36Reda01900101:
+class GenericIdentification36Reda01900101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -138,7 +139,7 @@ class GenericIdentification36Reda01900101:
 
 
 @dataclass
-class SecuritiesAccountReturnCriteria1Reda01900101:
+class SecuritiesAccountReturnCriteria1Reda01900101(ISO20022MessageElement):
     acct_id: Optional[bool] = field(
         default=None,
         metadata={
@@ -214,7 +215,7 @@ class SecuritiesAccountReturnCriteria1Reda01900101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Reda01900101:
+class SupplementaryDataEnvelope1Reda01900101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -225,7 +226,7 @@ class SupplementaryDataEnvelope1Reda01900101:
 
 
 @dataclass
-class SystemPartyType1ChoiceReda01900101:
+class SystemPartyType1ChoiceReda01900101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -249,7 +250,7 @@ class SystemPartyType1ChoiceReda01900101:
 
 
 @dataclass
-class DatePeriodSearch1ChoiceReda01900101:
+class DatePeriodSearch1ChoiceReda01900101(ISO20022MessageElement):
     fr_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -293,7 +294,7 @@ class DatePeriodSearch1ChoiceReda01900101:
 
 
 @dataclass
-class PostalAddress1Reda01900101:
+class PostalAddress1Reda01900101(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -376,7 +377,7 @@ class PostalAddress1Reda01900101:
 
 
 @dataclass
-class RequestType2ChoiceReda01900101:
+class RequestType2ChoiceReda01900101(ISO20022MessageElement):
     pmt_ctrl: Optional[RequestType1Code] = field(
         default=None,
         metadata={
@@ -404,7 +405,7 @@ class RequestType2ChoiceReda01900101:
 
 
 @dataclass
-class SupplementaryData1Reda01900101:
+class SupplementaryData1Reda01900101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -427,7 +428,7 @@ class SupplementaryData1Reda01900101:
 
 
 @dataclass
-class SystemSecuritiesAccountType1ChoiceReda01900101:
+class SystemSecuritiesAccountType1ChoiceReda01900101(ISO20022MessageElement):
     cd: Optional[SystemSecuritiesAccountType1Code] = field(
         default=None,
         metadata={
@@ -447,7 +448,7 @@ class SystemSecuritiesAccountType1ChoiceReda01900101:
 
 
 @dataclass
-class MessageHeader2Reda01900101:
+class MessageHeader2Reda01900101(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -478,7 +479,7 @@ class MessageHeader2Reda01900101:
 
 
 @dataclass
-class NameAndAddress5Reda01900101:
+class NameAndAddress5Reda01900101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -501,7 +502,7 @@ class NameAndAddress5Reda01900101:
 
 
 @dataclass
-class PartyIdentification120ChoiceReda01900101:
+class PartyIdentification120ChoiceReda01900101(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -530,7 +531,7 @@ class PartyIdentification120ChoiceReda01900101:
 
 
 @dataclass
-class PartyIdentification136Reda01900101:
+class PartyIdentification136Reda01900101(ISO20022MessageElement):
     id: Optional[PartyIdentification120ChoiceReda01900101] = field(
         default=None,
         metadata={
@@ -552,7 +553,7 @@ class PartyIdentification136Reda01900101:
 
 
 @dataclass
-class SystemPartyIdentification8Reda01900101:
+class SystemPartyIdentification8Reda01900101(ISO20022MessageElement):
     id: Optional[PartyIdentification136Reda01900101] = field(
         default=None,
         metadata={
@@ -573,7 +574,7 @@ class SystemPartyIdentification8Reda01900101:
 
 
 @dataclass
-class SecuritiesAccountSearchCriteria2Reda01900101:
+class SecuritiesAccountSearchCriteria2Reda01900101(ISO20022MessageElement):
     acct_id: Optional[str] = field(
         default=None,
         metadata={
@@ -653,7 +654,7 @@ class SecuritiesAccountSearchCriteria2Reda01900101:
 
 
 @dataclass
-class SecuritiesAccountQueryV01Reda01900101:
+class SecuritiesAccountQueryV01Reda01900101(ISO20022MessageElement):
     msg_hdr: Optional[MessageHeader2Reda01900101] = field(
         default=None,
         metadata={
@@ -690,7 +691,7 @@ class SecuritiesAccountQueryV01Reda01900101:
 
 
 @dataclass
-class Reda01900101:
+class Reda01900101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:reda.019.001.01"
 

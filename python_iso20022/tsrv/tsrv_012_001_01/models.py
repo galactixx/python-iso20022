@@ -3,6 +3,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import AddressType2Code, NamePrefix1Code
 from python_iso20022.tsrv.enums import TerminationReason1Code
 
@@ -10,7 +11,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:tsrv.012.001.01"
 
 
 @dataclass
-class DateAndPlaceOfBirthTsrv01200101:
+class DateAndPlaceOfBirthTsrv01200101(ISO20022MessageElement):
     birth_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -54,7 +55,7 @@ class DateAndPlaceOfBirthTsrv01200101:
 
 
 @dataclass
-class GenericIdentification1Tsrv01200101:
+class GenericIdentification1Tsrv01200101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -89,7 +90,7 @@ class GenericIdentification1Tsrv01200101:
 
 
 @dataclass
-class OrganisationIdentificationSchemeName1ChoiceTsrv01200101:
+class OrganisationIdentificationSchemeName1ChoiceTsrv01200101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -113,7 +114,7 @@ class OrganisationIdentificationSchemeName1ChoiceTsrv01200101:
 
 
 @dataclass
-class PersonIdentificationSchemeName1ChoiceTsrv01200101:
+class PersonIdentificationSchemeName1ChoiceTsrv01200101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -137,7 +138,7 @@ class PersonIdentificationSchemeName1ChoiceTsrv01200101:
 
 
 @dataclass
-class ProprietaryData3Tsrv01200101:
+class ProprietaryData3Tsrv01200101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -149,7 +150,7 @@ class ProprietaryData3Tsrv01200101:
 
 
 @dataclass
-class ContactDetails2Tsrv01200101:
+class ContactDetails2Tsrv01200101(ISO20022MessageElement):
     nm_prfx: Optional[NamePrefix1Code] = field(
         default=None,
         metadata={
@@ -218,7 +219,7 @@ class ContactDetails2Tsrv01200101:
 
 
 @dataclass
-class DocumentFormat1ChoiceTsrv01200101:
+class DocumentFormat1ChoiceTsrv01200101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -240,7 +241,7 @@ class DocumentFormat1ChoiceTsrv01200101:
 
 
 @dataclass
-class GenericOrganisationIdentification1Tsrv01200101:
+class GenericOrganisationIdentification1Tsrv01200101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -273,7 +274,7 @@ class GenericOrganisationIdentification1Tsrv01200101:
 
 
 @dataclass
-class GenericPersonIdentification1Tsrv01200101:
+class GenericPersonIdentification1Tsrv01200101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -306,7 +307,7 @@ class GenericPersonIdentification1Tsrv01200101:
 
 
 @dataclass
-class PostalAddress6Tsrv01200101:
+class PostalAddress6Tsrv01200101(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -408,7 +409,7 @@ class PostalAddress6Tsrv01200101:
 
 
 @dataclass
-class TerminationReason1ChoiceTsrv01200101:
+class TerminationReason1ChoiceTsrv01200101(ISO20022MessageElement):
     cd: Optional[TerminationReason1Code] = field(
         default=None,
         metadata={
@@ -428,7 +429,7 @@ class TerminationReason1ChoiceTsrv01200101:
 
 
 @dataclass
-class UndertakingDocumentType1ChoiceTsrv01200101:
+class UndertakingDocumentType1ChoiceTsrv01200101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -450,7 +451,7 @@ class UndertakingDocumentType1ChoiceTsrv01200101:
 
 
 @dataclass
-class OrganisationIdentification8Tsrv01200101:
+class OrganisationIdentification8Tsrv01200101(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -471,7 +472,7 @@ class OrganisationIdentification8Tsrv01200101:
 
 
 @dataclass
-class PersonIdentification5Tsrv01200101:
+class PersonIdentification5Tsrv01200101(ISO20022MessageElement):
     dt_and_plc_of_birth: Optional[DateAndPlaceOfBirthTsrv01200101] = field(
         default=None,
         metadata={
@@ -491,7 +492,7 @@ class PersonIdentification5Tsrv01200101:
 
 
 @dataclass
-class UndertakingTermination3Tsrv01200101:
+class UndertakingTermination3Tsrv01200101(ISO20022MessageElement):
     fctv_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -523,7 +524,7 @@ class UndertakingTermination3Tsrv01200101:
 
 
 @dataclass
-class Party11ChoiceTsrv01200101:
+class Party11ChoiceTsrv01200101(ISO20022MessageElement):
     org_id: Optional[OrganisationIdentification8Tsrv01200101] = field(
         default=None,
         metadata={
@@ -543,7 +544,7 @@ class Party11ChoiceTsrv01200101:
 
 
 @dataclass
-class PartyIdentification43Tsrv01200101:
+class PartyIdentification43Tsrv01200101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -590,7 +591,7 @@ class PartyIdentification43Tsrv01200101:
 
 
 @dataclass
-class PartyAndSignature2Tsrv01200101:
+class PartyAndSignature2Tsrv01200101(ISO20022MessageElement):
     pty: Optional[PartyIdentification43Tsrv01200101] = field(
         default=None,
         metadata={
@@ -612,7 +613,7 @@ class PartyAndSignature2Tsrv01200101:
 
 
 @dataclass
-class Undertaking9Tsrv01200101:
+class Undertaking9Tsrv01200101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -646,7 +647,7 @@ class Undertaking9Tsrv01200101:
 
 
 @dataclass
-class Document9Tsrv01200101:
+class Document9Tsrv01200101(ISO20022MessageElement):
     tp: Optional[UndertakingDocumentType1ChoiceTsrv01200101] = field(
         default=None,
         metadata={
@@ -698,7 +699,7 @@ class Document9Tsrv01200101:
 
 
 @dataclass
-class UndertakingTerminationNotice1Tsrv01200101:
+class UndertakingTerminationNotice1Tsrv01200101(ISO20022MessageElement):
     udrtkg_id: Optional[Undertaking9Tsrv01200101] = field(
         default=None,
         metadata={
@@ -739,7 +740,7 @@ class UndertakingTerminationNotice1Tsrv01200101:
 
 
 @dataclass
-class UndertakingTerminationNotificationV01Tsrv01200101:
+class UndertakingTerminationNotificationV01Tsrv01200101(ISO20022MessageElement):
     udrtkg_termntn_ntfctn_dtls: Optional[UndertakingTerminationNotice1Tsrv01200101] = (
         field(
             default=None,
@@ -762,7 +763,7 @@ class UndertakingTerminationNotificationV01Tsrv01200101:
 
 
 @dataclass
-class Tsrv01200101:
+class Tsrv01200101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:tsrv.012.001.01"
 

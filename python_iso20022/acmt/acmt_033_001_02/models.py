@@ -8,12 +8,13 @@ from python_iso20022.acmt.enums import (
     SwitchStatus1Code,
     SwitchType1Code,
 )
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:acmt.033.001.02"
 
 
 @dataclass
-class MessageIdentification1Acmt03300102:
+class MessageIdentification1Acmt03300102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -37,7 +38,7 @@ class MessageIdentification1Acmt03300102:
 
 
 @dataclass
-class ResponseDetails1Acmt03300102:
+class ResponseDetails1Acmt03300102(ISO20022MessageElement):
     rspn_cd: Optional[str] = field(
         default=None,
         metadata={
@@ -62,7 +63,7 @@ class ResponseDetails1Acmt03300102:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Acmt03300102:
+class SupplementaryDataEnvelope1Acmt03300102(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -73,7 +74,7 @@ class SupplementaryDataEnvelope1Acmt03300102:
 
 
 @dataclass
-class AccountSwitchDetails1Acmt03300102:
+class AccountSwitchDetails1Acmt03300102(ISO20022MessageElement):
     unq_ref_nb: Optional[str] = field(
         default=None,
         metadata={
@@ -148,7 +149,7 @@ class AccountSwitchDetails1Acmt03300102:
 
 
 @dataclass
-class SupplementaryData1Acmt03300102:
+class SupplementaryData1Acmt03300102(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -171,7 +172,7 @@ class SupplementaryData1Acmt03300102:
 
 
 @dataclass
-class AccountSwitchNotifyAccountSwitchCompleteV02Acmt03300102:
+class AccountSwitchNotifyAccountSwitchCompleteV02Acmt03300102(ISO20022MessageElement):
     msg_id: Optional[MessageIdentification1Acmt03300102] = field(
         default=None,
         metadata={
@@ -201,7 +202,7 @@ class AccountSwitchNotifyAccountSwitchCompleteV02Acmt03300102:
 
 
 @dataclass
-class Acmt03300102:
+class Acmt03300102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.033.001.02"
 

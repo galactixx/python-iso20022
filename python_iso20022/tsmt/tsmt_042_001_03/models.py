@@ -3,6 +3,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.tsmt.enums import BaselineStatus3Code
 from python_iso20022.tsmt.tsmt_042_001_03.enums import Action1Code
 
@@ -10,7 +11,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:tsmt.042.001.03"
 
 
 @dataclass
-class Bicidentification1Tsmt04200103:
+class Bicidentification1Tsmt04200103(ISO20022MessageElement):
     class Meta:
         name = "BICIdentification1"
 
@@ -27,7 +28,7 @@ class Bicidentification1Tsmt04200103:
 
 
 @dataclass
-class GenericIdentification4Tsmt04200103:
+class GenericIdentification4Tsmt04200103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -53,7 +54,7 @@ class GenericIdentification4Tsmt04200103:
 
 
 @dataclass
-class MessageIdentification1Tsmt04200103:
+class MessageIdentification1Tsmt04200103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -77,7 +78,7 @@ class MessageIdentification1Tsmt04200103:
 
 
 @dataclass
-class PartyIdentification28Tsmt04200103:
+class PartyIdentification28Tsmt04200103(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -100,7 +101,7 @@ class PartyIdentification28Tsmt04200103:
 
 
 @dataclass
-class PendingActivity1Tsmt04200103:
+class PendingActivity1Tsmt04200103(ISO20022MessageElement):
     tp: Optional[Action1Code] = field(
         default=None,
         metadata={
@@ -123,7 +124,7 @@ class PendingActivity1Tsmt04200103:
 
 
 @dataclass
-class TransactionStatus4Tsmt04200103:
+class TransactionStatus4Tsmt04200103(ISO20022MessageElement):
     sts: Optional[BaselineStatus3Code] = field(
         default=None,
         metadata={
@@ -136,7 +137,7 @@ class TransactionStatus4Tsmt04200103:
 
 
 @dataclass
-class ReportSpecification4Tsmt04200103:
+class ReportSpecification4Tsmt04200103(ISO20022MessageElement):
     tx_id: list[str] = field(
         default_factory=list,
         metadata={
@@ -251,7 +252,7 @@ class ReportSpecification4Tsmt04200103:
 
 
 @dataclass
-class TransactionReportRequestV03Tsmt04200103:
+class TransactionReportRequestV03Tsmt04200103(ISO20022MessageElement):
     req_id: Optional[MessageIdentification1Tsmt04200103] = field(
         default=None,
         metadata={
@@ -273,7 +274,7 @@ class TransactionReportRequestV03Tsmt04200103:
 
 
 @dataclass
-class Tsmt04200103:
+class Tsmt04200103(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.042.001.03"
 

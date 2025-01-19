@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.catp.enums import (
     ActionType6Code,
     Atmdevice1Code,
@@ -49,7 +50,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:catp.008.001.02"
 
 
 @dataclass
-class Acquirer7Catp00800102:
+class Acquirer7Catp00800102(ISO20022MessageElement):
     acqrg_instn: Optional[str] = field(
         default=None,
         metadata={
@@ -73,7 +74,7 @@ class Acquirer7Catp00800102:
 
 
 @dataclass
-class CurrencyAndAmountCatp00800102:
+class CurrencyAndAmountCatp00800102(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -95,7 +96,7 @@ class CurrencyAndAmountCatp00800102:
 
 
 @dataclass
-class GeographicCoordinates1Catp00800102:
+class GeographicCoordinates1Catp00800102(ISO20022MessageElement):
     lat: Optional[str] = field(
         default=None,
         metadata={
@@ -121,7 +122,7 @@ class GeographicCoordinates1Catp00800102:
 
 
 @dataclass
-class Kekidentifier2Catp00800102:
+class Kekidentifier2Catp00800102(ISO20022MessageElement):
     class Meta:
         name = "KEKIdentifier2"
 
@@ -171,7 +172,7 @@ class Kekidentifier2Catp00800102:
 
 
 @dataclass
-class PlainCardData19Catp00800102:
+class PlainCardData19Catp00800102(ISO20022MessageElement):
     pan: Optional[str] = field(
         default=None,
         metadata={
@@ -243,7 +244,7 @@ class PlainCardData19Catp00800102:
 
 
 @dataclass
-class ResponseType8Catp00800102:
+class ResponseType8Catp00800102(ISO20022MessageElement):
     rspndr_id: Optional[str] = field(
         default=None,
         metadata={
@@ -299,7 +300,7 @@ class ResponseType8Catp00800102:
 
 
 @dataclass
-class TransactionIdentifier1Catp00800102:
+class TransactionIdentifier1Catp00800102(ISO20022MessageElement):
     tx_dt_tm: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -323,7 +324,7 @@ class TransactionIdentifier1Catp00800102:
 
 
 @dataclass
-class Utmcoordinates1Catp00800102:
+class Utmcoordinates1Catp00800102(ISO20022MessageElement):
     class Meta:
         name = "UTMCoordinates1"
 
@@ -363,7 +364,7 @@ class Utmcoordinates1Catp00800102:
 
 
 @dataclass
-class AtmconfigurationParameter1Catp00800102:
+class AtmconfigurationParameter1Catp00800102(ISO20022MessageElement):
     class Meta:
         name = "ATMConfigurationParameter1"
 
@@ -390,7 +391,7 @@ class AtmconfigurationParameter1Catp00800102:
 
 
 @dataclass
-class AtmcustomerProfile4Catp00800102:
+class AtmcustomerProfile4Catp00800102(ISO20022MessageElement):
     class Meta:
         name = "ATMCustomerProfile4"
 
@@ -426,7 +427,7 @@ class AtmcustomerProfile4Catp00800102:
 
 
 @dataclass
-class AtmmessageFunction2Catp00800102:
+class AtmmessageFunction2Catp00800102(ISO20022MessageElement):
     class Meta:
         name = "ATMMessageFunction2"
 
@@ -462,7 +463,7 @@ class AtmmessageFunction2Catp00800102:
 
 
 @dataclass
-class Atmservice14Catp00800102:
+class Atmservice14Catp00800102(ISO20022MessageElement):
     class Meta:
         name = "ATMService14"
 
@@ -518,7 +519,7 @@ class Atmservice14Catp00800102:
 
 
 @dataclass
-class ActionMessage4Catp00800102:
+class ActionMessage4Catp00800102(ISO20022MessageElement):
     frmt: Optional[OutputFormat2Code] = field(
         default=None,
         metadata={
@@ -569,7 +570,7 @@ class ActionMessage4Catp00800102:
 
 
 @dataclass
-class DisplayCapabilities5Catp00800102:
+class DisplayCapabilities5Catp00800102(ISO20022MessageElement):
     dstn: list[UserInterface5Code] = field(
         default_factory=list,
         metadata={
@@ -618,7 +619,7 @@ class DisplayCapabilities5Catp00800102:
 
 
 @dataclass
-class EncapsulatedContent3Catp00800102:
+class EncapsulatedContent3Catp00800102(ISO20022MessageElement):
     cntt_tp: Optional[ContentType2Code] = field(
         default=None,
         metadata={
@@ -642,7 +643,7 @@ class EncapsulatedContent3Catp00800102:
 
 
 @dataclass
-class GenericIdentification77Catp00800102:
+class GenericIdentification77Catp00800102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -693,7 +694,7 @@ class GenericIdentification77Catp00800102:
 
 
 @dataclass
-class GeographicLocation1ChoiceCatp00800102:
+class GeographicLocation1ChoiceCatp00800102(ISO20022MessageElement):
     geogc_cordints: Optional[GeographicCoordinates1Catp00800102] = field(
         default=None,
         metadata={
@@ -713,7 +714,7 @@ class GeographicLocation1ChoiceCatp00800102:
 
 
 @dataclass
-class Parameter5Catp00800102:
+class Parameter5Catp00800102(ISO20022MessageElement):
     dgst_algo: Optional[Algorithm11Code] = field(
         default=None,
         metadata={
@@ -725,7 +726,7 @@ class Parameter5Catp00800102:
 
 
 @dataclass
-class Parameter6Catp00800102:
+class Parameter6Catp00800102(ISO20022MessageElement):
     ncrptn_frmt: Optional[EncryptionFormat1Code] = field(
         default=None,
         metadata={
@@ -756,7 +757,7 @@ class Parameter6Catp00800102:
 
 
 @dataclass
-class Parameter7Catp00800102:
+class Parameter7Catp00800102(ISO20022MessageElement):
     initlstn_vctr: Optional[bytes] = field(
         default=None,
         metadata={
@@ -779,7 +780,7 @@ class Parameter7Catp00800102:
 
 
 @dataclass
-class RelativeDistinguishedName1Catp00800102:
+class RelativeDistinguishedName1Catp00800102(ISO20022MessageElement):
     attr_tp: Optional[AttributeType1Code] = field(
         default=None,
         metadata={
@@ -803,7 +804,7 @@ class RelativeDistinguishedName1Catp00800102:
 
 
 @dataclass
-class ResponseType7Catp00800102:
+class ResponseType7Catp00800102(ISO20022MessageElement):
     rspn: Optional[Response4Code] = field(
         default=None,
         metadata={
@@ -834,7 +835,7 @@ class ResponseType7Catp00800102:
 
 
 @dataclass
-class TerminalHosting1Catp00800102:
+class TerminalHosting1Catp00800102(ISO20022MessageElement):
     ctgy: Optional[TransactionEnvironment3Code] = field(
         default=None,
         metadata={
@@ -856,7 +857,7 @@ class TerminalHosting1Catp00800102:
 
 
 @dataclass
-class TransactionVerificationResult5Catp00800102:
+class TransactionVerificationResult5Catp00800102(ISO20022MessageElement):
     mtd: Optional[AuthenticationMethod7Code] = field(
         default=None,
         metadata={
@@ -906,7 +907,7 @@ class TransactionVerificationResult5Catp00800102:
 
 
 @dataclass
-class Atmcontext13Catp00800102:
+class Atmcontext13Catp00800102(ISO20022MessageElement):
     class Meta:
         name = "ATMContext13"
 
@@ -932,7 +933,7 @@ class Atmcontext13Catp00800102:
 
 
 @dataclass
-class Atmcustomer6Catp00800102:
+class Atmcustomer6Catp00800102(ISO20022MessageElement):
     class Meta:
         name = "ATMCustomer6"
 
@@ -964,7 +965,7 @@ class Atmcustomer6Catp00800102:
 
 
 @dataclass
-class Atmequipment1Catp00800102:
+class Atmequipment1Catp00800102(ISO20022MessageElement):
     class Meta:
         name = "ATMEquipment1"
 
@@ -1049,7 +1050,7 @@ class Atmequipment1Catp00800102:
 
 
 @dataclass
-class Action7Catp00800102:
+class Action7Catp00800102(ISO20022MessageElement):
     actn_tp: Optional[ActionType6Code] = field(
         default=None,
         metadata={
@@ -1078,7 +1079,7 @@ class Action7Catp00800102:
 
 
 @dataclass
-class AlgorithmIdentification12Catp00800102:
+class AlgorithmIdentification12Catp00800102(ISO20022MessageElement):
     algo: Optional[Algorithm8Code] = field(
         default=None,
         metadata={
@@ -1099,7 +1100,7 @@ class AlgorithmIdentification12Catp00800102:
 
 
 @dataclass
-class AlgorithmIdentification13Catp00800102:
+class AlgorithmIdentification13Catp00800102(ISO20022MessageElement):
     algo: Optional[Algorithm13Code] = field(
         default=None,
         metadata={
@@ -1120,7 +1121,7 @@ class AlgorithmIdentification13Catp00800102:
 
 
 @dataclass
-class AlgorithmIdentification14Catp00800102:
+class AlgorithmIdentification14Catp00800102(ISO20022MessageElement):
     algo: Optional[Algorithm15Code] = field(
         default=None,
         metadata={
@@ -1141,7 +1142,7 @@ class AlgorithmIdentification14Catp00800102:
 
 
 @dataclass
-class AlgorithmIdentification15Catp00800102:
+class AlgorithmIdentification15Catp00800102(ISO20022MessageElement):
     algo: Optional[Algorithm12Code] = field(
         default=None,
         metadata={
@@ -1162,7 +1163,7 @@ class AlgorithmIdentification15Catp00800102:
 
 
 @dataclass
-class CertificateIssuer1Catp00800102:
+class CertificateIssuer1Catp00800102(ISO20022MessageElement):
     rltv_dstngshd_nm: list[RelativeDistinguishedName1Catp00800102] = field(
         default_factory=list,
         metadata={
@@ -1175,7 +1176,7 @@ class CertificateIssuer1Catp00800102:
 
 
 @dataclass
-class PointOfInteractionCapabilities7Catp00800102:
+class PointOfInteractionCapabilities7Catp00800102(ISO20022MessageElement):
     card_rd_data: list[CardDataReading4Code] = field(
         default_factory=list,
         metadata={
@@ -1265,7 +1266,7 @@ class PointOfInteractionCapabilities7Catp00800102:
 
 
 @dataclass
-class PostalAddress17Catp00800102:
+class PostalAddress17Catp00800102(ISO20022MessageElement):
     adr_line: list[str] = field(
         default_factory=list,
         metadata={
@@ -1350,7 +1351,7 @@ class PostalAddress17Catp00800102:
 
 
 @dataclass
-class Traceability4Catp00800102:
+class Traceability4Catp00800102(ISO20022MessageElement):
     rlay_id: Optional[GenericIdentification77Catp00800102] = field(
         default=None,
         metadata={
@@ -1391,7 +1392,7 @@ class Traceability4Catp00800102:
 
 
 @dataclass
-class AuthorisationResult13Catp00800102:
+class AuthorisationResult13Catp00800102(ISO20022MessageElement):
     authstn_ntty: Optional[PartyType16Code] = field(
         default=None,
         metadata={
@@ -1438,7 +1439,7 @@ class AuthorisationResult13Catp00800102:
 
 
 @dataclass
-class AutomatedTellerMachine9Catp00800102:
+class AutomatedTellerMachine9Catp00800102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1515,7 +1516,7 @@ class AutomatedTellerMachine9Catp00800102:
 
 
 @dataclass
-class EncryptedContent3Catp00800102:
+class EncryptedContent3Catp00800102(ISO20022MessageElement):
     cntt_tp: Optional[ContentType2Code] = field(
         default=None,
         metadata={
@@ -1549,7 +1550,7 @@ class EncryptedContent3Catp00800102:
 
 
 @dataclass
-class Header32Catp00800102:
+class Header32Catp00800102(ISO20022MessageElement):
     msg_fctn: Optional[AtmmessageFunction2Catp00800102] = field(
         default=None,
         metadata={
@@ -1641,7 +1642,7 @@ class Header32Catp00800102:
 
 
 @dataclass
-class IssuerAndSerialNumber1Catp00800102:
+class IssuerAndSerialNumber1Catp00800102(ISO20022MessageElement):
     issr: Optional[CertificateIssuer1Catp00800102] = field(
         default=None,
         metadata={
@@ -1666,7 +1667,7 @@ class IssuerAndSerialNumber1Catp00800102:
 
 
 @dataclass
-class Kek4Catp00800102:
+class Kek4Catp00800102(ISO20022MessageElement):
     class Meta:
         name = "KEK4"
 
@@ -1713,7 +1714,7 @@ class Kek4Catp00800102:
 
 
 @dataclass
-class Parameter4Catp00800102:
+class Parameter4Catp00800102(ISO20022MessageElement):
     ncrptn_frmt: Optional[EncryptionFormat1Code] = field(
         default=None,
         metadata={
@@ -1741,7 +1742,7 @@ class Parameter4Catp00800102:
 
 
 @dataclass
-class Atmtransaction20Catp00800102:
+class Atmtransaction20Catp00800102(ISO20022MessageElement):
     class Meta:
         name = "ATMTransaction20"
 
@@ -1837,7 +1838,7 @@ class Atmtransaction20Catp00800102:
 
 
 @dataclass
-class AlgorithmIdentification11Catp00800102:
+class AlgorithmIdentification11Catp00800102(ISO20022MessageElement):
     algo: Optional[Algorithm7Code] = field(
         default=None,
         metadata={
@@ -1858,7 +1859,7 @@ class AlgorithmIdentification11Catp00800102:
 
 
 @dataclass
-class Recipient5ChoiceCatp00800102:
+class Recipient5ChoiceCatp00800102(ISO20022MessageElement):
     issr_and_srl_nb: Optional[IssuerAndSerialNumber1Catp00800102] = field(
         default=None,
         metadata={
@@ -1878,7 +1879,7 @@ class Recipient5ChoiceCatp00800102:
 
 
 @dataclass
-class KeyTransport4Catp00800102:
+class KeyTransport4Catp00800102(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -1922,7 +1923,7 @@ class KeyTransport4Catp00800102:
 
 
 @dataclass
-class Recipient4ChoiceCatp00800102:
+class Recipient4ChoiceCatp00800102(ISO20022MessageElement):
     key_trnsprt: Optional[KeyTransport4Catp00800102] = field(
         default=None,
         metadata={
@@ -1950,7 +1951,7 @@ class Recipient4ChoiceCatp00800102:
 
 
 @dataclass
-class AuthenticatedData4Catp00800102:
+class AuthenticatedData4Catp00800102(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -2003,7 +2004,7 @@ class AuthenticatedData4Catp00800102:
 
 
 @dataclass
-class EnvelopedData4Catp00800102:
+class EnvelopedData4Catp00800102(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -2034,7 +2035,7 @@ class EnvelopedData4Catp00800102:
 
 
 @dataclass
-class ContentInformationType10Catp00800102:
+class ContentInformationType10Catp00800102(ISO20022MessageElement):
     cntt_tp: Optional[ContentType2Code] = field(
         default=None,
         metadata={
@@ -2056,7 +2057,7 @@ class ContentInformationType10Catp00800102:
 
 
 @dataclass
-class ContentInformationType15Catp00800102:
+class ContentInformationType15Catp00800102(ISO20022MessageElement):
     cntt_tp: Optional[ContentType2Code] = field(
         default=None,
         metadata={
@@ -2078,7 +2079,7 @@ class ContentInformationType15Catp00800102:
 
 
 @dataclass
-class PaymentCard23Catp00800102:
+class PaymentCard23Catp00800102(ISO20022MessageElement):
     card_data_ntry_md: Optional[CardDataReading1Code] = field(
         default=None,
         metadata={
@@ -2142,7 +2143,7 @@ class PaymentCard23Catp00800102:
 
 
 @dataclass
-class Atmenvironment13Catp00800102:
+class Atmenvironment13Catp00800102(ISO20022MessageElement):
     class Meta:
         name = "ATMEnvironment13"
 
@@ -2201,7 +2202,7 @@ class Atmenvironment13Catp00800102:
 
 
 @dataclass
-class AtmcompletionAdvice2Catp00800102:
+class AtmcompletionAdvice2Catp00800102(ISO20022MessageElement):
     class Meta:
         name = "ATMCompletionAdvice2"
 
@@ -2235,7 +2236,7 @@ class AtmcompletionAdvice2Catp00800102:
 
 
 @dataclass
-class AtmcompletionAdviceV02Catp00800102:
+class AtmcompletionAdviceV02Catp00800102(ISO20022MessageElement):
     class Meta:
         name = "ATMCompletionAdviceV02"
 
@@ -2275,7 +2276,7 @@ class AtmcompletionAdviceV02Catp00800102:
 
 
 @dataclass
-class Catp00800102:
+class Catp00800102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:catp.008.001.02"
 

@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.canm.enums import NetworkManagementType1Code
 from python_iso20022.enums import (
     CreditDebit3Code,
@@ -19,7 +20,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:canm.001.001.04"
 
 
 @dataclass
-class AdditionalData1Canm00100104:
+class AdditionalData1Canm00100104(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -43,7 +44,7 @@ class AdditionalData1Canm00100104:
 
 
 @dataclass
-class BatchManagementInformation1Canm00100104:
+class BatchManagementInformation1Canm00100104(ISO20022MessageElement):
     colltn_id: Optional[str] = field(
         default=None,
         metadata={
@@ -88,7 +89,7 @@ class BatchManagementInformation1Canm00100104:
 
 
 @dataclass
-class Jurisdiction2Canm00100104:
+class Jurisdiction2Canm00100104(ISO20022MessageElement):
     dmst_ind: Optional[bool] = field(
         default=None,
         metadata={
@@ -110,7 +111,7 @@ class Jurisdiction2Canm00100104:
 
 
 @dataclass
-class Macdata1Canm00100104:
+class Macdata1Canm00100104(ISO20022MessageElement):
     class Meta:
         name = "MACData1"
 
@@ -201,7 +202,7 @@ class Macdata1Canm00100104:
 
 
 @dataclass
-class Reconciliation4Canm00100104:
+class Reconciliation4Canm00100104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -233,7 +234,7 @@ class Reconciliation4Canm00100104:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Canm00100104:
+class SupplementaryDataEnvelope1Canm00100104(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -244,7 +245,7 @@ class SupplementaryDataEnvelope1Canm00100104:
 
 
 @dataclass
-class AdditionalData2Canm00100104:
+class AdditionalData2Canm00100104(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -266,7 +267,7 @@ class AdditionalData2Canm00100104:
 
 
 @dataclass
-class AdditionalFee3Canm00100104:
+class AdditionalFee3Canm00100104(ISO20022MessageElement):
     tp: Optional[TypeOfAmount21Code] = field(
         default=None,
         metadata={
@@ -396,7 +397,7 @@ class AdditionalFee3Canm00100104:
 
 
 @dataclass
-class ContentInformationType41Canm00100104:
+class ContentInformationType41Canm00100104(ISO20022MessageElement):
     macdata: Optional[Macdata1Canm00100104] = field(
         default=None,
         metadata={
@@ -419,7 +420,7 @@ class ContentInformationType41Canm00100104:
 
 
 @dataclass
-class GenericIdentification183Canm00100104:
+class GenericIdentification183Canm00100104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -479,7 +480,7 @@ class GenericIdentification183Canm00100104:
 
 
 @dataclass
-class ProcessingResult26Canm00100104:
+class ProcessingResult26Canm00100104(ISO20022MessageElement):
     rspn_src_id: Optional[str] = field(
         default=None,
         metadata={
@@ -555,7 +556,7 @@ class ProcessingResult26Canm00100104:
 
 
 @dataclass
-class ProgrammeMode5Canm00100104:
+class ProgrammeMode5Canm00100104(ISO20022MessageElement):
     apld_id: Optional[str] = field(
         default=None,
         metadata={
@@ -578,7 +579,7 @@ class ProgrammeMode5Canm00100104:
 
 
 @dataclass
-class SettlementService6Canm00100104:
+class SettlementService6Canm00100104(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -680,7 +681,7 @@ class SettlementService6Canm00100104:
 
 
 @dataclass
-class SupplementaryData1Canm00100104:
+class SupplementaryData1Canm00100104(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -703,7 +704,7 @@ class SupplementaryData1Canm00100104:
 
 
 @dataclass
-class Traceability10Canm00100104:
+class Traceability10Canm00100104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -779,7 +780,7 @@ class Traceability10Canm00100104:
 
 
 @dataclass
-class Header71Canm00100104:
+class Header71Canm00100104(ISO20022MessageElement):
     msg_fctn: Optional[str] = field(
         default=None,
         metadata={
@@ -874,7 +875,7 @@ class Header71Canm00100104:
 
 
 @dataclass
-class NetworkManagementInitiationV04Canm00100104:
+class NetworkManagementInitiationV04Canm00100104(ISO20022MessageElement):
     hdr: Optional[Header71Canm00100104] = field(
         default=None,
         metadata={
@@ -1072,7 +1073,7 @@ class NetworkManagementInitiationV04Canm00100104:
 
 
 @dataclass
-class Canm00100104:
+class Canm00100104(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:canm.001.001.04"
 

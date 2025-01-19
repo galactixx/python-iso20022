@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.caad.enums import (
     ClearingMethod2Code,
     PartyType23Code,
@@ -35,7 +36,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:caad.004.001.03"
 
 
 @dataclass
-class AdditionalData1Caad00400103:
+class AdditionalData1Caad00400103(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -59,7 +60,7 @@ class AdditionalData1Caad00400103:
 
 
 @dataclass
-class BatchManagementInformation1Caad00400103:
+class BatchManagementInformation1Caad00400103(ISO20022MessageElement):
     colltn_id: Optional[str] = field(
         default=None,
         metadata={
@@ -104,7 +105,7 @@ class BatchManagementInformation1Caad00400103:
 
 
 @dataclass
-class EncryptedData2ChoiceCaad00400103:
+class EncryptedData2ChoiceCaad00400103(ISO20022MessageElement):
     binry: Optional[bytes] = field(
         default=None,
         metadata={
@@ -128,7 +129,7 @@ class EncryptedData2ChoiceCaad00400103:
 
 
 @dataclass
-class Jurisdiction2Caad00400103:
+class Jurisdiction2Caad00400103(ISO20022MessageElement):
     dmst_ind: Optional[bool] = field(
         default=None,
         metadata={
@@ -150,7 +151,7 @@ class Jurisdiction2Caad00400103:
 
 
 @dataclass
-class Kekidentifier2Caad00400103:
+class Kekidentifier2Caad00400103(ISO20022MessageElement):
     class Meta:
         name = "KEKIdentifier2"
 
@@ -200,7 +201,7 @@ class Kekidentifier2Caad00400103:
 
 
 @dataclass
-class Kekidentifier6Caad00400103:
+class Kekidentifier6Caad00400103(ISO20022MessageElement):
     class Meta:
         name = "KEKIdentifier6"
 
@@ -249,7 +250,7 @@ class Kekidentifier6Caad00400103:
 
 
 @dataclass
-class Macdata1Caad00400103:
+class Macdata1Caad00400103(ISO20022MessageElement):
     class Meta:
         name = "MACData1"
 
@@ -340,7 +341,7 @@ class Macdata1Caad00400103:
 
 
 @dataclass
-class Reconciliation4Caad00400103:
+class Reconciliation4Caad00400103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -372,7 +373,7 @@ class Reconciliation4Caad00400103:
 
 
 @dataclass
-class RecordMessage1ChoiceCaad00400103:
+class RecordMessage1ChoiceCaad00400103(ISO20022MessageElement):
     adddm_initn: Optional[bytes] = field(
         default=None,
         metadata={
@@ -794,7 +795,7 @@ class RecordMessage1ChoiceCaad00400103:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Caad00400103:
+class SupplementaryDataEnvelope1Caad00400103(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -805,7 +806,7 @@ class SupplementaryDataEnvelope1Caad00400103:
 
 
 @dataclass
-class AdditionalData2Caad00400103:
+class AdditionalData2Caad00400103(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -827,7 +828,7 @@ class AdditionalData2Caad00400103:
 
 
 @dataclass
-class AdditionalInformation21Caad00400103:
+class AdditionalInformation21Caad00400103(ISO20022MessageElement):
     rcpt: Optional[PartyType23Code] = field(
         default=None,
         metadata={
@@ -866,7 +867,7 @@ class AdditionalInformation21Caad00400103:
 
 
 @dataclass
-class AlgorithmIdentification26Caad00400103:
+class AlgorithmIdentification26Caad00400103(ISO20022MessageElement):
     algo: Optional[Algorithm8Code] = field(
         default=None,
         metadata={
@@ -887,7 +888,7 @@ class AlgorithmIdentification26Caad00400103:
 
 
 @dataclass
-class ClearingBatchData3Caad00400103:
+class ClearingBatchData3Caad00400103(ISO20022MessageElement):
     mtd: Optional[ClearingMethod2Code] = field(
         default=None,
         metadata={
@@ -1022,7 +1023,7 @@ class ClearingBatchData3Caad00400103:
 
 
 @dataclass
-class ClearingControlTotals3Caad00400103:
+class ClearingControlTotals3Caad00400103(ISO20022MessageElement):
     cnt: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -1066,7 +1067,7 @@ class ClearingControlTotals3Caad00400103:
 
 
 @dataclass
-class ContentInformationType41Caad00400103:
+class ContentInformationType41Caad00400103(ISO20022MessageElement):
     macdata: Optional[Macdata1Caad00400103] = field(
         default=None,
         metadata={
@@ -1089,7 +1090,7 @@ class ContentInformationType41Caad00400103:
 
 
 @dataclass
-class EncryptedDataElement2Caad00400103:
+class EncryptedDataElement2Caad00400103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1130,7 +1131,7 @@ class EncryptedDataElement2Caad00400103:
 
 
 @dataclass
-class ErrorDetails3Caad00400103:
+class ErrorDetails3Caad00400103(ISO20022MessageElement):
     tp: Optional[MessageError1Code] = field(
         default=None,
         metadata={
@@ -1183,7 +1184,7 @@ class ErrorDetails3Caad00400103:
 
 
 @dataclass
-class GenericIdentification183Caad00400103:
+class GenericIdentification183Caad00400103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1243,7 +1244,7 @@ class GenericIdentification183Caad00400103:
 
 
 @dataclass
-class LocalData14Caad00400103:
+class LocalData14Caad00400103(ISO20022MessageElement):
     lang: Optional[str] = field(
         default=None,
         metadata={
@@ -1295,7 +1296,7 @@ class LocalData14Caad00400103:
 
 
 @dataclass
-class OtherAmount5Caad00400103:
+class OtherAmount5Caad00400103(ISO20022MessageElement):
     clr_cnt: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -1397,7 +1398,7 @@ class OtherAmount5Caad00400103:
 
 
 @dataclass
-class Parameter14Caad00400103:
+class Parameter14Caad00400103(ISO20022MessageElement):
     ncrptn_frmt: Optional[EncryptionFormat3Code] = field(
         default=None,
         metadata={
@@ -1428,7 +1429,7 @@ class Parameter14Caad00400103:
 
 
 @dataclass
-class Parameter7Caad00400103:
+class Parameter7Caad00400103(ISO20022MessageElement):
     initlstn_vctr: Optional[bytes] = field(
         default=None,
         metadata={
@@ -1451,7 +1452,7 @@ class Parameter7Caad00400103:
 
 
 @dataclass
-class ProgrammeMode5Caad00400103:
+class ProgrammeMode5Caad00400103(ISO20022MessageElement):
     apld_id: Optional[str] = field(
         default=None,
         metadata={
@@ -1474,7 +1475,7 @@ class ProgrammeMode5Caad00400103:
 
 
 @dataclass
-class RelativeDistinguishedName1Caad00400103:
+class RelativeDistinguishedName1Caad00400103(ISO20022MessageElement):
     attr_tp: Optional[AttributeType1Code] = field(
         default=None,
         metadata={
@@ -1498,7 +1499,7 @@ class RelativeDistinguishedName1Caad00400103:
 
 
 @dataclass
-class SettlementService6Caad00400103:
+class SettlementService6Caad00400103(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -1600,7 +1601,7 @@ class SettlementService6Caad00400103:
 
 
 @dataclass
-class SupplementaryData1Caad00400103:
+class SupplementaryData1Caad00400103(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1623,7 +1624,7 @@ class SupplementaryData1Caad00400103:
 
 
 @dataclass
-class Traceability10Caad00400103:
+class Traceability10Caad00400103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1699,7 +1700,7 @@ class Traceability10Caad00400103:
 
 
 @dataclass
-class AlgorithmIdentification25Caad00400103:
+class AlgorithmIdentification25Caad00400103(ISO20022MessageElement):
     algo: Optional[Algorithm23Code] = field(
         default=None,
         metadata={
@@ -1720,7 +1721,7 @@ class AlgorithmIdentification25Caad00400103:
 
 
 @dataclass
-class AlgorithmIdentification28Caad00400103:
+class AlgorithmIdentification28Caad00400103(ISO20022MessageElement):
     algo: Optional[Algorithm13Code] = field(
         default=None,
         metadata={
@@ -1741,7 +1742,7 @@ class AlgorithmIdentification28Caad00400103:
 
 
 @dataclass
-class CertificateIssuer1Caad00400103:
+class CertificateIssuer1Caad00400103(ISO20022MessageElement):
     rltv_dstngshd_nm: list[RelativeDistinguishedName1Caad00400103] = field(
         default_factory=list,
         metadata={
@@ -1754,7 +1755,7 @@ class CertificateIssuer1Caad00400103:
 
 
 @dataclass
-class EncryptedData2Caad00400103:
+class EncryptedData2Caad00400103(ISO20022MessageElement):
     ctrl: Optional[str] = field(
         default=None,
         metadata={
@@ -1848,7 +1849,7 @@ class EncryptedData2Caad00400103:
 
 
 @dataclass
-class Header71Caad00400103:
+class Header71Caad00400103(ISO20022MessageElement):
     msg_fctn: Optional[str] = field(
         default=None,
         metadata={
@@ -1943,7 +1944,7 @@ class Header71Caad00400103:
 
 
 @dataclass
-class Parameter13Caad00400103:
+class Parameter13Caad00400103(ISO20022MessageElement):
     dgst_algo: Optional[Algorithm20Code] = field(
         default=None,
         metadata={
@@ -1963,7 +1964,7 @@ class Parameter13Caad00400103:
 
 
 @dataclass
-class PartyIdentification286Caad00400103:
+class PartyIdentification286Caad00400103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -2032,7 +2033,7 @@ class PartyIdentification286Caad00400103:
 
 
 @dataclass
-class ProcessingResult23Caad00400103:
+class ProcessingResult23Caad00400103(ISO20022MessageElement):
     rspn_src_id: Optional[str] = field(
         default=None,
         metadata={
@@ -2117,7 +2118,7 @@ class ProcessingResult23Caad00400103:
 
 
 @dataclass
-class Record3Caad00400103:
+class Record3Caad00400103(ISO20022MessageElement):
     seq_cntr: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -2359,7 +2360,7 @@ class Record3Caad00400103:
 
 
 @dataclass
-class AlgorithmIdentification27Caad00400103:
+class AlgorithmIdentification27Caad00400103(ISO20022MessageElement):
     algo: Optional[Algorithm7Code] = field(
         default=None,
         metadata={
@@ -2380,7 +2381,7 @@ class AlgorithmIdentification27Caad00400103:
 
 
 @dataclass
-class EncryptedContent8Caad00400103:
+class EncryptedContent8Caad00400103(ISO20022MessageElement):
     cntt_tp: Optional[ContentType2Code] = field(
         default=None,
         metadata={
@@ -2411,7 +2412,7 @@ class EncryptedContent8Caad00400103:
 
 
 @dataclass
-class IssuerAndSerialNumber1Caad00400103:
+class IssuerAndSerialNumber1Caad00400103(ISO20022MessageElement):
     issr: Optional[CertificateIssuer1Caad00400103] = field(
         default=None,
         metadata={
@@ -2436,7 +2437,7 @@ class IssuerAndSerialNumber1Caad00400103:
 
 
 @dataclass
-class Kek6Caad00400103:
+class Kek6Caad00400103(ISO20022MessageElement):
     class Meta:
         name = "KEK6"
 
@@ -2482,7 +2483,7 @@ class Kek6Caad00400103:
 
 
 @dataclass
-class Recipient5ChoiceCaad00400103:
+class Recipient5ChoiceCaad00400103(ISO20022MessageElement):
     issr_and_srl_nb: Optional[IssuerAndSerialNumber1Caad00400103] = field(
         default=None,
         metadata={
@@ -2502,7 +2503,7 @@ class Recipient5ChoiceCaad00400103:
 
 
 @dataclass
-class KeyTransport6Caad00400103:
+class KeyTransport6Caad00400103(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -2546,7 +2547,7 @@ class KeyTransport6Caad00400103:
 
 
 @dataclass
-class Recipient7ChoiceCaad00400103:
+class Recipient7ChoiceCaad00400103(ISO20022MessageElement):
     key_trnsprt: Optional[KeyTransport6Caad00400103] = field(
         default=None,
         metadata={
@@ -2574,7 +2575,7 @@ class Recipient7ChoiceCaad00400103:
 
 
 @dataclass
-class EnvelopedData12Caad00400103:
+class EnvelopedData12Caad00400103(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -2605,7 +2606,7 @@ class EnvelopedData12Caad00400103:
 
 
 @dataclass
-class ProtectedData2Caad00400103:
+class ProtectedData2Caad00400103(ISO20022MessageElement):
     cntt_tp: Optional[ContentType3Code] = field(
         default=None,
         metadata={
@@ -2634,7 +2635,7 @@ class ProtectedData2Caad00400103:
 
 
 @dataclass
-class BatchTransferResponseV03Caad00400103:
+class BatchTransferResponseV03Caad00400103(ISO20022MessageElement):
     hdr: Optional[Header71Caad00400103] = field(
         default=None,
         metadata={
@@ -2861,7 +2862,7 @@ class BatchTransferResponseV03Caad00400103:
 
 
 @dataclass
-class Caad00400103:
+class Caad00400103(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:caad.004.001.03"
 

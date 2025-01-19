@@ -3,13 +3,14 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import AddressType2Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.076.001.01"
 
 
 @dataclass
-class CommunicationAddress7Auth07600101:
+class CommunicationAddress7Auth07600101(ISO20022MessageElement):
     email: Optional[str] = field(
         default=None,
         metadata={
@@ -70,7 +71,7 @@ class CommunicationAddress7Auth07600101:
 
 
 @dataclass
-class GenericIdentification36Auth07600101:
+class GenericIdentification36Auth07600101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -106,7 +107,7 @@ class GenericIdentification36Auth07600101:
 
 
 @dataclass
-class Period2Auth07600101:
+class Period2Auth07600101(ISO20022MessageElement):
     fr_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -128,7 +129,7 @@ class Period2Auth07600101:
 
 
 @dataclass
-class SupervisingAuthorityIdentification1ChoiceAuth07600101:
+class SupervisingAuthorityIdentification1ChoiceAuth07600101(ISO20022MessageElement):
     prtry_id: Optional[str] = field(
         default=None,
         metadata={
@@ -152,7 +153,7 @@ class SupervisingAuthorityIdentification1ChoiceAuth07600101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth07600101:
+class SupplementaryDataEnvelope1Auth07600101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -163,7 +164,7 @@ class SupplementaryDataEnvelope1Auth07600101:
 
 
 @dataclass
-class Period4ChoiceAuth07600101:
+class Period4ChoiceAuth07600101(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -199,7 +200,7 @@ class Period4ChoiceAuth07600101:
 
 
 @dataclass
-class PostalAddress1Auth07600101:
+class PostalAddress1Auth07600101(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -282,7 +283,7 @@ class PostalAddress1Auth07600101:
 
 
 @dataclass
-class PostalAddress6Auth07600101:
+class PostalAddress6Auth07600101(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -384,7 +385,7 @@ class PostalAddress6Auth07600101:
 
 
 @dataclass
-class SupervisingAuthorityIdentification1Auth07600101:
+class SupervisingAuthorityIdentification1Auth07600101(ISO20022MessageElement):
     id: Optional[SupervisingAuthorityIdentification1ChoiceAuth07600101] = field(
         default=None,
         metadata={
@@ -405,7 +406,7 @@ class SupervisingAuthorityIdentification1Auth07600101:
 
 
 @dataclass
-class SupplementaryData1Auth07600101:
+class SupplementaryData1Auth07600101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -428,7 +429,7 @@ class SupplementaryData1Auth07600101:
 
 
 @dataclass
-class NameAndAddress5Auth07600101:
+class NameAndAddress5Auth07600101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -451,7 +452,7 @@ class NameAndAddress5Auth07600101:
 
 
 @dataclass
-class PartyDetail1Auth07600101:
+class PartyDetail1Auth07600101(ISO20022MessageElement):
     full_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -522,7 +523,7 @@ class PartyDetail1Auth07600101:
 
 
 @dataclass
-class StatusDetail1Auth07600101:
+class StatusDetail1Auth07600101(ISO20022MessageElement):
     ctry: Optional[str] = field(
         default=None,
         metadata={
@@ -583,7 +584,7 @@ class StatusDetail1Auth07600101:
 
 
 @dataclass
-class PartyIdentification120ChoiceAuth07600101:
+class PartyIdentification120ChoiceAuth07600101(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -612,7 +613,7 @@ class PartyIdentification120ChoiceAuth07600101:
 
 
 @dataclass
-class PartyIdentification136Auth07600101:
+class PartyIdentification136Auth07600101(ISO20022MessageElement):
     id: Optional[PartyIdentification120ChoiceAuth07600101] = field(
         default=None,
         metadata={
@@ -634,7 +635,7 @@ class PartyIdentification136Auth07600101:
 
 
 @dataclass
-class PartyCancellation1Auth07600101:
+class PartyCancellation1Auth07600101(ISO20022MessageElement):
     tech_rcrd_id: Optional[str] = field(
         default=None,
         metadata={
@@ -665,7 +666,7 @@ class PartyCancellation1Auth07600101:
 
 
 @dataclass
-class PartyUpdate1Auth07600101:
+class PartyUpdate1Auth07600101(ISO20022MessageElement):
     tech_rcrd_id: Optional[str] = field(
         default=None,
         metadata={
@@ -730,7 +731,7 @@ class PartyUpdate1Auth07600101:
 
 
 @dataclass
-class PartyReport1ChoiceAuth07600101:
+class PartyReport1ChoiceAuth07600101(ISO20022MessageElement):
     upd: Optional[PartyUpdate1Auth07600101] = field(
         default=None,
         metadata={
@@ -750,7 +751,7 @@ class PartyReport1ChoiceAuth07600101:
 
 
 @dataclass
-class FinancialSupervisedPartyIdentityReportV01Auth07600101:
+class FinancialSupervisedPartyIdentityReportV01Auth07600101(ISO20022MessageElement):
     pty_data: list[PartyReport1ChoiceAuth07600101] = field(
         default_factory=list,
         metadata={
@@ -771,7 +772,7 @@ class FinancialSupervisedPartyIdentityReportV01Auth07600101:
 
 
 @dataclass
-class Auth07600101:
+class Auth07600101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.076.001.01"
 

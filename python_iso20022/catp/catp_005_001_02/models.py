@@ -3,6 +3,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     Atmcommand4Code,
     Atmstatus1Code,
@@ -18,7 +19,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:catp.005.001.02"
 
 
 @dataclass
-class AtmcommandIdentification1Catp00500102:
+class AtmcommandIdentification1Catp00500102(ISO20022MessageElement):
     class Meta:
         name = "ATMCommandIdentification1"
 
@@ -55,7 +56,7 @@ class AtmcommandIdentification1Catp00500102:
 
 
 @dataclass
-class AtmconfigurationParameter1Catp00500102:
+class AtmconfigurationParameter1Catp00500102(ISO20022MessageElement):
     class Meta:
         name = "ATMConfigurationParameter1"
 
@@ -82,7 +83,7 @@ class AtmconfigurationParameter1Catp00500102:
 
 
 @dataclass
-class AtmmessageFunction2Catp00500102:
+class AtmmessageFunction2Catp00500102(ISO20022MessageElement):
     class Meta:
         name = "ATMMessageFunction2"
 
@@ -118,7 +119,7 @@ class AtmmessageFunction2Catp00500102:
 
 
 @dataclass
-class GenericIdentification77Catp00500102:
+class GenericIdentification77Catp00500102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -169,7 +170,7 @@ class GenericIdentification77Catp00500102:
 
 
 @dataclass
-class AtmcommandParameters1ChoiceCatp00500102:
+class AtmcommandParameters1ChoiceCatp00500102(ISO20022MessageElement):
     class Meta:
         name = "ATMCommandParameters1Choice"
 
@@ -200,7 +201,7 @@ class AtmcommandParameters1ChoiceCatp00500102:
 
 
 @dataclass
-class Traceability4Catp00500102:
+class Traceability4Catp00500102(ISO20022MessageElement):
     rlay_id: Optional[GenericIdentification77Catp00500102] = field(
         default=None,
         metadata={
@@ -241,7 +242,7 @@ class Traceability4Catp00500102:
 
 
 @dataclass
-class Atmcommand7Catp00500102:
+class Atmcommand7Catp00500102(ISO20022MessageElement):
     class Meta:
         name = "ATMCommand7"
 
@@ -290,7 +291,7 @@ class Atmcommand7Catp00500102:
 
 
 @dataclass
-class Header33Catp00500102:
+class Header33Catp00500102(ISO20022MessageElement):
     msg_fctn: Optional[AtmmessageFunction2Catp00500102] = field(
         default=None,
         metadata={
@@ -370,7 +371,7 @@ class Header33Catp00500102:
 
 
 @dataclass
-class Atmreject2Catp00500102:
+class Atmreject2Catp00500102(ISO20022MessageElement):
     class Meta:
         name = "ATMReject2"
 
@@ -425,7 +426,7 @@ class Atmreject2Catp00500102:
 
 
 @dataclass
-class AtmrejectV02Catp00500102:
+class AtmrejectV02Catp00500102(ISO20022MessageElement):
     class Meta:
         name = "ATMRejectV02"
 
@@ -450,7 +451,7 @@ class AtmrejectV02Catp00500102:
 
 
 @dataclass
-class Catp00500102:
+class Catp00500102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:catp.005.001.02"
 

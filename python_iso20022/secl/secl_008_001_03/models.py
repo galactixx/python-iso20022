@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     AddressType2Code,
     ClearingAccountType1Code,
@@ -18,7 +19,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:secl.008.001.03"
 
 
 @dataclass
-class ActiveCurrencyAndAmountSecl00800103:
+class ActiveCurrencyAndAmountSecl00800103(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -40,7 +41,7 @@ class ActiveCurrencyAndAmountSecl00800103:
 
 
 @dataclass
-class ActiveOrHistoricCurrencyAnd13DecimalAmountSecl00800103:
+class ActiveOrHistoricCurrencyAnd13DecimalAmountSecl00800103(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -62,7 +63,7 @@ class ActiveOrHistoricCurrencyAnd13DecimalAmountSecl00800103:
 
 
 @dataclass
-class ActiveOrHistoricCurrencyAndAmountSecl00800103:
+class ActiveOrHistoricCurrencyAndAmountSecl00800103(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -84,7 +85,7 @@ class ActiveOrHistoricCurrencyAndAmountSecl00800103:
 
 
 @dataclass
-class FinancialInstrumentQuantity1ChoiceSecl00800103:
+class FinancialInstrumentQuantity1ChoiceSecl00800103(ISO20022MessageElement):
     unit: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -120,7 +121,7 @@ class FinancialInstrumentQuantity1ChoiceSecl00800103:
 
 
 @dataclass
-class GenericIdentification29Secl00800103:
+class GenericIdentification29Secl00800103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -156,42 +157,7 @@ class GenericIdentification29Secl00800103:
 
 
 @dataclass
-class GenericIdentification30Secl00800103:
-    id: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Id",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:secl.008.001.03",
-            "required": True,
-            "pattern": r"[a-zA-Z0-9]{4}",
-        },
-    )
-    issr: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Issr",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:secl.008.001.03",
-            "required": True,
-            "min_length": 1,
-            "max_length": 35,
-        },
-    )
-    schme_nm: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "SchmeNm",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:secl.008.001.03",
-            "min_length": 1,
-            "max_length": 35,
-        },
-    )
-
-
-@dataclass
-class GenericIdentification40Secl00800103:
+class GenericIdentification30Secl00800103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -226,7 +192,42 @@ class GenericIdentification40Secl00800103:
 
 
 @dataclass
-class IdentificationSource3ChoiceSecl00800103:
+class GenericIdentification40Secl00800103(ISO20022MessageElement):
+    id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Id",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:secl.008.001.03",
+            "required": True,
+            "pattern": r"[a-zA-Z0-9]{4}",
+        },
+    )
+    issr: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Issr",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:secl.008.001.03",
+            "required": True,
+            "min_length": 1,
+            "max_length": 35,
+        },
+    )
+    schme_nm: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "SchmeNm",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:secl.008.001.03",
+            "min_length": 1,
+            "max_length": 35,
+        },
+    )
+
+
+@dataclass
+class IdentificationSource3ChoiceSecl00800103(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -250,7 +251,7 @@ class IdentificationSource3ChoiceSecl00800103:
 
 
 @dataclass
-class PartyTextInformation1Secl00800103:
+class PartyTextInformation1Secl00800103(ISO20022MessageElement):
     dclrtn_dtls: Optional[str] = field(
         default=None,
         metadata={
@@ -284,7 +285,7 @@ class PartyTextInformation1Secl00800103:
 
 
 @dataclass
-class PostalAddress2Secl00800103:
+class PostalAddress2Secl00800103(ISO20022MessageElement):
     strt_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -340,7 +341,7 @@ class PostalAddress2Secl00800103:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Secl00800103:
+class SupplementaryDataEnvelope1Secl00800103(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -351,7 +352,7 @@ class SupplementaryDataEnvelope1Secl00800103:
 
 
 @dataclass
-class BuyIn3Secl00800103:
+class BuyIn3Secl00800103(ISO20022MessageElement):
     buy_in_ntfctn_id: Optional[str] = field(
         default=None,
         metadata={
@@ -413,7 +414,7 @@ class BuyIn3Secl00800103:
 
 
 @dataclass
-class ForeignExchangeTerms17Secl00800103:
+class ForeignExchangeTerms17Secl00800103(ISO20022MessageElement):
     unit_ccy: Optional[str] = field(
         default=None,
         metadata={
@@ -457,7 +458,7 @@ class ForeignExchangeTerms17Secl00800103:
 
 
 @dataclass
-class GenericIdentification58Secl00800103:
+class GenericIdentification58Secl00800103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -480,7 +481,7 @@ class GenericIdentification58Secl00800103:
 
 
 @dataclass
-class IdentificationType6ChoiceSecl00800103:
+class IdentificationType6ChoiceSecl00800103(ISO20022MessageElement):
     cd: Optional[TypeOfIdentification1Code] = field(
         default=None,
         metadata={
@@ -500,7 +501,7 @@ class IdentificationType6ChoiceSecl00800103:
 
 
 @dataclass
-class NameAndAddress6Secl00800103:
+class NameAndAddress6Secl00800103(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -524,7 +525,7 @@ class NameAndAddress6Secl00800103:
 
 
 @dataclass
-class OtherIdentification1Secl00800103:
+class OtherIdentification1Secl00800103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -558,7 +559,7 @@ class OtherIdentification1Secl00800103:
 
 
 @dataclass
-class PartyIdentification35ChoiceSecl00800103:
+class PartyIdentification35ChoiceSecl00800103(ISO20022MessageElement):
     bic: Optional[str] = field(
         default=None,
         metadata={
@@ -579,7 +580,7 @@ class PartyIdentification35ChoiceSecl00800103:
 
 
 @dataclass
-class PostalAddress1Secl00800103:
+class PostalAddress1Secl00800103(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -662,7 +663,7 @@ class PostalAddress1Secl00800103:
 
 
 @dataclass
-class PriceRateOrAmountChoiceSecl00800103:
+class PriceRateOrAmountChoiceSecl00800103(ISO20022MessageElement):
     rate: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -684,7 +685,7 @@ class PriceRateOrAmountChoiceSecl00800103:
 
 
 @dataclass
-class SafekeepingPlaceTypeAndAnyBicidentifier1Secl00800103:
+class SafekeepingPlaceTypeAndAnyBicidentifier1Secl00800103(ISO20022MessageElement):
     class Meta:
         name = "SafekeepingPlaceTypeAndAnyBICIdentifier1"
 
@@ -710,7 +711,7 @@ class SafekeepingPlaceTypeAndAnyBicidentifier1Secl00800103:
 
 
 @dataclass
-class SafekeepingPlaceTypeAndText1Secl00800103:
+class SafekeepingPlaceTypeAndText1Secl00800103(ISO20022MessageElement):
     sfkpg_plc_tp: Optional[SafekeepingPlace3Code] = field(
         default=None,
         metadata={
@@ -733,7 +734,7 @@ class SafekeepingPlaceTypeAndText1Secl00800103:
 
 
 @dataclass
-class SecuritiesAccount18Secl00800103:
+class SecuritiesAccount18Secl00800103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -767,7 +768,7 @@ class SecuritiesAccount18Secl00800103:
 
 
 @dataclass
-class SecuritiesAccount19Secl00800103:
+class SecuritiesAccount19Secl00800103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -800,7 +801,7 @@ class SecuritiesAccount19Secl00800103:
 
 
 @dataclass
-class SupplementaryData1Secl00800103:
+class SupplementaryData1Secl00800103(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -823,7 +824,7 @@ class SupplementaryData1Secl00800103:
 
 
 @dataclass
-class AlternatePartyIdentification4Secl00800103:
+class AlternatePartyIdentification4Secl00800103(ISO20022MessageElement):
     id_tp: Optional[IdentificationType6ChoiceSecl00800103] = field(
         default=None,
         metadata={
@@ -857,7 +858,7 @@ class AlternatePartyIdentification4Secl00800103:
 
 
 @dataclass
-class AmountAndDirection27Secl00800103:
+class AmountAndDirection27Secl00800103(ISO20022MessageElement):
     amt: Optional[ActiveCurrencyAndAmountSecl00800103] = field(
         default=None,
         metadata={
@@ -896,7 +897,7 @@ class AmountAndDirection27Secl00800103:
 
 
 @dataclass
-class NameAndAddress5Secl00800103:
+class NameAndAddress5Secl00800103(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -919,7 +920,7 @@ class NameAndAddress5Secl00800103:
 
 
 @dataclass
-class PartyIdentification33ChoiceSecl00800103:
+class PartyIdentification33ChoiceSecl00800103(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -948,7 +949,7 @@ class PartyIdentification33ChoiceSecl00800103:
 
 
 @dataclass
-class Price4Secl00800103:
+class Price4Secl00800103(ISO20022MessageElement):
     val: Optional[PriceRateOrAmountChoiceSecl00800103] = field(
         default=None,
         metadata={
@@ -969,7 +970,7 @@ class Price4Secl00800103:
 
 
 @dataclass
-class SafekeepingPlaceFormat7ChoiceSecl00800103:
+class SafekeepingPlaceFormat7ChoiceSecl00800103(ISO20022MessageElement):
     id: Optional[SafekeepingPlaceTypeAndText1Secl00800103] = field(
         default=None,
         metadata={
@@ -1006,7 +1007,7 @@ class SafekeepingPlaceFormat7ChoiceSecl00800103:
 
 
 @dataclass
-class SecurityIdentification14Secl00800103:
+class SecurityIdentification14Secl00800103(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -1037,7 +1038,7 @@ class SecurityIdentification14Secl00800103:
 
 
 @dataclass
-class PartyIdentification34ChoiceSecl00800103:
+class PartyIdentification34ChoiceSecl00800103(ISO20022MessageElement):
     bic: Optional[str] = field(
         default=None,
         metadata={
@@ -1067,7 +1068,7 @@ class PartyIdentification34ChoiceSecl00800103:
 
 
 @dataclass
-class PartyIdentificationAndAccount31Secl00800103:
+class PartyIdentificationAndAccount31Secl00800103(ISO20022MessageElement):
     id: Optional[PartyIdentification33ChoiceSecl00800103] = field(
         default=None,
         metadata={
@@ -1104,7 +1105,7 @@ class PartyIdentificationAndAccount31Secl00800103:
 
 
 @dataclass
-class SettlementObligation7Secl00800103:
+class SettlementObligation7Secl00800103(ISO20022MessageElement):
     csdtx_id: Optional[str] = field(
         default=None,
         metadata={
@@ -1255,7 +1256,7 @@ class SettlementObligation7Secl00800103:
 
 
 @dataclass
-class BuyInResponseV03Secl00800103:
+class BuyInResponseV03Secl00800103(ISO20022MessageElement):
     tx_id: Optional[str] = field(
         default=None,
         metadata={
@@ -1294,7 +1295,7 @@ class BuyInResponseV03Secl00800103:
 
 
 @dataclass
-class Secl00800103:
+class Secl00800103(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:secl.008.001.03"
 

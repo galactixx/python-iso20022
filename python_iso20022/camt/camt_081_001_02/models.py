@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.camt.enums import (
     MovementResponseType1Code,
     RejectionReason34Code,
@@ -28,7 +29,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:camt.081.001.02"
 
 
 @dataclass
-class AccountSchemeName1ChoiceCamt08100102:
+class AccountSchemeName1ChoiceCamt08100102(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -52,7 +53,7 @@ class AccountSchemeName1ChoiceCamt08100102:
 
 
 @dataclass
-class ActiveCurrencyAndAmountCamt08100102:
+class ActiveCurrencyAndAmountCamt08100102(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -74,7 +75,7 @@ class ActiveCurrencyAndAmountCamt08100102:
 
 
 @dataclass
-class CashAccountType2ChoiceCamt08100102:
+class CashAccountType2ChoiceCamt08100102(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -98,7 +99,7 @@ class CashAccountType2ChoiceCamt08100102:
 
 
 @dataclass
-class ClearingSystemIdentification2ChoiceCamt08100102:
+class ClearingSystemIdentification2ChoiceCamt08100102(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -122,7 +123,7 @@ class ClearingSystemIdentification2ChoiceCamt08100102:
 
 
 @dataclass
-class DateAndDateTime2ChoiceCamt08100102:
+class DateAndDateTime2ChoiceCamt08100102(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -142,7 +143,7 @@ class DateAndDateTime2ChoiceCamt08100102:
 
 
 @dataclass
-class DateTimePeriod1Camt08100102:
+class DateTimePeriod1Camt08100102(ISO20022MessageElement):
     fr_dt_tm: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -164,7 +165,7 @@ class DateTimePeriod1Camt08100102:
 
 
 @dataclass
-class ErrorHandling3ChoiceCamt08100102:
+class ErrorHandling3ChoiceCamt08100102(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -188,7 +189,7 @@ class ErrorHandling3ChoiceCamt08100102:
 
 
 @dataclass
-class FinancialIdentificationSchemeName1ChoiceCamt08100102:
+class FinancialIdentificationSchemeName1ChoiceCamt08100102(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -212,7 +213,7 @@ class FinancialIdentificationSchemeName1ChoiceCamt08100102:
 
 
 @dataclass
-class FinancialInstrumentQuantity1ChoiceCamt08100102:
+class FinancialInstrumentQuantity1ChoiceCamt08100102(ISO20022MessageElement):
     unit: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -248,7 +249,7 @@ class FinancialInstrumentQuantity1ChoiceCamt08100102:
 
 
 @dataclass
-class GenericIdentification30Camt08100102:
+class GenericIdentification30Camt08100102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -283,7 +284,7 @@ class GenericIdentification30Camt08100102:
 
 
 @dataclass
-class GenericIdentification36Camt08100102:
+class GenericIdentification36Camt08100102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -319,7 +320,7 @@ class GenericIdentification36Camt08100102:
 
 
 @dataclass
-class GenericIdentification37Camt08100102:
+class GenericIdentification37Camt08100102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -344,7 +345,7 @@ class GenericIdentification37Camt08100102:
 
 
 @dataclass
-class Number3ChoiceCamt08100102:
+class Number3ChoiceCamt08100102(ISO20022MessageElement):
     shrt: Optional[str] = field(
         default=None,
         metadata={
@@ -366,7 +367,7 @@ class Number3ChoiceCamt08100102:
 
 
 @dataclass
-class Pagination1Camt08100102:
+class Pagination1Camt08100102(ISO20022MessageElement):
     pg_nb: Optional[str] = field(
         default=None,
         metadata={
@@ -389,7 +390,7 @@ class Pagination1Camt08100102:
 
 
 @dataclass
-class Period2Camt08100102:
+class Period2Camt08100102(ISO20022MessageElement):
     fr_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -411,7 +412,7 @@ class Period2Camt08100102:
 
 
 @dataclass
-class ProxyAccountType1ChoiceCamt08100102:
+class ProxyAccountType1ChoiceCamt08100102(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -435,7 +436,7 @@ class ProxyAccountType1ChoiceCamt08100102:
 
 
 @dataclass
-class References14Camt08100102:
+class References14Camt08100102(ISO20022MessageElement):
     acct_ownr_tx_id: Optional[str] = field(
         default=None,
         metadata={
@@ -489,7 +490,7 @@ class References14Camt08100102:
 
 
 @dataclass
-class References34ChoiceCamt08100102:
+class References34ChoiceCamt08100102(ISO20022MessageElement):
     scties_sttlm_tx_id: Optional[str] = field(
         default=None,
         metadata={
@@ -563,7 +564,7 @@ class References34ChoiceCamt08100102:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Camt08100102:
+class SupplementaryDataEnvelope1Camt08100102(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -574,7 +575,7 @@ class SupplementaryDataEnvelope1Camt08100102:
 
 
 @dataclass
-class AcknowledgementReason12ChoiceCamt08100102:
+class AcknowledgementReason12ChoiceCamt08100102(ISO20022MessageElement):
     cd: Optional[AcknowledgementReason5Code] = field(
         default=None,
         metadata={
@@ -594,7 +595,7 @@ class AcknowledgementReason12ChoiceCamt08100102:
 
 
 @dataclass
-class AddressType3ChoiceCamt08100102:
+class AddressType3ChoiceCamt08100102(ISO20022MessageElement):
     cd: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -614,7 +615,7 @@ class AddressType3ChoiceCamt08100102:
 
 
 @dataclass
-class Amount2ChoiceCamt08100102:
+class Amount2ChoiceCamt08100102(ISO20022MessageElement):
     amt_wtht_ccy: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -637,7 +638,7 @@ class Amount2ChoiceCamt08100102:
 
 
 @dataclass
-class AmountAndDirection5Camt08100102:
+class AmountAndDirection5Camt08100102(ISO20022MessageElement):
     amt: Optional[ActiveCurrencyAndAmountCamt08100102] = field(
         default=None,
         metadata={
@@ -658,7 +659,7 @@ class AmountAndDirection5Camt08100102:
 
 
 @dataclass
-class CashBalanceType3ChoiceCamt08100102:
+class CashBalanceType3ChoiceCamt08100102(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -680,7 +681,7 @@ class CashBalanceType3ChoiceCamt08100102:
 
 
 @dataclass
-class ClearingSystemMemberIdentification2Camt08100102:
+class ClearingSystemMemberIdentification2Camt08100102(ISO20022MessageElement):
     clr_sys_id: Optional[ClearingSystemIdentification2ChoiceCamt08100102] = field(
         default=None,
         metadata={
@@ -703,7 +704,7 @@ class ClearingSystemMemberIdentification2Camt08100102:
 
 
 @dataclass
-class DeniedReason16ChoiceCamt08100102:
+class DeniedReason16ChoiceCamt08100102(ISO20022MessageElement):
     cd: Optional[DeniedReason4Code] = field(
         default=None,
         metadata={
@@ -723,7 +724,7 @@ class DeniedReason16ChoiceCamt08100102:
 
 
 @dataclass
-class DocumentNumber5ChoiceCamt08100102:
+class DocumentNumber5ChoiceCamt08100102(ISO20022MessageElement):
     shrt_nb: Optional[str] = field(
         default=None,
         metadata={
@@ -753,7 +754,7 @@ class DocumentNumber5ChoiceCamt08100102:
 
 
 @dataclass
-class ErrorHandling5Camt08100102:
+class ErrorHandling5Camt08100102(ISO20022MessageElement):
     err: Optional[ErrorHandling3ChoiceCamt08100102] = field(
         default=None,
         metadata={
@@ -776,7 +777,7 @@ class ErrorHandling5Camt08100102:
 
 
 @dataclass
-class Frequency22ChoiceCamt08100102:
+class Frequency22ChoiceCamt08100102(ISO20022MessageElement):
     cd: Optional[EventFrequency7Code] = field(
         default=None,
         metadata={
@@ -796,7 +797,7 @@ class Frequency22ChoiceCamt08100102:
 
 
 @dataclass
-class GenericAccountIdentification1Camt08100102:
+class GenericAccountIdentification1Camt08100102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -829,7 +830,7 @@ class GenericAccountIdentification1Camt08100102:
 
 
 @dataclass
-class GenericFinancialIdentification1Camt08100102:
+class GenericFinancialIdentification1Camt08100102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -862,7 +863,7 @@ class GenericFinancialIdentification1Camt08100102:
 
 
 @dataclass
-class LinkageType3ChoiceCamt08100102:
+class LinkageType3ChoiceCamt08100102(ISO20022MessageElement):
     cd: Optional[LinkageType1Code] = field(
         default=None,
         metadata={
@@ -882,7 +883,7 @@ class LinkageType3ChoiceCamt08100102:
 
 
 @dataclass
-class PartyIdentification127ChoiceCamt08100102:
+class PartyIdentification127ChoiceCamt08100102(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -903,7 +904,7 @@ class PartyIdentification127ChoiceCamt08100102:
 
 
 @dataclass
-class PendingReason28ChoiceCamt08100102:
+class PendingReason28ChoiceCamt08100102(ISO20022MessageElement):
     cd: Optional[PendingReason6Code] = field(
         default=None,
         metadata={
@@ -923,7 +924,7 @@ class PendingReason28ChoiceCamt08100102:
 
 
 @dataclass
-class Period7ChoiceCamt08100102:
+class Period7ChoiceCamt08100102(ISO20022MessageElement):
     fr_dt_tm_to_dt_tm: Optional[DateTimePeriod1Camt08100102] = field(
         default=None,
         metadata={
@@ -943,7 +944,7 @@ class Period7ChoiceCamt08100102:
 
 
 @dataclass
-class PostalAddress1Camt08100102:
+class PostalAddress1Camt08100102(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -1026,7 +1027,7 @@ class PostalAddress1Camt08100102:
 
 
 @dataclass
-class PriorityNumeric4ChoiceCamt08100102:
+class PriorityNumeric4ChoiceCamt08100102(ISO20022MessageElement):
     nmrc: Optional[str] = field(
         default=None,
         metadata={
@@ -1047,7 +1048,7 @@ class PriorityNumeric4ChoiceCamt08100102:
 
 
 @dataclass
-class ProcessingPosition7ChoiceCamt08100102:
+class ProcessingPosition7ChoiceCamt08100102(ISO20022MessageElement):
     cd: Optional[ProcessingPosition3Code] = field(
         default=None,
         metadata={
@@ -1067,7 +1068,7 @@ class ProcessingPosition7ChoiceCamt08100102:
 
 
 @dataclass
-class ProprietaryReason4Camt08100102:
+class ProprietaryReason4Camt08100102(ISO20022MessageElement):
     rsn: Optional[GenericIdentification30Camt08100102] = field(
         default=None,
         metadata={
@@ -1089,7 +1090,7 @@ class ProprietaryReason4Camt08100102:
 
 
 @dataclass
-class ProxyAccountIdentification1Camt08100102:
+class ProxyAccountIdentification1Camt08100102(ISO20022MessageElement):
     tp: Optional[ProxyAccountType1ChoiceCamt08100102] = field(
         default=None,
         metadata={
@@ -1112,7 +1113,7 @@ class ProxyAccountIdentification1Camt08100102:
 
 
 @dataclass
-class RejectionAndRepairReason33ChoiceCamt08100102:
+class RejectionAndRepairReason33ChoiceCamt08100102(ISO20022MessageElement):
     cd: Optional[RejectionReason34Code] = field(
         default=None,
         metadata={
@@ -1132,7 +1133,7 @@ class RejectionAndRepairReason33ChoiceCamt08100102:
 
 
 @dataclass
-class RejectionAndRepairReason34ChoiceCamt08100102:
+class RejectionAndRepairReason34ChoiceCamt08100102(ISO20022MessageElement):
     cd: Optional[RejectionReason35Code] = field(
         default=None,
         metadata={
@@ -1152,7 +1153,7 @@ class RejectionAndRepairReason34ChoiceCamt08100102:
 
 
 @dataclass
-class SupplementaryData1Camt08100102:
+class SupplementaryData1Camt08100102(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1175,7 +1176,7 @@ class SupplementaryData1Camt08100102:
 
 
 @dataclass
-class UpdateType15ChoiceCamt08100102:
+class UpdateType15ChoiceCamt08100102(ISO20022MessageElement):
     cd: Optional[StatementUpdateType1Code] = field(
         default=None,
         metadata={
@@ -1195,7 +1196,7 @@ class UpdateType15ChoiceCamt08100102:
 
 
 @dataclass
-class AccountIdentification4ChoiceCamt08100102:
+class AccountIdentification4ChoiceCamt08100102(ISO20022MessageElement):
     iban: Optional[str] = field(
         default=None,
         metadata={
@@ -1216,7 +1217,7 @@ class AccountIdentification4ChoiceCamt08100102:
 
 
 @dataclass
-class AcknowledgementReason9Camt08100102:
+class AcknowledgementReason9Camt08100102(ISO20022MessageElement):
     cd: Optional[AcknowledgementReason12ChoiceCamt08100102] = field(
         default=None,
         metadata={
@@ -1239,7 +1240,7 @@ class AcknowledgementReason9Camt08100102:
 
 
 @dataclass
-class AmountAndQuantityBreakdown1Camt08100102:
+class AmountAndQuantityBreakdown1Camt08100102(ISO20022MessageElement):
     lot_nb: Optional[GenericIdentification37Camt08100102] = field(
         default=None,
         metadata={
@@ -1275,7 +1276,7 @@ class AmountAndQuantityBreakdown1Camt08100102:
 
 
 @dataclass
-class DeniedReason11Camt08100102:
+class DeniedReason11Camt08100102(ISO20022MessageElement):
     cd: Optional[DeniedReason16ChoiceCamt08100102] = field(
         default=None,
         metadata={
@@ -1298,7 +1299,7 @@ class DeniedReason11Camt08100102:
 
 
 @dataclass
-class IntraBalanceReport5Camt08100102:
+class IntraBalanceReport5Camt08100102(ISO20022MessageElement):
     rpt_nb: Optional[Number3ChoiceCamt08100102] = field(
         default=None,
         metadata={
@@ -1380,7 +1381,7 @@ class IntraBalanceReport5Camt08100102:
 
 
 @dataclass
-class Linkages57Camt08100102:
+class Linkages57Camt08100102(ISO20022MessageElement):
     prcg_pos: Optional[ProcessingPosition7ChoiceCamt08100102] = field(
         default=None,
         metadata={
@@ -1417,7 +1418,7 @@ class Linkages57Camt08100102:
 
 
 @dataclass
-class NameAndAddress5Camt08100102:
+class NameAndAddress5Camt08100102(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1440,7 +1441,7 @@ class NameAndAddress5Camt08100102:
 
 
 @dataclass
-class PendingReason16Camt08100102:
+class PendingReason16Camt08100102(ISO20022MessageElement):
     cd: Optional[PendingReason28ChoiceCamt08100102] = field(
         default=None,
         metadata={
@@ -1463,7 +1464,7 @@ class PendingReason16Camt08100102:
 
 
 @dataclass
-class PostalAddress27Camt08100102:
+class PostalAddress27Camt08100102(ISO20022MessageElement):
     adr_tp: Optional[AddressType3ChoiceCamt08100102] = field(
         default=None,
         metadata={
@@ -1645,7 +1646,7 @@ class PostalAddress27Camt08100102:
 
 
 @dataclass
-class ProprietaryStatusAndReason6Camt08100102:
+class ProprietaryStatusAndReason6Camt08100102(ISO20022MessageElement):
     prtry_sts: Optional[GenericIdentification30Camt08100102] = field(
         default=None,
         metadata={
@@ -1666,7 +1667,7 @@ class ProprietaryStatusAndReason6Camt08100102:
 
 
 @dataclass
-class RejectionOrRepairReason33Camt08100102:
+class RejectionOrRepairReason33Camt08100102(ISO20022MessageElement):
     cd: Optional[RejectionAndRepairReason33ChoiceCamt08100102] = field(
         default=None,
         metadata={
@@ -1689,7 +1690,7 @@ class RejectionOrRepairReason33Camt08100102:
 
 
 @dataclass
-class RejectionOrRepairReason34Camt08100102:
+class RejectionOrRepairReason34Camt08100102(ISO20022MessageElement):
     cd: Optional[RejectionAndRepairReason34ChoiceCamt08100102] = field(
         default=None,
         metadata={
@@ -1712,7 +1713,7 @@ class RejectionOrRepairReason34Camt08100102:
 
 
 @dataclass
-class AcknowledgedAcceptedStatus21ChoiceCamt08100102:
+class AcknowledgedAcceptedStatus21ChoiceCamt08100102(ISO20022MessageElement):
     no_spcfd_rsn: Optional[NoReasonCode] = field(
         default=None,
         metadata={
@@ -1732,7 +1733,7 @@ class AcknowledgedAcceptedStatus21ChoiceCamt08100102:
 
 
 @dataclass
-class BranchData5Camt08100102:
+class BranchData5Camt08100102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1773,7 +1774,7 @@ class BranchData5Camt08100102:
 
 
 @dataclass
-class CashAccount40Camt08100102:
+class CashAccount40Camt08100102(ISO20022MessageElement):
     id: Optional[AccountIdentification4ChoiceCamt08100102] = field(
         default=None,
         metadata={
@@ -1820,7 +1821,7 @@ class CashAccount40Camt08100102:
 
 
 @dataclass
-class CashSubBalanceTypeAndQuantityBreakdown3Camt08100102:
+class CashSubBalanceTypeAndQuantityBreakdown3Camt08100102(ISO20022MessageElement):
     tp: Optional[CashBalanceType3ChoiceCamt08100102] = field(
         default=None,
         metadata={
@@ -1841,7 +1842,7 @@ class CashSubBalanceTypeAndQuantityBreakdown3Camt08100102:
 
 
 @dataclass
-class DeniedStatus16ChoiceCamt08100102:
+class DeniedStatus16ChoiceCamt08100102(ISO20022MessageElement):
     no_spcfd_rsn: Optional[NoReasonCode] = field(
         default=None,
         metadata={
@@ -1861,7 +1862,7 @@ class DeniedStatus16ChoiceCamt08100102:
 
 
 @dataclass
-class FinancialInstitutionIdentification23Camt08100102:
+class FinancialInstitutionIdentification23Camt08100102(ISO20022MessageElement):
     bicfi: Optional[str] = field(
         default=None,
         metadata={
@@ -1917,7 +1918,7 @@ class FinancialInstitutionIdentification23Camt08100102:
 
 
 @dataclass
-class PartyIdentification120ChoiceCamt08100102:
+class PartyIdentification120ChoiceCamt08100102(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -1946,7 +1947,7 @@ class PartyIdentification120ChoiceCamt08100102:
 
 
 @dataclass
-class PendingStatus38ChoiceCamt08100102:
+class PendingStatus38ChoiceCamt08100102(ISO20022MessageElement):
     no_spcfd_rsn: Optional[NoReasonCode] = field(
         default=None,
         metadata={
@@ -1966,7 +1967,7 @@ class PendingStatus38ChoiceCamt08100102:
 
 
 @dataclass
-class RejectionOrRepairStatus39ChoiceCamt08100102:
+class RejectionOrRepairStatus39ChoiceCamt08100102(ISO20022MessageElement):
     no_spcfd_rsn: Optional[NoReasonCode] = field(
         default=None,
         metadata={
@@ -1986,7 +1987,7 @@ class RejectionOrRepairStatus39ChoiceCamt08100102:
 
 
 @dataclass
-class RejectionOrRepairStatus40ChoiceCamt08100102:
+class RejectionOrRepairStatus40ChoiceCamt08100102(ISO20022MessageElement):
     no_spcfd_rsn: Optional[NoReasonCode] = field(
         default=None,
         metadata={
@@ -2006,7 +2007,7 @@ class RejectionOrRepairStatus40ChoiceCamt08100102:
 
 
 @dataclass
-class RequestDetails22Camt08100102:
+class RequestDetails22Camt08100102(ISO20022MessageElement):
     ref: Optional[References14Camt08100102] = field(
         default=None,
         metadata={
@@ -2067,7 +2068,7 @@ class RequestDetails22Camt08100102:
 
 
 @dataclass
-class BranchAndFinancialInstitutionIdentification8Camt08100102:
+class BranchAndFinancialInstitutionIdentification8Camt08100102(ISO20022MessageElement):
     fin_instn_id: Optional[FinancialInstitutionIdentification23Camt08100102] = field(
         default=None,
         metadata={
@@ -2088,7 +2089,7 @@ class BranchAndFinancialInstitutionIdentification8Camt08100102:
 
 
 @dataclass
-class IntraBalance5Camt08100102:
+class IntraBalance5Camt08100102(ISO20022MessageElement):
     sttlm_amt: Optional[Amount2ChoiceCamt08100102] = field(
         default=None,
         metadata={
@@ -2154,7 +2155,7 @@ class IntraBalance5Camt08100102:
 
 
 @dataclass
-class PartyIdentification136Camt08100102:
+class PartyIdentification136Camt08100102(ISO20022MessageElement):
     id: Optional[PartyIdentification120ChoiceCamt08100102] = field(
         default=None,
         metadata={
@@ -2176,7 +2177,7 @@ class PartyIdentification136Camt08100102:
 
 
 @dataclass
-class ProcessingStatus71ChoiceCamt08100102:
+class ProcessingStatus71ChoiceCamt08100102(ISO20022MessageElement):
     ackd_accptd: Optional[AcknowledgedAcceptedStatus21ChoiceCamt08100102] = field(
         default=None,
         metadata={
@@ -2236,7 +2237,7 @@ class ProcessingStatus71ChoiceCamt08100102:
 
 
 @dataclass
-class DocumentIdentification51Camt08100102:
+class DocumentIdentification51Camt08100102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -2283,7 +2284,7 @@ class DocumentIdentification51Camt08100102:
 
 
 @dataclass
-class SystemPartyIdentification8Camt08100102:
+class SystemPartyIdentification8Camt08100102(ISO20022MessageElement):
     id: Optional[PartyIdentification136Camt08100102] = field(
         default=None,
         metadata={
@@ -2304,7 +2305,7 @@ class SystemPartyIdentification8Camt08100102:
 
 
 @dataclass
-class IntraBalanceModification8Camt08100102:
+class IntraBalanceModification8Camt08100102(ISO20022MessageElement):
     csh_acct: Optional[CashAccount40Camt08100102] = field(
         default=None,
         metadata={
@@ -2377,7 +2378,7 @@ class IntraBalanceModification8Camt08100102:
 
 
 @dataclass
-class IntraBalanceModification7Camt08100102:
+class IntraBalanceModification7Camt08100102(ISO20022MessageElement):
     csh_acct: Optional[CashAccount40Camt08100102] = field(
         default=None,
         metadata={
@@ -2424,7 +2425,7 @@ class IntraBalanceModification7Camt08100102:
 
 
 @dataclass
-class IntraBalanceOrOperationalError12ChoiceCamt08100102:
+class IntraBalanceOrOperationalError12ChoiceCamt08100102(ISO20022MessageElement):
     mods: list[IntraBalanceModification7Camt08100102] = field(
         default_factory=list,
         metadata={
@@ -2444,7 +2445,7 @@ class IntraBalanceOrOperationalError12ChoiceCamt08100102:
 
 
 @dataclass
-class IntraBalanceMovementModificationReportV02Camt08100102:
+class IntraBalanceMovementModificationReportV02Camt08100102(ISO20022MessageElement):
     id: Optional[DocumentIdentification51Camt08100102] = field(
         default=None,
         metadata={
@@ -2490,7 +2491,7 @@ class IntraBalanceMovementModificationReportV02Camt08100102:
 
 
 @dataclass
-class Camt08100102:
+class Camt08100102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:camt.081.001.02"
 

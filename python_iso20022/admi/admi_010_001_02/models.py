@@ -1,11 +1,13 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
+
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:admi.010.001.02"
 
 
 @dataclass
-class ReportParameter1Admi01000102:
+class ReportParameter1Admi01000102(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -31,7 +33,7 @@ class ReportParameter1Admi01000102:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Admi01000102:
+class SupplementaryDataEnvelope1Admi01000102(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -42,7 +44,7 @@ class SupplementaryDataEnvelope1Admi01000102:
 
 
 @dataclass
-class RequestDetails4Admi01000102:
+class RequestDetails4Admi01000102(ISO20022MessageElement):
     key: Optional[str] = field(
         default=None,
         metadata={
@@ -65,7 +67,7 @@ class RequestDetails4Admi01000102:
 
 
 @dataclass
-class SupplementaryData1Admi01000102:
+class SupplementaryData1Admi01000102(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -88,7 +90,7 @@ class SupplementaryData1Admi01000102:
 
 
 @dataclass
-class RequestDetails5Admi01000102:
+class RequestDetails5Admi01000102(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -123,7 +125,7 @@ class RequestDetails5Admi01000102:
 
 
 @dataclass
-class StaticDataReportV02Admi01000102:
+class StaticDataReportV02Admi01000102(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -164,7 +166,7 @@ class StaticDataReportV02Admi01000102:
 
 
 @dataclass
-class Admi01000102:
+class Admi01000102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:admi.010.001.02"
 

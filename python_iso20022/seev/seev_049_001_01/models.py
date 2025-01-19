@@ -3,6 +3,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import DateType1Code, NoReasonCode
 from python_iso20022.seev.seev_049_001_01.enums import RejectionReason52Code
 
@@ -10,7 +11,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:seev.049.001.01"
 
 
 @dataclass
-class DateAndDateTime2ChoiceSeev04900101:
+class DateAndDateTime2ChoiceSeev04900101(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -30,7 +31,7 @@ class DateAndDateTime2ChoiceSeev04900101:
 
 
 @dataclass
-class GenericIdentification30Seev04900101:
+class GenericIdentification30Seev04900101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -65,7 +66,7 @@ class GenericIdentification30Seev04900101:
 
 
 @dataclass
-class GenericIdentification36Seev04900101:
+class GenericIdentification36Seev04900101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -101,7 +102,7 @@ class GenericIdentification36Seev04900101:
 
 
 @dataclass
-class IdentificationSource3ChoiceSeev04900101:
+class IdentificationSource3ChoiceSeev04900101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -125,7 +126,7 @@ class IdentificationSource3ChoiceSeev04900101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Seev04900101:
+class SupplementaryDataEnvelope1Seev04900101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -136,7 +137,7 @@ class SupplementaryDataEnvelope1Seev04900101:
 
 
 @dataclass
-class AcceptedStatus1Seev04900101:
+class AcceptedStatus1Seev04900101(ISO20022MessageElement):
     no_spcfd_rsn: Optional[NoReasonCode] = field(
         default=None,
         metadata={
@@ -149,7 +150,7 @@ class AcceptedStatus1Seev04900101:
 
 
 @dataclass
-class DateCode20ChoiceSeev04900101:
+class DateCode20ChoiceSeev04900101(ISO20022MessageElement):
     cd: Optional[DateType1Code] = field(
         default=None,
         metadata={
@@ -169,7 +170,7 @@ class DateCode20ChoiceSeev04900101:
 
 
 @dataclass
-class OtherIdentification1Seev04900101:
+class OtherIdentification1Seev04900101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -203,7 +204,7 @@ class OtherIdentification1Seev04900101:
 
 
 @dataclass
-class PartyIdentification195ChoiceSeev04900101:
+class PartyIdentification195ChoiceSeev04900101(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -233,7 +234,7 @@ class PartyIdentification195ChoiceSeev04900101:
 
 
 @dataclass
-class RejectedReason30ChoiceSeev04900101:
+class RejectedReason30ChoiceSeev04900101(ISO20022MessageElement):
     cd: Optional[RejectionReason52Code] = field(
         default=None,
         metadata={
@@ -253,7 +254,7 @@ class RejectedReason30ChoiceSeev04900101:
 
 
 @dataclass
-class SupplementaryData1Seev04900101:
+class SupplementaryData1Seev04900101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -276,7 +277,7 @@ class SupplementaryData1Seev04900101:
 
 
 @dataclass
-class DateFormat46ChoiceSeev04900101:
+class DateFormat46ChoiceSeev04900101(ISO20022MessageElement):
     dt: Optional[DateAndDateTime2ChoiceSeev04900101] = field(
         default=None,
         metadata={
@@ -296,7 +297,7 @@ class DateFormat46ChoiceSeev04900101:
 
 
 @dataclass
-class PartyIdentification215Seev04900101:
+class PartyIdentification215Seev04900101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -320,7 +321,7 @@ class PartyIdentification215Seev04900101:
 
 
 @dataclass
-class RejectedStatusReason29Seev04900101:
+class RejectedStatusReason29Seev04900101(ISO20022MessageElement):
     rsn_cd: Optional[RejectedReason30ChoiceSeev04900101] = field(
         default=None,
         metadata={
@@ -343,7 +344,7 @@ class RejectedStatusReason29Seev04900101:
 
 
 @dataclass
-class SecurityIdentification19Seev04900101:
+class SecurityIdentification19Seev04900101(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -374,7 +375,7 @@ class SecurityIdentification19Seev04900101:
 
 
 @dataclass
-class DisclosureRequestIdentification1Seev04900101:
+class DisclosureRequestIdentification1Seev04900101(ISO20022MessageElement):
     issr_dsclsr_req_id: Optional[str] = field(
         default=None,
         metadata={
@@ -407,7 +408,7 @@ class DisclosureRequestIdentification1Seev04900101:
 
 
 @dataclass
-class RejectedStatus29ChoiceSeev04900101:
+class RejectedStatus29ChoiceSeev04900101(ISO20022MessageElement):
     no_spcfd_rsn: Optional[NoReasonCode] = field(
         default=None,
         metadata={
@@ -427,7 +428,7 @@ class RejectedStatus29ChoiceSeev04900101:
 
 
 @dataclass
-class ResponseProcessingStatus1ChoiceSeev04900101:
+class ResponseProcessingStatus1ChoiceSeev04900101(ISO20022MessageElement):
     accptd: Optional[AcceptedStatus1Seev04900101] = field(
         default=None,
         metadata={
@@ -447,7 +448,9 @@ class ResponseProcessingStatus1ChoiceSeev04900101:
 
 
 @dataclass
-class ShareholderIdentificationDisclosureResponseStatusAdviceV01Seev04900101:
+class ShareholderIdentificationDisclosureResponseStatusAdviceV01Seev04900101(
+    ISO20022MessageElement
+):
     dsclsr_rspn_id: Optional[str] = field(
         default=None,
         metadata={
@@ -497,7 +500,7 @@ class ShareholderIdentificationDisclosureResponseStatusAdviceV01Seev04900101:
 
 
 @dataclass
-class Seev04900101:
+class Seev04900101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:seev.049.001.01"
 

@@ -3,6 +3,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import AddressType2Code
 from python_iso20022.seev.enums import (
     CorporateActionEventType2Code,
@@ -14,7 +15,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:seev.026.001.01"
 
 
 @dataclass
-class AlternateSecurityIdentification3Seev02600101:
+class AlternateSecurityIdentification3Seev02600101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -48,7 +49,7 @@ class AlternateSecurityIdentification3Seev02600101:
 
 
 @dataclass
-class DocumentIdentification8Seev02600101:
+class DocumentIdentification8Seev02600101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -71,7 +72,7 @@ class DocumentIdentification8Seev02600101:
 
 
 @dataclass
-class GenericIdentification1Seev02600101:
+class GenericIdentification1Seev02600101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -106,7 +107,7 @@ class GenericIdentification1Seev02600101:
 
 
 @dataclass
-class GenericIdentification13Seev02600101:
+class GenericIdentification13Seev02600101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -143,7 +144,7 @@ class GenericIdentification13Seev02600101:
 
 
 @dataclass
-class IncludedAccount1Seev02600101:
+class IncludedAccount1Seev02600101(ISO20022MessageElement):
     scties_acct_id: Optional[str] = field(
         default=None,
         metadata={
@@ -167,7 +168,7 @@ class IncludedAccount1Seev02600101:
 
 
 @dataclass
-class SimpleIdentificationInformationSeev02600101:
+class SimpleIdentificationInformationSeev02600101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -182,7 +183,7 @@ class SimpleIdentificationInformationSeev02600101:
 
 
 @dataclass
-class CashAccountIdentification1ChoiceSeev02600101:
+class CashAccountIdentification1ChoiceSeev02600101(ISO20022MessageElement):
     iban: Optional[str] = field(
         default=None,
         metadata={
@@ -221,7 +222,7 @@ class CashAccountIdentification1ChoiceSeev02600101:
 
 
 @dataclass
-class CorporateActionEventType2FormatChoiceSeev02600101:
+class CorporateActionEventType2FormatChoiceSeev02600101(ISO20022MessageElement):
     cd: Optional[CorporateActionEventType2Code] = field(
         default=None,
         metadata={
@@ -241,7 +242,7 @@ class CorporateActionEventType2FormatChoiceSeev02600101:
 
 
 @dataclass
-class PostalAddress1Seev02600101:
+class PostalAddress1Seev02600101(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -324,7 +325,7 @@ class PostalAddress1Seev02600101:
 
 
 @dataclass
-class SecurityIdentification7Seev02600101:
+class SecurityIdentification7Seev02600101(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -355,7 +356,7 @@ class SecurityIdentification7Seev02600101:
 
 
 @dataclass
-class NameAndAddress5Seev02600101:
+class NameAndAddress5Seev02600101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -378,7 +379,7 @@ class NameAndAddress5Seev02600101:
 
 
 @dataclass
-class PartyIdentification2ChoiceSeev02600101:
+class PartyIdentification2ChoiceSeev02600101(ISO20022MessageElement):
     bicor_bei: Optional[str] = field(
         default=None,
         metadata={
@@ -407,7 +408,7 @@ class PartyIdentification2ChoiceSeev02600101:
 
 
 @dataclass
-class CashAccount17Seev02600101:
+class CashAccount17Seev02600101(ISO20022MessageElement):
     acct_id: Optional[CashAccountIdentification1ChoiceSeev02600101] = field(
         default=None,
         metadata={
@@ -448,7 +449,7 @@ class CashAccount17Seev02600101:
 
 
 @dataclass
-class FinancialInstrumentDescription3Seev02600101:
+class FinancialInstrumentDescription3Seev02600101(ISO20022MessageElement):
     scty_id: Optional[SecurityIdentification7Seev02600101] = field(
         default=None,
         metadata={
@@ -478,7 +479,7 @@ class FinancialInstrumentDescription3Seev02600101:
 
 
 @dataclass
-class SecuritiesAccount6Seev02600101:
+class SecuritiesAccount6Seev02600101(ISO20022MessageElement):
     scty_id: Optional[SecurityIdentification7Seev02600101] = field(
         default=None,
         metadata={
@@ -529,7 +530,7 @@ class SecuritiesAccount6Seev02600101:
 
 
 @dataclass
-class CorporateActionStandingInstruction1Seev02600101:
+class CorporateActionStandingInstruction1Seev02600101(ISO20022MessageElement):
     net_or_grss: Optional[StandingInstructionGrossNet1Code] = field(
         default=None,
         metadata={
@@ -567,7 +568,9 @@ class CorporateActionStandingInstruction1Seev02600101:
 
 
 @dataclass
-class CorporateActionStandingInstructionGeneralInformation1Seev02600101:
+class CorporateActionStandingInstructionGeneralInformation1Seev02600101(
+    ISO20022MessageElement
+):
     stg_instr_tp: Optional[StandingInstructionType1Code] = field(
         default=None,
         metadata={
@@ -624,7 +627,9 @@ class CorporateActionStandingInstructionGeneralInformation1Seev02600101:
 
 
 @dataclass
-class AgentCastandingInstructionCancellationRequestV01Seev02600101:
+class AgentCastandingInstructionCancellationRequestV01Seev02600101(
+    ISO20022MessageElement
+):
     class Meta:
         name = "AgentCAStandingInstructionCancellationRequestV01"
 
@@ -668,7 +673,7 @@ class AgentCastandingInstructionCancellationRequestV01Seev02600101:
 
 
 @dataclass
-class Seev02600101:
+class Seev02600101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:seev.026.001.01"
 

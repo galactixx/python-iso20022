@@ -7,12 +7,13 @@ from python_iso20022.auth.enums import (
     CollateralAccountType3Code,
     ProductType7Code,
 )
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.112.001.01"
 
 
 @dataclass
-class ActiveCurrencyAnd24AmountAuth11200101:
+class ActiveCurrencyAnd24AmountAuth11200101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -34,7 +35,7 @@ class ActiveCurrencyAnd24AmountAuth11200101:
 
 
 @dataclass
-class ActiveCurrencyAndAmountAuth11200101:
+class ActiveCurrencyAndAmountAuth11200101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -56,7 +57,7 @@ class ActiveCurrencyAndAmountAuth11200101:
 
 
 @dataclass
-class FinancialInstrument104Auth11200101:
+class FinancialInstrument104Auth11200101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -80,7 +81,7 @@ class FinancialInstrument104Auth11200101:
 
 
 @dataclass
-class GenericIdentification168Auth11200101:
+class GenericIdentification168Auth11200101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -125,7 +126,7 @@ class GenericIdentification168Auth11200101:
 
 
 @dataclass
-class GenericIdentification36Auth11200101:
+class GenericIdentification36Auth11200101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -161,7 +162,7 @@ class GenericIdentification36Auth11200101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth11200101:
+class SupplementaryDataEnvelope1Auth11200101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -172,7 +173,7 @@ class SupplementaryDataEnvelope1Auth11200101:
 
 
 @dataclass
-class AssetClassDetailedSubProductType1ChoiceAuth11200101:
+class AssetClassDetailedSubProductType1ChoiceAuth11200101(ISO20022MessageElement):
     cd: Optional[AssetClassDetailedSubProductType16Code] = field(
         default=None,
         metadata={
@@ -192,7 +193,7 @@ class AssetClassDetailedSubProductType1ChoiceAuth11200101:
 
 
 @dataclass
-class GeneralCollateral4Auth11200101:
+class GeneralCollateral4Auth11200101(ISO20022MessageElement):
     fin_instrm_id: list[FinancialInstrument104Auth11200101] = field(
         default_factory=list,
         metadata={
@@ -213,7 +214,7 @@ class GeneralCollateral4Auth11200101:
 
 
 @dataclass
-class PartyIdentification118ChoiceAuth11200101:
+class PartyIdentification118ChoiceAuth11200101(ISO20022MessageElement):
     lei: Optional[str] = field(
         default=None,
         metadata={
@@ -234,7 +235,7 @@ class PartyIdentification118ChoiceAuth11200101:
 
 
 @dataclass
-class SecurityIdentificationAndAmount1Auth11200101:
+class SecurityIdentificationAndAmount1Auth11200101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -266,7 +267,7 @@ class SecurityIdentificationAndAmount1Auth11200101:
 
 
 @dataclass
-class SpecificCollateral3Auth11200101:
+class SpecificCollateral3Auth11200101(ISO20022MessageElement):
     fin_instrm_id: Optional[FinancialInstrument104Auth11200101] = field(
         default=None,
         metadata={
@@ -288,7 +289,7 @@ class SpecificCollateral3Auth11200101:
 
 
 @dataclass
-class SupplementaryData1Auth11200101:
+class SupplementaryData1Auth11200101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -311,7 +312,7 @@ class SupplementaryData1Auth11200101:
 
 
 @dataclass
-class CollateralType22ChoiceAuth11200101:
+class CollateralType22ChoiceAuth11200101(ISO20022MessageElement):
     gnl_coll: Optional[GeneralCollateral4Auth11200101] = field(
         default=None,
         metadata={
@@ -331,7 +332,7 @@ class CollateralType22ChoiceAuth11200101:
 
 
 @dataclass
-class Commodity2Auth11200101:
+class Commodity2Auth11200101(ISO20022MessageElement):
     mkt_val: Optional[ActiveCurrencyAnd24AmountAuth11200101] = field(
         default=None,
         metadata={
@@ -353,7 +354,7 @@ class Commodity2Auth11200101:
 
 
 @dataclass
-class Guarantee1Auth11200101:
+class Guarantee1Auth11200101(ISO20022MessageElement):
     prvdr: Optional[PartyIdentification118ChoiceAuth11200101] = field(
         default=None,
         metadata={
@@ -375,7 +376,7 @@ class Guarantee1Auth11200101:
 
 
 @dataclass
-class TripartyCollateralAndAmount1Auth11200101:
+class TripartyCollateralAndAmount1Auth11200101(ISO20022MessageElement):
     trpty: Optional[ActiveCurrencyAndAmountAuth11200101] = field(
         default=None,
         metadata={
@@ -397,7 +398,7 @@ class TripartyCollateralAndAmount1Auth11200101:
 
 
 @dataclass
-class AssetHolding3ChoiceAuth11200101:
+class AssetHolding3ChoiceAuth11200101(ISO20022MessageElement):
     gold: Optional[ActiveCurrencyAndAmountAuth11200101] = field(
         default=None,
         metadata={
@@ -449,7 +450,7 @@ class AssetHolding3ChoiceAuth11200101:
 
 
 @dataclass
-class AssetHolding3Auth11200101:
+class AssetHolding3Auth11200101(ISO20022MessageElement):
     pst_hrcut_val: Optional[ActiveCurrencyAnd24AmountAuth11200101] = field(
         default=None,
         metadata={
@@ -480,7 +481,7 @@ class AssetHolding3Auth11200101:
 
 
 @dataclass
-class InteroperabilityCcp1Auth11200101:
+class InteroperabilityCcp1Auth11200101(ISO20022MessageElement):
     class Meta:
         name = "InteroperabilityCCP1"
 
@@ -534,7 +535,7 @@ class InteroperabilityCcp1Auth11200101:
 
 
 @dataclass
-class CcpinteroperabilityReportV01Auth11200101:
+class CcpinteroperabilityReportV01Auth11200101(ISO20022MessageElement):
     class Meta:
         name = "CCPInteroperabilityReportV01"
 
@@ -558,7 +559,7 @@ class CcpinteroperabilityReportV01Auth11200101:
 
 
 @dataclass
-class Auth11200101:
+class Auth11200101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.112.001.01"
 

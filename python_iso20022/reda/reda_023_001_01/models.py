@@ -3,13 +3,14 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import DataModification1Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:reda.023.001.01"
 
 
 @dataclass
-class GenericIdentification30Reda02300101:
+class GenericIdentification30Reda02300101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -44,7 +45,7 @@ class GenericIdentification30Reda02300101:
 
 
 @dataclass
-class MarketSpecificAttribute1Reda02300101:
+class MarketSpecificAttribute1Reda02300101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -70,7 +71,7 @@ class MarketSpecificAttribute1Reda02300101:
 
 
 @dataclass
-class MessageHeader1Reda02300101:
+class MessageHeader1Reda02300101(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -93,7 +94,7 @@ class MessageHeader1Reda02300101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Reda02300101:
+class SupplementaryDataEnvelope1Reda02300101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -104,7 +105,7 @@ class SupplementaryDataEnvelope1Reda02300101:
 
 
 @dataclass
-class SystemRestriction1Reda02300101:
+class SystemRestriction1Reda02300101(ISO20022MessageElement):
     vld_fr: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -136,7 +137,7 @@ class SystemRestriction1Reda02300101:
 
 
 @dataclass
-class SystemSecuritiesAccount5Reda02300101:
+class SystemSecuritiesAccount5Reda02300101(ISO20022MessageElement):
     clsg_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -182,7 +183,7 @@ class SystemSecuritiesAccount5Reda02300101:
 
 
 @dataclass
-class SecuritiesAccount19Reda02300101:
+class SecuritiesAccount19Reda02300101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -215,7 +216,7 @@ class SecuritiesAccount19Reda02300101:
 
 
 @dataclass
-class SecuritiesAccountModification2ChoiceReda02300101:
+class SecuritiesAccountModification2ChoiceReda02300101(ISO20022MessageElement):
     sys_scties_acct: Optional[SystemSecuritiesAccount5Reda02300101] = field(
         default=None,
         metadata={
@@ -243,7 +244,7 @@ class SecuritiesAccountModification2ChoiceReda02300101:
 
 
 @dataclass
-class SupplementaryData1Reda02300101:
+class SupplementaryData1Reda02300101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -266,7 +267,7 @@ class SupplementaryData1Reda02300101:
 
 
 @dataclass
-class SecuritiesAccountModification2Reda02300101:
+class SecuritiesAccountModification2Reda02300101(ISO20022MessageElement):
     scp_indctn: Optional[DataModification1Code] = field(
         default=None,
         metadata={
@@ -288,7 +289,7 @@ class SecuritiesAccountModification2Reda02300101:
 
 
 @dataclass
-class SecuritiesAccountModificationRequestV01Reda02300101:
+class SecuritiesAccountModificationRequestV01Reda02300101(ISO20022MessageElement):
     msg_hdr: Optional[MessageHeader1Reda02300101] = field(
         default=None,
         metadata={
@@ -326,7 +327,7 @@ class SecuritiesAccountModificationRequestV01Reda02300101:
 
 
 @dataclass
-class Reda02300101:
+class Reda02300101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:reda.023.001.01"
 

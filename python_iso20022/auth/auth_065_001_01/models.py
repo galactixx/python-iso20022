@@ -3,12 +3,13 @@ from decimal import Decimal
 from typing import Optional
 
 from python_iso20022.auth.auth_065_001_01.enums import ModelType1Code
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.065.001.01"
 
 
 @dataclass
-class GenericIdentification36Auth06500101:
+class GenericIdentification36Auth06500101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -44,7 +45,7 @@ class GenericIdentification36Auth06500101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth06500101:
+class SupplementaryDataEnvelope1Auth06500101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -55,7 +56,7 @@ class SupplementaryDataEnvelope1Auth06500101:
 
 
 @dataclass
-class ModelType1ChoiceAuth06500101:
+class ModelType1ChoiceAuth06500101(ISO20022MessageElement):
     cd: Optional[ModelType1Code] = field(
         default=None,
         metadata={
@@ -75,7 +76,7 @@ class ModelType1ChoiceAuth06500101:
 
 
 @dataclass
-class SupplementaryData1Auth06500101:
+class SupplementaryData1Auth06500101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -98,7 +99,7 @@ class SupplementaryData1Auth06500101:
 
 
 @dataclass
-class BackTestingMethodology1Auth06500101:
+class BackTestingMethodology1Auth06500101(ISO20022MessageElement):
     rsk_mdl_tp: Optional[ModelType1ChoiceAuth06500101] = field(
         default=None,
         metadata={
@@ -141,7 +142,7 @@ class BackTestingMethodology1Auth06500101:
 
 
 @dataclass
-class CcpbackTestingDefinitionReportV01Auth06500101:
+class CcpbackTestingDefinitionReportV01Auth06500101(ISO20022MessageElement):
     class Meta:
         name = "CCPBackTestingDefinitionReportV01"
 
@@ -165,7 +166,7 @@ class CcpbackTestingDefinitionReportV01Auth06500101:
 
 
 @dataclass
-class Auth06500101:
+class Auth06500101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.065.001.01"
 

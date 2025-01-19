@@ -3,13 +3,14 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.camt.enums import PaymentRole1Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:camt.104.001.01"
 
 
 @dataclass
-class ClearingSystemIdentification2ChoiceCamt10400101:
+class ClearingSystemIdentification2ChoiceCamt10400101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -33,7 +34,7 @@ class ClearingSystemIdentification2ChoiceCamt10400101:
 
 
 @dataclass
-class FinancialIdentificationSchemeName1ChoiceCamt10400101:
+class FinancialIdentificationSchemeName1ChoiceCamt10400101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -57,7 +58,7 @@ class FinancialIdentificationSchemeName1ChoiceCamt10400101:
 
 
 @dataclass
-class MessageHeader1Camt10400101:
+class MessageHeader1Camt10400101(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -80,7 +81,7 @@ class MessageHeader1Camt10400101:
 
 
 @dataclass
-class StructuredLongPostalAddress1Camt10400101:
+class StructuredLongPostalAddress1Camt10400101(ISO20022MessageElement):
     bldg_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -206,7 +207,7 @@ class StructuredLongPostalAddress1Camt10400101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Camt10400101:
+class SupplementaryDataEnvelope1Camt10400101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -217,7 +218,7 @@ class SupplementaryDataEnvelope1Camt10400101:
 
 
 @dataclass
-class ClearingSystemMemberIdentification2Camt10400101:
+class ClearingSystemMemberIdentification2Camt10400101(ISO20022MessageElement):
     clr_sys_id: Optional[ClearingSystemIdentification2ChoiceCamt10400101] = field(
         default=None,
         metadata={
@@ -240,7 +241,7 @@ class ClearingSystemMemberIdentification2Camt10400101:
 
 
 @dataclass
-class GenericFinancialIdentification1Camt10400101:
+class GenericFinancialIdentification1Camt10400101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -273,7 +274,7 @@ class GenericFinancialIdentification1Camt10400101:
 
 
 @dataclass
-class LongPostalAddress1ChoiceCamt10400101:
+class LongPostalAddress1ChoiceCamt10400101(ISO20022MessageElement):
     ustrd: Optional[str] = field(
         default=None,
         metadata={
@@ -295,7 +296,7 @@ class LongPostalAddress1ChoiceCamt10400101:
 
 
 @dataclass
-class SupplementaryData1Camt10400101:
+class SupplementaryData1Camt10400101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -318,7 +319,7 @@ class SupplementaryData1Camt10400101:
 
 
 @dataclass
-class CommunicationAddress8Camt10400101:
+class CommunicationAddress8Camt10400101(ISO20022MessageElement):
     pstl_adr: Optional[LongPostalAddress1ChoiceCamt10400101] = field(
         default=None,
         metadata={
@@ -360,7 +361,7 @@ class CommunicationAddress8Camt10400101:
 
 
 @dataclass
-class MemberIdentification3ChoiceCamt10400101:
+class MemberIdentification3ChoiceCamt10400101(ISO20022MessageElement):
     bicfi: Optional[str] = field(
         default=None,
         metadata={
@@ -389,7 +390,7 @@ class MemberIdentification3ChoiceCamt10400101:
 
 
 @dataclass
-class ContactIdentificationAndAddress1Camt10400101:
+class ContactIdentificationAndAddress1Camt10400101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -421,7 +422,7 @@ class ContactIdentificationAndAddress1Camt10400101:
 
 
 @dataclass
-class Member6Camt10400101:
+class Member6Camt10400101(ISO20022MessageElement):
     mmb_rtr_adr: list[MemberIdentification3ChoiceCamt10400101] = field(
         default_factory=list,
         metadata={
@@ -449,7 +450,7 @@ class Member6Camt10400101:
 
 
 @dataclass
-class CreateMemberV01Camt10400101:
+class CreateMemberV01Camt10400101(ISO20022MessageElement):
     msg_hdr: Optional[MessageHeader1Camt10400101] = field(
         default=None,
         metadata={
@@ -488,7 +489,7 @@ class CreateMemberV01Camt10400101:
 
 
 @dataclass
-class Camt10400101:
+class Camt10400101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:camt.104.001.01"
 

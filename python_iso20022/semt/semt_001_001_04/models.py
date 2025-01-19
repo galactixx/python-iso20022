@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import AddressType2Code
 from python_iso20022.semt.semt_001_001_04.enums import MessageRejectedReason2Code
 
@@ -8,7 +9,7 @@ __NAMESPACE__ = "urn:swift:xsd:semt.001.001.04"
 
 
 @dataclass
-class GenericIdentification36Semt00100104:
+class GenericIdentification36Semt00100104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -44,7 +45,7 @@ class GenericIdentification36Semt00100104:
 
 
 @dataclass
-class DocumentNumber5ChoiceSemt00100104:
+class DocumentNumber5ChoiceSemt00100104(ISO20022MessageElement):
     shrt_nb: Optional[str] = field(
         default=None,
         metadata={
@@ -74,7 +75,7 @@ class DocumentNumber5ChoiceSemt00100104:
 
 
 @dataclass
-class PostalAddress1Semt00100104:
+class PostalAddress1Semt00100104(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -157,7 +158,7 @@ class PostalAddress1Semt00100104:
 
 
 @dataclass
-class NameAndAddress5Semt00100104:
+class NameAndAddress5Semt00100104(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -180,7 +181,7 @@ class NameAndAddress5Semt00100104:
 
 
 @dataclass
-class PartyIdentification247ChoiceSemt00100104:
+class PartyIdentification247ChoiceSemt00100104(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -209,7 +210,7 @@ class PartyIdentification247ChoiceSemt00100104:
 
 
 @dataclass
-class AdditionalReference14Semt00100104:
+class AdditionalReference14Semt00100104(ISO20022MessageElement):
     ref: Optional[str] = field(
         default=None,
         metadata={
@@ -251,7 +252,7 @@ class AdditionalReference14Semt00100104:
 
 
 @dataclass
-class LinkedMessage6ChoiceSemt00100104:
+class LinkedMessage6ChoiceSemt00100104(ISO20022MessageElement):
     prvs_ref: Optional[AdditionalReference14Semt00100104] = field(
         default=None,
         metadata={
@@ -279,7 +280,7 @@ class LinkedMessage6ChoiceSemt00100104:
 
 
 @dataclass
-class RejectionReason69Semt00100104:
+class RejectionReason69Semt00100104(ISO20022MessageElement):
     rsn: Optional[MessageRejectedReason2Code] = field(
         default=None,
         metadata={
@@ -310,7 +311,7 @@ class RejectionReason69Semt00100104:
 
 
 @dataclass
-class SecuritiesMessageRejectionV04Semt00100104:
+class SecuritiesMessageRejectionV04Semt00100104(ISO20022MessageElement):
     rltd_ref: Optional[AdditionalReference14Semt00100104] = field(
         default=None,
         metadata={
@@ -332,7 +333,7 @@ class SecuritiesMessageRejectionV04Semt00100104:
 
 
 @dataclass
-class Semt00100104:
+class Semt00100104(ISO20022Message):
     class Meta:
         namespace = "urn:swift:xsd:semt.001.001.04"
 

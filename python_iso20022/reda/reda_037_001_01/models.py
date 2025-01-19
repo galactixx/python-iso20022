@@ -3,11 +3,13 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
+
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:reda.037.001.01"
 
 
 @dataclass
-class AuditTrail1Reda03700101:
+class AuditTrail1Reda03700101(ISO20022MessageElement):
     fld_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -74,7 +76,7 @@ class AuditTrail1Reda03700101:
 
 
 @dataclass
-class DatePeriod2Reda03700101:
+class DatePeriod2Reda03700101(ISO20022MessageElement):
     fr_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -96,7 +98,7 @@ class DatePeriod2Reda03700101:
 
 
 @dataclass
-class ErrorHandling3ChoiceReda03700101:
+class ErrorHandling3ChoiceReda03700101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -120,7 +122,7 @@ class ErrorHandling3ChoiceReda03700101:
 
 
 @dataclass
-class GenericIdentification30Reda03700101:
+class GenericIdentification30Reda03700101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -155,7 +157,7 @@ class GenericIdentification30Reda03700101:
 
 
 @dataclass
-class OriginalBusinessInstruction1Reda03700101:
+class OriginalBusinessInstruction1Reda03700101(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -188,7 +190,7 @@ class OriginalBusinessInstruction1Reda03700101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Reda03700101:
+class SupplementaryDataEnvelope1Reda03700101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -199,7 +201,7 @@ class SupplementaryDataEnvelope1Reda03700101:
 
 
 @dataclass
-class DatePeriodSearch1ChoiceReda03700101:
+class DatePeriodSearch1ChoiceReda03700101(ISO20022MessageElement):
     fr_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -243,7 +245,7 @@ class DatePeriodSearch1ChoiceReda03700101:
 
 
 @dataclass
-class ErrorHandling5Reda03700101:
+class ErrorHandling5Reda03700101(ISO20022MessageElement):
     err: Optional[ErrorHandling3ChoiceReda03700101] = field(
         default=None,
         metadata={
@@ -266,7 +268,7 @@ class ErrorHandling5Reda03700101:
 
 
 @dataclass
-class MessageHeader12Reda03700101:
+class MessageHeader12Reda03700101(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -297,7 +299,7 @@ class MessageHeader12Reda03700101:
 
 
 @dataclass
-class SecuritiesAccount19Reda03700101:
+class SecuritiesAccount19Reda03700101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -330,7 +332,7 @@ class SecuritiesAccount19Reda03700101:
 
 
 @dataclass
-class SupplementaryData1Reda03700101:
+class SupplementaryData1Reda03700101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -353,7 +355,7 @@ class SupplementaryData1Reda03700101:
 
 
 @dataclass
-class AuditTrailOrBusinessError6ChoiceReda03700101:
+class AuditTrailOrBusinessError6ChoiceReda03700101(ISO20022MessageElement):
     audt_trl: list[AuditTrail1Reda03700101] = field(
         default_factory=list,
         metadata={
@@ -373,7 +375,7 @@ class AuditTrailOrBusinessError6ChoiceReda03700101:
 
 
 @dataclass
-class SecuritiesAccountAuditTrailReport3Reda03700101:
+class SecuritiesAccountAuditTrailReport3Reda03700101(ISO20022MessageElement):
     scties_acct_audt_trl_or_err: Optional[
         AuditTrailOrBusinessError6ChoiceReda03700101
     ] = field(
@@ -405,7 +407,9 @@ class SecuritiesAccountAuditTrailReport3Reda03700101:
 
 
 @dataclass
-class SecuritiesAccountAuditTrailOrOperationalError3ChoiceReda03700101:
+class SecuritiesAccountAuditTrailOrOperationalError3ChoiceReda03700101(
+    ISO20022MessageElement
+):
     scties_acct_audt_trl_rpt: list[SecuritiesAccountAuditTrailReport3Reda03700101] = (
         field(
             default_factory=list,
@@ -427,7 +431,7 @@ class SecuritiesAccountAuditTrailOrOperationalError3ChoiceReda03700101:
 
 
 @dataclass
-class SecuritiesAccountAuditTrailReportV01Reda03700101:
+class SecuritiesAccountAuditTrailReportV01Reda03700101(ISO20022MessageElement):
     msg_hdr: Optional[MessageHeader12Reda03700101] = field(
         default=None,
         metadata={
@@ -458,7 +462,7 @@ class SecuritiesAccountAuditTrailReportV01Reda03700101:
 
 
 @dataclass
-class Reda03700101:
+class Reda03700101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:reda.037.001.01"
 

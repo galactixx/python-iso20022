@@ -3,6 +3,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     AddressType2Code,
     Algorithm5Code,
@@ -19,7 +20,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:tsmt.055.001.01"
 
 
 @dataclass
-class BinaryFile1Tsmt05500101:
+class BinaryFile1Tsmt05500101(ISO20022MessageElement):
     mimetp: Optional[str] = field(
         default=None,
         metadata={
@@ -64,7 +65,7 @@ class BinaryFile1Tsmt05500101:
 
 
 @dataclass
-class ClearingSystemIdentification2ChoiceTsmt05500101:
+class ClearingSystemIdentification2ChoiceTsmt05500101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -88,7 +89,7 @@ class ClearingSystemIdentification2ChoiceTsmt05500101:
 
 
 @dataclass
-class DateAndPlaceOfBirthTsmt05500101:
+class DateAndPlaceOfBirthTsmt05500101(ISO20022MessageElement):
     birth_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -132,7 +133,7 @@ class DateAndPlaceOfBirthTsmt05500101:
 
 
 @dataclass
-class EventDescription1Tsmt05500101:
+class EventDescription1Tsmt05500101(ISO20022MessageElement):
     idr: Optional[str] = field(
         default=None,
         metadata={
@@ -249,7 +250,7 @@ class EventDescription1Tsmt05500101:
 
 
 @dataclass
-class FinancialIdentificationSchemeName1ChoiceTsmt05500101:
+class FinancialIdentificationSchemeName1ChoiceTsmt05500101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -273,7 +274,7 @@ class FinancialIdentificationSchemeName1ChoiceTsmt05500101:
 
 
 @dataclass
-class GenericIdentification1Tsmt05500101:
+class GenericIdentification1Tsmt05500101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -308,7 +309,7 @@ class GenericIdentification1Tsmt05500101:
 
 
 @dataclass
-class LegalOrganisation1Tsmt05500101:
+class LegalOrganisation1Tsmt05500101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -332,7 +333,7 @@ class LegalOrganisation1Tsmt05500101:
 
 
 @dataclass
-class OrganisationIdentificationSchemeName1ChoiceTsmt05500101:
+class OrganisationIdentificationSchemeName1ChoiceTsmt05500101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -356,7 +357,7 @@ class OrganisationIdentificationSchemeName1ChoiceTsmt05500101:
 
 
 @dataclass
-class PersonIdentificationSchemeName1ChoiceTsmt05500101:
+class PersonIdentificationSchemeName1ChoiceTsmt05500101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -380,7 +381,7 @@ class PersonIdentificationSchemeName1ChoiceTsmt05500101:
 
 
 @dataclass
-class SignatureEnvelopeTsmt05500101:
+class SignatureEnvelopeTsmt05500101(ISO20022MessageElement):
     w3_org_2000_09_xmldsig_element: Optional[object] = field(
         default=None,
         metadata={
@@ -391,7 +392,7 @@ class SignatureEnvelopeTsmt05500101:
 
 
 @dataclass
-class StrictPayloadTsmt05500101:
+class StrictPayloadTsmt05500101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -402,7 +403,7 @@ class StrictPayloadTsmt05500101:
 
 
 @dataclass
-class AlgorithmAndDigest1Tsmt05500101:
+class AlgorithmAndDigest1Tsmt05500101(ISO20022MessageElement):
     dgst_algo: Optional[Algorithm5Code] = field(
         default=None,
         metadata={
@@ -426,7 +427,7 @@ class AlgorithmAndDigest1Tsmt05500101:
 
 
 @dataclass
-class ClearingSystemMemberIdentification2Tsmt05500101:
+class ClearingSystemMemberIdentification2Tsmt05500101(ISO20022MessageElement):
     clr_sys_id: Optional[ClearingSystemIdentification2ChoiceTsmt05500101] = field(
         default=None,
         metadata={
@@ -449,7 +450,7 @@ class ClearingSystemMemberIdentification2Tsmt05500101:
 
 
 @dataclass
-class ContactDetails2Tsmt05500101:
+class ContactDetails2Tsmt05500101(ISO20022MessageElement):
     nm_prfx: Optional[NamePrefix1Code] = field(
         default=None,
         metadata={
@@ -518,7 +519,7 @@ class ContactDetails2Tsmt05500101:
 
 
 @dataclass
-class Contacts3Tsmt05500101:
+class Contacts3Tsmt05500101(ISO20022MessageElement):
     nm_prfx: Optional[NamePrefix1Code] = field(
         default=None,
         metadata={
@@ -617,7 +618,7 @@ class Contacts3Tsmt05500101:
 
 
 @dataclass
-class CountrySubdivision1ChoiceTsmt05500101:
+class CountrySubdivision1ChoiceTsmt05500101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -639,7 +640,7 @@ class CountrySubdivision1ChoiceTsmt05500101:
 
 
 @dataclass
-class GenericFinancialIdentification1Tsmt05500101:
+class GenericFinancialIdentification1Tsmt05500101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -672,7 +673,7 @@ class GenericFinancialIdentification1Tsmt05500101:
 
 
 @dataclass
-class GenericOrganisationIdentification1Tsmt05500101:
+class GenericOrganisationIdentification1Tsmt05500101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -705,7 +706,7 @@ class GenericOrganisationIdentification1Tsmt05500101:
 
 
 @dataclass
-class GenericPersonIdentification1Tsmt05500101:
+class GenericPersonIdentification1Tsmt05500101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -738,7 +739,7 @@ class GenericPersonIdentification1Tsmt05500101:
 
 
 @dataclass
-class GovernanceIdentification1ChoiceTsmt05500101:
+class GovernanceIdentification1ChoiceTsmt05500101(ISO20022MessageElement):
     cd: Optional[GovernanceIdentification1Code] = field(
         default=None,
         metadata={
@@ -758,7 +759,7 @@ class GovernanceIdentification1ChoiceTsmt05500101:
 
 
 @dataclass
-class PostalAddress1Tsmt05500101:
+class PostalAddress1Tsmt05500101(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -841,7 +842,7 @@ class PostalAddress1Tsmt05500101:
 
 
 @dataclass
-class PostalAddress6Tsmt05500101:
+class PostalAddress6Tsmt05500101(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -943,7 +944,7 @@ class PostalAddress6Tsmt05500101:
 
 
 @dataclass
-class QualifiedPartyAndXmlsignature1Tsmt05500101:
+class QualifiedPartyAndXmlsignature1Tsmt05500101(ISO20022MessageElement):
     class Meta:
         name = "QualifiedPartyAndXMLSignature1"
 
@@ -967,7 +968,7 @@ class QualifiedPartyAndXmlsignature1Tsmt05500101:
 
 
 @dataclass
-class StatusReason4ChoiceTsmt05500101:
+class StatusReason4ChoiceTsmt05500101(ISO20022MessageElement):
     cd: Optional[FinancingStatusReason1Code] = field(
         default=None,
         metadata={
@@ -989,7 +990,7 @@ class StatusReason4ChoiceTsmt05500101:
 
 
 @dataclass
-class TaxExemptionReasonFormatChoiceTsmt05500101:
+class TaxExemptionReasonFormatChoiceTsmt05500101(ISO20022MessageElement):
     ustrd: Optional[str] = field(
         default=None,
         metadata={
@@ -1011,7 +1012,7 @@ class TaxExemptionReasonFormatChoiceTsmt05500101:
 
 
 @dataclass
-class BranchData2Tsmt05500101:
+class BranchData2Tsmt05500101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1043,7 +1044,7 @@ class BranchData2Tsmt05500101:
 
 
 @dataclass
-class FinancialInstitutionIdentification8Tsmt05500101:
+class FinancialInstitutionIdentification8Tsmt05500101(ISO20022MessageElement):
     bicfi: Optional[str] = field(
         default=None,
         metadata={
@@ -1090,7 +1091,7 @@ class FinancialInstitutionIdentification8Tsmt05500101:
 
 
 @dataclass
-class Location1Tsmt05500101:
+class Location1Tsmt05500101(ISO20022MessageElement):
     ctry: Optional[str] = field(
         default=None,
         metadata={
@@ -1122,7 +1123,7 @@ class Location1Tsmt05500101:
 
 
 @dataclass
-class NameAndAddress5Tsmt05500101:
+class NameAndAddress5Tsmt05500101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1145,7 +1146,7 @@ class NameAndAddress5Tsmt05500101:
 
 
 @dataclass
-class OrganisationIdentification6Tsmt05500101:
+class OrganisationIdentification6Tsmt05500101(ISO20022MessageElement):
     bic: Optional[str] = field(
         default=None,
         metadata={
@@ -1166,7 +1167,7 @@ class OrganisationIdentification6Tsmt05500101:
 
 
 @dataclass
-class OrganisationIdentification7Tsmt05500101:
+class OrganisationIdentification7Tsmt05500101(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -1187,7 +1188,7 @@ class OrganisationIdentification7Tsmt05500101:
 
 
 @dataclass
-class PersonIdentification5Tsmt05500101:
+class PersonIdentification5Tsmt05500101(ISO20022MessageElement):
     dt_and_plc_of_birth: Optional[DateAndPlaceOfBirthTsmt05500101] = field(
         default=None,
         metadata={
@@ -1207,7 +1208,7 @@ class PersonIdentification5Tsmt05500101:
 
 
 @dataclass
-class QualifiedDocumentInformation1Tsmt05500101:
+class QualifiedDocumentInformation1Tsmt05500101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1312,7 +1313,7 @@ class QualifiedDocumentInformation1Tsmt05500101:
 
 
 @dataclass
-class TaxParty3Tsmt05500101:
+class TaxParty3Tsmt05500101(ISO20022MessageElement):
     tax_id: Optional[str] = field(
         default=None,
         metadata={
@@ -1354,7 +1355,7 @@ class TaxParty3Tsmt05500101:
 
 
 @dataclass
-class ValidationStatusInformation1Tsmt05500101:
+class ValidationStatusInformation1Tsmt05500101(ISO20022MessageElement):
     sts: Optional[TechnicalValidationStatus1Code] = field(
         default=None,
         metadata={
@@ -1385,7 +1386,7 @@ class ValidationStatusInformation1Tsmt05500101:
 
 
 @dataclass
-class BranchAndFinancialInstitutionIdentification5Tsmt05500101:
+class BranchAndFinancialInstitutionIdentification5Tsmt05500101(ISO20022MessageElement):
     fin_instn_id: Optional[FinancialInstitutionIdentification8Tsmt05500101] = field(
         default=None,
         metadata={
@@ -1406,7 +1407,7 @@ class BranchAndFinancialInstitutionIdentification5Tsmt05500101:
 
 
 @dataclass
-class GovernanceRules2Tsmt05500101:
+class GovernanceRules2Tsmt05500101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1444,7 +1445,7 @@ class GovernanceRules2Tsmt05500101:
 
 
 @dataclass
-class Party10ChoiceTsmt05500101:
+class Party10ChoiceTsmt05500101(ISO20022MessageElement):
     org_id: Optional[OrganisationIdentification7Tsmt05500101] = field(
         default=None,
         metadata={
@@ -1464,7 +1465,7 @@ class Party10ChoiceTsmt05500101:
 
 
 @dataclass
-class Party8ChoiceTsmt05500101:
+class Party8ChoiceTsmt05500101(ISO20022MessageElement):
     org_id: Optional[OrganisationIdentification6Tsmt05500101] = field(
         default=None,
         metadata={
@@ -1484,7 +1485,7 @@ class Party8ChoiceTsmt05500101:
 
 
 @dataclass
-class PartyIdentification2ChoiceTsmt05500101:
+class PartyIdentification2ChoiceTsmt05500101(ISO20022MessageElement):
     bicor_bei: Optional[str] = field(
         default=None,
         metadata={
@@ -1513,7 +1514,7 @@ class PartyIdentification2ChoiceTsmt05500101:
 
 
 @dataclass
-class PartyIdentification42Tsmt05500101:
+class PartyIdentification42Tsmt05500101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1560,7 +1561,7 @@ class PartyIdentification42Tsmt05500101:
 
 
 @dataclass
-class PartyIdentification45Tsmt05500101:
+class PartyIdentification45Tsmt05500101(ISO20022MessageElement):
     id: Optional[Party8ChoiceTsmt05500101] = field(
         default=None,
         metadata={
@@ -1607,7 +1608,7 @@ class PartyIdentification45Tsmt05500101:
 
 
 @dataclass
-class Party9ChoiceTsmt05500101:
+class Party9ChoiceTsmt05500101(ISO20022MessageElement):
     org_id: Optional[PartyIdentification42Tsmt05500101] = field(
         default=None,
         metadata={
@@ -1627,7 +1628,7 @@ class Party9ChoiceTsmt05500101:
 
 
 @dataclass
-class TradeParty1Tsmt05500101:
+class TradeParty1Tsmt05500101(ISO20022MessageElement):
     pty_id: Optional[PartyIdentification45Tsmt05500101] = field(
         default=None,
         metadata={
@@ -1656,7 +1657,7 @@ class TradeParty1Tsmt05500101:
 
 
 @dataclass
-class BusinessApplicationHeader1Tsmt05500101:
+class BusinessApplicationHeader1Tsmt05500101(ISO20022MessageElement):
     char_set: Optional[str] = field(
         default=None,
         metadata={
@@ -1760,7 +1761,7 @@ class BusinessApplicationHeader1Tsmt05500101:
 
 
 @dataclass
-class SingleQualifiedPartyIdentification1Tsmt05500101:
+class SingleQualifiedPartyIdentification1Tsmt05500101(ISO20022MessageElement):
     base_pty: Optional[TradeParty1Tsmt05500101] = field(
         default=None,
         metadata={
@@ -1784,7 +1785,7 @@ class SingleQualifiedPartyIdentification1Tsmt05500101:
 
 
 @dataclass
-class EncapsulatedBusinessMessage1Tsmt05500101:
+class EncapsulatedBusinessMessage1Tsmt05500101(ISO20022MessageElement):
     hdr: Optional[BusinessApplicationHeader1Tsmt05500101] = field(
         default=None,
         metadata={
@@ -1822,7 +1823,7 @@ class EncapsulatedBusinessMessage1Tsmt05500101:
 
 
 @dataclass
-class QualifiedPartyIdentification1Tsmt05500101:
+class QualifiedPartyIdentification1Tsmt05500101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1870,7 +1871,7 @@ class QualifiedPartyIdentification1Tsmt05500101:
 
 
 @dataclass
-class BusinessLetter1Tsmt05500101:
+class BusinessLetter1Tsmt05500101(ISO20022MessageElement):
     appl_cntxt: Optional[str] = field(
         default=None,
         metadata={
@@ -2055,7 +2056,7 @@ class BusinessLetter1Tsmt05500101:
 
 
 @dataclass
-class PartyEventAdviceV01Tsmt05500101:
+class PartyEventAdviceV01Tsmt05500101(ISO20022MessageElement):
     hdr: Optional[BusinessLetter1Tsmt05500101] = field(
         default=None,
         metadata={
@@ -2094,7 +2095,7 @@ class PartyEventAdviceV01Tsmt05500101:
 
 
 @dataclass
-class Tsmt05500101:
+class Tsmt05500101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.055.001.01"
 

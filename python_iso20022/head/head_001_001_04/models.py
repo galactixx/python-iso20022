@@ -3,6 +3,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     AddressType2Code,
     CopyDuplicate1Code,
@@ -14,7 +15,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:head.001.001.04"
 
 
 @dataclass
-class ClearingSystemIdentification2ChoiceHead00100104:
+class ClearingSystemIdentification2ChoiceHead00100104(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -38,7 +39,7 @@ class ClearingSystemIdentification2ChoiceHead00100104:
 
 
 @dataclass
-class DateAndPlaceOfBirth1Head00100104:
+class DateAndPlaceOfBirth1Head00100104(ISO20022MessageElement):
     birth_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -82,7 +83,7 @@ class DateAndPlaceOfBirth1Head00100104:
 
 
 @dataclass
-class FinancialIdentificationSchemeName1ChoiceHead00100104:
+class FinancialIdentificationSchemeName1ChoiceHead00100104(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -106,7 +107,7 @@ class FinancialIdentificationSchemeName1ChoiceHead00100104:
 
 
 @dataclass
-class GenericIdentification30Head00100104:
+class GenericIdentification30Head00100104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -141,7 +142,7 @@ class GenericIdentification30Head00100104:
 
 
 @dataclass
-class ImplementationSpecification1Head00100104:
+class ImplementationSpecification1Head00100104(ISO20022MessageElement):
     regy: Optional[str] = field(
         default=None,
         metadata={
@@ -167,7 +168,7 @@ class ImplementationSpecification1Head00100104:
 
 
 @dataclass
-class OrganisationIdentificationSchemeName1ChoiceHead00100104:
+class OrganisationIdentificationSchemeName1ChoiceHead00100104(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -191,7 +192,7 @@ class OrganisationIdentificationSchemeName1ChoiceHead00100104:
 
 
 @dataclass
-class OtherContact1Head00100104:
+class OtherContact1Head00100104(ISO20022MessageElement):
     chanl_tp: Optional[str] = field(
         default=None,
         metadata={
@@ -216,7 +217,7 @@ class OtherContact1Head00100104:
 
 
 @dataclass
-class PersonIdentificationSchemeName1ChoiceHead00100104:
+class PersonIdentificationSchemeName1ChoiceHead00100104(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -240,7 +241,7 @@ class PersonIdentificationSchemeName1ChoiceHead00100104:
 
 
 @dataclass
-class SignatureEnvelopeHead00100104:
+class SignatureEnvelopeHead00100104(ISO20022MessageElement):
     w3_org_2000_09_xmldsig_element: Optional[object] = field(
         default=None,
         metadata={
@@ -251,7 +252,7 @@ class SignatureEnvelopeHead00100104:
 
 
 @dataclass
-class AddressType3ChoiceHead00100104:
+class AddressType3ChoiceHead00100104(ISO20022MessageElement):
     cd: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -271,7 +272,7 @@ class AddressType3ChoiceHead00100104:
 
 
 @dataclass
-class ClearingSystemMemberIdentification2Head00100104:
+class ClearingSystemMemberIdentification2Head00100104(ISO20022MessageElement):
     clr_sys_id: Optional[ClearingSystemIdentification2ChoiceHead00100104] = field(
         default=None,
         metadata={
@@ -294,7 +295,7 @@ class ClearingSystemMemberIdentification2Head00100104:
 
 
 @dataclass
-class Contact13Head00100104:
+class Contact13Head00100104(ISO20022MessageElement):
     nm_prfx: Optional[NamePrefix2Code] = field(
         default=None,
         metadata={
@@ -419,7 +420,7 @@ class Contact13Head00100104:
 
 
 @dataclass
-class GenericFinancialIdentification1Head00100104:
+class GenericFinancialIdentification1Head00100104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -452,7 +453,7 @@ class GenericFinancialIdentification1Head00100104:
 
 
 @dataclass
-class GenericOrganisationIdentification3Head00100104:
+class GenericOrganisationIdentification3Head00100104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -485,7 +486,7 @@ class GenericOrganisationIdentification3Head00100104:
 
 
 @dataclass
-class GenericPersonIdentification2Head00100104:
+class GenericPersonIdentification2Head00100104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -518,7 +519,7 @@ class GenericPersonIdentification2Head00100104:
 
 
 @dataclass
-class OrganisationIdentification39Head00100104:
+class OrganisationIdentification39Head00100104(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -548,7 +549,7 @@ class OrganisationIdentification39Head00100104:
 
 
 @dataclass
-class PersonIdentification18Head00100104:
+class PersonIdentification18Head00100104(ISO20022MessageElement):
     dt_and_plc_of_birth: Optional[DateAndPlaceOfBirth1Head00100104] = field(
         default=None,
         metadata={
@@ -568,7 +569,7 @@ class PersonIdentification18Head00100104:
 
 
 @dataclass
-class PostalAddress27Head00100104:
+class PostalAddress27Head00100104(ISO20022MessageElement):
     adr_tp: Optional[AddressType3ChoiceHead00100104] = field(
         default=None,
         metadata={
@@ -750,7 +751,7 @@ class PostalAddress27Head00100104:
 
 
 @dataclass
-class BranchData5Head00100104:
+class BranchData5Head00100104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -791,7 +792,7 @@ class BranchData5Head00100104:
 
 
 @dataclass
-class FinancialInstitutionIdentification23Head00100104:
+class FinancialInstitutionIdentification23Head00100104(ISO20022MessageElement):
     bicfi: Optional[str] = field(
         default=None,
         metadata={
@@ -847,7 +848,7 @@ class FinancialInstitutionIdentification23Head00100104:
 
 
 @dataclass
-class Party52ChoiceHead00100104:
+class Party52ChoiceHead00100104(ISO20022MessageElement):
     org_id: Optional[OrganisationIdentification39Head00100104] = field(
         default=None,
         metadata={
@@ -867,7 +868,7 @@ class Party52ChoiceHead00100104:
 
 
 @dataclass
-class BranchAndFinancialInstitutionIdentification8Head00100104:
+class BranchAndFinancialInstitutionIdentification8Head00100104(ISO20022MessageElement):
     fin_instn_id: Optional[FinancialInstitutionIdentification23Head00100104] = field(
         default=None,
         metadata={
@@ -888,7 +889,7 @@ class BranchAndFinancialInstitutionIdentification8Head00100104:
 
 
 @dataclass
-class PartyIdentification272Head00100104:
+class PartyIdentification272Head00100104(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -935,7 +936,7 @@ class PartyIdentification272Head00100104:
 
 
 @dataclass
-class Party51ChoiceHead00100104:
+class Party51ChoiceHead00100104(ISO20022MessageElement):
     org_id: Optional[PartyIdentification272Head00100104] = field(
         default=None,
         metadata={
@@ -955,7 +956,7 @@ class Party51ChoiceHead00100104:
 
 
 @dataclass
-class BusinessApplicationHeader8Head00100104:
+class BusinessApplicationHeader8Head00100104(ISO20022MessageElement):
     char_set: Optional[str] = field(
         default=None,
         metadata={
@@ -1074,7 +1075,7 @@ class BusinessApplicationHeader8Head00100104:
 
 
 @dataclass
-class BusinessApplicationHeaderV04Head00100104:
+class BusinessApplicationHeaderV04Head00100104(ISO20022MessageElement):
     char_set: Optional[str] = field(
         default=None,
         metadata={
@@ -1201,6 +1202,6 @@ class BusinessApplicationHeaderV04Head00100104:
 
 
 @dataclass
-class AppHdrHead00100104(BusinessApplicationHeaderV04):
+class AppHdrHead00100104(BusinessApplicationHeaderV04, ISO20022MessageElement):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:head.001.001.04"

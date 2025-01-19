@@ -3,6 +3,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     NetworkType1Code,
     PartyType33Code,
@@ -14,7 +15,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:casp.013.001.02"
 
 
 @dataclass
-class GeolocationGeographicCoordinates1Casp01300102:
+class GeolocationGeographicCoordinates1Casp01300102(ISO20022MessageElement):
     lat: Optional[str] = field(
         default=None,
         metadata={
@@ -40,7 +41,7 @@ class GeolocationGeographicCoordinates1Casp01300102:
 
 
 @dataclass
-class GeolocationUtmcoordinates1Casp01300102:
+class GeolocationUtmcoordinates1Casp01300102(ISO20022MessageElement):
     class Meta:
         name = "GeolocationUTMCoordinates1"
 
@@ -80,7 +81,7 @@ class GeolocationUtmcoordinates1Casp01300102:
 
 
 @dataclass
-class AcceptorRejection2Casp01300102:
+class AcceptorRejection2Casp01300102(ISO20022MessageElement):
     rjct_rsn: Optional[RejectReason1Code] = field(
         default=None,
         metadata={
@@ -114,7 +115,7 @@ class AcceptorRejection2Casp01300102:
 
 
 @dataclass
-class Geolocation1Casp01300102:
+class Geolocation1Casp01300102(ISO20022MessageElement):
     geogc_cordints: Optional[GeolocationGeographicCoordinates1Casp01300102] = field(
         default=None,
         metadata={
@@ -134,7 +135,7 @@ class Geolocation1Casp01300102:
 
 
 @dataclass
-class NetworkParameters9Casp01300102:
+class NetworkParameters9Casp01300102(ISO20022MessageElement):
     ntwk_tp: Optional[NetworkType1Code] = field(
         default=None,
         metadata={
@@ -158,7 +159,7 @@ class NetworkParameters9Casp01300102:
 
 
 @dataclass
-class NetworkParameters7Casp01300102:
+class NetworkParameters7Casp01300102(ISO20022MessageElement):
     adr: list[NetworkParameters9Casp01300102] = field(
         default_factory=list,
         metadata={
@@ -235,7 +236,7 @@ class NetworkParameters7Casp01300102:
 
 
 @dataclass
-class GenericIdentification177Casp01300102:
+class GenericIdentification177Casp01300102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -301,7 +302,7 @@ class GenericIdentification177Casp01300102:
 
 
 @dataclass
-class Traceability8Casp01300102:
+class Traceability8Casp01300102(ISO20022MessageElement):
     rlay_id: Optional[GenericIdentification177Casp01300102] = field(
         default=None,
         metadata={
@@ -352,7 +353,7 @@ class Traceability8Casp01300102:
 
 
 @dataclass
-class Header41Casp01300102:
+class Header41Casp01300102(ISO20022MessageElement):
     msg_fctn: Optional[RetailerMessage1Code] = field(
         default=None,
         metadata={
@@ -421,7 +422,7 @@ class Header41Casp01300102:
 
 
 @dataclass
-class SaleToPoimessageRejectionV02Casp01300102:
+class SaleToPoimessageRejectionV02Casp01300102(ISO20022MessageElement):
     class Meta:
         name = "SaleToPOIMessageRejectionV02"
 
@@ -446,7 +447,7 @@ class SaleToPoimessageRejectionV02Casp01300102:
 
 
 @dataclass
-class Casp01300102:
+class Casp01300102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:casp.013.001.02"
 

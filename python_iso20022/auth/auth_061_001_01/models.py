@@ -5,12 +5,13 @@ from typing import Optional
 from xsdata.models.datatype import XmlDate
 
 from python_iso20022.auth.enums import ProductType7Code
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01"
 
 
 @dataclass
-class ActiveCurrencyAnd24AmountAuth06100101:
+class ActiveCurrencyAnd24AmountAuth06100101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -32,7 +33,7 @@ class ActiveCurrencyAnd24AmountAuth06100101:
 
 
 @dataclass
-class ActiveCurrencyAndAmountAuth06100101:
+class ActiveCurrencyAndAmountAuth06100101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -54,7 +55,7 @@ class ActiveCurrencyAndAmountAuth06100101:
 
 
 @dataclass
-class FinancialInstrument59Auth06100101:
+class FinancialInstrument59Auth06100101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -86,7 +87,7 @@ class FinancialInstrument59Auth06100101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth06100101:
+class SupplementaryDataEnvelope1Auth06100101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -97,7 +98,7 @@ class SupplementaryDataEnvelope1Auth06100101:
 
 
 @dataclass
-class Deposit1Auth06100101:
+class Deposit1Auth06100101(ISO20022MessageElement):
     mtrty_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -129,7 +130,7 @@ class Deposit1Auth06100101:
 
 
 @dataclass
-class GeneralCollateral3Auth06100101:
+class GeneralCollateral3Auth06100101(ISO20022MessageElement):
     fin_instrm_id: list[FinancialInstrument59Auth06100101] = field(
         default_factory=list,
         metadata={
@@ -150,7 +151,7 @@ class GeneralCollateral3Auth06100101:
 
 
 @dataclass
-class OtherInvestment1Auth06100101:
+class OtherInvestment1Auth06100101(ISO20022MessageElement):
     desc: Optional[str] = field(
         default=None,
         metadata={
@@ -174,7 +175,7 @@ class OtherInvestment1Auth06100101:
 
 
 @dataclass
-class SecurityIdentificationAndAmount1Auth06100101:
+class SecurityIdentificationAndAmount1Auth06100101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -206,7 +207,7 @@ class SecurityIdentificationAndAmount1Auth06100101:
 
 
 @dataclass
-class SpecificCollateral2Auth06100101:
+class SpecificCollateral2Auth06100101(ISO20022MessageElement):
     fin_instrm_id: Optional[FinancialInstrument59Auth06100101] = field(
         default=None,
         metadata={
@@ -219,7 +220,7 @@ class SpecificCollateral2Auth06100101:
 
 
 @dataclass
-class SupplementaryData1Auth06100101:
+class SupplementaryData1Auth06100101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -242,7 +243,7 @@ class SupplementaryData1Auth06100101:
 
 
 @dataclass
-class RepurchaseAgreementType3ChoiceAuth06100101:
+class RepurchaseAgreementType3ChoiceAuth06100101(ISO20022MessageElement):
     spcfc_coll: Optional[SpecificCollateral2Auth06100101] = field(
         default=None,
         metadata={
@@ -262,7 +263,7 @@ class RepurchaseAgreementType3ChoiceAuth06100101:
 
 
 @dataclass
-class RepurchaseAgreement2Auth06100101:
+class RepurchaseAgreement2Auth06100101(ISO20022MessageElement):
     mtrty_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -321,7 +322,7 @@ class RepurchaseAgreement2Auth06100101:
 
 
 @dataclass
-class Investment1ChoiceAuth06100101:
+class Investment1ChoiceAuth06100101(ISO20022MessageElement):
     uscrd_csh_dpst: Optional[Deposit1Auth06100101] = field(
         default=None,
         metadata={
@@ -365,7 +366,7 @@ class Investment1ChoiceAuth06100101:
 
 
 @dataclass
-class CcpinvestmentsReportV01Auth06100101:
+class CcpinvestmentsReportV01Auth06100101(ISO20022MessageElement):
     class Meta:
         name = "CCPInvestmentsReportV01"
 
@@ -389,7 +390,7 @@ class CcpinvestmentsReportV01Auth06100101:
 
 
 @dataclass
-class Auth06100101:
+class Auth06100101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01"
 

@@ -6,12 +6,13 @@ from xsdata.models.datatype import XmlDateTime
 
 from python_iso20022.auth.auth_055_001_01.enums import MarginType2Code
 from python_iso20022.auth.enums import SchemeIdentificationType1Code
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.055.001.01"
 
 
 @dataclass
-class ActiveCurrencyAndAmountAuth05500101:
+class ActiveCurrencyAndAmountAuth05500101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -33,7 +34,7 @@ class ActiveCurrencyAndAmountAuth05500101:
 
 
 @dataclass
-class GenericIdentification36Auth05500101:
+class GenericIdentification36Auth05500101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -69,7 +70,7 @@ class GenericIdentification36Auth05500101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth05500101:
+class SupplementaryDataEnvelope1Auth05500101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -80,7 +81,7 @@ class SupplementaryDataEnvelope1Auth05500101:
 
 
 @dataclass
-class Amount3Auth05500101:
+class Amount3Auth05500101(ISO20022MessageElement):
     orgnl_amt: Optional[ActiveCurrencyAndAmountAuth05500101] = field(
         default=None,
         metadata={
@@ -101,7 +102,7 @@ class Amount3Auth05500101:
 
 
 @dataclass
-class AmountAndDirection102Auth05500101:
+class AmountAndDirection102Auth05500101(ISO20022MessageElement):
     amt: Optional[ActiveCurrencyAndAmountAuth05500101] = field(
         default=None,
         metadata={
@@ -123,7 +124,7 @@ class AmountAndDirection102Auth05500101:
 
 
 @dataclass
-class GenericIdentification165Auth05500101:
+class GenericIdentification165Auth05500101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -166,7 +167,7 @@ class GenericIdentification165Auth05500101:
 
 
 @dataclass
-class MarginType2ChoiceAuth05500101:
+class MarginType2ChoiceAuth05500101(ISO20022MessageElement):
     cd: Optional[MarginType2Code] = field(
         default=None,
         metadata={
@@ -186,7 +187,7 @@ class MarginType2ChoiceAuth05500101:
 
 
 @dataclass
-class SupplementaryData1Auth05500101:
+class SupplementaryData1Auth05500101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -209,7 +210,7 @@ class SupplementaryData1Auth05500101:
 
 
 @dataclass
-class DefaultFundRequirement1Auth05500101:
+class DefaultFundRequirement1Auth05500101(ISO20022MessageElement):
     clr_mmb_id: Optional[GenericIdentification165Auth05500101] = field(
         default=None,
         metadata={
@@ -241,7 +242,7 @@ class DefaultFundRequirement1Auth05500101:
 
 
 @dataclass
-class InitialMarginExposure1Auth05500101:
+class InitialMarginExposure1Auth05500101(ISO20022MessageElement):
     amt: Optional[Amount3Auth05500101] = field(
         default=None,
         metadata={
@@ -272,7 +273,7 @@ class InitialMarginExposure1Auth05500101:
 
 
 @dataclass
-class IntraDayMarginCall1Auth05500101:
+class IntraDayMarginCall1Auth05500101(ISO20022MessageElement):
     mrgn_acct_id: Optional[GenericIdentification165Auth05500101] = field(
         default=None,
         metadata={
@@ -303,7 +304,7 @@ class IntraDayMarginCall1Auth05500101:
 
 
 @dataclass
-class IntraDayRequirement1Auth05500101:
+class IntraDayRequirement1Auth05500101(ISO20022MessageElement):
     intra_day_mrgn_call: Optional[ActiveCurrencyAndAmountAuth05500101] = field(
         default=None,
         metadata={
@@ -352,7 +353,7 @@ class IntraDayRequirement1Auth05500101:
 
 
 @dataclass
-class InitialMarginRequirement1Auth05500101:
+class InitialMarginRequirement1Auth05500101(ISO20022MessageElement):
     initl_mrgn_xpsr: list[InitialMarginExposure1Auth05500101] = field(
         default_factory=list,
         metadata={
@@ -374,7 +375,7 @@ class InitialMarginRequirement1Auth05500101:
 
 
 @dataclass
-class EndOfDayRequirement2Auth05500101:
+class EndOfDayRequirement2Auth05500101(ISO20022MessageElement):
     initl_mrgn_rqrmnts: Optional[InitialMarginRequirement1Auth05500101] = field(
         default=None,
         metadata={
@@ -405,7 +406,7 @@ class EndOfDayRequirement2Auth05500101:
 
 
 @dataclass
-class CcpmemberRequirementsReportV01Auth05500101:
+class CcpmemberRequirementsReportV01Auth05500101(ISO20022MessageElement):
     class Meta:
         name = "CCPMemberRequirementsReportV01"
 
@@ -455,7 +456,7 @@ class CcpmemberRequirementsReportV01Auth05500101:
 
 
 @dataclass
-class Auth05500101:
+class Auth05500101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.055.001.01"
 

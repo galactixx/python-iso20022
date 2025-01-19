@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     AddressType2Code,
     CalculationType1Code,
@@ -51,7 +52,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:setr.044.001.03"
 
 
 @dataclass
-class ActiveCurrencyAndAmountSetr04400103:
+class ActiveCurrencyAndAmountSetr04400103(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -73,7 +74,7 @@ class ActiveCurrencyAndAmountSetr04400103:
 
 
 @dataclass
-class ActiveOrHistoricCurrencyAnd13DecimalAmountSetr04400103:
+class ActiveOrHistoricCurrencyAnd13DecimalAmountSetr04400103(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -95,7 +96,7 @@ class ActiveOrHistoricCurrencyAnd13DecimalAmountSetr04400103:
 
 
 @dataclass
-class ActiveOrHistoricCurrencyAndAmountSetr04400103:
+class ActiveOrHistoricCurrencyAndAmountSetr04400103(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -117,7 +118,7 @@ class ActiveOrHistoricCurrencyAndAmountSetr04400103:
 
 
 @dataclass
-class CashAccountIdentification5ChoiceSetr04400103:
+class CashAccountIdentification5ChoiceSetr04400103(ISO20022MessageElement):
     iban: Optional[str] = field(
         default=None,
         metadata={
@@ -140,7 +141,7 @@ class CashAccountIdentification5ChoiceSetr04400103:
 
 
 @dataclass
-class CurrencyToBuyOrSell1ChoiceSetr04400103:
+class CurrencyToBuyOrSell1ChoiceSetr04400103(ISO20022MessageElement):
     ccy_to_buy: Optional[str] = field(
         default=None,
         metadata={
@@ -162,7 +163,7 @@ class CurrencyToBuyOrSell1ChoiceSetr04400103:
 
 
 @dataclass
-class DateAndDateTime1ChoiceSetr04400103:
+class DateAndDateTime1ChoiceSetr04400103(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -182,7 +183,7 @@ class DateAndDateTime1ChoiceSetr04400103:
 
 
 @dataclass
-class DateTimePeriod1Setr04400103:
+class DateTimePeriod1Setr04400103(ISO20022MessageElement):
     fr_dt_tm: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -204,7 +205,7 @@ class DateTimePeriod1Setr04400103:
 
 
 @dataclass
-class FinancialInstrumentQuantity1ChoiceSetr04400103:
+class FinancialInstrumentQuantity1ChoiceSetr04400103(ISO20022MessageElement):
     unit: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -240,7 +241,7 @@ class FinancialInstrumentQuantity1ChoiceSetr04400103:
 
 
 @dataclass
-class GenericIdentification30Setr04400103:
+class GenericIdentification30Setr04400103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -275,7 +276,7 @@ class GenericIdentification30Setr04400103:
 
 
 @dataclass
-class GenericIdentification36Setr04400103:
+class GenericIdentification36Setr04400103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -311,7 +312,7 @@ class GenericIdentification36Setr04400103:
 
 
 @dataclass
-class GenericIdentification37Setr04400103:
+class GenericIdentification37Setr04400103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -336,7 +337,7 @@ class GenericIdentification37Setr04400103:
 
 
 @dataclass
-class IdentificationReference11ChoiceSetr04400103:
+class IdentificationReference11ChoiceSetr04400103(ISO20022MessageElement):
     instg_pty_tx_id: Optional[str] = field(
         default=None,
         metadata={
@@ -480,7 +481,7 @@ class IdentificationReference11ChoiceSetr04400103:
 
 
 @dataclass
-class IdentificationSource3ChoiceSetr04400103:
+class IdentificationSource3ChoiceSetr04400103(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -504,7 +505,7 @@ class IdentificationSource3ChoiceSetr04400103:
 
 
 @dataclass
-class MarketIdentification3ChoiceSetr04400103:
+class MarketIdentification3ChoiceSetr04400103(ISO20022MessageElement):
     mkt_idr_cd: Optional[str] = field(
         default=None,
         metadata={
@@ -527,7 +528,7 @@ class MarketIdentification3ChoiceSetr04400103:
 
 
 @dataclass
-class OriginalAndCurrentQuantities1Setr04400103:
+class OriginalAndCurrentQuantities1Setr04400103(ISO20022MessageElement):
     face_amt: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -555,7 +556,7 @@ class OriginalAndCurrentQuantities1Setr04400103:
 
 
 @dataclass
-class PartyTextInformation1Setr04400103:
+class PartyTextInformation1Setr04400103(ISO20022MessageElement):
     dclrtn_dtls: Optional[str] = field(
         default=None,
         metadata={
@@ -589,7 +590,7 @@ class PartyTextInformation1Setr04400103:
 
 
 @dataclass
-class PartyTextInformation5Setr04400103:
+class PartyTextInformation5Setr04400103(ISO20022MessageElement):
     dclrtn_dtls: Optional[str] = field(
         default=None,
         metadata={
@@ -613,7 +614,7 @@ class PartyTextInformation5Setr04400103:
 
 
 @dataclass
-class SecuritiesCertificate3Setr04400103:
+class SecuritiesCertificate3Setr04400103(ISO20022MessageElement):
     nb: Optional[str] = field(
         default=None,
         metadata={
@@ -648,7 +649,7 @@ class SecuritiesCertificate3Setr04400103:
 
 
 @dataclass
-class SimpleIdentificationInformation2Setr04400103:
+class SimpleIdentificationInformation2Setr04400103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -663,7 +664,7 @@ class SimpleIdentificationInformation2Setr04400103:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Setr04400103:
+class SupplementaryDataEnvelope1Setr04400103(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -674,7 +675,7 @@ class SupplementaryDataEnvelope1Setr04400103:
 
 
 @dataclass
-class TransactiontIdentification4Setr04400103:
+class TransactiontIdentification4Setr04400103(ISO20022MessageElement):
     tx_id: Optional[str] = field(
         default=None,
         metadata={
@@ -689,7 +690,7 @@ class TransactiontIdentification4Setr04400103:
 
 
 @dataclass
-class AccountIdentification55ChoiceSetr04400103:
+class AccountIdentification55ChoiceSetr04400103(ISO20022MessageElement):
     iban: Optional[str] = field(
         default=None,
         metadata={
@@ -728,7 +729,7 @@ class AccountIdentification55ChoiceSetr04400103:
 
 
 @dataclass
-class AllegementReason2ChoiceSetr04400103:
+class AllegementReason2ChoiceSetr04400103(ISO20022MessageElement):
     cd: Optional[AllegementReason1Code] = field(
         default=None,
         metadata={
@@ -748,7 +749,7 @@ class AllegementReason2ChoiceSetr04400103:
 
 
 @dataclass
-class AmountOrRate2ChoiceSetr04400103:
+class AmountOrRate2ChoiceSetr04400103(ISO20022MessageElement):
     amt: Optional[ActiveCurrencyAndAmountSetr04400103] = field(
         default=None,
         metadata={
@@ -770,7 +771,7 @@ class AmountOrRate2ChoiceSetr04400103:
 
 
 @dataclass
-class AwaitingAffirmationReason2ChoiceSetr04400103:
+class AwaitingAffirmationReason2ChoiceSetr04400103(ISO20022MessageElement):
     cd: Optional[AwaitingAffirmationReason1Code] = field(
         default=None,
         metadata={
@@ -790,7 +791,7 @@ class AwaitingAffirmationReason2ChoiceSetr04400103:
 
 
 @dataclass
-class AwaitingCancellationReason2ChoiceSetr04400103:
+class AwaitingCancellationReason2ChoiceSetr04400103(ISO20022MessageElement):
     cd: Optional[AwaitingCancellationReason1Code] = field(
         default=None,
         metadata={
@@ -810,7 +811,7 @@ class AwaitingCancellationReason2ChoiceSetr04400103:
 
 
 @dataclass
-class BusinessProcessType2ChoiceSetr04400103:
+class BusinessProcessType2ChoiceSetr04400103(ISO20022MessageElement):
     cd: Optional[BusinessProcessType1Code] = field(
         default=None,
         metadata={
@@ -830,7 +831,7 @@ class BusinessProcessType2ChoiceSetr04400103:
 
 
 @dataclass
-class ChargeTaxBasisType2ChoiceSetr04400103:
+class ChargeTaxBasisType2ChoiceSetr04400103(ISO20022MessageElement):
     cd: Optional[ChargeTaxBasis1Code] = field(
         default=None,
         metadata={
@@ -850,7 +851,7 @@ class ChargeTaxBasisType2ChoiceSetr04400103:
 
 
 @dataclass
-class CommissionType6ChoiceSetr04400103:
+class CommissionType6ChoiceSetr04400103(ISO20022MessageElement):
     cd: Optional[CommissionType9Code] = field(
         default=None,
         metadata={
@@ -870,7 +871,7 @@ class CommissionType6ChoiceSetr04400103:
 
 
 @dataclass
-class DateTimePeriod1ChoiceSetr04400103:
+class DateTimePeriod1ChoiceSetr04400103(ISO20022MessageElement):
     fr_dt_tm: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -898,7 +899,7 @@ class DateTimePeriod1ChoiceSetr04400103:
 
 
 @dataclass
-class DocumentNumber17ChoiceSetr04400103:
+class DocumentNumber17ChoiceSetr04400103(ISO20022MessageElement):
     shrt_nb: Optional[str] = field(
         default=None,
         metadata={
@@ -928,7 +929,7 @@ class DocumentNumber17ChoiceSetr04400103:
 
 
 @dataclass
-class EucapitalGainType3ChoiceSetr04400103:
+class EucapitalGainType3ChoiceSetr04400103(ISO20022MessageElement):
     class Meta:
         name = "EUCapitalGainType3Choice"
 
@@ -951,7 +952,7 @@ class EucapitalGainType3ChoiceSetr04400103:
 
 
 @dataclass
-class ForeignExchangeTerms18Setr04400103:
+class ForeignExchangeTerms18Setr04400103(ISO20022MessageElement):
     unit_ccy: Optional[str] = field(
         default=None,
         metadata={
@@ -995,7 +996,7 @@ class ForeignExchangeTerms18Setr04400103:
 
 
 @dataclass
-class IdentificationType43ChoiceSetr04400103:
+class IdentificationType43ChoiceSetr04400103(ISO20022MessageElement):
     cd: Optional[TypeOfIdentification2Code] = field(
         default=None,
         metadata={
@@ -1015,7 +1016,7 @@ class IdentificationType43ChoiceSetr04400103:
 
 
 @dataclass
-class InvestorCapacity4ChoiceSetr04400103:
+class InvestorCapacity4ChoiceSetr04400103(ISO20022MessageElement):
     cd: Optional[Eligibility1Code] = field(
         default=None,
         metadata={
@@ -1035,7 +1036,7 @@ class InvestorCapacity4ChoiceSetr04400103:
 
 
 @dataclass
-class MarketType18ChoiceSetr04400103:
+class MarketType18ChoiceSetr04400103(ISO20022MessageElement):
     cd: Optional[MarketType6Code] = field(
         default=None,
         metadata={
@@ -1055,7 +1056,7 @@ class MarketType18ChoiceSetr04400103:
 
 
 @dataclass
-class MarketType8ChoiceSetr04400103:
+class MarketType8ChoiceSetr04400103(ISO20022MessageElement):
     cd: Optional[MarketType2Code] = field(
         default=None,
         metadata={
@@ -1075,7 +1076,7 @@ class MarketType8ChoiceSetr04400103:
 
 
 @dataclass
-class MatchingStatus27ChoiceSetr04400103:
+class MatchingStatus27ChoiceSetr04400103(ISO20022MessageElement):
     cd: Optional[MatchingStatus1Code] = field(
         default=None,
         metadata={
@@ -1095,7 +1096,7 @@ class MatchingStatus27ChoiceSetr04400103:
 
 
 @dataclass
-class OtherIdentification1Setr04400103:
+class OtherIdentification1Setr04400103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1129,7 +1130,7 @@ class OtherIdentification1Setr04400103:
 
 
 @dataclass
-class PostalAddress8Setr04400103:
+class PostalAddress8Setr04400103(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -1212,7 +1213,7 @@ class PostalAddress8Setr04400103:
 
 
 @dataclass
-class PriceRateOrAmount3ChoiceSetr04400103:
+class PriceRateOrAmount3ChoiceSetr04400103(ISO20022MessageElement):
     rate: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -1234,7 +1235,7 @@ class PriceRateOrAmount3ChoiceSetr04400103:
 
 
 @dataclass
-class ProprietaryReason4Setr04400103:
+class ProprietaryReason4Setr04400103(ISO20022MessageElement):
     rsn: Optional[GenericIdentification30Setr04400103] = field(
         default=None,
         metadata={
@@ -1256,7 +1257,7 @@ class ProprietaryReason4Setr04400103:
 
 
 @dataclass
-class PurposeCode9ChoiceSetr04400103:
+class PurposeCode9ChoiceSetr04400103(ISO20022MessageElement):
     cd: Optional[SecuritiesAccountPurposeType1Code] = field(
         default=None,
         metadata={
@@ -1276,7 +1277,7 @@ class PurposeCode9ChoiceSetr04400103:
 
 
 @dataclass
-class Quantity6ChoiceSetr04400103:
+class Quantity6ChoiceSetr04400103(ISO20022MessageElement):
     qty: Optional[FinancialInstrumentQuantity1ChoiceSetr04400103] = field(
         default=None,
         metadata={
@@ -1296,7 +1297,7 @@ class Quantity6ChoiceSetr04400103:
 
 
 @dataclass
-class QuantityOrAmount2ChoiceSetr04400103:
+class QuantityOrAmount2ChoiceSetr04400103(ISO20022MessageElement):
     qty: Optional[FinancialInstrumentQuantity1ChoiceSetr04400103] = field(
         default=None,
         metadata={
@@ -1316,7 +1317,7 @@ class QuantityOrAmount2ChoiceSetr04400103:
 
 
 @dataclass
-class RegistrationParameters3Setr04400103:
+class RegistrationParameters3Setr04400103(ISO20022MessageElement):
     certfctn_id: Optional[str] = field(
         default=None,
         metadata={
@@ -1356,7 +1357,7 @@ class RegistrationParameters3Setr04400103:
 
 
 @dataclass
-class RejectionReason52ChoiceSetr04400103:
+class RejectionReason52ChoiceSetr04400103(ISO20022MessageElement):
     cd: Optional[RejectionReason78Code] = field(
         default=None,
         metadata={
@@ -1376,7 +1377,7 @@ class RejectionReason52ChoiceSetr04400103:
 
 
 @dataclass
-class RepairReason19ChoiceSetr04400103:
+class RepairReason19ChoiceSetr04400103(ISO20022MessageElement):
     cd: Optional[RepairReason7Code] = field(
         default=None,
         metadata={
@@ -1396,7 +1397,7 @@ class RepairReason19ChoiceSetr04400103:
 
 
 @dataclass
-class Reporting6ChoiceSetr04400103:
+class Reporting6ChoiceSetr04400103(ISO20022MessageElement):
     cd: Optional[Reporting2Code] = field(
         default=None,
         metadata={
@@ -1416,7 +1417,7 @@ class Reporting6ChoiceSetr04400103:
 
 
 @dataclass
-class SettlementDateCode12ChoiceSetr04400103:
+class SettlementDateCode12ChoiceSetr04400103(ISO20022MessageElement):
     cd: Optional[SettlementDate5Code] = field(
         default=None,
         metadata={
@@ -1436,7 +1437,7 @@ class SettlementDateCode12ChoiceSetr04400103:
 
 
 @dataclass
-class SupplementaryData1Setr04400103:
+class SupplementaryData1Setr04400103(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1459,7 +1460,7 @@ class SupplementaryData1Setr04400103:
 
 
 @dataclass
-class TradeTransactionCondition9ChoiceSetr04400103:
+class TradeTransactionCondition9ChoiceSetr04400103(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -1481,7 +1482,7 @@ class TradeTransactionCondition9ChoiceSetr04400103:
 
 
 @dataclass
-class TradeType4ChoiceSetr04400103:
+class TradeType4ChoiceSetr04400103(ISO20022MessageElement):
     cd: Optional[TradeType3Code] = field(
         default=None,
         metadata={
@@ -1501,7 +1502,7 @@ class TradeType4ChoiceSetr04400103:
 
 
 @dataclass
-class TradingDateCode2ChoiceSetr04400103:
+class TradingDateCode2ChoiceSetr04400103(ISO20022MessageElement):
     cd: Optional[TradingDate1Code] = field(
         default=None,
         metadata={
@@ -1521,7 +1522,7 @@ class TradingDateCode2ChoiceSetr04400103:
 
 
 @dataclass
-class TradingPartyCapacity3ChoiceSetr04400103:
+class TradingPartyCapacity3ChoiceSetr04400103(ISO20022MessageElement):
     cd: Optional[TradingCapacity6Code] = field(
         default=None,
         metadata={
@@ -1541,7 +1542,7 @@ class TradingPartyCapacity3ChoiceSetr04400103:
 
 
 @dataclass
-class TradingPartyCapacity4ChoiceSetr04400103:
+class TradingPartyCapacity4ChoiceSetr04400103(ISO20022MessageElement):
     cd: Optional[TradingCapacity4Code] = field(
         default=None,
         metadata={
@@ -1561,7 +1562,7 @@ class TradingPartyCapacity4ChoiceSetr04400103:
 
 
 @dataclass
-class TypeOfPrice47ChoiceSetr04400103:
+class TypeOfPrice47ChoiceSetr04400103(ISO20022MessageElement):
     cd: Optional[TypeOfPrice3Code] = field(
         default=None,
         metadata={
@@ -1581,7 +1582,7 @@ class TypeOfPrice47ChoiceSetr04400103:
 
 
 @dataclass
-class UnaffirmedReason3ChoiceSetr04400103:
+class UnaffirmedReason3ChoiceSetr04400103(ISO20022MessageElement):
     cd: Optional[UnaffirmedReason1Code] = field(
         default=None,
         metadata={
@@ -1601,7 +1602,7 @@ class UnaffirmedReason3ChoiceSetr04400103:
 
 
 @dataclass
-class UnmatchedReason32ChoiceSetr04400103:
+class UnmatchedReason32ChoiceSetr04400103(ISO20022MessageElement):
     cd: Optional[UnmatchedReason4Code] = field(
         default=None,
         metadata={
@@ -1621,7 +1622,7 @@ class UnmatchedReason32ChoiceSetr04400103:
 
 
 @dataclass
-class AffirmationReason2Setr04400103:
+class AffirmationReason2Setr04400103(ISO20022MessageElement):
     cd: Optional[UnaffirmedReason3ChoiceSetr04400103] = field(
         default=None,
         metadata={
@@ -1644,7 +1645,7 @@ class AffirmationReason2Setr04400103:
 
 
 @dataclass
-class AllegementMatchingReason2Setr04400103:
+class AllegementMatchingReason2Setr04400103(ISO20022MessageElement):
     cd: Optional[AllegementReason2ChoiceSetr04400103] = field(
         default=None,
         metadata={
@@ -1667,7 +1668,7 @@ class AllegementMatchingReason2Setr04400103:
 
 
 @dataclass
-class AlternatePartyIdentification8Setr04400103:
+class AlternatePartyIdentification8Setr04400103(ISO20022MessageElement):
     id_tp: Optional[IdentificationType43ChoiceSetr04400103] = field(
         default=None,
         metadata={
@@ -1701,7 +1702,7 @@ class AlternatePartyIdentification8Setr04400103:
 
 
 @dataclass
-class AmountAndDirection29Setr04400103:
+class AmountAndDirection29Setr04400103(ISO20022MessageElement):
     amt: Optional[ActiveOrHistoricCurrencyAndAmountSetr04400103] = field(
         default=None,
         metadata={
@@ -1740,7 +1741,7 @@ class AmountAndDirection29Setr04400103:
 
 
 @dataclass
-class AwaitingAffirmationReason2Setr04400103:
+class AwaitingAffirmationReason2Setr04400103(ISO20022MessageElement):
     cd: Optional[AwaitingAffirmationReason2ChoiceSetr04400103] = field(
         default=None,
         metadata={
@@ -1763,7 +1764,7 @@ class AwaitingAffirmationReason2Setr04400103:
 
 
 @dataclass
-class AwaitingCancellationReason2Setr04400103:
+class AwaitingCancellationReason2Setr04400103(ISO20022MessageElement):
     cd: Optional[AwaitingCancellationReason2ChoiceSetr04400103] = field(
         default=None,
         metadata={
@@ -1786,7 +1787,7 @@ class AwaitingCancellationReason2Setr04400103:
 
 
 @dataclass
-class Linkages72Setr04400103:
+class Linkages72Setr04400103(ISO20022MessageElement):
     msg_nb: Optional[DocumentNumber17ChoiceSetr04400103] = field(
         default=None,
         metadata={
@@ -1807,7 +1808,7 @@ class Linkages72Setr04400103:
 
 
 @dataclass
-class MarketIdentification93Setr04400103:
+class MarketIdentification93Setr04400103(ISO20022MessageElement):
     id: Optional[MarketIdentification3ChoiceSetr04400103] = field(
         default=None,
         metadata={
@@ -1827,7 +1828,7 @@ class MarketIdentification93Setr04400103:
 
 
 @dataclass
-class MarketIdentification97Setr04400103:
+class MarketIdentification97Setr04400103(ISO20022MessageElement):
     id: Optional[MarketIdentification3ChoiceSetr04400103] = field(
         default=None,
         metadata={
@@ -1847,7 +1848,7 @@ class MarketIdentification97Setr04400103:
 
 
 @dataclass
-class NameAndAddress13Setr04400103:
+class NameAndAddress13Setr04400103(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1870,7 +1871,7 @@ class NameAndAddress13Setr04400103:
 
 
 @dataclass
-class Price14Setr04400103:
+class Price14Setr04400103(ISO20022MessageElement):
     val: Optional[PriceRateOrAmount3ChoiceSetr04400103] = field(
         default=None,
         metadata={
@@ -1891,7 +1892,7 @@ class Price14Setr04400103:
 
 
 @dataclass
-class ProprietaryStatusAndReason6Setr04400103:
+class ProprietaryStatusAndReason6Setr04400103(ISO20022MessageElement):
     prtry_sts: Optional[GenericIdentification30Setr04400103] = field(
         default=None,
         metadata={
@@ -1912,7 +1913,7 @@ class ProprietaryStatusAndReason6Setr04400103:
 
 
 @dataclass
-class RejectionReason67Setr04400103:
+class RejectionReason67Setr04400103(ISO20022MessageElement):
     cd: Optional[RejectionReason52ChoiceSetr04400103] = field(
         default=None,
         metadata={
@@ -1935,7 +1936,7 @@ class RejectionReason67Setr04400103:
 
 
 @dataclass
-class RepairReason14Setr04400103:
+class RepairReason14Setr04400103(ISO20022MessageElement):
     cd: Optional[RepairReason19ChoiceSetr04400103] = field(
         default=None,
         metadata={
@@ -1958,7 +1959,7 @@ class RepairReason14Setr04400103:
 
 
 @dataclass
-class SecuritiesAccount35Setr04400103:
+class SecuritiesAccount35Setr04400103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1991,7 +1992,7 @@ class SecuritiesAccount35Setr04400103:
 
 
 @dataclass
-class SecurityIdentification19Setr04400103:
+class SecurityIdentification19Setr04400103(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -2022,7 +2023,7 @@ class SecurityIdentification19Setr04400103:
 
 
 @dataclass
-class SettlementDate16ChoiceSetr04400103:
+class SettlementDate16ChoiceSetr04400103(ISO20022MessageElement):
     dt: Optional[DateAndDateTime1ChoiceSetr04400103] = field(
         default=None,
         metadata={
@@ -2042,7 +2043,7 @@ class SettlementDate16ChoiceSetr04400103:
 
 
 @dataclass
-class TradeDate7ChoiceSetr04400103:
+class TradeDate7ChoiceSetr04400103(ISO20022MessageElement):
     dt: Optional[DateAndDateTime1ChoiceSetr04400103] = field(
         default=None,
         metadata={
@@ -2062,7 +2063,7 @@ class TradeDate7ChoiceSetr04400103:
 
 
 @dataclass
-class UnmatchedReason23Setr04400103:
+class UnmatchedReason23Setr04400103(ISO20022MessageElement):
     cd: Optional[UnmatchedReason32ChoiceSetr04400103] = field(
         default=None,
         metadata={
@@ -2085,7 +2086,7 @@ class UnmatchedReason23Setr04400103:
 
 
 @dataclass
-class AffirmationReason2ChoiceSetr04400103:
+class AffirmationReason2ChoiceSetr04400103(ISO20022MessageElement):
     rsn: list[AffirmationReason2Setr04400103] = field(
         default_factory=list,
         metadata={
@@ -2105,7 +2106,7 @@ class AffirmationReason2ChoiceSetr04400103:
 
 
 @dataclass
-class CancellationReason39ChoiceSetr04400103:
+class CancellationReason39ChoiceSetr04400103(ISO20022MessageElement):
     no_spcfd_rsn: Optional[NoReasonCode] = field(
         default=None,
         metadata={
@@ -2125,7 +2126,7 @@ class CancellationReason39ChoiceSetr04400103:
 
 
 @dataclass
-class InstructionProcessingReason3ChoiceSetr04400103:
+class InstructionProcessingReason3ChoiceSetr04400103(ISO20022MessageElement):
     rsn: list[RejectionReason67Setr04400103] = field(
         default_factory=list,
         metadata={
@@ -2145,7 +2146,7 @@ class InstructionProcessingReason3ChoiceSetr04400103:
 
 
 @dataclass
-class InstructionProcessingReason4ChoiceSetr04400103:
+class InstructionProcessingReason4ChoiceSetr04400103(ISO20022MessageElement):
     rsn: list[RepairReason14Setr04400103] = field(
         default_factory=list,
         metadata={
@@ -2165,7 +2166,7 @@ class InstructionProcessingReason4ChoiceSetr04400103:
 
 
 @dataclass
-class MatchingReason5ChoiceSetr04400103:
+class MatchingReason5ChoiceSetr04400103(ISO20022MessageElement):
     rsn: list[AllegementMatchingReason2Setr04400103] = field(
         default_factory=list,
         metadata={
@@ -2185,7 +2186,7 @@ class MatchingReason5ChoiceSetr04400103:
 
 
 @dataclass
-class MatchingReason6ChoiceSetr04400103:
+class MatchingReason6ChoiceSetr04400103(ISO20022MessageElement):
     rsn: list[UnmatchedReason23Setr04400103] = field(
         default_factory=list,
         metadata={
@@ -2205,7 +2206,7 @@ class MatchingReason6ChoiceSetr04400103:
 
 
 @dataclass
-class PartialFill4Setr04400103:
+class PartialFill4Setr04400103(ISO20022MessageElement):
     conf_qty: Optional[Quantity6ChoiceSetr04400103] = field(
         default=None,
         metadata={
@@ -2278,7 +2279,7 @@ class PartialFill4Setr04400103:
 
 
 @dataclass
-class PartyIdentification240ChoiceSetr04400103:
+class PartyIdentification240ChoiceSetr04400103(ISO20022MessageElement):
     bic: Optional[str] = field(
         default=None,
         metadata={
@@ -2307,7 +2308,7 @@ class PartyIdentification240ChoiceSetr04400103:
 
 
 @dataclass
-class PartyIdentification244ChoiceSetr04400103:
+class PartyIdentification244ChoiceSetr04400103(ISO20022MessageElement):
     bic: Optional[str] = field(
         default=None,
         metadata={
@@ -2337,7 +2338,7 @@ class PartyIdentification244ChoiceSetr04400103:
 
 
 @dataclass
-class PartyIdentification267Setr04400103:
+class PartyIdentification267Setr04400103(ISO20022MessageElement):
     bic: Optional[str] = field(
         default=None,
         metadata={
@@ -2368,7 +2369,7 @@ class PartyIdentification267Setr04400103:
 
 
 @dataclass
-class PendingProcessing2ChoiceSetr04400103:
+class PendingProcessing2ChoiceSetr04400103(ISO20022MessageElement):
     no_spcfd_rsn: Optional[NoReasonCode] = field(
         default=None,
         metadata={
@@ -2388,7 +2389,7 @@ class PendingProcessing2ChoiceSetr04400103:
 
 
 @dataclass
-class QuantityBreakdown76Setr04400103:
+class QuantityBreakdown76Setr04400103(ISO20022MessageElement):
     lot_nb: Optional[GenericIdentification37Setr04400103] = field(
         default=None,
         metadata={
@@ -2424,7 +2425,7 @@ class QuantityBreakdown76Setr04400103:
 
 
 @dataclass
-class ReplacementProcessingStatus10ChoiceSetr04400103:
+class ReplacementProcessingStatus10ChoiceSetr04400103(ISO20022MessageElement):
     accptd: Optional[ProprietaryReason4Setr04400103] = field(
         default=None,
         metadata={
@@ -2516,7 +2517,7 @@ class ReplacementProcessingStatus10ChoiceSetr04400103:
 
 
 @dataclass
-class YieldCalculation7Setr04400103:
+class YieldCalculation7Setr04400103(ISO20022MessageElement):
     val: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -2572,7 +2573,7 @@ class YieldCalculation7Setr04400103:
 
 
 @dataclass
-class AffirmationStatus11ChoiceSetr04400103:
+class AffirmationStatus11ChoiceSetr04400103(ISO20022MessageElement):
     affrmd: Optional[ProprietaryReason4Setr04400103] = field(
         default=None,
         metadata={
@@ -2600,7 +2601,7 @@ class AffirmationStatus11ChoiceSetr04400103:
 
 
 @dataclass
-class CancellationProcessingStatus10ChoiceSetr04400103:
+class CancellationProcessingStatus10ChoiceSetr04400103(ISO20022MessageElement):
     cxl_pdg: Optional[CancellationReason39ChoiceSetr04400103] = field(
         default=None,
         metadata={
@@ -2636,7 +2637,7 @@ class CancellationProcessingStatus10ChoiceSetr04400103:
 
 
 @dataclass
-class Commission25Setr04400103:
+class Commission25Setr04400103(ISO20022MessageElement):
     tp: Optional[CommissionType6ChoiceSetr04400103] = field(
         default=None,
         metadata={
@@ -2700,7 +2701,7 @@ class Commission25Setr04400103:
 
 
 @dataclass
-class ConfirmationPartyDetails11Setr04400103:
+class ConfirmationPartyDetails11Setr04400103(ISO20022MessageElement):
     id: Optional[PartyIdentification240ChoiceSetr04400103] = field(
         default=None,
         metadata={
@@ -2739,7 +2740,7 @@ class ConfirmationPartyDetails11Setr04400103:
 
 
 @dataclass
-class ConfirmationPartyDetails12Setr04400103:
+class ConfirmationPartyDetails12Setr04400103(ISO20022MessageElement):
     id: Optional[PartyIdentification240ChoiceSetr04400103] = field(
         default=None,
         metadata={
@@ -2794,7 +2795,7 @@ class ConfirmationPartyDetails12Setr04400103:
 
 
 @dataclass
-class ConfirmationPartyDetails14Setr04400103:
+class ConfirmationPartyDetails14Setr04400103(ISO20022MessageElement):
     id: Optional[PartyIdentification240ChoiceSetr04400103] = field(
         default=None,
         metadata={
@@ -2857,7 +2858,7 @@ class ConfirmationPartyDetails14Setr04400103:
 
 
 @dataclass
-class ConfirmationPartyDetails16Setr04400103:
+class ConfirmationPartyDetails16Setr04400103(ISO20022MessageElement):
     id: Optional[PartyIdentification240ChoiceSetr04400103] = field(
         default=None,
         metadata={
@@ -2928,7 +2929,7 @@ class ConfirmationPartyDetails16Setr04400103:
 
 
 @dataclass
-class MatchingStatus35ChoiceSetr04400103:
+class MatchingStatus35ChoiceSetr04400103(ISO20022MessageElement):
     mtchd: Optional[ProprietaryReason4Setr04400103] = field(
         default=None,
         metadata={
@@ -2972,7 +2973,7 @@ class MatchingStatus35ChoiceSetr04400103:
 
 
 @dataclass
-class PartyIdentification268Setr04400103:
+class PartyIdentification268Setr04400103(ISO20022MessageElement):
     id: Optional[PartyIdentification244ChoiceSetr04400103] = field(
         default=None,
         metadata={
@@ -3001,7 +3002,7 @@ class PartyIdentification268Setr04400103:
 
 
 @dataclass
-class PartyIdentificationAndAccount218Setr04400103:
+class PartyIdentificationAndAccount218Setr04400103(ISO20022MessageElement):
     id: Optional[PartyIdentification240ChoiceSetr04400103] = field(
         default=None,
         metadata={
@@ -3042,7 +3043,7 @@ class PartyIdentificationAndAccount218Setr04400103:
 
 
 @dataclass
-class PartyIdentificationAndAccount220Setr04400103:
+class PartyIdentificationAndAccount220Setr04400103(ISO20022MessageElement):
     id: Optional[PartyIdentification240ChoiceSetr04400103] = field(
         default=None,
         metadata={
@@ -3107,7 +3108,7 @@ class PartyIdentificationAndAccount220Setr04400103:
 
 
 @dataclass
-class ProcessingStatus98ChoiceSetr04400103:
+class ProcessingStatus98ChoiceSetr04400103(ISO20022MessageElement):
     ackd_accptd: Optional[ProprietaryReason4Setr04400103] = field(
         default=None,
         metadata={
@@ -3263,7 +3264,7 @@ class ProcessingStatus98ChoiceSetr04400103:
 
 
 @dataclass
-class ConfirmationParties9Setr04400103:
+class ConfirmationParties9Setr04400103(ISO20022MessageElement):
     invstr: list[PartyIdentificationAndAccount220Setr04400103] = field(
         default_factory=list,
         metadata={
@@ -3371,7 +3372,7 @@ class ConfirmationParties9Setr04400103:
 
 
 @dataclass
-class Order23Setr04400103:
+class Order23Setr04400103(ISO20022MessageElement):
     biz_prc_tp: Optional[BusinessProcessType2ChoiceSetr04400103] = field(
         default=None,
         metadata={
@@ -3749,7 +3750,7 @@ class Order23Setr04400103:
 
 
 @dataclass
-class SettlementParties121Setr04400103:
+class SettlementParties121Setr04400103(ISO20022MessageElement):
     dpstry: Optional[PartyIdentification268Setr04400103] = field(
         default=None,
         metadata={
@@ -3801,7 +3802,7 @@ class SettlementParties121Setr04400103:
 
 
 @dataclass
-class SecuritiesTradeConfirmationStatusAdviceV03Setr04400103:
+class SecuritiesTradeConfirmationStatusAdviceV03Setr04400103(ISO20022MessageElement):
     id: Optional[TransactiontIdentification4Setr04400103] = field(
         default=None,
         metadata={
@@ -3911,7 +3912,7 @@ class SecuritiesTradeConfirmationStatusAdviceV03Setr04400103:
 
 
 @dataclass
-class Setr04400103:
+class Setr04400103(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:setr.044.001.03"
 

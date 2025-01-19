@@ -3,13 +3,14 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime, XmlPeriod
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import AddressType2Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:sese.014.001.09"
 
 
 @dataclass
-class GenericIdentification1Sese01400109:
+class GenericIdentification1Sese01400109(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -44,7 +45,7 @@ class GenericIdentification1Sese01400109:
 
 
 @dataclass
-class MarketPracticeVersion1Sese01400109:
+class MarketPracticeVersion1Sese01400109(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -77,7 +78,7 @@ class MarketPracticeVersion1Sese01400109:
 
 
 @dataclass
-class MessageIdentification1Sese01400109:
+class MessageIdentification1Sese01400109(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -101,7 +102,7 @@ class MessageIdentification1Sese01400109:
 
 
 @dataclass
-class PostalAddress1Sese01400109:
+class PostalAddress1Sese01400109(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -184,7 +185,7 @@ class PostalAddress1Sese01400109:
 
 
 @dataclass
-class NameAndAddress5Sese01400109:
+class NameAndAddress5Sese01400109(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -207,7 +208,7 @@ class NameAndAddress5Sese01400109:
 
 
 @dataclass
-class PartyIdentification125ChoiceSese01400109:
+class PartyIdentification125ChoiceSese01400109(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -236,7 +237,7 @@ class PartyIdentification125ChoiceSese01400109:
 
 
 @dataclass
-class PartyIdentification139Sese01400109:
+class PartyIdentification139Sese01400109(ISO20022MessageElement):
     pty: Optional[PartyIdentification125ChoiceSese01400109] = field(
         default=None,
         metadata={
@@ -258,7 +259,7 @@ class PartyIdentification139Sese01400109:
 
 
 @dataclass
-class AdditionalReference10Sese01400109:
+class AdditionalReference10Sese01400109(ISO20022MessageElement):
     ref: Optional[str] = field(
         default=None,
         metadata={
@@ -291,7 +292,7 @@ class AdditionalReference10Sese01400109:
 
 
 @dataclass
-class AdditionalReference11Sese01400109:
+class AdditionalReference11Sese01400109(ISO20022MessageElement):
     ref: Optional[str] = field(
         default=None,
         metadata={
@@ -324,7 +325,7 @@ class AdditionalReference11Sese01400109:
 
 
 @dataclass
-class TransferReference14Sese01400109:
+class TransferReference14Sese01400109(ISO20022MessageElement):
     trf_ref: Optional[str] = field(
         default=None,
         metadata={
@@ -385,7 +386,7 @@ class TransferReference14Sese01400109:
 
 
 @dataclass
-class PortfolioTransferCancellationRequestV09Sese01400109:
+class PortfolioTransferCancellationRequestV09Sese01400109(ISO20022MessageElement):
     msg_ref: Optional[MessageIdentification1Sese01400109] = field(
         default=None,
         metadata={
@@ -449,7 +450,7 @@ class PortfolioTransferCancellationRequestV09Sese01400109:
 
 
 @dataclass
-class Sese01400109:
+class Sese01400109(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:sese.014.001.09"
 

@@ -1,11 +1,13 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
+
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:admi.009.001.02"
 
 
 @dataclass
-class RequestDetails3Admi00900102:
+class RequestDetails3Admi00900102(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -30,7 +32,7 @@ class RequestDetails3Admi00900102:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Admi00900102:
+class SupplementaryDataEnvelope1Admi00900102(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -41,7 +43,7 @@ class SupplementaryDataEnvelope1Admi00900102:
 
 
 @dataclass
-class SupplementaryData1Admi00900102:
+class SupplementaryData1Admi00900102(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -64,7 +66,7 @@ class SupplementaryData1Admi00900102:
 
 
 @dataclass
-class StaticDataRequestV02Admi00900102:
+class StaticDataRequestV02Admi00900102(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -105,7 +107,7 @@ class StaticDataRequestV02Admi00900102:
 
 
 @dataclass
-class Admi00900102:
+class Admi00900102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:admi.009.001.02"
 

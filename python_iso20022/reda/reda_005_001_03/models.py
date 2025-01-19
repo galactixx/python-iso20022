@@ -3,6 +3,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     AddressType2Code,
     DistributionPolicy1Code,
@@ -14,7 +15,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:reda.005.001.03"
 
 
 @dataclass
-class GenericIdentification1Reda00500103:
+class GenericIdentification1Reda00500103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -49,7 +50,7 @@ class GenericIdentification1Reda00500103:
 
 
 @dataclass
-class IdentificationSource3ChoiceReda00500103:
+class IdentificationSource3ChoiceReda00500103(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -73,7 +74,7 @@ class IdentificationSource3ChoiceReda00500103:
 
 
 @dataclass
-class MessageIdentification1Reda00500103:
+class MessageIdentification1Reda00500103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -97,7 +98,7 @@ class MessageIdentification1Reda00500103:
 
 
 @dataclass
-class OtherIdentification1Reda00500103:
+class OtherIdentification1Reda00500103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -131,7 +132,7 @@ class OtherIdentification1Reda00500103:
 
 
 @dataclass
-class PostalAddress1Reda00500103:
+class PostalAddress1Reda00500103(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -214,7 +215,7 @@ class PostalAddress1Reda00500103:
 
 
 @dataclass
-class NameAndAddress5Reda00500103:
+class NameAndAddress5Reda00500103(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -237,7 +238,7 @@ class NameAndAddress5Reda00500103:
 
 
 @dataclass
-class SecurityIdentification19Reda00500103:
+class SecurityIdentification19Reda00500103(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -268,7 +269,7 @@ class SecurityIdentification19Reda00500103:
 
 
 @dataclass
-class FinancialInstrument71Reda00500103:
+class FinancialInstrument71Reda00500103(ISO20022MessageElement):
     id: Optional[SecurityIdentification19Reda00500103] = field(
         default=None,
         metadata={
@@ -347,7 +348,7 @@ class FinancialInstrument71Reda00500103:
 
 
 @dataclass
-class PartyIdentification125ChoiceReda00500103:
+class PartyIdentification125ChoiceReda00500103(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -376,7 +377,7 @@ class PartyIdentification125ChoiceReda00500103:
 
 
 @dataclass
-class PartyIdentification139Reda00500103:
+class PartyIdentification139Reda00500103(ISO20022MessageElement):
     pty: Optional[PartyIdentification125ChoiceReda00500103] = field(
         default=None,
         metadata={
@@ -398,7 +399,7 @@ class PartyIdentification139Reda00500103:
 
 
 @dataclass
-class AdditionalReference10Reda00500103:
+class AdditionalReference10Reda00500103(ISO20022MessageElement):
     ref: Optional[str] = field(
         default=None,
         metadata={
@@ -431,7 +432,7 @@ class AdditionalReference10Reda00500103:
 
 
 @dataclass
-class FundParameters5Reda00500103:
+class FundParameters5Reda00500103(ISO20022MessageElement):
     fin_instrm_dtls: list[FinancialInstrument71Reda00500103] = field(
         default_factory=list,
         metadata={
@@ -477,7 +478,7 @@ class FundParameters5Reda00500103:
 
 
 @dataclass
-class FundParameters4ChoiceReda00500103:
+class FundParameters4ChoiceReda00500103(ISO20022MessageElement):
     no_crit: Optional[NoCriteria1Code] = field(
         default=None,
         metadata={
@@ -497,7 +498,7 @@ class FundParameters4ChoiceReda00500103:
 
 
 @dataclass
-class InvestmentFundReportRequestV03Reda00500103:
+class InvestmentFundReportRequestV03Reda00500103(ISO20022MessageElement):
     msg_id: Optional[MessageIdentification1Reda00500103] = field(
         default=None,
         metadata={
@@ -535,7 +536,7 @@ class InvestmentFundReportRequestV03Reda00500103:
 
 
 @dataclass
-class Reda00500103:
+class Reda00500103(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:reda.005.001.03"
 

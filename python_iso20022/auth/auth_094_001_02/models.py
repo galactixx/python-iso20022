@@ -16,13 +16,14 @@ from python_iso20022.auth.enums import (
     TransactionOperationType6Code,
     WeekDay3Code,
 )
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import AddressType2Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.094.001.02"
 
 
 @dataclass
-class DatePeriod1Auth09400102:
+class DatePeriod1Auth09400102(ISO20022MessageElement):
     fr_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -43,7 +44,7 @@ class DatePeriod1Auth09400102:
 
 
 @dataclass
-class DateTimePeriod1Auth09400102:
+class DateTimePeriod1Auth09400102(ISO20022MessageElement):
     fr_dt_tm: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -65,7 +66,7 @@ class DateTimePeriod1Auth09400102:
 
 
 @dataclass
-class GenericIdentification1Auth09400102:
+class GenericIdentification1Auth09400102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -100,7 +101,7 @@ class GenericIdentification1Auth09400102:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth09400102:
+class SupplementaryDataEnvelope1Auth09400102(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -111,7 +112,7 @@ class SupplementaryDataEnvelope1Auth09400102:
 
 
 @dataclass
-class CorporateSectorCriteria5Auth09400102:
+class CorporateSectorCriteria5Auth09400102(ISO20022MessageElement):
     fisctr: list[FinancialPartySectorType2Code] = field(
         default_factory=list,
         metadata={
@@ -140,7 +141,7 @@ class CorporateSectorCriteria5Auth09400102:
 
 
 @dataclass
-class DateOrBlankQuery2ChoiceAuth09400102:
+class DateOrBlankQuery2ChoiceAuth09400102(ISO20022MessageElement):
     rg: Optional[DatePeriod1Auth09400102] = field(
         default=None,
         metadata={
@@ -160,7 +161,7 @@ class DateOrBlankQuery2ChoiceAuth09400102:
 
 
 @dataclass
-class PostalAddress1Auth09400102:
+class PostalAddress1Auth09400102(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -243,7 +244,7 @@ class PostalAddress1Auth09400102:
 
 
 @dataclass
-class SecuritiesTradeVenueCriteria1ChoiceAuth09400102:
+class SecuritiesTradeVenueCriteria1ChoiceAuth09400102(ISO20022MessageElement):
     mic: list[str] = field(
         default_factory=list,
         metadata={
@@ -264,7 +265,7 @@ class SecuritiesTradeVenueCriteria1ChoiceAuth09400102:
 
 
 @dataclass
-class SupplementaryData1Auth09400102:
+class SupplementaryData1Auth09400102(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -287,7 +288,7 @@ class SupplementaryData1Auth09400102:
 
 
 @dataclass
-class TradePartyIdentificationQuery8Auth09400102:
+class TradePartyIdentificationQuery8Auth09400102(ISO20022MessageElement):
     lei: list[str] = field(
         default_factory=list,
         metadata={
@@ -327,7 +328,7 @@ class TradePartyIdentificationQuery8Auth09400102:
 
 
 @dataclass
-class TradePartyIdentificationQuery9Auth09400102:
+class TradePartyIdentificationQuery9Auth09400102(ISO20022MessageElement):
     lei: list[str] = field(
         default_factory=list,
         metadata={
@@ -376,7 +377,7 @@ class TradePartyIdentificationQuery9Auth09400102:
 
 
 @dataclass
-class TradeQueryExecutionFrequency3Auth09400102:
+class TradeQueryExecutionFrequency3Auth09400102(ISO20022MessageElement):
     frqcy_tp: Optional[Frequency14Code] = field(
         default=None,
         metadata={
@@ -407,7 +408,7 @@ class TradeQueryExecutionFrequency3Auth09400102:
 
 
 @dataclass
-class TradeTypeQueryCriteria2Auth09400102:
+class TradeTypeQueryCriteria2Auth09400102(ISO20022MessageElement):
     oprtr: Optional[Operation3Code] = field(
         default=None,
         metadata={
@@ -436,7 +437,7 @@ class TradeTypeQueryCriteria2Auth09400102:
 
 
 @dataclass
-class NameAndAddress5Auth09400102:
+class NameAndAddress5Auth09400102(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -459,7 +460,7 @@ class NameAndAddress5Auth09400102:
 
 
 @dataclass
-class TradeAdditionalQueryCriteria7Auth09400102:
+class TradeAdditionalQueryCriteria7Auth09400102(ISO20022MessageElement):
     actn_tp: list[TransactionOperationType6Code] = field(
         default_factory=list,
         metadata={
@@ -495,7 +496,7 @@ class TradeAdditionalQueryCriteria7Auth09400102:
 
 
 @dataclass
-class TradeDateTimeQueryCriteria2Auth09400102:
+class TradeDateTimeQueryCriteria2Auth09400102(ISO20022MessageElement):
     rptg_dt_tm: Optional[DateTimePeriod1Auth09400102] = field(
         default=None,
         metadata={
@@ -531,7 +532,7 @@ class TradeDateTimeQueryCriteria2Auth09400102:
 
 
 @dataclass
-class TradePartyQueryCriteria5Auth09400102:
+class TradePartyQueryCriteria5Auth09400102(ISO20022MessageElement):
     oprtr: Optional[Operation3Code] = field(
         default=None,
         metadata={
@@ -624,7 +625,7 @@ class TradePartyQueryCriteria5Auth09400102:
 
 
 @dataclass
-class TradeRecurrentQuery5Auth09400102:
+class TradeRecurrentQuery5Auth09400102(ISO20022MessageElement):
     qry_tp: Optional[str] = field(
         default=None,
         metadata={
@@ -657,7 +658,7 @@ class TradeRecurrentQuery5Auth09400102:
 
 
 @dataclass
-class PartyIdentification121ChoiceAuth09400102:
+class PartyIdentification121ChoiceAuth09400102(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -695,7 +696,7 @@ class PartyIdentification121ChoiceAuth09400102:
 
 
 @dataclass
-class TradeQueryCriteria10Auth09400102:
+class TradeQueryCriteria10Auth09400102(ISO20022MessageElement):
     trad_life_cycl_hstry: Optional[bool] = field(
         default=None,
         metadata={
@@ -749,7 +750,7 @@ class TradeQueryCriteria10Auth09400102:
 
 
 @dataclass
-class TradeReportQuery13ChoiceAuth09400102:
+class TradeReportQuery13ChoiceAuth09400102(ISO20022MessageElement):
     ad_hoc_qry: Optional[TradeQueryCriteria10Auth09400102] = field(
         default=None,
         metadata={
@@ -769,7 +770,9 @@ class TradeReportQuery13ChoiceAuth09400102:
 
 
 @dataclass
-class SecuritiesFinancingReportingTransactionQueryV02Auth09400102:
+class SecuritiesFinancingReportingTransactionQueryV02Auth09400102(
+    ISO20022MessageElement
+):
     rqstng_authrty: Optional[PartyIdentification121ChoiceAuth09400102] = field(
         default=None,
         metadata={
@@ -799,7 +802,7 @@ class SecuritiesFinancingReportingTransactionQueryV02Auth09400102:
 
 
 @dataclass
-class Auth09400102:
+class Auth09400102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.094.001.02"
 

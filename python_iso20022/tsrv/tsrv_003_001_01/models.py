@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     AddressType2Code,
     GovernanceIdentification1Code,
@@ -22,7 +23,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:tsrv.003.001.01"
 
 
 @dataclass
-class ActiveCurrencyAndAmountTsrv00300101:
+class ActiveCurrencyAndAmountTsrv00300101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -44,7 +45,7 @@ class ActiveCurrencyAndAmountTsrv00300101:
 
 
 @dataclass
-class AutoExtend1ChoiceTsrv00300101:
+class AutoExtend1ChoiceTsrv00300101(ISO20022MessageElement):
     days: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -86,7 +87,7 @@ class AutoExtend1ChoiceTsrv00300101:
 
 
 @dataclass
-class DateAndDateTimeChoiceTsrv00300101:
+class DateAndDateTimeChoiceTsrv00300101(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -106,7 +107,7 @@ class DateAndDateTimeChoiceTsrv00300101:
 
 
 @dataclass
-class DateAndPlaceOfBirthTsrv00300101:
+class DateAndPlaceOfBirthTsrv00300101(ISO20022MessageElement):
     birth_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -150,7 +151,7 @@ class DateAndPlaceOfBirthTsrv00300101:
 
 
 @dataclass
-class DateInformation1Tsrv00300101:
+class DateInformation1Tsrv00300101(ISO20022MessageElement):
     start_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -185,7 +186,7 @@ class DateInformation1Tsrv00300101:
 
 
 @dataclass
-class GenericIdentification1Tsrv00300101:
+class GenericIdentification1Tsrv00300101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -220,7 +221,7 @@ class GenericIdentification1Tsrv00300101:
 
 
 @dataclass
-class OrganisationIdentificationSchemeName1ChoiceTsrv00300101:
+class OrganisationIdentificationSchemeName1ChoiceTsrv00300101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -244,7 +245,7 @@ class OrganisationIdentificationSchemeName1ChoiceTsrv00300101:
 
 
 @dataclass
-class Percentage1Tsrv00300101:
+class Percentage1Tsrv00300101(ISO20022MessageElement):
     rate: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -270,7 +271,7 @@ class Percentage1Tsrv00300101:
 
 
 @dataclass
-class PersonIdentificationSchemeName1ChoiceTsrv00300101:
+class PersonIdentificationSchemeName1ChoiceTsrv00300101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -294,7 +295,7 @@ class PersonIdentificationSchemeName1ChoiceTsrv00300101:
 
 
 @dataclass
-class PlaceOfPresentation1Tsrv00300101:
+class PlaceOfPresentation1Tsrv00300101(ISO20022MessageElement):
     plc: Optional[str] = field(
         default=None,
         metadata={
@@ -318,7 +319,7 @@ class PlaceOfPresentation1Tsrv00300101:
 
 
 @dataclass
-class PostalAddress12Tsrv00300101:
+class PostalAddress12Tsrv00300101(ISO20022MessageElement):
     twn_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -352,7 +353,7 @@ class PostalAddress12Tsrv00300101:
 
 
 @dataclass
-class ProprietaryData3Tsrv00300101:
+class ProprietaryData3Tsrv00300101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -364,7 +365,7 @@ class ProprietaryData3Tsrv00300101:
 
 
 @dataclass
-class Channel1ChoiceTsrv00300101:
+class Channel1ChoiceTsrv00300101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -386,7 +387,7 @@ class Channel1ChoiceTsrv00300101:
 
 
 @dataclass
-class CommunicationMethod1ChoiceTsrv00300101:
+class CommunicationMethod1ChoiceTsrv00300101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -408,7 +409,7 @@ class CommunicationMethod1ChoiceTsrv00300101:
 
 
 @dataclass
-class ContactDetails2Tsrv00300101:
+class ContactDetails2Tsrv00300101(ISO20022MessageElement):
     nm_prfx: Optional[NamePrefix1Code] = field(
         default=None,
         metadata={
@@ -477,7 +478,7 @@ class ContactDetails2Tsrv00300101:
 
 
 @dataclass
-class CountrySubdivision1ChoiceTsrv00300101:
+class CountrySubdivision1ChoiceTsrv00300101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -499,7 +500,7 @@ class CountrySubdivision1ChoiceTsrv00300101:
 
 
 @dataclass
-class DocumentFormat1ChoiceTsrv00300101:
+class DocumentFormat1ChoiceTsrv00300101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -521,7 +522,7 @@ class DocumentFormat1ChoiceTsrv00300101:
 
 
 @dataclass
-class FixedOrRecurrentDate1ChoiceTsrv00300101:
+class FixedOrRecurrentDate1ChoiceTsrv00300101(ISO20022MessageElement):
     fxd_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -541,7 +542,7 @@ class FixedOrRecurrentDate1ChoiceTsrv00300101:
 
 
 @dataclass
-class GenericOrganisationIdentification1Tsrv00300101:
+class GenericOrganisationIdentification1Tsrv00300101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -574,7 +575,7 @@ class GenericOrganisationIdentification1Tsrv00300101:
 
 
 @dataclass
-class GenericPersonIdentification1Tsrv00300101:
+class GenericPersonIdentification1Tsrv00300101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -607,7 +608,7 @@ class GenericPersonIdentification1Tsrv00300101:
 
 
 @dataclass
-class GovernanceIdentification1ChoiceTsrv00300101:
+class GovernanceIdentification1ChoiceTsrv00300101(ISO20022MessageElement):
     cd: Optional[GovernanceIdentification1Code] = field(
         default=None,
         metadata={
@@ -627,7 +628,7 @@ class GovernanceIdentification1ChoiceTsrv00300101:
 
 
 @dataclass
-class ModelFormIdentification1ChoiceTsrv00300101:
+class ModelFormIdentification1ChoiceTsrv00300101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -649,7 +650,7 @@ class ModelFormIdentification1ChoiceTsrv00300101:
 
 
 @dataclass
-class NarrativeType1ChoiceTsrv00300101:
+class NarrativeType1ChoiceTsrv00300101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -671,7 +672,7 @@ class NarrativeType1ChoiceTsrv00300101:
 
 
 @dataclass
-class PartyType1ChoiceTsrv00300101:
+class PartyType1ChoiceTsrv00300101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -693,7 +694,7 @@ class PartyType1ChoiceTsrv00300101:
 
 
 @dataclass
-class PlaceOrUnderConfirmationChoice1Tsrv00300101:
+class PlaceOrUnderConfirmationChoice1Tsrv00300101(ISO20022MessageElement):
     plc_of_presntn: Optional[PlaceOfPresentation1Tsrv00300101] = field(
         default=None,
         metadata={
@@ -713,7 +714,7 @@ class PlaceOrUnderConfirmationChoice1Tsrv00300101:
 
 
 @dataclass
-class PostalAddress6Tsrv00300101:
+class PostalAddress6Tsrv00300101(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -815,7 +816,7 @@ class PostalAddress6Tsrv00300101:
 
 
 @dataclass
-class PresentationDocumentFormat1ChoiceTsrv00300101:
+class PresentationDocumentFormat1ChoiceTsrv00300101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -837,7 +838,7 @@ class PresentationDocumentFormat1ChoiceTsrv00300101:
 
 
 @dataclass
-class PresentationMedium1ChoiceTsrv00300101:
+class PresentationMedium1ChoiceTsrv00300101(ISO20022MessageElement):
     cd: Optional[PresentationMedium1Code] = field(
         default=None,
         metadata={
@@ -857,7 +858,7 @@ class PresentationMedium1ChoiceTsrv00300101:
 
 
 @dataclass
-class UnderlyingTradeTransactionType1ChoiceTsrv00300101:
+class UnderlyingTradeTransactionType1ChoiceTsrv00300101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -879,7 +880,7 @@ class UnderlyingTradeTransactionType1ChoiceTsrv00300101:
 
 
 @dataclass
-class UndertakingAmount1Tsrv00300101:
+class UndertakingAmount1Tsrv00300101(ISO20022MessageElement):
     amt: Optional[ActiveCurrencyAndAmountTsrv00300101] = field(
         default=None,
         metadata={
@@ -913,7 +914,7 @@ class UndertakingAmount1Tsrv00300101:
 
 
 @dataclass
-class UndertakingAmount4Tsrv00300101:
+class UndertakingAmount4Tsrv00300101(ISO20022MessageElement):
     vartn_amt: Optional[ActiveCurrencyAndAmountTsrv00300101] = field(
         default=None,
         metadata={
@@ -934,7 +935,7 @@ class UndertakingAmount4Tsrv00300101:
 
 
 @dataclass
-class UndertakingDocumentType1ChoiceTsrv00300101:
+class UndertakingDocumentType1ChoiceTsrv00300101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -956,7 +957,7 @@ class UndertakingDocumentType1ChoiceTsrv00300101:
 
 
 @dataclass
-class UndertakingDocumentType2ChoiceTsrv00300101:
+class UndertakingDocumentType2ChoiceTsrv00300101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -978,7 +979,7 @@ class UndertakingDocumentType2ChoiceTsrv00300101:
 
 
 @dataclass
-class UndertakingType1ChoiceTsrv00300101:
+class UndertakingType1ChoiceTsrv00300101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -1000,7 +1001,7 @@ class UndertakingType1ChoiceTsrv00300101:
 
 
 @dataclass
-class AmountOrPercentage1ChoiceTsrv00300101:
+class AmountOrPercentage1ChoiceTsrv00300101(ISO20022MessageElement):
     dfnd_amt: Optional[UndertakingAmount4Tsrv00300101] = field(
         default=None,
         metadata={
@@ -1020,7 +1021,7 @@ class AmountOrPercentage1ChoiceTsrv00300101:
 
 
 @dataclass
-class CommunicationChannel1Tsrv00300101:
+class CommunicationChannel1Tsrv00300101(ISO20022MessageElement):
     mtd: Optional[str] = field(
         default=None,
         metadata={
@@ -1062,7 +1063,7 @@ class CommunicationChannel1Tsrv00300101:
 
 
 @dataclass
-class Document10Tsrv00300101:
+class Document10Tsrv00300101(ISO20022MessageElement):
     doc_tp: Optional[UndertakingDocumentType2ChoiceTsrv00300101] = field(
         default=None,
         metadata={
@@ -1107,7 +1108,7 @@ class Document10Tsrv00300101:
 
 
 @dataclass
-class Location1Tsrv00300101:
+class Location1Tsrv00300101(ISO20022MessageElement):
     ctry: Optional[str] = field(
         default=None,
         metadata={
@@ -1139,7 +1140,7 @@ class Location1Tsrv00300101:
 
 
 @dataclass
-class ModelFormIdentification1Tsrv00300101:
+class ModelFormIdentification1Tsrv00300101(ISO20022MessageElement):
     id: Optional[ModelFormIdentification1ChoiceTsrv00300101] = field(
         default=None,
         metadata={
@@ -1162,7 +1163,7 @@ class ModelFormIdentification1Tsrv00300101:
 
 
 @dataclass
-class Narrative1Tsrv00300101:
+class Narrative1Tsrv00300101(ISO20022MessageElement):
     tp: Optional[NarrativeType1ChoiceTsrv00300101] = field(
         default=None,
         metadata={
@@ -1186,7 +1187,7 @@ class Narrative1Tsrv00300101:
 
 
 @dataclass
-class NonExtension1Tsrv00300101:
+class NonExtension1Tsrv00300101(ISO20022MessageElement):
     ntfctn_prd: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -1234,7 +1235,7 @@ class NonExtension1Tsrv00300101:
 
 
 @dataclass
-class OrganisationIdentification8Tsrv00300101:
+class OrganisationIdentification8Tsrv00300101(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -1255,7 +1256,7 @@ class OrganisationIdentification8Tsrv00300101:
 
 
 @dataclass
-class PersonIdentification5Tsrv00300101:
+class PersonIdentification5Tsrv00300101(ISO20022MessageElement):
     dt_and_plc_of_birth: Optional[DateAndPlaceOfBirthTsrv00300101] = field(
         default=None,
         metadata={
@@ -1275,7 +1276,7 @@ class PersonIdentification5Tsrv00300101:
 
 
 @dataclass
-class Presentation3Tsrv00300101:
+class Presentation3Tsrv00300101(ISO20022MessageElement):
     frmt: Optional[DocumentFormat1ChoiceTsrv00300101] = field(
         default=None,
         metadata={
@@ -1305,7 +1306,7 @@ class Presentation3Tsrv00300101:
 
 
 @dataclass
-class UnderlyingTradeTransaction1Tsrv00300101:
+class UnderlyingTradeTransaction1Tsrv00300101(ISO20022MessageElement):
     tp: Optional[UnderlyingTradeTransactionType1ChoiceTsrv00300101] = field(
         default=None,
         metadata={
@@ -1373,7 +1374,7 @@ class UnderlyingTradeTransaction1Tsrv00300101:
 
 
 @dataclass
-class AutoExtension1Tsrv00300101:
+class AutoExtension1Tsrv00300101(ISO20022MessageElement):
     prd: Optional[AutoExtend1ChoiceTsrv00300101] = field(
         default=None,
         metadata={
@@ -1401,7 +1402,7 @@ class AutoExtension1Tsrv00300101:
 
 
 @dataclass
-class Document8Tsrv00300101:
+class Document8Tsrv00300101(ISO20022MessageElement):
     tp: Optional[PresentationDocumentFormat1ChoiceTsrv00300101] = field(
         default=None,
         metadata={
@@ -1432,7 +1433,7 @@ class Document8Tsrv00300101:
 
 
 @dataclass
-class GovernanceRules1Tsrv00300101:
+class GovernanceRules1Tsrv00300101(ISO20022MessageElement):
     rule_id: Optional[GovernanceIdentification1ChoiceTsrv00300101] = field(
         default=None,
         metadata={
@@ -1461,7 +1462,7 @@ class GovernanceRules1Tsrv00300101:
 
 
 @dataclass
-class Party11ChoiceTsrv00300101:
+class Party11ChoiceTsrv00300101(ISO20022MessageElement):
     org_id: Optional[OrganisationIdentification8Tsrv00300101] = field(
         default=None,
         metadata={
@@ -1481,7 +1482,7 @@ class Party11ChoiceTsrv00300101:
 
 
 @dataclass
-class Trigger1Tsrv00300101:
+class Trigger1Tsrv00300101(ISO20022MessageElement):
     dt_chc: Optional[FixedOrRecurrentDate1ChoiceTsrv00300101] = field(
         default=None,
         metadata={
@@ -1501,7 +1502,7 @@ class Trigger1Tsrv00300101:
 
 
 @dataclass
-class UndertakingWording1Tsrv00300101:
+class UndertakingWording1Tsrv00300101(ISO20022MessageElement):
     mdl_form: Optional[ModelFormIdentification1Tsrv00300101] = field(
         default=None,
         metadata={
@@ -1530,7 +1531,7 @@ class UndertakingWording1Tsrv00300101:
 
 
 @dataclass
-class AmountAndTrigger1Tsrv00300101:
+class AmountAndTrigger1Tsrv00300101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1563,7 +1564,7 @@ class AmountAndTrigger1Tsrv00300101:
 
 
 @dataclass
-class ExpiryTerms1Tsrv00300101:
+class ExpiryTerms1Tsrv00300101(ISO20022MessageElement):
     dt_tm: Optional[DateAndDateTimeChoiceTsrv00300101] = field(
         default=None,
         metadata={
@@ -1601,7 +1602,7 @@ class ExpiryTerms1Tsrv00300101:
 
 
 @dataclass
-class PartyIdentification43Tsrv00300101:
+class PartyIdentification43Tsrv00300101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1648,7 +1649,7 @@ class PartyIdentification43Tsrv00300101:
 
 
 @dataclass
-class Presentation1Tsrv00300101:
+class Presentation1Tsrv00300101(ISO20022MessageElement):
     mdm: Optional[PresentationMedium1ChoiceTsrv00300101] = field(
         default=None,
         metadata={
@@ -1689,7 +1690,7 @@ class Presentation1Tsrv00300101:
 
 
 @dataclass
-class AutomaticVariation1Tsrv00300101:
+class AutomaticVariation1Tsrv00300101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1733,7 +1734,7 @@ class AutomaticVariation1Tsrv00300101:
 
 
 @dataclass
-class ExpiryDetails1Tsrv00300101:
+class ExpiryDetails1Tsrv00300101(ISO20022MessageElement):
     xpry_terms: Optional[ExpiryTerms1Tsrv00300101] = field(
         default=None,
         metadata={
@@ -1756,7 +1757,7 @@ class ExpiryDetails1Tsrv00300101:
 
 
 @dataclass
-class PartyAndSignature2Tsrv00300101:
+class PartyAndSignature2Tsrv00300101(ISO20022MessageElement):
     pty: Optional[PartyIdentification43Tsrv00300101] = field(
         default=None,
         metadata={
@@ -1778,7 +1779,7 @@ class PartyAndSignature2Tsrv00300101:
 
 
 @dataclass
-class PartyAndType1Tsrv00300101:
+class PartyAndType1Tsrv00300101(ISO20022MessageElement):
     tp: Optional[PartyType1ChoiceTsrv00300101] = field(
         default=None,
         metadata={
@@ -1799,7 +1800,7 @@ class PartyAndType1Tsrv00300101:
 
 
 @dataclass
-class Document9Tsrv00300101:
+class Document9Tsrv00300101(ISO20022MessageElement):
     tp: Optional[UndertakingDocumentType1ChoiceTsrv00300101] = field(
         default=None,
         metadata={
@@ -1851,7 +1852,7 @@ class Document9Tsrv00300101:
 
 
 @dataclass
-class Undertaking4Tsrv00300101:
+class Undertaking4Tsrv00300101(ISO20022MessageElement):
     nm: Optional[UndertakingName1Code] = field(
         default=None,
         metadata={
@@ -2056,7 +2057,7 @@ class Undertaking4Tsrv00300101:
 
 
 @dataclass
-class Undertaking3Tsrv00300101:
+class Undertaking3Tsrv00300101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -2321,7 +2322,7 @@ class Undertaking3Tsrv00300101:
 
 
 @dataclass
-class UndertakingIssuanceMessageTsrv00300101:
+class UndertakingIssuanceMessageTsrv00300101(ISO20022MessageElement):
     udrtkg_dtls: Optional[Undertaking3Tsrv00300101] = field(
         default=None,
         metadata={
@@ -2342,7 +2343,7 @@ class UndertakingIssuanceMessageTsrv00300101:
 
 
 @dataclass
-class UndertakingAdvice2Tsrv00300101:
+class UndertakingAdvice2Tsrv00300101(ISO20022MessageElement):
     applcnt_ref_nb: Optional[str] = field(
         default=None,
         metadata={
@@ -2401,7 +2402,7 @@ class UndertakingAdvice2Tsrv00300101:
 
 
 @dataclass
-class UndertakingIssuanceNotificationV01Tsrv00300101:
+class UndertakingIssuanceNotificationV01Tsrv00300101(ISO20022MessageElement):
     udrtkg_issnc_ntfctn_dtls: Optional[UndertakingAdvice2Tsrv00300101] = field(
         default=None,
         metadata={
@@ -2422,7 +2423,7 @@ class UndertakingIssuanceNotificationV01Tsrv00300101:
 
 
 @dataclass
-class Tsrv00300101:
+class Tsrv00300101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:tsrv.003.001.01"
 

@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     AddressType2Code,
     AdjustmentDirection1Code,
@@ -21,7 +22,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:tsin.001.001.01"
 
 
 @dataclass
-class ActiveCurrencyAndAmountTsin00100101:
+class ActiveCurrencyAndAmountTsin00100101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -43,7 +44,7 @@ class ActiveCurrencyAndAmountTsin00100101:
 
 
 @dataclass
-class AgreementClauses1Tsin00100101:
+class AgreementClauses1Tsin00100101(ISO20022MessageElement):
     desc: Optional[str] = field(
         default=None,
         metadata={
@@ -67,7 +68,7 @@ class AgreementClauses1Tsin00100101:
 
 
 @dataclass
-class ClearingSystemMemberIdentification2ChoiceTsin00100101:
+class ClearingSystemMemberIdentification2ChoiceTsin00100101(ISO20022MessageElement):
     uschu: Optional[str] = field(
         default=None,
         metadata={
@@ -279,7 +280,7 @@ class ClearingSystemMemberIdentification2ChoiceTsin00100101:
 
 
 @dataclass
-class DateAndPlaceOfBirthTsin00100101:
+class DateAndPlaceOfBirthTsin00100101(ISO20022MessageElement):
     birth_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -323,7 +324,7 @@ class DateAndPlaceOfBirthTsin00100101:
 
 
 @dataclass
-class GenericIdentification3Tsin00100101:
+class GenericIdentification3Tsin00100101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -348,7 +349,7 @@ class GenericIdentification3Tsin00100101:
 
 
 @dataclass
-class GenericIdentification4Tsin00100101:
+class GenericIdentification4Tsin00100101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -374,7 +375,7 @@ class GenericIdentification4Tsin00100101:
 
 
 @dataclass
-class SimpleIdentificationInformation2Tsin00100101:
+class SimpleIdentificationInformation2Tsin00100101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -389,7 +390,7 @@ class SimpleIdentificationInformation2Tsin00100101:
 
 
 @dataclass
-class AccountIdentification3ChoiceTsin00100101:
+class AccountIdentification3ChoiceTsin00100101(ISO20022MessageElement):
     iban: Optional[str] = field(
         default=None,
         metadata={
@@ -428,7 +429,7 @@ class AccountIdentification3ChoiceTsin00100101:
 
 
 @dataclass
-class Adjustment5Tsin00100101:
+class Adjustment5Tsin00100101(ISO20022MessageElement):
     drctn: Optional[AdjustmentDirection1Code] = field(
         default=None,
         metadata={
@@ -450,7 +451,7 @@ class Adjustment5Tsin00100101:
 
 
 @dataclass
-class CashAccountType2Tsin00100101:
+class CashAccountType2Tsin00100101(ISO20022MessageElement):
     cd: Optional[CashAccountType4Code] = field(
         default=None,
         metadata={
@@ -472,7 +473,7 @@ class CashAccountType2Tsin00100101:
 
 
 @dataclass
-class ContactIdentification1Tsin00100101:
+class ContactIdentification1Tsin00100101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -543,7 +544,7 @@ class ContactIdentification1Tsin00100101:
 
 
 @dataclass
-class DocumentGeneralInformation1Tsin00100101:
+class DocumentGeneralInformation1Tsin00100101(ISO20022MessageElement):
     doc_tp: Optional[DocumentType4Code] = field(
         default=None,
         metadata={
@@ -596,7 +597,7 @@ class DocumentGeneralInformation1Tsin00100101:
 
 
 @dataclass
-class FinancialInstitutionIdentification6Tsin00100101:
+class FinancialInstitutionIdentification6Tsin00100101(ISO20022MessageElement):
     clr_sys_mmb_id: Optional[ClearingSystemMemberIdentification2ChoiceTsin00100101] = (
         field(
             default=None,
@@ -627,7 +628,7 @@ class FinancialInstitutionIdentification6Tsin00100101:
 
 
 @dataclass
-class FinancingRateOrAmountChoiceTsin00100101:
+class FinancingRateOrAmountChoiceTsin00100101(ISO20022MessageElement):
     amt: Optional[ActiveCurrencyAndAmountTsin00100101] = field(
         default=None,
         metadata={
@@ -649,7 +650,7 @@ class FinancingRateOrAmountChoiceTsin00100101:
 
 
 @dataclass
-class InformationType1ChoiceTsin00100101:
+class InformationType1ChoiceTsin00100101(ISO20022MessageElement):
     cd: Optional[InformationType1Code] = field(
         default=None,
         metadata={
@@ -671,7 +672,7 @@ class InformationType1ChoiceTsin00100101:
 
 
 @dataclass
-class Instalment1Tsin00100101:
+class Instalment1Tsin00100101(ISO20022MessageElement):
     seq_id: Optional[str] = field(
         default=None,
         metadata={
@@ -704,7 +705,7 @@ class Instalment1Tsin00100101:
 
 
 @dataclass
-class OrganisationIdentification2Tsin00100101:
+class OrganisationIdentification2Tsin00100101(ISO20022MessageElement):
     bic: Optional[str] = field(
         default=None,
         metadata={
@@ -790,7 +791,7 @@ class OrganisationIdentification2Tsin00100101:
 
 
 @dataclass
-class PartyIdentification25Tsin00100101:
+class PartyIdentification25Tsin00100101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -822,7 +823,7 @@ class PartyIdentification25Tsin00100101:
 
 
 @dataclass
-class PersonIdentification3Tsin00100101:
+class PersonIdentification3Tsin00100101(ISO20022MessageElement):
     drvrs_lic_nb: Optional[str] = field(
         default=None,
         metadata={
@@ -932,7 +933,7 @@ class PersonIdentification3Tsin00100101:
 
 
 @dataclass
-class PostalAddress1Tsin00100101:
+class PostalAddress1Tsin00100101(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -1015,7 +1016,7 @@ class PostalAddress1Tsin00100101:
 
 
 @dataclass
-class ReferredDocumentType1Tsin00100101:
+class ReferredDocumentType1Tsin00100101(ISO20022MessageElement):
     cd: Optional[DocumentType2Code] = field(
         default=None,
         metadata={
@@ -1047,7 +1048,7 @@ class ReferredDocumentType1Tsin00100101:
 
 
 @dataclass
-class AdditionalInformation1Tsin00100101:
+class AdditionalInformation1Tsin00100101(ISO20022MessageElement):
     inf_tp: Optional[InformationType1ChoiceTsin00100101] = field(
         default=None,
         metadata={
@@ -1071,7 +1072,7 @@ class AdditionalInformation1Tsin00100101:
 
 
 @dataclass
-class CashAccount7Tsin00100101:
+class CashAccount7Tsin00100101(ISO20022MessageElement):
     id: Optional[AccountIdentification3ChoiceTsin00100101] = field(
         default=None,
         metadata={
@@ -1111,7 +1112,7 @@ class CashAccount7Tsin00100101:
 
 
 @dataclass
-class InvoiceTotals1Tsin00100101:
+class InvoiceTotals1Tsin00100101(ISO20022MessageElement):
     ttl_taxbl_amt: Optional[ActiveCurrencyAndAmountTsin00100101] = field(
         default=None,
         metadata={
@@ -1159,7 +1160,7 @@ class InvoiceTotals1Tsin00100101:
 
 
 @dataclass
-class Party2ChoiceTsin00100101:
+class Party2ChoiceTsin00100101(ISO20022MessageElement):
     org_id: Optional[OrganisationIdentification2Tsin00100101] = field(
         default=None,
         metadata={
@@ -1180,7 +1181,7 @@ class Party2ChoiceTsin00100101:
 
 
 @dataclass
-class ReferredDocumentInformation2Tsin00100101:
+class ReferredDocumentInformation2Tsin00100101(ISO20022MessageElement):
     tp: Optional[ReferredDocumentType1Tsin00100101] = field(
         default=None,
         metadata={
@@ -1218,7 +1219,7 @@ class ReferredDocumentInformation2Tsin00100101:
 
 
 @dataclass
-class PartyIdentification8Tsin00100101:
+class PartyIdentification8Tsin00100101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1257,7 +1258,7 @@ class PartyIdentification8Tsin00100101:
 
 
 @dataclass
-class PartyIdentificationAndAccount6Tsin00100101:
+class PartyIdentificationAndAccount6Tsin00100101(ISO20022MessageElement):
     pty_id: Optional[PartyIdentification25Tsin00100101] = field(
         default=None,
         metadata={
@@ -1286,7 +1287,7 @@ class PartyIdentificationAndAccount6Tsin00100101:
 
 
 @dataclass
-class PaymentInformation15Tsin00100101:
+class PaymentInformation15Tsin00100101(ISO20022MessageElement):
     pmt_mtd: Optional[PaymentMethod4Code] = field(
         default=None,
         metadata={
@@ -1307,7 +1308,9 @@ class PaymentInformation15Tsin00100101:
 
 
 @dataclass
-class PartyAndAccountIdentificationAndContactInformation1Tsin00100101:
+class PartyAndAccountIdentificationAndContactInformation1Tsin00100101(
+    ISO20022MessageElement
+):
     pty_id: Optional[PartyIdentification8Tsin00100101] = field(
         default=None,
         metadata={
@@ -1336,7 +1339,7 @@ class PartyAndAccountIdentificationAndContactInformation1Tsin00100101:
 
 
 @dataclass
-class PartyIdentificationAndContactInformation1Tsin00100101:
+class PartyIdentificationAndContactInformation1Tsin00100101(ISO20022MessageElement):
     pty_id: Optional[PartyIdentification8Tsin00100101] = field(
         default=None,
         metadata={
@@ -1357,7 +1360,7 @@ class PartyIdentificationAndContactInformation1Tsin00100101:
 
 
 @dataclass
-class RequestGroupInformation1Tsin00100101:
+class RequestGroupInformation1Tsin00100101(ISO20022MessageElement):
     grp_id: Optional[str] = field(
         default=None,
         metadata={
@@ -1471,7 +1474,7 @@ class RequestGroupInformation1Tsin00100101:
 
 
 @dataclass
-class InvoiceRequestInformation1Tsin00100101:
+class InvoiceRequestInformation1Tsin00100101(ISO20022MessageElement):
     invc_gnl_inf: Optional[DocumentGeneralInformation1Tsin00100101] = field(
         default=None,
         metadata={
@@ -1554,7 +1557,7 @@ class InvoiceRequestInformation1Tsin00100101:
 
 
 @dataclass
-class InvoiceFinancingRequestV01Tsin00100101:
+class InvoiceFinancingRequestV01Tsin00100101(ISO20022MessageElement):
     req_grp_inf: Optional[RequestGroupInformation1Tsin00100101] = field(
         default=None,
         metadata={
@@ -1576,7 +1579,7 @@ class InvoiceFinancingRequestV01Tsin00100101:
 
 
 @dataclass
-class Tsin00100101:
+class Tsin00100101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:tsin.001.001.01"
 

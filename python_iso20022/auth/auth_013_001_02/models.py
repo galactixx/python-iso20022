@@ -15,13 +15,14 @@ from python_iso20022.auth.enums import (
     ReportPeriodActivity3Code,
     TransactionOperationType1Code,
 )
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import OptionType1Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.013.001.02"
 
 
 @dataclass
-class ActiveCurrencyAndAmountAuth01300102:
+class ActiveCurrencyAndAmountAuth01300102(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -43,7 +44,7 @@ class ActiveCurrencyAndAmountAuth01300102:
 
 
 @dataclass
-class DateAndDateTimeChoiceAuth01300102:
+class DateAndDateTimeChoiceAuth01300102(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -63,7 +64,7 @@ class DateAndDateTimeChoiceAuth01300102:
 
 
 @dataclass
-class DateTimePeriod1Auth01300102:
+class DateTimePeriod1Auth01300102(ISO20022MessageElement):
     fr_dt_tm: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -85,7 +86,7 @@ class DateTimePeriod1Auth01300102:
 
 
 @dataclass
-class FloatingRateNote2Auth01300102:
+class FloatingRateNote2Auth01300102(ISO20022MessageElement):
     ref_rate_indx: Optional[str] = field(
         default=None,
         metadata={
@@ -110,7 +111,7 @@ class FloatingRateNote2Auth01300102:
 
 
 @dataclass
-class NameAndLocation1Auth01300102:
+class NameAndLocation1Auth01300102(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -135,7 +136,7 @@ class NameAndLocation1Auth01300102:
 
 
 @dataclass
-class OptionDateOrPeriod1ChoiceAuth01300102:
+class OptionDateOrPeriod1ChoiceAuth01300102(ISO20022MessageElement):
     earlst_exrc_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -157,7 +158,7 @@ class OptionDateOrPeriod1ChoiceAuth01300102:
 
 
 @dataclass
-class SectorAndLocation1Auth01300102:
+class SectorAndLocation1Auth01300102(ISO20022MessageElement):
     sctr: Optional[str] = field(
         default=None,
         metadata={
@@ -180,7 +181,7 @@ class SectorAndLocation1Auth01300102:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth01300102:
+class SupplementaryDataEnvelope1Auth01300102(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -191,7 +192,7 @@ class SupplementaryDataEnvelope1Auth01300102:
 
 
 @dataclass
-class CounterpartyIdentification3ChoiceAuth01300102:
+class CounterpartyIdentification3ChoiceAuth01300102(ISO20022MessageElement):
     lei: Optional[str] = field(
         default=None,
         metadata={
@@ -220,7 +221,7 @@ class CounterpartyIdentification3ChoiceAuth01300102:
 
 
 @dataclass
-class MoneyMarketReportHeader1Auth01300102:
+class MoneyMarketReportHeader1Auth01300102(ISO20022MessageElement):
     rptg_agt: Optional[str] = field(
         default=None,
         metadata={
@@ -243,7 +244,7 @@ class MoneyMarketReportHeader1Auth01300102:
 
 
 @dataclass
-class Option12Auth01300102:
+class Option12Auth01300102(ISO20022MessageElement):
     tp: Optional[OptionType1Code] = field(
         default=None,
         metadata={
@@ -265,7 +266,7 @@ class Option12Auth01300102:
 
 
 @dataclass
-class SupplementaryData1Auth01300102:
+class SupplementaryData1Auth01300102(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -288,7 +289,7 @@ class SupplementaryData1Auth01300102:
 
 
 @dataclass
-class UnsecuredMarketTransaction4Auth01300102:
+class UnsecuredMarketTransaction4Auth01300102(ISO20022MessageElement):
     rptd_tx_sts: Optional[TransactionOperationType1Code] = field(
         default=None,
         metadata={
@@ -485,7 +486,7 @@ class UnsecuredMarketTransaction4Auth01300102:
 
 
 @dataclass
-class UnsecuredMarketReport4ChoiceAuth01300102:
+class UnsecuredMarketReport4ChoiceAuth01300102(ISO20022MessageElement):
     data_set_actn: Optional[ReportPeriodActivity3Code] = field(
         default=None,
         metadata={
@@ -505,7 +506,9 @@ class UnsecuredMarketReport4ChoiceAuth01300102:
 
 
 @dataclass
-class MoneyMarketUnsecuredMarketStatisticalReportV02Auth01300102:
+class MoneyMarketUnsecuredMarketStatisticalReportV02Auth01300102(
+    ISO20022MessageElement
+):
     rpt_hdr: Optional[MoneyMarketReportHeader1Auth01300102] = field(
         default=None,
         metadata={
@@ -535,7 +538,7 @@ class MoneyMarketUnsecuredMarketStatisticalReportV02Auth01300102:
 
 
 @dataclass
-class Auth01300102:
+class Auth01300102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.013.001.02"
 

@@ -1,11 +1,13 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
+
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.062.001.01"
 
 
 @dataclass
-class GenericIdentification168Auth06200101:
+class GenericIdentification168Auth06200101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -50,7 +52,7 @@ class GenericIdentification168Auth06200101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth06200101:
+class SupplementaryDataEnvelope1Auth06200101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -61,7 +63,7 @@ class SupplementaryDataEnvelope1Auth06200101:
 
 
 @dataclass
-class LiquidityStressScenarioDefinition1Auth06200101:
+class LiquidityStressScenarioDefinition1Auth06200101(ISO20022MessageElement):
     id: Optional[GenericIdentification168Auth06200101] = field(
         default=None,
         metadata={
@@ -105,7 +107,7 @@ class LiquidityStressScenarioDefinition1Auth06200101:
 
 
 @dataclass
-class SupplementaryData1Auth06200101:
+class SupplementaryData1Auth06200101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -128,7 +130,7 @@ class SupplementaryData1Auth06200101:
 
 
 @dataclass
-class CcpliquidityStressTestingDefinitionReportV01Auth06200101:
+class CcpliquidityStressTestingDefinitionReportV01Auth06200101(ISO20022MessageElement):
     class Meta:
         name = "CCPLiquidityStressTestingDefinitionReportV01"
 
@@ -152,7 +154,7 @@ class CcpliquidityStressTestingDefinitionReportV01Auth06200101:
 
 
 @dataclass
-class Auth06200101:
+class Auth06200101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.062.001.01"
 

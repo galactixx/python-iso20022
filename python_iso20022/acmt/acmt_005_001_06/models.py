@@ -4,6 +4,7 @@ from typing import Optional
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
 from python_iso20022.acmt.acmt_005_001_06.enums import AccountManagementType3Code
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     AddressType2Code,
     GenderCode,
@@ -14,7 +15,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:acmt.005.001.06"
 
 
 @dataclass
-class GenericIdentification1Acmt00500106:
+class GenericIdentification1Acmt00500106(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -49,7 +50,7 @@ class GenericIdentification1Acmt00500106:
 
 
 @dataclass
-class GenericIdentification47Acmt00500106:
+class GenericIdentification47Acmt00500106(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -86,7 +87,7 @@ class GenericIdentification47Acmt00500106:
 
 
 @dataclass
-class MessageIdentification1Acmt00500106:
+class MessageIdentification1Acmt00500106(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -110,7 +111,7 @@ class MessageIdentification1Acmt00500106:
 
 
 @dataclass
-class Account23Acmt00500106:
+class Account23Acmt00500106(ISO20022MessageElement):
     acct_id: Optional[str] = field(
         default=None,
         metadata={
@@ -133,7 +134,7 @@ class Account23Acmt00500106:
 
 
 @dataclass
-class IndividualPerson30Acmt00500106:
+class IndividualPerson30Acmt00500106(ISO20022MessageElement):
     gvn_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -184,7 +185,7 @@ class IndividualPerson30Acmt00500106:
 
 
 @dataclass
-class OtherIdentification3ChoiceAcmt00500106:
+class OtherIdentification3ChoiceAcmt00500106(ISO20022MessageElement):
     cd: Optional[PartyIdentificationType7Code] = field(
         default=None,
         metadata={
@@ -204,7 +205,7 @@ class OtherIdentification3ChoiceAcmt00500106:
 
 
 @dataclass
-class PostalAddress1Acmt00500106:
+class PostalAddress1Acmt00500106(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -287,7 +288,7 @@ class PostalAddress1Acmt00500106:
 
 
 @dataclass
-class GenericIdentification81Acmt00500106:
+class GenericIdentification81Acmt00500106(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -311,7 +312,7 @@ class GenericIdentification81Acmt00500106:
 
 
 @dataclass
-class NameAndAddress5Acmt00500106:
+class NameAndAddress5Acmt00500106(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -334,7 +335,7 @@ class NameAndAddress5Acmt00500106:
 
 
 @dataclass
-class IndividualPersonIdentification2ChoiceAcmt00500106:
+class IndividualPersonIdentification2ChoiceAcmt00500106(ISO20022MessageElement):
     id_nb: Optional[GenericIdentification81Acmt00500106] = field(
         default=None,
         metadata={
@@ -354,7 +355,7 @@ class IndividualPersonIdentification2ChoiceAcmt00500106:
 
 
 @dataclass
-class PartyIdentification125ChoiceAcmt00500106:
+class PartyIdentification125ChoiceAcmt00500106(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -383,7 +384,7 @@ class PartyIdentification125ChoiceAcmt00500106:
 
 
 @dataclass
-class AdditionalReference13Acmt00500106:
+class AdditionalReference13Acmt00500106(ISO20022MessageElement):
     ref: Optional[str] = field(
         default=None,
         metadata={
@@ -416,7 +417,7 @@ class AdditionalReference13Acmt00500106:
 
 
 @dataclass
-class PartyIdentification139Acmt00500106:
+class PartyIdentification139Acmt00500106(ISO20022MessageElement):
     pty: Optional[PartyIdentification125ChoiceAcmt00500106] = field(
         default=None,
         metadata={
@@ -438,7 +439,7 @@ class PartyIdentification139Acmt00500106:
 
 
 @dataclass
-class LinkedMessage5ChoiceAcmt00500106:
+class LinkedMessage5ChoiceAcmt00500106(ISO20022MessageElement):
     prvs_ref: Optional[AdditionalReference13Acmt00500106] = field(
         default=None,
         metadata={
@@ -458,7 +459,7 @@ class LinkedMessage5ChoiceAcmt00500106:
 
 
 @dataclass
-class OwnerIdentification3ChoiceAcmt00500106:
+class OwnerIdentification3ChoiceAcmt00500106(ISO20022MessageElement):
     indv_ownr_id: Optional[IndividualPersonIdentification2ChoiceAcmt00500106] = field(
         default=None,
         metadata={
@@ -478,7 +479,7 @@ class OwnerIdentification3ChoiceAcmt00500106:
 
 
 @dataclass
-class InvestmentAccount77Acmt00500106:
+class InvestmentAccount77Acmt00500106(ISO20022MessageElement):
     acct_id: Optional[str] = field(
         default=None,
         metadata={
@@ -529,7 +530,7 @@ class InvestmentAccount77Acmt00500106:
 
 
 @dataclass
-class AccountManagementMessageReference5Acmt00500106:
+class AccountManagementMessageReference5Acmt00500106(ISO20022MessageElement):
     lkd_ref: Optional[LinkedMessage5ChoiceAcmt00500106] = field(
         default=None,
         metadata={
@@ -576,7 +577,7 @@ class AccountManagementMessageReference5Acmt00500106:
 
 
 @dataclass
-class RequestForAccountManagementStatusReportV06Acmt00500106:
+class RequestForAccountManagementStatusReportV06Acmt00500106(ISO20022MessageElement):
     msg_id: Optional[MessageIdentification1Acmt00500106] = field(
         default=None,
         metadata={
@@ -598,7 +599,7 @@ class RequestForAccountManagementStatusReportV06Acmt00500106:
 
 
 @dataclass
-class Acmt00500106:
+class Acmt00500106(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.005.001.06"
 

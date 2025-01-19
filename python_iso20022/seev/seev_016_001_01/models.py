@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import AddressType2Code
 from python_iso20022.seev.enums import (
     CorporateActionEventProcessingType1Code,
@@ -17,7 +18,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:seev.016.001.01"
 
 
 @dataclass
-class ActiveCurrencyAndAmountSeev01600101:
+class ActiveCurrencyAndAmountSeev01600101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -39,7 +40,7 @@ class ActiveCurrencyAndAmountSeev01600101:
 
 
 @dataclass
-class AlternateSecurityIdentification3Seev01600101:
+class AlternateSecurityIdentification3Seev01600101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -73,7 +74,7 @@ class AlternateSecurityIdentification3Seev01600101:
 
 
 @dataclass
-class DateAndDateTimeChoiceSeev01600101:
+class DateAndDateTimeChoiceSeev01600101(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -93,7 +94,7 @@ class DateAndDateTimeChoiceSeev01600101:
 
 
 @dataclass
-class DocumentIdentification8Seev01600101:
+class DocumentIdentification8Seev01600101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -116,7 +117,7 @@ class DocumentIdentification8Seev01600101:
 
 
 @dataclass
-class GenericIdentification1Seev01600101:
+class GenericIdentification1Seev01600101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -151,7 +152,7 @@ class GenericIdentification1Seev01600101:
 
 
 @dataclass
-class GenericIdentification13Seev01600101:
+class GenericIdentification13Seev01600101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -188,7 +189,7 @@ class GenericIdentification13Seev01600101:
 
 
 @dataclass
-class CashEntitlement1Seev01600101:
+class CashEntitlement1Seev01600101(ISO20022MessageElement):
     csh_amt: Optional[ActiveCurrencyAndAmountSeev01600101] = field(
         default=None,
         metadata={
@@ -201,7 +202,9 @@ class CashEntitlement1Seev01600101:
 
 
 @dataclass
-class CorporateActionEventProcessingType1FormatChoiceSeev01600101:
+class CorporateActionEventProcessingType1FormatChoiceSeev01600101(
+    ISO20022MessageElement
+):
     cd: Optional[CorporateActionEventProcessingType1Code] = field(
         default=None,
         metadata={
@@ -221,7 +224,7 @@ class CorporateActionEventProcessingType1FormatChoiceSeev01600101:
 
 
 @dataclass
-class CorporateActionEventType2FormatChoiceSeev01600101:
+class CorporateActionEventType2FormatChoiceSeev01600101(ISO20022MessageElement):
     cd: Optional[CorporateActionEventType2Code] = field(
         default=None,
         metadata={
@@ -241,7 +244,9 @@ class CorporateActionEventType2FormatChoiceSeev01600101:
 
 
 @dataclass
-class CorporateActionMandatoryVoluntary1FormatChoiceSeev01600101:
+class CorporateActionMandatoryVoluntary1FormatChoiceSeev01600101(
+    ISO20022MessageElement
+):
     cd: Optional[CorporateActionMandatoryVoluntary1Code] = field(
         default=None,
         metadata={
@@ -261,7 +266,7 @@ class CorporateActionMandatoryVoluntary1FormatChoiceSeev01600101:
 
 
 @dataclass
-class CorporateActionOption1FormatChoiceSeev01600101:
+class CorporateActionOption1FormatChoiceSeev01600101(ISO20022MessageElement):
     cd: Optional[CorporateActionOptionType1Code] = field(
         default=None,
         metadata={
@@ -281,7 +286,7 @@ class CorporateActionOption1FormatChoiceSeev01600101:
 
 
 @dataclass
-class DateFormat4ChoiceSeev01600101:
+class DateFormat4ChoiceSeev01600101(ISO20022MessageElement):
     dt: Optional[DateAndDateTimeChoiceSeev01600101] = field(
         default=None,
         metadata={
@@ -309,7 +314,7 @@ class DateFormat4ChoiceSeev01600101:
 
 
 @dataclass
-class PostalAddress1Seev01600101:
+class PostalAddress1Seev01600101(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -392,7 +397,7 @@ class PostalAddress1Seev01600101:
 
 
 @dataclass
-class SecurityIdentification7Seev01600101:
+class SecurityIdentification7Seev01600101(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -423,7 +428,7 @@ class SecurityIdentification7Seev01600101:
 
 
 @dataclass
-class UnitOrFaceAmount1ChoiceSeev01600101:
+class UnitOrFaceAmount1ChoiceSeev01600101(ISO20022MessageElement):
     unit: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -445,7 +450,7 @@ class UnitOrFaceAmount1ChoiceSeev01600101:
 
 
 @dataclass
-class NameAndAddress5Seev01600101:
+class NameAndAddress5Seev01600101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -468,7 +473,7 @@ class NameAndAddress5Seev01600101:
 
 
 @dataclass
-class SecuritiesEntitlement1Seev01600101:
+class SecuritiesEntitlement1Seev01600101(ISO20022MessageElement):
     scty_id: Optional[SecurityIdentification7Seev01600101] = field(
         default=None,
         metadata={
@@ -490,7 +495,7 @@ class SecuritiesEntitlement1Seev01600101:
 
 
 @dataclass
-class PartyIdentification2ChoiceSeev01600101:
+class PartyIdentification2ChoiceSeev01600101(ISO20022MessageElement):
     bicor_bei: Optional[str] = field(
         default=None,
         metadata={
@@ -519,7 +524,7 @@ class PartyIdentification2ChoiceSeev01600101:
 
 
 @dataclass
-class Entitlement1Seev01600101:
+class Entitlement1Seev01600101(ISO20022MessageElement):
     acct_ownr_id: Optional[PartyIdentification2ChoiceSeev01600101] = field(
         default=None,
         metadata={
@@ -558,7 +563,7 @@ class Entitlement1Seev01600101:
 
 
 @dataclass
-class FinancialInstrumentDescription3Seev01600101:
+class FinancialInstrumentDescription3Seev01600101(ISO20022MessageElement):
     scty_id: Optional[SecurityIdentification7Seev01600101] = field(
         default=None,
         metadata={
@@ -588,7 +593,7 @@ class FinancialInstrumentDescription3Seev01600101:
 
 
 @dataclass
-class CorporateActionInformation1Seev01600101:
+class CorporateActionInformation1Seev01600101(ISO20022MessageElement):
     agt_id: Optional[PartyIdentification2ChoiceSeev01600101] = field(
         default=None,
         metadata={
@@ -660,7 +665,7 @@ class CorporateActionInformation1Seev01600101:
 
 
 @dataclass
-class EntitlementAdvice1Seev01600101:
+class EntitlementAdvice1Seev01600101(ISO20022MessageElement):
     optn_tp: Optional[CorporateActionOption1FormatChoiceSeev01600101] = field(
         default=None,
         metadata={
@@ -708,7 +713,7 @@ class EntitlementAdvice1Seev01600101:
 
 
 @dataclass
-class AgentCadistributionBreakdownAdviceV01Seev01600101:
+class AgentCadistributionBreakdownAdviceV01Seev01600101(ISO20022MessageElement):
     class Meta:
         name = "AgentCADistributionBreakdownAdviceV01"
 
@@ -742,7 +747,7 @@ class AgentCadistributionBreakdownAdviceV01Seev01600101:
 
 
 @dataclass
-class Seev01600101:
+class Seev01600101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:seev.016.001.01"
 

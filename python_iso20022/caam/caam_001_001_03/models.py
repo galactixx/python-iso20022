@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.caam.caam_001_001_03.enums import (
     Atmstatus3Code,
     FailureReason5Code,
@@ -46,7 +47,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:caam.001.001.03"
 
 
 @dataclass
-class AtmcommandIdentification1Caam00100103:
+class AtmcommandIdentification1Caam00100103(ISO20022MessageElement):
     class Meta:
         name = "ATMCommandIdentification1"
 
@@ -83,7 +84,7 @@ class AtmcommandIdentification1Caam00100103:
 
 
 @dataclass
-class Atmequipment2Caam00100103:
+class Atmequipment2Caam00100103(ISO20022MessageElement):
     class Meta:
         name = "ATMEquipment2"
 
@@ -160,7 +161,7 @@ class Atmequipment2Caam00100103:
 
 
 @dataclass
-class AtmsecurityConfiguration2Caam00100103:
+class AtmsecurityConfiguration2Caam00100103(ISO20022MessageElement):
     class Meta:
         name = "ATMSecurityConfiguration2"
 
@@ -207,7 +208,7 @@ class AtmsecurityConfiguration2Caam00100103:
 
 
 @dataclass
-class Acquirer7Caam00100103:
+class Acquirer7Caam00100103(ISO20022MessageElement):
     acqrg_instn: Optional[str] = field(
         default=None,
         metadata={
@@ -231,7 +232,7 @@ class Acquirer7Caam00100103:
 
 
 @dataclass
-class GeographicCoordinates1Caam00100103:
+class GeographicCoordinates1Caam00100103(ISO20022MessageElement):
     lat: Optional[str] = field(
         default=None,
         metadata={
@@ -257,7 +258,7 @@ class GeographicCoordinates1Caam00100103:
 
 
 @dataclass
-class Kekidentifier2Caam00100103:
+class Kekidentifier2Caam00100103(ISO20022MessageElement):
     class Meta:
         name = "KEKIdentifier2"
 
@@ -307,7 +308,7 @@ class Kekidentifier2Caam00100103:
 
 
 @dataclass
-class Utmcoordinates1Caam00100103:
+class Utmcoordinates1Caam00100103(ISO20022MessageElement):
     class Meta:
         name = "UTMCoordinates1"
 
@@ -347,7 +348,7 @@ class Utmcoordinates1Caam00100103:
 
 
 @dataclass
-class Atmcommand11Caam00100103:
+class Atmcommand11Caam00100103(ISO20022MessageElement):
     class Meta:
         name = "ATMCommand11"
 
@@ -407,7 +408,7 @@ class Atmcommand11Caam00100103:
 
 
 @dataclass
-class Atmcommand12Caam00100103:
+class Atmcommand12Caam00100103(ISO20022MessageElement):
     class Meta:
         name = "ATMCommand12"
 
@@ -431,7 +432,7 @@ class Atmcommand12Caam00100103:
 
 
 @dataclass
-class AtmconfigurationParameter1Caam00100103:
+class AtmconfigurationParameter1Caam00100103(ISO20022MessageElement):
     class Meta:
         name = "ATMConfigurationParameter1"
 
@@ -458,7 +459,7 @@ class AtmconfigurationParameter1Caam00100103:
 
 
 @dataclass
-class AtmmessageFunction2Caam00100103:
+class AtmmessageFunction2Caam00100103(ISO20022MessageElement):
     class Meta:
         name = "ATMMessageFunction2"
 
@@ -494,7 +495,7 @@ class AtmmessageFunction2Caam00100103:
 
 
 @dataclass
-class AtmsecurityConfiguration3Caam00100103:
+class AtmsecurityConfiguration3Caam00100103(ISO20022MessageElement):
     class Meta:
         name = "ATMSecurityConfiguration3"
 
@@ -557,7 +558,7 @@ class AtmsecurityConfiguration3Caam00100103:
 
 
 @dataclass
-class AtmsecurityConfiguration4Caam00100103:
+class AtmsecurityConfiguration4Caam00100103(ISO20022MessageElement):
     class Meta:
         name = "ATMSecurityConfiguration4"
 
@@ -592,7 +593,7 @@ class AtmsecurityConfiguration4Caam00100103:
 
 
 @dataclass
-class AtmsecurityConfiguration5Caam00100103:
+class AtmsecurityConfiguration5Caam00100103(ISO20022MessageElement):
     class Meta:
         name = "ATMSecurityConfiguration5"
 
@@ -617,7 +618,7 @@ class AtmsecurityConfiguration5Caam00100103:
 
 
 @dataclass
-class Atmstatus1Caam00100103:
+class Atmstatus1Caam00100103(ISO20022MessageElement):
     class Meta:
         name = "ATMStatus1"
 
@@ -641,7 +642,7 @@ class Atmstatus1Caam00100103:
 
 
 @dataclass
-class AlgorithmIdentification16Caam00100103:
+class AlgorithmIdentification16Caam00100103(ISO20022MessageElement):
     algo: Optional[Algorithm11Code] = field(
         default=None,
         metadata={
@@ -654,7 +655,7 @@ class AlgorithmIdentification16Caam00100103:
 
 
 @dataclass
-class CryptographicKey11Caam00100103:
+class CryptographicKey11Caam00100103(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -781,7 +782,7 @@ class CryptographicKey11Caam00100103:
 
 
 @dataclass
-class EncapsulatedContent3Caam00100103:
+class EncapsulatedContent3Caam00100103(ISO20022MessageElement):
     cntt_tp: Optional[ContentType2Code] = field(
         default=None,
         metadata={
@@ -805,7 +806,7 @@ class EncapsulatedContent3Caam00100103:
 
 
 @dataclass
-class GenericIdentification77Caam00100103:
+class GenericIdentification77Caam00100103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -856,7 +857,7 @@ class GenericIdentification77Caam00100103:
 
 
 @dataclass
-class GeographicLocation1ChoiceCaam00100103:
+class GeographicLocation1ChoiceCaam00100103(ISO20022MessageElement):
     geogc_cordints: Optional[GeographicCoordinates1Caam00100103] = field(
         default=None,
         metadata={
@@ -876,7 +877,7 @@ class GeographicLocation1ChoiceCaam00100103:
 
 
 @dataclass
-class Parameter5Caam00100103:
+class Parameter5Caam00100103(ISO20022MessageElement):
     dgst_algo: Optional[Algorithm11Code] = field(
         default=None,
         metadata={
@@ -888,7 +889,7 @@ class Parameter5Caam00100103:
 
 
 @dataclass
-class Parameter6Caam00100103:
+class Parameter6Caam00100103(ISO20022MessageElement):
     ncrptn_frmt: Optional[EncryptionFormat1Code] = field(
         default=None,
         metadata={
@@ -919,7 +920,7 @@ class Parameter6Caam00100103:
 
 
 @dataclass
-class Parameter7Caam00100103:
+class Parameter7Caam00100103(ISO20022MessageElement):
     initlstn_vctr: Optional[bytes] = field(
         default=None,
         metadata={
@@ -942,7 +943,7 @@ class Parameter7Caam00100103:
 
 
 @dataclass
-class RelativeDistinguishedName1Caam00100103:
+class RelativeDistinguishedName1Caam00100103(ISO20022MessageElement):
     attr_tp: Optional[AttributeType1Code] = field(
         default=None,
         metadata={
@@ -966,7 +967,7 @@ class RelativeDistinguishedName1Caam00100103:
 
 
 @dataclass
-class TerminalHosting1Caam00100103:
+class TerminalHosting1Caam00100103(ISO20022MessageElement):
     ctgy: Optional[TransactionEnvironment3Code] = field(
         default=None,
         metadata={
@@ -988,7 +989,7 @@ class TerminalHosting1Caam00100103:
 
 
 @dataclass
-class Atmequipment1Caam00100103:
+class Atmequipment1Caam00100103(ISO20022MessageElement):
     class Meta:
         name = "ATMEquipment1"
 
@@ -1073,7 +1074,7 @@ class Atmequipment1Caam00100103:
 
 
 @dataclass
-class AtmsecurityConfiguration1Caam00100103:
+class AtmsecurityConfiguration1Caam00100103(ISO20022MessageElement):
     class Meta:
         name = "ATMSecurityConfiguration1"
 
@@ -1136,7 +1137,7 @@ class AtmsecurityConfiguration1Caam00100103:
 
 
 @dataclass
-class AlgorithmIdentification12Caam00100103:
+class AlgorithmIdentification12Caam00100103(ISO20022MessageElement):
     algo: Optional[Algorithm8Code] = field(
         default=None,
         metadata={
@@ -1157,7 +1158,7 @@ class AlgorithmIdentification12Caam00100103:
 
 
 @dataclass
-class AlgorithmIdentification13Caam00100103:
+class AlgorithmIdentification13Caam00100103(ISO20022MessageElement):
     algo: Optional[Algorithm13Code] = field(
         default=None,
         metadata={
@@ -1178,7 +1179,7 @@ class AlgorithmIdentification13Caam00100103:
 
 
 @dataclass
-class AlgorithmIdentification14Caam00100103:
+class AlgorithmIdentification14Caam00100103(ISO20022MessageElement):
     algo: Optional[Algorithm15Code] = field(
         default=None,
         metadata={
@@ -1199,7 +1200,7 @@ class AlgorithmIdentification14Caam00100103:
 
 
 @dataclass
-class AlgorithmIdentification15Caam00100103:
+class AlgorithmIdentification15Caam00100103(ISO20022MessageElement):
     algo: Optional[Algorithm12Code] = field(
         default=None,
         metadata={
@@ -1220,7 +1221,7 @@ class AlgorithmIdentification15Caam00100103:
 
 
 @dataclass
-class CertificateIssuer1Caam00100103:
+class CertificateIssuer1Caam00100103(ISO20022MessageElement):
     rltv_dstngshd_nm: list[RelativeDistinguishedName1Caam00100103] = field(
         default_factory=list,
         metadata={
@@ -1233,7 +1234,7 @@ class CertificateIssuer1Caam00100103:
 
 
 @dataclass
-class PostalAddress17Caam00100103:
+class PostalAddress17Caam00100103(ISO20022MessageElement):
     adr_line: list[str] = field(
         default_factory=list,
         metadata={
@@ -1318,7 +1319,7 @@ class PostalAddress17Caam00100103:
 
 
 @dataclass
-class Traceability4Caam00100103:
+class Traceability4Caam00100103(ISO20022MessageElement):
     rlay_id: Optional[GenericIdentification77Caam00100103] = field(
         default=None,
         metadata={
@@ -1359,7 +1360,7 @@ class Traceability4Caam00100103:
 
 
 @dataclass
-class AtmsecurityDevice2Caam00100103:
+class AtmsecurityDevice2Caam00100103(ISO20022MessageElement):
     class Meta:
         name = "ATMSecurityDevice2"
 
@@ -1416,7 +1417,7 @@ class AtmsecurityDevice2Caam00100103:
 
 
 @dataclass
-class AutomatedTellerMachine5Caam00100103:
+class AutomatedTellerMachine5Caam00100103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1501,7 +1502,7 @@ class AutomatedTellerMachine5Caam00100103:
 
 
 @dataclass
-class EncryptedContent3Caam00100103:
+class EncryptedContent3Caam00100103(ISO20022MessageElement):
     cntt_tp: Optional[ContentType2Code] = field(
         default=None,
         metadata={
@@ -1535,7 +1536,7 @@ class EncryptedContent3Caam00100103:
 
 
 @dataclass
-class Header31Caam00100103:
+class Header31Caam00100103(ISO20022MessageElement):
     msg_fctn: Optional[AtmmessageFunction2Caam00100103] = field(
         default=None,
         metadata={
@@ -1617,7 +1618,7 @@ class Header31Caam00100103:
 
 
 @dataclass
-class IssuerAndSerialNumber1Caam00100103:
+class IssuerAndSerialNumber1Caam00100103(ISO20022MessageElement):
     issr: Optional[CertificateIssuer1Caam00100103] = field(
         default=None,
         metadata={
@@ -1642,7 +1643,7 @@ class IssuerAndSerialNumber1Caam00100103:
 
 
 @dataclass
-class Kek4Caam00100103:
+class Kek4Caam00100103(ISO20022MessageElement):
     class Meta:
         name = "KEK4"
 
@@ -1689,7 +1690,7 @@ class Kek4Caam00100103:
 
 
 @dataclass
-class Parameter4Caam00100103:
+class Parameter4Caam00100103(ISO20022MessageElement):
     ncrptn_frmt: Optional[EncryptionFormat1Code] = field(
         default=None,
         metadata={
@@ -1717,7 +1718,7 @@ class Parameter4Caam00100103:
 
 
 @dataclass
-class Parameter8Caam00100103:
+class Parameter8Caam00100103(ISO20022MessageElement):
     dgst_algo: Optional[Algorithm11Code] = field(
         default=None,
         metadata={
@@ -1760,7 +1761,7 @@ class Parameter8Caam00100103:
 
 
 @dataclass
-class Atmenvironment6Caam00100103:
+class Atmenvironment6Caam00100103(ISO20022MessageElement):
     class Meta:
         name = "ATMEnvironment6"
 
@@ -1802,7 +1803,7 @@ class Atmenvironment6Caam00100103:
 
 
 @dataclass
-class AtmsecurityContext5Caam00100103:
+class AtmsecurityContext5Caam00100103(ISO20022MessageElement):
     class Meta:
         name = "ATMSecurityContext5"
 
@@ -1854,7 +1855,7 @@ class AtmsecurityContext5Caam00100103:
 
 
 @dataclass
-class AlgorithmIdentification11Caam00100103:
+class AlgorithmIdentification11Caam00100103(ISO20022MessageElement):
     algo: Optional[Algorithm7Code] = field(
         default=None,
         metadata={
@@ -1875,7 +1876,7 @@ class AlgorithmIdentification11Caam00100103:
 
 
 @dataclass
-class AlgorithmIdentification17Caam00100103:
+class AlgorithmIdentification17Caam00100103(ISO20022MessageElement):
     algo: Optional[Algorithm14Code] = field(
         default=None,
         metadata={
@@ -1896,7 +1897,7 @@ class AlgorithmIdentification17Caam00100103:
 
 
 @dataclass
-class Recipient5ChoiceCaam00100103:
+class Recipient5ChoiceCaam00100103(ISO20022MessageElement):
     issr_and_srl_nb: Optional[IssuerAndSerialNumber1Caam00100103] = field(
         default=None,
         metadata={
@@ -1916,7 +1917,7 @@ class Recipient5ChoiceCaam00100103:
 
 
 @dataclass
-class AtmdeviceReport3Caam00100103:
+class AtmdeviceReport3Caam00100103(ISO20022MessageElement):
     class Meta:
         name = "ATMDeviceReport3"
 
@@ -1965,7 +1966,7 @@ class AtmdeviceReport3Caam00100103:
 
 
 @dataclass
-class KeyTransport4Caam00100103:
+class KeyTransport4Caam00100103(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -2009,7 +2010,7 @@ class KeyTransport4Caam00100103:
 
 
 @dataclass
-class Signer3Caam00100103:
+class Signer3Caam00100103(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -2061,7 +2062,7 @@ class Signer3Caam00100103:
 
 
 @dataclass
-class Recipient4ChoiceCaam00100103:
+class Recipient4ChoiceCaam00100103(ISO20022MessageElement):
     key_trnsprt: Optional[KeyTransport4Caam00100103] = field(
         default=None,
         metadata={
@@ -2089,7 +2090,7 @@ class Recipient4ChoiceCaam00100103:
 
 
 @dataclass
-class SignedData4Caam00100103:
+class SignedData4Caam00100103(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -2141,7 +2142,7 @@ class SignedData4Caam00100103:
 
 
 @dataclass
-class AuthenticatedData4Caam00100103:
+class AuthenticatedData4Caam00100103(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -2194,7 +2195,7 @@ class AuthenticatedData4Caam00100103:
 
 
 @dataclass
-class EnvelopedData4Caam00100103:
+class EnvelopedData4Caam00100103(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -2225,7 +2226,7 @@ class EnvelopedData4Caam00100103:
 
 
 @dataclass
-class ContentInformationType10Caam00100103:
+class ContentInformationType10Caam00100103(ISO20022MessageElement):
     cntt_tp: Optional[ContentType2Code] = field(
         default=None,
         metadata={
@@ -2247,7 +2248,7 @@ class ContentInformationType10Caam00100103:
 
 
 @dataclass
-class ContentInformationType13Caam00100103:
+class ContentInformationType13Caam00100103(ISO20022MessageElement):
     cntt_tp: Optional[ContentType2Code] = field(
         default=None,
         metadata={
@@ -2276,7 +2277,7 @@ class ContentInformationType13Caam00100103:
 
 
 @dataclass
-class AtmdeviceReportV03Caam00100103:
+class AtmdeviceReportV03Caam00100103(ISO20022MessageElement):
     class Meta:
         name = "ATMDeviceReportV03"
 
@@ -2316,7 +2317,7 @@ class AtmdeviceReportV03Caam00100103:
 
 
 @dataclass
-class Caam00100103:
+class Caam00100103(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:caam.001.001.03"
 

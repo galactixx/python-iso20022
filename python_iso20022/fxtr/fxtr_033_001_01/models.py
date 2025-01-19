@@ -3,13 +3,14 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import Status5Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:fxtr.033.001.01"
 
 
 @dataclass
-class MessageIdentification1Fxtr03300101:
+class MessageIdentification1Fxtr03300101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -33,7 +34,7 @@ class MessageIdentification1Fxtr03300101:
 
 
 @dataclass
-class PartyIdentificationFxtr03300101:
+class PartyIdentificationFxtr03300101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -48,7 +49,7 @@ class PartyIdentificationFxtr03300101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Fxtr03300101:
+class SupplementaryDataEnvelope1Fxtr03300101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -59,7 +60,7 @@ class SupplementaryDataEnvelope1Fxtr03300101:
 
 
 @dataclass
-class AdditionalReferencesFxtr03300101:
+class AdditionalReferencesFxtr03300101(ISO20022MessageElement):
     ref: Optional[str] = field(
         default=None,
         metadata={
@@ -92,7 +93,7 @@ class AdditionalReferencesFxtr03300101:
 
 
 @dataclass
-class SupplementaryData1Fxtr03300101:
+class SupplementaryData1Fxtr03300101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -115,7 +116,9 @@ class SupplementaryData1Fxtr03300101:
 
 
 @dataclass
-class ForeignExchangeTradeCaptureReportAcknowledgementV01Fxtr03300101:
+class ForeignExchangeTradeCaptureReportAcknowledgementV01Fxtr03300101(
+    ISO20022MessageElement
+):
     ack_id: Optional[MessageIdentification1Fxtr03300101] = field(
         default=None,
         metadata={
@@ -163,7 +166,7 @@ class ForeignExchangeTradeCaptureReportAcknowledgementV01Fxtr03300101:
 
 
 @dataclass
-class Fxtr03300101:
+class Fxtr03300101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:fxtr.033.001.01"
 

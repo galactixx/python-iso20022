@@ -4,13 +4,14 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import Modification1Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.048.001.01"
 
 
 @dataclass
-class CountryCodeAndName3Auth04800101:
+class CountryCodeAndName3Auth04800101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -35,7 +36,7 @@ class CountryCodeAndName3Auth04800101:
 
 
 @dataclass
-class CurrencyCodeAndName1Auth04800101:
+class CurrencyCodeAndName1Auth04800101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -60,7 +61,7 @@ class CurrencyCodeAndName1Auth04800101:
 
 
 @dataclass
-class Period2Auth04800101:
+class Period2Auth04800101(ISO20022MessageElement):
     fr_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -82,7 +83,7 @@ class Period2Auth04800101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth04800101:
+class SupplementaryDataEnvelope1Auth04800101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -93,7 +94,7 @@ class SupplementaryDataEnvelope1Auth04800101:
 
 
 @dataclass
-class Period4ChoiceAuth04800101:
+class Period4ChoiceAuth04800101(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -129,7 +130,7 @@ class Period4ChoiceAuth04800101:
 
 
 @dataclass
-class SupplementaryData1Auth04800101:
+class SupplementaryData1Auth04800101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -152,7 +153,7 @@ class SupplementaryData1Auth04800101:
 
 
 @dataclass
-class SecuritiesCurrencyIdentification2Auth04800101:
+class SecuritiesCurrencyIdentification2Auth04800101(ISO20022MessageElement):
     ccy: Optional[CurrencyCodeAndName1Auth04800101] = field(
         default=None,
         metadata={
@@ -218,7 +219,9 @@ class SecuritiesCurrencyIdentification2Auth04800101:
 
 
 @dataclass
-class FinancialInstrumentReportingCurrencyCodeReportV01Auth04800101:
+class FinancialInstrumentReportingCurrencyCodeReportV01Auth04800101(
+    ISO20022MessageElement
+):
     ccy_data: list[SecuritiesCurrencyIdentification2Auth04800101] = field(
         default_factory=list,
         metadata={
@@ -239,7 +242,7 @@ class FinancialInstrumentReportingCurrencyCodeReportV01Auth04800101:
 
 
 @dataclass
-class Auth04800101:
+class Auth04800101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.048.001.01"
 

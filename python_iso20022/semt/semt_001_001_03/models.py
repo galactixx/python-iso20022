@@ -3,6 +3,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import AddressType2Code
 from python_iso20022.semt.semt_001_001_03.enums import MessageRejectedReason1Code
 
@@ -10,7 +11,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:semt.001.001.03"
 
 
 @dataclass
-class GenericIdentification1Semt00100103:
+class GenericIdentification1Semt00100103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -45,7 +46,7 @@ class GenericIdentification1Semt00100103:
 
 
 @dataclass
-class MessageIdentification1Semt00100103:
+class MessageIdentification1Semt00100103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -69,7 +70,7 @@ class MessageIdentification1Semt00100103:
 
 
 @dataclass
-class PostalAddress1Semt00100103:
+class PostalAddress1Semt00100103(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -152,7 +153,7 @@ class PostalAddress1Semt00100103:
 
 
 @dataclass
-class NameAndAddress5Semt00100103:
+class NameAndAddress5Semt00100103(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -175,7 +176,7 @@ class NameAndAddress5Semt00100103:
 
 
 @dataclass
-class PartyIdentification2ChoiceSemt00100103:
+class PartyIdentification2ChoiceSemt00100103(ISO20022MessageElement):
     bicor_bei: Optional[str] = field(
         default=None,
         metadata={
@@ -204,7 +205,7 @@ class PartyIdentification2ChoiceSemt00100103:
 
 
 @dataclass
-class AdditionalReference3Semt00100103:
+class AdditionalReference3Semt00100103(ISO20022MessageElement):
     ref: Optional[str] = field(
         default=None,
         metadata={
@@ -237,7 +238,7 @@ class AdditionalReference3Semt00100103:
 
 
 @dataclass
-class LinkedMessage1ChoiceSemt00100103:
+class LinkedMessage1ChoiceSemt00100103(ISO20022MessageElement):
     prvs_ref: Optional[AdditionalReference3Semt00100103] = field(
         default=None,
         metadata={
@@ -265,7 +266,7 @@ class LinkedMessage1ChoiceSemt00100103:
 
 
 @dataclass
-class RejectionReason23Semt00100103:
+class RejectionReason23Semt00100103(ISO20022MessageElement):
     rsn: Optional[MessageRejectedReason1Code] = field(
         default=None,
         metadata={
@@ -296,7 +297,7 @@ class RejectionReason23Semt00100103:
 
 
 @dataclass
-class SecuritiesMessageRejectionV03Semt00100103:
+class SecuritiesMessageRejectionV03Semt00100103(ISO20022MessageElement):
     msg_id: Optional[MessageIdentification1Semt00100103] = field(
         default=None,
         metadata={
@@ -327,7 +328,7 @@ class SecuritiesMessageRejectionV03Semt00100103:
 
 
 @dataclass
-class Semt00100103:
+class Semt00100103(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:semt.001.001.03"
 

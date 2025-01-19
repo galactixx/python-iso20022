@@ -3,13 +3,14 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import AddressType2Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:setr.002.001.04"
 
 
 @dataclass
-class CopyInformation4Setr00200104:
+class CopyInformation4Setr00200104(ISO20022MessageElement):
     cpy_ind: Optional[bool] = field(
         default=None,
         metadata={
@@ -31,7 +32,7 @@ class CopyInformation4Setr00200104:
 
 
 @dataclass
-class GenericIdentification1Setr00200104:
+class GenericIdentification1Setr00200104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -66,7 +67,7 @@ class GenericIdentification1Setr00200104:
 
 
 @dataclass
-class GenericIdentification30Setr00200104:
+class GenericIdentification30Setr00200104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -101,7 +102,7 @@ class GenericIdentification30Setr00200104:
 
 
 @dataclass
-class MessageIdentification1Setr00200104:
+class MessageIdentification1Setr00200104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -125,7 +126,7 @@ class MessageIdentification1Setr00200104:
 
 
 @dataclass
-class CancellationReason32ChoiceSetr00200104:
+class CancellationReason32ChoiceSetr00200104(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -147,7 +148,7 @@ class CancellationReason32ChoiceSetr00200104:
 
 
 @dataclass
-class PostalAddress1Setr00200104:
+class PostalAddress1Setr00200104(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -230,7 +231,7 @@ class PostalAddress1Setr00200104:
 
 
 @dataclass
-class InvestmentFundOrder9Setr00200104:
+class InvestmentFundOrder9Setr00200104(ISO20022MessageElement):
     ordr_ref: Optional[str] = field(
         default=None,
         metadata={
@@ -273,7 +274,7 @@ class InvestmentFundOrder9Setr00200104:
 
 
 @dataclass
-class NameAndAddress5Setr00200104:
+class NameAndAddress5Setr00200104(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -296,7 +297,7 @@ class NameAndAddress5Setr00200104:
 
 
 @dataclass
-class PartyIdentification90ChoiceSetr00200104:
+class PartyIdentification90ChoiceSetr00200104(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -325,7 +326,7 @@ class PartyIdentification90ChoiceSetr00200104:
 
 
 @dataclass
-class PartyIdentification113Setr00200104:
+class PartyIdentification113Setr00200104(ISO20022MessageElement):
     pty: Optional[PartyIdentification90ChoiceSetr00200104] = field(
         default=None,
         metadata={
@@ -347,7 +348,7 @@ class PartyIdentification113Setr00200104:
 
 
 @dataclass
-class AdditionalReference8Setr00200104:
+class AdditionalReference8Setr00200104(ISO20022MessageElement):
     ref: Optional[str] = field(
         default=None,
         metadata={
@@ -380,7 +381,7 @@ class AdditionalReference8Setr00200104:
 
 
 @dataclass
-class AdditionalReference9Setr00200104:
+class AdditionalReference9Setr00200104(ISO20022MessageElement):
     ref: Optional[str] = field(
         default=None,
         metadata={
@@ -413,7 +414,7 @@ class AdditionalReference9Setr00200104:
 
 
 @dataclass
-class RedemptionBulkOrderCancellationRequestV04Setr00200104:
+class RedemptionBulkOrderCancellationRequestV04Setr00200104(ISO20022MessageElement):
     msg_id: Optional[MessageIdentification1Setr00200104] = field(
         default=None,
         metadata={
@@ -469,7 +470,7 @@ class RedemptionBulkOrderCancellationRequestV04Setr00200104:
 
 
 @dataclass
-class Setr00200104:
+class Setr00200104(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:setr.002.001.04"
 

@@ -5,12 +5,13 @@ from python_iso20022.auth.enums import (
     ReportingMessageStatus1Code,
     ReportPeriodActivity1Code,
 )
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.084.001.02"
 
 
 @dataclass
-class AgreementType2ChoiceAuth08400102:
+class AgreementType2ChoiceAuth08400102(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -34,7 +35,7 @@ class AgreementType2ChoiceAuth08400102:
 
 
 @dataclass
-class GenericIdentification175Auth08400102:
+class GenericIdentification175Auth08400102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -69,7 +70,7 @@ class GenericIdentification175Auth08400102:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth08400102:
+class SupplementaryDataEnvelope1Auth08400102(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -80,7 +81,7 @@ class SupplementaryDataEnvelope1Auth08400102:
 
 
 @dataclass
-class ValidationRuleSchemeName1ChoiceAuth08400102:
+class ValidationRuleSchemeName1ChoiceAuth08400102(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -104,7 +105,7 @@ class ValidationRuleSchemeName1ChoiceAuth08400102:
 
 
 @dataclass
-class GenericValidationRuleIdentification1Auth08400102:
+class GenericValidationRuleIdentification1Auth08400102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -147,7 +148,7 @@ class GenericValidationRuleIdentification1Auth08400102:
 
 
 @dataclass
-class MasterAgreement7Auth08400102:
+class MasterAgreement7Auth08400102(ISO20022MessageElement):
     tp: Optional[AgreementType2ChoiceAuth08400102] = field(
         default=None,
         metadata={
@@ -180,7 +181,7 @@ class MasterAgreement7Auth08400102:
 
 
 @dataclass
-class NaturalPersonIdentification2Auth08400102:
+class NaturalPersonIdentification2Auth08400102(ISO20022MessageElement):
     id: Optional[GenericIdentification175Auth08400102] = field(
         default=None,
         metadata={
@@ -213,7 +214,7 @@ class NaturalPersonIdentification2Auth08400102:
 
 
 @dataclass
-class OrganisationIdentification38Auth08400102:
+class OrganisationIdentification38Auth08400102(ISO20022MessageElement):
     id: Optional[GenericIdentification175Auth08400102] = field(
         default=None,
         metadata={
@@ -246,7 +247,7 @@ class OrganisationIdentification38Auth08400102:
 
 
 @dataclass
-class SupplementaryData1Auth08400102:
+class SupplementaryData1Auth08400102(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -269,7 +270,7 @@ class SupplementaryData1Auth08400102:
 
 
 @dataclass
-class OrganisationIdentification15ChoiceAuth08400102:
+class OrganisationIdentification15ChoiceAuth08400102(ISO20022MessageElement):
     lei: Optional[str] = field(
         default=None,
         metadata={
@@ -299,7 +300,7 @@ class OrganisationIdentification15ChoiceAuth08400102:
 
 
 @dataclass
-class RejectionReason45Auth08400102:
+class RejectionReason45Auth08400102(ISO20022MessageElement):
     msg_rpt_id: Optional[str] = field(
         default=None,
         metadata={
@@ -331,7 +332,7 @@ class RejectionReason45Auth08400102:
 
 
 @dataclass
-class NumberOfTransactionsPerValidationRule5Auth08400102:
+class NumberOfTransactionsPerValidationRule5Auth08400102(ISO20022MessageElement):
     dtld_nb: Optional[str] = field(
         default=None,
         metadata={
@@ -354,7 +355,7 @@ class NumberOfTransactionsPerValidationRule5Auth08400102:
 
 
 @dataclass
-class PartyIdentification236ChoiceAuth08400102:
+class PartyIdentification236ChoiceAuth08400102(ISO20022MessageElement):
     lgl: Optional[OrganisationIdentification15ChoiceAuth08400102] = field(
         default=None,
         metadata={
@@ -374,7 +375,7 @@ class PartyIdentification236ChoiceAuth08400102:
 
 
 @dataclass
-class TradeTransactionIdentification17Auth08400102:
+class TradeTransactionIdentification17Auth08400102(ISO20022MessageElement):
     tech_rcrd_id: Optional[str] = field(
         default=None,
         metadata={
@@ -416,7 +417,7 @@ class TradeTransactionIdentification17Auth08400102:
 
 
 @dataclass
-class DetailedReportStatistics5Auth08400102:
+class DetailedReportStatistics5Auth08400102(ISO20022MessageElement):
     ttl_nb_of_rpts: Optional[str] = field(
         default=None,
         metadata={
@@ -460,7 +461,7 @@ class DetailedReportStatistics5Auth08400102:
 
 
 @dataclass
-class TradeTransactionIdentification16Auth08400102:
+class TradeTransactionIdentification16Auth08400102(ISO20022MessageElement):
     tech_rcrd_id: Optional[str] = field(
         default=None,
         metadata={
@@ -512,7 +513,7 @@ class TradeTransactionIdentification16Auth08400102:
 
 
 @dataclass
-class TradeTransactionIdentification20Auth08400102:
+class TradeTransactionIdentification20Auth08400102(ISO20022MessageElement):
     tech_rcrd_id: Optional[str] = field(
         default=None,
         metadata={
@@ -588,7 +589,7 @@ class TradeTransactionIdentification20Auth08400102:
 
 
 @dataclass
-class TransactionIdentification3ChoiceAuth08400102:
+class TransactionIdentification3ChoiceAuth08400102(ISO20022MessageElement):
     tx: Optional[TradeTransactionIdentification20Auth08400102] = field(
         default=None,
         metadata={
@@ -616,7 +617,7 @@ class TransactionIdentification3ChoiceAuth08400102:
 
 
 @dataclass
-class RejectionReason53Auth08400102:
+class RejectionReason53Auth08400102(ISO20022MessageElement):
     tx_id: Optional[TransactionIdentification3ChoiceAuth08400102] = field(
         default=None,
         metadata={
@@ -646,7 +647,7 @@ class RejectionReason53Auth08400102:
 
 
 @dataclass
-class DetailedTransactionStatistics13Auth08400102:
+class DetailedTransactionStatistics13Auth08400102(ISO20022MessageElement):
     ttl_nb_of_txs: Optional[str] = field(
         default=None,
         metadata={
@@ -688,7 +689,7 @@ class DetailedTransactionStatistics13Auth08400102:
 
 
 @dataclass
-class DetailedTransactionStatistics2ChoiceAuth08400102:
+class DetailedTransactionStatistics2ChoiceAuth08400102(ISO20022MessageElement):
     data_set_actn: Optional[ReportPeriodActivity1Code] = field(
         default=None,
         metadata={
@@ -708,7 +709,7 @@ class DetailedTransactionStatistics2ChoiceAuth08400102:
 
 
 @dataclass
-class TradeData29Auth08400102:
+class TradeData29Auth08400102(ISO20022MessageElement):
     rpt_sttstcs: list[DetailedReportStatistics5Auth08400102] = field(
         default_factory=list,
         metadata={
@@ -738,7 +739,7 @@ class TradeData29Auth08400102:
 
 
 @dataclass
-class TradeData35ChoiceAuth08400102:
+class TradeData35ChoiceAuth08400102(ISO20022MessageElement):
     data_set_actn: Optional[ReportPeriodActivity1Code] = field(
         default=None,
         metadata={
@@ -758,7 +759,9 @@ class TradeData35ChoiceAuth08400102:
 
 
 @dataclass
-class SecuritiesFinancingReportingTransactionStatusAdviceV02Auth08400102:
+class SecuritiesFinancingReportingTransactionStatusAdviceV02Auth08400102(
+    ISO20022MessageElement
+):
     tx_rpt_sts_and_rsn: list[TradeData35ChoiceAuth08400102] = field(
         default_factory=list,
         metadata={
@@ -779,7 +782,7 @@ class SecuritiesFinancingReportingTransactionStatusAdviceV02Auth08400102:
 
 
 @dataclass
-class Auth08400102:
+class Auth08400102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.084.001.02"
 

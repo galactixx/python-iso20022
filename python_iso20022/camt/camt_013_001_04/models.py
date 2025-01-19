@@ -3,13 +3,14 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.camt.enums import MemberStatus1Code, QueryType2Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:camt.013.001.04"
 
 
 @dataclass
-class ClearingSystemIdentification2ChoiceCamt01300104:
+class ClearingSystemIdentification2ChoiceCamt01300104(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -33,7 +34,7 @@ class ClearingSystemIdentification2ChoiceCamt01300104:
 
 
 @dataclass
-class FinancialIdentificationSchemeName1ChoiceCamt01300104:
+class FinancialIdentificationSchemeName1ChoiceCamt01300104(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -57,7 +58,7 @@ class FinancialIdentificationSchemeName1ChoiceCamt01300104:
 
 
 @dataclass
-class GenericIdentification1Camt01300104:
+class GenericIdentification1Camt01300104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -92,7 +93,7 @@ class GenericIdentification1Camt01300104:
 
 
 @dataclass
-class MemberReturnCriteria1Camt01300104:
+class MemberReturnCriteria1Camt01300104(ISO20022MessageElement):
     nm_ind: Optional[bool] = field(
         default=None,
         metadata={
@@ -152,7 +153,7 @@ class MemberReturnCriteria1Camt01300104:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Camt01300104:
+class SupplementaryDataEnvelope1Camt01300104(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -163,7 +164,7 @@ class SupplementaryDataEnvelope1Camt01300104:
 
 
 @dataclass
-class SystemMemberType1ChoiceCamt01300104:
+class SystemMemberType1ChoiceCamt01300104(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -187,7 +188,7 @@ class SystemMemberType1ChoiceCamt01300104:
 
 
 @dataclass
-class ClearingSystemMemberIdentification2Camt01300104:
+class ClearingSystemMemberIdentification2Camt01300104(ISO20022MessageElement):
     clr_sys_id: Optional[ClearingSystemIdentification2ChoiceCamt01300104] = field(
         default=None,
         metadata={
@@ -210,7 +211,7 @@ class ClearingSystemMemberIdentification2Camt01300104:
 
 
 @dataclass
-class GenericFinancialIdentification1Camt01300104:
+class GenericFinancialIdentification1Camt01300104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -243,7 +244,7 @@ class GenericFinancialIdentification1Camt01300104:
 
 
 @dataclass
-class RequestType4ChoiceCamt01300104:
+class RequestType4ChoiceCamt01300104(ISO20022MessageElement):
     pmt_ctrl: Optional[str] = field(
         default=None,
         metadata={
@@ -275,7 +276,7 @@ class RequestType4ChoiceCamt01300104:
 
 
 @dataclass
-class SupplementaryData1Camt01300104:
+class SupplementaryData1Camt01300104(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -298,7 +299,7 @@ class SupplementaryData1Camt01300104:
 
 
 @dataclass
-class SystemMemberStatus1ChoiceCamt01300104:
+class SystemMemberStatus1ChoiceCamt01300104(ISO20022MessageElement):
     cd: Optional[MemberStatus1Code] = field(
         default=None,
         metadata={
@@ -320,7 +321,7 @@ class SystemMemberStatus1ChoiceCamt01300104:
 
 
 @dataclass
-class MemberIdentification3ChoiceCamt01300104:
+class MemberIdentification3ChoiceCamt01300104(ISO20022MessageElement):
     bicfi: Optional[str] = field(
         default=None,
         metadata={
@@ -349,7 +350,7 @@ class MemberIdentification3ChoiceCamt01300104:
 
 
 @dataclass
-class MessageHeader9Camt01300104:
+class MessageHeader9Camt01300104(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -380,7 +381,7 @@ class MessageHeader9Camt01300104:
 
 
 @dataclass
-class MemberSearchCriteria4Camt01300104:
+class MemberSearchCriteria4Camt01300104(ISO20022MessageElement):
     id: list[MemberIdentification3ChoiceCamt01300104] = field(
         default_factory=list,
         metadata={
@@ -408,7 +409,7 @@ class MemberSearchCriteria4Camt01300104:
 
 
 @dataclass
-class MemberCriteria4Camt01300104:
+class MemberCriteria4Camt01300104(ISO20022MessageElement):
     new_qry_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -438,7 +439,7 @@ class MemberCriteria4Camt01300104:
 
 
 @dataclass
-class MemberCriteriaDefinition2ChoiceCamt01300104:
+class MemberCriteriaDefinition2ChoiceCamt01300104(ISO20022MessageElement):
     qry_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -460,7 +461,7 @@ class MemberCriteriaDefinition2ChoiceCamt01300104:
 
 
 @dataclass
-class MemberQueryDefinition4Camt01300104:
+class MemberQueryDefinition4Camt01300104(ISO20022MessageElement):
     qry_tp: Optional[QueryType2Code] = field(
         default=None,
         metadata={
@@ -480,7 +481,7 @@ class MemberQueryDefinition4Camt01300104:
 
 
 @dataclass
-class GetMemberV04Camt01300104:
+class GetMemberV04Camt01300104(ISO20022MessageElement):
     msg_hdr: Optional[MessageHeader9Camt01300104] = field(
         default=None,
         metadata={
@@ -509,7 +510,7 @@ class GetMemberV04Camt01300104:
 
 
 @dataclass
-class Camt01300104:
+class Camt01300104(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:camt.013.001.04"
 

@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.caam.caam_007_001_01.enums import MessageFunction8Code
 from python_iso20022.caam.enums import (
     Algorithm7Code,
@@ -24,7 +25,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:caam.007.001.01"
 
 
 @dataclass
-class AtmcommandIdentification1Caam00700101:
+class AtmcommandIdentification1Caam00700101(ISO20022MessageElement):
     """
     ATMCommandIdentification1 Identification of the entity issuing the command.
 
@@ -71,7 +72,7 @@ class AtmcommandIdentification1Caam00700101:
 
 
 @dataclass
-class Acquirer7Caam00700101:
+class Acquirer7Caam00700101(ISO20022MessageElement):
     """
     Acquirer7 Acquirer of the withdrawal transaction, in charge of the funds
     settlement with the issuer.
@@ -104,7 +105,7 @@ class Acquirer7Caam00700101:
 
 
 @dataclass
-class AutomatedTellerMachine7Caam00700101:
+class AutomatedTellerMachine7Caam00700101(ISO20022MessageElement):
     """
     AutomatedTellerMachine7 ATM information.
 
@@ -150,7 +151,7 @@ class AutomatedTellerMachine7Caam00700101:
 
 
 @dataclass
-class Kekidentifier2Caam00700101:
+class Kekidentifier2Caam00700101(ISO20022MessageElement):
     """
     KEKIdentifier2 Identification of a key encryption key (KEK), using previously
     distributed symmetric key.
@@ -214,7 +215,7 @@ class Kekidentifier2Caam00700101:
 
 
 @dataclass
-class Atmenvironment9Caam00700101:
+class Atmenvironment9Caam00700101(ISO20022MessageElement):
     """
     ATMEnvironment9 Environment of the ATM.
 
@@ -258,7 +259,7 @@ class Atmenvironment9Caam00700101:
 
 
 @dataclass
-class AtmmessageFunction1Caam00700101:
+class AtmmessageFunction1Caam00700101(ISO20022MessageElement):
     """
     ATMMessageFunction1 Identifies the type of process related to an ATM message.
 
@@ -304,7 +305,7 @@ class AtmmessageFunction1Caam00700101:
 
 
 @dataclass
-class EncapsulatedContent3Caam00700101:
+class EncapsulatedContent3Caam00700101(ISO20022MessageElement):
     """
     EncapsulatedContent3 Data to authenticate.
 
@@ -336,7 +337,7 @@ class EncapsulatedContent3Caam00700101:
 
 
 @dataclass
-class GenericIdentification77Caam00700101:
+class GenericIdentification77Caam00700101(ISO20022MessageElement):
     """
     GenericIdentification77 Identification of an entity.
 
@@ -399,7 +400,7 @@ class GenericIdentification77Caam00700101:
 
 
 @dataclass
-class Parameter5Caam00700101:
+class Parameter5Caam00700101(ISO20022MessageElement):
     """
     Parameter5 Parameters associated to a mask generator cryptographic function.
 
@@ -418,7 +419,7 @@ class Parameter5Caam00700101:
 
 
 @dataclass
-class Parameter6Caam00700101:
+class Parameter6Caam00700101(ISO20022MessageElement):
     """
     Parameter6 Parameters associated to a cryptographic encryption algorithm.
 
@@ -460,7 +461,7 @@ class Parameter6Caam00700101:
 
 
 @dataclass
-class Parameter7Caam00700101:
+class Parameter7Caam00700101(ISO20022MessageElement):
     """
     Parameter7 Parameters associated to the MAC algorithm.
 
@@ -492,7 +493,7 @@ class Parameter7Caam00700101:
 
 
 @dataclass
-class RelativeDistinguishedName1Caam00700101:
+class RelativeDistinguishedName1Caam00700101(ISO20022MessageElement):
     """
     RelativeDistinguishedName1 Relative distinguished name defined by X.500 and
     X.509.
@@ -526,7 +527,7 @@ class RelativeDistinguishedName1Caam00700101:
 
 
 @dataclass
-class AlgorithmIdentification12Caam00700101:
+class AlgorithmIdentification12Caam00700101(ISO20022MessageElement):
     """
     AlgorithmIdentification12 Mask generator function cryptographic algorithm and
     parameters.
@@ -557,7 +558,7 @@ class AlgorithmIdentification12Caam00700101:
 
 
 @dataclass
-class AlgorithmIdentification13Caam00700101:
+class AlgorithmIdentification13Caam00700101(ISO20022MessageElement):
     """
     AlgorithmIdentification13 Cryptographic algorithm and parameters for the
     protection of the transported key.
@@ -587,7 +588,7 @@ class AlgorithmIdentification13Caam00700101:
 
 
 @dataclass
-class AlgorithmIdentification14Caam00700101:
+class AlgorithmIdentification14Caam00700101(ISO20022MessageElement):
     """
     AlgorithmIdentification14 Cryptographic algorithm and parameters for
     encryptions with a symmetric cryptographic key.
@@ -617,7 +618,7 @@ class AlgorithmIdentification14Caam00700101:
 
 
 @dataclass
-class AlgorithmIdentification15Caam00700101:
+class AlgorithmIdentification15Caam00700101(ISO20022MessageElement):
     """
     AlgorithmIdentification15 Identification of a cryptographic algorithm and
     parameters for the MAC computation.
@@ -646,7 +647,7 @@ class AlgorithmIdentification15Caam00700101:
 
 
 @dataclass
-class CertificateIssuer1Caam00700101:
+class CertificateIssuer1Caam00700101(ISO20022MessageElement):
     """
     CertificateIssuer1 Certificate issuer name (see X.509).
 
@@ -666,7 +667,7 @@ class CertificateIssuer1Caam00700101:
 
 
 @dataclass
-class HostToAtmrequest1Caam00700101:
+class HostToAtmrequest1Caam00700101(ISO20022MessageElement):
     """
     HostToATMRequest1 Information related to the request to an ATM to contact the
     ATM manager.
@@ -710,7 +711,7 @@ class HostToAtmrequest1Caam00700101:
 
 
 @dataclass
-class Traceability4Caam00700101:
+class Traceability4Caam00700101(ISO20022MessageElement):
     """
     Traceability4 Identification of partners involved in exchange from the ATM to
     the issuer, with the relative timestamp of their exchanges.
@@ -765,7 +766,7 @@ class Traceability4Caam00700101:
 
 
 @dataclass
-class EncryptedContent3Caam00700101:
+class EncryptedContent3Caam00700101(ISO20022MessageElement):
     """
     EncryptedContent3 Encrypted data with an encryption key.
 
@@ -809,7 +810,7 @@ class EncryptedContent3Caam00700101:
 
 
 @dataclass
-class Header20Caam00700101:
+class Header20Caam00700101(ISO20022MessageElement):
     """
     Header20 Information related to the protocol management on a segment of the
     path from the ATM to the acquirer.
@@ -914,7 +915,7 @@ class Header20Caam00700101:
 
 
 @dataclass
-class IssuerAndSerialNumber1Caam00700101:
+class IssuerAndSerialNumber1Caam00700101(ISO20022MessageElement):
     """
     IssuerAndSerialNumber1 Certificate issuer name and serial number  (see X.509).
 
@@ -946,7 +947,7 @@ class IssuerAndSerialNumber1Caam00700101:
 
 
 @dataclass
-class Kek4Caam00700101:
+class Kek4Caam00700101(ISO20022MessageElement):
     """
     KEK4 Key encryption key (KEK), using previously distributed symmetric key.
 
@@ -1004,7 +1005,7 @@ class Kek4Caam00700101:
 
 
 @dataclass
-class Parameter4Caam00700101:
+class Parameter4Caam00700101(ISO20022MessageElement):
     """
     Parameter4 Parameters of the asymmetric encryption algorithm.
 
@@ -1043,7 +1044,7 @@ class Parameter4Caam00700101:
 
 
 @dataclass
-class AlgorithmIdentification11Caam00700101:
+class AlgorithmIdentification11Caam00700101(ISO20022MessageElement):
     """
     AlgorithmIdentification11 Cryptographic algorithms and parameters for the
     protection of transported keys by an asymmetric key.
@@ -1073,7 +1074,7 @@ class AlgorithmIdentification11Caam00700101:
 
 
 @dataclass
-class Recipient5ChoiceCaam00700101:
+class Recipient5ChoiceCaam00700101(ISO20022MessageElement):
     """
     Recipient5Choice Identification of a cryptographic asymmetric key.
 
@@ -1103,7 +1104,7 @@ class Recipient5ChoiceCaam00700101:
 
 
 @dataclass
-class KeyTransport4Caam00700101:
+class KeyTransport4Caam00700101(ISO20022MessageElement):
     """
     KeyTransport4 Key encryption key (KEK), encrypted with a previously distributed
     asymmetric public key.
@@ -1159,7 +1160,7 @@ class KeyTransport4Caam00700101:
 
 
 @dataclass
-class Recipient4ChoiceCaam00700101:
+class Recipient4ChoiceCaam00700101(ISO20022MessageElement):
     """
     Recipient4Choice Transport key or key encryption key (KEK) for the recipient.
 
@@ -1199,7 +1200,7 @@ class Recipient4ChoiceCaam00700101:
 
 
 @dataclass
-class AuthenticatedData4Caam00700101:
+class AuthenticatedData4Caam00700101(ISO20022MessageElement):
     """
     AuthenticatedData4 Message authentication code (MAC), computed on the data to
     protect with an encryption key.
@@ -1265,7 +1266,7 @@ class AuthenticatedData4Caam00700101:
 
 
 @dataclass
-class EnvelopedData4Caam00700101:
+class EnvelopedData4Caam00700101(ISO20022MessageElement):
     """
     EnvelopedData4 Encrypted data with encryption key.
 
@@ -1306,7 +1307,7 @@ class EnvelopedData4Caam00700101:
 
 
 @dataclass
-class ContentInformationType10Caam00700101:
+class ContentInformationType10Caam00700101(ISO20022MessageElement):
     """
     ContentInformationType10 General cryptographic message syntax (CMS) containing
     encrypted data.
@@ -1337,7 +1338,7 @@ class ContentInformationType10Caam00700101:
 
 
 @dataclass
-class ContentInformationType15Caam00700101:
+class ContentInformationType15Caam00700101(ISO20022MessageElement):
     """
     ContentInformationType15 General cryptographic message syntax (CMS) containing
     authenticated data.
@@ -1368,7 +1369,7 @@ class ContentInformationType15Caam00700101:
 
 
 @dataclass
-class HostToAtmrequestV01Caam00700101:
+class HostToAtmrequestV01Caam00700101(ISO20022MessageElement):
     """
     HostToATMRequestV01 The HostToATMRequest message is sent by a host to an ATM to
     request the ATM to contact a host by sending of a maintenance messages.
@@ -1422,7 +1423,7 @@ class HostToAtmrequestV01Caam00700101:
 
 
 @dataclass
-class Caam00700101:
+class Caam00700101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:caam.007.001.01"
 

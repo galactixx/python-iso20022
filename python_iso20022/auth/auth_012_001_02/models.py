@@ -16,12 +16,13 @@ from python_iso20022.auth.enums import (
     ReportPeriodActivity3Code,
     TransactionOperationType1Code,
 )
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.012.001.02"
 
 
 @dataclass
-class ActiveCurrencyAndAmountAuth01200102:
+class ActiveCurrencyAndAmountAuth01200102(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -43,7 +44,7 @@ class ActiveCurrencyAndAmountAuth01200102:
 
 
 @dataclass
-class DateAndDateTimeChoiceAuth01200102:
+class DateAndDateTimeChoiceAuth01200102(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -63,7 +64,7 @@ class DateAndDateTimeChoiceAuth01200102:
 
 
 @dataclass
-class DateTimePeriod1Auth01200102:
+class DateTimePeriod1Auth01200102(ISO20022MessageElement):
     fr_dt_tm: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -85,7 +86,7 @@ class DateTimePeriod1Auth01200102:
 
 
 @dataclass
-class FloatingRateNote2Auth01200102:
+class FloatingRateNote2Auth01200102(ISO20022MessageElement):
     ref_rate_indx: Optional[str] = field(
         default=None,
         metadata={
@@ -110,7 +111,7 @@ class FloatingRateNote2Auth01200102:
 
 
 @dataclass
-class NameAndLocation1Auth01200102:
+class NameAndLocation1Auth01200102(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -135,7 +136,7 @@ class NameAndLocation1Auth01200102:
 
 
 @dataclass
-class SectorAndLocation1Auth01200102:
+class SectorAndLocation1Auth01200102(ISO20022MessageElement):
     sctr: Optional[str] = field(
         default=None,
         metadata={
@@ -158,7 +159,7 @@ class SectorAndLocation1Auth01200102:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth01200102:
+class SupplementaryDataEnvelope1Auth01200102(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -169,7 +170,7 @@ class SupplementaryDataEnvelope1Auth01200102:
 
 
 @dataclass
-class CollateralValuation6Auth01200102:
+class CollateralValuation6Auth01200102(ISO20022MessageElement):
     nmnl_amt: Optional[ActiveCurrencyAndAmountAuth01200102] = field(
         default=None,
         metadata={
@@ -191,7 +192,7 @@ class CollateralValuation6Auth01200102:
 
 
 @dataclass
-class CollateralValuation7Auth01200102:
+class CollateralValuation7Auth01200102(ISO20022MessageElement):
     pool_sts: Optional[CollateralPool1Code] = field(
         default=None,
         metadata={
@@ -231,7 +232,7 @@ class CollateralValuation7Auth01200102:
 
 
 @dataclass
-class CounterpartyIdentification3ChoiceAuth01200102:
+class CounterpartyIdentification3ChoiceAuth01200102(ISO20022MessageElement):
     lei: Optional[str] = field(
         default=None,
         metadata={
@@ -260,7 +261,7 @@ class CounterpartyIdentification3ChoiceAuth01200102:
 
 
 @dataclass
-class MoneyMarketReportHeader1Auth01200102:
+class MoneyMarketReportHeader1Auth01200102(ISO20022MessageElement):
     rptg_agt: Optional[str] = field(
         default=None,
         metadata={
@@ -283,7 +284,7 @@ class MoneyMarketReportHeader1Auth01200102:
 
 
 @dataclass
-class SupplementaryData1Auth01200102:
+class SupplementaryData1Auth01200102(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -306,7 +307,7 @@ class SupplementaryData1Auth01200102:
 
 
 @dataclass
-class SecuredCollateral2ChoiceAuth01200102:
+class SecuredCollateral2ChoiceAuth01200102(ISO20022MessageElement):
     sngl_coll: Optional[CollateralValuation6Auth01200102] = field(
         default=None,
         metadata={
@@ -342,7 +343,7 @@ class SecuredCollateral2ChoiceAuth01200102:
 
 
 @dataclass
-class Collateral18Auth01200102:
+class Collateral18Auth01200102(ISO20022MessageElement):
     valtn: Optional[SecuredCollateral2ChoiceAuth01200102] = field(
         default=None,
         metadata={
@@ -373,7 +374,7 @@ class Collateral18Auth01200102:
 
 
 @dataclass
-class SecuredMarketTransaction4Auth01200102:
+class SecuredMarketTransaction4Auth01200102(ISO20022MessageElement):
     rptd_tx_sts: Optional[TransactionOperationType1Code] = field(
         default=None,
         metadata={
@@ -559,7 +560,7 @@ class SecuredMarketTransaction4Auth01200102:
 
 
 @dataclass
-class SecuredMarketReport4ChoiceAuth01200102:
+class SecuredMarketReport4ChoiceAuth01200102(ISO20022MessageElement):
     data_set_actn: Optional[ReportPeriodActivity3Code] = field(
         default=None,
         metadata={
@@ -579,7 +580,7 @@ class SecuredMarketReport4ChoiceAuth01200102:
 
 
 @dataclass
-class MoneyMarketSecuredMarketStatisticalReportV02Auth01200102:
+class MoneyMarketSecuredMarketStatisticalReportV02Auth01200102(ISO20022MessageElement):
     rpt_hdr: Optional[MoneyMarketReportHeader1Auth01200102] = field(
         default=None,
         metadata={
@@ -609,7 +610,7 @@ class MoneyMarketSecuredMarketStatisticalReportV02Auth01200102:
 
 
 @dataclass
-class Auth01200102:
+class Auth01200102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.012.001.02"
 

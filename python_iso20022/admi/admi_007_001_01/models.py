@@ -3,13 +3,14 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import AddressType2Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:admi.007.001.01"
 
 
 @dataclass
-class GenericIdentification36Admi00700101:
+class GenericIdentification36Admi00700101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -45,7 +46,7 @@ class GenericIdentification36Admi00700101:
 
 
 @dataclass
-class MessageHeader10Admi00700101:
+class MessageHeader10Admi00700101(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -78,7 +79,7 @@ class MessageHeader10Admi00700101:
 
 
 @dataclass
-class RequestHandling2Admi00700101:
+class RequestHandling2Admi00700101(ISO20022MessageElement):
     sts_cd: Optional[str] = field(
         default=None,
         metadata={
@@ -112,7 +113,7 @@ class RequestHandling2Admi00700101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Admi00700101:
+class SupplementaryDataEnvelope1Admi00700101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -123,7 +124,7 @@ class SupplementaryDataEnvelope1Admi00700101:
 
 
 @dataclass
-class PostalAddress1Admi00700101:
+class PostalAddress1Admi00700101(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -206,7 +207,7 @@ class PostalAddress1Admi00700101:
 
 
 @dataclass
-class SupplementaryData1Admi00700101:
+class SupplementaryData1Admi00700101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -229,7 +230,7 @@ class SupplementaryData1Admi00700101:
 
 
 @dataclass
-class NameAndAddress5Admi00700101:
+class NameAndAddress5Admi00700101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -252,7 +253,7 @@ class NameAndAddress5Admi00700101:
 
 
 @dataclass
-class PartyIdentification120ChoiceAdmi00700101:
+class PartyIdentification120ChoiceAdmi00700101(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -281,7 +282,7 @@ class PartyIdentification120ChoiceAdmi00700101:
 
 
 @dataclass
-class PartyIdentification136Admi00700101:
+class PartyIdentification136Admi00700101(ISO20022MessageElement):
     id: Optional[PartyIdentification120ChoiceAdmi00700101] = field(
         default=None,
         metadata={
@@ -303,7 +304,7 @@ class PartyIdentification136Admi00700101:
 
 
 @dataclass
-class MessageReference1Admi00700101:
+class MessageReference1Admi00700101(ISO20022MessageElement):
     ref: Optional[str] = field(
         default=None,
         metadata={
@@ -336,7 +337,7 @@ class MessageReference1Admi00700101:
 
 
 @dataclass
-class ReceiptAcknowledgementReport2Admi00700101:
+class ReceiptAcknowledgementReport2Admi00700101(ISO20022MessageElement):
     rltd_ref: Optional[MessageReference1Admi00700101] = field(
         default=None,
         metadata={
@@ -358,7 +359,7 @@ class ReceiptAcknowledgementReport2Admi00700101:
 
 
 @dataclass
-class ReceiptAcknowledgementV01Admi00700101:
+class ReceiptAcknowledgementV01Admi00700101(ISO20022MessageElement):
     msg_id: Optional[MessageHeader10Admi00700101] = field(
         default=None,
         metadata={
@@ -388,7 +389,7 @@ class ReceiptAcknowledgementV01Admi00700101:
 
 
 @dataclass
-class Admi00700101:
+class Admi00700101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:admi.007.001.01"
 

@@ -3,13 +3,14 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import AddressType2Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:reda.061.001.02"
 
 
 @dataclass
-class ClearingSystemIdentification2ChoiceReda06100102:
+class ClearingSystemIdentification2ChoiceReda06100102(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -33,7 +34,7 @@ class ClearingSystemIdentification2ChoiceReda06100102:
 
 
 @dataclass
-class CutOff1Reda06100102:
+class CutOff1Reda06100102(ISO20022MessageElement):
     cut_off_upd_id: Optional[str] = field(
         default=None,
         metadata={
@@ -77,7 +78,7 @@ class CutOff1Reda06100102:
 
 
 @dataclass
-class Pagination1Reda06100102:
+class Pagination1Reda06100102(ISO20022MessageElement):
     pg_nb: Optional[str] = field(
         default=None,
         metadata={
@@ -100,7 +101,7 @@ class Pagination1Reda06100102:
 
 
 @dataclass
-class PartyIdentification265Reda06100102:
+class PartyIdentification265Reda06100102(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -125,7 +126,7 @@ class PartyIdentification265Reda06100102:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Reda06100102:
+class SupplementaryDataEnvelope1Reda06100102(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -136,7 +137,7 @@ class SupplementaryDataEnvelope1Reda06100102:
 
 
 @dataclass
-class PartyIdentification266Reda06100102:
+class PartyIdentification266Reda06100102(ISO20022MessageElement):
     pty_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -195,7 +196,7 @@ class PartyIdentification266Reda06100102:
 
 
 @dataclass
-class PostalAddress1Reda06100102:
+class PostalAddress1Reda06100102(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -278,7 +279,7 @@ class PostalAddress1Reda06100102:
 
 
 @dataclass
-class SupplementaryData1Reda06100102:
+class SupplementaryData1Reda06100102(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -301,7 +302,7 @@ class SupplementaryData1Reda06100102:
 
 
 @dataclass
-class NameAndAddress8Reda06100102:
+class NameAndAddress8Reda06100102(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -335,7 +336,7 @@ class NameAndAddress8Reda06100102:
 
 
 @dataclass
-class PartyIdentification242ChoiceReda06100102:
+class PartyIdentification242ChoiceReda06100102(ISO20022MessageElement):
     nm_and_adr: Optional[NameAndAddress8Reda06100102] = field(
         default=None,
         metadata={
@@ -363,7 +364,7 @@ class PartyIdentification242ChoiceReda06100102:
 
 
 @dataclass
-class NettingCutOffReportData2Reda06100102:
+class NettingCutOffReportData2Reda06100102(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -441,7 +442,7 @@ class NettingCutOffReportData2Reda06100102:
 
 
 @dataclass
-class NettingIdentification2ChoiceReda06100102:
+class NettingIdentification2ChoiceReda06100102(ISO20022MessageElement):
     trad_pty: Optional[PartyIdentification242ChoiceReda06100102] = field(
         default=None,
         metadata={
@@ -463,7 +464,7 @@ class NettingIdentification2ChoiceReda06100102:
 
 
 @dataclass
-class NettingCutOff2Reda06100102:
+class NettingCutOff2Reda06100102(ISO20022MessageElement):
     netg_id: Optional[NettingIdentification2ChoiceReda06100102] = field(
         default=None,
         metadata={
@@ -485,7 +486,7 @@ class NettingCutOff2Reda06100102:
 
 
 @dataclass
-class CutOffData2Reda06100102:
+class CutOffData2Reda06100102(ISO20022MessageElement):
     ptcpt_id: Optional[PartyIdentification242ChoiceReda06100102] = field(
         default=None,
         metadata={
@@ -507,7 +508,7 @@ class CutOffData2Reda06100102:
 
 
 @dataclass
-class NettingCutOffReferenceDataReportV02Reda06100102:
+class NettingCutOffReferenceDataReportV02Reda06100102(ISO20022MessageElement):
     rpt_data: Optional[NettingCutOffReportData2Reda06100102] = field(
         default=None,
         metadata={
@@ -537,7 +538,7 @@ class NettingCutOffReferenceDataReportV02Reda06100102:
 
 
 @dataclass
-class Reda06100102:
+class Reda06100102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:reda.061.001.02"
 

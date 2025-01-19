@@ -27,8 +27,8 @@ PACKAGE_DIR = "python_iso20022"
 REPOSITORY_PATH = Path.cwd().resolve()
 PACKAGE_PATH = REPOSITORY_PATH / PACKAGE_DIR
 BASE_MODEL_PATH = PACKAGE_PATH / "base.py"
-MESSAGE_MODEL_NAME = 'ISO20022Message'
-ELEMENT_MODEL_NAME = 'ISO20022MessageElement'
+MESSAGE_MODEL_NAME = "ISO20022Message"
+ELEMENT_MODEL_NAME = "ISO20022MessageElement"
 
 
 @dataclass(frozen=True)
@@ -375,7 +375,7 @@ def generate_module_from_path(path: Path) -> str:
     module = path.with_suffix("")
     module = re.search(f"{PACKAGE_DIR}.*", module.as_posix()).group()
     modules = module.strip("/").split("/")
-    return '.'.join(modules)
+    return ".".join(modules)
 
 
 def decorator_is_dataclass(decorator: cst.Decorator) -> bool:
@@ -436,16 +436,16 @@ def write_to_python(path: Path, code: str) -> None:
         gen_py_file.write(code)
 
 
-def generate_import_statement(module: str, names: Optional[List[str]] = None) -> cst.SimpleStatementLine:
-    if names  is None:
+def generate_import_statement(
+    module: str, names: Optional[List[str]] = None
+) -> cst.SimpleStatementLine:
+    if names is None:
         import_statement = generate_cst_import(names=[module])
     else:
-        modules = module.split('.')
+        modules = module.split(".")
         attribute = generate_attribute_from_module(modules=modules)
 
-        import_statement = generate_cst_import_from(
-            module=attribute, names=names
-        )
+        import_statement = generate_cst_import_from(module=attribute, names=names)
     return import_statement
 
 
@@ -482,9 +482,7 @@ def modify_python_file_as_cst(
 
 
 def write_enums_to_file(path: Path, enums: Set[cst.ClassDef]) -> None:
-    enum_import_statement = generate_import_statement(
-        module="enum", names=["Enum"]
-    )
+    enum_import_statement = generate_import_statement(module="enum", names=["Enum"])
     enums_sorted = sorted(list(enums), key=lambda x: x.name.value)
 
     body = [enum_import_statement] + enums_sorted

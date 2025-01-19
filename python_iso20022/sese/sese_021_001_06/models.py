@@ -1,11 +1,13 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
+
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:sese.021.001.06"
 
 
 @dataclass
-class GenericIdentification30Sese02100106:
+class GenericIdentification30Sese02100106(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -40,7 +42,7 @@ class GenericIdentification30Sese02100106:
 
 
 @dataclass
-class GenericIdentification36Sese02100106:
+class GenericIdentification36Sese02100106(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -76,7 +78,7 @@ class GenericIdentification36Sese02100106:
 
 
 @dataclass
-class Identification28Sese02100106:
+class Identification28Sese02100106(ISO20022MessageElement):
     acct_ownr_tx_id: Optional[str] = field(
         default=None,
         metadata={
@@ -221,7 +223,7 @@ class Identification28Sese02100106:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Sese02100106:
+class SupplementaryDataEnvelope1Sese02100106(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -232,7 +234,7 @@ class SupplementaryDataEnvelope1Sese02100106:
 
 
 @dataclass
-class BlockChainAddressWallet3Sese02100106:
+class BlockChainAddressWallet3Sese02100106(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -265,7 +267,7 @@ class BlockChainAddressWallet3Sese02100106:
 
 
 @dataclass
-class DocumentNumber5ChoiceSese02100106:
+class DocumentNumber5ChoiceSese02100106(ISO20022MessageElement):
     shrt_nb: Optional[str] = field(
         default=None,
         metadata={
@@ -295,7 +297,7 @@ class DocumentNumber5ChoiceSese02100106:
 
 
 @dataclass
-class PartyIdentification127ChoiceSese02100106:
+class PartyIdentification127ChoiceSese02100106(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -316,7 +318,7 @@ class PartyIdentification127ChoiceSese02100106:
 
 
 @dataclass
-class SecuritiesAccount22Sese02100106:
+class SecuritiesAccount22Sese02100106(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -349,7 +351,7 @@ class SecuritiesAccount22Sese02100106:
 
 
 @dataclass
-class SupplementaryData1Sese02100106:
+class SupplementaryData1Sese02100106(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -372,7 +374,7 @@ class SupplementaryData1Sese02100106:
 
 
 @dataclass
-class DocumentNumber18Sese02100106:
+class DocumentNumber18Sese02100106(ISO20022MessageElement):
     nb: Optional[DocumentNumber5ChoiceSese02100106] = field(
         default=None,
         metadata={
@@ -394,7 +396,7 @@ class DocumentNumber18Sese02100106:
 
 
 @dataclass
-class PartyIdentification144Sese02100106:
+class PartyIdentification144Sese02100106(ISO20022MessageElement):
     id: Optional[PartyIdentification127ChoiceSese02100106] = field(
         default=None,
         metadata={
@@ -416,7 +418,7 @@ class PartyIdentification144Sese02100106:
 
 
 @dataclass
-class SecuritiesTransactionStatusQueryV06Sese02100106:
+class SecuritiesTransactionStatusQueryV06Sese02100106(ISO20022MessageElement):
     sts_advc_reqd: Optional[DocumentNumber18Sese02100106] = field(
         default=None,
         metadata={
@@ -461,7 +463,7 @@ class SecuritiesTransactionStatusQueryV06Sese02100106:
 
 
 @dataclass
-class Sese02100106:
+class Sese02100106(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:sese.021.001.06"
 

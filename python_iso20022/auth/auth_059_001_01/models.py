@@ -2,11 +2,13 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
+
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.059.001.01"
 
 
 @dataclass
-class ActiveCurrencyAndAmountAuth05900101:
+class ActiveCurrencyAndAmountAuth05900101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -28,7 +30,7 @@ class ActiveCurrencyAndAmountAuth05900101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth05900101:
+class SupplementaryDataEnvelope1Auth05900101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -39,7 +41,7 @@ class SupplementaryDataEnvelope1Auth05900101:
 
 
 @dataclass
-class AmountAndDirection102Auth05900101:
+class AmountAndDirection102Auth05900101(ISO20022MessageElement):
     amt: Optional[ActiveCurrencyAndAmountAuth05900101] = field(
         default=None,
         metadata={
@@ -61,7 +63,7 @@ class AmountAndDirection102Auth05900101:
 
 
 @dataclass
-class CapitalRequirement1Auth05900101:
+class CapitalRequirement1Auth05900101(ISO20022MessageElement):
     wndg_dwn_or_rstrg_rsk: Optional[ActiveCurrencyAndAmountAuth05900101] = field(
         default=None,
         metadata={
@@ -129,7 +131,7 @@ class CapitalRequirement1Auth05900101:
 
 
 @dataclass
-class HypotheticalCapitalMeasure1Auth05900101:
+class HypotheticalCapitalMeasure1Auth05900101(ISO20022MessageElement):
     amt: Optional[ActiveCurrencyAndAmountAuth05900101] = field(
         default=None,
         metadata={
@@ -153,7 +155,7 @@ class HypotheticalCapitalMeasure1Auth05900101:
 
 
 @dataclass
-class SupplementaryData1Auth05900101:
+class SupplementaryData1Auth05900101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -176,7 +178,7 @@ class SupplementaryData1Auth05900101:
 
 
 @dataclass
-class IncomeStatement1Auth05900101:
+class IncomeStatement1Auth05900101(ISO20022MessageElement):
     clr_fees: Optional[ActiveCurrencyAndAmountAuth05900101] = field(
         default=None,
         metadata={
@@ -261,7 +263,7 @@ class IncomeStatement1Auth05900101:
 
 
 @dataclass
-class CcpincomeStatementAndCapitalAdequacyReportV01Auth05900101:
+class CcpincomeStatementAndCapitalAdequacyReportV01Auth05900101(ISO20022MessageElement):
     class Meta:
         name = "CCPIncomeStatementAndCapitalAdequacyReportV01"
 
@@ -321,7 +323,7 @@ class CcpincomeStatementAndCapitalAdequacyReportV01Auth05900101:
 
 
 @dataclass
-class Auth05900101:
+class Auth05900101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.059.001.01"
 

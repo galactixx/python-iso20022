@@ -1,11 +1,13 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
+
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.003.001.01"
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth00300101:
+class SupplementaryDataEnvelope1Auth00300101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -16,7 +18,7 @@ class SupplementaryDataEnvelope1Auth00300101:
 
 
 @dataclass
-class SupplementaryData1Auth00300101:
+class SupplementaryData1Auth00300101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -39,7 +41,7 @@ class SupplementaryData1Auth00300101:
 
 
 @dataclass
-class InformationRequestStatusChangeNotificationV01Auth00300101:
+class InformationRequestStatusChangeNotificationV01Auth00300101(ISO20022MessageElement):
     orgnl_biz_qry: Optional[str] = field(
         default=None,
         metadata={
@@ -71,7 +73,7 @@ class InformationRequestStatusChangeNotificationV01Auth00300101:
 
 
 @dataclass
-class Auth00300101:
+class Auth00300101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.003.001.01"
 

@@ -5,12 +5,13 @@ from typing import Optional
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
 from python_iso20022.auth.enums import TradingVenue2Code
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.040.001.01"
 
 
 @dataclass
-class ActiveOrHistoricCurrencyAndAmountAuth04000101:
+class ActiveOrHistoricCurrencyAndAmountAuth04000101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -32,7 +33,7 @@ class ActiveOrHistoricCurrencyAndAmountAuth04000101:
 
 
 @dataclass
-class Period2Auth04000101:
+class Period2Auth04000101(ISO20022MessageElement):
     fr_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -54,7 +55,7 @@ class Period2Auth04000101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth04000101:
+class SupplementaryDataEnvelope1Auth04000101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -65,7 +66,7 @@ class SupplementaryDataEnvelope1Auth04000101:
 
 
 @dataclass
-class NumberAndVolume2Auth04000101:
+class NumberAndVolume2Auth04000101(ISO20022MessageElement):
     nb: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -89,7 +90,7 @@ class NumberAndVolume2Auth04000101:
 
 
 @dataclass
-class Period4ChoiceAuth04000101:
+class Period4ChoiceAuth04000101(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -125,7 +126,7 @@ class Period4ChoiceAuth04000101:
 
 
 @dataclass
-class SupplementaryData1Auth04000101:
+class SupplementaryData1Auth04000101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -148,7 +149,7 @@ class SupplementaryData1Auth04000101:
 
 
 @dataclass
-class TradingVenueIdentification2Auth04000101:
+class TradingVenueIdentification2Auth04000101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -172,7 +173,7 @@ class TradingVenueIdentification2Auth04000101:
 
 
 @dataclass
-class TradingVenueIdentification1ChoiceAuth04000101:
+class TradingVenueIdentification1ChoiceAuth04000101(ISO20022MessageElement):
     mkt_id_cd: Optional[str] = field(
         default=None,
         metadata={
@@ -202,7 +203,7 @@ class TradingVenueIdentification1ChoiceAuth04000101:
 
 
 @dataclass
-class TransparencyDataReport13Auth04000101:
+class TransparencyDataReport13Auth04000101(ISO20022MessageElement):
     tech_rcrd_id: Optional[str] = field(
         default=None,
         metadata={
@@ -281,7 +282,7 @@ class TransparencyDataReport13Auth04000101:
 
 
 @dataclass
-class SecuritiesMarketReportHeader1Auth04000101:
+class SecuritiesMarketReportHeader1Auth04000101(ISO20022MessageElement):
     rptg_ntty: Optional[TradingVenueIdentification1ChoiceAuth04000101] = field(
         default=None,
         metadata={
@@ -311,7 +312,9 @@ class SecuritiesMarketReportHeader1Auth04000101:
 
 
 @dataclass
-class FinancialInstrumentReportingEquityTradingActivityReportV01Auth04000101:
+class FinancialInstrumentReportingEquityTradingActivityReportV01Auth04000101(
+    ISO20022MessageElement
+):
     rpt_hdr: Optional[SecuritiesMarketReportHeader1Auth04000101] = field(
         default=None,
         metadata={
@@ -341,7 +344,7 @@ class FinancialInstrumentReportingEquityTradingActivityReportV01Auth04000101:
 
 
 @dataclass
-class Auth04000101:
+class Auth04000101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.040.001.01"
 

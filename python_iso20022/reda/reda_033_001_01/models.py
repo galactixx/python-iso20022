@@ -3,11 +3,13 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
+
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:reda.033.001.01"
 
 
 @dataclass
-class DatePeriod2Reda03300101:
+class DatePeriod2Reda03300101(ISO20022MessageElement):
     fr_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -29,7 +31,7 @@ class DatePeriod2Reda03300101:
 
 
 @dataclass
-class IdentificationSource3ChoiceReda03300101:
+class IdentificationSource3ChoiceReda03300101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -53,7 +55,7 @@ class IdentificationSource3ChoiceReda03300101:
 
 
 @dataclass
-class MessageHeader1Reda03300101:
+class MessageHeader1Reda03300101(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -76,7 +78,7 @@ class MessageHeader1Reda03300101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Reda03300101:
+class SupplementaryDataEnvelope1Reda03300101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -87,7 +89,7 @@ class SupplementaryDataEnvelope1Reda03300101:
 
 
 @dataclass
-class DatePeriodSearch1ChoiceReda03300101:
+class DatePeriodSearch1ChoiceReda03300101(ISO20022MessageElement):
     fr_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -131,7 +133,7 @@ class DatePeriodSearch1ChoiceReda03300101:
 
 
 @dataclass
-class OtherIdentification1Reda03300101:
+class OtherIdentification1Reda03300101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -165,7 +167,7 @@ class OtherIdentification1Reda03300101:
 
 
 @dataclass
-class SupplementaryData1Reda03300101:
+class SupplementaryData1Reda03300101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -188,7 +190,7 @@ class SupplementaryData1Reda03300101:
 
 
 @dataclass
-class SecurityIdentification39Reda03300101:
+class SecurityIdentification39Reda03300101(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -219,7 +221,7 @@ class SecurityIdentification39Reda03300101:
 
 
 @dataclass
-class SecuritiesAuditTrailSearchCriteria4Reda03300101:
+class SecuritiesAuditTrailSearchCriteria4Reda03300101(ISO20022MessageElement):
     fin_instrm_id: Optional[SecurityIdentification39Reda03300101] = field(
         default=None,
         metadata={
@@ -239,7 +241,7 @@ class SecuritiesAuditTrailSearchCriteria4Reda03300101:
 
 
 @dataclass
-class SecuritiesAuditTrailQueryV01Reda03300101:
+class SecuritiesAuditTrailQueryV01Reda03300101(ISO20022MessageElement):
     msg_hdr: Optional[MessageHeader1Reda03300101] = field(
         default=None,
         metadata={
@@ -268,7 +270,7 @@ class SecuritiesAuditTrailQueryV01Reda03300101:
 
 
 @dataclass
-class Reda03300101:
+class Reda03300101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:reda.033.001.01"
 

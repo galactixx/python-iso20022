@@ -24,12 +24,13 @@ from python_iso20022.auth.enums import (
     RateBasis1Code,
     TradingVenue2Code,
 )
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.033.001.03"
 
 
 @dataclass
-class BondDerivative2Auth03300103:
+class BondDerivative2Auth03300103(ISO20022MessageElement):
     issr: Optional[str] = field(
         default=None,
         metadata={
@@ -59,7 +60,7 @@ class BondDerivative2Auth03300103:
 
 
 @dataclass
-class CommodityDerivative5Auth03300103:
+class CommodityDerivative5Auth03300103(ISO20022MessageElement):
     sz: Optional[str] = field(
         default=None,
         metadata={
@@ -85,7 +86,7 @@ class CommodityDerivative5Auth03300103:
 
 
 @dataclass
-class CommodityDerivative6Auth03300103:
+class CommodityDerivative6Auth03300103(ISO20022MessageElement):
     sttlm_lctn: Optional[str] = field(
         default=None,
         metadata={
@@ -100,7 +101,7 @@ class CommodityDerivative6Auth03300103:
 
 
 @dataclass
-class CreditDefaultSwapIndex3Auth03300103:
+class CreditDefaultSwapIndex3Auth03300103(ISO20022MessageElement):
     undrlyg_indx_id: Optional[str] = field(
         default=None,
         metadata={
@@ -175,7 +176,7 @@ class CreditDefaultSwapIndex3Auth03300103:
 
 
 @dataclass
-class DerivativePartyIdentification1ChoiceAuth03300103:
+class DerivativePartyIdentification1ChoiceAuth03300103(ISO20022MessageElement):
     ctry: Optional[str] = field(
         default=None,
         metadata={
@@ -206,7 +207,7 @@ class DerivativePartyIdentification1ChoiceAuth03300103:
 
 
 @dataclass
-class InflationIndex1ChoiceAuth03300103:
+class InflationIndex1ChoiceAuth03300103(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -229,7 +230,7 @@ class InflationIndex1ChoiceAuth03300103:
 
 
 @dataclass
-class Period2Auth03300103:
+class Period2Auth03300103(ISO20022MessageElement):
     fr_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -251,7 +252,7 @@ class Period2Auth03300103:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth03300103:
+class SupplementaryDataEnvelope1Auth03300103(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -262,7 +263,7 @@ class SupplementaryDataEnvelope1Auth03300103:
 
 
 @dataclass
-class BenchmarkCurveName5ChoiceAuth03300103:
+class BenchmarkCurveName5ChoiceAuth03300103(ISO20022MessageElement):
     indx: Optional[BenchmarkCurveName2Code] = field(
         default=None,
         metadata={
@@ -284,7 +285,7 @@ class BenchmarkCurveName5ChoiceAuth03300103:
 
 
 @dataclass
-class CommodityDerivative2ChoiceAuth03300103:
+class CommodityDerivative2ChoiceAuth03300103(ISO20022MessageElement):
     frght: Optional[CommodityDerivative5Auth03300103] = field(
         default=None,
         metadata={
@@ -304,7 +305,7 @@ class CommodityDerivative2ChoiceAuth03300103:
 
 
 @dataclass
-class ContractForDifference2Auth03300103:
+class ContractForDifference2Auth03300103(ISO20022MessageElement):
     undrlyg_tp: Optional[UnderlyingContractForDifferenceType3Code] = field(
         default=None,
         metadata={
@@ -335,7 +336,7 @@ class ContractForDifference2Auth03300103:
 
 
 @dataclass
-class CreditDefaultSwapDerivative5Auth03300103:
+class CreditDefaultSwapDerivative5Auth03300103(ISO20022MessageElement):
     undrlyg_cdt_dflt_swp_id: Optional[str] = field(
         default=None,
         metadata={
@@ -357,7 +358,7 @@ class CreditDefaultSwapDerivative5Auth03300103:
 
 
 @dataclass
-class CreditDefaultSwapSingleName2Auth03300103:
+class CreditDefaultSwapSingleName2Auth03300103(ISO20022MessageElement):
     svrgn_issr: Optional[bool] = field(
         default=None,
         metadata={
@@ -388,7 +389,7 @@ class CreditDefaultSwapSingleName2Auth03300103:
 
 
 @dataclass
-class DebtInstrument5Auth03300103:
+class DebtInstrument5Auth03300103(ISO20022MessageElement):
     tp: Optional[BondType1Code] = field(
         default=None,
         metadata={
@@ -410,7 +411,7 @@ class DebtInstrument5Auth03300103:
 
 
 @dataclass
-class EquityDerivative3ChoiceAuth03300103:
+class EquityDerivative3ChoiceAuth03300103(ISO20022MessageElement):
     bskt: Optional[UnderlyingEquityType3Code] = field(
         default=None,
         metadata={
@@ -446,7 +447,7 @@ class EquityDerivative3ChoiceAuth03300103:
 
 
 @dataclass
-class ForeignExchangeDerivative2Auth03300103:
+class ForeignExchangeDerivative2Auth03300103(ISO20022MessageElement):
     ctrct_sub_tp: Optional[AssetClassSubProductType19Code] = field(
         default=None,
         metadata={
@@ -459,7 +460,7 @@ class ForeignExchangeDerivative2Auth03300103:
 
 
 @dataclass
-class InterestRateContractTerm2Auth03300103:
+class InterestRateContractTerm2Auth03300103(ISO20022MessageElement):
     unit: Optional[RateBasis1Code] = field(
         default=None,
         metadata={
@@ -483,7 +484,7 @@ class InterestRateContractTerm2Auth03300103:
 
 
 @dataclass
-class InterestRateDerivative2ChoiceAuth03300103:
+class InterestRateDerivative2ChoiceAuth03300103(ISO20022MessageElement):
     swp_rltd: Optional[SwapType1Code] = field(
         default=None,
         metadata={
@@ -503,7 +504,7 @@ class InterestRateDerivative2ChoiceAuth03300103:
 
 
 @dataclass
-class Period4ChoiceAuth03300103:
+class Period4ChoiceAuth03300103(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -539,7 +540,7 @@ class Period4ChoiceAuth03300103:
 
 
 @dataclass
-class SupplementaryData1Auth03300103:
+class SupplementaryData1Auth03300103(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -562,7 +563,7 @@ class SupplementaryData1Auth03300103:
 
 
 @dataclass
-class TradingVenueIdentification2Auth03300103:
+class TradingVenueIdentification2Auth03300103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -586,7 +587,7 @@ class TradingVenueIdentification2Auth03300103:
 
 
 @dataclass
-class CommodityDerivative4Auth03300103:
+class CommodityDerivative4Auth03300103(ISO20022MessageElement):
     clss_spcfc: Optional[CommodityDerivative2ChoiceAuth03300103] = field(
         default=None,
         metadata={
@@ -608,7 +609,7 @@ class CommodityDerivative4Auth03300103:
 
 
 @dataclass
-class CreditDefaultSwapDerivative6Auth03300103:
+class CreditDefaultSwapDerivative6Auth03300103(ISO20022MessageElement):
     undrlyg_cdt_dflt_swp_id: Optional[str] = field(
         default=None,
         metadata={
@@ -640,7 +641,7 @@ class CreditDefaultSwapDerivative6Auth03300103:
 
 
 @dataclass
-class EquityDerivative2Auth03300103:
+class EquityDerivative2Auth03300103(ISO20022MessageElement):
     undrlyg_tp: Optional[EquityDerivative3ChoiceAuth03300103] = field(
         default=None,
         metadata={
@@ -661,7 +662,7 @@ class EquityDerivative2Auth03300103:
 
 
 @dataclass
-class FloatingInterestRate8Auth03300103:
+class FloatingInterestRate8Auth03300103(ISO20022MessageElement):
     ref_rate: Optional[BenchmarkCurveName5ChoiceAuth03300103] = field(
         default=None,
         metadata={
@@ -682,7 +683,7 @@ class FloatingInterestRate8Auth03300103:
 
 
 @dataclass
-class TradingVenueIdentification1ChoiceAuth03300103:
+class TradingVenueIdentification1ChoiceAuth03300103(ISO20022MessageElement):
     mkt_id_cd: Optional[str] = field(
         default=None,
         metadata={
@@ -712,7 +713,7 @@ class TradingVenueIdentification1ChoiceAuth03300103:
 
 
 @dataclass
-class CreditDefaultSwapsDerivative4ChoiceAuth03300103:
+class CreditDefaultSwapsDerivative4ChoiceAuth03300103(ISO20022MessageElement):
     sngl_nm_cdt_dflt_swp: Optional[CreditDefaultSwapSingleName2Auth03300103] = field(
         default=None,
         metadata={
@@ -750,7 +751,7 @@ class CreditDefaultSwapsDerivative4ChoiceAuth03300103:
 
 
 @dataclass
-class InterestRateDerivative5Auth03300103:
+class InterestRateDerivative5Auth03300103(ISO20022MessageElement):
     undrlyg_tp: Optional[InterestRateDerivative2ChoiceAuth03300103] = field(
         default=None,
         metadata={
@@ -805,7 +806,7 @@ class InterestRateDerivative5Auth03300103:
 
 
 @dataclass
-class SecuritiesMarketReportHeader1Auth03300103:
+class SecuritiesMarketReportHeader1Auth03300103(ISO20022MessageElement):
     rptg_ntty: Optional[TradingVenueIdentification1ChoiceAuth03300103] = field(
         default=None,
         metadata={
@@ -835,7 +836,7 @@ class SecuritiesMarketReportHeader1Auth03300103:
 
 
 @dataclass
-class Derivative3ChoiceAuth03300103:
+class Derivative3ChoiceAuth03300103(ISO20022MessageElement):
     cmmdty: Optional[CommodityDerivative4Auth03300103] = field(
         default=None,
         metadata={
@@ -895,7 +896,7 @@ class Derivative3ChoiceAuth03300103:
 
 
 @dataclass
-class TransparencyDataReport21Auth03300103:
+class TransparencyDataReport21Auth03300103(ISO20022MessageElement):
     tech_rcrd_id: Optional[str] = field(
         default=None,
         metadata={
@@ -1009,7 +1010,9 @@ class TransparencyDataReport21Auth03300103:
 
 
 @dataclass
-class FinancialInstrumentReportingNonEquityTransparencyDataReportV03Auth03300103:
+class FinancialInstrumentReportingNonEquityTransparencyDataReportV03Auth03300103(
+    ISO20022MessageElement
+):
     rpt_hdr: Optional[SecuritiesMarketReportHeader1Auth03300103] = field(
         default=None,
         metadata={
@@ -1039,7 +1042,7 @@ class FinancialInstrumentReportingNonEquityTransparencyDataReportV03Auth03300103
 
 
 @dataclass
-class Auth03300103:
+class Auth03300103(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.033.001.03"
 

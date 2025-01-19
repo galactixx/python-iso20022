@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     DateType8Code,
     PartyType3Code,
@@ -25,7 +26,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:fxtr.034.001.01"
 
 
 @dataclass
-class ActiveCurrencyAnd13DecimalAmountFxtr03400101:
+class ActiveCurrencyAnd13DecimalAmountFxtr03400101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -47,7 +48,7 @@ class ActiveCurrencyAnd13DecimalAmountFxtr03400101:
 
 
 @dataclass
-class ActiveCurrencyAndAmountFxtr03400101:
+class ActiveCurrencyAndAmountFxtr03400101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -69,7 +70,7 @@ class ActiveCurrencyAndAmountFxtr03400101:
 
 
 @dataclass
-class AgreedRate3Fxtr03400101:
+class AgreedRate3Fxtr03400101(ISO20022MessageElement):
     xchg_rate: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -102,7 +103,7 @@ class AgreedRate3Fxtr03400101:
 
 
 @dataclass
-class CurrencyAndAmountFxtr03400101:
+class CurrencyAndAmountFxtr03400101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -124,7 +125,7 @@ class CurrencyAndAmountFxtr03400101:
 
 
 @dataclass
-class DateAndDateTimeChoiceFxtr03400101:
+class DateAndDateTimeChoiceFxtr03400101(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -144,7 +145,7 @@ class DateAndDateTimeChoiceFxtr03400101:
 
 
 @dataclass
-class IdentificationSource1ChoiceFxtr03400101:
+class IdentificationSource1ChoiceFxtr03400101(ISO20022MessageElement):
     dmst: Optional[str] = field(
         default=None,
         metadata={
@@ -167,7 +168,7 @@ class IdentificationSource1ChoiceFxtr03400101:
 
 
 @dataclass
-class MessageIdentification1Fxtr03400101:
+class MessageIdentification1Fxtr03400101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -191,7 +192,7 @@ class MessageIdentification1Fxtr03400101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Fxtr03400101:
+class SupplementaryDataEnvelope1Fxtr03400101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -202,7 +203,7 @@ class SupplementaryDataEnvelope1Fxtr03400101:
 
 
 @dataclass
-class AlternateIdentification1Fxtr03400101:
+class AlternateIdentification1Fxtr03400101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -226,7 +227,7 @@ class AlternateIdentification1Fxtr03400101:
 
 
 @dataclass
-class DateFormat18ChoiceFxtr03400101:
+class DateFormat18ChoiceFxtr03400101(ISO20022MessageElement):
     dt: Optional[DateAndDateTimeChoiceFxtr03400101] = field(
         default=None,
         metadata={
@@ -246,7 +247,7 @@ class DateFormat18ChoiceFxtr03400101:
 
 
 @dataclass
-class GenericIdentification32Fxtr03400101:
+class GenericIdentification32Fxtr03400101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -287,7 +288,7 @@ class GenericIdentification32Fxtr03400101:
 
 
 @dataclass
-class SecurityIdentification18Fxtr03400101:
+class SecurityIdentification18Fxtr03400101(ISO20022MessageElement):
     scty_id_src: Optional[IdentificationType2Code] = field(
         default=None,
         metadata={
@@ -311,7 +312,7 @@ class SecurityIdentification18Fxtr03400101:
 
 
 @dataclass
-class SupplementaryData1Fxtr03400101:
+class SupplementaryData1Fxtr03400101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -334,7 +335,7 @@ class SupplementaryData1Fxtr03400101:
 
 
 @dataclass
-class Header23Fxtr03400101:
+class Header23Fxtr03400101(ISO20022MessageElement):
     frmt_vrsn: Optional[str] = field(
         default=None,
         metadata={
@@ -396,7 +397,7 @@ class Header23Fxtr03400101:
 
 
 @dataclass
-class InstrumentLeg6Fxtr03400101:
+class InstrumentLeg6Fxtr03400101(ISO20022MessageElement):
     leg_sd: Optional[Side1Code] = field(
         default=None,
         metadata={
@@ -532,7 +533,7 @@ class InstrumentLeg6Fxtr03400101:
 
 
 @dataclass
-class Period4Fxtr03400101:
+class Period4Fxtr03400101(ISO20022MessageElement):
     start_dt: Optional[DateFormat18ChoiceFxtr03400101] = field(
         default=None,
         metadata={
@@ -554,7 +555,7 @@ class Period4Fxtr03400101:
 
 
 @dataclass
-class SecurityIdentification22ChoiceFxtr03400101:
+class SecurityIdentification22ChoiceFxtr03400101(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -625,7 +626,7 @@ class SecurityIdentification22ChoiceFxtr03400101:
 
 
 @dataclass
-class Trade3Fxtr03400101:
+class Trade3Fxtr03400101(ISO20022MessageElement):
     exctn_pric: Optional[ActiveCurrencyAnd13DecimalAmountFxtr03400101] = field(
         default=None,
         metadata={
@@ -763,7 +764,7 @@ class Trade3Fxtr03400101:
 
 
 @dataclass
-class Trade2Fxtr03400101:
+class Trade2Fxtr03400101(ISO20022MessageElement):
     trad_id: Optional[str] = field(
         default=None,
         metadata={
@@ -893,7 +894,7 @@ class Trade2Fxtr03400101:
 
 
 @dataclass
-class ForeignExchangeTradeConfirmationRequestV01Fxtr03400101:
+class ForeignExchangeTradeConfirmationRequestV01Fxtr03400101(ISO20022MessageElement):
     hdr: Optional[Header23Fxtr03400101] = field(
         default=None,
         metadata={
@@ -969,7 +970,7 @@ class ForeignExchangeTradeConfirmationRequestV01Fxtr03400101:
 
 
 @dataclass
-class Fxtr03400101:
+class Fxtr03400101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:fxtr.034.001.01"
 

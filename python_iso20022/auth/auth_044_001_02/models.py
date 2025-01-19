@@ -9,12 +9,13 @@ from python_iso20022.auth.enums import (
     EquityInstrumentReportingClassification1Code,
     TradingVenue2Code,
 )
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.044.001.02"
 
 
 @dataclass
-class ActiveCurrencyAndAmountAuth04400102:
+class ActiveCurrencyAndAmountAuth04400102(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -36,7 +37,7 @@ class ActiveCurrencyAndAmountAuth04400102:
 
 
 @dataclass
-class MarketDetail2Auth04400102:
+class MarketDetail2Auth04400102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -60,7 +61,7 @@ class MarketDetail2Auth04400102:
 
 
 @dataclass
-class Period2Auth04400102:
+class Period2Auth04400102(ISO20022MessageElement):
     fr_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -82,7 +83,7 @@ class Period2Auth04400102:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth04400102:
+class SupplementaryDataEnvelope1Auth04400102(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -93,7 +94,7 @@ class SupplementaryDataEnvelope1Auth04400102:
 
 
 @dataclass
-class Period4ChoiceAuth04400102:
+class Period4ChoiceAuth04400102(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -129,7 +130,7 @@ class Period4ChoiceAuth04400102:
 
 
 @dataclass
-class StatisticsTransparency3Auth04400102:
+class StatisticsTransparency3Auth04400102(ISO20022MessageElement):
     avrg_daly_trnvr: Optional[ActiveCurrencyAndAmountAuth04400102] = field(
         default=None,
         metadata={
@@ -209,7 +210,7 @@ class StatisticsTransparency3Auth04400102:
 
 
 @dataclass
-class SupplementaryData1Auth04400102:
+class SupplementaryData1Auth04400102(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -232,7 +233,7 @@ class SupplementaryData1Auth04400102:
 
 
 @dataclass
-class TradingVenueIdentification2Auth04400102:
+class TradingVenueIdentification2Auth04400102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -256,7 +257,7 @@ class TradingVenueIdentification2Auth04400102:
 
 
 @dataclass
-class TradingVenueIdentification1ChoiceAuth04400102:
+class TradingVenueIdentification1ChoiceAuth04400102(ISO20022MessageElement):
     mkt_id_cd: Optional[str] = field(
         default=None,
         metadata={
@@ -286,7 +287,7 @@ class TradingVenueIdentification1ChoiceAuth04400102:
 
 
 @dataclass
-class TransparencyDataReport17Auth04400102:
+class TransparencyDataReport17Auth04400102(ISO20022MessageElement):
     tech_rcrd_id: Optional[str] = field(
         default=None,
         metadata={
@@ -377,7 +378,7 @@ class TransparencyDataReport17Auth04400102:
 
 
 @dataclass
-class SecuritiesMarketReportHeader1Auth04400102:
+class SecuritiesMarketReportHeader1Auth04400102(ISO20022MessageElement):
     rptg_ntty: Optional[TradingVenueIdentification1ChoiceAuth04400102] = field(
         default=None,
         metadata={
@@ -407,7 +408,9 @@ class SecuritiesMarketReportHeader1Auth04400102:
 
 
 @dataclass
-class FinancialInstrumentReportingEquityTradingActivityResultV02Auth04400102:
+class FinancialInstrumentReportingEquityTradingActivityResultV02Auth04400102(
+    ISO20022MessageElement
+):
     rpt_hdr: Optional[SecuritiesMarketReportHeader1Auth04400102] = field(
         default=None,
         metadata={
@@ -437,7 +440,7 @@ class FinancialInstrumentReportingEquityTradingActivityResultV02Auth04400102:
 
 
 @dataclass
-class Auth04400102:
+class Auth04400102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.044.001.02"
 

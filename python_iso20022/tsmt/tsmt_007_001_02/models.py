@@ -4,11 +4,13 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
+
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:tsmt.007.001.02"
 
 
 @dataclass
-class Count1Tsmt00700102:
+class Count1Tsmt00700102(ISO20022MessageElement):
     nb: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -23,7 +25,7 @@ class Count1Tsmt00700102:
 
 
 @dataclass
-class MessageIdentification1Tsmt00700102:
+class MessageIdentification1Tsmt00700102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -47,7 +49,7 @@ class MessageIdentification1Tsmt00700102:
 
 
 @dataclass
-class Reason2Tsmt00700102:
+class Reason2Tsmt00700102(ISO20022MessageElement):
     desc: Optional[str] = field(
         default=None,
         metadata={
@@ -62,7 +64,7 @@ class Reason2Tsmt00700102:
 
 
 @dataclass
-class RejectedElement1Tsmt00700102:
+class RejectedElement1Tsmt00700102(ISO20022MessageElement):
     elmt_seq_nb: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -88,7 +90,7 @@ class RejectedElement1Tsmt00700102:
 
 
 @dataclass
-class SimpleIdentificationInformationTsmt00700102:
+class SimpleIdentificationInformationTsmt00700102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -103,7 +105,7 @@ class SimpleIdentificationInformationTsmt00700102:
 
 
 @dataclass
-class RejectionReason1ChoiceTsmt00700102:
+class RejectionReason1ChoiceTsmt00700102(ISO20022MessageElement):
     gbl_rjctn_rsn: Optional[Reason2Tsmt00700102] = field(
         default=None,
         metadata={
@@ -123,7 +125,7 @@ class RejectionReason1ChoiceTsmt00700102:
 
 
 @dataclass
-class AmendmentRejectionV02Tsmt00700102:
+class AmendmentRejectionV02Tsmt00700102(ISO20022MessageElement):
     rjctn_id: Optional[MessageIdentification1Tsmt00700102] = field(
         default=None,
         metadata={
@@ -180,7 +182,7 @@ class AmendmentRejectionV02Tsmt00700102:
 
 
 @dataclass
-class Tsmt00700102:
+class Tsmt00700102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.007.001.02"
 

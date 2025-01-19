@@ -4,13 +4,14 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.tsmt.enums import Action2Code, BaselineStatus3Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:tsmt.010.001.03"
 
 
 @dataclass
-class Bicidentification1Tsmt01000103:
+class Bicidentification1Tsmt01000103(ISO20022MessageElement):
     class Meta:
         name = "BICIdentification1"
 
@@ -27,7 +28,7 @@ class Bicidentification1Tsmt01000103:
 
 
 @dataclass
-class DocumentIdentification3Tsmt01000103:
+class DocumentIdentification3Tsmt01000103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -53,7 +54,7 @@ class DocumentIdentification3Tsmt01000103:
 
 
 @dataclass
-class ElementIdentification1Tsmt01000103:
+class ElementIdentification1Tsmt01000103(ISO20022MessageElement):
     doc_indx: Optional[str] = field(
         default=None,
         metadata={
@@ -99,7 +100,7 @@ class ElementIdentification1Tsmt01000103:
 
 
 @dataclass
-class GenericIdentification4Tsmt01000103:
+class GenericIdentification4Tsmt01000103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -125,7 +126,7 @@ class GenericIdentification4Tsmt01000103:
 
 
 @dataclass
-class Limit1Tsmt01000103:
+class Limit1Tsmt01000103(ISO20022MessageElement):
     cur: Optional[str] = field(
         default=None,
         metadata={
@@ -149,7 +150,7 @@ class Limit1Tsmt01000103:
 
 
 @dataclass
-class MessageIdentification1Tsmt01000103:
+class MessageIdentification1Tsmt01000103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -173,7 +174,7 @@ class MessageIdentification1Tsmt01000103:
 
 
 @dataclass
-class PostalAddress5Tsmt01000103:
+class PostalAddress5Tsmt01000103(ISO20022MessageElement):
     strt_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -227,7 +228,7 @@ class PostalAddress5Tsmt01000103:
 
 
 @dataclass
-class SimpleIdentificationInformationTsmt01000103:
+class SimpleIdentificationInformationTsmt01000103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -242,7 +243,7 @@ class SimpleIdentificationInformationTsmt01000103:
 
 
 @dataclass
-class DocumentIdentification4Tsmt01000103:
+class DocumentIdentification4Tsmt01000103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -287,7 +288,7 @@ class DocumentIdentification4Tsmt01000103:
 
 
 @dataclass
-class DocumentIdentification5Tsmt01000103:
+class DocumentIdentification5Tsmt01000103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -311,7 +312,7 @@ class DocumentIdentification5Tsmt01000103:
 
 
 @dataclass
-class PartyIdentification26Tsmt01000103:
+class PartyIdentification26Tsmt01000103(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -343,7 +344,7 @@ class PartyIdentification26Tsmt01000103:
 
 
 @dataclass
-class PendingActivity2Tsmt01000103:
+class PendingActivity2Tsmt01000103(ISO20022MessageElement):
     tp: Optional[Action2Code] = field(
         default=None,
         metadata={
@@ -366,7 +367,7 @@ class PendingActivity2Tsmt01000103:
 
 
 @dataclass
-class TransactionStatus4Tsmt01000103:
+class TransactionStatus4Tsmt01000103(ISO20022MessageElement):
     sts: Optional[BaselineStatus3Code] = field(
         default=None,
         metadata={
@@ -379,7 +380,7 @@ class TransactionStatus4Tsmt01000103:
 
 
 @dataclass
-class ValidationResult5Tsmt01000103:
+class ValidationResult5Tsmt01000103(ISO20022MessageElement):
     seq_nb: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -424,7 +425,7 @@ class ValidationResult5Tsmt01000103:
 
 
 @dataclass
-class MisMatchReport3Tsmt01000103:
+class MisMatchReport3Tsmt01000103(ISO20022MessageElement):
     nb_of_mis_mtchs: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -447,7 +448,7 @@ class MisMatchReport3Tsmt01000103:
 
 
 @dataclass
-class BaselineMatchReportV03Tsmt01000103:
+class BaselineMatchReportV03Tsmt01000103(ISO20022MessageElement):
     rpt_id: Optional[MessageIdentification1Tsmt01000103] = field(
         default=None,
         metadata={
@@ -567,7 +568,7 @@ class BaselineMatchReportV03Tsmt01000103:
 
 
 @dataclass
-class Tsmt01000103:
+class Tsmt01000103(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.010.001.03"
 

@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     AddressType2Code,
     OptionParty1Code,
@@ -22,7 +23,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:fxtr.036.001.01"
 
 
 @dataclass
-class MessageIdentification1Fxtr03600101:
+class MessageIdentification1Fxtr03600101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -46,7 +47,7 @@ class MessageIdentification1Fxtr03600101:
 
 
 @dataclass
-class PartyIdentification44Fxtr03600101:
+class PartyIdentification44Fxtr03600101(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -71,7 +72,7 @@ class PartyIdentification44Fxtr03600101:
 
 
 @dataclass
-class SimpleIdentificationInformation4Fxtr03600101:
+class SimpleIdentificationInformation4Fxtr03600101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -86,7 +87,7 @@ class SimpleIdentificationInformation4Fxtr03600101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Fxtr03600101:
+class SupplementaryDataEnvelope1Fxtr03600101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -97,7 +98,7 @@ class SupplementaryDataEnvelope1Fxtr03600101:
 
 
 @dataclass
-class AccountIdentification26Fxtr03600101:
+class AccountIdentification26Fxtr03600101(ISO20022MessageElement):
     prtry: Optional[SimpleIdentificationInformation4Fxtr03600101] = field(
         default=None,
         metadata={
@@ -110,7 +111,7 @@ class AccountIdentification26Fxtr03600101:
 
 
 @dataclass
-class GenericIdentification32Fxtr03600101:
+class GenericIdentification32Fxtr03600101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -151,7 +152,7 @@ class GenericIdentification32Fxtr03600101:
 
 
 @dataclass
-class PartyIdentification78Fxtr03600101:
+class PartyIdentification78Fxtr03600101(ISO20022MessageElement):
     pty_src: Optional[IdentificationType1Code] = field(
         default=None,
         metadata={
@@ -174,7 +175,7 @@ class PartyIdentification78Fxtr03600101:
 
 
 @dataclass
-class PartyIdentification90Fxtr03600101:
+class PartyIdentification90Fxtr03600101(ISO20022MessageElement):
     id_tp: Optional[PartyIdentificationType1Code] = field(
         default=None,
         metadata={
@@ -198,7 +199,7 @@ class PartyIdentification90Fxtr03600101:
 
 
 @dataclass
-class PostalAddress1Fxtr03600101:
+class PostalAddress1Fxtr03600101(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -281,7 +282,7 @@ class PostalAddress1Fxtr03600101:
 
 
 @dataclass
-class SupplementaryData1Fxtr03600101:
+class SupplementaryData1Fxtr03600101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -304,7 +305,7 @@ class SupplementaryData1Fxtr03600101:
 
 
 @dataclass
-class AccountIdentification30Fxtr03600101:
+class AccountIdentification30Fxtr03600101(ISO20022MessageElement):
     acct_tp: Optional[AccountInformationType1Code] = field(
         default=None,
         metadata={
@@ -326,7 +327,7 @@ class AccountIdentification30Fxtr03600101:
 
 
 @dataclass
-class Header23Fxtr03600101:
+class Header23Fxtr03600101(ISO20022MessageElement):
     frmt_vrsn: Optional[str] = field(
         default=None,
         metadata={
@@ -388,7 +389,7 @@ class Header23Fxtr03600101:
 
 
 @dataclass
-class NameAndAddress8Fxtr03600101:
+class NameAndAddress8Fxtr03600101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -422,7 +423,7 @@ class NameAndAddress8Fxtr03600101:
 
 
 @dataclass
-class PartyIdentification19ChoiceFxtr03600101:
+class PartyIdentification19ChoiceFxtr03600101(ISO20022MessageElement):
     nm_and_adr: Optional[NameAndAddress8Fxtr03600101] = field(
         default=None,
         metadata={
@@ -442,7 +443,7 @@ class PartyIdentification19ChoiceFxtr03600101:
 
 
 @dataclass
-class PartyIdentificationAndAccount119Fxtr03600101:
+class PartyIdentificationAndAccount119Fxtr03600101(ISO20022MessageElement):
     pty_id: list[PartyIdentification90Fxtr03600101] = field(
         default_factory=list,
         metadata={
@@ -464,7 +465,7 @@ class PartyIdentificationAndAccount119Fxtr03600101:
 
 
 @dataclass
-class FundIdentification3Fxtr03600101:
+class FundIdentification3Fxtr03600101(ISO20022MessageElement):
     fnd_id: Optional[str] = field(
         default=None,
         metadata={
@@ -497,7 +498,7 @@ class FundIdentification3Fxtr03600101:
 
 
 @dataclass
-class TradePartyIdentification7Fxtr03600101:
+class TradePartyIdentification7Fxtr03600101(ISO20022MessageElement):
     fnd_inf: Optional[FundIdentification3Fxtr03600101] = field(
         default=None,
         metadata={
@@ -545,7 +546,9 @@ class TradePartyIdentification7Fxtr03600101:
 
 
 @dataclass
-class ForeignExchangeTradeConfirmationRequestCancellationRequestV01Fxtr03600101:
+class ForeignExchangeTradeConfirmationRequestCancellationRequestV01Fxtr03600101(
+    ISO20022MessageElement
+):
     hdr: Optional[Header23Fxtr03600101] = field(
         default=None,
         metadata={
@@ -612,7 +615,7 @@ class ForeignExchangeTradeConfirmationRequestCancellationRequestV01Fxtr03600101:
 
 
 @dataclass
-class Fxtr03600101:
+class Fxtr03600101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:fxtr.036.001.01"
 

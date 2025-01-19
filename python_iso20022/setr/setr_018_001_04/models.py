@@ -3,6 +3,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlPeriod
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     AddressType2Code,
     DistributionPolicy1Code,
@@ -14,7 +15,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:setr.018.001.04"
 
 
 @dataclass
-class DateFormat42ChoiceSetr01800104:
+class DateFormat42ChoiceSetr01800104(ISO20022MessageElement):
     yr_mnth: Optional[XmlPeriod] = field(
         default=None,
         metadata={
@@ -34,7 +35,7 @@ class DateFormat42ChoiceSetr01800104:
 
 
 @dataclass
-class Extension1Setr01800104:
+class Extension1Setr01800104(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -60,7 +61,7 @@ class Extension1Setr01800104:
 
 
 @dataclass
-class GenericIdentification1Setr01800104:
+class GenericIdentification1Setr01800104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -95,7 +96,7 @@ class GenericIdentification1Setr01800104:
 
 
 @dataclass
-class IdentificationSource1ChoiceSetr01800104:
+class IdentificationSource1ChoiceSetr01800104(ISO20022MessageElement):
     dmst: Optional[str] = field(
         default=None,
         metadata={
@@ -118,7 +119,7 @@ class IdentificationSource1ChoiceSetr01800104:
 
 
 @dataclass
-class MessageIdentification1Setr01800104:
+class MessageIdentification1Setr01800104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -142,7 +143,7 @@ class MessageIdentification1Setr01800104:
 
 
 @dataclass
-class SubAccount6Setr01800104:
+class SubAccount6Setr01800104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -187,7 +188,7 @@ class SubAccount6Setr01800104:
 
 
 @dataclass
-class AlternateSecurityIdentification7Setr01800104:
+class AlternateSecurityIdentification7Setr01800104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -211,7 +212,7 @@ class AlternateSecurityIdentification7Setr01800104:
 
 
 @dataclass
-class PostalAddress1Setr01800104:
+class PostalAddress1Setr01800104(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -294,7 +295,7 @@ class PostalAddress1Setr01800104:
 
 
 @dataclass
-class Series1Setr01800104:
+class Series1Setr01800104(ISO20022MessageElement):
     srs_dt: Optional[DateFormat42ChoiceSetr01800104] = field(
         default=None,
         metadata={
@@ -316,7 +317,7 @@ class Series1Setr01800104:
 
 
 @dataclass
-class NameAndAddress5Setr01800104:
+class NameAndAddress5Setr01800104(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -339,7 +340,7 @@ class NameAndAddress5Setr01800104:
 
 
 @dataclass
-class SecurityIdentification25ChoiceSetr01800104:
+class SecurityIdentification25ChoiceSetr01800104(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -473,7 +474,7 @@ class SecurityIdentification25ChoiceSetr01800104:
 
 
 @dataclass
-class FinancialInstrument57Setr01800104:
+class FinancialInstrument57Setr01800104(ISO20022MessageElement):
     id: Optional[SecurityIdentification25ChoiceSetr01800104] = field(
         default=None,
         metadata={
@@ -560,7 +561,7 @@ class FinancialInstrument57Setr01800104:
 
 
 @dataclass
-class PartyIdentification90ChoiceSetr01800104:
+class PartyIdentification90ChoiceSetr01800104(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -589,7 +590,7 @@ class PartyIdentification90ChoiceSetr01800104:
 
 
 @dataclass
-class PartyIdentification113Setr01800104:
+class PartyIdentification113Setr01800104(ISO20022MessageElement):
     pty: Optional[PartyIdentification90ChoiceSetr01800104] = field(
         default=None,
         metadata={
@@ -611,7 +612,7 @@ class PartyIdentification113Setr01800104:
 
 
 @dataclass
-class AdditionalReference8Setr01800104:
+class AdditionalReference8Setr01800104(ISO20022MessageElement):
     ref: Optional[str] = field(
         default=None,
         metadata={
@@ -644,7 +645,7 @@ class AdditionalReference8Setr01800104:
 
 
 @dataclass
-class InvestmentAccount58Setr01800104:
+class InvestmentAccount58Setr01800104(ISO20022MessageElement):
     acct_id: Optional[str] = field(
         default=None,
         metadata={
@@ -711,7 +712,7 @@ class InvestmentAccount58Setr01800104:
 
 
 @dataclass
-class InvestmentFundOrder8Setr01800104:
+class InvestmentFundOrder8Setr01800104(ISO20022MessageElement):
     mstr_ref: Optional[str] = field(
         default=None,
         metadata={
@@ -782,7 +783,7 @@ class InvestmentFundOrder8Setr01800104:
 
 
 @dataclass
-class References62ChoiceSetr01800104:
+class References62ChoiceSetr01800104(ISO20022MessageElement):
     prvs_ref: list[AdditionalReference8Setr01800104] = field(
         default_factory=list,
         metadata={
@@ -804,7 +805,7 @@ class References62ChoiceSetr01800104:
 
 
 @dataclass
-class MessageAndBusinessReference10Setr01800104:
+class MessageAndBusinessReference10Setr01800104(ISO20022MessageElement):
     ref: Optional[References62ChoiceSetr01800104] = field(
         default=None,
         metadata={
@@ -832,7 +833,7 @@ class MessageAndBusinessReference10Setr01800104:
 
 
 @dataclass
-class RequestForOrderStatusReportV04Setr01800104:
+class RequestForOrderStatusReportV04Setr01800104(ISO20022MessageElement):
     msg_id: Optional[MessageIdentification1Setr01800104] = field(
         default=None,
         metadata={
@@ -862,7 +863,7 @@ class RequestForOrderStatusReportV04Setr01800104:
 
 
 @dataclass
-class Setr01800104:
+class Setr01800104(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:setr.018.001.04"
 

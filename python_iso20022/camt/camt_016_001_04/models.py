@@ -3,13 +3,14 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.camt.enums import QueryType2Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:camt.016.001.04"
 
 
 @dataclass
-class CurrencyExchangeSearchCriteria1Camt01600104:
+class CurrencyExchangeSearchCriteria1Camt01600104(ISO20022MessageElement):
     src_ccy: Optional[str] = field(
         default=None,
         metadata={
@@ -33,7 +34,7 @@ class CurrencyExchangeSearchCriteria1Camt01600104:
 
 
 @dataclass
-class MessageHeader1Camt01600104:
+class MessageHeader1Camt01600104(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -56,7 +57,7 @@ class MessageHeader1Camt01600104:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Camt01600104:
+class SupplementaryDataEnvelope1Camt01600104(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -67,7 +68,7 @@ class SupplementaryDataEnvelope1Camt01600104:
 
 
 @dataclass
-class CurrencyExchangeCriteria2Camt01600104:
+class CurrencyExchangeCriteria2Camt01600104(ISO20022MessageElement):
     new_qry_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -90,7 +91,7 @@ class CurrencyExchangeCriteria2Camt01600104:
 
 
 @dataclass
-class SupplementaryData1Camt01600104:
+class SupplementaryData1Camt01600104(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -113,7 +114,7 @@ class SupplementaryData1Camt01600104:
 
 
 @dataclass
-class CurrencyCriteriaDefinition1ChoiceCamt01600104:
+class CurrencyCriteriaDefinition1ChoiceCamt01600104(ISO20022MessageElement):
     qry_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -135,7 +136,7 @@ class CurrencyCriteriaDefinition1ChoiceCamt01600104:
 
 
 @dataclass
-class CurrencyQueryDefinition3Camt01600104:
+class CurrencyQueryDefinition3Camt01600104(ISO20022MessageElement):
     qry_tp: Optional[QueryType2Code] = field(
         default=None,
         metadata={
@@ -155,7 +156,7 @@ class CurrencyQueryDefinition3Camt01600104:
 
 
 @dataclass
-class GetCurrencyExchangeRateV04Camt01600104:
+class GetCurrencyExchangeRateV04Camt01600104(ISO20022MessageElement):
     msg_hdr: Optional[MessageHeader1Camt01600104] = field(
         default=None,
         metadata={
@@ -184,7 +185,7 @@ class GetCurrencyExchangeRateV04Camt01600104:
 
 
 @dataclass
-class Camt01600104:
+class Camt01600104(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:camt.016.001.04"
 

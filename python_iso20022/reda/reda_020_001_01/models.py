@@ -3,13 +3,14 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.reda.enums import Status6Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:reda.020.001.01"
 
 
 @dataclass
-class GenericIdentification30Reda02000101:
+class GenericIdentification30Reda02000101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -44,7 +45,7 @@ class GenericIdentification30Reda02000101:
 
 
 @dataclass
-class OriginalBusinessInstruction1Reda02000101:
+class OriginalBusinessInstruction1Reda02000101(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -77,7 +78,7 @@ class OriginalBusinessInstruction1Reda02000101:
 
 
 @dataclass
-class StatusReason6ChoiceReda02000101:
+class StatusReason6ChoiceReda02000101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -101,7 +102,7 @@ class StatusReason6ChoiceReda02000101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Reda02000101:
+class SupplementaryDataEnvelope1Reda02000101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -112,7 +113,7 @@ class SupplementaryDataEnvelope1Reda02000101:
 
 
 @dataclass
-class MessageHeader12Reda02000101:
+class MessageHeader12Reda02000101(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -143,7 +144,7 @@ class MessageHeader12Reda02000101:
 
 
 @dataclass
-class SecuritiesAccount19Reda02000101:
+class SecuritiesAccount19Reda02000101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -176,7 +177,7 @@ class SecuritiesAccount19Reda02000101:
 
 
 @dataclass
-class StatusReasonInformation10Reda02000101:
+class StatusReasonInformation10Reda02000101(ISO20022MessageElement):
     rsn: Optional[StatusReason6ChoiceReda02000101] = field(
         default=None,
         metadata={
@@ -199,7 +200,7 @@ class StatusReasonInformation10Reda02000101:
 
 
 @dataclass
-class SupplementaryData1Reda02000101:
+class SupplementaryData1Reda02000101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -222,7 +223,7 @@ class SupplementaryData1Reda02000101:
 
 
 @dataclass
-class SecuritiesAccountStatus2Reda02000101:
+class SecuritiesAccountStatus2Reda02000101(ISO20022MessageElement):
     rltd_scties_acct: Optional[SecuritiesAccount19Reda02000101] = field(
         default=None,
         metadata={
@@ -251,7 +252,7 @@ class SecuritiesAccountStatus2Reda02000101:
 
 
 @dataclass
-class SecuritiesAccountStatusAdviceV01Reda02000101:
+class SecuritiesAccountStatusAdviceV01Reda02000101(ISO20022MessageElement):
     msg_hdr: Optional[MessageHeader12Reda02000101] = field(
         default=None,
         metadata={
@@ -280,7 +281,7 @@ class SecuritiesAccountStatusAdviceV01Reda02000101:
 
 
 @dataclass
-class Reda02000101:
+class Reda02000101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:reda.020.001.01"
 

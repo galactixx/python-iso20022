@@ -3,6 +3,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import AddressType2Code
 from python_iso20022.setr.enums import ConfirmationCancellationReason1Code
 
@@ -10,7 +11,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:setr.049.001.02"
 
 
 @dataclass
-class CopyInformation4Setr04900102:
+class CopyInformation4Setr04900102(ISO20022MessageElement):
     cpy_ind: Optional[bool] = field(
         default=None,
         metadata={
@@ -32,7 +33,7 @@ class CopyInformation4Setr04900102:
 
 
 @dataclass
-class GenericIdentification1Setr04900102:
+class GenericIdentification1Setr04900102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -67,7 +68,7 @@ class GenericIdentification1Setr04900102:
 
 
 @dataclass
-class GenericIdentification47Setr04900102:
+class GenericIdentification47Setr04900102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -104,7 +105,7 @@ class GenericIdentification47Setr04900102:
 
 
 @dataclass
-class MessageIdentification1Setr04900102:
+class MessageIdentification1Setr04900102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -128,7 +129,7 @@ class MessageIdentification1Setr04900102:
 
 
 @dataclass
-class CancellationReason31ChoiceSetr04900102:
+class CancellationReason31ChoiceSetr04900102(ISO20022MessageElement):
     cd: Optional[ConfirmationCancellationReason1Code] = field(
         default=None,
         metadata={
@@ -148,7 +149,7 @@ class CancellationReason31ChoiceSetr04900102:
 
 
 @dataclass
-class PostalAddress1Setr04900102:
+class PostalAddress1Setr04900102(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -231,7 +232,7 @@ class PostalAddress1Setr04900102:
 
 
 @dataclass
-class InvestmentFundOrder11Setr04900102:
+class InvestmentFundOrder11Setr04900102(ISO20022MessageElement):
     ordr_ref: Optional[str] = field(
         default=None,
         metadata={
@@ -284,7 +285,7 @@ class InvestmentFundOrder11Setr04900102:
 
 
 @dataclass
-class NameAndAddress5Setr04900102:
+class NameAndAddress5Setr04900102(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -307,7 +308,7 @@ class NameAndAddress5Setr04900102:
 
 
 @dataclass
-class PartyIdentification90ChoiceSetr04900102:
+class PartyIdentification90ChoiceSetr04900102(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -336,7 +337,7 @@ class PartyIdentification90ChoiceSetr04900102:
 
 
 @dataclass
-class PartyIdentification113Setr04900102:
+class PartyIdentification113Setr04900102(ISO20022MessageElement):
     pty: Optional[PartyIdentification90ChoiceSetr04900102] = field(
         default=None,
         metadata={
@@ -358,7 +359,7 @@ class PartyIdentification113Setr04900102:
 
 
 @dataclass
-class AdditionalReference8Setr04900102:
+class AdditionalReference8Setr04900102(ISO20022MessageElement):
     ref: Optional[str] = field(
         default=None,
         metadata={
@@ -391,7 +392,7 @@ class AdditionalReference8Setr04900102:
 
 
 @dataclass
-class AdditionalReference9Setr04900102:
+class AdditionalReference9Setr04900102(ISO20022MessageElement):
     ref: Optional[str] = field(
         default=None,
         metadata={
@@ -424,7 +425,9 @@ class AdditionalReference9Setr04900102:
 
 
 @dataclass
-class SubscriptionBulkOrderConfirmationCancellationInstructionV02Setr04900102:
+class SubscriptionBulkOrderConfirmationCancellationInstructionV02Setr04900102(
+    ISO20022MessageElement
+):
     msg_id: Optional[MessageIdentification1Setr04900102] = field(
         default=None,
         metadata={
@@ -497,7 +500,7 @@ class SubscriptionBulkOrderConfirmationCancellationInstructionV02Setr04900102:
 
 
 @dataclass
-class Setr04900102:
+class Setr04900102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:setr.049.001.02"
 

@@ -4,13 +4,14 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import CashAccountType4Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:tsin.003.001.01"
 
 
 @dataclass
-class ActiveCurrencyAndAmountTsin00300101:
+class ActiveCurrencyAndAmountTsin00300101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -32,7 +33,7 @@ class ActiveCurrencyAndAmountTsin00300101:
 
 
 @dataclass
-class ClearingSystemMemberIdentification2ChoiceTsin00300101:
+class ClearingSystemMemberIdentification2ChoiceTsin00300101(ISO20022MessageElement):
     uschu: Optional[str] = field(
         default=None,
         metadata={
@@ -244,7 +245,7 @@ class ClearingSystemMemberIdentification2ChoiceTsin00300101:
 
 
 @dataclass
-class GenericIdentification4Tsin00300101:
+class GenericIdentification4Tsin00300101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -270,7 +271,7 @@ class GenericIdentification4Tsin00300101:
 
 
 @dataclass
-class MessageIdentification1Tsin00300101:
+class MessageIdentification1Tsin00300101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -294,7 +295,7 @@ class MessageIdentification1Tsin00300101:
 
 
 @dataclass
-class SimpleIdentificationInformation2Tsin00300101:
+class SimpleIdentificationInformation2Tsin00300101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -309,7 +310,7 @@ class SimpleIdentificationInformation2Tsin00300101:
 
 
 @dataclass
-class AccountIdentification3ChoiceTsin00300101:
+class AccountIdentification3ChoiceTsin00300101(ISO20022MessageElement):
     iban: Optional[str] = field(
         default=None,
         metadata={
@@ -348,7 +349,7 @@ class AccountIdentification3ChoiceTsin00300101:
 
 
 @dataclass
-class CashAccountType2Tsin00300101:
+class CashAccountType2Tsin00300101(ISO20022MessageElement):
     cd: Optional[CashAccountType4Code] = field(
         default=None,
         metadata={
@@ -370,7 +371,7 @@ class CashAccountType2Tsin00300101:
 
 
 @dataclass
-class FinancialInstitutionIdentification6Tsin00300101:
+class FinancialInstitutionIdentification6Tsin00300101(ISO20022MessageElement):
     clr_sys_mmb_id: Optional[ClearingSystemMemberIdentification2ChoiceTsin00300101] = (
         field(
             default=None,
@@ -401,7 +402,7 @@ class FinancialInstitutionIdentification6Tsin00300101:
 
 
 @dataclass
-class PartyIdentification25Tsin00300101:
+class PartyIdentification25Tsin00300101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -433,7 +434,7 @@ class PartyIdentification25Tsin00300101:
 
 
 @dataclass
-class CashAccount7Tsin00300101:
+class CashAccount7Tsin00300101(ISO20022MessageElement):
     id: Optional[AccountIdentification3ChoiceTsin00300101] = field(
         default=None,
         metadata={
@@ -473,7 +474,7 @@ class CashAccount7Tsin00300101:
 
 
 @dataclass
-class PartyIdentificationAndAccount6Tsin00300101:
+class PartyIdentificationAndAccount6Tsin00300101(ISO20022MessageElement):
     pty_id: Optional[PartyIdentification25Tsin00300101] = field(
         default=None,
         metadata={
@@ -502,7 +503,7 @@ class PartyIdentificationAndAccount6Tsin00300101:
 
 
 @dataclass
-class CancellationRequestInformation1Tsin00300101:
+class CancellationRequestInformation1Tsin00300101(ISO20022MessageElement):
     orgnl_grp_id: Optional[str] = field(
         default=None,
         metadata={
@@ -578,7 +579,7 @@ class CancellationRequestInformation1Tsin00300101:
 
 
 @dataclass
-class InvoiceFinancingCancellationRequestV01Tsin00300101:
+class InvoiceFinancingCancellationRequestV01Tsin00300101(ISO20022MessageElement):
     cxl_req_id: Optional[MessageIdentification1Tsin00300101] = field(
         default=None,
         metadata={
@@ -600,7 +601,7 @@ class InvoiceFinancingCancellationRequestV01Tsin00300101:
 
 
 @dataclass
-class Tsin00300101:
+class Tsin00300101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:tsin.003.001.01"
 

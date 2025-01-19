@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlPeriod, XmlTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.cafm.cafm_001_001_03.enums import (
     FileActionScope1Code,
     FileActionType2Code,
@@ -52,7 +53,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:cafm.001.001.03"
 
 
 @dataclass
-class AdditionalData1Cafm00100103:
+class AdditionalData1Cafm00100103(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -76,7 +77,7 @@ class AdditionalData1Cafm00100103:
 
 
 @dataclass
-class Address2Cafm00100103:
+class Address2Cafm00100103(ISO20022MessageElement):
     adr_line1: Optional[str] = field(
         default=None,
         metadata={
@@ -187,7 +188,7 @@ class Address2Cafm00100103:
 
 
 @dataclass
-class Authority1Cafm00100103:
+class Authority1Cafm00100103(ISO20022MessageElement):
     ctry: Optional[str] = field(
         default=None,
         metadata={
@@ -248,7 +249,7 @@ class Authority1Cafm00100103:
 
 
 @dataclass
-class BatchManagementInformation1Cafm00100103:
+class BatchManagementInformation1Cafm00100103(ISO20022MessageElement):
     colltn_id: Optional[str] = field(
         default=None,
         metadata={
@@ -293,7 +294,7 @@ class BatchManagementInformation1Cafm00100103:
 
 
 @dataclass
-class CardholderName2Cafm00100103:
+class CardholderName2Cafm00100103(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -337,7 +338,7 @@ class CardholderName2Cafm00100103:
 
 
 @dataclass
-class CardholderName3Cafm00100103:
+class CardholderName3Cafm00100103(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -381,7 +382,7 @@ class CardholderName3Cafm00100103:
 
 
 @dataclass
-class ContactPersonal1Cafm00100103:
+class ContactPersonal1Cafm00100103(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -528,7 +529,7 @@ class ContactPersonal1Cafm00100103:
 
 
 @dataclass
-class CorrectionIdentification1Cafm00100103:
+class CorrectionIdentification1Cafm00100103(ISO20022MessageElement):
     ind: Optional[bool] = field(
         default=None,
         metadata={
@@ -556,7 +557,7 @@ class CorrectionIdentification1Cafm00100103:
 
 
 @dataclass
-class DataRecord1ChoiceCafm00100103:
+class DataRecord1ChoiceCafm00100103(ISO20022MessageElement):
     binry: list[bytes] = field(
         default_factory=list,
         metadata={
@@ -581,7 +582,7 @@ class DataRecord1ChoiceCafm00100103:
 
 
 @dataclass
-class EncryptedData2ChoiceCafm00100103:
+class EncryptedData2ChoiceCafm00100103(ISO20022MessageElement):
     binry: Optional[bytes] = field(
         default=None,
         metadata={
@@ -605,7 +606,7 @@ class EncryptedData2ChoiceCafm00100103:
 
 
 @dataclass
-class Jurisdiction2Cafm00100103:
+class Jurisdiction2Cafm00100103(ISO20022MessageElement):
     dmst_ind: Optional[bool] = field(
         default=None,
         metadata={
@@ -627,7 +628,7 @@ class Jurisdiction2Cafm00100103:
 
 
 @dataclass
-class Kekidentifier2Cafm00100103:
+class Kekidentifier2Cafm00100103(ISO20022MessageElement):
     class Meta:
         name = "KEKIdentifier2"
 
@@ -677,7 +678,7 @@ class Kekidentifier2Cafm00100103:
 
 
 @dataclass
-class Kekidentifier6Cafm00100103:
+class Kekidentifier6Cafm00100103(ISO20022MessageElement):
     class Meta:
         name = "KEKIdentifier6"
 
@@ -726,7 +727,7 @@ class Kekidentifier6Cafm00100103:
 
 
 @dataclass
-class LocalAddress1Cafm00100103:
+class LocalAddress1Cafm00100103(ISO20022MessageElement):
     adr_line1: Optional[str] = field(
         default=None,
         metadata={
@@ -810,7 +811,7 @@ class LocalAddress1Cafm00100103:
 
 
 @dataclass
-class Macdata1Cafm00100103:
+class Macdata1Cafm00100103(ISO20022MessageElement):
     class Meta:
         name = "MACData1"
 
@@ -901,7 +902,7 @@ class Macdata1Cafm00100103:
 
 
 @dataclass
-class Reconciliation4Cafm00100103:
+class Reconciliation4Cafm00100103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -933,7 +934,7 @@ class Reconciliation4Cafm00100103:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Cafm00100103:
+class SupplementaryDataEnvelope1Cafm00100103(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -944,7 +945,7 @@ class SupplementaryDataEnvelope1Cafm00100103:
 
 
 @dataclass
-class AdditionalData2Cafm00100103:
+class AdditionalData2Cafm00100103(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -966,7 +967,7 @@ class AdditionalData2Cafm00100103:
 
 
 @dataclass
-class AdditionalFee3Cafm00100103:
+class AdditionalFee3Cafm00100103(ISO20022MessageElement):
     tp: Optional[TypeOfAmount21Code] = field(
         default=None,
         metadata={
@@ -1096,7 +1097,7 @@ class AdditionalFee3Cafm00100103:
 
 
 @dataclass
-class AlgorithmIdentification26Cafm00100103:
+class AlgorithmIdentification26Cafm00100103(ISO20022MessageElement):
     algo: Optional[Algorithm8Code] = field(
         default=None,
         metadata={
@@ -1117,7 +1118,7 @@ class AlgorithmIdentification26Cafm00100103:
 
 
 @dataclass
-class CardData15Cafm00100103:
+class CardData15Cafm00100103(ISO20022MessageElement):
     pan: Optional[str] = field(
         default=None,
         metadata={
@@ -1239,7 +1240,7 @@ class CardData15Cafm00100103:
 
 
 @dataclass
-class CardReadingCapabilities1Cafm00100103:
+class CardReadingCapabilities1Cafm00100103(ISO20022MessageElement):
     cpblty: Optional[CardDataReading10Code] = field(
         default=None,
         metadata={
@@ -1262,7 +1263,7 @@ class CardReadingCapabilities1Cafm00100103:
 
 
 @dataclass
-class CardWritingCapabilities1Cafm00100103:
+class CardWritingCapabilities1Cafm00100103(ISO20022MessageElement):
     cpblty: Optional[CardDataWriting1Code] = field(
         default=None,
         metadata={
@@ -1285,7 +1286,7 @@ class CardWritingCapabilities1Cafm00100103:
 
 
 @dataclass
-class CardholderVerificationCapabilities1Cafm00100103:
+class CardholderVerificationCapabilities1Cafm00100103(ISO20022MessageElement):
     cpblty: Optional[CardholderVerificationCapability5Code] = field(
         default=None,
         metadata={
@@ -1308,7 +1309,7 @@ class CardholderVerificationCapabilities1Cafm00100103:
 
 
 @dataclass
-class ContentInformationType41Cafm00100103:
+class ContentInformationType41Cafm00100103(ISO20022MessageElement):
     macdata: Optional[Macdata1Cafm00100103] = field(
         default=None,
         metadata={
@@ -1331,7 +1332,7 @@ class ContentInformationType41Cafm00100103:
 
 
 @dataclass
-class Credentials3Cafm00100103:
+class Credentials3Cafm00100103(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -1393,7 +1394,7 @@ class Credentials3Cafm00100103:
 
 
 @dataclass
-class DeviceIdentification1Cafm00100103:
+class DeviceIdentification1Cafm00100103(ISO20022MessageElement):
     tp: Optional[DeviceIdentificationType1Code] = field(
         default=None,
         metadata={
@@ -1435,7 +1436,7 @@ class DeviceIdentification1Cafm00100103:
 
 
 @dataclass
-class DisplayCapabilities6Cafm00100103:
+class DisplayCapabilities6Cafm00100103(ISO20022MessageElement):
     dstn: Optional[UserInterface1Code] = field(
         default=None,
         metadata={
@@ -1484,7 +1485,7 @@ class DisplayCapabilities6Cafm00100103:
 
 
 @dataclass
-class EncryptedDataElement2Cafm00100103:
+class EncryptedDataElement2Cafm00100103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1525,7 +1526,7 @@ class EncryptedDataElement2Cafm00100103:
 
 
 @dataclass
-class GenericIdentification183Cafm00100103:
+class GenericIdentification183Cafm00100103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1585,7 +1586,7 @@ class GenericIdentification183Cafm00100103:
 
 
 @dataclass
-class LocalData10Cafm00100103:
+class LocalData10Cafm00100103(ISO20022MessageElement):
     lang: Optional[str] = field(
         default=None,
         metadata={
@@ -1645,7 +1646,7 @@ class LocalData10Cafm00100103:
 
 
 @dataclass
-class LocalData11Cafm00100103:
+class LocalData11Cafm00100103(ISO20022MessageElement):
     lang: Optional[str] = field(
         default=None,
         metadata={
@@ -1735,7 +1736,7 @@ class LocalData11Cafm00100103:
 
 
 @dataclass
-class LocalData13Cafm00100103:
+class LocalData13Cafm00100103(ISO20022MessageElement):
     lang: Optional[str] = field(
         default=None,
         metadata={
@@ -1783,7 +1784,7 @@ class LocalData13Cafm00100103:
 
 
 @dataclass
-class LocalData14Cafm00100103:
+class LocalData14Cafm00100103(ISO20022MessageElement):
     lang: Optional[str] = field(
         default=None,
         metadata={
@@ -1835,7 +1836,7 @@ class LocalData14Cafm00100103:
 
 
 @dataclass
-class LocalData15Cafm00100103:
+class LocalData15Cafm00100103(ISO20022MessageElement):
     lang: Optional[str] = field(
         default=None,
         metadata={
@@ -1883,7 +1884,7 @@ class LocalData15Cafm00100103:
 
 
 @dataclass
-class Parameter14Cafm00100103:
+class Parameter14Cafm00100103(ISO20022MessageElement):
     ncrptn_frmt: Optional[EncryptionFormat3Code] = field(
         default=None,
         metadata={
@@ -1914,7 +1915,7 @@ class Parameter14Cafm00100103:
 
 
 @dataclass
-class Parameter7Cafm00100103:
+class Parameter7Cafm00100103(ISO20022MessageElement):
     initlstn_vctr: Optional[bytes] = field(
         default=None,
         metadata={
@@ -1937,7 +1938,7 @@ class Parameter7Cafm00100103:
 
 
 @dataclass
-class PointOfInteractionComponent16Cafm00100103:
+class PointOfInteractionComponent16Cafm00100103(ISO20022MessageElement):
     tp: Optional[PoicomponentType5Code] = field(
         default=None,
         metadata={
@@ -1990,7 +1991,7 @@ class PointOfInteractionComponent16Cafm00100103:
 
 
 @dataclass
-class ProgrammeMode5Cafm00100103:
+class ProgrammeMode5Cafm00100103(ISO20022MessageElement):
     apld_id: Optional[str] = field(
         default=None,
         metadata={
@@ -2013,7 +2014,7 @@ class ProgrammeMode5Cafm00100103:
 
 
 @dataclass
-class RelativeDistinguishedName1Cafm00100103:
+class RelativeDistinguishedName1Cafm00100103(ISO20022MessageElement):
     attr_tp: Optional[AttributeType1Code] = field(
         default=None,
         metadata={
@@ -2037,7 +2038,7 @@ class RelativeDistinguishedName1Cafm00100103:
 
 
 @dataclass
-class SettlementService6Cafm00100103:
+class SettlementService6Cafm00100103(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -2139,7 +2140,7 @@ class SettlementService6Cafm00100103:
 
 
 @dataclass
-class Software1Cafm00100103:
+class Software1Cafm00100103(ISO20022MessageElement):
     tp: Optional[SoftwareType1Code] = field(
         default=None,
         metadata={
@@ -2181,7 +2182,7 @@ class Software1Cafm00100103:
 
 
 @dataclass
-class SupplementaryData1Cafm00100103:
+class SupplementaryData1Cafm00100103(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -2204,7 +2205,7 @@ class SupplementaryData1Cafm00100103:
 
 
 @dataclass
-class Token2Cafm00100103:
+class Token2Cafm00100103(ISO20022MessageElement):
     pmt_tkn: Optional[str] = field(
         default=None,
         metadata={
@@ -2305,7 +2306,7 @@ class Token2Cafm00100103:
 
 
 @dataclass
-class Traceability10Cafm00100103:
+class Traceability10Cafm00100103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -2381,7 +2382,7 @@ class Traceability10Cafm00100103:
 
 
 @dataclass
-class AlgorithmIdentification25Cafm00100103:
+class AlgorithmIdentification25Cafm00100103(ISO20022MessageElement):
     algo: Optional[Algorithm23Code] = field(
         default=None,
         metadata={
@@ -2402,7 +2403,7 @@ class AlgorithmIdentification25Cafm00100103:
 
 
 @dataclass
-class AlgorithmIdentification28Cafm00100103:
+class AlgorithmIdentification28Cafm00100103(ISO20022MessageElement):
     algo: Optional[Algorithm13Code] = field(
         default=None,
         metadata={
@@ -2423,7 +2424,7 @@ class AlgorithmIdentification28Cafm00100103:
 
 
 @dataclass
-class Cardholder22Cafm00100103:
+class Cardholder22Cafm00100103(ISO20022MessageElement):
     nm: Optional[CardholderName3Cafm00100103] = field(
         default=None,
         metadata={
@@ -2491,7 +2492,7 @@ class Cardholder22Cafm00100103:
 
 
 @dataclass
-class CertificateIssuer1Cafm00100103:
+class CertificateIssuer1Cafm00100103(ISO20022MessageElement):
     rltv_dstngshd_nm: list[RelativeDistinguishedName1Cafm00100103] = field(
         default_factory=list,
         metadata={
@@ -2504,7 +2505,7 @@ class CertificateIssuer1Cafm00100103:
 
 
 @dataclass
-class CustomerDevice5Cafm00100103:
+class CustomerDevice5Cafm00100103(ISO20022MessageElement):
     manfctr: Optional[str] = field(
         default=None,
         metadata={
@@ -2699,7 +2700,7 @@ class CustomerDevice5Cafm00100103:
 
 
 @dataclass
-class EncryptedData2Cafm00100103:
+class EncryptedData2Cafm00100103(ISO20022MessageElement):
     ctrl: Optional[str] = field(
         default=None,
         metadata={
@@ -2793,7 +2794,7 @@ class EncryptedData2Cafm00100103:
 
 
 @dataclass
-class FinancialInstitution8Cafm00100103:
+class FinancialInstitution8Cafm00100103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -2883,7 +2884,7 @@ class FinancialInstitution8Cafm00100103:
 
 
 @dataclass
-class Header71Cafm00100103:
+class Header71Cafm00100103(ISO20022MessageElement):
     msg_fctn: Optional[str] = field(
         default=None,
         metadata={
@@ -2978,7 +2979,7 @@ class Header71Cafm00100103:
 
 
 @dataclass
-class Parameter13Cafm00100103:
+class Parameter13Cafm00100103(ISO20022MessageElement):
     dgst_algo: Optional[Algorithm20Code] = field(
         default=None,
         metadata={
@@ -2998,7 +2999,7 @@ class Parameter13Cafm00100103:
 
 
 @dataclass
-class PartyIdentification284Cafm00100103:
+class PartyIdentification284Cafm00100103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -3271,7 +3272,7 @@ class PartyIdentification284Cafm00100103:
 
 
 @dataclass
-class PartyIdentification285Cafm00100103:
+class PartyIdentification285Cafm00100103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -3341,7 +3342,7 @@ class PartyIdentification285Cafm00100103:
 
 
 @dataclass
-class PartyIdentification286Cafm00100103:
+class PartyIdentification286Cafm00100103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -3410,7 +3411,7 @@ class PartyIdentification286Cafm00100103:
 
 
 @dataclass
-class Terminal7Cafm00100103:
+class Terminal7Cafm00100103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -3627,7 +3628,7 @@ class Terminal7Cafm00100103:
 
 
 @dataclass
-class AlgorithmIdentification27Cafm00100103:
+class AlgorithmIdentification27Cafm00100103(ISO20022MessageElement):
     algo: Optional[Algorithm7Code] = field(
         default=None,
         metadata={
@@ -3648,7 +3649,7 @@ class AlgorithmIdentification27Cafm00100103:
 
 
 @dataclass
-class EncryptedContent8Cafm00100103:
+class EncryptedContent8Cafm00100103(ISO20022MessageElement):
     cntt_tp: Optional[ContentType2Code] = field(
         default=None,
         metadata={
@@ -3679,7 +3680,7 @@ class EncryptedContent8Cafm00100103:
 
 
 @dataclass
-class IssuerAndSerialNumber1Cafm00100103:
+class IssuerAndSerialNumber1Cafm00100103(ISO20022MessageElement):
     issr: Optional[CertificateIssuer1Cafm00100103] = field(
         default=None,
         metadata={
@@ -3704,7 +3705,7 @@ class IssuerAndSerialNumber1Cafm00100103:
 
 
 @dataclass
-class Kek6Cafm00100103:
+class Kek6Cafm00100103(ISO20022MessageElement):
     class Meta:
         name = "KEK6"
 
@@ -3750,7 +3751,7 @@ class Kek6Cafm00100103:
 
 
 @dataclass
-class PartyIdentification287Cafm00100103:
+class PartyIdentification287Cafm00100103(ISO20022MessageElement):
     fi: Optional[FinancialInstitution8Cafm00100103] = field(
         default=None,
         metadata={
@@ -3855,7 +3856,7 @@ class PartyIdentification287Cafm00100103:
 
 
 @dataclass
-class Wallet3Cafm00100103:
+class Wallet3Cafm00100103(ISO20022MessageElement):
     prvdr: Optional[PartyIdentification285Cafm00100103] = field(
         default=None,
         metadata={
@@ -4049,7 +4050,7 @@ class Wallet3Cafm00100103:
 
 
 @dataclass
-class Recipient5ChoiceCafm00100103:
+class Recipient5ChoiceCafm00100103(ISO20022MessageElement):
     issr_and_srl_nb: Optional[IssuerAndSerialNumber1Cafm00100103] = field(
         default=None,
         metadata={
@@ -4069,7 +4070,7 @@ class Recipient5ChoiceCafm00100103:
 
 
 @dataclass
-class KeyTransport6Cafm00100103:
+class KeyTransport6Cafm00100103(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -4113,7 +4114,7 @@ class KeyTransport6Cafm00100103:
 
 
 @dataclass
-class Recipient7ChoiceCafm00100103:
+class Recipient7ChoiceCafm00100103(ISO20022MessageElement):
     key_trnsprt: Optional[KeyTransport6Cafm00100103] = field(
         default=None,
         metadata={
@@ -4141,7 +4142,7 @@ class Recipient7ChoiceCafm00100103:
 
 
 @dataclass
-class EnvelopedData12Cafm00100103:
+class EnvelopedData12Cafm00100103(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -4172,7 +4173,7 @@ class EnvelopedData12Cafm00100103:
 
 
 @dataclass
-class ProtectedData2Cafm00100103:
+class ProtectedData2Cafm00100103(ISO20022MessageElement):
     cntt_tp: Optional[ContentType3Code] = field(
         default=None,
         metadata={
@@ -4201,7 +4202,7 @@ class ProtectedData2Cafm00100103:
 
 
 @dataclass
-class FileActionInitiationV03Cafm00100103:
+class FileActionInitiationV03Cafm00100103(ISO20022MessageElement):
     hdr: Optional[Header71Cafm00100103] = field(
         default=None,
         metadata={
@@ -4576,7 +4577,7 @@ class FileActionInitiationV03Cafm00100103:
 
 
 @dataclass
-class Cafm00100103:
+class Cafm00100103(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:cafm.001.001.03"
 

@@ -19,13 +19,14 @@ from python_iso20022.acmt.enums import (
     PendingStatusReason1Code,
     ProformaStatusReason1Code,
 )
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import AddressType2Code, NoReasonCode
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:acmt.006.001.07"
 
 
 @dataclass
-class Extension1Acmt00600107:
+class Extension1Acmt00600107(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -51,7 +52,7 @@ class Extension1Acmt00600107:
 
 
 @dataclass
-class GenericIdentification1Acmt00600107:
+class GenericIdentification1Acmt00600107(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -86,7 +87,7 @@ class GenericIdentification1Acmt00600107:
 
 
 @dataclass
-class GenericIdentification36Acmt00600107:
+class GenericIdentification36Acmt00600107(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -122,7 +123,7 @@ class GenericIdentification36Acmt00600107:
 
 
 @dataclass
-class GenericIdentification47Acmt00600107:
+class GenericIdentification47Acmt00600107(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -159,7 +160,7 @@ class GenericIdentification47Acmt00600107:
 
 
 @dataclass
-class MarketPracticeVersion1Acmt00600107:
+class MarketPracticeVersion1Acmt00600107(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -192,7 +193,7 @@ class MarketPracticeVersion1Acmt00600107:
 
 
 @dataclass
-class MessageIdentification1Acmt00600107:
+class MessageIdentification1Acmt00600107(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -216,7 +217,7 @@ class MessageIdentification1Acmt00600107:
 
 
 @dataclass
-class AcceptedStatusReason1ChoiceAcmt00600107:
+class AcceptedStatusReason1ChoiceAcmt00600107(ISO20022MessageElement):
     cd: Optional[AcceptedStatusReason1Code] = field(
         default=None,
         metadata={
@@ -236,7 +237,7 @@ class AcceptedStatusReason1ChoiceAcmt00600107:
 
 
 @dataclass
-class Account23Acmt00600107:
+class Account23Acmt00600107(ISO20022MessageElement):
     acct_id: Optional[str] = field(
         default=None,
         metadata={
@@ -259,7 +260,7 @@ class Account23Acmt00600107:
 
 
 @dataclass
-class BlockedReason2ChoiceAcmt00600107:
+class BlockedReason2ChoiceAcmt00600107(ISO20022MessageElement):
     cd: Optional[BlockedReason2Code] = field(
         default=None,
         metadata={
@@ -279,7 +280,7 @@ class BlockedReason2ChoiceAcmt00600107:
 
 
 @dataclass
-class ClosedStatusReason2ChoiceAcmt00600107:
+class ClosedStatusReason2ChoiceAcmt00600107(ISO20022MessageElement):
     cd: Optional[ClosedStatusReason1Code] = field(
         default=None,
         metadata={
@@ -299,7 +300,7 @@ class ClosedStatusReason2ChoiceAcmt00600107:
 
 
 @dataclass
-class ClosurePendingStatusReason2ChoiceAcmt00600107:
+class ClosurePendingStatusReason2ChoiceAcmt00600107(ISO20022MessageElement):
     cd: Optional[ClosurePendingStatusReason1Code] = field(
         default=None,
         metadata={
@@ -319,7 +320,7 @@ class ClosurePendingStatusReason2ChoiceAcmt00600107:
 
 
 @dataclass
-class DisabledStatusReason2ChoiceAcmt00600107:
+class DisabledStatusReason2ChoiceAcmt00600107(ISO20022MessageElement):
     cd: Optional[DisabledReason2Code] = field(
         default=None,
         metadata={
@@ -339,7 +340,7 @@ class DisabledStatusReason2ChoiceAcmt00600107:
 
 
 @dataclass
-class EnabledStatusReason2ChoiceAcmt00600107:
+class EnabledStatusReason2ChoiceAcmt00600107(ISO20022MessageElement):
     cd: Optional[EnabledStatusReason1Code] = field(
         default=None,
         metadata={
@@ -359,7 +360,7 @@ class EnabledStatusReason2ChoiceAcmt00600107:
 
 
 @dataclass
-class OtherAccountStatus1Acmt00600107:
+class OtherAccountStatus1Acmt00600107(ISO20022MessageElement):
     sts: Optional[GenericIdentification36Acmt00600107] = field(
         default=None,
         metadata={
@@ -380,7 +381,7 @@ class OtherAccountStatus1Acmt00600107:
 
 
 @dataclass
-class PendingOpeningStatusReason2ChoiceAcmt00600107:
+class PendingOpeningStatusReason2ChoiceAcmt00600107(ISO20022MessageElement):
     cd: Optional[PendingOpeningStatusReason1Code] = field(
         default=None,
         metadata={
@@ -400,7 +401,7 @@ class PendingOpeningStatusReason2ChoiceAcmt00600107:
 
 
 @dataclass
-class PendingStatusReason2ChoiceAcmt00600107:
+class PendingStatusReason2ChoiceAcmt00600107(ISO20022MessageElement):
     cd: Optional[PendingStatusReason1Code] = field(
         default=None,
         metadata={
@@ -420,7 +421,7 @@ class PendingStatusReason2ChoiceAcmt00600107:
 
 
 @dataclass
-class PostalAddress1Acmt00600107:
+class PostalAddress1Acmt00600107(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -503,7 +504,7 @@ class PostalAddress1Acmt00600107:
 
 
 @dataclass
-class ProformaStatusReason2ChoiceAcmt00600107:
+class ProformaStatusReason2ChoiceAcmt00600107(ISO20022MessageElement):
     cd: Optional[ProformaStatusReason1Code] = field(
         default=None,
         metadata={
@@ -523,7 +524,7 @@ class ProformaStatusReason2ChoiceAcmt00600107:
 
 
 @dataclass
-class RejectedReason16ChoiceAcmt00600107:
+class RejectedReason16ChoiceAcmt00600107(ISO20022MessageElement):
     cd: Optional[RejectedStatusReason6Code] = field(
         default=None,
         metadata={
@@ -543,7 +544,7 @@ class RejectedReason16ChoiceAcmt00600107:
 
 
 @dataclass
-class TransactionType5ChoiceAcmt00600107:
+class TransactionType5ChoiceAcmt00600107(ISO20022MessageElement):
     cd: Optional[InvestmentFundTransactionType1Code] = field(
         default=None,
         metadata={
@@ -563,7 +564,7 @@ class TransactionType5ChoiceAcmt00600107:
 
 
 @dataclass
-class BlockedStatusReason2Acmt00600107:
+class BlockedStatusReason2Acmt00600107(ISO20022MessageElement):
     tx_tp: Optional[TransactionType5ChoiceAcmt00600107] = field(
         default=None,
         metadata={
@@ -604,7 +605,7 @@ class BlockedStatusReason2Acmt00600107:
 
 
 @dataclass
-class ClosedStatusReason1Acmt00600107:
+class ClosedStatusReason1Acmt00600107(ISO20022MessageElement):
     cd: Optional[ClosedStatusReason2ChoiceAcmt00600107] = field(
         default=None,
         metadata={
@@ -627,7 +628,7 @@ class ClosedStatusReason1Acmt00600107:
 
 
 @dataclass
-class ClosurePendingStatusReason1Acmt00600107:
+class ClosurePendingStatusReason1Acmt00600107(ISO20022MessageElement):
     cd: Optional[ClosurePendingStatusReason2ChoiceAcmt00600107] = field(
         default=None,
         metadata={
@@ -650,7 +651,7 @@ class ClosurePendingStatusReason1Acmt00600107:
 
 
 @dataclass
-class DisabledStatusReason1Acmt00600107:
+class DisabledStatusReason1Acmt00600107(ISO20022MessageElement):
     cd: Optional[DisabledStatusReason2ChoiceAcmt00600107] = field(
         default=None,
         metadata={
@@ -673,7 +674,7 @@ class DisabledStatusReason1Acmt00600107:
 
 
 @dataclass
-class EnabledStatusReason1Acmt00600107:
+class EnabledStatusReason1Acmt00600107(ISO20022MessageElement):
     cd: Optional[EnabledStatusReason2ChoiceAcmt00600107] = field(
         default=None,
         metadata={
@@ -696,7 +697,7 @@ class EnabledStatusReason1Acmt00600107:
 
 
 @dataclass
-class NameAndAddress5Acmt00600107:
+class NameAndAddress5Acmt00600107(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -719,7 +720,7 @@ class NameAndAddress5Acmt00600107:
 
 
 @dataclass
-class PendingOpeningStatusReason1Acmt00600107:
+class PendingOpeningStatusReason1Acmt00600107(ISO20022MessageElement):
     cd: Optional[PendingOpeningStatusReason2ChoiceAcmt00600107] = field(
         default=None,
         metadata={
@@ -742,7 +743,7 @@ class PendingOpeningStatusReason1Acmt00600107:
 
 
 @dataclass
-class PendingStatusReason14Acmt00600107:
+class PendingStatusReason14Acmt00600107(ISO20022MessageElement):
     cd: Optional[PendingStatusReason2ChoiceAcmt00600107] = field(
         default=None,
         metadata={
@@ -765,7 +766,7 @@ class PendingStatusReason14Acmt00600107:
 
 
 @dataclass
-class ProformaStatusReason1Acmt00600107:
+class ProformaStatusReason1Acmt00600107(ISO20022MessageElement):
     cd: Optional[ProformaStatusReason2ChoiceAcmt00600107] = field(
         default=None,
         metadata={
@@ -788,7 +789,7 @@ class ProformaStatusReason1Acmt00600107:
 
 
 @dataclass
-class RejectionReason31Acmt00600107:
+class RejectionReason31Acmt00600107(ISO20022MessageElement):
     rsn: Optional[RejectedReason16ChoiceAcmt00600107] = field(
         default=None,
         metadata={
@@ -811,7 +812,7 @@ class RejectionReason31Acmt00600107:
 
 
 @dataclass
-class BlockedStatusReason2ChoiceAcmt00600107:
+class BlockedStatusReason2ChoiceAcmt00600107(ISO20022MessageElement):
     no_spcfd_rsn: Optional[NoReasonCode] = field(
         default=None,
         metadata={
@@ -831,7 +832,7 @@ class BlockedStatusReason2ChoiceAcmt00600107:
 
 
 @dataclass
-class ClosedStatusReason1ChoiceAcmt00600107:
+class ClosedStatusReason1ChoiceAcmt00600107(ISO20022MessageElement):
     no_spcfd_rsn: Optional[NoReasonCode] = field(
         default=None,
         metadata={
@@ -851,7 +852,7 @@ class ClosedStatusReason1ChoiceAcmt00600107:
 
 
 @dataclass
-class ClosurePendingStatusReason1ChoiceAcmt00600107:
+class ClosurePendingStatusReason1ChoiceAcmt00600107(ISO20022MessageElement):
     no_spcfd_rsn: Optional[NoReasonCode] = field(
         default=None,
         metadata={
@@ -871,7 +872,7 @@ class ClosurePendingStatusReason1ChoiceAcmt00600107:
 
 
 @dataclass
-class DisabledStatusReason1ChoiceAcmt00600107:
+class DisabledStatusReason1ChoiceAcmt00600107(ISO20022MessageElement):
     no_spcfd_rsn: Optional[NoReasonCode] = field(
         default=None,
         metadata={
@@ -891,7 +892,7 @@ class DisabledStatusReason1ChoiceAcmt00600107:
 
 
 @dataclass
-class EnabledStatusReason1ChoiceAcmt00600107:
+class EnabledStatusReason1ChoiceAcmt00600107(ISO20022MessageElement):
     no_spcfd_rsn: Optional[NoReasonCode] = field(
         default=None,
         metadata={
@@ -911,7 +912,7 @@ class EnabledStatusReason1ChoiceAcmt00600107:
 
 
 @dataclass
-class PartyIdentification125ChoiceAcmt00600107:
+class PartyIdentification125ChoiceAcmt00600107(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -940,7 +941,7 @@ class PartyIdentification125ChoiceAcmt00600107:
 
 
 @dataclass
-class PendingOpeningStatusReason1ChoiceAcmt00600107:
+class PendingOpeningStatusReason1ChoiceAcmt00600107(ISO20022MessageElement):
     no_spcfd_rsn: Optional[NoReasonCode] = field(
         default=None,
         metadata={
@@ -960,7 +961,7 @@ class PendingOpeningStatusReason1ChoiceAcmt00600107:
 
 
 @dataclass
-class PendingStatusReason1ChoiceAcmt00600107:
+class PendingStatusReason1ChoiceAcmt00600107(ISO20022MessageElement):
     no_spcfd_rsn: Optional[NoReasonCode] = field(
         default=None,
         metadata={
@@ -980,7 +981,7 @@ class PendingStatusReason1ChoiceAcmt00600107:
 
 
 @dataclass
-class ProformaStatusReason1ChoiceAcmt00600107:
+class ProformaStatusReason1ChoiceAcmt00600107(ISO20022MessageElement):
     no_spcfd_rsn: Optional[NoReasonCode] = field(
         default=None,
         metadata={
@@ -1000,7 +1001,7 @@ class ProformaStatusReason1ChoiceAcmt00600107:
 
 
 @dataclass
-class Status25ChoiceAcmt00600107:
+class Status25ChoiceAcmt00600107(ISO20022MessageElement):
     sts: Optional[AccountManagementStatus1Code] = field(
         default=None,
         metadata={
@@ -1021,7 +1022,7 @@ class Status25ChoiceAcmt00600107:
 
 
 @dataclass
-class AccountStatus2Acmt00600107:
+class AccountStatus2Acmt00600107(ISO20022MessageElement):
     nbld: Optional[EnabledStatusReason1ChoiceAcmt00600107] = field(
         default=None,
         metadata={
@@ -1089,7 +1090,7 @@ class AccountStatus2Acmt00600107:
 
 
 @dataclass
-class AdditionalReference13Acmt00600107:
+class AdditionalReference13Acmt00600107(ISO20022MessageElement):
     ref: Optional[str] = field(
         default=None,
         metadata={
@@ -1122,7 +1123,7 @@ class AdditionalReference13Acmt00600107:
 
 
 @dataclass
-class AccountManagementStatusAndReason5Acmt00600107:
+class AccountManagementStatusAndReason5Acmt00600107(ISO20022MessageElement):
     sts: Optional[Status25ChoiceAcmt00600107] = field(
         default=None,
         metadata={
@@ -1203,7 +1204,7 @@ class AccountManagementStatusAndReason5Acmt00600107:
 
 
 @dataclass
-class AccountManagementStatusReportV07Acmt00600107:
+class AccountManagementStatusReportV07Acmt00600107(ISO20022MessageElement):
     msg_id: Optional[MessageIdentification1Acmt00600107] = field(
         default=None,
         metadata={
@@ -1251,7 +1252,7 @@ class AccountManagementStatusReportV07Acmt00600107:
 
 
 @dataclass
-class Acmt00600107:
+class Acmt00600107(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.006.001.07"
 

@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.colr.enums import (
     BenchmarkCurveName7Code,
     CalculationMethod1Code,
@@ -31,7 +32,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:colr.021.001.01"
 
 
 @dataclass
-class ActiveCurrencyAndAmountColr02100101:
+class ActiveCurrencyAndAmountColr02100101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -53,7 +54,7 @@ class ActiveCurrencyAndAmountColr02100101:
 
 
 @dataclass
-class ActiveOrHistoricCurrencyAndAmountColr02100101:
+class ActiveOrHistoricCurrencyAndAmountColr02100101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -75,7 +76,7 @@ class ActiveOrHistoricCurrencyAndAmountColr02100101:
 
 
 @dataclass
-class CrystallisationDay1Colr02100101:
+class CrystallisationDay1Colr02100101(ISO20022MessageElement):
     day: Optional[bool] = field(
         default=None,
         metadata={
@@ -97,7 +98,7 @@ class CrystallisationDay1Colr02100101:
 
 
 @dataclass
-class DateAndDateTime2ChoiceColr02100101:
+class DateAndDateTime2ChoiceColr02100101(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -117,7 +118,7 @@ class DateAndDateTime2ChoiceColr02100101:
 
 
 @dataclass
-class FinancialInstrumentQuantity33ChoiceColr02100101:
+class FinancialInstrumentQuantity33ChoiceColr02100101(ISO20022MessageElement):
     unit: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -163,7 +164,7 @@ class FinancialInstrumentQuantity33ChoiceColr02100101:
 
 
 @dataclass
-class GenericIdentification1Colr02100101:
+class GenericIdentification1Colr02100101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -198,7 +199,7 @@ class GenericIdentification1Colr02100101:
 
 
 @dataclass
-class GenericIdentification30Colr02100101:
+class GenericIdentification30Colr02100101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -233,7 +234,7 @@ class GenericIdentification30Colr02100101:
 
 
 @dataclass
-class GenericIdentification36Colr02100101:
+class GenericIdentification36Colr02100101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -269,7 +270,7 @@ class GenericIdentification36Colr02100101:
 
 
 @dataclass
-class IdentificationSource3ChoiceColr02100101:
+class IdentificationSource3ChoiceColr02100101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -293,7 +294,7 @@ class IdentificationSource3ChoiceColr02100101:
 
 
 @dataclass
-class Pagination1Colr02100101:
+class Pagination1Colr02100101(ISO20022MessageElement):
     pg_nb: Optional[str] = field(
         default=None,
         metadata={
@@ -316,7 +317,7 @@ class Pagination1Colr02100101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Colr02100101:
+class SupplementaryDataEnvelope1Colr02100101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -327,7 +328,7 @@ class SupplementaryDataEnvelope1Colr02100101:
 
 
 @dataclass
-class TransactionIdentifications44Colr02100101:
+class TransactionIdentifications44Colr02100101(ISO20022MessageElement):
     trpty_agt_svc_prvdr_coll_instr_id: Optional[str] = field(
         default=None,
         metadata={
@@ -402,7 +403,7 @@ class TransactionIdentifications44Colr02100101:
 
 
 @dataclass
-class BenchmarkCurveName13ChoiceColr02100101:
+class BenchmarkCurveName13ChoiceColr02100101(ISO20022MessageElement):
     cd: Optional[BenchmarkCurveName7Code] = field(
         default=None,
         metadata={
@@ -422,7 +423,7 @@ class BenchmarkCurveName13ChoiceColr02100101:
 
 
 @dataclass
-class BlockChainAddressWallet3Colr02100101:
+class BlockChainAddressWallet3Colr02100101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -455,7 +456,7 @@ class BlockChainAddressWallet3Colr02100101:
 
 
 @dataclass
-class CashMovement5Colr02100101:
+class CashMovement5Colr02100101(ISO20022MessageElement):
     csh_mvmnt: Optional[CollateralEntryType1Code] = field(
         default=None,
         metadata={
@@ -506,7 +507,7 @@ class CashMovement5Colr02100101:
 
 
 @dataclass
-class CollateralDate2Colr02100101:
+class CollateralDate2Colr02100101(ISO20022MessageElement):
     trad_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -534,7 +535,7 @@ class CollateralDate2Colr02100101:
 
 
 @dataclass
-class CollateralTransactionType1ChoiceColr02100101:
+class CollateralTransactionType1ChoiceColr02100101(ISO20022MessageElement):
     cd: Optional[CollateralTransactionType1Code] = field(
         default=None,
         metadata={
@@ -554,7 +555,7 @@ class CollateralTransactionType1ChoiceColr02100101:
 
 
 @dataclass
-class Date3ChoiceColr02100101:
+class Date3ChoiceColr02100101(ISO20022MessageElement):
     cd: Optional[DateType2Code] = field(
         default=None,
         metadata={
@@ -574,7 +575,7 @@ class Date3ChoiceColr02100101:
 
 
 @dataclass
-class ExposureType23ChoiceColr02100101:
+class ExposureType23ChoiceColr02100101(ISO20022MessageElement):
     cd: Optional[ExposureType14Code] = field(
         default=None,
         metadata={
@@ -594,7 +595,7 @@ class ExposureType23ChoiceColr02100101:
 
 
 @dataclass
-class ForeignExchangeTerms23Colr02100101:
+class ForeignExchangeTerms23Colr02100101(ISO20022MessageElement):
     unit_ccy: Optional[str] = field(
         default=None,
         metadata={
@@ -638,7 +639,7 @@ class ForeignExchangeTerms23Colr02100101:
 
 
 @dataclass
-class Frequency38ChoiceColr02100101:
+class Frequency38ChoiceColr02100101(ISO20022MessageElement):
     cd: Optional[EventFrequency12Code] = field(
         default=None,
         metadata={
@@ -658,7 +659,7 @@ class Frequency38ChoiceColr02100101:
 
 
 @dataclass
-class FrequencyRateFixing1ChoiceColr02100101:
+class FrequencyRateFixing1ChoiceColr02100101(ISO20022MessageElement):
     cd: Optional[FrequencyRateFixing1Code] = field(
         default=None,
         metadata={
@@ -679,7 +680,7 @@ class FrequencyRateFixing1ChoiceColr02100101:
 
 
 @dataclass
-class IdentificationType42ChoiceColr02100101:
+class IdentificationType42ChoiceColr02100101(ISO20022MessageElement):
     cd: Optional[TypeOfIdentification1Code] = field(
         default=None,
         metadata={
@@ -699,7 +700,7 @@ class IdentificationType42ChoiceColr02100101:
 
 
 @dataclass
-class InterestComputationMethodFormat4ChoiceColr02100101:
+class InterestComputationMethodFormat4ChoiceColr02100101(ISO20022MessageElement):
     cd: Optional[InterestComputationMethod2Code] = field(
         default=None,
         metadata={
@@ -719,7 +720,7 @@ class InterestComputationMethodFormat4ChoiceColr02100101:
 
 
 @dataclass
-class OptionType6ChoiceColr02100101:
+class OptionType6ChoiceColr02100101(ISO20022MessageElement):
     cd: Optional[OptionType1Code] = field(
         default=None,
         metadata={
@@ -739,7 +740,7 @@ class OptionType6ChoiceColr02100101:
 
 
 @dataclass
-class OtherIdentification1Colr02100101:
+class OtherIdentification1Colr02100101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -773,7 +774,7 @@ class OtherIdentification1Colr02100101:
 
 
 @dataclass
-class PostalAddress1Colr02100101:
+class PostalAddress1Colr02100101(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -856,7 +857,7 @@ class PostalAddress1Colr02100101:
 
 
 @dataclass
-class RateOrType1ChoiceColr02100101:
+class RateOrType1ChoiceColr02100101(ISO20022MessageElement):
     rate: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -878,7 +879,7 @@ class RateOrType1ChoiceColr02100101:
 
 
 @dataclass
-class SecuritiesAccount19Colr02100101:
+class SecuritiesAccount19Colr02100101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -911,7 +912,7 @@ class SecuritiesAccount19Colr02100101:
 
 
 @dataclass
-class SupplementaryData1Colr02100101:
+class SupplementaryData1Colr02100101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -934,7 +935,7 @@ class SupplementaryData1Colr02100101:
 
 
 @dataclass
-class TradingPartyCapacity5ChoiceColr02100101:
+class TradingPartyCapacity5ChoiceColr02100101(ISO20022MessageElement):
     cd: Optional[TradingCapacity7Code] = field(
         default=None,
         metadata={
@@ -954,7 +955,7 @@ class TradingPartyCapacity5ChoiceColr02100101:
 
 
 @dataclass
-class AlternatePartyIdentification7Colr02100101:
+class AlternatePartyIdentification7Colr02100101(ISO20022MessageElement):
     id_tp: Optional[IdentificationType42ChoiceColr02100101] = field(
         default=None,
         metadata={
@@ -988,7 +989,7 @@ class AlternatePartyIdentification7Colr02100101:
 
 
 @dataclass
-class AmountAndDirection49Colr02100101:
+class AmountAndDirection49Colr02100101(ISO20022MessageElement):
     amt: Optional[ActiveCurrencyAndAmountColr02100101] = field(
         default=None,
         metadata={
@@ -1027,7 +1028,7 @@ class AmountAndDirection49Colr02100101:
 
 
 @dataclass
-class ClosingDate4ChoiceColr02100101:
+class ClosingDate4ChoiceColr02100101(ISO20022MessageElement):
     dt: Optional[DateAndDateTime2ChoiceColr02100101] = field(
         default=None,
         metadata={
@@ -1047,7 +1048,7 @@ class ClosingDate4ChoiceColr02100101:
 
 
 @dataclass
-class CollateralParameters11Colr02100101:
+class CollateralParameters11Colr02100101(ISO20022MessageElement):
     coll_instr_tp: Optional[CollateralTransactionType1ChoiceColr02100101] = field(
         default=None,
         metadata={
@@ -1110,7 +1111,7 @@ class CollateralParameters11Colr02100101:
 
 
 @dataclass
-class NameAndAddress5Colr02100101:
+class NameAndAddress5Colr02100101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1133,7 +1134,7 @@ class NameAndAddress5Colr02100101:
 
 
 @dataclass
-class RateTypeAndLookback2Colr02100101:
+class RateTypeAndLookback2Colr02100101(ISO20022MessageElement):
     tp: Optional[BenchmarkCurveName13ChoiceColr02100101] = field(
         default=None,
         metadata={
@@ -1180,7 +1181,7 @@ class RateTypeAndLookback2Colr02100101:
 
 
 @dataclass
-class SecurityIdentification19Colr02100101:
+class SecurityIdentification19Colr02100101(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -1211,7 +1212,7 @@ class SecurityIdentification19Colr02100101:
 
 
 @dataclass
-class CollateralAmount12Colr02100101:
+class CollateralAmount12Colr02100101(ISO20022MessageElement):
     tx: Optional[AmountAndDirection49Colr02100101] = field(
         default=None,
         metadata={
@@ -1272,7 +1273,7 @@ class CollateralAmount12Colr02100101:
 
 
 @dataclass
-class PartyIdentification120ChoiceColr02100101:
+class PartyIdentification120ChoiceColr02100101(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -1301,7 +1302,7 @@ class PartyIdentification120ChoiceColr02100101:
 
 
 @dataclass
-class RateOrName4ChoiceColr02100101:
+class RateOrName4ChoiceColr02100101(ISO20022MessageElement):
     rate: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -1323,7 +1324,7 @@ class RateOrName4ChoiceColr02100101:
 
 
 @dataclass
-class SecuritiesMovement7Colr02100101:
+class SecuritiesMovement7Colr02100101(ISO20022MessageElement):
     scties_mvmnt_tp: Optional[CollateralEntryType1Code] = field(
         default=None,
         metadata={
@@ -1383,7 +1384,7 @@ class SecuritiesMovement7Colr02100101:
 
 
 @dataclass
-class DealTransactionDetails6Colr02100101:
+class DealTransactionDetails6Colr02100101(ISO20022MessageElement):
     min_ntce_prd: Optional[str] = field(
         default=None,
         metadata={
@@ -1471,7 +1472,7 @@ class DealTransactionDetails6Colr02100101:
 
 
 @dataclass
-class PartyIdentification136Colr02100101:
+class PartyIdentification136Colr02100101(ISO20022MessageElement):
     id: Optional[PartyIdentification120ChoiceColr02100101] = field(
         default=None,
         metadata={
@@ -1493,7 +1494,7 @@ class PartyIdentification136Colr02100101:
 
 
 @dataclass
-class PartyIdentificationAndAccount193Colr02100101:
+class PartyIdentificationAndAccount193Colr02100101(ISO20022MessageElement):
     id: Optional[PartyIdentification120ChoiceColr02100101] = field(
         default=None,
         metadata={
@@ -1523,7 +1524,7 @@ class PartyIdentificationAndAccount193Colr02100101:
 
 
 @dataclass
-class PartyIdentificationAndAccount203Colr02100101:
+class PartyIdentificationAndAccount203Colr02100101(ISO20022MessageElement):
     id: Optional[PartyIdentification120ChoiceColr02100101] = field(
         default=None,
         metadata={
@@ -1577,7 +1578,7 @@ class PartyIdentificationAndAccount203Colr02100101:
 
 
 @dataclass
-class PartyIdentificationAndAccount202Colr02100101:
+class PartyIdentificationAndAccount202Colr02100101(ISO20022MessageElement):
     id: Optional[PartyIdentification120ChoiceColr02100101] = field(
         default=None,
         metadata={
@@ -1639,7 +1640,7 @@ class PartyIdentificationAndAccount202Colr02100101:
 
 
 @dataclass
-class CollateralParties8Colr02100101:
+class CollateralParties8Colr02100101(ISO20022MessageElement):
     pty_a: Optional[PartyIdentificationAndAccount202Colr02100101] = field(
         default=None,
         metadata={
@@ -1685,7 +1686,7 @@ class CollateralParties8Colr02100101:
 
 
 @dataclass
-class TripartyCollateralAllegementNotificationV01Colr02100101:
+class TripartyCollateralAllegementNotificationV01Colr02100101(ISO20022MessageElement):
     tx_instr_id: Optional[TransactionIdentifications44Colr02100101] = field(
         default=None,
         metadata={
@@ -1767,7 +1768,7 @@ class TripartyCollateralAllegementNotificationV01Colr02100101:
 
 
 @dataclass
-class Colr02100101:
+class Colr02100101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:colr.021.001.01"
 

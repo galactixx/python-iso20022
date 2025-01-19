@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlPeriod
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     AddressType2Code,
     DeliveryReceiptType2Code,
@@ -28,7 +29,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:setr.016.001.04"
 
 
 @dataclass
-class ActiveCurrencyAndAmountSetr01600104:
+class ActiveCurrencyAndAmountSetr01600104(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -50,7 +51,7 @@ class ActiveCurrencyAndAmountSetr01600104:
 
 
 @dataclass
-class ActiveOrHistoricCurrencyAndAmountSetr01600104:
+class ActiveOrHistoricCurrencyAndAmountSetr01600104(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -72,7 +73,7 @@ class ActiveOrHistoricCurrencyAndAmountSetr01600104:
 
 
 @dataclass
-class DateAndDateTimeChoiceSetr01600104:
+class DateAndDateTimeChoiceSetr01600104(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -92,7 +93,7 @@ class DateAndDateTimeChoiceSetr01600104:
 
 
 @dataclass
-class DateFormat42ChoiceSetr01600104:
+class DateFormat42ChoiceSetr01600104(ISO20022MessageElement):
     yr_mnth: Optional[XmlPeriod] = field(
         default=None,
         metadata={
@@ -112,7 +113,7 @@ class DateFormat42ChoiceSetr01600104:
 
 
 @dataclass
-class Extension1Setr01600104:
+class Extension1Setr01600104(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -138,7 +139,7 @@ class Extension1Setr01600104:
 
 
 @dataclass
-class GenericIdentification1Setr01600104:
+class GenericIdentification1Setr01600104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -173,7 +174,7 @@ class GenericIdentification1Setr01600104:
 
 
 @dataclass
-class GenericIdentification47Setr01600104:
+class GenericIdentification47Setr01600104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -210,7 +211,7 @@ class GenericIdentification47Setr01600104:
 
 
 @dataclass
-class IdentificationSource1ChoiceSetr01600104:
+class IdentificationSource1ChoiceSetr01600104(ISO20022MessageElement):
     dmst: Optional[str] = field(
         default=None,
         metadata={
@@ -233,7 +234,7 @@ class IdentificationSource1ChoiceSetr01600104:
 
 
 @dataclass
-class LegIdentification1ChoiceSetr01600104:
+class LegIdentification1ChoiceSetr01600104(ISO20022MessageElement):
     red_leg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -257,7 +258,7 @@ class LegIdentification1ChoiceSetr01600104:
 
 
 @dataclass
-class MessageIdentification1Setr01600104:
+class MessageIdentification1Setr01600104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -281,7 +282,7 @@ class MessageIdentification1Setr01600104:
 
 
 @dataclass
-class SubAccount6Setr01600104:
+class SubAccount6Setr01600104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -326,7 +327,7 @@ class SubAccount6Setr01600104:
 
 
 @dataclass
-class AdditionalAmount1ChoiceSetr01600104:
+class AdditionalAmount1ChoiceSetr01600104(ISO20022MessageElement):
     addtl_csh_in: Optional[ActiveOrHistoricCurrencyAndAmountSetr01600104] = field(
         default=None,
         metadata={
@@ -346,7 +347,7 @@ class AdditionalAmount1ChoiceSetr01600104:
 
 
 @dataclass
-class AlternateSecurityIdentification7Setr01600104:
+class AlternateSecurityIdentification7Setr01600104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -370,7 +371,7 @@ class AlternateSecurityIdentification7Setr01600104:
 
 
 @dataclass
-class CancelledReason12ChoiceSetr01600104:
+class CancelledReason12ChoiceSetr01600104(ISO20022MessageElement):
     cd: Optional[CancelledStatusReason2Code] = field(
         default=None,
         metadata={
@@ -398,7 +399,7 @@ class CancelledReason12ChoiceSetr01600104:
 
 
 @dataclass
-class ChargeType5ChoiceSetr01600104:
+class ChargeType5ChoiceSetr01600104(ISO20022MessageElement):
     cd: Optional[InvestmentFundFee1Code] = field(
         default=None,
         metadata={
@@ -418,7 +419,7 @@ class ChargeType5ChoiceSetr01600104:
 
 
 @dataclass
-class ConditionallyAcceptedStatusReason3ChoiceSetr01600104:
+class ConditionallyAcceptedStatusReason3ChoiceSetr01600104(ISO20022MessageElement):
     cd: Optional[ConditionallyAcceptedStatusReason2Code] = field(
         default=None,
         metadata={
@@ -438,7 +439,7 @@ class ConditionallyAcceptedStatusReason3ChoiceSetr01600104:
 
 
 @dataclass
-class ExpectedExecutionDetails2Setr01600104:
+class ExpectedExecutionDetails2Setr01600104(ISO20022MessageElement):
     xpctd_trad_dt_tm: Optional[DateAndDateTimeChoiceSetr01600104] = field(
         default=None,
         metadata={
@@ -458,7 +459,7 @@ class ExpectedExecutionDetails2Setr01600104:
 
 
 @dataclass
-class ExpectedExecutionDetails4Setr01600104:
+class ExpectedExecutionDetails4Setr01600104(ISO20022MessageElement):
     xpctd_trad_dt_tm: Optional[DateAndDateTimeChoiceSetr01600104] = field(
         default=None,
         metadata={
@@ -478,7 +479,7 @@ class ExpectedExecutionDetails4Setr01600104:
 
 
 @dataclass
-class InRepairStatusReason5ChoiceSetr01600104:
+class InRepairStatusReason5ChoiceSetr01600104(ISO20022MessageElement):
     cd: Optional[InRepairStatusReason1Code] = field(
         default=None,
         metadata={
@@ -498,7 +499,7 @@ class InRepairStatusReason5ChoiceSetr01600104:
 
 
 @dataclass
-class PartiallySettled21ChoiceSetr01600104:
+class PartiallySettled21ChoiceSetr01600104(ISO20022MessageElement):
     cd: Optional[SettledStatusReason2Code] = field(
         default=None,
         metadata={
@@ -518,7 +519,7 @@ class PartiallySettled21ChoiceSetr01600104:
 
 
 @dataclass
-class PostalAddress1Setr01600104:
+class PostalAddress1Setr01600104(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -601,7 +602,7 @@ class PostalAddress1Setr01600104:
 
 
 @dataclass
-class RejectedReason20ChoiceSetr01600104:
+class RejectedReason20ChoiceSetr01600104(ISO20022MessageElement):
     cd: Optional[RejectedStatusReason11Code] = field(
         default=None,
         metadata={
@@ -621,7 +622,7 @@ class RejectedReason20ChoiceSetr01600104:
 
 
 @dataclass
-class Series1Setr01600104:
+class Series1Setr01600104(ISO20022MessageElement):
     srs_dt: Optional[DateFormat42ChoiceSetr01600104] = field(
         default=None,
         metadata={
@@ -643,7 +644,7 @@ class Series1Setr01600104:
 
 
 @dataclass
-class SuspendedStatusReason5ChoiceSetr01600104:
+class SuspendedStatusReason5ChoiceSetr01600104(ISO20022MessageElement):
     cd: Optional[SuspendedStatusReason3Code] = field(
         default=None,
         metadata={
@@ -663,7 +664,7 @@ class SuspendedStatusReason5ChoiceSetr01600104:
 
 
 @dataclass
-class CancelledStatusReason16Setr01600104:
+class CancelledStatusReason16Setr01600104(ISO20022MessageElement):
     rsn: Optional[CancelledReason12ChoiceSetr01600104] = field(
         default=None,
         metadata={
@@ -685,7 +686,7 @@ class CancelledStatusReason16Setr01600104:
 
 
 @dataclass
-class ConditionallyAcceptedStatusReason3Setr01600104:
+class ConditionallyAcceptedStatusReason3Setr01600104(ISO20022MessageElement):
     rsn: Optional[ConditionallyAcceptedStatusReason3ChoiceSetr01600104] = field(
         default=None,
         metadata={
@@ -708,7 +709,7 @@ class ConditionallyAcceptedStatusReason3Setr01600104:
 
 
 @dataclass
-class Fee3Setr01600104:
+class Fee3Setr01600104(ISO20022MessageElement):
     tp: Optional[ChargeType5ChoiceSetr01600104] = field(
         default=None,
         metadata={
@@ -792,7 +793,7 @@ class Fee3Setr01600104:
 
 
 @dataclass
-class FundOrderData6Setr01600104:
+class FundOrderData6Setr01600104(ISO20022MessageElement):
     sttlm_amt: Optional[ActiveCurrencyAndAmountSetr01600104] = field(
         default=None,
         metadata={
@@ -838,7 +839,7 @@ class FundOrderData6Setr01600104:
 
 
 @dataclass
-class InRepairStatusReason4Setr01600104:
+class InRepairStatusReason4Setr01600104(ISO20022MessageElement):
     rsn: Optional[InRepairStatusReason5ChoiceSetr01600104] = field(
         default=None,
         metadata={
@@ -861,7 +862,7 @@ class InRepairStatusReason4Setr01600104:
 
 
 @dataclass
-class NameAndAddress5Setr01600104:
+class NameAndAddress5Setr01600104(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -884,7 +885,7 @@ class NameAndAddress5Setr01600104:
 
 
 @dataclass
-class PartiallySettledStatus10Setr01600104:
+class PartiallySettledStatus10Setr01600104(ISO20022MessageElement):
     rsn: Optional[PartiallySettled21ChoiceSetr01600104] = field(
         default=None,
         metadata={
@@ -907,7 +908,7 @@ class PartiallySettledStatus10Setr01600104:
 
 
 @dataclass
-class RejectedStatus9Setr01600104:
+class RejectedStatus9Setr01600104(ISO20022MessageElement):
     rsn: Optional[RejectedReason20ChoiceSetr01600104] = field(
         default=None,
         metadata={
@@ -929,7 +930,7 @@ class RejectedStatus9Setr01600104:
 
 
 @dataclass
-class SecurityIdentification25ChoiceSetr01600104:
+class SecurityIdentification25ChoiceSetr01600104(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -1063,7 +1064,7 @@ class SecurityIdentification25ChoiceSetr01600104:
 
 
 @dataclass
-class SuspendedStatusReason4Setr01600104:
+class SuspendedStatusReason4Setr01600104(ISO20022MessageElement):
     rsn: Optional[SuspendedStatusReason5ChoiceSetr01600104] = field(
         default=None,
         metadata={
@@ -1086,7 +1087,7 @@ class SuspendedStatusReason4Setr01600104:
 
 
 @dataclass
-class ConditionallyAcceptedStatus3ChoiceSetr01600104:
+class ConditionallyAcceptedStatus3ChoiceSetr01600104(ISO20022MessageElement):
     no_spcfd_rsn: Optional[NoReasonCode] = field(
         default=None,
         metadata={
@@ -1107,7 +1108,7 @@ class ConditionallyAcceptedStatus3ChoiceSetr01600104:
 
 
 @dataclass
-class FinancialInstrument57Setr01600104:
+class FinancialInstrument57Setr01600104(ISO20022MessageElement):
     id: Optional[SecurityIdentification25ChoiceSetr01600104] = field(
         default=None,
         metadata={
@@ -1194,7 +1195,7 @@ class FinancialInstrument57Setr01600104:
 
 
 @dataclass
-class HoldBackInformation3Setr01600104:
+class HoldBackInformation3Setr01600104(ISO20022MessageElement):
     tp: Optional[GateHoldBack1Code] = field(
         default=None,
         metadata={
@@ -1249,7 +1250,7 @@ class HoldBackInformation3Setr01600104:
 
 
 @dataclass
-class InRepairStatusReason4ChoiceSetr01600104:
+class InRepairStatusReason4ChoiceSetr01600104(ISO20022MessageElement):
     no_spcfd_rsn: Optional[NoReasonCode] = field(
         default=None,
         metadata={
@@ -1270,7 +1271,7 @@ class InRepairStatusReason4ChoiceSetr01600104:
 
 
 @dataclass
-class PartyIdentification90ChoiceSetr01600104:
+class PartyIdentification90ChoiceSetr01600104(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -1299,7 +1300,7 @@ class PartyIdentification90ChoiceSetr01600104:
 
 
 @dataclass
-class SuspendedStatusReason4ChoiceSetr01600104:
+class SuspendedStatusReason4ChoiceSetr01600104(ISO20022MessageElement):
     no_spcfd_rsn: Optional[NoReasonCode] = field(
         default=None,
         metadata={
@@ -1320,7 +1321,7 @@ class SuspendedStatusReason4ChoiceSetr01600104:
 
 
 @dataclass
-class OrderStatus3ChoiceSetr01600104:
+class OrderStatus3ChoiceSetr01600104(ISO20022MessageElement):
     sts: Optional[OrderStatus4Code] = field(
         default=None,
         metadata={
@@ -1373,68 +1374,7 @@ class OrderStatus3ChoiceSetr01600104:
 
 
 @dataclass
-class OrderStatus4ChoiceSetr01600104:
-    sts: Optional[OrderStatus4Code] = field(
-        default=None,
-        metadata={
-            "name": "Sts",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:setr.016.001.04",
-        },
-    )
-    canc: Optional[CancelledStatusReason16Setr01600104] = field(
-        default=None,
-        metadata={
-            "name": "Canc",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:setr.016.001.04",
-        },
-    )
-    condly_accptd: Optional[ConditionallyAcceptedStatus3ChoiceSetr01600104] = field(
-        default=None,
-        metadata={
-            "name": "CondlyAccptd",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:setr.016.001.04",
-        },
-    )
-    rjctd: list[RejectedStatus9Setr01600104] = field(
-        default_factory=list,
-        metadata={
-            "name": "Rjctd",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:setr.016.001.04",
-            "max_occurs": 10,
-        },
-    )
-    sspd: Optional[SuspendedStatusReason4ChoiceSetr01600104] = field(
-        default=None,
-        metadata={
-            "name": "Sspd",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:setr.016.001.04",
-        },
-    )
-    in_rpr: Optional[InRepairStatusReason4ChoiceSetr01600104] = field(
-        default=None,
-        metadata={
-            "name": "InRpr",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:setr.016.001.04",
-        },
-    )
-    prtly_sttld: Optional[PartiallySettledStatus10Setr01600104] = field(
-        default=None,
-        metadata={
-            "name": "PrtlySttld",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:setr.016.001.04",
-        },
-    )
-
-
-@dataclass
-class OrderStatus5ChoiceSetr01600104:
+class OrderStatus4ChoiceSetr01600104(ISO20022MessageElement):
     sts: Optional[OrderStatus4Code] = field(
         default=None,
         metadata={
@@ -1495,7 +1435,68 @@ class OrderStatus5ChoiceSetr01600104:
 
 
 @dataclass
-class PartyIdentification113Setr01600104:
+class OrderStatus5ChoiceSetr01600104(ISO20022MessageElement):
+    sts: Optional[OrderStatus4Code] = field(
+        default=None,
+        metadata={
+            "name": "Sts",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:setr.016.001.04",
+        },
+    )
+    canc: Optional[CancelledStatusReason16Setr01600104] = field(
+        default=None,
+        metadata={
+            "name": "Canc",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:setr.016.001.04",
+        },
+    )
+    condly_accptd: Optional[ConditionallyAcceptedStatus3ChoiceSetr01600104] = field(
+        default=None,
+        metadata={
+            "name": "CondlyAccptd",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:setr.016.001.04",
+        },
+    )
+    rjctd: list[RejectedStatus9Setr01600104] = field(
+        default_factory=list,
+        metadata={
+            "name": "Rjctd",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:setr.016.001.04",
+            "max_occurs": 10,
+        },
+    )
+    sspd: Optional[SuspendedStatusReason4ChoiceSetr01600104] = field(
+        default=None,
+        metadata={
+            "name": "Sspd",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:setr.016.001.04",
+        },
+    )
+    in_rpr: Optional[InRepairStatusReason4ChoiceSetr01600104] = field(
+        default=None,
+        metadata={
+            "name": "InRpr",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:setr.016.001.04",
+        },
+    )
+    prtly_sttld: Optional[PartiallySettledStatus10Setr01600104] = field(
+        default=None,
+        metadata={
+            "name": "PrtlySttld",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:setr.016.001.04",
+        },
+    )
+
+
+@dataclass
+class PartyIdentification113Setr01600104(ISO20022MessageElement):
     pty: Optional[PartyIdentification90ChoiceSetr01600104] = field(
         default=None,
         metadata={
@@ -1517,7 +1518,7 @@ class PartyIdentification113Setr01600104:
 
 
 @dataclass
-class AdditionalReference8Setr01600104:
+class AdditionalReference8Setr01600104(ISO20022MessageElement):
     ref: Optional[str] = field(
         default=None,
         metadata={
@@ -1550,7 +1551,7 @@ class AdditionalReference8Setr01600104:
 
 
 @dataclass
-class InvestmentAccount58Setr01600104:
+class InvestmentAccount58Setr01600104(ISO20022MessageElement):
     acct_id: Optional[str] = field(
         default=None,
         metadata={
@@ -1617,7 +1618,7 @@ class InvestmentAccount58Setr01600104:
 
 
 @dataclass
-class OrderStatusAndReason10Setr01600104:
+class OrderStatusAndReason10Setr01600104(ISO20022MessageElement):
     mstr_ref: Optional[str] = field(
         default=None,
         metadata={
@@ -1648,7 +1649,7 @@ class OrderStatusAndReason10Setr01600104:
 
 
 @dataclass
-class FundOrderData5Setr01600104:
+class FundOrderData5Setr01600104(ISO20022MessageElement):
     invstmt_acct_dtls: Optional[InvestmentAccount58Setr01600104] = field(
         default=None,
         metadata={
@@ -1730,7 +1731,7 @@ class FundOrderData5Setr01600104:
 
 
 @dataclass
-class References61ChoiceSetr01600104:
+class References61ChoiceSetr01600104(ISO20022MessageElement):
     rltd_ref: list[AdditionalReference8Setr01600104] = field(
         default_factory=list,
         metadata={
@@ -1752,7 +1753,7 @@ class References61ChoiceSetr01600104:
 
 
 @dataclass
-class SwitchLegReferences2Setr01600104:
+class SwitchLegReferences2Setr01600104(ISO20022MessageElement):
     leg_id: Optional[LegIdentification1ChoiceSetr01600104] = field(
         default=None,
         metadata={
@@ -1800,7 +1801,7 @@ class SwitchLegReferences2Setr01600104:
 
 
 @dataclass
-class IndividualOrderStatusAndReason7Setr01600104:
+class IndividualOrderStatusAndReason7Setr01600104(ISO20022MessageElement):
     mstr_ref: Optional[str] = field(
         default=None,
         metadata={
@@ -1905,7 +1906,7 @@ class IndividualOrderStatusAndReason7Setr01600104:
 
 
 @dataclass
-class SwitchOrderStatusAndReason2Setr01600104:
+class SwitchOrderStatusAndReason2Setr01600104(ISO20022MessageElement):
     mstr_ref: Optional[str] = field(
         default=None,
         metadata={
@@ -2001,7 +2002,7 @@ class SwitchOrderStatusAndReason2Setr01600104:
 
 
 @dataclass
-class Status24ChoiceSetr01600104:
+class Status24ChoiceSetr01600104(ISO20022MessageElement):
     ordr_dtls_rpt: Optional[OrderStatusAndReason10Setr01600104] = field(
         default=None,
         metadata={
@@ -2029,7 +2030,7 @@ class Status24ChoiceSetr01600104:
 
 
 @dataclass
-class OrderInstructionStatusReportV04Setr01600104:
+class OrderInstructionStatusReportV04Setr01600104(ISO20022MessageElement):
     msg_id: Optional[MessageIdentification1Setr01600104] = field(
         default=None,
         metadata={
@@ -2067,7 +2068,7 @@ class OrderInstructionStatusReportV04Setr01600104:
 
 
 @dataclass
-class Setr01600104:
+class Setr01600104(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:setr.016.001.04"
 

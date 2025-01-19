@@ -4,13 +4,14 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import ErrorHandling1Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:camt.017.001.05"
 
 
 @dataclass
-class CurrencySourceTarget1Camt01700105:
+class CurrencySourceTarget1Camt01700105(ISO20022MessageElement):
     src_ccy: Optional[str] = field(
         default=None,
         metadata={
@@ -34,7 +35,7 @@ class CurrencySourceTarget1Camt01700105:
 
 
 @dataclass
-class ExchangeRateOrPercentage1ChoiceCamt01700105:
+class ExchangeRateOrPercentage1ChoiceCamt01700105(ISO20022MessageElement):
     rate: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -58,7 +59,7 @@ class ExchangeRateOrPercentage1ChoiceCamt01700105:
 
 
 @dataclass
-class GenericIdentification1Camt01700105:
+class GenericIdentification1Camt01700105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -93,7 +94,7 @@ class GenericIdentification1Camt01700105:
 
 
 @dataclass
-class OriginalBusinessQuery1Camt01700105:
+class OriginalBusinessQuery1Camt01700105(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -126,7 +127,7 @@ class OriginalBusinessQuery1Camt01700105:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Camt01700105:
+class SupplementaryDataEnvelope1Camt01700105(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -137,7 +138,7 @@ class SupplementaryDataEnvelope1Camt01700105:
 
 
 @dataclass
-class CurrencyExchange20Camt01700105:
+class CurrencyExchange20Camt01700105(ISO20022MessageElement):
     xchg_rate: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -187,7 +188,7 @@ class CurrencyExchange20Camt01700105:
 
 
 @dataclass
-class ErrorHandling1ChoiceCamt01700105:
+class ErrorHandling1ChoiceCamt01700105(ISO20022MessageElement):
     cd: Optional[ErrorHandling1Code] = field(
         default=None,
         metadata={
@@ -210,7 +211,7 @@ class ErrorHandling1ChoiceCamt01700105:
 
 
 @dataclass
-class RequestType4ChoiceCamt01700105:
+class RequestType4ChoiceCamt01700105(ISO20022MessageElement):
     pmt_ctrl: Optional[str] = field(
         default=None,
         metadata={
@@ -242,7 +243,7 @@ class RequestType4ChoiceCamt01700105:
 
 
 @dataclass
-class SupplementaryData1Camt01700105:
+class SupplementaryData1Camt01700105(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -265,7 +266,7 @@ class SupplementaryData1Camt01700105:
 
 
 @dataclass
-class ErrorHandling3Camt01700105:
+class ErrorHandling3Camt01700105(ISO20022MessageElement):
     err: Optional[ErrorHandling1ChoiceCamt01700105] = field(
         default=None,
         metadata={
@@ -288,7 +289,7 @@ class ErrorHandling3Camt01700105:
 
 
 @dataclass
-class MessageHeader7Camt01700105:
+class MessageHeader7Camt01700105(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -337,7 +338,7 @@ class MessageHeader7Camt01700105:
 
 
 @dataclass
-class ExchangeRateReportOrError4ChoiceCamt01700105:
+class ExchangeRateReportOrError4ChoiceCamt01700105(ISO20022MessageElement):
     biz_err: list[ErrorHandling3Camt01700105] = field(
         default_factory=list,
         metadata={
@@ -357,7 +358,7 @@ class ExchangeRateReportOrError4ChoiceCamt01700105:
 
 
 @dataclass
-class CurrencyExchangeReport4Camt01700105:
+class CurrencyExchangeReport4Camt01700105(ISO20022MessageElement):
     ccy_ref: Optional[CurrencySourceTarget1Camt01700105] = field(
         default=None,
         metadata={
@@ -379,7 +380,7 @@ class CurrencyExchangeReport4Camt01700105:
 
 
 @dataclass
-class ExchangeRateReportOrError3ChoiceCamt01700105:
+class ExchangeRateReportOrError3ChoiceCamt01700105(ISO20022MessageElement):
     ccy_xchg_rpt: list[CurrencyExchangeReport4Camt01700105] = field(
         default_factory=list,
         metadata={
@@ -399,7 +400,7 @@ class ExchangeRateReportOrError3ChoiceCamt01700105:
 
 
 @dataclass
-class ReturnCurrencyExchangeRateV05Camt01700105:
+class ReturnCurrencyExchangeRateV05Camt01700105(ISO20022MessageElement):
     msg_hdr: Optional[MessageHeader7Camt01700105] = field(
         default=None,
         metadata={
@@ -429,7 +430,7 @@ class ReturnCurrencyExchangeRateV05Camt01700105:
 
 
 @dataclass
-class Camt01700105:
+class Camt01700105(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:camt.017.001.05"
 

@@ -3,6 +3,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.fxtr.enums import (
     TradeConfirmationStatus1Code,
     TradingModeType1Code,
@@ -16,7 +17,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:fxtr.038.001.01"
 
 
 @dataclass
-class AdditionalInformation5Fxtr03800101:
+class AdditionalInformation5Fxtr03800101(ISO20022MessageElement):
     inf: list[str] = field(
         default_factory=list,
         metadata={
@@ -31,7 +32,7 @@ class AdditionalInformation5Fxtr03800101:
 
 
 @dataclass
-class GenericIdentification1Fxtr03800101:
+class GenericIdentification1Fxtr03800101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -66,7 +67,7 @@ class GenericIdentification1Fxtr03800101:
 
 
 @dataclass
-class MarketIdentification1ChoiceFxtr03800101:
+class MarketIdentification1ChoiceFxtr03800101(ISO20022MessageElement):
     mkt_idr_cd: Optional[str] = field(
         default=None,
         metadata={
@@ -89,7 +90,7 @@ class MarketIdentification1ChoiceFxtr03800101:
 
 
 @dataclass
-class MessageIdentification1Fxtr03800101:
+class MessageIdentification1Fxtr03800101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -113,7 +114,7 @@ class MessageIdentification1Fxtr03800101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Fxtr03800101:
+class SupplementaryDataEnvelope1Fxtr03800101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -124,7 +125,7 @@ class SupplementaryDataEnvelope1Fxtr03800101:
 
 
 @dataclass
-class MarketType13ChoiceFxtr03800101:
+class MarketType13ChoiceFxtr03800101(ISO20022MessageElement):
     cd: Optional[MarketType8Code] = field(
         default=None,
         metadata={
@@ -144,7 +145,7 @@ class MarketType13ChoiceFxtr03800101:
 
 
 @dataclass
-class SupplementaryData1Fxtr03800101:
+class SupplementaryData1Fxtr03800101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -167,7 +168,7 @@ class SupplementaryData1Fxtr03800101:
 
 
 @dataclass
-class MarketIdentification88Fxtr03800101:
+class MarketIdentification88Fxtr03800101(ISO20022MessageElement):
     id: Optional[MarketIdentification1ChoiceFxtr03800101] = field(
         default=None,
         metadata={
@@ -188,7 +189,9 @@ class MarketIdentification88Fxtr03800101:
 
 
 @dataclass
-class ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01Fxtr03800101:
+class ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01Fxtr03800101(
+    ISO20022MessageElement
+):
     advc_ack_id: Optional[MessageIdentification1Fxtr03800101] = field(
         default=None,
         metadata={
@@ -281,7 +284,7 @@ class ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01Fxtr03800101
 
 
 @dataclass
-class Fxtr03800101:
+class Fxtr03800101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:fxtr.038.001.01"
 

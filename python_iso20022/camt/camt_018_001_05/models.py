@@ -3,6 +3,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.camt.camt_018_001_05.enums import SystemEventType2Code
 from python_iso20022.camt.enums import QueryType2Code
 
@@ -10,7 +11,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:camt.018.001.05"
 
 
 @dataclass
-class BusinessDayReturnCriteria2Camt01800105:
+class BusinessDayReturnCriteria2Camt01800105(ISO20022MessageElement):
     sys_dt_ind: Optional[bool] = field(
         default=None,
         metadata={
@@ -70,7 +71,7 @@ class BusinessDayReturnCriteria2Camt01800105:
 
 
 @dataclass
-class DateTimePeriod1Camt01800105:
+class DateTimePeriod1Camt01800105(ISO20022MessageElement):
     fr_dt_tm: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -92,7 +93,7 @@ class DateTimePeriod1Camt01800105:
 
 
 @dataclass
-class GenericIdentification1Camt01800105:
+class GenericIdentification1Camt01800105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -127,7 +128,7 @@ class GenericIdentification1Camt01800105:
 
 
 @dataclass
-class MarketInfrastructureIdentification1ChoiceCamt01800105:
+class MarketInfrastructureIdentification1ChoiceCamt01800105(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -151,7 +152,7 @@ class MarketInfrastructureIdentification1ChoiceCamt01800105:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Camt01800105:
+class SupplementaryDataEnvelope1Camt01800105(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -162,7 +163,7 @@ class SupplementaryDataEnvelope1Camt01800105:
 
 
 @dataclass
-class DateTimePeriod1ChoiceCamt01800105:
+class DateTimePeriod1ChoiceCamt01800105(ISO20022MessageElement):
     fr_dt_tm: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -190,7 +191,7 @@ class DateTimePeriod1ChoiceCamt01800105:
 
 
 @dataclass
-class RequestType4ChoiceCamt01800105:
+class RequestType4ChoiceCamt01800105(ISO20022MessageElement):
     pmt_ctrl: Optional[str] = field(
         default=None,
         metadata={
@@ -222,7 +223,7 @@ class RequestType4ChoiceCamt01800105:
 
 
 @dataclass
-class SupplementaryData1Camt01800105:
+class SupplementaryData1Camt01800105(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -245,7 +246,7 @@ class SupplementaryData1Camt01800105:
 
 
 @dataclass
-class SystemEventType2ChoiceCamt01800105:
+class SystemEventType2ChoiceCamt01800105(ISO20022MessageElement):
     cd: Optional[SystemEventType2Code] = field(
         default=None,
         metadata={
@@ -265,7 +266,7 @@ class SystemEventType2ChoiceCamt01800105:
 
 
 @dataclass
-class SystemIdentification2ChoiceCamt01800105:
+class SystemIdentification2ChoiceCamt01800105(ISO20022MessageElement):
     mkt_infrstrctr_id: Optional[
         MarketInfrastructureIdentification1ChoiceCamt01800105
     ] = field(
@@ -288,7 +289,7 @@ class SystemIdentification2ChoiceCamt01800105:
 
 
 @dataclass
-class BusinessDaySearchCriteria2Camt01800105:
+class BusinessDaySearchCriteria2Camt01800105(ISO20022MessageElement):
     sys_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -333,7 +334,7 @@ class BusinessDaySearchCriteria2Camt01800105:
 
 
 @dataclass
-class MessageHeader9Camt01800105:
+class MessageHeader9Camt01800105(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -364,7 +365,7 @@ class MessageHeader9Camt01800105:
 
 
 @dataclass
-class BusinessDayCriteria2Camt01800105:
+class BusinessDayCriteria2Camt01800105(ISO20022MessageElement):
     new_qry_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -394,7 +395,7 @@ class BusinessDayCriteria2Camt01800105:
 
 
 @dataclass
-class BusinessDayCriteria3ChoiceCamt01800105:
+class BusinessDayCriteria3ChoiceCamt01800105(ISO20022MessageElement):
     qry_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -416,7 +417,7 @@ class BusinessDayCriteria3ChoiceCamt01800105:
 
 
 @dataclass
-class BusinessDayQuery2Camt01800105:
+class BusinessDayQuery2Camt01800105(ISO20022MessageElement):
     qry_tp: Optional[QueryType2Code] = field(
         default=None,
         metadata={
@@ -436,7 +437,7 @@ class BusinessDayQuery2Camt01800105:
 
 
 @dataclass
-class GetBusinessDayInformationV05Camt01800105:
+class GetBusinessDayInformationV05Camt01800105(ISO20022MessageElement):
     msg_hdr: Optional[MessageHeader9Camt01800105] = field(
         default=None,
         metadata={
@@ -465,7 +466,7 @@ class GetBusinessDayInformationV05Camt01800105:
 
 
 @dataclass
-class Camt01800105:
+class Camt01800105(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:camt.018.001.05"
 

@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.catm.catm_004_001_05.enums import RejectReason2Code
 from python_iso20022.enums import NetworkType1Code, PartyType33Code
 
@@ -11,7 +12,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:catm.004.001.05"
 
 
 @dataclass
-class GeolocationGeographicCoordinates1Catm00400105:
+class GeolocationGeographicCoordinates1Catm00400105(ISO20022MessageElement):
     lat: Optional[str] = field(
         default=None,
         metadata={
@@ -37,7 +38,7 @@ class GeolocationGeographicCoordinates1Catm00400105:
 
 
 @dataclass
-class GeolocationUtmcoordinates1Catm00400105:
+class GeolocationUtmcoordinates1Catm00400105(ISO20022MessageElement):
     class Meta:
         name = "GeolocationUTMCoordinates1"
 
@@ -77,7 +78,7 @@ class GeolocationUtmcoordinates1Catm00400105:
 
 
 @dataclass
-class AcceptorRejection3Catm00400105:
+class AcceptorRejection3Catm00400105(ISO20022MessageElement):
     rjct_rsn: Optional[RejectReason2Code] = field(
         default=None,
         metadata={
@@ -111,7 +112,7 @@ class AcceptorRejection3Catm00400105:
 
 
 @dataclass
-class GenericIdentification176Catm00400105:
+class GenericIdentification176Catm00400105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -161,7 +162,7 @@ class GenericIdentification176Catm00400105:
 
 
 @dataclass
-class Geolocation1Catm00400105:
+class Geolocation1Catm00400105(ISO20022MessageElement):
     geogc_cordints: Optional[GeolocationGeographicCoordinates1Catm00400105] = field(
         default=None,
         metadata={
@@ -181,7 +182,7 @@ class Geolocation1Catm00400105:
 
 
 @dataclass
-class NetworkParameters9Catm00400105:
+class NetworkParameters9Catm00400105(ISO20022MessageElement):
     ntwk_tp: Optional[NetworkType1Code] = field(
         default=None,
         metadata={
@@ -205,7 +206,7 @@ class NetworkParameters9Catm00400105:
 
 
 @dataclass
-class NetworkParameters7Catm00400105:
+class NetworkParameters7Catm00400105(ISO20022MessageElement):
     adr: list[NetworkParameters9Catm00400105] = field(
         default_factory=list,
         metadata={
@@ -282,7 +283,7 @@ class NetworkParameters7Catm00400105:
 
 
 @dataclass
-class GenericIdentification177Catm00400105:
+class GenericIdentification177Catm00400105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -348,7 +349,7 @@ class GenericIdentification177Catm00400105:
 
 
 @dataclass
-class Traceability8Catm00400105:
+class Traceability8Catm00400105(ISO20022MessageElement):
     rlay_id: Optional[GenericIdentification177Catm00400105] = field(
         default=None,
         metadata={
@@ -399,7 +400,7 @@ class Traceability8Catm00400105:
 
 
 @dataclass
-class Tmsheader1Catm00400105:
+class Tmsheader1Catm00400105(ISO20022MessageElement):
     class Meta:
         name = "TMSHeader1"
 
@@ -471,7 +472,7 @@ class Tmsheader1Catm00400105:
 
 
 @dataclass
-class TerminalManagementRejectionV05Catm00400105:
+class TerminalManagementRejectionV05Catm00400105(ISO20022MessageElement):
     hdr: Optional[Tmsheader1Catm00400105] = field(
         default=None,
         metadata={
@@ -493,7 +494,7 @@ class TerminalManagementRejectionV05Catm00400105:
 
 
 @dataclass
-class Catm00400105:
+class Catm00400105(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:catm.004.001.05"
 

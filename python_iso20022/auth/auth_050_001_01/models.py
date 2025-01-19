@@ -3,13 +3,14 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import Modification1Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.050.001.01"
 
 
 @dataclass
-class Period2Auth05000101:
+class Period2Auth05000101(ISO20022MessageElement):
     fr_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -31,7 +32,7 @@ class Period2Auth05000101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth05000101:
+class SupplementaryDataEnvelope1Auth05000101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -42,7 +43,7 @@ class SupplementaryDataEnvelope1Auth05000101:
 
 
 @dataclass
-class Period4ChoiceAuth05000101:
+class Period4ChoiceAuth05000101(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -78,7 +79,7 @@ class Period4ChoiceAuth05000101:
 
 
 @dataclass
-class SupplementaryData1Auth05000101:
+class SupplementaryData1Auth05000101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -101,7 +102,7 @@ class SupplementaryData1Auth05000101:
 
 
 @dataclass
-class SecuritiesInstrumentClassification2Auth05000101:
+class SecuritiesInstrumentClassification2Auth05000101(ISO20022MessageElement):
     idr: Optional[str] = field(
         default=None,
         metadata={
@@ -140,7 +141,9 @@ class SecuritiesInstrumentClassification2Auth05000101:
 
 
 @dataclass
-class FinancialInstrumentReportingInstrumentClassificationReportV01Auth05000101:
+class FinancialInstrumentReportingInstrumentClassificationReportV01Auth05000101(
+    ISO20022MessageElement
+):
     instrm_clssfctn: list[SecuritiesInstrumentClassification2Auth05000101] = field(
         default_factory=list,
         metadata={
@@ -161,7 +164,7 @@ class FinancialInstrumentReportingInstrumentClassificationReportV01Auth05000101:
 
 
 @dataclass
-class Auth05000101:
+class Auth05000101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.050.001.01"
 

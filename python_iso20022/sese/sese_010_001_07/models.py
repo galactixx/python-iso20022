@@ -3,6 +3,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime, XmlPeriod
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import AddressType2Code, CancelledStatusReason1Code
 from python_iso20022.sese.sese_010_001_07.enums import (
     CancellationRejectedReason1Code,
@@ -13,7 +14,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:sese.010.001.07"
 
 
 @dataclass
-class Extension1Sese01000107:
+class Extension1Sese01000107(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -39,7 +40,7 @@ class Extension1Sese01000107:
 
 
 @dataclass
-class GenericIdentification1Sese01000107:
+class GenericIdentification1Sese01000107(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -74,7 +75,7 @@ class GenericIdentification1Sese01000107:
 
 
 @dataclass
-class GenericIdentification36Sese01000107:
+class GenericIdentification36Sese01000107(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -110,7 +111,7 @@ class GenericIdentification36Sese01000107:
 
 
 @dataclass
-class MarketPracticeVersion1Sese01000107:
+class MarketPracticeVersion1Sese01000107(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -143,7 +144,7 @@ class MarketPracticeVersion1Sese01000107:
 
 
 @dataclass
-class MessageIdentification1Sese01000107:
+class MessageIdentification1Sese01000107(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -167,7 +168,7 @@ class MessageIdentification1Sese01000107:
 
 
 @dataclass
-class TransferCancellationPendingStatus1Sese01000107:
+class TransferCancellationPendingStatus1Sese01000107(ISO20022MessageElement):
     rsn: Optional[str] = field(
         default=None,
         metadata={
@@ -181,7 +182,7 @@ class TransferCancellationPendingStatus1Sese01000107:
 
 
 @dataclass
-class CancellationCompleteReason1ChoiceSese01000107:
+class CancellationCompleteReason1ChoiceSese01000107(ISO20022MessageElement):
     cd: Optional[CancelledStatusReason1Code] = field(
         default=None,
         metadata={
@@ -201,7 +202,7 @@ class CancellationCompleteReason1ChoiceSese01000107:
 
 
 @dataclass
-class PostalAddress1Sese01000107:
+class PostalAddress1Sese01000107(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -284,7 +285,7 @@ class PostalAddress1Sese01000107:
 
 
 @dataclass
-class RejectedReason17ChoiceSese01000107:
+class RejectedReason17ChoiceSese01000107(ISO20022MessageElement):
     cd: Optional[CancellationRejectedReason1Code] = field(
         default=None,
         metadata={
@@ -304,7 +305,7 @@ class RejectedReason17ChoiceSese01000107:
 
 
 @dataclass
-class TransferCancellationStatus3Sese01000107:
+class TransferCancellationStatus3Sese01000107(ISO20022MessageElement):
     sts: Optional[CancellationStatus5Code] = field(
         default=None,
         metadata={
@@ -327,7 +328,7 @@ class TransferCancellationStatus3Sese01000107:
 
 
 @dataclass
-class CancelledCompleteReason1Sese01000107:
+class CancelledCompleteReason1Sese01000107(ISO20022MessageElement):
     rsn: Optional[CancellationCompleteReason1ChoiceSese01000107] = field(
         default=None,
         metadata={
@@ -350,7 +351,7 @@ class CancelledCompleteReason1Sese01000107:
 
 
 @dataclass
-class NameAndAddress5Sese01000107:
+class NameAndAddress5Sese01000107(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -373,7 +374,7 @@ class NameAndAddress5Sese01000107:
 
 
 @dataclass
-class RejectionReason33Sese01000107:
+class RejectionReason33Sese01000107(ISO20022MessageElement):
     rsn: Optional[RejectedReason17ChoiceSese01000107] = field(
         default=None,
         metadata={
@@ -396,7 +397,7 @@ class RejectionReason33Sese01000107:
 
 
 @dataclass
-class PartyIdentification125ChoiceSese01000107:
+class PartyIdentification125ChoiceSese01000107(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -425,7 +426,7 @@ class PartyIdentification125ChoiceSese01000107:
 
 
 @dataclass
-class Status31ChoiceSese01000107:
+class Status31ChoiceSese01000107(ISO20022MessageElement):
     sts: Optional[TransferCancellationStatus3Sese01000107] = field(
         default=None,
         metadata={
@@ -461,7 +462,7 @@ class Status31ChoiceSese01000107:
 
 
 @dataclass
-class PartyIdentification139Sese01000107:
+class PartyIdentification139Sese01000107(ISO20022MessageElement):
     pty: Optional[PartyIdentification125ChoiceSese01000107] = field(
         default=None,
         metadata={
@@ -483,7 +484,7 @@ class PartyIdentification139Sese01000107:
 
 
 @dataclass
-class AdditionalReference10Sese01000107:
+class AdditionalReference10Sese01000107(ISO20022MessageElement):
     ref: Optional[str] = field(
         default=None,
         metadata={
@@ -516,7 +517,7 @@ class AdditionalReference10Sese01000107:
 
 
 @dataclass
-class CancellationStatusAndReason5Sese01000107:
+class CancellationStatusAndReason5Sese01000107(ISO20022MessageElement):
     mstr_ref: Optional[str] = field(
         default=None,
         metadata={
@@ -576,7 +577,7 @@ class CancellationStatusAndReason5Sese01000107:
 
 
 @dataclass
-class References64ChoiceSese01000107:
+class References64ChoiceSese01000107(ISO20022MessageElement):
     rltd_ref: list[AdditionalReference10Sese01000107] = field(
         default_factory=list,
         metadata={
@@ -598,7 +599,7 @@ class References64ChoiceSese01000107:
 
 
 @dataclass
-class TransferCancellationStatusReportV07Sese01000107:
+class TransferCancellationStatusReportV07Sese01000107(ISO20022MessageElement):
     msg_id: Optional[MessageIdentification1Sese01000107] = field(
         default=None,
         metadata={
@@ -652,7 +653,7 @@ class TransferCancellationStatusReportV07Sese01000107:
 
 
 @dataclass
-class Sese01000107:
+class Sese01000107(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:sese.010.001.07"
 

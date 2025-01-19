@@ -5,12 +5,13 @@ from xsdata.models.datatype import XmlDateTime
 
 from python_iso20022.auth.auth_028_001_01.enums import StatisticalReportingStatus2Code
 from python_iso20022.auth.enums import StatisticalReportingStatus1Code
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.028.001.01"
 
 
 @dataclass
-class DateTimePeriod1Auth02800101:
+class DateTimePeriod1Auth02800101(ISO20022MessageElement):
     fr_dt_tm: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -32,7 +33,7 @@ class DateTimePeriod1Auth02800101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth02800101:
+class SupplementaryDataEnvelope1Auth02800101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -43,7 +44,7 @@ class SupplementaryDataEnvelope1Auth02800101:
 
 
 @dataclass
-class ValidationRuleSchemeName1ChoiceAuth02800101:
+class ValidationRuleSchemeName1ChoiceAuth02800101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -67,7 +68,7 @@ class ValidationRuleSchemeName1ChoiceAuth02800101:
 
 
 @dataclass
-class GenericValidationRuleIdentification1Auth02800101:
+class GenericValidationRuleIdentification1Auth02800101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -110,7 +111,7 @@ class GenericValidationRuleIdentification1Auth02800101:
 
 
 @dataclass
-class SupplementaryData1Auth02800101:
+class SupplementaryData1Auth02800101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -133,7 +134,7 @@ class SupplementaryData1Auth02800101:
 
 
 @dataclass
-class MoneyMarketStatusReportHeader1Auth02800101:
+class MoneyMarketStatusReportHeader1Auth02800101(ISO20022MessageElement):
     rptg_agt: Optional[str] = field(
         default=None,
         metadata={
@@ -173,7 +174,7 @@ class MoneyMarketStatusReportHeader1Auth02800101:
 
 
 @dataclass
-class MoneyMarketTransactionStatus2Auth02800101:
+class MoneyMarketTransactionStatus2Auth02800101(ISO20022MessageElement):
     unq_tx_idr: Optional[str] = field(
         default=None,
         metadata={
@@ -232,7 +233,7 @@ class MoneyMarketTransactionStatus2Auth02800101:
 
 
 @dataclass
-class MoneyMarketStatisticalReportStatusAdviceV01Auth02800101:
+class MoneyMarketStatisticalReportStatusAdviceV01Auth02800101(ISO20022MessageElement):
     sts_rpt_hdr: Optional[MoneyMarketStatusReportHeader1Auth02800101] = field(
         default=None,
         metadata={
@@ -261,7 +262,7 @@ class MoneyMarketStatisticalReportStatusAdviceV01Auth02800101:
 
 
 @dataclass
-class Auth02800101:
+class Auth02800101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.028.001.01"
 

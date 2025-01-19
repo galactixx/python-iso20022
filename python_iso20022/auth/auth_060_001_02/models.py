@@ -2,11 +2,13 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
+
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.060.001.02"
 
 
 @dataclass
-class ActiveCurrencyAndAmountAuth06000102:
+class ActiveCurrencyAndAmountAuth06000102(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -28,7 +30,7 @@ class ActiveCurrencyAndAmountAuth06000102:
 
 
 @dataclass
-class AmountAndDirection86Auth06000102:
+class AmountAndDirection86Auth06000102(ISO20022MessageElement):
     amt: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -53,7 +55,7 @@ class AmountAndDirection86Auth06000102:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth06000102:
+class SupplementaryDataEnvelope1Auth06000102(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -64,7 +66,7 @@ class SupplementaryDataEnvelope1Auth06000102:
 
 
 @dataclass
-class AmountAndDirection102Auth06000102:
+class AmountAndDirection102Auth06000102(ISO20022MessageElement):
     amt: Optional[ActiveCurrencyAndAmountAuth06000102] = field(
         default=None,
         metadata={
@@ -86,7 +88,7 @@ class AmountAndDirection102Auth06000102:
 
 
 @dataclass
-class PaymentAccount4Auth06000102:
+class PaymentAccount4Auth06000102(ISO20022MessageElement):
     ccy: Optional[str] = field(
         default=None,
         metadata={
@@ -143,7 +145,7 @@ class PaymentAccount4Auth06000102:
 
 
 @dataclass
-class SupplementaryData1Auth06000102:
+class SupplementaryData1Auth06000102(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -166,7 +168,7 @@ class SupplementaryData1Auth06000102:
 
 
 @dataclass
-class Flows1Auth06000102:
+class Flows1Auth06000102(ISO20022MessageElement):
     pmt_bk_flows: Optional[AmountAndDirection102Auth06000102] = field(
         default=None,
         metadata={
@@ -188,7 +190,7 @@ class Flows1Auth06000102:
 
 
 @dataclass
-class SettlementAgent2Auth06000102:
+class SettlementAgent2Auth06000102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -211,7 +213,7 @@ class SettlementAgent2Auth06000102:
 
 
 @dataclass
-class ConcentrationAccount1Auth06000102:
+class ConcentrationAccount1Auth06000102(ISO20022MessageElement):
     in_flow: Optional[Flows1Auth06000102] = field(
         default=None,
         metadata={
@@ -270,7 +272,7 @@ class ConcentrationAccount1Auth06000102:
 
 
 @dataclass
-class ConcentrationAgent1Auth06000102:
+class ConcentrationAgent1Auth06000102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -293,7 +295,7 @@ class ConcentrationAgent1Auth06000102:
 
 
 @dataclass
-class CcpdailyCashFlowsReportV02Auth06000102:
+class CcpdailyCashFlowsReportV02Auth06000102(ISO20022MessageElement):
     class Meta:
         name = "CCPDailyCashFlowsReportV02"
 
@@ -326,7 +328,7 @@ class CcpdailyCashFlowsReportV02Auth06000102:
 
 
 @dataclass
-class Auth06000102:
+class Auth06000102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.060.001.02"
 

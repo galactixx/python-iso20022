@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.camt.camt_062_001_03.enums import Entry2Code
 from python_iso20022.enums import AddressType2Code
 
@@ -11,7 +12,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:camt.062.001.03"
 
 
 @dataclass
-class ActiveCurrencyAndAmountCamt06200103:
+class ActiveCurrencyAndAmountCamt06200103(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -33,7 +34,7 @@ class ActiveCurrencyAndAmountCamt06200103:
 
 
 @dataclass
-class AgreedRate2Camt06200103:
+class AgreedRate2Camt06200103(ISO20022MessageElement):
     xchg_rate: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -68,7 +69,7 @@ class AgreedRate2Camt06200103:
 
 
 @dataclass
-class ClearingSystemIdentification2ChoiceCamt06200103:
+class ClearingSystemIdentification2ChoiceCamt06200103(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -92,7 +93,7 @@ class ClearingSystemIdentification2ChoiceCamt06200103:
 
 
 @dataclass
-class PartyIdentification44Camt06200103:
+class PartyIdentification44Camt06200103(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -117,7 +118,7 @@ class PartyIdentification44Camt06200103:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Camt06200103:
+class SupplementaryDataEnvelope1Camt06200103(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -128,7 +129,7 @@ class SupplementaryDataEnvelope1Camt06200103:
 
 
 @dataclass
-class BalanceStatus2Camt06200103:
+class BalanceStatus2Camt06200103(ISO20022MessageElement):
     bal: Optional[ActiveCurrencyAndAmountCamt06200103] = field(
         default=None,
         metadata={
@@ -141,7 +142,7 @@ class BalanceStatus2Camt06200103:
 
 
 @dataclass
-class CurrencyFactors1Camt06200103:
+class CurrencyFactors1Camt06200103(ISO20022MessageElement):
     ccy: Optional[str] = field(
         default=None,
         metadata={
@@ -198,7 +199,7 @@ class CurrencyFactors1Camt06200103:
 
 
 @dataclass
-class PartyIdentification59Camt06200103:
+class PartyIdentification59Camt06200103(ISO20022MessageElement):
     pty_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -257,7 +258,7 @@ class PartyIdentification59Camt06200103:
 
 
 @dataclass
-class PayInScheduleItems1Camt06200103:
+class PayInScheduleItems1Camt06200103(ISO20022MessageElement):
     amt: Optional[ActiveCurrencyAndAmountCamt06200103] = field(
         default=None,
         metadata={
@@ -279,7 +280,7 @@ class PayInScheduleItems1Camt06200103:
 
 
 @dataclass
-class PostalAddress1Camt06200103:
+class PostalAddress1Camt06200103(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -362,7 +363,7 @@ class PostalAddress1Camt06200103:
 
 
 @dataclass
-class ReportData4Camt06200103:
+class ReportData4Camt06200103(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -423,7 +424,7 @@ class ReportData4Camt06200103:
 
 
 @dataclass
-class SupplementaryData1Camt06200103:
+class SupplementaryData1Camt06200103(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -446,7 +447,7 @@ class SupplementaryData1Camt06200103:
 
 
 @dataclass
-class NameAndAddress8Camt06200103:
+class NameAndAddress8Camt06200103(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -480,7 +481,7 @@ class NameAndAddress8Camt06200103:
 
 
 @dataclass
-class PayInFactors1Camt06200103:
+class PayInFactors1Camt06200103(ISO20022MessageElement):
     aggt_shrt_pos_lmt: Optional[ActiveCurrencyAndAmountCamt06200103] = field(
         default=None,
         metadata={
@@ -502,7 +503,7 @@ class PayInFactors1Camt06200103:
 
 
 @dataclass
-class PartyIdentification73ChoiceCamt06200103:
+class PartyIdentification73ChoiceCamt06200103(ISO20022MessageElement):
     nm_and_adr: Optional[NameAndAddress8Camt06200103] = field(
         default=None,
         metadata={
@@ -530,7 +531,7 @@ class PartyIdentification73ChoiceCamt06200103:
 
 
 @dataclass
-class PayInScheduleV03Camt06200103:
+class PayInScheduleV03Camt06200103(ISO20022MessageElement):
     pty_id: Optional[PartyIdentification73ChoiceCamt06200103] = field(
         default=None,
         metadata={
@@ -584,7 +585,7 @@ class PayInScheduleV03Camt06200103:
 
 
 @dataclass
-class Camt06200103:
+class Camt06200103(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:camt.062.001.03"
 

@@ -3,13 +3,14 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import AddressType2Code, BalanceCounterparty1Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:admi.005.001.02"
 
 
 @dataclass
-class AccountSchemeName1ChoiceAdmi00500102:
+class AccountSchemeName1ChoiceAdmi00500102(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -33,7 +34,7 @@ class AccountSchemeName1ChoiceAdmi00500102:
 
 
 @dataclass
-class BalanceType11ChoiceAdmi00500102:
+class BalanceType11ChoiceAdmi00500102(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -57,7 +58,7 @@ class BalanceType11ChoiceAdmi00500102:
 
 
 @dataclass
-class ClearingSystemIdentification2ChoiceAdmi00500102:
+class ClearingSystemIdentification2ChoiceAdmi00500102(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -81,7 +82,7 @@ class ClearingSystemIdentification2ChoiceAdmi00500102:
 
 
 @dataclass
-class DatePeriod2Admi00500102:
+class DatePeriod2Admi00500102(ISO20022MessageElement):
     fr_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -103,7 +104,7 @@ class DatePeriod2Admi00500102:
 
 
 @dataclass
-class DateTimePeriod1Admi00500102:
+class DateTimePeriod1Admi00500102(ISO20022MessageElement):
     fr_dt_tm: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -125,7 +126,7 @@ class DateTimePeriod1Admi00500102:
 
 
 @dataclass
-class EventType1ChoiceAdmi00500102:
+class EventType1ChoiceAdmi00500102(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -149,7 +150,7 @@ class EventType1ChoiceAdmi00500102:
 
 
 @dataclass
-class FinancialIdentificationSchemeName1ChoiceAdmi00500102:
+class FinancialIdentificationSchemeName1ChoiceAdmi00500102(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -173,7 +174,7 @@ class FinancialIdentificationSchemeName1ChoiceAdmi00500102:
 
 
 @dataclass
-class GenericIdentification1Admi00500102:
+class GenericIdentification1Admi00500102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -208,7 +209,7 @@ class GenericIdentification1Admi00500102:
 
 
 @dataclass
-class GenericIdentification30Admi00500102:
+class GenericIdentification30Admi00500102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -243,7 +244,7 @@ class GenericIdentification30Admi00500102:
 
 
 @dataclass
-class GenericIdentification36Admi00500102:
+class GenericIdentification36Admi00500102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -279,7 +280,7 @@ class GenericIdentification36Admi00500102:
 
 
 @dataclass
-class OriginalBusinessQuery1Admi00500102:
+class OriginalBusinessQuery1Admi00500102(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -312,7 +313,7 @@ class OriginalBusinessQuery1Admi00500102:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Admi00500102:
+class SupplementaryDataEnvelope1Admi00500102(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -323,7 +324,7 @@ class SupplementaryDataEnvelope1Admi00500102:
 
 
 @dataclass
-class AddressType3ChoiceAdmi00500102:
+class AddressType3ChoiceAdmi00500102(ISO20022MessageElement):
     cd: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -343,7 +344,7 @@ class AddressType3ChoiceAdmi00500102:
 
 
 @dataclass
-class ClearingSystemMemberIdentification2Admi00500102:
+class ClearingSystemMemberIdentification2Admi00500102(ISO20022MessageElement):
     clr_sys_id: Optional[ClearingSystemIdentification2ChoiceAdmi00500102] = field(
         default=None,
         metadata={
@@ -366,7 +367,7 @@ class ClearingSystemMemberIdentification2Admi00500102:
 
 
 @dataclass
-class DatePeriodSearch1ChoiceAdmi00500102:
+class DatePeriodSearch1ChoiceAdmi00500102(ISO20022MessageElement):
     fr_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -410,7 +411,7 @@ class DatePeriodSearch1ChoiceAdmi00500102:
 
 
 @dataclass
-class DateTimePeriod1ChoiceAdmi00500102:
+class DateTimePeriod1ChoiceAdmi00500102(ISO20022MessageElement):
     fr_dt_tm: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -438,7 +439,7 @@ class DateTimePeriod1ChoiceAdmi00500102:
 
 
 @dataclass
-class DateTimeSearch2ChoiceAdmi00500102:
+class DateTimeSearch2ChoiceAdmi00500102(ISO20022MessageElement):
     fr_dt_tm: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -482,7 +483,7 @@ class DateTimeSearch2ChoiceAdmi00500102:
 
 
 @dataclass
-class GenericAccountIdentification1Admi00500102:
+class GenericAccountIdentification1Admi00500102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -515,7 +516,7 @@ class GenericAccountIdentification1Admi00500102:
 
 
 @dataclass
-class GenericFinancialIdentification1Admi00500102:
+class GenericFinancialIdentification1Admi00500102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -548,7 +549,7 @@ class GenericFinancialIdentification1Admi00500102:
 
 
 @dataclass
-class PostalAddress1Admi00500102:
+class PostalAddress1Admi00500102(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -631,7 +632,7 @@ class PostalAddress1Admi00500102:
 
 
 @dataclass
-class RequestType4ChoiceAdmi00500102:
+class RequestType4ChoiceAdmi00500102(ISO20022MessageElement):
     pmt_ctrl: Optional[str] = field(
         default=None,
         metadata={
@@ -663,7 +664,7 @@ class RequestType4ChoiceAdmi00500102:
 
 
 @dataclass
-class SupplementaryData1Admi00500102:
+class SupplementaryData1Admi00500102(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -686,7 +687,7 @@ class SupplementaryData1Admi00500102:
 
 
 @dataclass
-class AccountIdentification4ChoiceAdmi00500102:
+class AccountIdentification4ChoiceAdmi00500102(ISO20022MessageElement):
     iban: Optional[str] = field(
         default=None,
         metadata={
@@ -707,7 +708,7 @@ class AccountIdentification4ChoiceAdmi00500102:
 
 
 @dataclass
-class DateAndDateTimeSearch4ChoiceAdmi00500102:
+class DateAndDateTimeSearch4ChoiceAdmi00500102(ISO20022MessageElement):
     dt_tm: Optional[DateTimeSearch2ChoiceAdmi00500102] = field(
         default=None,
         metadata={
@@ -727,7 +728,7 @@ class DateAndDateTimeSearch4ChoiceAdmi00500102:
 
 
 @dataclass
-class MessageHeader7Admi00500102:
+class MessageHeader7Admi00500102(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -776,7 +777,7 @@ class MessageHeader7Admi00500102:
 
 
 @dataclass
-class NameAndAddress5Admi00500102:
+class NameAndAddress5Admi00500102(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -799,7 +800,7 @@ class NameAndAddress5Admi00500102:
 
 
 @dataclass
-class PostalAddress27Admi00500102:
+class PostalAddress27Admi00500102(ISO20022MessageElement):
     adr_tp: Optional[AddressType3ChoiceAdmi00500102] = field(
         default=None,
         metadata={
@@ -981,7 +982,7 @@ class PostalAddress27Admi00500102:
 
 
 @dataclass
-class AccountIdentificationSearchCriteria2ChoiceAdmi00500102:
+class AccountIdentificationSearchCriteria2ChoiceAdmi00500102(ISO20022MessageElement):
     eq: Optional[AccountIdentification4ChoiceAdmi00500102] = field(
         default=None,
         metadata={
@@ -1013,7 +1014,7 @@ class AccountIdentificationSearchCriteria2ChoiceAdmi00500102:
 
 
 @dataclass
-class BranchData5Admi00500102:
+class BranchData5Admi00500102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1054,7 +1055,7 @@ class BranchData5Admi00500102:
 
 
 @dataclass
-class FinancialInstitutionIdentification23Admi00500102:
+class FinancialInstitutionIdentification23Admi00500102(ISO20022MessageElement):
     bicfi: Optional[str] = field(
         default=None,
         metadata={
@@ -1110,7 +1111,7 @@ class FinancialInstitutionIdentification23Admi00500102:
 
 
 @dataclass
-class PartyIdentification120ChoiceAdmi00500102:
+class PartyIdentification120ChoiceAdmi00500102(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -1139,7 +1140,7 @@ class PartyIdentification120ChoiceAdmi00500102:
 
 
 @dataclass
-class BranchAndFinancialInstitutionIdentification8Admi00500102:
+class BranchAndFinancialInstitutionIdentification8Admi00500102(ISO20022MessageElement):
     fin_instn_id: Optional[FinancialInstitutionIdentification23Admi00500102] = field(
         default=None,
         metadata={
@@ -1160,7 +1161,7 @@ class BranchAndFinancialInstitutionIdentification8Admi00500102:
 
 
 @dataclass
-class PartyIdentification136Admi00500102:
+class PartyIdentification136Admi00500102(ISO20022MessageElement):
     id: Optional[PartyIdentification120ChoiceAdmi00500102] = field(
         default=None,
         metadata={
@@ -1182,7 +1183,7 @@ class PartyIdentification136Admi00500102:
 
 
 @dataclass
-class CashBalance14Admi00500102:
+class CashBalance14Admi00500102(ISO20022MessageElement):
     tp: list[BalanceType11ChoiceAdmi00500102] = field(
         default_factory=list,
         metadata={
@@ -1227,7 +1228,7 @@ class CashBalance14Admi00500102:
 
 
 @dataclass
-class ReportQuerySearchCriteria3Admi00500102:
+class ReportQuerySearchCriteria3Admi00500102(ISO20022MessageElement):
     acct_id: list[AccountIdentificationSearchCriteria2ChoiceAdmi00500102] = field(
         default_factory=list,
         metadata={
@@ -1309,7 +1310,7 @@ class ReportQuerySearchCriteria3Admi00500102:
 
 
 @dataclass
-class ReportQueryCriteria3Admi00500102:
+class ReportQueryCriteria3Admi00500102(ISO20022MessageElement):
     new_qry_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1332,7 +1333,7 @@ class ReportQueryCriteria3Admi00500102:
 
 
 @dataclass
-class ReportQueryRequestV02Admi00500102:
+class ReportQueryRequestV02Admi00500102(ISO20022MessageElement):
     msg_hdr: Optional[MessageHeader7Admi00500102] = field(
         default=None,
         metadata={
@@ -1361,7 +1362,7 @@ class ReportQueryRequestV02Admi00500102:
 
 
 @dataclass
-class Admi00500102:
+class Admi00500102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:admi.005.001.02"
 

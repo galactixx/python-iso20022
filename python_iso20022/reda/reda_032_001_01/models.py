@@ -3,11 +3,13 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
+
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:reda.032.001.01"
 
 
 @dataclass
-class GenericIdentification30Reda03200101:
+class GenericIdentification30Reda03200101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -42,7 +44,7 @@ class GenericIdentification30Reda03200101:
 
 
 @dataclass
-class MessageHeader1Reda03200101:
+class MessageHeader1Reda03200101(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -65,7 +67,7 @@ class MessageHeader1Reda03200101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Reda03200101:
+class SupplementaryDataEnvelope1Reda03200101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -76,7 +78,7 @@ class SupplementaryDataEnvelope1Reda03200101:
 
 
 @dataclass
-class SecuritiesAccount19Reda03200101:
+class SecuritiesAccount19Reda03200101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -109,7 +111,7 @@ class SecuritiesAccount19Reda03200101:
 
 
 @dataclass
-class SupplementaryData1Reda03200101:
+class SupplementaryData1Reda03200101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -132,7 +134,7 @@ class SupplementaryData1Reda03200101:
 
 
 @dataclass
-class SecuritiesAccountDeletionRequestV01Reda03200101:
+class SecuritiesAccountDeletionRequestV01Reda03200101(ISO20022MessageElement):
     msg_hdr: Optional[MessageHeader1Reda03200101] = field(
         default=None,
         metadata={
@@ -161,7 +163,7 @@ class SecuritiesAccountDeletionRequestV01Reda03200101:
 
 
 @dataclass
-class Reda03200101:
+class Reda03200101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:reda.032.001.01"
 

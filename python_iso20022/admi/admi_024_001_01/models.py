@@ -3,6 +3,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     AddressType2Code,
     InvestigationLocationMethod1Code,
@@ -14,7 +15,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:admi.024.001.01"
 
 
 @dataclass
-class ClearingSystemIdentification2ChoiceAdmi02400101:
+class ClearingSystemIdentification2ChoiceAdmi02400101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -38,7 +39,7 @@ class ClearingSystemIdentification2ChoiceAdmi02400101:
 
 
 @dataclass
-class DateAndDateTime2ChoiceAdmi02400101:
+class DateAndDateTime2ChoiceAdmi02400101(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -58,7 +59,7 @@ class DateAndDateTime2ChoiceAdmi02400101:
 
 
 @dataclass
-class DateAndPlaceOfBirth1Admi02400101:
+class DateAndPlaceOfBirth1Admi02400101(ISO20022MessageElement):
     birth_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -102,7 +103,7 @@ class DateAndPlaceOfBirth1Admi02400101:
 
 
 @dataclass
-class FinancialIdentificationSchemeName1ChoiceAdmi02400101:
+class FinancialIdentificationSchemeName1ChoiceAdmi02400101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -126,7 +127,7 @@ class FinancialIdentificationSchemeName1ChoiceAdmi02400101:
 
 
 @dataclass
-class GenericIdentification1Admi02400101:
+class GenericIdentification1Admi02400101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -161,7 +162,7 @@ class GenericIdentification1Admi02400101:
 
 
 @dataclass
-class GenericIdentification30Admi02400101:
+class GenericIdentification30Admi02400101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -196,7 +197,7 @@ class GenericIdentification30Admi02400101:
 
 
 @dataclass
-class NotificationSubType1ChoiceAdmi02400101:
+class NotificationSubType1ChoiceAdmi02400101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -218,31 +219,7 @@ class NotificationSubType1ChoiceAdmi02400101:
 
 
 @dataclass
-class NotificationType1ChoiceAdmi02400101:
-    cd: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Cd",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:admi.024.001.01",
-            "min_length": 1,
-            "max_length": 4,
-        },
-    )
-    prtry: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Prtry",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:admi.024.001.01",
-            "min_length": 1,
-            "max_length": 35,
-        },
-    )
-
-
-@dataclass
-class OrganisationIdentificationSchemeName1ChoiceAdmi02400101:
+class NotificationType1ChoiceAdmi02400101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -266,7 +243,31 @@ class OrganisationIdentificationSchemeName1ChoiceAdmi02400101:
 
 
 @dataclass
-class OtherContact1Admi02400101:
+class OrganisationIdentificationSchemeName1ChoiceAdmi02400101(ISO20022MessageElement):
+    cd: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Cd",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:admi.024.001.01",
+            "min_length": 1,
+            "max_length": 4,
+        },
+    )
+    prtry: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Prtry",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:admi.024.001.01",
+            "min_length": 1,
+            "max_length": 35,
+        },
+    )
+
+
+@dataclass
+class OtherContact1Admi02400101(ISO20022MessageElement):
     chanl_tp: Optional[str] = field(
         default=None,
         metadata={
@@ -291,7 +292,7 @@ class OtherContact1Admi02400101:
 
 
 @dataclass
-class PersonIdentificationSchemeName1ChoiceAdmi02400101:
+class PersonIdentificationSchemeName1ChoiceAdmi02400101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -315,7 +316,7 @@ class PersonIdentificationSchemeName1ChoiceAdmi02400101:
 
 
 @dataclass
-class SkipPayloadAdmi02400101:
+class SkipPayloadAdmi02400101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -327,7 +328,7 @@ class SkipPayloadAdmi02400101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Admi02400101:
+class SupplementaryDataEnvelope1Admi02400101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -338,7 +339,7 @@ class SupplementaryDataEnvelope1Admi02400101:
 
 
 @dataclass
-class AddressType3ChoiceAdmi02400101:
+class AddressType3ChoiceAdmi02400101(ISO20022MessageElement):
     cd: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -358,7 +359,7 @@ class AddressType3ChoiceAdmi02400101:
 
 
 @dataclass
-class ClearingSystemMemberIdentification2Admi02400101:
+class ClearingSystemMemberIdentification2Admi02400101(ISO20022MessageElement):
     clr_sys_id: Optional[ClearingSystemIdentification2ChoiceAdmi02400101] = field(
         default=None,
         metadata={
@@ -381,7 +382,7 @@ class ClearingSystemMemberIdentification2Admi02400101:
 
 
 @dataclass
-class Contact13Admi02400101:
+class Contact13Admi02400101(ISO20022MessageElement):
     nm_prfx: Optional[NamePrefix2Code] = field(
         default=None,
         metadata={
@@ -506,7 +507,7 @@ class Contact13Admi02400101:
 
 
 @dataclass
-class DocumentFormat1ChoiceAdmi02400101:
+class DocumentFormat1ChoiceAdmi02400101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -528,7 +529,7 @@ class DocumentFormat1ChoiceAdmi02400101:
 
 
 @dataclass
-class DocumentType1ChoiceAdmi02400101:
+class DocumentType1ChoiceAdmi02400101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -550,7 +551,7 @@ class DocumentType1ChoiceAdmi02400101:
 
 
 @dataclass
-class GenericFinancialIdentification1Admi02400101:
+class GenericFinancialIdentification1Admi02400101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -583,7 +584,7 @@ class GenericFinancialIdentification1Admi02400101:
 
 
 @dataclass
-class GenericOrganisationIdentification3Admi02400101:
+class GenericOrganisationIdentification3Admi02400101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -616,7 +617,7 @@ class GenericOrganisationIdentification3Admi02400101:
 
 
 @dataclass
-class GenericPersonIdentification2Admi02400101:
+class GenericPersonIdentification2Admi02400101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -649,7 +650,7 @@ class GenericPersonIdentification2Admi02400101:
 
 
 @dataclass
-class SupplementaryData1Admi02400101:
+class SupplementaryData1Admi02400101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -672,7 +673,7 @@ class SupplementaryData1Admi02400101:
 
 
 @dataclass
-class OrganisationIdentification39Admi02400101:
+class OrganisationIdentification39Admi02400101(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -702,7 +703,7 @@ class OrganisationIdentification39Admi02400101:
 
 
 @dataclass
-class PersonIdentification18Admi02400101:
+class PersonIdentification18Admi02400101(ISO20022MessageElement):
     dt_and_plc_of_birth: Optional[DateAndPlaceOfBirth1Admi02400101] = field(
         default=None,
         metadata={
@@ -722,7 +723,7 @@ class PersonIdentification18Admi02400101:
 
 
 @dataclass
-class PostalAddress27Admi02400101:
+class PostalAddress27Admi02400101(ISO20022MessageElement):
     adr_tp: Optional[AddressType3ChoiceAdmi02400101] = field(
         default=None,
         metadata={
@@ -904,7 +905,7 @@ class PostalAddress27Admi02400101:
 
 
 @dataclass
-class BranchData5Admi02400101:
+class BranchData5Admi02400101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -945,7 +946,7 @@ class BranchData5Admi02400101:
 
 
 @dataclass
-class FinancialInstitutionIdentification23Admi02400101:
+class FinancialInstitutionIdentification23Admi02400101(ISO20022MessageElement):
     bicfi: Optional[str] = field(
         default=None,
         metadata={
@@ -1001,7 +1002,7 @@ class FinancialInstitutionIdentification23Admi02400101:
 
 
 @dataclass
-class NameAndAddress18Admi02400101:
+class NameAndAddress18Admi02400101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1025,7 +1026,7 @@ class NameAndAddress18Admi02400101:
 
 
 @dataclass
-class Party52ChoiceAdmi02400101:
+class Party52ChoiceAdmi02400101(ISO20022MessageElement):
     org_id: Optional[OrganisationIdentification39Admi02400101] = field(
         default=None,
         metadata={
@@ -1045,7 +1046,7 @@ class Party52ChoiceAdmi02400101:
 
 
 @dataclass
-class BranchAndFinancialInstitutionIdentification8Admi02400101:
+class BranchAndFinancialInstitutionIdentification8Admi02400101(ISO20022MessageElement):
     fin_instn_id: Optional[FinancialInstitutionIdentification23Admi02400101] = field(
         default=None,
         metadata={
@@ -1066,7 +1067,7 @@ class BranchAndFinancialInstitutionIdentification8Admi02400101:
 
 
 @dataclass
-class NotificationLocationData1Admi02400101:
+class NotificationLocationData1Admi02400101(ISO20022MessageElement):
     mtd: Optional[InvestigationLocationMethod1Code] = field(
         default=None,
         metadata={
@@ -1097,7 +1098,7 @@ class NotificationLocationData1Admi02400101:
 
 
 @dataclass
-class PartyIdentification272Admi02400101:
+class PartyIdentification272Admi02400101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1144,7 +1145,7 @@ class PartyIdentification272Admi02400101:
 
 
 @dataclass
-class Party50ChoiceAdmi02400101:
+class Party50ChoiceAdmi02400101(ISO20022MessageElement):
     pty: Optional[PartyIdentification272Admi02400101] = field(
         default=None,
         metadata={
@@ -1164,7 +1165,7 @@ class Party50ChoiceAdmi02400101:
 
 
 @dataclass
-class PartyAndSignature4Admi02400101:
+class PartyAndSignature4Admi02400101(ISO20022MessageElement):
     pty: Optional[PartyIdentification272Admi02400101] = field(
         default=None,
         metadata={
@@ -1186,7 +1187,7 @@ class PartyAndSignature4Admi02400101:
 
 
 @dataclass
-class RelatedNotificationData1Admi02400101:
+class RelatedNotificationData1Admi02400101(ISO20022MessageElement):
     ntfctn_id: Optional[str] = field(
         default=None,
         metadata={
@@ -1208,7 +1209,7 @@ class RelatedNotificationData1Admi02400101:
 
 
 @dataclass
-class Document15Admi02400101:
+class Document15Admi02400101(ISO20022MessageElement):
     tp: Optional[DocumentType1ChoiceAdmi02400101] = field(
         default=None,
         metadata={
@@ -1298,7 +1299,7 @@ class Document15Admi02400101:
 
 
 @dataclass
-class GroupHeader129Admi02400101:
+class GroupHeader129Admi02400101(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -1340,7 +1341,7 @@ class GroupHeader129Admi02400101:
 
 
 @dataclass
-class CorrespondenceNotification1Admi02400101:
+class CorrespondenceNotification1Admi02400101(ISO20022MessageElement):
     sndr_ntfctn_id: Optional[str] = field(
         default=None,
         metadata={
@@ -1398,7 +1399,7 @@ class CorrespondenceNotification1Admi02400101:
 
 
 @dataclass
-class NotificationOfCorrespondenceV01Admi02400101:
+class NotificationOfCorrespondenceV01Admi02400101(ISO20022MessageElement):
     grp_hdr: Optional[GroupHeader129Admi02400101] = field(
         default=None,
         metadata={
@@ -1427,7 +1428,7 @@ class NotificationOfCorrespondenceV01Admi02400101:
 
 
 @dataclass
-class Admi02400101:
+class Admi02400101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:admi.024.001.01"
 

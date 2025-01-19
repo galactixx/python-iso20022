@@ -3,6 +3,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     DateType8Code,
     SafekeepingPlace1Code,
@@ -24,7 +25,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:seev.039.002.12"
 
 
 @dataclass
-class GenericIdentification47Seev03900212:
+class GenericIdentification47Seev03900212(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -61,7 +62,7 @@ class GenericIdentification47Seev03900212:
 
 
 @dataclass
-class GenericIdentification84Seev03900212:
+class GenericIdentification84Seev03900212(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -100,7 +101,7 @@ class GenericIdentification84Seev03900212:
 
 
 @dataclass
-class IdentificationSource4ChoiceSeev03900212:
+class IdentificationSource4ChoiceSeev03900212(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -124,7 +125,7 @@ class IdentificationSource4ChoiceSeev03900212:
 
 
 @dataclass
-class NameAndAddress12Seev03900212:
+class NameAndAddress12Seev03900212(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -140,7 +141,7 @@ class NameAndAddress12Seev03900212:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Seev03900212:
+class SupplementaryDataEnvelope1Seev03900212(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -151,7 +152,7 @@ class SupplementaryDataEnvelope1Seev03900212:
 
 
 @dataclass
-class AccountIdentification10Seev03900212:
+class AccountIdentification10Seev03900212(ISO20022MessageElement):
     id_cd: Optional[SafekeepingAccountIdentification1Code] = field(
         default=None,
         metadata={
@@ -164,7 +165,7 @@ class AccountIdentification10Seev03900212:
 
 
 @dataclass
-class AdditionalBusinessProcessFormat16ChoiceSeev03900212:
+class AdditionalBusinessProcessFormat16ChoiceSeev03900212(ISO20022MessageElement):
     cd: Optional[AdditionalBusinessProcess8Code] = field(
         default=None,
         metadata={
@@ -184,7 +185,7 @@ class AdditionalBusinessProcessFormat16ChoiceSeev03900212:
 
 
 @dataclass
-class CorporateActionEventStageFormat15ChoiceSeev03900212:
+class CorporateActionEventStageFormat15ChoiceSeev03900212(ISO20022MessageElement):
     cd: Optional[CorporateActionEventStage4Code] = field(
         default=None,
         metadata={
@@ -204,7 +205,7 @@ class CorporateActionEventStageFormat15ChoiceSeev03900212:
 
 
 @dataclass
-class CorporateActionEventStatus1Seev03900212:
+class CorporateActionEventStatus1Seev03900212(ISO20022MessageElement):
     evt_cmpltns_sts: Optional[EventCompletenessStatus1Code] = field(
         default=None,
         metadata={
@@ -226,7 +227,7 @@ class CorporateActionEventStatus1Seev03900212:
 
 
 @dataclass
-class CorporateActionEventType89ChoiceSeev03900212:
+class CorporateActionEventType89ChoiceSeev03900212(ISO20022MessageElement):
     cd: Optional[CorporateActionEventType31Code] = field(
         default=None,
         metadata={
@@ -246,7 +247,7 @@ class CorporateActionEventType89ChoiceSeev03900212:
 
 
 @dataclass
-class CorporateActionMandatoryVoluntary4ChoiceSeev03900212:
+class CorporateActionMandatoryVoluntary4ChoiceSeev03900212(ISO20022MessageElement):
     cd: Optional[CorporateActionMandatoryVoluntary1Code] = field(
         default=None,
         metadata={
@@ -266,7 +267,7 @@ class CorporateActionMandatoryVoluntary4ChoiceSeev03900212:
 
 
 @dataclass
-class DateCode22ChoiceSeev03900212:
+class DateCode22ChoiceSeev03900212(ISO20022MessageElement):
     cd: Optional[DateType8Code] = field(
         default=None,
         metadata={
@@ -286,7 +287,7 @@ class DateCode22ChoiceSeev03900212:
 
 
 @dataclass
-class GenericIdentification85Seev03900212:
+class GenericIdentification85Seev03900212(ISO20022MessageElement):
     tp: Optional[GenericIdentification47Seev03900212] = field(
         default=None,
         metadata={
@@ -310,7 +311,7 @@ class GenericIdentification85Seev03900212:
 
 
 @dataclass
-class LotteryTypeFormat5ChoiceSeev03900212:
+class LotteryTypeFormat5ChoiceSeev03900212(ISO20022MessageElement):
     cd: Optional[LotteryType1Code] = field(
         default=None,
         metadata={
@@ -330,7 +331,7 @@ class LotteryTypeFormat5ChoiceSeev03900212:
 
 
 @dataclass
-class OtherIdentification2Seev03900212:
+class OtherIdentification2Seev03900212(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -365,7 +366,7 @@ class OtherIdentification2Seev03900212:
 
 
 @dataclass
-class PartyIdentification136ChoiceSeev03900212:
+class PartyIdentification136ChoiceSeev03900212(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -386,7 +387,7 @@ class PartyIdentification136ChoiceSeev03900212:
 
 
 @dataclass
-class PartyIdentification137ChoiceSeev03900212:
+class PartyIdentification137ChoiceSeev03900212(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -415,7 +416,7 @@ class PartyIdentification137ChoiceSeev03900212:
 
 
 @dataclass
-class SafekeepingPlaceTypeAndIdentification1Seev03900212:
+class SafekeepingPlaceTypeAndIdentification1Seev03900212(ISO20022MessageElement):
     sfkpg_plc_tp: Optional[SafekeepingPlace1Code] = field(
         default=None,
         metadata={
@@ -438,7 +439,7 @@ class SafekeepingPlaceTypeAndIdentification1Seev03900212:
 
 
 @dataclass
-class SafekeepingPlaceTypeAndText9Seev03900212:
+class SafekeepingPlaceTypeAndText9Seev03900212(ISO20022MessageElement):
     sfkpg_plc_tp: Optional[SafekeepingPlace2Code] = field(
         default=None,
         metadata={
@@ -462,7 +463,7 @@ class SafekeepingPlaceTypeAndText9Seev03900212:
 
 
 @dataclass
-class SupplementaryData1Seev03900212:
+class SupplementaryData1Seev03900212(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -485,7 +486,7 @@ class SupplementaryData1Seev03900212:
 
 
 @dataclass
-class CorporateActionCancellation4Seev03900212:
+class CorporateActionCancellation4Seev03900212(ISO20022MessageElement):
     cxl_rsn_cd: Optional[CorporateActionCancellationReason1Code] = field(
         default=None,
         metadata={
@@ -518,7 +519,7 @@ class CorporateActionCancellation4Seev03900212:
 
 
 @dataclass
-class DateFormat41ChoiceSeev03900212:
+class DateFormat41ChoiceSeev03900212(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -538,7 +539,7 @@ class DateFormat41ChoiceSeev03900212:
 
 
 @dataclass
-class SafekeepingPlaceFormat32ChoiceSeev03900212:
+class SafekeepingPlaceFormat32ChoiceSeev03900212(ISO20022MessageElement):
     id: Optional[SafekeepingPlaceTypeAndText9Seev03900212] = field(
         default=None,
         metadata={
@@ -575,7 +576,7 @@ class SafekeepingPlaceFormat32ChoiceSeev03900212:
 
 
 @dataclass
-class SecurityIdentification20Seev03900212:
+class SecurityIdentification20Seev03900212(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -607,7 +608,7 @@ class SecurityIdentification20Seev03900212:
 
 
 @dataclass
-class AccountIdentification61Seev03900212:
+class AccountIdentification61Seev03900212(ISO20022MessageElement):
     sfkpg_acct: Optional[str] = field(
         default=None,
         metadata={
@@ -649,7 +650,7 @@ class AccountIdentification61Seev03900212:
 
 
 @dataclass
-class CorporateActionDate89Seev03900212:
+class CorporateActionDate89Seev03900212(ISO20022MessageElement):
     rcrd_dt: Optional[DateFormat41ChoiceSeev03900212] = field(
         default=None,
         metadata={
@@ -669,7 +670,7 @@ class CorporateActionDate89Seev03900212:
 
 
 @dataclass
-class CorporateActionGeneralInformation143Seev03900212:
+class CorporateActionGeneralInformation143Seev03900212(ISO20022MessageElement):
     corp_actn_evt_id: Optional[str] = field(
         default=None,
         metadata={
@@ -736,7 +737,7 @@ class CorporateActionGeneralInformation143Seev03900212:
 
 
 @dataclass
-class AccountIdentification50ChoiceSeev03900212:
+class AccountIdentification50ChoiceSeev03900212(ISO20022MessageElement):
     for_all_accts: Optional[AccountIdentification10Seev03900212] = field(
         default=None,
         metadata={
@@ -756,7 +757,7 @@ class AccountIdentification50ChoiceSeev03900212:
 
 
 @dataclass
-class CorporateAction74Seev03900212:
+class CorporateAction74Seev03900212(ISO20022MessageElement):
     dt_dtls: Optional[CorporateActionDate89Seev03900212] = field(
         default=None,
         metadata={
@@ -794,7 +795,7 @@ class CorporateAction74Seev03900212:
 
 
 @dataclass
-class CorporateActionCancellationAdvice002V12Seev03900212:
+class CorporateActionCancellationAdvice002V12Seev03900212(ISO20022MessageElement):
     cxl_advc_gnl_inf: Optional[CorporateActionCancellation4Seev03900212] = field(
         default=None,
         metadata={
@@ -926,7 +927,7 @@ class CorporateActionCancellationAdvice002V12Seev03900212:
 
 
 @dataclass
-class Seev03900212:
+class Seev03900212(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:seev.039.002.12"
 

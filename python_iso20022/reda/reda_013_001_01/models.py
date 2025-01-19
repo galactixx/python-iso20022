@@ -3,11 +3,13 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
+
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:reda.013.001.01"
 
 
 @dataclass
-class IdentificationSource3ChoiceReda01300101:
+class IdentificationSource3ChoiceReda01300101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -31,7 +33,7 @@ class IdentificationSource3ChoiceReda01300101:
 
 
 @dataclass
-class MessageHeader1Reda01300101:
+class MessageHeader1Reda01300101(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -54,7 +56,7 @@ class MessageHeader1Reda01300101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Reda01300101:
+class SupplementaryDataEnvelope1Reda01300101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -65,7 +67,7 @@ class SupplementaryDataEnvelope1Reda01300101:
 
 
 @dataclass
-class OtherIdentification1Reda01300101:
+class OtherIdentification1Reda01300101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -99,7 +101,7 @@ class OtherIdentification1Reda01300101:
 
 
 @dataclass
-class SupplementaryData1Reda01300101:
+class SupplementaryData1Reda01300101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -122,7 +124,7 @@ class SupplementaryData1Reda01300101:
 
 
 @dataclass
-class SecurityIdentification39Reda01300101:
+class SecurityIdentification39Reda01300101(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -153,7 +155,7 @@ class SecurityIdentification39Reda01300101:
 
 
 @dataclass
-class SecurityDeletionRequestV01Reda01300101:
+class SecurityDeletionRequestV01Reda01300101(ISO20022MessageElement):
     msg_hdr: Optional[MessageHeader1Reda01300101] = field(
         default=None,
         metadata={
@@ -182,7 +184,7 @@ class SecurityDeletionRequestV01Reda01300101:
 
 
 @dataclass
-class Reda01300101:
+class Reda01300101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:reda.013.001.01"
 

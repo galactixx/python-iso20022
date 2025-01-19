@@ -3,12 +3,13 @@ from decimal import Decimal
 from typing import Optional
 
 from python_iso20022.auth.enums import SchemeIdentificationType1Code
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.058.001.01"
 
 
 @dataclass
-class ActiveCurrencyAndAmountAuth05800101:
+class ActiveCurrencyAndAmountAuth05800101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -30,7 +31,7 @@ class ActiveCurrencyAndAmountAuth05800101:
 
 
 @dataclass
-class GenericIdentification168Auth05800101:
+class GenericIdentification168Auth05800101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -75,7 +76,7 @@ class GenericIdentification168Auth05800101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth05800101:
+class SupplementaryDataEnvelope1Auth05800101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -86,7 +87,7 @@ class SupplementaryDataEnvelope1Auth05800101:
 
 
 @dataclass
-class AmountAndDirection102Auth05800101:
+class AmountAndDirection102Auth05800101(ISO20022MessageElement):
     amt: Optional[ActiveCurrencyAndAmountAuth05800101] = field(
         default=None,
         metadata={
@@ -108,7 +109,7 @@ class AmountAndDirection102Auth05800101:
 
 
 @dataclass
-class GenericIdentification165Auth05800101:
+class GenericIdentification165Auth05800101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -151,7 +152,7 @@ class GenericIdentification165Auth05800101:
 
 
 @dataclass
-class SupplementaryData1Auth05800101:
+class SupplementaryData1Auth05800101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -174,7 +175,7 @@ class SupplementaryData1Auth05800101:
 
 
 @dataclass
-class PortfolioStressTestResult1Auth05800101:
+class PortfolioStressTestResult1Auth05800101(ISO20022MessageElement):
     prtfl_id: Optional[GenericIdentification165Auth05800101] = field(
         default=None,
         metadata={
@@ -222,7 +223,7 @@ class PortfolioStressTestResult1Auth05800101:
 
 
 @dataclass
-class ScenarioStressTestResult1Auth05800101:
+class ScenarioStressTestResult1Auth05800101(ISO20022MessageElement):
     id: Optional[GenericIdentification168Auth05800101] = field(
         default=None,
         metadata={
@@ -244,7 +245,7 @@ class ScenarioStressTestResult1Auth05800101:
 
 
 @dataclass
-class CcpportfolioStressTestingResultReportV01Auth05800101:
+class CcpportfolioStressTestingResultReportV01Auth05800101(ISO20022MessageElement):
     class Meta:
         name = "CCPPortfolioStressTestingResultReportV01"
 
@@ -268,7 +269,7 @@ class CcpportfolioStressTestingResultReportV01Auth05800101:
 
 
 @dataclass
-class Auth05800101:
+class Auth05800101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.058.001.01"
 

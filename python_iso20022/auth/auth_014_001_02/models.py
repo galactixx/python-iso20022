@@ -10,12 +10,13 @@ from python_iso20022.auth.enums import (
     ReportPeriodActivity3Code,
     TransactionOperationType1Code,
 )
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.014.001.02"
 
 
 @dataclass
-class ActiveCurrencyAndAmountAuth01400102:
+class ActiveCurrencyAndAmountAuth01400102(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -37,7 +38,7 @@ class ActiveCurrencyAndAmountAuth01400102:
 
 
 @dataclass
-class DateAndDateTimeChoiceAuth01400102:
+class DateAndDateTimeChoiceAuth01400102(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -57,7 +58,7 @@ class DateAndDateTimeChoiceAuth01400102:
 
 
 @dataclass
-class DateTimePeriod1Auth01400102:
+class DateTimePeriod1Auth01400102(ISO20022MessageElement):
     fr_dt_tm: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -79,7 +80,7 @@ class DateTimePeriod1Auth01400102:
 
 
 @dataclass
-class ForeignExchange1Auth01400102:
+class ForeignExchange1Auth01400102(ISO20022MessageElement):
     frgn_ccy: Optional[str] = field(
         default=None,
         metadata={
@@ -115,7 +116,7 @@ class ForeignExchange1Auth01400102:
 
 
 @dataclass
-class NameAndLocation1Auth01400102:
+class NameAndLocation1Auth01400102(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -140,7 +141,7 @@ class NameAndLocation1Auth01400102:
 
 
 @dataclass
-class SectorAndLocation1Auth01400102:
+class SectorAndLocation1Auth01400102(ISO20022MessageElement):
     sctr: Optional[str] = field(
         default=None,
         metadata={
@@ -163,7 +164,7 @@ class SectorAndLocation1Auth01400102:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth01400102:
+class SupplementaryDataEnvelope1Auth01400102(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -174,7 +175,7 @@ class SupplementaryDataEnvelope1Auth01400102:
 
 
 @dataclass
-class CounterpartyIdentification3ChoiceAuth01400102:
+class CounterpartyIdentification3ChoiceAuth01400102(ISO20022MessageElement):
     lei: Optional[str] = field(
         default=None,
         metadata={
@@ -203,7 +204,7 @@ class CounterpartyIdentification3ChoiceAuth01400102:
 
 
 @dataclass
-class MoneyMarketReportHeader1Auth01400102:
+class MoneyMarketReportHeader1Auth01400102(ISO20022MessageElement):
     rptg_agt: Optional[str] = field(
         default=None,
         metadata={
@@ -226,7 +227,7 @@ class MoneyMarketReportHeader1Auth01400102:
 
 
 @dataclass
-class SupplementaryData1Auth01400102:
+class SupplementaryData1Auth01400102(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -249,7 +250,7 @@ class SupplementaryData1Auth01400102:
 
 
 @dataclass
-class ForeignExchangeSwapTransaction3Auth01400102:
+class ForeignExchangeSwapTransaction3Auth01400102(ISO20022MessageElement):
     rptd_tx_sts: Optional[TransactionOperationType1Code] = field(
         default=None,
         metadata={
@@ -391,7 +392,7 @@ class ForeignExchangeSwapTransaction3Auth01400102:
 
 
 @dataclass
-class ForeignExchangeSwap3ChoiceAuth01400102:
+class ForeignExchangeSwap3ChoiceAuth01400102(ISO20022MessageElement):
     data_set_actn: Optional[ReportPeriodActivity3Code] = field(
         default=None,
         metadata={
@@ -411,7 +412,9 @@ class ForeignExchangeSwap3ChoiceAuth01400102:
 
 
 @dataclass
-class MoneyMarketForeignExchangeSwapsStatisticalReportV02Auth01400102:
+class MoneyMarketForeignExchangeSwapsStatisticalReportV02Auth01400102(
+    ISO20022MessageElement
+):
     rpt_hdr: Optional[MoneyMarketReportHeader1Auth01400102] = field(
         default=None,
         metadata={
@@ -441,7 +444,7 @@ class MoneyMarketForeignExchangeSwapsStatisticalReportV02Auth01400102:
 
 
 @dataclass
-class Auth01400102:
+class Auth01400102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.014.001.02"
 

@@ -3,6 +3,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     AddressType2Code,
     Authorisation1Code,
@@ -16,7 +17,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:remt.002.001.03"
 
 
 @dataclass
-class ClearingSystemIdentification2ChoiceRemt00200103:
+class ClearingSystemIdentification2ChoiceRemt00200103(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -40,7 +41,7 @@ class ClearingSystemIdentification2ChoiceRemt00200103:
 
 
 @dataclass
-class DateAndPlaceOfBirth1Remt00200103:
+class DateAndPlaceOfBirth1Remt00200103(ISO20022MessageElement):
     birth_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -84,7 +85,7 @@ class DateAndPlaceOfBirth1Remt00200103:
 
 
 @dataclass
-class FinancialIdentificationSchemeName1ChoiceRemt00200103:
+class FinancialIdentificationSchemeName1ChoiceRemt00200103(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -108,7 +109,7 @@ class FinancialIdentificationSchemeName1ChoiceRemt00200103:
 
 
 @dataclass
-class GenericIdentification30Remt00200103:
+class GenericIdentification30Remt00200103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -143,7 +144,7 @@ class GenericIdentification30Remt00200103:
 
 
 @dataclass
-class OrganisationIdentificationSchemeName1ChoiceRemt00200103:
+class OrganisationIdentificationSchemeName1ChoiceRemt00200103(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -167,7 +168,7 @@ class OrganisationIdentificationSchemeName1ChoiceRemt00200103:
 
 
 @dataclass
-class OtherContact1Remt00200103:
+class OtherContact1Remt00200103(ISO20022MessageElement):
     chanl_tp: Optional[str] = field(
         default=None,
         metadata={
@@ -192,7 +193,7 @@ class OtherContact1Remt00200103:
 
 
 @dataclass
-class PersonIdentificationSchemeName1ChoiceRemt00200103:
+class PersonIdentificationSchemeName1ChoiceRemt00200103(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -216,7 +217,7 @@ class PersonIdentificationSchemeName1ChoiceRemt00200103:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Remt00200103:
+class SupplementaryDataEnvelope1Remt00200103(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -227,7 +228,7 @@ class SupplementaryDataEnvelope1Remt00200103:
 
 
 @dataclass
-class AddressType3ChoiceRemt00200103:
+class AddressType3ChoiceRemt00200103(ISO20022MessageElement):
     cd: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -247,7 +248,7 @@ class AddressType3ChoiceRemt00200103:
 
 
 @dataclass
-class Authorisation1ChoiceRemt00200103:
+class Authorisation1ChoiceRemt00200103(ISO20022MessageElement):
     cd: Optional[Authorisation1Code] = field(
         default=None,
         metadata={
@@ -269,7 +270,7 @@ class Authorisation1ChoiceRemt00200103:
 
 
 @dataclass
-class ClearingSystemMemberIdentification2Remt00200103:
+class ClearingSystemMemberIdentification2Remt00200103(ISO20022MessageElement):
     clr_sys_id: Optional[ClearingSystemIdentification2ChoiceRemt00200103] = field(
         default=None,
         metadata={
@@ -292,7 +293,7 @@ class ClearingSystemMemberIdentification2Remt00200103:
 
 
 @dataclass
-class Contact13Remt00200103:
+class Contact13Remt00200103(ISO20022MessageElement):
     nm_prfx: Optional[NamePrefix2Code] = field(
         default=None,
         metadata={
@@ -417,7 +418,7 @@ class Contact13Remt00200103:
 
 
 @dataclass
-class GenericFinancialIdentification1Remt00200103:
+class GenericFinancialIdentification1Remt00200103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -450,7 +451,7 @@ class GenericFinancialIdentification1Remt00200103:
 
 
 @dataclass
-class GenericOrganisationIdentification3Remt00200103:
+class GenericOrganisationIdentification3Remt00200103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -483,7 +484,7 @@ class GenericOrganisationIdentification3Remt00200103:
 
 
 @dataclass
-class GenericPersonIdentification2Remt00200103:
+class GenericPersonIdentification2Remt00200103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -516,7 +517,7 @@ class GenericPersonIdentification2Remt00200103:
 
 
 @dataclass
-class SupplementaryData1Remt00200103:
+class SupplementaryData1Remt00200103(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -539,7 +540,7 @@ class SupplementaryData1Remt00200103:
 
 
 @dataclass
-class OrganisationIdentification39Remt00200103:
+class OrganisationIdentification39Remt00200103(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -569,7 +570,7 @@ class OrganisationIdentification39Remt00200103:
 
 
 @dataclass
-class PersonIdentification18Remt00200103:
+class PersonIdentification18Remt00200103(ISO20022MessageElement):
     dt_and_plc_of_birth: Optional[DateAndPlaceOfBirth1Remt00200103] = field(
         default=None,
         metadata={
@@ -589,7 +590,7 @@ class PersonIdentification18Remt00200103:
 
 
 @dataclass
-class PostalAddress27Remt00200103:
+class PostalAddress27Remt00200103(ISO20022MessageElement):
     adr_tp: Optional[AddressType3ChoiceRemt00200103] = field(
         default=None,
         metadata={
@@ -771,7 +772,7 @@ class PostalAddress27Remt00200103:
 
 
 @dataclass
-class BranchData5Remt00200103:
+class BranchData5Remt00200103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -812,7 +813,7 @@ class BranchData5Remt00200103:
 
 
 @dataclass
-class FinancialInstitutionIdentification23Remt00200103:
+class FinancialInstitutionIdentification23Remt00200103(ISO20022MessageElement):
     bicfi: Optional[str] = field(
         default=None,
         metadata={
@@ -868,7 +869,7 @@ class FinancialInstitutionIdentification23Remt00200103:
 
 
 @dataclass
-class NameAndAddress18Remt00200103:
+class NameAndAddress18Remt00200103(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -892,7 +893,7 @@ class NameAndAddress18Remt00200103:
 
 
 @dataclass
-class Party52ChoiceRemt00200103:
+class Party52ChoiceRemt00200103(ISO20022MessageElement):
     org_id: Optional[OrganisationIdentification39Remt00200103] = field(
         default=None,
         metadata={
@@ -912,7 +913,7 @@ class Party52ChoiceRemt00200103:
 
 
 @dataclass
-class BranchAndFinancialInstitutionIdentification8Remt00200103:
+class BranchAndFinancialInstitutionIdentification8Remt00200103(ISO20022MessageElement):
     fin_instn_id: Optional[FinancialInstitutionIdentification23Remt00200103] = field(
         default=None,
         metadata={
@@ -933,7 +934,7 @@ class BranchAndFinancialInstitutionIdentification8Remt00200103:
 
 
 @dataclass
-class PartyIdentification272Remt00200103:
+class PartyIdentification272Remt00200103(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -980,7 +981,7 @@ class PartyIdentification272Remt00200103:
 
 
 @dataclass
-class RemittanceLocationData2Remt00200103:
+class RemittanceLocationData2Remt00200103(ISO20022MessageElement):
     mtd: Optional[RemittanceLocationMethod2Code] = field(
         default=None,
         metadata={
@@ -1011,7 +1012,7 @@ class RemittanceLocationData2Remt00200103:
 
 
 @dataclass
-class GroupHeader122Remt00200103:
+class GroupHeader122Remt00200103(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -1079,7 +1080,7 @@ class GroupHeader122Remt00200103:
 
 
 @dataclass
-class TransactionReferences8Remt00200103:
+class TransactionReferences8Remt00200103(ISO20022MessageElement):
     pmt_inf_id: Optional[str] = field(
         default=None,
         metadata={
@@ -1151,7 +1152,7 @@ class TransactionReferences8Remt00200103:
 
 
 @dataclass
-class RemittanceLocation10Remt00200103:
+class RemittanceLocation10Remt00200103(ISO20022MessageElement):
     rmt_id: Optional[str] = field(
         default=None,
         metadata={
@@ -1183,7 +1184,7 @@ class RemittanceLocation10Remt00200103:
 
 
 @dataclass
-class RemittanceLocationAdviceV03Remt00200103:
+class RemittanceLocationAdviceV03Remt00200103(ISO20022MessageElement):
     grp_hdr: Optional[GroupHeader122Remt00200103] = field(
         default=None,
         metadata={
@@ -1213,7 +1214,7 @@ class RemittanceLocationAdviceV03Remt00200103:
 
 
 @dataclass
-class Remt00200103:
+class Remt00200103(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:remt.002.001.03"
 

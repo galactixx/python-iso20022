@@ -5,12 +5,13 @@ from xsdata.models.datatype import XmlDate
 
 from python_iso20022.auth.auth_031_001_01.enums import ReportingRecordStatus1Code
 from python_iso20022.auth.enums import ReportingMessageStatus1Code
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.031.001.01"
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth03100101:
+class SupplementaryDataEnvelope1Auth03100101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -21,7 +22,7 @@ class SupplementaryDataEnvelope1Auth03100101:
 
 
 @dataclass
-class ValidationRuleSchemeName1ChoiceAuth03100101:
+class ValidationRuleSchemeName1ChoiceAuth03100101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -45,7 +46,7 @@ class ValidationRuleSchemeName1ChoiceAuth03100101:
 
 
 @dataclass
-class GenericValidationRuleIdentification1Auth03100101:
+class GenericValidationRuleIdentification1Auth03100101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -88,7 +89,7 @@ class GenericValidationRuleIdentification1Auth03100101:
 
 
 @dataclass
-class NumberOfRecordsPerStatus1Auth03100101:
+class NumberOfRecordsPerStatus1Auth03100101(ISO20022MessageElement):
     dtld_nb_of_rcrds: Optional[str] = field(
         default=None,
         metadata={
@@ -111,7 +112,7 @@ class NumberOfRecordsPerStatus1Auth03100101:
 
 
 @dataclass
-class SupplementaryData1Auth03100101:
+class SupplementaryData1Auth03100101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -134,7 +135,7 @@ class SupplementaryData1Auth03100101:
 
 
 @dataclass
-class OriginalReportStatistics3Auth03100101:
+class OriginalReportStatistics3Auth03100101(ISO20022MessageElement):
     ttl_nb_of_rcrds: Optional[str] = field(
         default=None,
         metadata={
@@ -157,7 +158,7 @@ class OriginalReportStatistics3Auth03100101:
 
 
 @dataclass
-class StatusReportRecord3Auth03100101:
+class StatusReportRecord3Auth03100101(ISO20022MessageElement):
     orgnl_rcrd_id: Optional[str] = field(
         default=None,
         metadata={
@@ -197,7 +198,7 @@ class StatusReportRecord3Auth03100101:
 
 
 @dataclass
-class StatusAdviceReport3Auth03100101:
+class StatusAdviceReport3Auth03100101(ISO20022MessageElement):
     sts: Optional[ReportingMessageStatus1Code] = field(
         default=None,
         metadata={
@@ -234,7 +235,7 @@ class StatusAdviceReport3Auth03100101:
 
 
 @dataclass
-class MessageReportHeader4Auth03100101:
+class MessageReportHeader4Auth03100101(ISO20022MessageElement):
     msg_rpt_idr: Optional[str] = field(
         default=None,
         metadata={
@@ -272,7 +273,7 @@ class MessageReportHeader4Auth03100101:
 
 
 @dataclass
-class FinancialInstrumentReportingStatusAdviceV01Auth03100101:
+class FinancialInstrumentReportingStatusAdviceV01Auth03100101(ISO20022MessageElement):
     sts_advc: list[MessageReportHeader4Auth03100101] = field(
         default_factory=list,
         metadata={
@@ -293,7 +294,7 @@ class FinancialInstrumentReportingStatusAdviceV01Auth03100101:
 
 
 @dataclass
-class Auth03100101:
+class Auth03100101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.031.001.01"
 

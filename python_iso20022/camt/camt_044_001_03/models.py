@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.camt.enums import CurrencyDesignation1Code, FlowDirectionType1Code
 from python_iso20022.enums import (
     AddressType2Code,
@@ -16,7 +17,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:camt.044.001.03"
 
 
 @dataclass
-class ActiveCurrencyAnd13DecimalAmountCamt04400103:
+class ActiveCurrencyAnd13DecimalAmountCamt04400103(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -38,7 +39,7 @@ class ActiveCurrencyAnd13DecimalAmountCamt04400103:
 
 
 @dataclass
-class ActiveOrHistoricCurrencyAndAmountCamt04400103:
+class ActiveOrHistoricCurrencyAndAmountCamt04400103(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -60,7 +61,7 @@ class ActiveOrHistoricCurrencyAndAmountCamt04400103:
 
 
 @dataclass
-class AlternateSecurityIdentification1Camt04400103:
+class AlternateSecurityIdentification1Camt04400103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -94,7 +95,7 @@ class AlternateSecurityIdentification1Camt04400103:
 
 
 @dataclass
-class DateAndDateTimeChoiceCamt04400103:
+class DateAndDateTimeChoiceCamt04400103(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -114,7 +115,7 @@ class DateAndDateTimeChoiceCamt04400103:
 
 
 @dataclass
-class Extension1Camt04400103:
+class Extension1Camt04400103(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -140,7 +141,7 @@ class Extension1Camt04400103:
 
 
 @dataclass
-class FinancialInstrumentQuantity1Camt04400103:
+class FinancialInstrumentQuantity1Camt04400103(ISO20022MessageElement):
     unit: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -155,7 +156,7 @@ class FinancialInstrumentQuantity1Camt04400103:
 
 
 @dataclass
-class ForeignExchangeTerms19Camt04400103:
+class ForeignExchangeTerms19Camt04400103(ISO20022MessageElement):
     unit_ccy: Optional[str] = field(
         default=None,
         metadata={
@@ -190,7 +191,7 @@ class ForeignExchangeTerms19Camt04400103:
 
 
 @dataclass
-class GenericIdentification1Camt04400103:
+class GenericIdentification1Camt04400103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -225,7 +226,7 @@ class GenericIdentification1Camt04400103:
 
 
 @dataclass
-class GenericIdentification47Camt04400103:
+class GenericIdentification47Camt04400103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -262,7 +263,7 @@ class GenericIdentification47Camt04400103:
 
 
 @dataclass
-class IdentificationSource5ChoiceCamt04400103:
+class IdentificationSource5ChoiceCamt04400103(ISO20022MessageElement):
     dmst_id_src: Optional[str] = field(
         default=None,
         metadata={
@@ -285,7 +286,7 @@ class IdentificationSource5ChoiceCamt04400103:
 
 
 @dataclass
-class MessageIdentification1Camt04400103:
+class MessageIdentification1Camt04400103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -309,7 +310,7 @@ class MessageIdentification1Camt04400103:
 
 
 @dataclass
-class PaginationCamt04400103:
+class PaginationCamt04400103(ISO20022MessageElement):
     pg_nb: Optional[str] = field(
         default=None,
         metadata={
@@ -332,7 +333,7 @@ class PaginationCamt04400103:
 
 
 @dataclass
-class CashInOutForecast7Camt04400103:
+class CashInOutForecast7Camt04400103(ISO20022MessageElement):
     csh_sttlm_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -353,7 +354,7 @@ class CashInOutForecast7Camt04400103:
 
 
 @dataclass
-class CurrencyDesignation1Camt04400103:
+class CurrencyDesignation1Camt04400103(ISO20022MessageElement):
     ccy_dsgnt: Optional[CurrencyDesignation1Code] = field(
         default=None,
         metadata={
@@ -384,7 +385,7 @@ class CurrencyDesignation1Camt04400103:
 
 
 @dataclass
-class FundBalance1Camt04400103:
+class FundBalance1Camt04400103(ISO20022MessageElement):
     ttl_units_fr_unit_ordrs: Optional[FinancialInstrumentQuantity1Camt04400103] = field(
         default=None,
         metadata={
@@ -424,7 +425,7 @@ class FundBalance1Camt04400103:
 
 
 @dataclass
-class NetCashForecast3Camt04400103:
+class NetCashForecast3Camt04400103(ISO20022MessageElement):
     net_amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt04400103] = field(
         default=None,
         metadata={
@@ -453,7 +454,7 @@ class NetCashForecast3Camt04400103:
 
 
 @dataclass
-class NetCashForecast5Camt04400103:
+class NetCashForecast5Camt04400103(ISO20022MessageElement):
     csh_sttlm_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -490,7 +491,7 @@ class NetCashForecast5Camt04400103:
 
 
 @dataclass
-class OtherIdentification4Camt04400103:
+class OtherIdentification4Camt04400103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -514,7 +515,7 @@ class OtherIdentification4Camt04400103:
 
 
 @dataclass
-class PostalAddress1Camt04400103:
+class PostalAddress1Camt04400103(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -597,7 +598,7 @@ class PostalAddress1Camt04400103:
 
 
 @dataclass
-class PriceValue1Camt04400103:
+class PriceValue1Camt04400103(ISO20022MessageElement):
     amt: Optional[ActiveCurrencyAnd13DecimalAmountCamt04400103] = field(
         default=None,
         metadata={
@@ -610,7 +611,7 @@ class PriceValue1Camt04400103:
 
 
 @dataclass
-class SecurityIdentification3ChoiceCamt04400103:
+class SecurityIdentification3ChoiceCamt04400103(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -745,7 +746,7 @@ class SecurityIdentification3ChoiceCamt04400103:
 
 
 @dataclass
-class UnitPriceType2ChoiceCamt04400103:
+class UnitPriceType2ChoiceCamt04400103(ISO20022MessageElement):
     cd: Optional[TypeOfPrice10Code] = field(
         default=None,
         metadata={
@@ -765,7 +766,7 @@ class UnitPriceType2ChoiceCamt04400103:
 
 
 @dataclass
-class CashInForecast6Camt04400103:
+class CashInForecast6Camt04400103(ISO20022MessageElement):
     csh_sttlm_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -810,7 +811,7 @@ class CashInForecast6Camt04400103:
 
 
 @dataclass
-class CashOutForecast6Camt04400103:
+class CashOutForecast6Camt04400103(ISO20022MessageElement):
     csh_sttlm_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -855,7 +856,7 @@ class CashOutForecast6Camt04400103:
 
 
 @dataclass
-class FinancialInstrument9Camt04400103:
+class FinancialInstrument9Camt04400103(ISO20022MessageElement):
     id: Optional[SecurityIdentification3ChoiceCamt04400103] = field(
         default=None,
         metadata={
@@ -932,7 +933,7 @@ class FinancialInstrument9Camt04400103:
 
 
 @dataclass
-class Fund2Camt04400103:
+class Fund2Camt04400103(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1054,7 +1055,7 @@ class Fund2Camt04400103:
 
 
 @dataclass
-class NameAndAddress5Camt04400103:
+class NameAndAddress5Camt04400103(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1077,7 +1078,7 @@ class NameAndAddress5Camt04400103:
 
 
 @dataclass
-class NetCashForecast4Camt04400103:
+class NetCashForecast4Camt04400103(ISO20022MessageElement):
     csh_sttlm_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -1123,7 +1124,7 @@ class NetCashForecast4Camt04400103:
 
 
 @dataclass
-class UnitPrice19Camt04400103:
+class UnitPrice19Camt04400103(ISO20022MessageElement):
     pric_tp: Optional[UnitPriceType2ChoiceCamt04400103] = field(
         default=None,
         metadata={
@@ -1145,7 +1146,7 @@ class UnitPrice19Camt04400103:
 
 
 @dataclass
-class FundCashForecast7Camt04400103:
+class FundCashForecast7Camt04400103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1304,7 +1305,7 @@ class FundCashForecast7Camt04400103:
 
 
 @dataclass
-class PartyIdentification2ChoiceCamt04400103:
+class PartyIdentification2ChoiceCamt04400103(ISO20022MessageElement):
     bicor_bei: Optional[str] = field(
         default=None,
         metadata={
@@ -1333,7 +1334,7 @@ class PartyIdentification2ChoiceCamt04400103:
 
 
 @dataclass
-class AdditionalReference3Camt04400103:
+class AdditionalReference3Camt04400103(ISO20022MessageElement):
     ref: Optional[str] = field(
         default=None,
         metadata={
@@ -1366,7 +1367,7 @@ class AdditionalReference3Camt04400103:
 
 
 @dataclass
-class FundConfirmedCashForecastReport3Camt04400103:
+class FundConfirmedCashForecastReport3Camt04400103(ISO20022MessageElement):
     fnd_or_sub_fnd_dtls: list[Fund2Camt04400103] = field(
         default_factory=list,
         metadata={
@@ -1402,7 +1403,9 @@ class FundConfirmedCashForecastReport3Camt04400103:
 
 
 @dataclass
-class FundConfirmedCashForecastReportCancellationV03Camt04400103:
+class FundConfirmedCashForecastReportCancellationV03Camt04400103(
+    ISO20022MessageElement
+):
     msg_id: Optional[MessageIdentification1Camt04400103] = field(
         default=None,
         metadata={
@@ -1458,7 +1461,7 @@ class FundConfirmedCashForecastReportCancellationV03Camt04400103:
 
 
 @dataclass
-class Camt04400103:
+class Camt04400103(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:camt.044.001.03"
 

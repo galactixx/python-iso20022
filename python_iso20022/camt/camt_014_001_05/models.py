@@ -3,6 +3,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.camt.enums import MemberStatus1Code
 from python_iso20022.enums import ErrorHandling1Code
 
@@ -10,7 +11,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:camt.014.001.05"
 
 
 @dataclass
-class AccountSchemeName1ChoiceCamt01400105:
+class AccountSchemeName1ChoiceCamt01400105(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -34,7 +35,7 @@ class AccountSchemeName1ChoiceCamt01400105:
 
 
 @dataclass
-class CashAccountType2ChoiceCamt01400105:
+class CashAccountType2ChoiceCamt01400105(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -58,7 +59,7 @@ class CashAccountType2ChoiceCamt01400105:
 
 
 @dataclass
-class ClearingSystemIdentification2ChoiceCamt01400105:
+class ClearingSystemIdentification2ChoiceCamt01400105(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -82,7 +83,7 @@ class ClearingSystemIdentification2ChoiceCamt01400105:
 
 
 @dataclass
-class FinancialIdentificationSchemeName1ChoiceCamt01400105:
+class FinancialIdentificationSchemeName1ChoiceCamt01400105(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -106,7 +107,7 @@ class FinancialIdentificationSchemeName1ChoiceCamt01400105:
 
 
 @dataclass
-class GenericIdentification1Camt01400105:
+class GenericIdentification1Camt01400105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -141,7 +142,7 @@ class GenericIdentification1Camt01400105:
 
 
 @dataclass
-class OriginalBusinessQuery1Camt01400105:
+class OriginalBusinessQuery1Camt01400105(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -174,7 +175,7 @@ class OriginalBusinessQuery1Camt01400105:
 
 
 @dataclass
-class PaymentRole1ChoiceCamt01400105:
+class PaymentRole1ChoiceCamt01400105(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -198,7 +199,7 @@ class PaymentRole1ChoiceCamt01400105:
 
 
 @dataclass
-class ProxyAccountType1ChoiceCamt01400105:
+class ProxyAccountType1ChoiceCamt01400105(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -222,7 +223,7 @@ class ProxyAccountType1ChoiceCamt01400105:
 
 
 @dataclass
-class StructuredLongPostalAddress1Camt01400105:
+class StructuredLongPostalAddress1Camt01400105(ISO20022MessageElement):
     bldg_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -348,7 +349,7 @@ class StructuredLongPostalAddress1Camt01400105:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Camt01400105:
+class SupplementaryDataEnvelope1Camt01400105(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -359,7 +360,7 @@ class SupplementaryDataEnvelope1Camt01400105:
 
 
 @dataclass
-class SystemMemberType1ChoiceCamt01400105:
+class SystemMemberType1ChoiceCamt01400105(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -383,7 +384,7 @@ class SystemMemberType1ChoiceCamt01400105:
 
 
 @dataclass
-class ClearingSystemMemberIdentification2Camt01400105:
+class ClearingSystemMemberIdentification2Camt01400105(ISO20022MessageElement):
     clr_sys_id: Optional[ClearingSystemIdentification2ChoiceCamt01400105] = field(
         default=None,
         metadata={
@@ -406,7 +407,7 @@ class ClearingSystemMemberIdentification2Camt01400105:
 
 
 @dataclass
-class ErrorHandling1ChoiceCamt01400105:
+class ErrorHandling1ChoiceCamt01400105(ISO20022MessageElement):
     cd: Optional[ErrorHandling1Code] = field(
         default=None,
         metadata={
@@ -429,7 +430,7 @@ class ErrorHandling1ChoiceCamt01400105:
 
 
 @dataclass
-class GenericAccountIdentification1Camt01400105:
+class GenericAccountIdentification1Camt01400105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -462,7 +463,7 @@ class GenericAccountIdentification1Camt01400105:
 
 
 @dataclass
-class GenericFinancialIdentification1Camt01400105:
+class GenericFinancialIdentification1Camt01400105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -495,7 +496,7 @@ class GenericFinancialIdentification1Camt01400105:
 
 
 @dataclass
-class LongPostalAddress1ChoiceCamt01400105:
+class LongPostalAddress1ChoiceCamt01400105(ISO20022MessageElement):
     ustrd: Optional[str] = field(
         default=None,
         metadata={
@@ -517,7 +518,7 @@ class LongPostalAddress1ChoiceCamt01400105:
 
 
 @dataclass
-class ProxyAccountIdentification1Camt01400105:
+class ProxyAccountIdentification1Camt01400105(ISO20022MessageElement):
     tp: Optional[ProxyAccountType1ChoiceCamt01400105] = field(
         default=None,
         metadata={
@@ -540,7 +541,7 @@ class ProxyAccountIdentification1Camt01400105:
 
 
 @dataclass
-class RequestType4ChoiceCamt01400105:
+class RequestType4ChoiceCamt01400105(ISO20022MessageElement):
     pmt_ctrl: Optional[str] = field(
         default=None,
         metadata={
@@ -572,7 +573,7 @@ class RequestType4ChoiceCamt01400105:
 
 
 @dataclass
-class SupplementaryData1Camt01400105:
+class SupplementaryData1Camt01400105(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -595,7 +596,7 @@ class SupplementaryData1Camt01400105:
 
 
 @dataclass
-class SystemMemberStatus1ChoiceCamt01400105:
+class SystemMemberStatus1ChoiceCamt01400105(ISO20022MessageElement):
     cd: Optional[MemberStatus1Code] = field(
         default=None,
         metadata={
@@ -617,7 +618,7 @@ class SystemMemberStatus1ChoiceCamt01400105:
 
 
 @dataclass
-class AccountIdentification4ChoiceCamt01400105:
+class AccountIdentification4ChoiceCamt01400105(ISO20022MessageElement):
     iban: Optional[str] = field(
         default=None,
         metadata={
@@ -638,7 +639,7 @@ class AccountIdentification4ChoiceCamt01400105:
 
 
 @dataclass
-class CommunicationAddress10Camt01400105:
+class CommunicationAddress10Camt01400105(ISO20022MessageElement):
     pstl_adr: Optional[LongPostalAddress1ChoiceCamt01400105] = field(
         default=None,
         metadata={
@@ -680,7 +681,7 @@ class CommunicationAddress10Camt01400105:
 
 
 @dataclass
-class ErrorHandling3Camt01400105:
+class ErrorHandling3Camt01400105(ISO20022MessageElement):
     err: Optional[ErrorHandling1ChoiceCamt01400105] = field(
         default=None,
         metadata={
@@ -703,7 +704,7 @@ class ErrorHandling3Camt01400105:
 
 
 @dataclass
-class MemberIdentification3ChoiceCamt01400105:
+class MemberIdentification3ChoiceCamt01400105(ISO20022MessageElement):
     bicfi: Optional[str] = field(
         default=None,
         metadata={
@@ -732,7 +733,7 @@ class MemberIdentification3ChoiceCamt01400105:
 
 
 @dataclass
-class MessageHeader7Camt01400105:
+class MessageHeader7Camt01400105(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -781,7 +782,7 @@ class MessageHeader7Camt01400105:
 
 
 @dataclass
-class CashAccount40Camt01400105:
+class CashAccount40Camt01400105(ISO20022MessageElement):
     id: Optional[AccountIdentification4ChoiceCamt01400105] = field(
         default=None,
         metadata={
@@ -828,7 +829,7 @@ class CashAccount40Camt01400105:
 
 
 @dataclass
-class ContactIdentificationAndAddress2Camt01400105:
+class ContactIdentificationAndAddress2Camt01400105(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -860,7 +861,7 @@ class ContactIdentificationAndAddress2Camt01400105:
 
 
 @dataclass
-class Member7Camt01400105:
+class Member7Camt01400105(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -922,7 +923,7 @@ class Member7Camt01400105:
 
 
 @dataclass
-class MemberReportOrError8ChoiceCamt01400105:
+class MemberReportOrError8ChoiceCamt01400105(ISO20022MessageElement):
     mmb: Optional[Member7Camt01400105] = field(
         default=None,
         metadata={
@@ -942,7 +943,7 @@ class MemberReportOrError8ChoiceCamt01400105:
 
 
 @dataclass
-class MemberReport6Camt01400105:
+class MemberReport6Camt01400105(ISO20022MessageElement):
     mmb_id: Optional[MemberIdentification3ChoiceCamt01400105] = field(
         default=None,
         metadata={
@@ -964,7 +965,7 @@ class MemberReport6Camt01400105:
 
 
 @dataclass
-class MemberReportOrError7ChoiceCamt01400105:
+class MemberReportOrError7ChoiceCamt01400105(ISO20022MessageElement):
     rpt: list[MemberReport6Camt01400105] = field(
         default_factory=list,
         metadata={
@@ -984,7 +985,7 @@ class MemberReportOrError7ChoiceCamt01400105:
 
 
 @dataclass
-class ReturnMemberV05Camt01400105:
+class ReturnMemberV05Camt01400105(ISO20022MessageElement):
     msg_hdr: Optional[MessageHeader7Camt01400105] = field(
         default=None,
         metadata={
@@ -1014,7 +1015,7 @@ class ReturnMemberV05Camt01400105:
 
 
 @dataclass
-class Camt01400105:
+class Camt01400105(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:camt.014.001.05"
 

@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlPeriod, XmlTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.cain.enums import (
     AttestationValue1Code,
     BalanceType15Code,
@@ -66,7 +67,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:cain.019.001.03"
 
 
 @dataclass
-class AccountDetails4Cain01900103:
+class AccountDetails4Cain01900103(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -99,7 +100,7 @@ class AccountDetails4Cain01900103:
 
 
 @dataclass
-class AdditionalData1Cain01900103:
+class AdditionalData1Cain01900103(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -123,7 +124,7 @@ class AdditionalData1Cain01900103:
 
 
 @dataclass
-class AdditionalRiskData1Cain01900103:
+class AdditionalRiskData1Cain01900103(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -149,7 +150,7 @@ class AdditionalRiskData1Cain01900103:
 
 
 @dataclass
-class Address2Cain01900103:
+class Address2Cain01900103(ISO20022MessageElement):
     adr_line1: Optional[str] = field(
         default=None,
         metadata={
@@ -260,7 +261,7 @@ class Address2Cain01900103:
 
 
 @dataclass
-class Authority1Cain01900103:
+class Authority1Cain01900103(ISO20022MessageElement):
     ctry: Optional[str] = field(
         default=None,
         metadata={
@@ -321,7 +322,7 @@ class Authority1Cain01900103:
 
 
 @dataclass
-class BatchManagementInformation1Cain01900103:
+class BatchManagementInformation1Cain01900103(ISO20022MessageElement):
     colltn_id: Optional[str] = field(
         default=None,
         metadata={
@@ -366,7 +367,7 @@ class BatchManagementInformation1Cain01900103:
 
 
 @dataclass
-class CardholderName2Cain01900103:
+class CardholderName2Cain01900103(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -410,7 +411,7 @@ class CardholderName2Cain01900103:
 
 
 @dataclass
-class CardholderName3Cain01900103:
+class CardholderName3Cain01900103(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -454,7 +455,7 @@ class CardholderName3Cain01900103:
 
 
 @dataclass
-class ContactPersonal1Cain01900103:
+class ContactPersonal1Cain01900103(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -601,7 +602,7 @@ class ContactPersonal1Cain01900103:
 
 
 @dataclass
-class DateTime2Cain01900103:
+class DateTime2Cain01900103(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -622,7 +623,7 @@ class DateTime2Cain01900103:
 
 
 @dataclass
-class EcommerceData1Cain01900103:
+class EcommerceData1Cain01900103(ISO20022MessageElement):
     class Meta:
         name = "ECommerceData1"
 
@@ -651,7 +652,7 @@ class EcommerceData1Cain01900103:
 
 
 @dataclass
-class EncryptedData2ChoiceCain01900103:
+class EncryptedData2ChoiceCain01900103(ISO20022MessageElement):
     binry: Optional[bytes] = field(
         default=None,
         metadata={
@@ -675,7 +676,7 @@ class EncryptedData2ChoiceCain01900103:
 
 
 @dataclass
-class Jurisdiction2Cain01900103:
+class Jurisdiction2Cain01900103(ISO20022MessageElement):
     dmst_ind: Optional[bool] = field(
         default=None,
         metadata={
@@ -697,7 +698,7 @@ class Jurisdiction2Cain01900103:
 
 
 @dataclass
-class Kekidentifier2Cain01900103:
+class Kekidentifier2Cain01900103(ISO20022MessageElement):
     class Meta:
         name = "KEKIdentifier2"
 
@@ -747,7 +748,7 @@ class Kekidentifier2Cain01900103:
 
 
 @dataclass
-class Kekidentifier6Cain01900103:
+class Kekidentifier6Cain01900103(ISO20022MessageElement):
     class Meta:
         name = "KEKIdentifier6"
 
@@ -796,7 +797,7 @@ class Kekidentifier6Cain01900103:
 
 
 @dataclass
-class LocalAddress1Cain01900103:
+class LocalAddress1Cain01900103(ISO20022MessageElement):
     adr_line1: Optional[str] = field(
         default=None,
         metadata={
@@ -880,7 +881,7 @@ class LocalAddress1Cain01900103:
 
 
 @dataclass
-class Macdata1Cain01900103:
+class Macdata1Cain01900103(ISO20022MessageElement):
     class Meta:
         name = "MACData1"
 
@@ -971,7 +972,7 @@ class Macdata1Cain01900103:
 
 
 @dataclass
-class Reconciliation4Cain01900103:
+class Reconciliation4Cain01900103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1003,7 +1004,7 @@ class Reconciliation4Cain01900103:
 
 
 @dataclass
-class SpecialProgrammeDetails2Cain01900103:
+class SpecialProgrammeDetails2Cain01900103(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1027,7 +1028,7 @@ class SpecialProgrammeDetails2Cain01900103:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Cain01900103:
+class SupplementaryDataEnvelope1Cain01900103(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -1038,7 +1039,7 @@ class SupplementaryDataEnvelope1Cain01900103:
 
 
 @dataclass
-class Token4Cain01900103:
+class Token4Cain01900103(ISO20022MessageElement):
     pmt_tkn: Optional[str] = field(
         default=None,
         metadata={
@@ -1097,7 +1098,7 @@ class Token4Cain01900103:
 
 
 @dataclass
-class Action16Cain01900103:
+class Action16Cain01900103(ISO20022MessageElement):
     tp: Optional[ActionType14Code] = field(
         default=None,
         metadata={
@@ -1229,7 +1230,7 @@ class Action16Cain01900103:
 
 
 @dataclass
-class AdditionalAmounts4Cain01900103:
+class AdditionalAmounts4Cain01900103(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -1292,7 +1293,7 @@ class AdditionalAmounts4Cain01900103:
 
 
 @dataclass
-class AdditionalData2Cain01900103:
+class AdditionalData2Cain01900103(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -1314,7 +1315,7 @@ class AdditionalData2Cain01900103:
 
 
 @dataclass
-class AdditionalFee3Cain01900103:
+class AdditionalFee3Cain01900103(ISO20022MessageElement):
     tp: Optional[TypeOfAmount21Code] = field(
         default=None,
         metadata={
@@ -1444,7 +1445,7 @@ class AdditionalFee3Cain01900103:
 
 
 @dataclass
-class AdditionalService2Cain01900103:
+class AdditionalService2Cain01900103(ISO20022MessageElement):
     tp: Optional[AdditionalServiceType2Code] = field(
         default=None,
         metadata={
@@ -1493,7 +1494,7 @@ class AdditionalService2Cain01900103:
 
 
 @dataclass
-class AlgorithmIdentification26Cain01900103:
+class AlgorithmIdentification26Cain01900103(ISO20022MessageElement):
     algo: Optional[Algorithm8Code] = field(
         default=None,
         metadata={
@@ -1514,7 +1515,7 @@ class AlgorithmIdentification26Cain01900103:
 
 
 @dataclass
-class Balance29Cain01900103:
+class Balance29Cain01900103(ISO20022MessageElement):
     tp: Optional[BalanceType15Code] = field(
         default=None,
         metadata={
@@ -1582,7 +1583,7 @@ class Balance29Cain01900103:
 
 
 @dataclass
-class CardData12Cain01900103:
+class CardData12Cain01900103(ISO20022MessageElement):
     pan: Optional[str] = field(
         default=None,
         metadata={
@@ -1722,7 +1723,7 @@ class CardData12Cain01900103:
 
 
 @dataclass
-class ContentInformationType41Cain01900103:
+class ContentInformationType41Cain01900103(ISO20022MessageElement):
     macdata: Optional[Macdata1Cain01900103] = field(
         default=None,
         metadata={
@@ -1745,7 +1746,7 @@ class ContentInformationType41Cain01900103:
 
 
 @dataclass
-class Context20Cain01900103:
+class Context20Cain01900103(ISO20022MessageElement):
     card_data_ntry_md: Optional[CardDataReading10Code] = field(
         default=None,
         metadata={
@@ -2023,7 +2024,7 @@ class Context20Cain01900103:
 
 
 @dataclass
-class Credentials3Cain01900103:
+class Credentials3Cain01900103(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -2085,7 +2086,7 @@ class Credentials3Cain01900103:
 
 
 @dataclass
-class DetailedAmount22Cain01900103:
+class DetailedAmount22Cain01900103(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -2161,7 +2162,7 @@ class DetailedAmount22Cain01900103:
 
 
 @dataclass
-class EncryptedDataElement2Cain01900103:
+class EncryptedDataElement2Cain01900103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -2202,7 +2203,7 @@ class EncryptedDataElement2Cain01900103:
 
 
 @dataclass
-class ErrorDetails3Cain01900103:
+class ErrorDetails3Cain01900103(ISO20022MessageElement):
     tp: Optional[MessageError1Code] = field(
         default=None,
         metadata={
@@ -2255,7 +2256,7 @@ class ErrorDetails3Cain01900103:
 
 
 @dataclass
-class Exemption2Cain01900103:
+class Exemption2Cain01900103(ISO20022MessageElement):
     tp: Optional[Exemption2Code] = field(
         default=None,
         metadata={
@@ -2287,7 +2288,7 @@ class Exemption2Cain01900103:
 
 
 @dataclass
-class GenericIdentification183Cain01900103:
+class GenericIdentification183Cain01900103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -2347,7 +2348,7 @@ class GenericIdentification183Cain01900103:
 
 
 @dataclass
-class InstalmentAmountDetails3Cain01900103:
+class InstalmentAmountDetails3Cain01900103(ISO20022MessageElement):
     tp: Optional[InstalmentAmountDetailsType3Code] = field(
         default=None,
         metadata={
@@ -2409,7 +2410,7 @@ class InstalmentAmountDetails3Cain01900103:
 
 
 @dataclass
-class InterestRateDetails2Cain01900103:
+class InterestRateDetails2Cain01900103(ISO20022MessageElement):
     tp: Optional[InterestRate1Code] = field(
         default=None,
         metadata={
@@ -2450,7 +2451,7 @@ class InterestRateDetails2Cain01900103:
 
 
 @dataclass
-class LocalData13Cain01900103:
+class LocalData13Cain01900103(ISO20022MessageElement):
     lang: Optional[str] = field(
         default=None,
         metadata={
@@ -2498,7 +2499,7 @@ class LocalData13Cain01900103:
 
 
 @dataclass
-class LocalData14Cain01900103:
+class LocalData14Cain01900103(ISO20022MessageElement):
     lang: Optional[str] = field(
         default=None,
         metadata={
@@ -2550,7 +2551,7 @@ class LocalData14Cain01900103:
 
 
 @dataclass
-class Parameter14Cain01900103:
+class Parameter14Cain01900103(ISO20022MessageElement):
     ncrptn_frmt: Optional[EncryptionFormat3Code] = field(
         default=None,
         metadata={
@@ -2581,7 +2582,7 @@ class Parameter14Cain01900103:
 
 
 @dataclass
-class Parameter7Cain01900103:
+class Parameter7Cain01900103(ISO20022MessageElement):
     initlstn_vctr: Optional[bytes] = field(
         default=None,
         metadata={
@@ -2604,7 +2605,7 @@ class Parameter7Cain01900103:
 
 
 @dataclass
-class ProgrammeMode5Cain01900103:
+class ProgrammeMode5Cain01900103(ISO20022MessageElement):
     apld_id: Optional[str] = field(
         default=None,
         metadata={
@@ -2627,7 +2628,7 @@ class ProgrammeMode5Cain01900103:
 
 
 @dataclass
-class RecommendationAction1Cain01900103:
+class RecommendationAction1Cain01900103(ISO20022MessageElement):
     actn: Optional[ActionType8Code] = field(
         default=None,
         metadata={
@@ -2659,7 +2660,7 @@ class RecommendationAction1Cain01900103:
 
 
 @dataclass
-class RelativeDistinguishedName1Cain01900103:
+class RelativeDistinguishedName1Cain01900103(ISO20022MessageElement):
     attr_tp: Optional[AttributeType1Code] = field(
         default=None,
         metadata={
@@ -2683,7 +2684,7 @@ class RelativeDistinguishedName1Cain01900103:
 
 
 @dataclass
-class RiskInputData2Cain01900103:
+class RiskInputData2Cain01900103(ISO20022MessageElement):
     ntty_tp: Optional[PartyType28Code] = field(
         default=None,
         metadata={
@@ -2727,7 +2728,7 @@ class RiskInputData2Cain01900103:
 
 
 @dataclass
-class SettlementService6Cain01900103:
+class SettlementService6Cain01900103(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -2829,7 +2830,7 @@ class SettlementService6Cain01900103:
 
 
 @dataclass
-class SpecialProgrammeQualification2Cain01900103:
+class SpecialProgrammeQualification2Cain01900103(ISO20022MessageElement):
     prgrmm: Optional[str] = field(
         default=None,
         metadata={
@@ -2851,7 +2852,7 @@ class SpecialProgrammeQualification2Cain01900103:
 
 
 @dataclass
-class SupplementaryData1Cain01900103:
+class SupplementaryData1Cain01900103(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -2874,7 +2875,7 @@ class SupplementaryData1Cain01900103:
 
 
 @dataclass
-class Terminal8Cain01900103:
+class Terminal8Cain01900103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -2897,7 +2898,7 @@ class Terminal8Cain01900103:
 
 
 @dataclass
-class Token3Cain01900103:
+class Token3Cain01900103(ISO20022MessageElement):
     pmt_tkn: Optional[str] = field(
         default=None,
         metadata={
@@ -3016,7 +3017,7 @@ class Token3Cain01900103:
 
 
 @dataclass
-class Traceability10Cain01900103:
+class Traceability10Cain01900103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -3092,7 +3093,7 @@ class Traceability10Cain01900103:
 
 
 @dataclass
-class TransactionCharacteristics1Cain01900103:
+class TransactionCharacteristics1Cain01900103(ISO20022MessageElement):
     tx_tp: Optional[str] = field(
         default=None,
         metadata={
@@ -3188,7 +3189,7 @@ class TransactionCharacteristics1Cain01900103:
 
 
 @dataclass
-class TransactionIdentification54Cain01900103:
+class TransactionIdentification54Cain01900103(ISO20022MessageElement):
     lcl_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -3367,7 +3368,7 @@ class TransactionIdentification54Cain01900103:
 
 
 @dataclass
-class Verification7Cain01900103:
+class Verification7Cain01900103(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -3455,7 +3456,7 @@ class Verification7Cain01900103:
 
 
 @dataclass
-class AccountBalance3Cain01900103:
+class AccountBalance3Cain01900103(ISO20022MessageElement):
     acct_tp: Optional[str] = field(
         default=None,
         metadata={
@@ -3478,7 +3479,7 @@ class AccountBalance3Cain01900103:
 
 
 @dataclass
-class AlgorithmIdentification25Cain01900103:
+class AlgorithmIdentification25Cain01900103(ISO20022MessageElement):
     algo: Optional[Algorithm23Code] = field(
         default=None,
         metadata={
@@ -3499,7 +3500,7 @@ class AlgorithmIdentification25Cain01900103:
 
 
 @dataclass
-class AlgorithmIdentification28Cain01900103:
+class AlgorithmIdentification28Cain01900103(ISO20022MessageElement):
     algo: Optional[Algorithm13Code] = field(
         default=None,
         metadata={
@@ -3520,7 +3521,7 @@ class AlgorithmIdentification28Cain01900103:
 
 
 @dataclass
-class Cardholder22Cain01900103:
+class Cardholder22Cain01900103(ISO20022MessageElement):
     nm: Optional[CardholderName3Cain01900103] = field(
         default=None,
         metadata={
@@ -3588,7 +3589,7 @@ class Cardholder22Cain01900103:
 
 
 @dataclass
-class CertificateIssuer1Cain01900103:
+class CertificateIssuer1Cain01900103(ISO20022MessageElement):
     rltv_dstngshd_nm: list[RelativeDistinguishedName1Cain01900103] = field(
         default_factory=list,
         metadata={
@@ -3601,7 +3602,7 @@ class CertificateIssuer1Cain01900103:
 
 
 @dataclass
-class EncryptedData2Cain01900103:
+class EncryptedData2Cain01900103(ISO20022MessageElement):
     ctrl: Optional[str] = field(
         default=None,
         metadata={
@@ -3695,7 +3696,7 @@ class EncryptedData2Cain01900103:
 
 
 @dataclass
-class Header71Cain01900103:
+class Header71Cain01900103(ISO20022MessageElement):
     msg_fctn: Optional[str] = field(
         default=None,
         metadata={
@@ -3790,7 +3791,7 @@ class Header71Cain01900103:
 
 
 @dataclass
-class Parameter13Cain01900103:
+class Parameter13Cain01900103(ISO20022MessageElement):
     dgst_algo: Optional[Algorithm20Code] = field(
         default=None,
         metadata={
@@ -3810,7 +3811,7 @@ class Parameter13Cain01900103:
 
 
 @dataclass
-class PartyIdentification285Cain01900103:
+class PartyIdentification285Cain01900103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -3880,7 +3881,7 @@ class PartyIdentification285Cain01900103:
 
 
 @dataclass
-class PartyIdentification286Cain01900103:
+class PartyIdentification286Cain01900103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -3949,7 +3950,7 @@ class PartyIdentification286Cain01900103:
 
 
 @dataclass
-class Plan3Cain01900103:
+class Plan3Cain01900103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -4166,7 +4167,7 @@ class Plan3Cain01900103:
 
 
 @dataclass
-class ProcessingResult22Cain01900103:
+class ProcessingResult22Cain01900103(ISO20022MessageElement):
     rspn_src_id: Optional[str] = field(
         default=None,
         metadata={
@@ -4284,7 +4285,7 @@ class ProcessingResult22Cain01900103:
 
 
 @dataclass
-class RiskAssessment3Cain01900103:
+class RiskAssessment3Cain01900103(ISO20022MessageElement):
     ntty_id: Optional[str] = field(
         default=None,
         metadata={
@@ -4405,7 +4406,7 @@ class RiskAssessment3Cain01900103:
 
 
 @dataclass
-class StrongCustomerAuthentication2Cain01900103:
+class StrongCustomerAuthentication2Cain01900103(ISO20022MessageElement):
     sbjt_to_sca: Optional[bool] = field(
         default=None,
         metadata={
@@ -4451,7 +4452,7 @@ class StrongCustomerAuthentication2Cain01900103:
 
 
 @dataclass
-class TransactionAmounts4Cain01900103:
+class TransactionAmounts4Cain01900103(ISO20022MessageElement):
     amt_qlfr: Optional[TypeOfAmount22Code] = field(
         default=None,
         metadata={
@@ -4551,7 +4552,7 @@ class TransactionAmounts4Cain01900103:
 
 
 @dataclass
-class AlgorithmIdentification27Cain01900103:
+class AlgorithmIdentification27Cain01900103(ISO20022MessageElement):
     algo: Optional[Algorithm7Code] = field(
         default=None,
         metadata={
@@ -4572,7 +4573,7 @@ class AlgorithmIdentification27Cain01900103:
 
 
 @dataclass
-class EncryptedContent8Cain01900103:
+class EncryptedContent8Cain01900103(ISO20022MessageElement):
     cntt_tp: Optional[ContentType2Code] = field(
         default=None,
         metadata={
@@ -4603,7 +4604,7 @@ class EncryptedContent8Cain01900103:
 
 
 @dataclass
-class Instalment6Cain01900103:
+class Instalment6Cain01900103(ISO20022MessageElement):
     pmt_seq_nb: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -4625,7 +4626,7 @@ class Instalment6Cain01900103:
 
 
 @dataclass
-class IssuerAndSerialNumber1Cain01900103:
+class IssuerAndSerialNumber1Cain01900103(ISO20022MessageElement):
     issr: Optional[CertificateIssuer1Cain01900103] = field(
         default=None,
         metadata={
@@ -4650,7 +4651,7 @@ class IssuerAndSerialNumber1Cain01900103:
 
 
 @dataclass
-class Kek6Cain01900103:
+class Kek6Cain01900103(ISO20022MessageElement):
     class Meta:
         name = "KEK6"
 
@@ -4696,7 +4697,7 @@ class Kek6Cain01900103:
 
 
 @dataclass
-class RiskContext3Cain01900103:
+class RiskContext3Cain01900103(ISO20022MessageElement):
     inpt_data: list[RiskInputData2Cain01900103] = field(
         default_factory=list,
         metadata={
@@ -4716,7 +4717,7 @@ class RiskContext3Cain01900103:
 
 
 @dataclass
-class Wallet3Cain01900103:
+class Wallet3Cain01900103(ISO20022MessageElement):
     prvdr: Optional[PartyIdentification285Cain01900103] = field(
         default=None,
         metadata={
@@ -4910,7 +4911,7 @@ class Wallet3Cain01900103:
 
 
 @dataclass
-class Recipient5ChoiceCain01900103:
+class Recipient5ChoiceCain01900103(ISO20022MessageElement):
     issr_and_srl_nb: Optional[IssuerAndSerialNumber1Cain01900103] = field(
         default=None,
         metadata={
@@ -4930,7 +4931,7 @@ class Recipient5ChoiceCain01900103:
 
 
 @dataclass
-class KeyTransport6Cain01900103:
+class KeyTransport6Cain01900103(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -4974,7 +4975,7 @@ class KeyTransport6Cain01900103:
 
 
 @dataclass
-class Recipient7ChoiceCain01900103:
+class Recipient7ChoiceCain01900103(ISO20022MessageElement):
     key_trnsprt: Optional[KeyTransport6Cain01900103] = field(
         default=None,
         metadata={
@@ -5002,7 +5003,7 @@ class Recipient7ChoiceCain01900103:
 
 
 @dataclass
-class EnvelopedData12Cain01900103:
+class EnvelopedData12Cain01900103(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -5033,7 +5034,7 @@ class EnvelopedData12Cain01900103:
 
 
 @dataclass
-class ProtectedData2Cain01900103:
+class ProtectedData2Cain01900103(ISO20022MessageElement):
     cntt_tp: Optional[ContentType3Code] = field(
         default=None,
         metadata={
@@ -5062,7 +5063,7 @@ class ProtectedData2Cain01900103:
 
 
 @dataclass
-class VerificationResponseV03Cain01900103:
+class VerificationResponseV03Cain01900103(ISO20022MessageElement):
     hdr: Optional[Header71Cain01900103] = field(
         default=None,
         metadata={
@@ -5393,7 +5394,7 @@ class VerificationResponseV03Cain01900103:
 
 
 @dataclass
-class Cain01900103:
+class Cain01900103(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:cain.019.001.03"
 

@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.tsmt.enums import (
     Action2Code,
     BaselineStatus2Code,
@@ -14,7 +15,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:tsmt.028.001.03"
 
 
 @dataclass
-class Bicidentification1Tsmt02800103:
+class Bicidentification1Tsmt02800103(ISO20022MessageElement):
     class Meta:
         name = "BICIdentification1"
 
@@ -31,7 +32,7 @@ class Bicidentification1Tsmt02800103:
 
 
 @dataclass
-class DocumentIdentification3Tsmt02800103:
+class DocumentIdentification3Tsmt02800103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -57,7 +58,7 @@ class DocumentIdentification3Tsmt02800103:
 
 
 @dataclass
-class MessageIdentification1Tsmt02800103:
+class MessageIdentification1Tsmt02800103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -81,7 +82,7 @@ class MessageIdentification1Tsmt02800103:
 
 
 @dataclass
-class Reason2Tsmt02800103:
+class Reason2Tsmt02800103(ISO20022MessageElement):
     desc: Optional[str] = field(
         default=None,
         metadata={
@@ -96,7 +97,7 @@ class Reason2Tsmt02800103:
 
 
 @dataclass
-class SimpleIdentificationInformationTsmt02800103:
+class SimpleIdentificationInformationTsmt02800103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -111,7 +112,7 @@ class SimpleIdentificationInformationTsmt02800103:
 
 
 @dataclass
-class DocumentIdentification5Tsmt02800103:
+class DocumentIdentification5Tsmt02800103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -135,7 +136,7 @@ class DocumentIdentification5Tsmt02800103:
 
 
 @dataclass
-class PendingActivity2Tsmt02800103:
+class PendingActivity2Tsmt02800103(ISO20022MessageElement):
     tp: Optional[Action2Code] = field(
         default=None,
         metadata={
@@ -158,7 +159,7 @@ class PendingActivity2Tsmt02800103:
 
 
 @dataclass
-class TransactionStatus3Tsmt02800103:
+class TransactionStatus3Tsmt02800103(ISO20022MessageElement):
     sts: Optional[BaselineStatus2Code] = field(
         default=None,
         metadata={
@@ -171,7 +172,7 @@ class TransactionStatus3Tsmt02800103:
 
 
 @dataclass
-class TransactionStatus4Tsmt02800103:
+class TransactionStatus4Tsmt02800103(ISO20022MessageElement):
     sts: Optional[BaselineStatus3Code] = field(
         default=None,
         metadata={
@@ -184,7 +185,7 @@ class TransactionStatus4Tsmt02800103:
 
 
 @dataclass
-class StatusChangeRequestNotificationV03Tsmt02800103:
+class StatusChangeRequestNotificationV03Tsmt02800103(ISO20022MessageElement):
     ntfctn_id: Optional[MessageIdentification1Tsmt02800103] = field(
         default=None,
         metadata={
@@ -266,7 +267,7 @@ class StatusChangeRequestNotificationV03Tsmt02800103:
 
 
 @dataclass
-class Tsmt02800103:
+class Tsmt02800103(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.028.001.03"
 

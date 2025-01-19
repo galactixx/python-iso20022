@@ -3,6 +3,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import AddressType2Code, NoReasonCode
 from python_iso20022.semt.semt_042_001_01.enums import (
     HoldingAccountLevel1Code,
@@ -14,7 +15,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:semt.042.001.01"
 
 
 @dataclass
-class DateAndDateTimeChoiceSemt04200101:
+class DateAndDateTimeChoiceSemt04200101(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -34,7 +35,7 @@ class DateAndDateTimeChoiceSemt04200101:
 
 
 @dataclass
-class GenericIdentification30Semt04200101:
+class GenericIdentification30Semt04200101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -69,7 +70,7 @@ class GenericIdentification30Semt04200101:
 
 
 @dataclass
-class GenericIdentification36Semt04200101:
+class GenericIdentification36Semt04200101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -105,7 +106,7 @@ class GenericIdentification36Semt04200101:
 
 
 @dataclass
-class IdentificationSource3ChoiceSemt04200101:
+class IdentificationSource3ChoiceSemt04200101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -129,7 +130,7 @@ class IdentificationSource3ChoiceSemt04200101:
 
 
 @dataclass
-class MessageIdentification1Semt04200101:
+class MessageIdentification1Semt04200101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -153,7 +154,7 @@ class MessageIdentification1Semt04200101:
 
 
 @dataclass
-class PaginationSemt04200101:
+class PaginationSemt04200101(ISO20022MessageElement):
     pg_nb: Optional[str] = field(
         default=None,
         metadata={
@@ -176,7 +177,7 @@ class PaginationSemt04200101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Semt04200101:
+class SupplementaryDataEnvelope1Semt04200101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -187,7 +188,7 @@ class SupplementaryDataEnvelope1Semt04200101:
 
 
 @dataclass
-class NumberOfItemsPerStatus1Semt04200101:
+class NumberOfItemsPerStatus1Semt04200101(ISO20022MessageElement):
     sts: Optional[ReportItemStatus1Code] = field(
         default=None,
         metadata={
@@ -210,7 +211,7 @@ class NumberOfItemsPerStatus1Semt04200101:
 
 
 @dataclass
-class OtherIdentification1Semt04200101:
+class OtherIdentification1Semt04200101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -244,7 +245,7 @@ class OtherIdentification1Semt04200101:
 
 
 @dataclass
-class PostalAddress1Semt04200101:
+class PostalAddress1Semt04200101(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -327,7 +328,7 @@ class PostalAddress1Semt04200101:
 
 
 @dataclass
-class ReportItemRejectionReason1ChoiceSemt04200101:
+class ReportItemRejectionReason1ChoiceSemt04200101(ISO20022MessageElement):
     cd: Optional[HoldingRejectionReason41Code] = field(
         default=None,
         metadata={
@@ -347,7 +348,7 @@ class ReportItemRejectionReason1ChoiceSemt04200101:
 
 
 @dataclass
-class SecuritiesAccount19Semt04200101:
+class SecuritiesAccount19Semt04200101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -380,7 +381,7 @@ class SecuritiesAccount19Semt04200101:
 
 
 @dataclass
-class StatementReference1Semt04200101:
+class StatementReference1Semt04200101(ISO20022MessageElement):
     stmt_id: Optional[str] = field(
         default=None,
         metadata={
@@ -412,7 +413,7 @@ class StatementReference1Semt04200101:
 
 
 @dataclass
-class SupplementaryData1Semt04200101:
+class SupplementaryData1Semt04200101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -435,7 +436,7 @@ class SupplementaryData1Semt04200101:
 
 
 @dataclass
-class NameAndAddress5Semt04200101:
+class NameAndAddress5Semt04200101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -458,7 +459,7 @@ class NameAndAddress5Semt04200101:
 
 
 @dataclass
-class SecurityIdentification19Semt04200101:
+class SecurityIdentification19Semt04200101(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -489,7 +490,7 @@ class SecurityIdentification19Semt04200101:
 
 
 @dataclass
-class PartyIdentification71ChoiceSemt04200101:
+class PartyIdentification71ChoiceSemt04200101(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -518,7 +519,7 @@ class PartyIdentification71ChoiceSemt04200101:
 
 
 @dataclass
-class ReportItem1Semt04200101:
+class ReportItem1Semt04200101(ISO20022MessageElement):
     acct_id: Optional[SecuritiesAccount19Semt04200101] = field(
         default=None,
         metadata={
@@ -556,7 +557,7 @@ class ReportItem1Semt04200101:
 
 
 @dataclass
-class PartyIdentification100Semt04200101:
+class PartyIdentification100Semt04200101(ISO20022MessageElement):
     id: Optional[PartyIdentification71ChoiceSemt04200101] = field(
         default=None,
         metadata={
@@ -578,7 +579,7 @@ class PartyIdentification100Semt04200101:
 
 
 @dataclass
-class ReportItemStatus1Semt04200101:
+class ReportItemStatus1Semt04200101(ISO20022MessageElement):
     xcptn: Optional[ReportItemRejectionReason1ChoiceSemt04200101] = field(
         default=None,
         metadata={
@@ -609,7 +610,7 @@ class ReportItemStatus1Semt04200101:
 
 
 @dataclass
-class ReportItemStatus1ChoiceSemt04200101:
+class ReportItemStatus1ChoiceSemt04200101(ISO20022MessageElement):
     accptd: Optional[NoReasonCode] = field(
         default=None,
         metadata={
@@ -637,7 +638,9 @@ class ReportItemStatus1ChoiceSemt04200101:
 
 
 @dataclass
-class SecuritiesBalanceTransparencyReportStatusAdviceV01Semt04200101:
+class SecuritiesBalanceTransparencyReportStatusAdviceV01Semt04200101(
+    ISO20022MessageElement
+):
     msg_id: Optional[MessageIdentification1Semt04200101] = field(
         default=None,
         metadata={
@@ -702,7 +705,7 @@ class SecuritiesBalanceTransparencyReportStatusAdviceV01Semt04200101:
 
 
 @dataclass
-class Semt04200101:
+class Semt04200101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:semt.042.001.01"
 

@@ -7,12 +7,13 @@ from python_iso20022.auth.auth_054_001_01.enums import (
     ClearingAccountType3Code,
     CreditQuality1Code,
 )
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.054.001.01"
 
 
 @dataclass
-class GenericIdentification168Auth05400101:
+class GenericIdentification168Auth05400101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -57,7 +58,7 @@ class GenericIdentification168Auth05400101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth05400101:
+class SupplementaryDataEnvelope1Auth05400101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -68,7 +69,7 @@ class SupplementaryDataEnvelope1Auth05400101:
 
 
 @dataclass
-class PartyIdentification118ChoiceAuth05400101:
+class PartyIdentification118ChoiceAuth05400101(ISO20022MessageElement):
     lei: Optional[str] = field(
         default=None,
         metadata={
@@ -89,7 +90,7 @@ class PartyIdentification118ChoiceAuth05400101:
 
 
 @dataclass
-class SupplementaryData1Auth05400101:
+class SupplementaryData1Auth05400101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -112,7 +113,7 @@ class SupplementaryData1Auth05400101:
 
 
 @dataclass
-class PositionAccount1Auth05400101:
+class PositionAccount1Auth05400101(ISO20022MessageElement):
     id: Optional[PartyIdentification118ChoiceAuth05400101] = field(
         default=None,
         metadata={
@@ -125,7 +126,7 @@ class PositionAccount1Auth05400101:
 
 
 @dataclass
-class MarginAccount1Auth05400101:
+class MarginAccount1Auth05400101(ISO20022MessageElement):
     id: Optional[PartyIdentification118ChoiceAuth05400101] = field(
         default=None,
         metadata={
@@ -147,7 +148,7 @@ class MarginAccount1Auth05400101:
 
 
 @dataclass
-class CollateralAccount5Auth05400101:
+class CollateralAccount5Auth05400101(ISO20022MessageElement):
     id: Optional[PartyIdentification118ChoiceAuth05400101] = field(
         default=None,
         metadata={
@@ -185,7 +186,7 @@ class CollateralAccount5Auth05400101:
 
 
 @dataclass
-class ClearingAccount1Auth05400101:
+class ClearingAccount1Auth05400101(ISO20022MessageElement):
     acct_tp: Optional[ClearingAccountType3Code] = field(
         default=None,
         metadata={
@@ -207,7 +208,7 @@ class ClearingAccount1Auth05400101:
 
 
 @dataclass
-class ClearingMember1Auth05400101:
+class ClearingMember1Auth05400101(ISO20022MessageElement):
     id: Optional[PartyIdentification118ChoiceAuth05400101] = field(
         default=None,
         metadata={
@@ -280,7 +281,7 @@ class ClearingMember1Auth05400101:
 
 
 @dataclass
-class CcpclearingMemberReportV01Auth05400101:
+class CcpclearingMemberReportV01Auth05400101(ISO20022MessageElement):
     class Meta:
         name = "CCPClearingMemberReportV01"
 
@@ -304,7 +305,7 @@ class CcpclearingMemberReportV01Auth05400101:
 
 
 @dataclass
-class Auth05400101:
+class Auth05400101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.054.001.01"
 

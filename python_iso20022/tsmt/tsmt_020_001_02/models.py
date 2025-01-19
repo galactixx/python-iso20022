@@ -3,11 +3,13 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
+
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:tsmt.020.001.02"
 
 
 @dataclass
-class MessageIdentification1Tsmt02000102:
+class MessageIdentification1Tsmt02000102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -31,7 +33,7 @@ class MessageIdentification1Tsmt02000102:
 
 
 @dataclass
-class SimpleIdentificationInformationTsmt02000102:
+class SimpleIdentificationInformationTsmt02000102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -46,7 +48,7 @@ class SimpleIdentificationInformationTsmt02000102:
 
 
 @dataclass
-class MisMatchAcceptanceV02Tsmt02000102:
+class MisMatchAcceptanceV02Tsmt02000102(ISO20022MessageElement):
     accptnc_id: Optional[MessageIdentification1Tsmt02000102] = field(
         default=None,
         metadata={
@@ -85,7 +87,7 @@ class MisMatchAcceptanceV02Tsmt02000102:
 
 
 @dataclass
-class Tsmt02000102:
+class Tsmt02000102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.020.001.02"
 

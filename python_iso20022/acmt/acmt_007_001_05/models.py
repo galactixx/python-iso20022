@@ -10,6 +10,7 @@ from python_iso20022.acmt.enums import (
     CommunicationMethod3Code,
     Frequency7Code,
 )
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     AddressType2Code,
     NamePrefix2Code,
@@ -20,7 +21,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:acmt.007.001.05"
 
 
 @dataclass
-class AccountContract2Acmt00700105:
+class AccountContract2Acmt00700105(ISO20022MessageElement):
     trgt_go_live_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -48,7 +49,7 @@ class AccountContract2Acmt00700105:
 
 
 @dataclass
-class AccountSchemeName1ChoiceAcmt00700105:
+class AccountSchemeName1ChoiceAcmt00700105(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -72,7 +73,7 @@ class AccountSchemeName1ChoiceAcmt00700105:
 
 
 @dataclass
-class ActiveCurrencyAndAmountAcmt00700105:
+class ActiveCurrencyAndAmountAcmt00700105(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -94,7 +95,7 @@ class ActiveCurrencyAndAmountAcmt00700105:
 
 
 @dataclass
-class BankTransactionCodeStructure6Acmt00700105:
+class BankTransactionCodeStructure6Acmt00700105(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -120,7 +121,7 @@ class BankTransactionCodeStructure6Acmt00700105:
 
 
 @dataclass
-class CashAccountType2ChoiceAcmt00700105:
+class CashAccountType2ChoiceAcmt00700105(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -144,7 +145,7 @@ class CashAccountType2ChoiceAcmt00700105:
 
 
 @dataclass
-class ClearingSystemIdentification2ChoiceAcmt00700105:
+class ClearingSystemIdentification2ChoiceAcmt00700105(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -168,7 +169,7 @@ class ClearingSystemIdentification2ChoiceAcmt00700105:
 
 
 @dataclass
-class CommunicationFormat1ChoiceAcmt00700105:
+class CommunicationFormat1ChoiceAcmt00700105(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -192,7 +193,7 @@ class CommunicationFormat1ChoiceAcmt00700105:
 
 
 @dataclass
-class ContractDocument1Acmt00700105:
+class ContractDocument1Acmt00700105(ISO20022MessageElement):
     ref: Optional[str] = field(
         default=None,
         metadata={
@@ -225,7 +226,7 @@ class ContractDocument1Acmt00700105:
 
 
 @dataclass
-class DateAndPlaceOfBirth1Acmt00700105:
+class DateAndPlaceOfBirth1Acmt00700105(ISO20022MessageElement):
     birth_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -269,7 +270,7 @@ class DateAndPlaceOfBirth1Acmt00700105:
 
 
 @dataclass
-class FinancialIdentificationSchemeName1ChoiceAcmt00700105:
+class FinancialIdentificationSchemeName1ChoiceAcmt00700105(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -293,7 +294,7 @@ class FinancialIdentificationSchemeName1ChoiceAcmt00700105:
 
 
 @dataclass
-class GenericIdentification13Acmt00700105:
+class GenericIdentification13Acmt00700105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -330,7 +331,7 @@ class GenericIdentification13Acmt00700105:
 
 
 @dataclass
-class GenericIdentification30Acmt00700105:
+class GenericIdentification30Acmt00700105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -365,7 +366,7 @@ class GenericIdentification30Acmt00700105:
 
 
 @dataclass
-class MessageIdentification1Acmt00700105:
+class MessageIdentification1Acmt00700105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -389,7 +390,7 @@ class MessageIdentification1Acmt00700105:
 
 
 @dataclass
-class OrganisationIdentificationSchemeName1ChoiceAcmt00700105:
+class OrganisationIdentificationSchemeName1ChoiceAcmt00700105(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -413,7 +414,7 @@ class OrganisationIdentificationSchemeName1ChoiceAcmt00700105:
 
 
 @dataclass
-class OtherContact1Acmt00700105:
+class OtherContact1Acmt00700105(ISO20022MessageElement):
     chanl_tp: Optional[str] = field(
         default=None,
         metadata={
@@ -438,7 +439,7 @@ class OtherContact1Acmt00700105:
 
 
 @dataclass
-class PersonIdentificationSchemeName1ChoiceAcmt00700105:
+class PersonIdentificationSchemeName1ChoiceAcmt00700105(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -462,7 +463,7 @@ class PersonIdentificationSchemeName1ChoiceAcmt00700105:
 
 
 @dataclass
-class ProprietaryBankTransactionCodeStructure1Acmt00700105:
+class ProprietaryBankTransactionCodeStructure1Acmt00700105(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -487,7 +488,7 @@ class ProprietaryBankTransactionCodeStructure1Acmt00700105:
 
 
 @dataclass
-class ProxyAccountType1ChoiceAcmt00700105:
+class ProxyAccountType1ChoiceAcmt00700105(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -511,7 +512,7 @@ class ProxyAccountType1ChoiceAcmt00700105:
 
 
 @dataclass
-class SkipPayloadAcmt00700105:
+class SkipPayloadAcmt00700105(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -523,7 +524,7 @@ class SkipPayloadAcmt00700105:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Acmt00700105:
+class SupplementaryDataEnvelope1Acmt00700105(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -534,7 +535,7 @@ class SupplementaryDataEnvelope1Acmt00700105:
 
 
 @dataclass
-class AddressType3ChoiceAcmt00700105:
+class AddressType3ChoiceAcmt00700105(ISO20022MessageElement):
     cd: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -554,7 +555,7 @@ class AddressType3ChoiceAcmt00700105:
 
 
 @dataclass
-class BankTransactionCodeStructure5Acmt00700105:
+class BankTransactionCodeStructure5Acmt00700105(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -578,7 +579,7 @@ class BankTransactionCodeStructure5Acmt00700105:
 
 
 @dataclass
-class Channel2ChoiceAcmt00700105:
+class Channel2ChoiceAcmt00700105(ISO20022MessageElement):
     cd: Optional[CommunicationMethod3Code] = field(
         default=None,
         metadata={
@@ -600,7 +601,7 @@ class Channel2ChoiceAcmt00700105:
 
 
 @dataclass
-class ClearingSystemMemberIdentification2Acmt00700105:
+class ClearingSystemMemberIdentification2Acmt00700105(ISO20022MessageElement):
     clr_sys_id: Optional[ClearingSystemIdentification2ChoiceAcmt00700105] = field(
         default=None,
         metadata={
@@ -623,7 +624,7 @@ class ClearingSystemMemberIdentification2Acmt00700105:
 
 
 @dataclass
-class CodeOrProprietary1ChoiceAcmt00700105:
+class CodeOrProprietary1ChoiceAcmt00700105(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -645,7 +646,7 @@ class CodeOrProprietary1ChoiceAcmt00700105:
 
 
 @dataclass
-class CommunicationMethod2ChoiceAcmt00700105:
+class CommunicationMethod2ChoiceAcmt00700105(ISO20022MessageElement):
     cd: Optional[CommunicationMethod2Code] = field(
         default=None,
         metadata={
@@ -667,7 +668,7 @@ class CommunicationMethod2ChoiceAcmt00700105:
 
 
 @dataclass
-class Contact13Acmt00700105:
+class Contact13Acmt00700105(ISO20022MessageElement):
     nm_prfx: Optional[NamePrefix2Code] = field(
         default=None,
         metadata={
@@ -792,7 +793,7 @@ class Contact13Acmt00700105:
 
 
 @dataclass
-class FixedAmountOrUnlimited1ChoiceAcmt00700105:
+class FixedAmountOrUnlimited1ChoiceAcmt00700105(ISO20022MessageElement):
     amt: Optional[ActiveCurrencyAndAmountAcmt00700105] = field(
         default=None,
         metadata={
@@ -814,7 +815,7 @@ class FixedAmountOrUnlimited1ChoiceAcmt00700105:
 
 
 @dataclass
-class GenericAccountIdentification1Acmt00700105:
+class GenericAccountIdentification1Acmt00700105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -847,7 +848,7 @@ class GenericAccountIdentification1Acmt00700105:
 
 
 @dataclass
-class GenericFinancialIdentification1Acmt00700105:
+class GenericFinancialIdentification1Acmt00700105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -880,7 +881,7 @@ class GenericFinancialIdentification1Acmt00700105:
 
 
 @dataclass
-class GenericOrganisationIdentification3Acmt00700105:
+class GenericOrganisationIdentification3Acmt00700105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -913,7 +914,7 @@ class GenericOrganisationIdentification3Acmt00700105:
 
 
 @dataclass
-class GenericPersonIdentification2Acmt00700105:
+class GenericPersonIdentification2Acmt00700105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -946,7 +947,7 @@ class GenericPersonIdentification2Acmt00700105:
 
 
 @dataclass
-class MaximumAmountByPeriod1Acmt00700105:
+class MaximumAmountByPeriod1Acmt00700105(ISO20022MessageElement):
     max_amt: Optional[ActiveCurrencyAndAmountAcmt00700105] = field(
         default=None,
         metadata={
@@ -969,7 +970,7 @@ class MaximumAmountByPeriod1Acmt00700105:
 
 
 @dataclass
-class ProxyAccountIdentification1Acmt00700105:
+class ProxyAccountIdentification1Acmt00700105(ISO20022MessageElement):
     tp: Optional[ProxyAccountType1ChoiceAcmt00700105] = field(
         default=None,
         metadata={
@@ -992,7 +993,7 @@ class ProxyAccountIdentification1Acmt00700105:
 
 
 @dataclass
-class References4Acmt00700105:
+class References4Acmt00700105(ISO20022MessageElement):
     msg_id: Optional[MessageIdentification1Acmt00700105] = field(
         default=None,
         metadata={
@@ -1024,7 +1025,7 @@ class References4Acmt00700105:
 
 
 @dataclass
-class SupplementaryData1Acmt00700105:
+class SupplementaryData1Acmt00700105(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1047,7 +1048,7 @@ class SupplementaryData1Acmt00700105:
 
 
 @dataclass
-class AccountIdentification4ChoiceAcmt00700105:
+class AccountIdentification4ChoiceAcmt00700105(ISO20022MessageElement):
     iban: Optional[str] = field(
         default=None,
         metadata={
@@ -1068,7 +1069,7 @@ class AccountIdentification4ChoiceAcmt00700105:
 
 
 @dataclass
-class Authorisation2Acmt00700105:
+class Authorisation2Acmt00700105(ISO20022MessageElement):
     max_amt_by_tx: Optional[FixedAmountOrUnlimited1ChoiceAcmt00700105] = field(
         default=None,
         metadata={
@@ -1098,7 +1099,7 @@ class Authorisation2Acmt00700105:
 
 
 @dataclass
-class BankTransactionCodeStructure4Acmt00700105:
+class BankTransactionCodeStructure4Acmt00700105(ISO20022MessageElement):
     domn: Optional[BankTransactionCodeStructure5Acmt00700105] = field(
         default=None,
         metadata={
@@ -1118,7 +1119,7 @@ class BankTransactionCodeStructure4Acmt00700105:
 
 
 @dataclass
-class OrganisationIdentification39Acmt00700105:
+class OrganisationIdentification39Acmt00700105(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -1148,7 +1149,7 @@ class OrganisationIdentification39Acmt00700105:
 
 
 @dataclass
-class PersonIdentification18Acmt00700105:
+class PersonIdentification18Acmt00700105(ISO20022MessageElement):
     dt_and_plc_of_birth: Optional[DateAndPlaceOfBirth1Acmt00700105] = field(
         default=None,
         metadata={
@@ -1168,7 +1169,7 @@ class PersonIdentification18Acmt00700105:
 
 
 @dataclass
-class PostalAddress27Acmt00700105:
+class PostalAddress27Acmt00700105(ISO20022MessageElement):
     adr_tp: Optional[AddressType3ChoiceAcmt00700105] = field(
         default=None,
         metadata={
@@ -1350,7 +1351,7 @@ class PostalAddress27Acmt00700105:
 
 
 @dataclass
-class Restriction1Acmt00700105:
+class Restriction1Acmt00700105(ISO20022MessageElement):
     rstrctn_tp: Optional[CodeOrProprietary1ChoiceAcmt00700105] = field(
         default=None,
         metadata={
@@ -1380,7 +1381,7 @@ class Restriction1Acmt00700105:
 
 
 @dataclass
-class StatementFrequencyAndForm1Acmt00700105:
+class StatementFrequencyAndForm1Acmt00700105(ISO20022MessageElement):
     frqcy: Optional[Frequency7Code] = field(
         default=None,
         metadata={
@@ -1422,7 +1423,7 @@ class StatementFrequencyAndForm1Acmt00700105:
 
 
 @dataclass
-class BranchData5Acmt00700105:
+class BranchData5Acmt00700105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1463,7 +1464,7 @@ class BranchData5Acmt00700105:
 
 
 @dataclass
-class CashAccount40Acmt00700105:
+class CashAccount40Acmt00700105(ISO20022MessageElement):
     id: Optional[AccountIdentification4ChoiceAcmt00700105] = field(
         default=None,
         metadata={
@@ -1510,7 +1511,7 @@ class CashAccount40Acmt00700105:
 
 
 @dataclass
-class CustomerAccount4Acmt00700105:
+class CustomerAccount4Acmt00700105(ISO20022MessageElement):
     id: Optional[AccountIdentification4ChoiceAcmt00700105] = field(
         default=None,
         metadata={
@@ -1656,7 +1657,7 @@ class CustomerAccount4Acmt00700105:
 
 
 @dataclass
-class FinancialInstitutionIdentification23Acmt00700105:
+class FinancialInstitutionIdentification23Acmt00700105(ISO20022MessageElement):
     bicfi: Optional[str] = field(
         default=None,
         metadata={
@@ -1712,7 +1713,7 @@ class FinancialInstitutionIdentification23Acmt00700105:
 
 
 @dataclass
-class Party52ChoiceAcmt00700105:
+class Party52ChoiceAcmt00700105(ISO20022MessageElement):
     org_id: Optional[OrganisationIdentification39Acmt00700105] = field(
         default=None,
         metadata={
@@ -1732,7 +1733,7 @@ class Party52ChoiceAcmt00700105:
 
 
 @dataclass
-class PartyIdentification274Acmt00700105:
+class PartyIdentification274Acmt00700105(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1779,7 +1780,7 @@ class PartyIdentification274Acmt00700105:
 
 
 @dataclass
-class BranchAndFinancialInstitutionIdentification8Acmt00700105:
+class BranchAndFinancialInstitutionIdentification8Acmt00700105(ISO20022MessageElement):
     fin_instn_id: Optional[FinancialInstitutionIdentification23Acmt00700105] = field(
         default=None,
         metadata={
@@ -1800,7 +1801,7 @@ class BranchAndFinancialInstitutionIdentification8Acmt00700105:
 
 
 @dataclass
-class Organisation42Acmt00700105:
+class Organisation42Acmt00700105(ISO20022MessageElement):
     full_lgl_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1925,7 +1926,7 @@ class Organisation42Acmt00700105:
 
 
 @dataclass
-class PartyIdentification272Acmt00700105:
+class PartyIdentification272Acmt00700105(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1972,7 +1973,7 @@ class PartyIdentification272Acmt00700105:
 
 
 @dataclass
-class PartyAndCertificate6Acmt00700105:
+class PartyAndCertificate6Acmt00700105(ISO20022MessageElement):
     pty: Optional[PartyIdentification272Acmt00700105] = field(
         default=None,
         metadata={
@@ -1996,7 +1997,7 @@ class PartyAndCertificate6Acmt00700105:
 
 
 @dataclass
-class PartyAndSignature4Acmt00700105:
+class PartyAndSignature4Acmt00700105(ISO20022MessageElement):
     pty: Optional[PartyIdentification272Acmt00700105] = field(
         default=None,
         metadata={
@@ -2018,7 +2019,7 @@ class PartyAndSignature4Acmt00700105:
 
 
 @dataclass
-class Group6Acmt00700105:
+class Group6Acmt00700105(ISO20022MessageElement):
     grp_id: Optional[str] = field(
         default=None,
         metadata={
@@ -2043,7 +2044,7 @@ class Group6Acmt00700105:
 
 
 @dataclass
-class PartyOrGroup3ChoiceAcmt00700105:
+class PartyOrGroup3ChoiceAcmt00700105(ISO20022MessageElement):
     grp_id: Optional[str] = field(
         default=None,
         metadata={
@@ -2066,7 +2067,7 @@ class PartyOrGroup3ChoiceAcmt00700105:
 
 
 @dataclass
-class PartyAndAuthorisation7Acmt00700105:
+class PartyAndAuthorisation7Acmt00700105(ISO20022MessageElement):
     pty_or_grp: Optional[PartyOrGroup3ChoiceAcmt00700105] = field(
         default=None,
         metadata={
@@ -2097,7 +2098,7 @@ class PartyAndAuthorisation7Acmt00700105:
 
 
 @dataclass
-class OperationMandate7Acmt00700105:
+class OperationMandate7Acmt00700105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -2173,7 +2174,7 @@ class OperationMandate7Acmt00700105:
 
 
 @dataclass
-class AccountOpeningRequestV05Acmt00700105:
+class AccountOpeningRequestV05Acmt00700105(ISO20022MessageElement):
     refs: Optional[References4Acmt00700105] = field(
         default=None,
         metadata={
@@ -2279,7 +2280,7 @@ class AccountOpeningRequestV05Acmt00700105:
 
 
 @dataclass
-class Acmt00700105:
+class Acmt00700105(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.007.001.05"
 

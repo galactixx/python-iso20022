@@ -4,13 +4,14 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.tsmt.enums import BaselineStatus3Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:tsmt.046.001.01"
 
 
 @dataclass
-class CurrencyAndAmountTsmt04600101:
+class CurrencyAndAmountTsmt04600101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -32,7 +33,7 @@ class CurrencyAndAmountTsmt04600101:
 
 
 @dataclass
-class DocumentIdentification7Tsmt04600101:
+class DocumentIdentification7Tsmt04600101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -56,7 +57,7 @@ class DocumentIdentification7Tsmt04600101:
 
 
 @dataclass
-class MessageIdentification1Tsmt04600101:
+class MessageIdentification1Tsmt04600101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -80,7 +81,7 @@ class MessageIdentification1Tsmt04600101:
 
 
 @dataclass
-class TransactionStatus4Tsmt04600101:
+class TransactionStatus4Tsmt04600101(ISO20022MessageElement):
     sts: Optional[BaselineStatus3Code] = field(
         default=None,
         metadata={
@@ -93,7 +94,7 @@ class TransactionStatus4Tsmt04600101:
 
 
 @dataclass
-class ReportLine1Tsmt04600101:
+class ReportLine1Tsmt04600101(ISO20022MessageElement):
     tx_id: Optional[str] = field(
         default=None,
         metadata={
@@ -144,7 +145,7 @@ class ReportLine1Tsmt04600101:
 
 
 @dataclass
-class IntentToPayReportV01Tsmt04600101:
+class IntentToPayReportV01Tsmt04600101(ISO20022MessageElement):
     rpt_id: Optional[MessageIdentification1Tsmt04600101] = field(
         default=None,
         metadata={
@@ -165,7 +166,7 @@ class IntentToPayReportV01Tsmt04600101:
 
 
 @dataclass
-class Tsmt04600101:
+class Tsmt04600101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.046.001.01"
 

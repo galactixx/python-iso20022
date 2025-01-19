@@ -3,13 +3,14 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import DateType1Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:seev.048.001.01"
 
 
 @dataclass
-class DateAndDateTime2ChoiceSeev04800101:
+class DateAndDateTime2ChoiceSeev04800101(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -29,7 +30,7 @@ class DateAndDateTime2ChoiceSeev04800101:
 
 
 @dataclass
-class GenericIdentification30Seev04800101:
+class GenericIdentification30Seev04800101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -64,7 +65,7 @@ class GenericIdentification30Seev04800101:
 
 
 @dataclass
-class GenericIdentification36Seev04800101:
+class GenericIdentification36Seev04800101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -100,7 +101,7 @@ class GenericIdentification36Seev04800101:
 
 
 @dataclass
-class IdentificationSource3ChoiceSeev04800101:
+class IdentificationSource3ChoiceSeev04800101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -124,7 +125,7 @@ class IdentificationSource3ChoiceSeev04800101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Seev04800101:
+class SupplementaryDataEnvelope1Seev04800101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -135,7 +136,7 @@ class SupplementaryDataEnvelope1Seev04800101:
 
 
 @dataclass
-class DateCode20ChoiceSeev04800101:
+class DateCode20ChoiceSeev04800101(ISO20022MessageElement):
     cd: Optional[DateType1Code] = field(
         default=None,
         metadata={
@@ -155,7 +156,7 @@ class DateCode20ChoiceSeev04800101:
 
 
 @dataclass
-class OtherIdentification1Seev04800101:
+class OtherIdentification1Seev04800101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -189,7 +190,7 @@ class OtherIdentification1Seev04800101:
 
 
 @dataclass
-class PartyIdentification195ChoiceSeev04800101:
+class PartyIdentification195ChoiceSeev04800101(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -219,7 +220,7 @@ class PartyIdentification195ChoiceSeev04800101:
 
 
 @dataclass
-class SupplementaryData1Seev04800101:
+class SupplementaryData1Seev04800101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -242,7 +243,7 @@ class SupplementaryData1Seev04800101:
 
 
 @dataclass
-class DateFormat46ChoiceSeev04800101:
+class DateFormat46ChoiceSeev04800101(ISO20022MessageElement):
     dt: Optional[DateAndDateTime2ChoiceSeev04800101] = field(
         default=None,
         metadata={
@@ -262,7 +263,7 @@ class DateFormat46ChoiceSeev04800101:
 
 
 @dataclass
-class PartyIdentification215Seev04800101:
+class PartyIdentification215Seev04800101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -286,7 +287,7 @@ class PartyIdentification215Seev04800101:
 
 
 @dataclass
-class SecurityIdentification19Seev04800101:
+class SecurityIdentification19Seev04800101(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -317,7 +318,7 @@ class SecurityIdentification19Seev04800101:
 
 
 @dataclass
-class DisclosureRequestIdentification1Seev04800101:
+class DisclosureRequestIdentification1Seev04800101(ISO20022MessageElement):
     issr_dsclsr_req_id: Optional[str] = field(
         default=None,
         metadata={
@@ -350,7 +351,9 @@ class DisclosureRequestIdentification1Seev04800101:
 
 
 @dataclass
-class ShareholderIdentificationDisclosureResponseCancellationAdviceV01Seev04800101:
+class ShareholderIdentificationDisclosureResponseCancellationAdviceV01Seev04800101(
+    ISO20022MessageElement
+):
     dsclsr_rspn_id: Optional[str] = field(
         default=None,
         metadata={
@@ -391,7 +394,7 @@ class ShareholderIdentificationDisclosureResponseCancellationAdviceV01Seev048001
 
 
 @dataclass
-class Seev04800101:
+class Seev04800101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:seev.048.001.01"
 

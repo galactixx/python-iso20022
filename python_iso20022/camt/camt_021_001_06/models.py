@@ -3,13 +3,14 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.camt.enums import Priority1Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:camt.021.001.06"
 
 
 @dataclass
-class ErrorHandling3ChoiceCamt02100106:
+class ErrorHandling3ChoiceCamt02100106(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -33,7 +34,7 @@ class ErrorHandling3ChoiceCamt02100106:
 
 
 @dataclass
-class GenericIdentification1Camt02100106:
+class GenericIdentification1Camt02100106(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -68,7 +69,7 @@ class GenericIdentification1Camt02100106:
 
 
 @dataclass
-class OriginalBusinessQuery1Camt02100106:
+class OriginalBusinessQuery1Camt02100106(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -101,7 +102,7 @@ class OriginalBusinessQuery1Camt02100106:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Camt02100106:
+class SupplementaryDataEnvelope1Camt02100106(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -112,7 +113,7 @@ class SupplementaryDataEnvelope1Camt02100106:
 
 
 @dataclass
-class ErrorHandling5Camt02100106:
+class ErrorHandling5Camt02100106(ISO20022MessageElement):
     err: Optional[ErrorHandling3ChoiceCamt02100106] = field(
         default=None,
         metadata={
@@ -135,7 +136,7 @@ class ErrorHandling5Camt02100106:
 
 
 @dataclass
-class InformationQualifierType1Camt02100106:
+class InformationQualifierType1Camt02100106(ISO20022MessageElement):
     is_frmtd: Optional[bool] = field(
         default=None,
         metadata={
@@ -155,7 +156,7 @@ class InformationQualifierType1Camt02100106:
 
 
 @dataclass
-class RequestType4ChoiceCamt02100106:
+class RequestType4ChoiceCamt02100106(ISO20022MessageElement):
     pmt_ctrl: Optional[str] = field(
         default=None,
         metadata={
@@ -187,7 +188,7 @@ class RequestType4ChoiceCamt02100106:
 
 
 @dataclass
-class SupplementaryData1Camt02100106:
+class SupplementaryData1Camt02100106(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -210,7 +211,7 @@ class SupplementaryData1Camt02100106:
 
 
 @dataclass
-class GeneralBusinessInformation1Camt02100106:
+class GeneralBusinessInformation1Camt02100106(ISO20022MessageElement):
     qlfr: Optional[InformationQualifierType1Camt02100106] = field(
         default=None,
         metadata={
@@ -242,7 +243,7 @@ class GeneralBusinessInformation1Camt02100106:
 
 
 @dataclass
-class MessageHeader7Camt02100106:
+class MessageHeader7Camt02100106(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -291,7 +292,7 @@ class MessageHeader7Camt02100106:
 
 
 @dataclass
-class GeneralBusinessOrError8ChoiceCamt02100106:
+class GeneralBusinessOrError8ChoiceCamt02100106(ISO20022MessageElement):
     biz_err: list[ErrorHandling5Camt02100106] = field(
         default_factory=list,
         metadata={
@@ -311,7 +312,7 @@ class GeneralBusinessOrError8ChoiceCamt02100106:
 
 
 @dataclass
-class GeneralBusinessReport6Camt02100106:
+class GeneralBusinessReport6Camt02100106(ISO20022MessageElement):
     biz_inf_ref: Optional[str] = field(
         default=None,
         metadata={
@@ -335,7 +336,7 @@ class GeneralBusinessReport6Camt02100106:
 
 
 @dataclass
-class GeneralBusinessOrError7ChoiceCamt02100106:
+class GeneralBusinessOrError7ChoiceCamt02100106(ISO20022MessageElement):
     oprl_err: list[ErrorHandling5Camt02100106] = field(
         default_factory=list,
         metadata={
@@ -355,7 +356,7 @@ class GeneralBusinessOrError7ChoiceCamt02100106:
 
 
 @dataclass
-class ReturnGeneralBusinessInformationV06Camt02100106:
+class ReturnGeneralBusinessInformationV06Camt02100106(ISO20022MessageElement):
     msg_hdr: Optional[MessageHeader7Camt02100106] = field(
         default=None,
         metadata={
@@ -385,7 +386,7 @@ class ReturnGeneralBusinessInformationV06Camt02100106:
 
 
 @dataclass
-class Camt02100106:
+class Camt02100106(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:camt.021.001.06"
 

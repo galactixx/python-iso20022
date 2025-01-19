@@ -3,13 +3,14 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.tsmt.enums import NotificationType1Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:tsmt.047.001.01"
 
 
 @dataclass
-class MessageIdentification1Tsmt04700101:
+class MessageIdentification1Tsmt04700101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -33,7 +34,7 @@ class MessageIdentification1Tsmt04700101:
 
 
 @dataclass
-class SimpleIdentificationInformationTsmt04700101:
+class SimpleIdentificationInformationTsmt04700101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -48,7 +49,7 @@ class SimpleIdentificationInformationTsmt04700101:
 
 
 @dataclass
-class Notification1Tsmt04700101:
+class Notification1Tsmt04700101(ISO20022MessageElement):
     tp: Optional[NotificationType1Code] = field(
         default=None,
         metadata={
@@ -72,7 +73,7 @@ class Notification1Tsmt04700101:
 
 
 @dataclass
-class SpecialRequestV01Tsmt04700101:
+class SpecialRequestV01Tsmt04700101(ISO20022MessageElement):
     req_id: Optional[MessageIdentification1Tsmt04700101] = field(
         default=None,
         metadata={
@@ -111,7 +112,7 @@ class SpecialRequestV01Tsmt04700101:
 
 
 @dataclass
-class Tsmt04700101:
+class Tsmt04700101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.047.001.01"
 

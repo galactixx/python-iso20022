@@ -4,11 +4,13 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
+
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:tsmt.022.001.02"
 
 
 @dataclass
-class MessageIdentification1Tsmt02200102:
+class MessageIdentification1Tsmt02200102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -32,7 +34,7 @@ class MessageIdentification1Tsmt02200102:
 
 
 @dataclass
-class Reason2Tsmt02200102:
+class Reason2Tsmt02200102(ISO20022MessageElement):
     desc: Optional[str] = field(
         default=None,
         metadata={
@@ -47,7 +49,7 @@ class Reason2Tsmt02200102:
 
 
 @dataclass
-class RejectedElement1Tsmt02200102:
+class RejectedElement1Tsmt02200102(ISO20022MessageElement):
     elmt_seq_nb: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -73,7 +75,7 @@ class RejectedElement1Tsmt02200102:
 
 
 @dataclass
-class SimpleIdentificationInformationTsmt02200102:
+class SimpleIdentificationInformationTsmt02200102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -88,7 +90,7 @@ class SimpleIdentificationInformationTsmt02200102:
 
 
 @dataclass
-class RejectionReason1ChoiceTsmt02200102:
+class RejectionReason1ChoiceTsmt02200102(ISO20022MessageElement):
     gbl_rjctn_rsn: Optional[Reason2Tsmt02200102] = field(
         default=None,
         metadata={
@@ -108,7 +110,7 @@ class RejectionReason1ChoiceTsmt02200102:
 
 
 @dataclass
-class MisMatchRejectionV02Tsmt02200102:
+class MisMatchRejectionV02Tsmt02200102(ISO20022MessageElement):
     rjctn_id: Optional[MessageIdentification1Tsmt02200102] = field(
         default=None,
         metadata={
@@ -156,7 +158,7 @@ class MisMatchRejectionV02Tsmt02200102:
 
 
 @dataclass
-class Tsmt02200102:
+class Tsmt02200102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.022.001.02"
 

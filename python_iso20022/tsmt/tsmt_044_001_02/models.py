@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import AdjustmentDirection1Code
 from python_iso20022.tsmt.enums import AdjustmentType2Code
 
@@ -11,7 +12,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:tsmt.044.001.02"
 
 
 @dataclass
-class AccountSchemeName1ChoiceTsmt04400102:
+class AccountSchemeName1ChoiceTsmt04400102(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -35,7 +36,7 @@ class AccountSchemeName1ChoiceTsmt04400102:
 
 
 @dataclass
-class Bicidentification1Tsmt04400102:
+class Bicidentification1Tsmt04400102(ISO20022MessageElement):
     class Meta:
         name = "BICIdentification1"
 
@@ -52,7 +53,7 @@ class Bicidentification1Tsmt04400102:
 
 
 @dataclass
-class CashAccountType2ChoiceTsmt04400102:
+class CashAccountType2ChoiceTsmt04400102(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -76,7 +77,7 @@ class CashAccountType2ChoiceTsmt04400102:
 
 
 @dataclass
-class CurrencyAndAmountTsmt04400102:
+class CurrencyAndAmountTsmt04400102(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -98,7 +99,7 @@ class CurrencyAndAmountTsmt04400102:
 
 
 @dataclass
-class DocumentIdentification7Tsmt04400102:
+class DocumentIdentification7Tsmt04400102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -122,7 +123,7 @@ class DocumentIdentification7Tsmt04400102:
 
 
 @dataclass
-class InvoiceIdentification1Tsmt04400102:
+class InvoiceIdentification1Tsmt04400102(ISO20022MessageElement):
     invc_nb: Optional[str] = field(
         default=None,
         metadata={
@@ -146,7 +147,7 @@ class InvoiceIdentification1Tsmt04400102:
 
 
 @dataclass
-class MessageIdentification1Tsmt04400102:
+class MessageIdentification1Tsmt04400102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -170,7 +171,7 @@ class MessageIdentification1Tsmt04400102:
 
 
 @dataclass
-class PostalAddress2Tsmt04400102:
+class PostalAddress2Tsmt04400102(ISO20022MessageElement):
     strt_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -226,7 +227,7 @@ class PostalAddress2Tsmt04400102:
 
 
 @dataclass
-class SimpleIdentificationInformationTsmt04400102:
+class SimpleIdentificationInformationTsmt04400102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -241,7 +242,7 @@ class SimpleIdentificationInformationTsmt04400102:
 
 
 @dataclass
-class AdjustmentType1ChoiceTsmt04400102:
+class AdjustmentType1ChoiceTsmt04400102(ISO20022MessageElement):
     tp: Optional[AdjustmentType2Code] = field(
         default=None,
         metadata={
@@ -263,7 +264,7 @@ class AdjustmentType1ChoiceTsmt04400102:
 
 
 @dataclass
-class GenericAccountIdentification1Tsmt04400102:
+class GenericAccountIdentification1Tsmt04400102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -296,7 +297,7 @@ class GenericAccountIdentification1Tsmt04400102:
 
 
 @dataclass
-class NameAndAddress6Tsmt04400102:
+class NameAndAddress6Tsmt04400102(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -320,7 +321,7 @@ class NameAndAddress6Tsmt04400102:
 
 
 @dataclass
-class AccountIdentification4ChoiceTsmt04400102:
+class AccountIdentification4ChoiceTsmt04400102(ISO20022MessageElement):
     iban: Optional[str] = field(
         default=None,
         metadata={
@@ -341,7 +342,7 @@ class AccountIdentification4ChoiceTsmt04400102:
 
 
 @dataclass
-class Adjustment6Tsmt04400102:
+class Adjustment6Tsmt04400102(ISO20022MessageElement):
     tp: Optional[AdjustmentType1ChoiceTsmt04400102] = field(
         default=None,
         metadata={
@@ -372,7 +373,7 @@ class Adjustment6Tsmt04400102:
 
 
 @dataclass
-class FinancialInstitutionIdentification4ChoiceTsmt04400102:
+class FinancialInstitutionIdentification4ChoiceTsmt04400102(ISO20022MessageElement):
     bic: Optional[str] = field(
         default=None,
         metadata={
@@ -393,7 +394,7 @@ class FinancialInstitutionIdentification4ChoiceTsmt04400102:
 
 
 @dataclass
-class CashAccount24Tsmt04400102:
+class CashAccount24Tsmt04400102(ISO20022MessageElement):
     id: Optional[AccountIdentification4ChoiceTsmt04400102] = field(
         default=None,
         metadata={
@@ -433,7 +434,7 @@ class CashAccount24Tsmt04400102:
 
 
 @dataclass
-class ReportLine5Tsmt04400102:
+class ReportLine5Tsmt04400102(ISO20022MessageElement):
     purchs_ordr_ref: Optional[DocumentIdentification7Tsmt04400102] = field(
         default=None,
         metadata={
@@ -463,7 +464,7 @@ class ReportLine5Tsmt04400102:
 
 
 @dataclass
-class ReportLine7Tsmt04400102:
+class ReportLine7Tsmt04400102(ISO20022MessageElement):
     tx_id: Optional[str] = field(
         default=None,
         metadata={
@@ -504,7 +505,7 @@ class ReportLine7Tsmt04400102:
 
 
 @dataclass
-class ReportLine6Tsmt04400102:
+class ReportLine6Tsmt04400102(ISO20022MessageElement):
     comrcl_doc_ref: Optional[InvoiceIdentification1Tsmt04400102] = field(
         default=None,
         metadata={
@@ -543,7 +544,7 @@ class ReportLine6Tsmt04400102:
 
 
 @dataclass
-class SettlementTerms3Tsmt04400102:
+class SettlementTerms3Tsmt04400102(ISO20022MessageElement):
     cdtr_agt: Optional[FinancialInstitutionIdentification4ChoiceTsmt04400102] = field(
         default=None,
         metadata={
@@ -564,7 +565,7 @@ class SettlementTerms3Tsmt04400102:
 
 
 @dataclass
-class BreakDown1ChoiceTsmt04400102:
+class BreakDown1ChoiceTsmt04400102(ISO20022MessageElement):
     by_purchs_ordr: Optional[ReportLine5Tsmt04400102] = field(
         default=None,
         metadata={
@@ -584,7 +585,7 @@ class BreakDown1ChoiceTsmt04400102:
 
 
 @dataclass
-class IntentToPay2Tsmt04400102:
+class IntentToPay2Tsmt04400102(ISO20022MessageElement):
     brkdwn: Optional[BreakDown1ChoiceTsmt04400102] = field(
         default=None,
         metadata={
@@ -614,7 +615,7 @@ class IntentToPay2Tsmt04400102:
 
 
 @dataclass
-class IntentToPayNotificationV02Tsmt04400102:
+class IntentToPayNotificationV02Tsmt04400102(ISO20022MessageElement):
     ntfctn_id: Optional[MessageIdentification1Tsmt04400102] = field(
         default=None,
         metadata={
@@ -671,7 +672,7 @@ class IntentToPayNotificationV02Tsmt04400102:
 
 
 @dataclass
-class Tsmt04400102:
+class Tsmt04400102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.044.001.02"
 

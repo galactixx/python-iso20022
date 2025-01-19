@@ -7,13 +7,14 @@ from python_iso20022.auth.auth_038_001_01.enums import (
     TaxReportingStatus1Code,
     TaxReportingStatus2Code,
 )
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import AddressType2Code, NamePrefix1Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.038.001.01"
 
 
 @dataclass
-class MessageIdentification1Auth03800101:
+class MessageIdentification1Auth03800101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -37,7 +38,7 @@ class MessageIdentification1Auth03800101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth03800101:
+class SupplementaryDataEnvelope1Auth03800101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -48,7 +49,7 @@ class SupplementaryDataEnvelope1Auth03800101:
 
 
 @dataclass
-class ValidationRuleSchemeName1ChoiceAuth03800101:
+class ValidationRuleSchemeName1ChoiceAuth03800101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -72,7 +73,7 @@ class ValidationRuleSchemeName1ChoiceAuth03800101:
 
 
 @dataclass
-class ContactDetails2Auth03800101:
+class ContactDetails2Auth03800101(ISO20022MessageElement):
     nm_prfx: Optional[NamePrefix1Code] = field(
         default=None,
         metadata={
@@ -141,7 +142,7 @@ class ContactDetails2Auth03800101:
 
 
 @dataclass
-class GenericValidationRuleIdentification1Auth03800101:
+class GenericValidationRuleIdentification1Auth03800101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -184,7 +185,7 @@ class GenericValidationRuleIdentification1Auth03800101:
 
 
 @dataclass
-class PostalAddress6Auth03800101:
+class PostalAddress6Auth03800101(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -286,7 +287,7 @@ class PostalAddress6Auth03800101:
 
 
 @dataclass
-class SupplementaryData1Auth03800101:
+class SupplementaryData1Auth03800101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -309,7 +310,7 @@ class SupplementaryData1Auth03800101:
 
 
 @dataclass
-class InvoiceTaxReportTransactionStatus1Auth03800101:
+class InvoiceTaxReportTransactionStatus1Auth03800101(ISO20022MessageElement):
     tax_rpt_id: Optional[str] = field(
         default=None,
         metadata={
@@ -349,7 +350,7 @@ class InvoiceTaxReportTransactionStatus1Auth03800101:
 
 
 @dataclass
-class TaxOrganisationIdentification1Auth03800101:
+class TaxOrganisationIdentification1Auth03800101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -380,7 +381,7 @@ class TaxOrganisationIdentification1Auth03800101:
 
 
 @dataclass
-class InvoiceTaxStatusReportHeader1Auth03800101:
+class InvoiceTaxStatusReportHeader1Auth03800101(ISO20022MessageElement):
     tax_authrty: Optional[TaxOrganisationIdentification1Auth03800101] = field(
         default=None,
         metadata={
@@ -427,7 +428,7 @@ class InvoiceTaxStatusReportHeader1Auth03800101:
 
 
 @dataclass
-class InvoiceTaxReportStatusAdviceV01Auth03800101:
+class InvoiceTaxReportStatusAdviceV01Auth03800101(ISO20022MessageElement):
     sts_rpt_hdr: Optional[InvoiceTaxStatusReportHeader1Auth03800101] = field(
         default=None,
         metadata={
@@ -456,7 +457,7 @@ class InvoiceTaxReportStatusAdviceV01Auth03800101:
 
 
 @dataclass
-class Auth03800101:
+class Auth03800101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.038.001.01"
 

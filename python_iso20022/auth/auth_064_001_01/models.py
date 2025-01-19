@@ -3,12 +3,13 @@ from decimal import Decimal
 from typing import Optional
 
 from python_iso20022.auth.auth_064_001_01.enums import ProductType6Code
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.064.001.01"
 
 
 @dataclass
-class ActiveCurrencyAndAmountAuth06400101:
+class ActiveCurrencyAndAmountAuth06400101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -30,7 +31,7 @@ class ActiveCurrencyAndAmountAuth06400101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth06400101:
+class SupplementaryDataEnvelope1Auth06400101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -41,7 +42,7 @@ class SupplementaryDataEnvelope1Auth06400101:
 
 
 @dataclass
-class ReportingAssetBreakdown1Auth06400101:
+class ReportingAssetBreakdown1Auth06400101(ISO20022MessageElement):
     rptg_asst_tp: Optional[ProductType6Code] = field(
         default=None,
         metadata={
@@ -73,7 +74,7 @@ class ReportingAssetBreakdown1Auth06400101:
 
 
 @dataclass
-class SupplementaryData1Auth06400101:
+class SupplementaryData1Auth06400101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -96,7 +97,7 @@ class SupplementaryData1Auth06400101:
 
 
 @dataclass
-class AvailableFinancialResourcesAmount1Auth06400101:
+class AvailableFinancialResourcesAmount1Auth06400101(ISO20022MessageElement):
     ttl_initl_mrgn: Optional[ActiveCurrencyAndAmountAuth06400101] = field(
         default=None,
         metadata={
@@ -154,7 +155,7 @@ class AvailableFinancialResourcesAmount1Auth06400101:
 
 
 @dataclass
-class CcpavailableFinancialResourcesReportV01Auth06400101:
+class CcpavailableFinancialResourcesReportV01Auth06400101(ISO20022MessageElement):
     class Meta:
         name = "CCPAvailableFinancialResourcesReportV01"
 
@@ -188,7 +189,7 @@ class CcpavailableFinancialResourcesReportV01Auth06400101:
 
 
 @dataclass
-class Auth06400101:
+class Auth06400101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.064.001.01"
 

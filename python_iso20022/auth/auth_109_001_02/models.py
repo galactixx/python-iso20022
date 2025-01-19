@@ -12,6 +12,7 @@ from python_iso20022.auth.enums import (
     ReportPeriodActivity1Code,
     TradeCounterpartyType1Code,
 )
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     NoReasonCode,
     OptionParty1Code,
@@ -23,7 +24,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.109.001.02"
 
 
 @dataclass
-class ActiveOrHistoricCurrencyAnd20DecimalAmountAuth10900102:
+class ActiveOrHistoricCurrencyAnd20DecimalAmountAuth10900102(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -45,7 +46,7 @@ class ActiveOrHistoricCurrencyAnd20DecimalAmountAuth10900102:
 
 
 @dataclass
-class GenericIdentification175Auth10900102:
+class GenericIdentification175Auth10900102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -80,7 +81,7 @@ class GenericIdentification175Auth10900102:
 
 
 @dataclass
-class Pagination1Auth10900102:
+class Pagination1Auth10900102(ISO20022MessageElement):
     pg_nb: Optional[str] = field(
         default=None,
         metadata={
@@ -103,7 +104,7 @@ class Pagination1Auth10900102:
 
 
 @dataclass
-class PortfolioIdentification3Auth10900102:
+class PortfolioIdentification3Auth10900102(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -126,7 +127,7 @@ class PortfolioIdentification3Auth10900102:
 
 
 @dataclass
-class ReportingExemption1Auth10900102:
+class ReportingExemption1Auth10900102(ISO20022MessageElement):
     rsn: Optional[str] = field(
         default=None,
         metadata={
@@ -151,7 +152,7 @@ class ReportingExemption1Auth10900102:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth10900102:
+class SupplementaryDataEnvelope1Auth10900102(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -162,7 +163,7 @@ class SupplementaryDataEnvelope1Auth10900102:
 
 
 @dataclass
-class TechnicalAttributes6Auth10900102:
+class TechnicalAttributes6Auth10900102(ISO20022MessageElement):
     tech_rcrd_id: Optional[str] = field(
         default=None,
         metadata={
@@ -184,7 +185,7 @@ class TechnicalAttributes6Auth10900102:
 
 
 @dataclass
-class TradeCounterpartyRelationship1ChoiceAuth10900102:
+class TradeCounterpartyRelationship1ChoiceAuth10900102(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -208,7 +209,7 @@ class TradeCounterpartyRelationship1ChoiceAuth10900102:
 
 
 @dataclass
-class ContractModification8Auth10900102:
+class ContractModification8Auth10900102(ISO20022MessageElement):
     actn_tp: Optional[TransactionOperationType11Code] = field(
         default=None,
         metadata={
@@ -221,7 +222,7 @@ class ContractModification8Auth10900102:
 
 
 @dataclass
-class Direction2Auth10900102:
+class Direction2Auth10900102(ISO20022MessageElement):
     drctn_of_the_frst_leg: Optional[OptionParty3Code] = field(
         default=None,
         metadata={
@@ -242,7 +243,7 @@ class Direction2Auth10900102:
 
 
 @dataclass
-class FinancialPartyClassification2ChoiceAuth10900102:
+class FinancialPartyClassification2ChoiceAuth10900102(ISO20022MessageElement):
     cd: Optional[FinancialPartySectorType3Code] = field(
         default=None,
         metadata={
@@ -262,7 +263,7 @@ class FinancialPartyClassification2ChoiceAuth10900102:
 
 
 @dataclass
-class NaturalPersonIdentification2Auth10900102:
+class NaturalPersonIdentification2Auth10900102(ISO20022MessageElement):
     id: Optional[GenericIdentification175Auth10900102] = field(
         default=None,
         metadata={
@@ -295,7 +296,7 @@ class NaturalPersonIdentification2Auth10900102:
 
 
 @dataclass
-class NonFinancialInstitutionSector10Auth10900102:
+class NonFinancialInstitutionSector10Auth10900102(ISO20022MessageElement):
     sctr: list[GenericIdentification175Auth10900102] = field(
         default_factory=list,
         metadata={
@@ -332,7 +333,7 @@ class NonFinancialInstitutionSector10Auth10900102:
 
 
 @dataclass
-class OrganisationIdentification38Auth10900102:
+class OrganisationIdentification38Auth10900102(ISO20022MessageElement):
     id: Optional[GenericIdentification175Auth10900102] = field(
         default=None,
         metadata={
@@ -365,7 +366,7 @@ class OrganisationIdentification38Auth10900102:
 
 
 @dataclass
-class PortfolioCode3ChoiceAuth10900102:
+class PortfolioCode3ChoiceAuth10900102(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -387,7 +388,7 @@ class PortfolioCode3ChoiceAuth10900102:
 
 
 @dataclass
-class PortfolioCode5ChoiceAuth10900102:
+class PortfolioCode5ChoiceAuth10900102(ISO20022MessageElement):
     prtfl: Optional[PortfolioIdentification3Auth10900102] = field(
         default=None,
         metadata={
@@ -407,7 +408,7 @@ class PortfolioCode5ChoiceAuth10900102:
 
 
 @dataclass
-class PostedMarginOrCollateral6Auth10900102:
+class PostedMarginOrCollateral6Auth10900102(ISO20022MessageElement):
     initl_mrgn_pstd_pre_hrcut: Optional[
         ActiveOrHistoricCurrencyAnd20DecimalAmountAuth10900102
     ] = field(
@@ -461,7 +462,7 @@ class PostedMarginOrCollateral6Auth10900102:
 
 
 @dataclass
-class ReceivedMarginOrCollateral6Auth10900102:
+class ReceivedMarginOrCollateral6Auth10900102(ISO20022MessageElement):
     initl_mrgn_rcvd_pre_hrcut: Optional[
         ActiveOrHistoricCurrencyAnd20DecimalAmountAuth10900102
     ] = field(
@@ -515,7 +516,7 @@ class ReceivedMarginOrCollateral6Auth10900102:
 
 
 @dataclass
-class SupplementaryData1Auth10900102:
+class SupplementaryData1Auth10900102(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -538,7 +539,7 @@ class SupplementaryData1Auth10900102:
 
 
 @dataclass
-class TradeCounterpartyRelationshipRecord1Auth10900102:
+class TradeCounterpartyRelationshipRecord1Auth10900102(ISO20022MessageElement):
     start_rltsh_pty: Optional[TradeCounterpartyType1Code] = field(
         default=None,
         metadata={
@@ -579,7 +580,7 @@ class TradeCounterpartyRelationshipRecord1Auth10900102:
 
 
 @dataclass
-class UniqueTransactionIdentifier2ChoiceAuth10900102:
+class UniqueTransactionIdentifier2ChoiceAuth10900102(ISO20022MessageElement):
     unq_tx_idr: Optional[str] = field(
         default=None,
         metadata={
@@ -600,7 +601,7 @@ class UniqueTransactionIdentifier2ChoiceAuth10900102:
 
 
 @dataclass
-class Direction4ChoiceAuth10900102:
+class Direction4ChoiceAuth10900102(ISO20022MessageElement):
     drctn: Optional[Direction2Auth10900102] = field(
         default=None,
         metadata={
@@ -620,7 +621,7 @@ class Direction4ChoiceAuth10900102:
 
 
 @dataclass
-class FinancialInstitutionSector1Auth10900102:
+class FinancialInstitutionSector1Auth10900102(ISO20022MessageElement):
     sctr: list[FinancialPartyClassification2ChoiceAuth10900102] = field(
         default_factory=list,
         metadata={
@@ -641,7 +642,7 @@ class FinancialInstitutionSector1Auth10900102:
 
 
 @dataclass
-class MarginPortfolio4Auth10900102:
+class MarginPortfolio4Auth10900102(ISO20022MessageElement):
     initl_mrgn_prtfl_cd: Optional[PortfolioCode5ChoiceAuth10900102] = field(
         default=None,
         metadata={
@@ -661,7 +662,7 @@ class MarginPortfolio4Auth10900102:
 
 
 @dataclass
-class NaturalPersonIdentification3Auth10900102:
+class NaturalPersonIdentification3Auth10900102(ISO20022MessageElement):
     id: Optional[NaturalPersonIdentification2Auth10900102] = field(
         default=None,
         metadata={
@@ -683,7 +684,7 @@ class NaturalPersonIdentification3Auth10900102:
 
 
 @dataclass
-class OrganisationIdentification15ChoiceAuth10900102:
+class OrganisationIdentification15ChoiceAuth10900102(ISO20022MessageElement):
     lei: Optional[str] = field(
         default=None,
         metadata={
@@ -713,7 +714,7 @@ class OrganisationIdentification15ChoiceAuth10900102:
 
 
 @dataclass
-class CollateralPortfolioCode6ChoiceAuth10900102:
+class CollateralPortfolioCode6ChoiceAuth10900102(ISO20022MessageElement):
     prtfl: Optional[PortfolioCode3ChoiceAuth10900102] = field(
         default=None,
         metadata={
@@ -733,7 +734,7 @@ class CollateralPortfolioCode6ChoiceAuth10900102:
 
 
 @dataclass
-class CounterpartyTradeNature15ChoiceAuth10900102:
+class CounterpartyTradeNature15ChoiceAuth10900102(ISO20022MessageElement):
     fi: Optional[FinancialInstitutionSector1Auth10900102] = field(
         default=None,
         metadata={
@@ -769,7 +770,7 @@ class CounterpartyTradeNature15ChoiceAuth10900102:
 
 
 @dataclass
-class LegalPersonIdentification1Auth10900102:
+class LegalPersonIdentification1Auth10900102(ISO20022MessageElement):
     id: Optional[OrganisationIdentification15ChoiceAuth10900102] = field(
         default=None,
         metadata={
@@ -791,7 +792,7 @@ class LegalPersonIdentification1Auth10900102:
 
 
 @dataclass
-class TradeReportHeader4Auth10900102:
+class TradeReportHeader4Auth10900102(ISO20022MessageElement):
     rpt_exctn_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -852,7 +853,7 @@ class TradeReportHeader4Auth10900102:
 
 
 @dataclass
-class MarginCollateralReport5Auth10900102:
+class MarginCollateralReport5Auth10900102(ISO20022MessageElement):
     coll_prtfl_cd: Optional[CollateralPortfolioCode6ChoiceAuth10900102] = field(
         default=None,
         metadata={
@@ -882,7 +883,7 @@ class MarginCollateralReport5Auth10900102:
 
 
 @dataclass
-class PartyIdentification248ChoiceAuth10900102:
+class PartyIdentification248ChoiceAuth10900102(ISO20022MessageElement):
     lgl: Optional[LegalPersonIdentification1Auth10900102] = field(
         default=None,
         metadata={
@@ -902,7 +903,7 @@ class PartyIdentification248ChoiceAuth10900102:
 
 
 @dataclass
-class Counterparty45Auth10900102:
+class Counterparty45Auth10900102(ISO20022MessageElement):
     id: Optional[PartyIdentification248ChoiceAuth10900102] = field(
         default=None,
         metadata={
@@ -965,7 +966,7 @@ class Counterparty45Auth10900102:
 
 
 @dataclass
-class Counterparty46Auth10900102:
+class Counterparty46Auth10900102(ISO20022MessageElement):
     id_tp: Optional[PartyIdentification248ChoiceAuth10900102] = field(
         default=None,
         metadata={
@@ -993,7 +994,7 @@ class Counterparty46Auth10900102:
 
 
 @dataclass
-class TradeCounterpartyReport20Auth10900102:
+class TradeCounterpartyReport20Auth10900102(ISO20022MessageElement):
     rptg_ctr_pty: Optional[Counterparty45Auth10900102] = field(
         default=None,
         metadata={
@@ -1075,7 +1076,7 @@ class TradeCounterpartyReport20Auth10900102:
 
 
 @dataclass
-class MarginReportData10Auth10900102:
+class MarginReportData10Auth10900102(ISO20022MessageElement):
     rptg_tm_stmp: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -1177,7 +1178,7 @@ class MarginReportData10Auth10900102:
 
 
 @dataclass
-class TradeData62ChoiceAuth10900102:
+class TradeData62ChoiceAuth10900102(ISO20022MessageElement):
     data_set_actn: Optional[ReportPeriodActivity1Code] = field(
         default=None,
         metadata={
@@ -1197,7 +1198,9 @@ class TradeData62ChoiceAuth10900102:
 
 
 @dataclass
-class DerivativesTradeMarginDataTransactionStateReportV02Auth10900102:
+class DerivativesTradeMarginDataTransactionStateReportV02Auth10900102(
+    ISO20022MessageElement
+):
     rpt_hdr: Optional[TradeReportHeader4Auth10900102] = field(
         default=None,
         metadata={
@@ -1227,7 +1230,7 @@ class DerivativesTradeMarginDataTransactionStateReportV02Auth10900102:
 
 
 @dataclass
-class Auth10900102:
+class Auth10900102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.109.001.02"
 

@@ -3,12 +3,13 @@ from decimal import Decimal
 from typing import Optional
 
 from python_iso20022.auth.enums import SchemeIdentificationType1Code
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.068.001.01"
 
 
 @dataclass
-class ActiveCurrencyAnd24AmountAuth06800101:
+class ActiveCurrencyAnd24AmountAuth06800101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -30,7 +31,7 @@ class ActiveCurrencyAnd24AmountAuth06800101:
 
 
 @dataclass
-class ActiveCurrencyAndAmountAuth06800101:
+class ActiveCurrencyAndAmountAuth06800101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -52,7 +53,7 @@ class ActiveCurrencyAndAmountAuth06800101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth06800101:
+class SupplementaryDataEnvelope1Auth06800101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -63,7 +64,7 @@ class SupplementaryDataEnvelope1Auth06800101:
 
 
 @dataclass
-class AmountAndDirection102Auth06800101:
+class AmountAndDirection102Auth06800101(ISO20022MessageElement):
     amt: Optional[ActiveCurrencyAndAmountAuth06800101] = field(
         default=None,
         metadata={
@@ -85,7 +86,7 @@ class AmountAndDirection102Auth06800101:
 
 
 @dataclass
-class GenericIdentification165Auth06800101:
+class GenericIdentification165Auth06800101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -128,7 +129,7 @@ class GenericIdentification165Auth06800101:
 
 
 @dataclass
-class SupplementaryData1Auth06800101:
+class SupplementaryData1Auth06800101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -151,7 +152,7 @@ class SupplementaryData1Auth06800101:
 
 
 @dataclass
-class EndOfDayRequirement1Auth06800101:
+class EndOfDayRequirement1Auth06800101(ISO20022MessageElement):
     initl_mrgn_rqrmnt: Optional[ActiveCurrencyAndAmountAuth06800101] = field(
         default=None,
         metadata={
@@ -171,7 +172,7 @@ class EndOfDayRequirement1Auth06800101:
 
 
 @dataclass
-class Position1Auth06800101:
+class Position1Auth06800101(ISO20022MessageElement):
     pdct_id: Optional[str] = field(
         default=None,
         metadata={
@@ -258,7 +259,7 @@ class Position1Auth06800101:
 
 
 @dataclass
-class PositionAccount2Auth06800101:
+class PositionAccount2Auth06800101(ISO20022MessageElement):
     id: Optional[GenericIdentification165Auth06800101] = field(
         default=None,
         metadata={
@@ -280,7 +281,7 @@ class PositionAccount2Auth06800101:
 
 
 @dataclass
-class CcpaccountPositionReportV01Auth06800101:
+class CcpaccountPositionReportV01Auth06800101(ISO20022MessageElement):
     class Meta:
         name = "CCPAccountPositionReportV01"
 
@@ -304,7 +305,7 @@ class CcpaccountPositionReportV01Auth06800101:
 
 
 @dataclass
-class Auth06800101:
+class Auth06800101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.068.001.01"
 

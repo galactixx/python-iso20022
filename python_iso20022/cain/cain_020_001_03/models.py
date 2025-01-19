@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     Algorithm5Code,
     Algorithm7Code,
@@ -27,7 +28,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:cain.020.001.03"
 
 
 @dataclass
-class AdditionalData1Cain02000103:
+class AdditionalData1Cain02000103(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -51,7 +52,7 @@ class AdditionalData1Cain02000103:
 
 
 @dataclass
-class BatchManagementInformation1Cain02000103:
+class BatchManagementInformation1Cain02000103(ISO20022MessageElement):
     colltn_id: Optional[str] = field(
         default=None,
         metadata={
@@ -96,7 +97,7 @@ class BatchManagementInformation1Cain02000103:
 
 
 @dataclass
-class DetailedError1Cain02000103:
+class DetailedError1Cain02000103(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -132,7 +133,7 @@ class DetailedError1Cain02000103:
 
 
 @dataclass
-class EncryptedData2ChoiceCain02000103:
+class EncryptedData2ChoiceCain02000103(ISO20022MessageElement):
     binry: Optional[bytes] = field(
         default=None,
         metadata={
@@ -156,7 +157,7 @@ class EncryptedData2ChoiceCain02000103:
 
 
 @dataclass
-class Jurisdiction2Cain02000103:
+class Jurisdiction2Cain02000103(ISO20022MessageElement):
     dmst_ind: Optional[bool] = field(
         default=None,
         metadata={
@@ -178,7 +179,7 @@ class Jurisdiction2Cain02000103:
 
 
 @dataclass
-class Kekidentifier2Cain02000103:
+class Kekidentifier2Cain02000103(ISO20022MessageElement):
     class Meta:
         name = "KEKIdentifier2"
 
@@ -228,7 +229,7 @@ class Kekidentifier2Cain02000103:
 
 
 @dataclass
-class Kekidentifier6Cain02000103:
+class Kekidentifier6Cain02000103(ISO20022MessageElement):
     class Meta:
         name = "KEKIdentifier6"
 
@@ -277,7 +278,7 @@ class Kekidentifier6Cain02000103:
 
 
 @dataclass
-class Macdata1Cain02000103:
+class Macdata1Cain02000103(ISO20022MessageElement):
     class Meta:
         name = "MACData1"
 
@@ -368,7 +369,7 @@ class Macdata1Cain02000103:
 
 
 @dataclass
-class Reconciliation4Cain02000103:
+class Reconciliation4Cain02000103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -400,7 +401,7 @@ class Reconciliation4Cain02000103:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Cain02000103:
+class SupplementaryDataEnvelope1Cain02000103(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -411,7 +412,7 @@ class SupplementaryDataEnvelope1Cain02000103:
 
 
 @dataclass
-class AdditionalData2Cain02000103:
+class AdditionalData2Cain02000103(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -433,7 +434,7 @@ class AdditionalData2Cain02000103:
 
 
 @dataclass
-class AlgorithmIdentification26Cain02000103:
+class AlgorithmIdentification26Cain02000103(ISO20022MessageElement):
     algo: Optional[Algorithm8Code] = field(
         default=None,
         metadata={
@@ -454,7 +455,7 @@ class AlgorithmIdentification26Cain02000103:
 
 
 @dataclass
-class ContentInformationType41Cain02000103:
+class ContentInformationType41Cain02000103(ISO20022MessageElement):
     macdata: Optional[Macdata1Cain02000103] = field(
         default=None,
         metadata={
@@ -477,7 +478,7 @@ class ContentInformationType41Cain02000103:
 
 
 @dataclass
-class EncryptedDataElement2Cain02000103:
+class EncryptedDataElement2Cain02000103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -518,7 +519,7 @@ class EncryptedDataElement2Cain02000103:
 
 
 @dataclass
-class GenericIdentification183Cain02000103:
+class GenericIdentification183Cain02000103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -578,7 +579,7 @@ class GenericIdentification183Cain02000103:
 
 
 @dataclass
-class LocalData14Cain02000103:
+class LocalData14Cain02000103(ISO20022MessageElement):
     lang: Optional[str] = field(
         default=None,
         metadata={
@@ -630,7 +631,7 @@ class LocalData14Cain02000103:
 
 
 @dataclass
-class Parameter14Cain02000103:
+class Parameter14Cain02000103(ISO20022MessageElement):
     ncrptn_frmt: Optional[EncryptionFormat3Code] = field(
         default=None,
         metadata={
@@ -661,7 +662,7 @@ class Parameter14Cain02000103:
 
 
 @dataclass
-class Parameter7Cain02000103:
+class Parameter7Cain02000103(ISO20022MessageElement):
     initlstn_vctr: Optional[bytes] = field(
         default=None,
         metadata={
@@ -684,7 +685,7 @@ class Parameter7Cain02000103:
 
 
 @dataclass
-class ProgrammeMode5Cain02000103:
+class ProgrammeMode5Cain02000103(ISO20022MessageElement):
     apld_id: Optional[str] = field(
         default=None,
         metadata={
@@ -707,7 +708,7 @@ class ProgrammeMode5Cain02000103:
 
 
 @dataclass
-class RelativeDistinguishedName1Cain02000103:
+class RelativeDistinguishedName1Cain02000103(ISO20022MessageElement):
     attr_tp: Optional[AttributeType1Code] = field(
         default=None,
         metadata={
@@ -731,7 +732,7 @@ class RelativeDistinguishedName1Cain02000103:
 
 
 @dataclass
-class SettlementService6Cain02000103:
+class SettlementService6Cain02000103(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -833,7 +834,7 @@ class SettlementService6Cain02000103:
 
 
 @dataclass
-class SupplementaryData1Cain02000103:
+class SupplementaryData1Cain02000103(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -856,7 +857,7 @@ class SupplementaryData1Cain02000103:
 
 
 @dataclass
-class Traceability10Cain02000103:
+class Traceability10Cain02000103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -932,7 +933,7 @@ class Traceability10Cain02000103:
 
 
 @dataclass
-class TransactionIdentification55Cain02000103:
+class TransactionIdentification55Cain02000103(ISO20022MessageElement):
     lcl_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -1140,7 +1141,7 @@ class TransactionIdentification55Cain02000103:
 
 
 @dataclass
-class AlgorithmIdentification25Cain02000103:
+class AlgorithmIdentification25Cain02000103(ISO20022MessageElement):
     algo: Optional[Algorithm23Code] = field(
         default=None,
         metadata={
@@ -1161,7 +1162,7 @@ class AlgorithmIdentification25Cain02000103:
 
 
 @dataclass
-class AlgorithmIdentification28Cain02000103:
+class AlgorithmIdentification28Cain02000103(ISO20022MessageElement):
     algo: Optional[Algorithm13Code] = field(
         default=None,
         metadata={
@@ -1182,7 +1183,7 @@ class AlgorithmIdentification28Cain02000103:
 
 
 @dataclass
-class CertificateIssuer1Cain02000103:
+class CertificateIssuer1Cain02000103(ISO20022MessageElement):
     rltv_dstngshd_nm: list[RelativeDistinguishedName1Cain02000103] = field(
         default_factory=list,
         metadata={
@@ -1195,7 +1196,7 @@ class CertificateIssuer1Cain02000103:
 
 
 @dataclass
-class EncryptedData2Cain02000103:
+class EncryptedData2Cain02000103(ISO20022MessageElement):
     ctrl: Optional[str] = field(
         default=None,
         metadata={
@@ -1289,7 +1290,7 @@ class EncryptedData2Cain02000103:
 
 
 @dataclass
-class Header71Cain02000103:
+class Header71Cain02000103(ISO20022MessageElement):
     msg_fctn: Optional[str] = field(
         default=None,
         metadata={
@@ -1384,7 +1385,7 @@ class Header71Cain02000103:
 
 
 @dataclass
-class Parameter13Cain02000103:
+class Parameter13Cain02000103(ISO20022MessageElement):
     dgst_algo: Optional[Algorithm20Code] = field(
         default=None,
         metadata={
@@ -1404,7 +1405,7 @@ class Parameter13Cain02000103:
 
 
 @dataclass
-class PartyIdentification286Cain02000103:
+class PartyIdentification286Cain02000103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1473,7 +1474,7 @@ class PartyIdentification286Cain02000103:
 
 
 @dataclass
-class AlgorithmIdentification27Cain02000103:
+class AlgorithmIdentification27Cain02000103(ISO20022MessageElement):
     algo: Optional[Algorithm7Code] = field(
         default=None,
         metadata={
@@ -1494,7 +1495,7 @@ class AlgorithmIdentification27Cain02000103:
 
 
 @dataclass
-class EncryptedContent8Cain02000103:
+class EncryptedContent8Cain02000103(ISO20022MessageElement):
     cntt_tp: Optional[ContentType2Code] = field(
         default=None,
         metadata={
@@ -1525,7 +1526,7 @@ class EncryptedContent8Cain02000103:
 
 
 @dataclass
-class IssuerAndSerialNumber1Cain02000103:
+class IssuerAndSerialNumber1Cain02000103(ISO20022MessageElement):
     issr: Optional[CertificateIssuer1Cain02000103] = field(
         default=None,
         metadata={
@@ -1550,7 +1551,7 @@ class IssuerAndSerialNumber1Cain02000103:
 
 
 @dataclass
-class Kek6Cain02000103:
+class Kek6Cain02000103(ISO20022MessageElement):
     class Meta:
         name = "KEK6"
 
@@ -1596,7 +1597,7 @@ class Kek6Cain02000103:
 
 
 @dataclass
-class Recipient5ChoiceCain02000103:
+class Recipient5ChoiceCain02000103(ISO20022MessageElement):
     issr_and_srl_nb: Optional[IssuerAndSerialNumber1Cain02000103] = field(
         default=None,
         metadata={
@@ -1616,7 +1617,7 @@ class Recipient5ChoiceCain02000103:
 
 
 @dataclass
-class KeyTransport6Cain02000103:
+class KeyTransport6Cain02000103(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -1660,7 +1661,7 @@ class KeyTransport6Cain02000103:
 
 
 @dataclass
-class Recipient7ChoiceCain02000103:
+class Recipient7ChoiceCain02000103(ISO20022MessageElement):
     key_trnsprt: Optional[KeyTransport6Cain02000103] = field(
         default=None,
         metadata={
@@ -1688,7 +1689,7 @@ class Recipient7ChoiceCain02000103:
 
 
 @dataclass
-class EnvelopedData12Cain02000103:
+class EnvelopedData12Cain02000103(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -1719,7 +1720,7 @@ class EnvelopedData12Cain02000103:
 
 
 @dataclass
-class ProtectedData2Cain02000103:
+class ProtectedData2Cain02000103(ISO20022MessageElement):
     cntt_tp: Optional[ContentType3Code] = field(
         default=None,
         metadata={
@@ -1748,7 +1749,7 @@ class ProtectedData2Cain02000103:
 
 
 @dataclass
-class AmendmentV03Cain02000103:
+class AmendmentV03Cain02000103(ISO20022MessageElement):
     hdr: Optional[Header71Cain02000103] = field(
         default=None,
         metadata={
@@ -1897,7 +1898,7 @@ class AmendmentV03Cain02000103:
 
 
 @dataclass
-class Cain02000103:
+class Cain02000103(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:cain.020.001.03"
 

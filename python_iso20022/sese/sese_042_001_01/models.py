@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import NoReasonCode
 from python_iso20022.sese.enums import BuyInDeferral1Code, BuyInState1Code
 from python_iso20022.sese.sese_042_001_01.enums import (
@@ -15,7 +16,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:sese.042.001.01"
 
 
 @dataclass
-class ActiveCurrencyAnd13DecimalAmountSese04200101:
+class ActiveCurrencyAnd13DecimalAmountSese04200101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -37,7 +38,7 @@ class ActiveCurrencyAnd13DecimalAmountSese04200101:
 
 
 @dataclass
-class ActiveCurrencyAndAmountSese04200101:
+class ActiveCurrencyAndAmountSese04200101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -59,7 +60,7 @@ class ActiveCurrencyAndAmountSese04200101:
 
 
 @dataclass
-class DateAndDateTime2ChoiceSese04200101:
+class DateAndDateTime2ChoiceSese04200101(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -79,7 +80,7 @@ class DateAndDateTime2ChoiceSese04200101:
 
 
 @dataclass
-class FinancialInstrumentQuantity1ChoiceSese04200101:
+class FinancialInstrumentQuantity1ChoiceSese04200101(ISO20022MessageElement):
     unit: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -115,7 +116,7 @@ class FinancialInstrumentQuantity1ChoiceSese04200101:
 
 
 @dataclass
-class GenericIdentification30Sese04200101:
+class GenericIdentification30Sese04200101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -150,7 +151,7 @@ class GenericIdentification30Sese04200101:
 
 
 @dataclass
-class GenericIdentification36Sese04200101:
+class GenericIdentification36Sese04200101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -186,7 +187,7 @@ class GenericIdentification36Sese04200101:
 
 
 @dataclass
-class Identification14Sese04200101:
+class Identification14Sese04200101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -201,7 +202,7 @@ class Identification14Sese04200101:
 
 
 @dataclass
-class IdentificationSource3ChoiceSese04200101:
+class IdentificationSource3ChoiceSese04200101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -225,7 +226,7 @@ class IdentificationSource3ChoiceSese04200101:
 
 
 @dataclass
-class References23Sese04200101:
+class References23Sese04200101(ISO20022MessageElement):
     acct_ownr_tx_id: Optional[str] = field(
         default=None,
         metadata={
@@ -299,7 +300,7 @@ class References23Sese04200101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Sese04200101:
+class SupplementaryDataEnvelope1Sese04200101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -310,7 +311,7 @@ class SupplementaryDataEnvelope1Sese04200101:
 
 
 @dataclass
-class AcknowledgementReason24ChoiceSese04200101:
+class AcknowledgementReason24ChoiceSese04200101(ISO20022MessageElement):
     cd: Optional[AcknowledgementReason10Code] = field(
         default=None,
         metadata={
@@ -330,7 +331,7 @@ class AcknowledgementReason24ChoiceSese04200101:
 
 
 @dataclass
-class AmountAndDirection102Sese04200101:
+class AmountAndDirection102Sese04200101(ISO20022MessageElement):
     amt: Optional[ActiveCurrencyAndAmountSese04200101] = field(
         default=None,
         metadata={
@@ -352,7 +353,7 @@ class AmountAndDirection102Sese04200101:
 
 
 @dataclass
-class OtherIdentification1Sese04200101:
+class OtherIdentification1Sese04200101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -386,7 +387,7 @@ class OtherIdentification1Sese04200101:
 
 
 @dataclass
-class PartyIdentification127ChoiceSese04200101:
+class PartyIdentification127ChoiceSese04200101(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -407,7 +408,7 @@ class PartyIdentification127ChoiceSese04200101:
 
 
 @dataclass
-class RateAndAmountFormat39ChoiceSese04200101:
+class RateAndAmountFormat39ChoiceSese04200101(ISO20022MessageElement):
     rate: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -429,7 +430,7 @@ class RateAndAmountFormat39ChoiceSese04200101:
 
 
 @dataclass
-class RejectionAndRepairReason25ChoiceSese04200101:
+class RejectionAndRepairReason25ChoiceSese04200101(ISO20022MessageElement):
     cd: Optional[RejectionReason27Code] = field(
         default=None,
         metadata={
@@ -449,7 +450,7 @@ class RejectionAndRepairReason25ChoiceSese04200101:
 
 
 @dataclass
-class SecuritiesAccount19Sese04200101:
+class SecuritiesAccount19Sese04200101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -482,7 +483,7 @@ class SecuritiesAccount19Sese04200101:
 
 
 @dataclass
-class SupplementaryData1Sese04200101:
+class SupplementaryData1Sese04200101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -505,7 +506,7 @@ class SupplementaryData1Sese04200101:
 
 
 @dataclass
-class AcknowledgementReason21Sese04200101:
+class AcknowledgementReason21Sese04200101(ISO20022MessageElement):
     cd: Optional[AcknowledgementReason24ChoiceSese04200101] = field(
         default=None,
         metadata={
@@ -528,7 +529,7 @@ class AcknowledgementReason21Sese04200101:
 
 
 @dataclass
-class PartyIdentification144Sese04200101:
+class PartyIdentification144Sese04200101(ISO20022MessageElement):
     id: Optional[PartyIdentification127ChoiceSese04200101] = field(
         default=None,
         metadata={
@@ -550,7 +551,7 @@ class PartyIdentification144Sese04200101:
 
 
 @dataclass
-class RejectionOrRepairReason25Sese04200101:
+class RejectionOrRepairReason25Sese04200101(ISO20022MessageElement):
     cd: Optional[RejectionAndRepairReason25ChoiceSese04200101] = field(
         default=None,
         metadata={
@@ -573,7 +574,7 @@ class RejectionOrRepairReason25Sese04200101:
 
 
 @dataclass
-class SecurityIdentification19Sese04200101:
+class SecurityIdentification19Sese04200101(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -604,7 +605,7 @@ class SecurityIdentification19Sese04200101:
 
 
 @dataclass
-class AcknowledgedAcceptedStatus33ChoiceSese04200101:
+class AcknowledgedAcceptedStatus33ChoiceSese04200101(ISO20022MessageElement):
     no_spcfd_rsn: Optional[NoReasonCode] = field(
         default=None,
         metadata={
@@ -624,7 +625,7 @@ class AcknowledgedAcceptedStatus33ChoiceSese04200101:
 
 
 @dataclass
-class BuyInAdviceDetails1Sese04200101:
+class BuyInAdviceDetails1Sese04200101(ISO20022MessageElement):
     ref: Optional[References23Sese04200101] = field(
         default=None,
         metadata={
@@ -695,7 +696,7 @@ class BuyInAdviceDetails1Sese04200101:
 
 
 @dataclass
-class RejectionOrRepairStatus31ChoiceSese04200101:
+class RejectionOrRepairStatus31ChoiceSese04200101(ISO20022MessageElement):
     no_spcfd_rsn: Optional[NoReasonCode] = field(
         default=None,
         metadata={
@@ -715,7 +716,7 @@ class RejectionOrRepairStatus31ChoiceSese04200101:
 
 
 @dataclass
-class ProcessingStatus79ChoiceSese04200101:
+class ProcessingStatus79ChoiceSese04200101(ISO20022MessageElement):
     ackd_accptd: Optional[AcknowledgedAcceptedStatus33ChoiceSese04200101] = field(
         default=None,
         metadata={
@@ -735,7 +736,7 @@ class ProcessingStatus79ChoiceSese04200101:
 
 
 @dataclass
-class BuyInRegulatoryAdviceResponseV01Sese04200101:
+class BuyInRegulatoryAdviceResponseV01Sese04200101(ISO20022MessageElement):
     advc_ref: Optional[Identification14Sese04200101] = field(
         default=None,
         metadata={
@@ -789,7 +790,7 @@ class BuyInRegulatoryAdviceResponseV01Sese04200101:
 
 
 @dataclass
-class Sese04200101:
+class Sese04200101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:sese.042.001.01"
 

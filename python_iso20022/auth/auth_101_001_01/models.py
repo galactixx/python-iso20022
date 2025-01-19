@@ -5,12 +5,13 @@ from typing import Optional
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
 from python_iso20022.auth.enums import TransactionOperationType4Code
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.101.001.01"
 
 
 @dataclass
-class Contact9Auth10100101:
+class Contact9Auth10100101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -56,7 +57,7 @@ class Contact9Auth10100101:
 
 
 @dataclass
-class DatePeriod2Auth10100101:
+class DatePeriod2Auth10100101(ISO20022MessageElement):
     fr_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -78,7 +79,7 @@ class DatePeriod2Auth10100101:
 
 
 @dataclass
-class SettlementDataRate1ChoiceAuth10100101:
+class SettlementDataRate1ChoiceAuth10100101(ISO20022MessageElement):
     nb_of_instrs: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -102,7 +103,7 @@ class SettlementDataRate1ChoiceAuth10100101:
 
 
 @dataclass
-class SettlementDataRate2Auth10100101:
+class SettlementDataRate2Auth10100101(ISO20022MessageElement):
     vol: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -128,7 +129,7 @@ class SettlementDataRate2Auth10100101:
 
 
 @dataclass
-class SettlementDataVolume2Auth10100101:
+class SettlementDataVolume2Auth10100101(ISO20022MessageElement):
     vol: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -156,7 +157,7 @@ class SettlementDataVolume2Auth10100101:
 
 
 @dataclass
-class SettlementFailureReason2Auth10100101:
+class SettlementFailureReason2Auth10100101(ISO20022MessageElement):
     main_rsns: Optional[str] = field(
         default=None,
         metadata={
@@ -182,7 +183,7 @@ class SettlementFailureReason2Auth10100101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth10100101:
+class SupplementaryDataEnvelope1Auth10100101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -193,7 +194,7 @@ class SupplementaryDataEnvelope1Auth10100101:
 
 
 @dataclass
-class SecuritiesSettlementSystemIdentification2Auth10100101:
+class SecuritiesSettlementSystemIdentification2Auth10100101(ISO20022MessageElement):
     sys_id: Optional[str] = field(
         default=None,
         metadata={
@@ -254,7 +255,7 @@ class SecuritiesSettlementSystemIdentification2Auth10100101:
 
 
 @dataclass
-class SettlementFailsJustification1Auth10100101:
+class SettlementFailsJustification1Auth10100101(ISO20022MessageElement):
     val: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -279,7 +280,7 @@ class SettlementFailsJustification1Auth10100101:
 
 
 @dataclass
-class SettlementFailureReason3Auth10100101:
+class SettlementFailureReason3Auth10100101(ISO20022MessageElement):
     avrg_drtn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -304,7 +305,7 @@ class SettlementFailureReason3Auth10100101:
 
 
 @dataclass
-class SettlementTotalData1Auth10100101:
+class SettlementTotalData1Auth10100101(ISO20022MessageElement):
     sttld: Optional[SettlementDataVolume2Auth10100101] = field(
         default=None,
         metadata={
@@ -344,7 +345,7 @@ class SettlementTotalData1Auth10100101:
 
 
 @dataclass
-class SupplementaryData1Auth10100101:
+class SupplementaryData1Auth10100101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -367,7 +368,7 @@ class SupplementaryData1Auth10100101:
 
 
 @dataclass
-class SettlementFailsDerogation1Auth10100101:
+class SettlementFailsDerogation1Auth10100101(ISO20022MessageElement):
     elgblty_ind: Optional[bool] = field(
         default=None,
         metadata={
@@ -388,7 +389,7 @@ class SettlementFailsDerogation1Auth10100101:
 
 
 @dataclass
-class SettlementFailsReportHeader2Auth10100101:
+class SettlementFailsReportHeader2Auth10100101(ISO20022MessageElement):
     cre_dt_tm: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -440,7 +441,7 @@ class SettlementFailsReportHeader2Auth10100101:
 
 
 @dataclass
-class SettlementFailsData4Auth10100101:
+class SettlementFailsData4Auth10100101(ISO20022MessageElement):
     ttl: Optional[SettlementTotalData1Auth10100101] = field(
         default=None,
         metadata={
@@ -471,7 +472,7 @@ class SettlementFailsData4Auth10100101:
 
 
 @dataclass
-class SettlementFailsAnnualReportV01Auth10100101:
+class SettlementFailsAnnualReportV01Auth10100101(ISO20022MessageElement):
     rpt_hdr: Optional[SettlementFailsReportHeader2Auth10100101] = field(
         default=None,
         metadata={
@@ -501,7 +502,7 @@ class SettlementFailsAnnualReportV01Auth10100101:
 
 
 @dataclass
-class Auth10100101:
+class Auth10100101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.101.001.01"
 

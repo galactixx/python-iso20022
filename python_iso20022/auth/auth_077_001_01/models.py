@@ -4,13 +4,14 @@ from typing import Optional
 from xsdata.models.datatype import XmlDate
 
 from python_iso20022.auth.enums import BenchmarkCurveName2Code
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import AddressType2Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.077.001.01"
 
 
 @dataclass
-class GenericIdentification36Auth07700101:
+class GenericIdentification36Auth07700101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -46,7 +47,7 @@ class GenericIdentification36Auth07700101:
 
 
 @dataclass
-class IdentificationSource3ChoiceAuth07700101:
+class IdentificationSource3ChoiceAuth07700101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -70,7 +71,7 @@ class IdentificationSource3ChoiceAuth07700101:
 
 
 @dataclass
-class Period2Auth07700101:
+class Period2Auth07700101(ISO20022MessageElement):
     fr_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -92,7 +93,7 @@ class Period2Auth07700101:
 
 
 @dataclass
-class SupervisingAuthorityIdentification1ChoiceAuth07700101:
+class SupervisingAuthorityIdentification1ChoiceAuth07700101(ISO20022MessageElement):
     prtry_id: Optional[str] = field(
         default=None,
         metadata={
@@ -116,7 +117,7 @@ class SupervisingAuthorityIdentification1ChoiceAuth07700101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth07700101:
+class SupplementaryDataEnvelope1Auth07700101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -127,7 +128,7 @@ class SupplementaryDataEnvelope1Auth07700101:
 
 
 @dataclass
-class BenchmarkDetail1Auth07700101:
+class BenchmarkDetail1Auth07700101(ISO20022MessageElement):
     full_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -160,7 +161,7 @@ class BenchmarkDetail1Auth07700101:
 
 
 @dataclass
-class OtherIdentification1Auth07700101:
+class OtherIdentification1Auth07700101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -194,7 +195,7 @@ class OtherIdentification1Auth07700101:
 
 
 @dataclass
-class Period4ChoiceAuth07700101:
+class Period4ChoiceAuth07700101(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -230,7 +231,7 @@ class Period4ChoiceAuth07700101:
 
 
 @dataclass
-class PostalAddress1Auth07700101:
+class PostalAddress1Auth07700101(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -313,7 +314,7 @@ class PostalAddress1Auth07700101:
 
 
 @dataclass
-class SupervisingAuthorityIdentification1Auth07700101:
+class SupervisingAuthorityIdentification1Auth07700101(ISO20022MessageElement):
     id: Optional[SupervisingAuthorityIdentification1ChoiceAuth07700101] = field(
         default=None,
         metadata={
@@ -334,7 +335,7 @@ class SupervisingAuthorityIdentification1Auth07700101:
 
 
 @dataclass
-class SupplementaryData1Auth07700101:
+class SupplementaryData1Auth07700101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -357,7 +358,7 @@ class SupplementaryData1Auth07700101:
 
 
 @dataclass
-class NameAndAddress5Auth07700101:
+class NameAndAddress5Auth07700101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -380,7 +381,7 @@ class NameAndAddress5Auth07700101:
 
 
 @dataclass
-class SecurityIdentification19Auth07700101:
+class SecurityIdentification19Auth07700101(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -411,7 +412,7 @@ class SecurityIdentification19Auth07700101:
 
 
 @dataclass
-class StatusDetail1Auth07700101:
+class StatusDetail1Auth07700101(ISO20022MessageElement):
     ctry: Optional[str] = field(
         default=None,
         metadata={
@@ -472,7 +473,7 @@ class StatusDetail1Auth07700101:
 
 
 @dataclass
-class BenchmarkCancellation1Auth07700101:
+class BenchmarkCancellation1Auth07700101(ISO20022MessageElement):
     tech_rcrd_id: Optional[str] = field(
         default=None,
         metadata={
@@ -503,7 +504,7 @@ class BenchmarkCancellation1Auth07700101:
 
 
 @dataclass
-class PartyIdentification120ChoiceAuth07700101:
+class PartyIdentification120ChoiceAuth07700101(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -532,7 +533,7 @@ class PartyIdentification120ChoiceAuth07700101:
 
 
 @dataclass
-class PartyIdentification136Auth07700101:
+class PartyIdentification136Auth07700101(ISO20022MessageElement):
     id: Optional[PartyIdentification120ChoiceAuth07700101] = field(
         default=None,
         metadata={
@@ -554,7 +555,7 @@ class PartyIdentification136Auth07700101:
 
 
 @dataclass
-class BenchmarkCreate1Auth07700101:
+class BenchmarkCreate1Auth07700101(ISO20022MessageElement):
     tech_rcrd_id: Optional[str] = field(
         default=None,
         metadata={
@@ -627,7 +628,7 @@ class BenchmarkCreate1Auth07700101:
 
 
 @dataclass
-class BenchmarkUpdate1Auth07700101:
+class BenchmarkUpdate1Auth07700101(ISO20022MessageElement):
     tech_rcrd_id: Optional[str] = field(
         default=None,
         metadata={
@@ -708,7 +709,7 @@ class BenchmarkUpdate1Auth07700101:
 
 
 @dataclass
-class BenchmarkReport1ChoiceAuth07700101:
+class BenchmarkReport1ChoiceAuth07700101(ISO20022MessageElement):
     cret: Optional[BenchmarkCreate1Auth07700101] = field(
         default=None,
         metadata={
@@ -736,7 +737,7 @@ class BenchmarkReport1ChoiceAuth07700101:
 
 
 @dataclass
-class FinancialBenchmarkReportV01Auth07700101:
+class FinancialBenchmarkReportV01Auth07700101(ISO20022MessageElement):
     bchmk_data: list[BenchmarkReport1ChoiceAuth07700101] = field(
         default_factory=list,
         metadata={
@@ -757,7 +758,7 @@ class FinancialBenchmarkReportV01Auth07700101:
 
 
 @dataclass
-class Auth07700101:
+class Auth07700101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.077.001.01"
 

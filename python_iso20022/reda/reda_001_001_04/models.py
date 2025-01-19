@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     AddressType2Code,
     DistributionPolicy1Code,
@@ -28,7 +29,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:reda.001.001.04"
 
 
 @dataclass
-class ActiveCurrencyAnd13DecimalAmountReda00100104:
+class ActiveCurrencyAnd13DecimalAmountReda00100104(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -50,7 +51,7 @@ class ActiveCurrencyAnd13DecimalAmountReda00100104:
 
 
 @dataclass
-class ActiveOrHistoricCurrencyAnd13DecimalAmountReda00100104:
+class ActiveOrHistoricCurrencyAnd13DecimalAmountReda00100104(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -72,7 +73,7 @@ class ActiveOrHistoricCurrencyAnd13DecimalAmountReda00100104:
 
 
 @dataclass
-class ActiveOrHistoricCurrencyAndAmountReda00100104:
+class ActiveOrHistoricCurrencyAndAmountReda00100104(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -94,7 +95,7 @@ class ActiveOrHistoricCurrencyAndAmountReda00100104:
 
 
 @dataclass
-class AlternateSecurityIdentification1Reda00100104:
+class AlternateSecurityIdentification1Reda00100104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -128,7 +129,7 @@ class AlternateSecurityIdentification1Reda00100104:
 
 
 @dataclass
-class DateAndDateTimeChoiceReda00100104:
+class DateAndDateTimeChoiceReda00100104(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -148,7 +149,7 @@ class DateAndDateTimeChoiceReda00100104:
 
 
 @dataclass
-class DatePeriodDetailsReda00100104:
+class DatePeriodDetailsReda00100104(ISO20022MessageElement):
     fr_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -170,7 +171,7 @@ class DatePeriodDetailsReda00100104:
 
 
 @dataclass
-class DateTimePeriodDetailsReda00100104:
+class DateTimePeriodDetailsReda00100104(ISO20022MessageElement):
     fr_dt_tm: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -192,7 +193,7 @@ class DateTimePeriodDetailsReda00100104:
 
 
 @dataclass
-class Extension1Reda00100104:
+class Extension1Reda00100104(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -218,7 +219,7 @@ class Extension1Reda00100104:
 
 
 @dataclass
-class FinancialInstrumentQuantity1Reda00100104:
+class FinancialInstrumentQuantity1Reda00100104(ISO20022MessageElement):
     unit: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -233,7 +234,7 @@ class FinancialInstrumentQuantity1Reda00100104:
 
 
 @dataclass
-class GenericIdentification1Reda00100104:
+class GenericIdentification1Reda00100104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -268,7 +269,7 @@ class GenericIdentification1Reda00100104:
 
 
 @dataclass
-class MessageIdentification1Reda00100104:
+class MessageIdentification1Reda00100104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -292,7 +293,7 @@ class MessageIdentification1Reda00100104:
 
 
 @dataclass
-class PaginationReda00100104:
+class PaginationReda00100104(ISO20022MessageElement):
     pg_nb: Optional[str] = field(
         default=None,
         metadata={
@@ -315,7 +316,7 @@ class PaginationReda00100104:
 
 
 @dataclass
-class Charge15Reda00100104:
+class Charge15Reda00100104(ISO20022MessageElement):
     tp: Optional[ChargeType9Code] = field(
         default=None,
         metadata={
@@ -373,7 +374,7 @@ class Charge15Reda00100104:
 
 
 @dataclass
-class DateOrDateTimePeriodChoiceReda00100104:
+class DateOrDateTimePeriodChoiceReda00100104(ISO20022MessageElement):
     dt: Optional[DatePeriodDetailsReda00100104] = field(
         default=None,
         metadata={
@@ -393,7 +394,7 @@ class DateOrDateTimePeriodChoiceReda00100104:
 
 
 @dataclass
-class PerformanceFactors1Reda00100104:
+class PerformanceFactors1Reda00100104(ISO20022MessageElement):
     corp_actn_fctr: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -435,7 +436,7 @@ class PerformanceFactors1Reda00100104:
 
 
 @dataclass
-class PostalAddress1Reda00100104:
+class PostalAddress1Reda00100104(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -518,7 +519,7 @@ class PostalAddress1Reda00100104:
 
 
 @dataclass
-class PriceType2Reda00100104:
+class PriceType2Reda00100104(ISO20022MessageElement):
     strd: Optional[TypeOfPrice6Code] = field(
         default=None,
         metadata={
@@ -541,7 +542,7 @@ class PriceType2Reda00100104:
 
 
 @dataclass
-class PriceValue1Reda00100104:
+class PriceValue1Reda00100104(ISO20022MessageElement):
     amt: Optional[ActiveCurrencyAnd13DecimalAmountReda00100104] = field(
         default=None,
         metadata={
@@ -554,7 +555,7 @@ class PriceValue1Reda00100104:
 
 
 @dataclass
-class PriceValue5Reda00100104:
+class PriceValue5Reda00100104(ISO20022MessageElement):
     amt: Optional[ActiveOrHistoricCurrencyAnd13DecimalAmountReda00100104] = field(
         default=None,
         metadata={
@@ -567,7 +568,7 @@ class PriceValue5Reda00100104:
 
 
 @dataclass
-class PriceValueChange1Reda00100104:
+class PriceValueChange1Reda00100104(ISO20022MessageElement):
     amt: Optional[ActiveOrHistoricCurrencyAnd13DecimalAmountReda00100104] = field(
         default=None,
         metadata={
@@ -597,7 +598,7 @@ class PriceValueChange1Reda00100104:
 
 
 @dataclass
-class SecurityIdentification3ChoiceReda00100104:
+class SecurityIdentification3ChoiceReda00100104(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -732,7 +733,7 @@ class SecurityIdentification3ChoiceReda00100104:
 
 
 @dataclass
-class TaxCalculationInformation4Reda00100104:
+class TaxCalculationInformation4Reda00100104(ISO20022MessageElement):
     eucptl_gn: Optional[EucapitalGain2Code] = field(
         default=None,
         metadata={
@@ -802,7 +803,7 @@ class TaxCalculationInformation4Reda00100104:
 
 
 @dataclass
-class FinancialInstrument8Reda00100104:
+class FinancialInstrument8Reda00100104(ISO20022MessageElement):
     id: list[SecurityIdentification3ChoiceReda00100104] = field(
         default_factory=list,
         metadata={
@@ -880,7 +881,7 @@ class FinancialInstrument8Reda00100104:
 
 
 @dataclass
-class NameAndAddress5Reda00100104:
+class NameAndAddress5Reda00100104(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -903,7 +904,7 @@ class NameAndAddress5Reda00100104:
 
 
 @dataclass
-class StatisticsByPredefinedTimePeriods2Reda00100104:
+class StatisticsByPredefinedTimePeriods2Reda00100104(ISO20022MessageElement):
     hghst_pric_val12_mnths: Optional[PriceValue5Reda00100104] = field(
         default=None,
         metadata={
@@ -947,7 +948,7 @@ class StatisticsByPredefinedTimePeriods2Reda00100104:
 
 
 @dataclass
-class StatisticsByUserDefinedTimePeriod2Reda00100104:
+class StatisticsByUserDefinedTimePeriod2Reda00100104(ISO20022MessageElement):
     prd: Optional[DateOrDateTimePeriodChoiceReda00100104] = field(
         default=None,
         metadata={
@@ -994,7 +995,7 @@ class StatisticsByUserDefinedTimePeriod2Reda00100104:
 
 
 @dataclass
-class Tax17Reda00100104:
+class Tax17Reda00100104(ISO20022MessageElement):
     tp: Optional[TaxType12Code] = field(
         default=None,
         metadata={
@@ -1053,7 +1054,7 @@ class Tax17Reda00100104:
 
 
 @dataclass
-class PartyIdentification2ChoiceReda00100104:
+class PartyIdentification2ChoiceReda00100104(ISO20022MessageElement):
     bicor_bei: Optional[str] = field(
         default=None,
         metadata={
@@ -1082,7 +1083,7 @@ class PartyIdentification2ChoiceReda00100104:
 
 
 @dataclass
-class UnitPrice15Reda00100104:
+class UnitPrice15Reda00100104(ISO20022MessageElement):
     tp: Optional[TypeOfPrice9Code] = field(
         default=None,
         metadata={
@@ -1256,7 +1257,7 @@ class UnitPrice15Reda00100104:
 
 
 @dataclass
-class ValuationStatistics3Reda00100104:
+class ValuationStatistics3Reda00100104(ISO20022MessageElement):
     ccy: Optional[str] = field(
         default=None,
         metadata={
@@ -1314,7 +1315,7 @@ class ValuationStatistics3Reda00100104:
 
 
 @dataclass
-class AdditionalReference3Reda00100104:
+class AdditionalReference3Reda00100104(ISO20022MessageElement):
     ref: Optional[str] = field(
         default=None,
         metadata={
@@ -1347,7 +1348,7 @@ class AdditionalReference3Reda00100104:
 
 
 @dataclass
-class PriceValuation4Reda00100104:
+class PriceValuation4Reda00100104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1486,7 +1487,7 @@ class PriceValuation4Reda00100104:
 
 
 @dataclass
-class PriceReportV04Reda00100104:
+class PriceReportV04Reda00100104(ISO20022MessageElement):
     msg_id: Optional[MessageIdentification1Reda00100104] = field(
         default=None,
         metadata={
@@ -1579,7 +1580,7 @@ class PriceReportV04Reda00100104:
 
 
 @dataclass
-class Reda00100104:
+class Reda00100104(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:reda.001.001.04"
 

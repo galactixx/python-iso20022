@@ -5,12 +5,13 @@ from typing import Optional
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
 from python_iso20022.auth.enums import TransactionOperationType4Code
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.072.001.01"
 
 
 @dataclass
-class ContactDetails4Auth07200101:
+class ContactDetails4Auth07200101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -57,7 +58,7 @@ class ContactDetails4Auth07200101:
 
 
 @dataclass
-class InternalisationDataRate1Auth07200101:
+class InternalisationDataRate1Auth07200101(ISO20022MessageElement):
     vol_pctg: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -83,7 +84,7 @@ class InternalisationDataRate1Auth07200101:
 
 
 @dataclass
-class InternalisationDataVolume1Auth07200101:
+class InternalisationDataVolume1Auth07200101(ISO20022MessageElement):
     vol: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -111,7 +112,7 @@ class InternalisationDataVolume1Auth07200101:
 
 
 @dataclass
-class IssuerCsdidentification1Auth07200101:
+class IssuerCsdidentification1Auth07200101(ISO20022MessageElement):
     class Meta:
         name = "IssuerCSDIdentification1"
 
@@ -146,7 +147,7 @@ class IssuerCsdidentification1Auth07200101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth07200101:
+class SupplementaryDataEnvelope1Auth07200101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -157,7 +158,7 @@ class SupplementaryDataEnvelope1Auth07200101:
 
 
 @dataclass
-class InternalisationData2Auth07200101:
+class InternalisationData2Auth07200101(ISO20022MessageElement):
     sttld: Optional[InternalisationDataVolume1Auth07200101] = field(
         default=None,
         metadata={
@@ -188,7 +189,7 @@ class InternalisationData2Auth07200101:
 
 
 @dataclass
-class SettlementInternaliserIdentification1Auth07200101:
+class SettlementInternaliserIdentification1Auth07200101(ISO20022MessageElement):
     lei: Optional[str] = field(
         default=None,
         metadata={
@@ -230,7 +231,7 @@ class SettlementInternaliserIdentification1Auth07200101:
 
 
 @dataclass
-class SettlementInternaliserReportHeader1Auth07200101:
+class SettlementInternaliserReportHeader1Auth07200101(ISO20022MessageElement):
     cre_dt_tm: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -271,7 +272,7 @@ class SettlementInternaliserReportHeader1Auth07200101:
 
 
 @dataclass
-class SupplementaryData1Auth07200101:
+class SupplementaryData1Auth07200101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -294,7 +295,7 @@ class SupplementaryData1Auth07200101:
 
 
 @dataclass
-class InternalisationData1Auth07200101:
+class InternalisationData1Auth07200101(ISO20022MessageElement):
     aggt: Optional[InternalisationData2Auth07200101] = field(
         default=None,
         metadata={
@@ -316,7 +317,7 @@ class InternalisationData1Auth07200101:
 
 
 @dataclass
-class SettlementInternaliserClientType1Auth07200101:
+class SettlementInternaliserClientType1Auth07200101(ISO20022MessageElement):
     prfssnl: Optional[InternalisationData1Auth07200101] = field(
         default=None,
         metadata={
@@ -338,7 +339,7 @@ class SettlementInternaliserClientType1Auth07200101:
 
 
 @dataclass
-class SettlementInternaliserFinancialInstrument1Auth07200101:
+class SettlementInternaliserFinancialInstrument1Auth07200101(ISO20022MessageElement):
     eqty: Optional[InternalisationData1Auth07200101] = field(
         default=None,
         metadata={
@@ -423,7 +424,7 @@ class SettlementInternaliserFinancialInstrument1Auth07200101:
 
 
 @dataclass
-class SettlementInternaliserTransactionType1Auth07200101:
+class SettlementInternaliserTransactionType1Auth07200101(ISO20022MessageElement):
     scties_buy_or_sell: Optional[InternalisationData1Auth07200101] = field(
         default=None,
         metadata={
@@ -472,7 +473,7 @@ class SettlementInternaliserTransactionType1Auth07200101:
 
 
 @dataclass
-class IssuerCsdreport1Auth07200101:
+class IssuerCsdreport1Auth07200101(ISO20022MessageElement):
     class Meta:
         name = "IssuerCSDReport1"
 
@@ -535,7 +536,7 @@ class IssuerCsdreport1Auth07200101:
 
 
 @dataclass
-class SettlementInternaliser1Auth07200101:
+class SettlementInternaliser1Auth07200101(ISO20022MessageElement):
     id: Optional[SettlementInternaliserIdentification1Auth07200101] = field(
         default=None,
         metadata={
@@ -595,7 +596,7 @@ class SettlementInternaliser1Auth07200101:
 
 
 @dataclass
-class SettlementInternaliserReportV01Auth07200101:
+class SettlementInternaliserReportV01Auth07200101(ISO20022MessageElement):
     rpt_hdr: Optional[SettlementInternaliserReportHeader1Auth07200101] = field(
         default=None,
         metadata={
@@ -634,7 +635,7 @@ class SettlementInternaliserReportV01Auth07200101:
 
 
 @dataclass
-class Auth07200101:
+class Auth07200101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.072.001.01"
 

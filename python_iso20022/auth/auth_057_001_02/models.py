@@ -7,12 +7,13 @@ from python_iso20022.auth.auth_057_001_02.enums import (
     StrategyStressType1Code,
 )
 from python_iso20022.auth.enums import SchemeIdentificationType1Code
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.057.001.02"
 
 
 @dataclass
-class Absolute1Auth05700102:
+class Absolute1Auth05700102(ISO20022MessageElement):
     unit: Optional[str] = field(
         default=None,
         metadata={
@@ -38,7 +39,7 @@ class Absolute1Auth05700102:
 
 
 @dataclass
-class GenericIdentification168Auth05700102:
+class GenericIdentification168Auth05700102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -83,7 +84,7 @@ class GenericIdentification168Auth05700102:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth05700102:
+class SupplementaryDataEnvelope1Auth05700102(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -94,7 +95,7 @@ class SupplementaryDataEnvelope1Auth05700102:
 
 
 @dataclass
-class GenericIdentification165Auth05700102:
+class GenericIdentification165Auth05700102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -137,7 +138,7 @@ class GenericIdentification165Auth05700102:
 
 
 @dataclass
-class StressSize1ChoiceAuth05700102:
+class StressSize1ChoiceAuth05700102(ISO20022MessageElement):
     rltv: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -159,7 +160,7 @@ class StressSize1ChoiceAuth05700102:
 
 
 @dataclass
-class SupplementaryData1Auth05700102:
+class SupplementaryData1Auth05700102(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -182,7 +183,7 @@ class SupplementaryData1Auth05700102:
 
 
 @dataclass
-class RiskFactor1Auth05700102:
+class RiskFactor1Auth05700102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -206,7 +207,7 @@ class RiskFactor1Auth05700102:
 
 
 @dataclass
-class Strategy1Auth05700102:
+class Strategy1Auth05700102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -230,7 +231,7 @@ class Strategy1Auth05700102:
 
 
 @dataclass
-class StressedProduct1Auth05700102:
+class StressedProduct1Auth05700102(ISO20022MessageElement):
     id: Optional[GenericIdentification168Auth05700102] = field(
         default=None,
         metadata={
@@ -261,7 +262,7 @@ class StressedProduct1Auth05700102:
 
 
 @dataclass
-class StressItem1ChoiceAuth05700102:
+class StressItem1ChoiceAuth05700102(ISO20022MessageElement):
     pdct: Optional[StressedProduct1Auth05700102] = field(
         default=None,
         metadata={
@@ -289,7 +290,7 @@ class StressItem1ChoiceAuth05700102:
 
 
 @dataclass
-class StressItem1Auth05700102:
+class StressItem1Auth05700102(ISO20022MessageElement):
     strss_pdct: Optional[StressItem1ChoiceAuth05700102] = field(
         default=None,
         metadata={
@@ -302,7 +303,7 @@ class StressItem1Auth05700102:
 
 
 @dataclass
-class ScenarioDefinition2Auth05700102:
+class ScenarioDefinition2Auth05700102(ISO20022MessageElement):
     id: Optional[GenericIdentification165Auth05700102] = field(
         default=None,
         metadata={
@@ -352,7 +353,7 @@ class ScenarioDefinition2Auth05700102:
 
 
 @dataclass
-class CcpportfolioStressTestingDefinitionReportV02Auth05700102:
+class CcpportfolioStressTestingDefinitionReportV02Auth05700102(ISO20022MessageElement):
     class Meta:
         name = "CCPPortfolioStressTestingDefinitionReportV02"
 
@@ -376,7 +377,7 @@ class CcpportfolioStressTestingDefinitionReportV02Auth05700102:
 
 
 @dataclass
-class Auth05700102:
+class Auth05700102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.057.001.02"
 

@@ -3,6 +3,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     AddressType2Code,
     DataModification1Code,
@@ -15,7 +16,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:reda.022.001.02"
 
 
 @dataclass
-class GenericIdentification30Reda02200102:
+class GenericIdentification30Reda02200102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -50,7 +51,7 @@ class GenericIdentification30Reda02200102:
 
 
 @dataclass
-class GenericIdentification36Reda02200102:
+class GenericIdentification36Reda02200102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -86,7 +87,7 @@ class GenericIdentification36Reda02200102:
 
 
 @dataclass
-class MarketSpecificAttribute1Reda02200102:
+class MarketSpecificAttribute1Reda02200102(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -112,7 +113,7 @@ class MarketSpecificAttribute1Reda02200102:
 
 
 @dataclass
-class MessageHeader1Reda02200102:
+class MessageHeader1Reda02200102(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -135,7 +136,7 @@ class MessageHeader1Reda02200102:
 
 
 @dataclass
-class OtherContact1Reda02200102:
+class OtherContact1Reda02200102(ISO20022MessageElement):
     chanl_tp: Optional[str] = field(
         default=None,
         metadata={
@@ -160,7 +161,7 @@ class OtherContact1Reda02200102:
 
 
 @dataclass
-class PartyName3Reda02200102:
+class PartyName3Reda02200102(ISO20022MessageElement):
     vld_fr: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -192,7 +193,7 @@ class PartyName3Reda02200102:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Reda02200102:
+class SupplementaryDataEnvelope1Reda02200102(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -203,7 +204,7 @@ class SupplementaryDataEnvelope1Reda02200102:
 
 
 @dataclass
-class SystemParty2Reda02200102:
+class SystemParty2Reda02200102(ISO20022MessageElement):
     opng_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -223,7 +224,7 @@ class SystemParty2Reda02200102:
 
 
 @dataclass
-class SystemRestriction1Reda02200102:
+class SystemRestriction1Reda02200102(ISO20022MessageElement):
     vld_fr: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -255,7 +256,7 @@ class SystemRestriction1Reda02200102:
 
 
 @dataclass
-class TechnicalIdentification2ChoiceReda02200102:
+class TechnicalIdentification2ChoiceReda02200102(ISO20022MessageElement):
     bicfi: Optional[str] = field(
         default=None,
         metadata={
@@ -278,7 +279,7 @@ class TechnicalIdentification2ChoiceReda02200102:
 
 
 @dataclass
-class AddressType3ChoiceReda02200102:
+class AddressType3ChoiceReda02200102(ISO20022MessageElement):
     cd: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -298,7 +299,7 @@ class AddressType3ChoiceReda02200102:
 
 
 @dataclass
-class Contact14Reda02200102:
+class Contact14Reda02200102(ISO20022MessageElement):
     nm_prfx: Optional[NamePrefix2Code] = field(
         default=None,
         metadata={
@@ -439,7 +440,7 @@ class Contact14Reda02200102:
 
 
 @dataclass
-class PartyLockStatus1Reda02200102:
+class PartyLockStatus1Reda02200102(ISO20022MessageElement):
     vld_fr: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -470,7 +471,7 @@ class PartyLockStatus1Reda02200102:
 
 
 @dataclass
-class PostalAddress1Reda02200102:
+class PostalAddress1Reda02200102(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -553,7 +554,7 @@ class PostalAddress1Reda02200102:
 
 
 @dataclass
-class SupplementaryData1Reda02200102:
+class SupplementaryData1Reda02200102(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -576,7 +577,7 @@ class SupplementaryData1Reda02200102:
 
 
 @dataclass
-class NameAndAddress5Reda02200102:
+class NameAndAddress5Reda02200102(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -599,7 +600,7 @@ class NameAndAddress5Reda02200102:
 
 
 @dataclass
-class PostalAddress28Reda02200102:
+class PostalAddress28Reda02200102(ISO20022MessageElement):
     adr_tp: Optional[AddressType3ChoiceReda02200102] = field(
         default=None,
         metadata={
@@ -789,7 +790,7 @@ class PostalAddress28Reda02200102:
 
 
 @dataclass
-class PartyIdentification120ChoiceReda02200102:
+class PartyIdentification120ChoiceReda02200102(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -818,7 +819,7 @@ class PartyIdentification120ChoiceReda02200102:
 
 
 @dataclass
-class PartyIdentification136Reda02200102:
+class PartyIdentification136Reda02200102(ISO20022MessageElement):
     id: Optional[PartyIdentification120ChoiceReda02200102] = field(
         default=None,
         metadata={
@@ -840,7 +841,7 @@ class PartyIdentification136Reda02200102:
 
 
 @dataclass
-class SystemPartyIdentification10Reda02200102:
+class SystemPartyIdentification10Reda02200102(ISO20022MessageElement):
     vld_fr: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -860,7 +861,7 @@ class SystemPartyIdentification10Reda02200102:
 
 
 @dataclass
-class SystemPartyIdentification8Reda02200102:
+class SystemPartyIdentification8Reda02200102(ISO20022MessageElement):
     id: Optional[PartyIdentification136Reda02200102] = field(
         default=None,
         metadata={
@@ -881,7 +882,7 @@ class SystemPartyIdentification8Reda02200102:
 
 
 @dataclass
-class SystemPartyModification3ChoiceReda02200102:
+class SystemPartyModification3ChoiceReda02200102(ISO20022MessageElement):
     sys_pty_dt: Optional[SystemParty2Reda02200102] = field(
         default=None,
         metadata={
@@ -965,7 +966,7 @@ class SystemPartyModification3ChoiceReda02200102:
 
 
 @dataclass
-class SystemPartyModification3Reda02200102:
+class SystemPartyModification3Reda02200102(ISO20022MessageElement):
     scp_indctn: Optional[DataModification1Code] = field(
         default=None,
         metadata={
@@ -987,7 +988,7 @@ class SystemPartyModification3Reda02200102:
 
 
 @dataclass
-class PartyModificationRequestV02Reda02200102:
+class PartyModificationRequestV02Reda02200102(ISO20022MessageElement):
     msg_hdr: Optional[MessageHeader1Reda02200102] = field(
         default=None,
         metadata={
@@ -1025,7 +1026,7 @@ class PartyModificationRequestV02Reda02200102:
 
 
 @dataclass
-class Reda02200102:
+class Reda02200102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:reda.022.001.02"
 

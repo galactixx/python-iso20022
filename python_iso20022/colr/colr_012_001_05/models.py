@@ -3,6 +3,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.colr.colr_012_001_05.enums import (
     CollateralSubstitutionConfirmation1Code,
 )
@@ -16,7 +17,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:colr.012.001.05"
 
 
 @dataclass
-class DateAndDateTime2ChoiceColr01200105:
+class DateAndDateTime2ChoiceColr01200105(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -36,7 +37,7 @@ class DateAndDateTime2ChoiceColr01200105:
 
 
 @dataclass
-class GenericIdentification30Colr01200105:
+class GenericIdentification30Colr01200105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -71,7 +72,7 @@ class GenericIdentification30Colr01200105:
 
 
 @dataclass
-class GenericIdentification36Colr01200105:
+class GenericIdentification36Colr01200105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -107,7 +108,7 @@ class GenericIdentification36Colr01200105:
 
 
 @dataclass
-class PostalAddress2Colr01200105:
+class PostalAddress2Colr01200105(ISO20022MessageElement):
     strt_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -163,7 +164,7 @@ class PostalAddress2Colr01200105:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Colr01200105:
+class SupplementaryDataEnvelope1Colr01200105(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -174,7 +175,7 @@ class SupplementaryDataEnvelope1Colr01200105:
 
 
 @dataclass
-class AgreementFramework1ChoiceColr01200105:
+class AgreementFramework1ChoiceColr01200105(ISO20022MessageElement):
     agrmt_frmwk: Optional[AgreementFramework1Code] = field(
         default=None,
         metadata={
@@ -194,7 +195,7 @@ class AgreementFramework1ChoiceColr01200105:
 
 
 @dataclass
-class CollateralAccountIdentificationType3ChoiceColr01200105:
+class CollateralAccountIdentificationType3ChoiceColr01200105(ISO20022MessageElement):
     tp: Optional[CollateralAccountType1Code] = field(
         default=None,
         metadata={
@@ -214,7 +215,7 @@ class CollateralAccountIdentificationType3ChoiceColr01200105:
 
 
 @dataclass
-class CollateralConfirmation1Colr01200105:
+class CollateralConfirmation1Colr01200105(ISO20022MessageElement):
     coll_sbstitn_req_id: Optional[str] = field(
         default=None,
         metadata={
@@ -258,7 +259,7 @@ class CollateralConfirmation1Colr01200105:
 
 
 @dataclass
-class NameAndAddress6Colr01200105:
+class NameAndAddress6Colr01200105(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -282,7 +283,7 @@ class NameAndAddress6Colr01200105:
 
 
 @dataclass
-class SupplementaryData1Colr01200105:
+class SupplementaryData1Colr01200105(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -305,7 +306,7 @@ class SupplementaryData1Colr01200105:
 
 
 @dataclass
-class Agreement4Colr01200105:
+class Agreement4Colr01200105(ISO20022MessageElement):
     agrmt_dtls: Optional[str] = field(
         default=None,
         metadata={
@@ -357,7 +358,7 @@ class Agreement4Colr01200105:
 
 
 @dataclass
-class BlockChainAddressWallet5Colr01200105:
+class BlockChainAddressWallet5Colr01200105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -390,7 +391,7 @@ class BlockChainAddressWallet5Colr01200105:
 
 
 @dataclass
-class CollateralAccount3Colr01200105:
+class CollateralAccount3Colr01200105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -423,7 +424,7 @@ class CollateralAccount3Colr01200105:
 
 
 @dataclass
-class PartyIdentification178ChoiceColr01200105:
+class PartyIdentification178ChoiceColr01200105(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -452,7 +453,7 @@ class PartyIdentification178ChoiceColr01200105:
 
 
 @dataclass
-class Obligation9Colr01200105:
+class Obligation9Colr01200105(ISO20022MessageElement):
     pty_a: Optional[PartyIdentification178ChoiceColr01200105] = field(
         default=None,
         metadata={
@@ -523,7 +524,7 @@ class Obligation9Colr01200105:
 
 
 @dataclass
-class CollateralSubstitutionConfirmationV05Colr01200105:
+class CollateralSubstitutionConfirmationV05Colr01200105(ISO20022MessageElement):
     tx_id: Optional[str] = field(
         default=None,
         metadata={
@@ -572,7 +573,7 @@ class CollateralSubstitutionConfirmationV05Colr01200105:
 
 
 @dataclass
-class Colr01200105:
+class Colr01200105(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:colr.012.001.05"
 

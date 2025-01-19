@@ -1,13 +1,14 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.fxtr.fxtr_013_001_03.enums import WithdrawalReason1Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:fxtr.013.001.03"
 
 
 @dataclass
-class SupplementaryDataEnvelope1Fxtr01300103:
+class SupplementaryDataEnvelope1Fxtr01300103(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -18,7 +19,7 @@ class SupplementaryDataEnvelope1Fxtr01300103:
 
 
 @dataclass
-class SupplementaryData1Fxtr01300103:
+class SupplementaryData1Fxtr01300103(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -41,7 +42,7 @@ class SupplementaryData1Fxtr01300103:
 
 
 @dataclass
-class WithdrawalReason1Fxtr01300103:
+class WithdrawalReason1Fxtr01300103(ISO20022MessageElement):
     wdrwl_rsn_cd: Optional[WithdrawalReason1Code] = field(
         default=None,
         metadata={
@@ -64,7 +65,7 @@ class WithdrawalReason1Fxtr01300103:
 
 
 @dataclass
-class ForeignExchangeTradeWithdrawalNotificationV03Fxtr01300103:
+class ForeignExchangeTradeWithdrawalNotificationV03Fxtr01300103(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -115,7 +116,7 @@ class ForeignExchangeTradeWithdrawalNotificationV03Fxtr01300103:
 
 
 @dataclass
-class Fxtr01300103:
+class Fxtr01300103(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:fxtr.013.001.03"
 

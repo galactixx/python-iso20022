@@ -3,12 +3,13 @@ from decimal import Decimal
 from typing import Optional
 
 from python_iso20022.auth.enums import SchemeIdentificationType1Code
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.056.001.01"
 
 
 @dataclass
-class ActiveCurrencyAndAmountAuth05600101:
+class ActiveCurrencyAndAmountAuth05600101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -30,7 +31,7 @@ class ActiveCurrencyAndAmountAuth05600101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth05600101:
+class SupplementaryDataEnvelope1Auth05600101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -41,7 +42,7 @@ class SupplementaryDataEnvelope1Auth05600101:
 
 
 @dataclass
-class AmountAndDirection102Auth05600101:
+class AmountAndDirection102Auth05600101(ISO20022MessageElement):
     amt: Optional[ActiveCurrencyAndAmountAuth05600101] = field(
         default=None,
         metadata={
@@ -63,7 +64,7 @@ class AmountAndDirection102Auth05600101:
 
 
 @dataclass
-class GenericIdentification165Auth05600101:
+class GenericIdentification165Auth05600101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -106,7 +107,7 @@ class GenericIdentification165Auth05600101:
 
 
 @dataclass
-class SupplementaryData1Auth05600101:
+class SupplementaryData1Auth05600101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -129,7 +130,7 @@ class SupplementaryData1Auth05600101:
 
 
 @dataclass
-class SettlementAccount1Auth05600101:
+class SettlementAccount1Auth05600101(ISO20022MessageElement):
     id: Optional[GenericIdentification165Auth05600101] = field(
         default=None,
         metadata={
@@ -196,7 +197,7 @@ class SettlementAccount1Auth05600101:
 
 
 @dataclass
-class CcpmemberObligationsReportV01Auth05600101:
+class CcpmemberObligationsReportV01Auth05600101(ISO20022MessageElement):
     class Meta:
         name = "CCPMemberObligationsReportV01"
 
@@ -220,7 +221,7 @@ class CcpmemberObligationsReportV01Auth05600101:
 
 
 @dataclass
-class Auth05600101:
+class Auth05600101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.056.001.01"
 

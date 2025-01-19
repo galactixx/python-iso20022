@@ -3,13 +3,14 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import NoReasonCode
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:reda.008.001.01"
 
 
 @dataclass
-class GenericIdentification30Reda00800101:
+class GenericIdentification30Reda00800101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -44,7 +45,7 @@ class GenericIdentification30Reda00800101:
 
 
 @dataclass
-class IdentificationSource3ChoiceReda00800101:
+class IdentificationSource3ChoiceReda00800101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -68,7 +69,7 @@ class IdentificationSource3ChoiceReda00800101:
 
 
 @dataclass
-class OriginalBusinessInstruction1Reda00800101:
+class OriginalBusinessInstruction1Reda00800101(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -101,7 +102,7 @@ class OriginalBusinessInstruction1Reda00800101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Reda00800101:
+class SupplementaryDataEnvelope1Reda00800101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -112,7 +113,7 @@ class SupplementaryDataEnvelope1Reda00800101:
 
 
 @dataclass
-class MessageHeader12Reda00800101:
+class MessageHeader12Reda00800101(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -143,7 +144,7 @@ class MessageHeader12Reda00800101:
 
 
 @dataclass
-class OtherIdentification1Reda00800101:
+class OtherIdentification1Reda00800101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -177,7 +178,7 @@ class OtherIdentification1Reda00800101:
 
 
 @dataclass
-class ProprietaryReason4Reda00800101:
+class ProprietaryReason4Reda00800101(ISO20022MessageElement):
     rsn: Optional[GenericIdentification30Reda00800101] = field(
         default=None,
         metadata={
@@ -199,7 +200,7 @@ class ProprietaryReason4Reda00800101:
 
 
 @dataclass
-class SupplementaryData1Reda00800101:
+class SupplementaryData1Reda00800101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -222,7 +223,7 @@ class SupplementaryData1Reda00800101:
 
 
 @dataclass
-class ProprietaryStatusAndReason6Reda00800101:
+class ProprietaryStatusAndReason6Reda00800101(ISO20022MessageElement):
     prtry_sts: Optional[GenericIdentification30Reda00800101] = field(
         default=None,
         metadata={
@@ -243,7 +244,7 @@ class ProprietaryStatusAndReason6Reda00800101:
 
 
 @dataclass
-class Reason18ChoiceReda00800101:
+class Reason18ChoiceReda00800101(ISO20022MessageElement):
     rsn: list[ProprietaryReason4Reda00800101] = field(
         default_factory=list,
         metadata={
@@ -263,7 +264,7 @@ class Reason18ChoiceReda00800101:
 
 
 @dataclass
-class Reason4Reda00800101:
+class Reason4Reda00800101(ISO20022MessageElement):
     rsn: list[ProprietaryReason4Reda00800101] = field(
         default_factory=list,
         metadata={
@@ -275,7 +276,7 @@ class Reason4Reda00800101:
 
 
 @dataclass
-class SecurityIdentification39Reda00800101:
+class SecurityIdentification39Reda00800101(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -306,7 +307,7 @@ class SecurityIdentification39Reda00800101:
 
 
 @dataclass
-class ProcessingStatus72ChoiceReda00800101:
+class ProcessingStatus72ChoiceReda00800101(ISO20022MessageElement):
     ackd_accptd: Optional[Reason4Reda00800101] = field(
         default=None,
         metadata={
@@ -350,7 +351,7 @@ class ProcessingStatus72ChoiceReda00800101:
 
 
 @dataclass
-class SecurityCreationStatusAdviceV01Reda00800101:
+class SecurityCreationStatusAdviceV01Reda00800101(ISO20022MessageElement):
     msg_hdr: Optional[MessageHeader12Reda00800101] = field(
         default=None,
         metadata={
@@ -387,7 +388,7 @@ class SecurityCreationStatusAdviceV01Reda00800101:
 
 
 @dataclass
-class Reda00800101:
+class Reda00800101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:reda.008.001.01"
 

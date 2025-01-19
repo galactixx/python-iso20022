@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import AdjustmentDirection1Code, NamePrefix1Code
 from python_iso20022.tsmt.enums import (
     AdjustmentType2Code,
@@ -27,7 +28,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:tsmt.012.001.05"
 
 
 @dataclass
-class AccountSchemeName1ChoiceTsmt01200105:
+class AccountSchemeName1ChoiceTsmt01200105(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -51,7 +52,7 @@ class AccountSchemeName1ChoiceTsmt01200105:
 
 
 @dataclass
-class ActiveCurrencyAndAmountTsmt01200105:
+class ActiveCurrencyAndAmountTsmt01200105(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -73,7 +74,7 @@ class ActiveCurrencyAndAmountTsmt01200105:
 
 
 @dataclass
-class AirportDescription1Tsmt01200105:
+class AirportDescription1Tsmt01200105(ISO20022MessageElement):
     twn: Optional[str] = field(
         default=None,
         metadata={
@@ -98,7 +99,7 @@ class AirportDescription1Tsmt01200105:
 
 
 @dataclass
-class Bicidentification1Tsmt01200105:
+class Bicidentification1Tsmt01200105(ISO20022MessageElement):
     class Meta:
         name = "BICIdentification1"
 
@@ -115,7 +116,7 @@ class Bicidentification1Tsmt01200105:
 
 
 @dataclass
-class BpoapplicableRules1ChoiceTsmt01200105:
+class BpoapplicableRules1ChoiceTsmt01200105(ISO20022MessageElement):
     class Meta:
         name = "BPOApplicableRules1Choice"
 
@@ -142,7 +143,7 @@ class BpoapplicableRules1ChoiceTsmt01200105:
 
 
 @dataclass
-class CashAccountType2ChoiceTsmt01200105:
+class CashAccountType2ChoiceTsmt01200105(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -166,7 +167,7 @@ class CashAccountType2ChoiceTsmt01200105:
 
 
 @dataclass
-class CurrencyAndAmountTsmt01200105:
+class CurrencyAndAmountTsmt01200105(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -188,7 +189,7 @@ class CurrencyAndAmountTsmt01200105:
 
 
 @dataclass
-class DocumentIdentification7Tsmt01200105:
+class DocumentIdentification7Tsmt01200105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -212,7 +213,7 @@ class DocumentIdentification7Tsmt01200105:
 
 
 @dataclass
-class GenericIdentification1Tsmt01200105:
+class GenericIdentification1Tsmt01200105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -247,7 +248,7 @@ class GenericIdentification1Tsmt01200105:
 
 
 @dataclass
-class GenericIdentification13Tsmt01200105:
+class GenericIdentification13Tsmt01200105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -284,7 +285,7 @@ class GenericIdentification13Tsmt01200105:
 
 
 @dataclass
-class GenericIdentification4Tsmt01200105:
+class GenericIdentification4Tsmt01200105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -310,7 +311,7 @@ class GenericIdentification4Tsmt01200105:
 
 
 @dataclass
-class MessageIdentification1Tsmt01200105:
+class MessageIdentification1Tsmt01200105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -334,7 +335,7 @@ class MessageIdentification1Tsmt01200105:
 
 
 @dataclass
-class MultimodalTransport3Tsmt01200105:
+class MultimodalTransport3Tsmt01200105(ISO20022MessageElement):
     takng_in_chrg: Optional[str] = field(
         default=None,
         metadata={
@@ -360,7 +361,7 @@ class MultimodalTransport3Tsmt01200105:
 
 
 @dataclass
-class PercentageTolerance1Tsmt01200105:
+class PercentageTolerance1Tsmt01200105(ISO20022MessageElement):
     plus_pct: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -386,7 +387,7 @@ class PercentageTolerance1Tsmt01200105:
 
 
 @dataclass
-class PostalAddress2Tsmt01200105:
+class PostalAddress2Tsmt01200105(ISO20022MessageElement):
     strt_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -442,7 +443,7 @@ class PostalAddress2Tsmt01200105:
 
 
 @dataclass
-class PostalAddress5Tsmt01200105:
+class PostalAddress5Tsmt01200105(ISO20022MessageElement):
     strt_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -496,7 +497,7 @@ class PostalAddress5Tsmt01200105:
 
 
 @dataclass
-class ShipmentDateRange1Tsmt01200105:
+class ShipmentDateRange1Tsmt01200105(ISO20022MessageElement):
     earlst_shipmnt_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -516,7 +517,7 @@ class ShipmentDateRange1Tsmt01200105:
 
 
 @dataclass
-class ShipmentDateRange2Tsmt01200105:
+class ShipmentDateRange2Tsmt01200105(ISO20022MessageElement):
     sub_qty_val: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -547,7 +548,7 @@ class ShipmentDateRange2Tsmt01200105:
 
 
 @dataclass
-class SimpleIdentificationInformationTsmt01200105:
+class SimpleIdentificationInformationTsmt01200105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -562,7 +563,7 @@ class SimpleIdentificationInformationTsmt01200105:
 
 
 @dataclass
-class TransportByRail5Tsmt01200105:
+class TransportByRail5Tsmt01200105(ISO20022MessageElement):
     plc_of_rct: list[str] = field(
         default_factory=list,
         metadata={
@@ -625,7 +626,7 @@ class TransportByRail5Tsmt01200105:
 
 
 @dataclass
-class TransportByRoad5Tsmt01200105:
+class TransportByRoad5Tsmt01200105(ISO20022MessageElement):
     plc_of_rct: list[str] = field(
         default_factory=list,
         metadata={
@@ -688,7 +689,7 @@ class TransportByRoad5Tsmt01200105:
 
 
 @dataclass
-class TransportBySea6Tsmt01200105:
+class TransportBySea6Tsmt01200105(ISO20022MessageElement):
     port_of_loadng: list[str] = field(
         default_factory=list,
         metadata={
@@ -761,7 +762,7 @@ class TransportBySea6Tsmt01200105:
 
 
 @dataclass
-class UserDefinedInformation1Tsmt01200105:
+class UserDefinedInformation1Tsmt01200105(ISO20022MessageElement):
     labl: Optional[str] = field(
         default=None,
         metadata={
@@ -787,7 +788,7 @@ class UserDefinedInformation1Tsmt01200105:
 
 
 @dataclass
-class AdjustmentType1ChoiceTsmt01200105:
+class AdjustmentType1ChoiceTsmt01200105(ISO20022MessageElement):
     tp: Optional[AdjustmentType2Code] = field(
         default=None,
         metadata={
@@ -809,7 +810,7 @@ class AdjustmentType1ChoiceTsmt01200105:
 
 
 @dataclass
-class AirportName1ChoiceTsmt01200105:
+class AirportName1ChoiceTsmt01200105(ISO20022MessageElement):
     airprt_cd: Optional[str] = field(
         default=None,
         metadata={
@@ -831,7 +832,7 @@ class AirportName1ChoiceTsmt01200105:
 
 
 @dataclass
-class AmountOrPercentage2ChoiceTsmt01200105:
+class AmountOrPercentage2ChoiceTsmt01200105(ISO20022MessageElement):
     amt: Optional[ActiveCurrencyAndAmountTsmt01200105] = field(
         default=None,
         metadata={
@@ -853,7 +854,7 @@ class AmountOrPercentage2ChoiceTsmt01200105:
 
 
 @dataclass
-class Charges5Tsmt01200105:
+class Charges5Tsmt01200105(ISO20022MessageElement):
     chrgs_pyer: Optional[BankRole1Code] = field(
         default=None,
         metadata={
@@ -903,7 +904,7 @@ class Charges5Tsmt01200105:
 
 
 @dataclass
-class ChargesType1ChoiceTsmt01200105:
+class ChargesType1ChoiceTsmt01200105(ISO20022MessageElement):
     tp: Optional[ChargeType8Code] = field(
         default=None,
         metadata={
@@ -925,7 +926,7 @@ class ChargesType1ChoiceTsmt01200105:
 
 
 @dataclass
-class ContactIdentification1Tsmt01200105:
+class ContactIdentification1Tsmt01200105(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -996,7 +997,7 @@ class ContactIdentification1Tsmt01200105:
 
 
 @dataclass
-class ContactIdentification3Tsmt01200105:
+class ContactIdentification3Tsmt01200105(ISO20022MessageElement):
     bic: Optional[str] = field(
         default=None,
         metadata={
@@ -1077,7 +1078,7 @@ class ContactIdentification3Tsmt01200105:
 
 
 @dataclass
-class CountrySubdivision1ChoiceTsmt01200105:
+class CountrySubdivision1ChoiceTsmt01200105(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -1099,7 +1100,7 @@ class CountrySubdivision1ChoiceTsmt01200105:
 
 
 @dataclass
-class DocumentIdentification1Tsmt01200105:
+class DocumentIdentification1Tsmt01200105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1134,7 +1135,7 @@ class DocumentIdentification1Tsmt01200105:
 
 
 @dataclass
-class GenericAccountIdentification1Tsmt01200105:
+class GenericAccountIdentification1Tsmt01200105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1167,7 +1168,7 @@ class GenericAccountIdentification1Tsmt01200105:
 
 
 @dataclass
-class Incoterms4ChoiceTsmt01200105:
+class Incoterms4ChoiceTsmt01200105(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -1189,7 +1190,7 @@ class Incoterms4ChoiceTsmt01200105:
 
 
 @dataclass
-class NameAndAddress6Tsmt01200105:
+class NameAndAddress6Tsmt01200105(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1213,7 +1214,7 @@ class NameAndAddress6Tsmt01200105:
 
 
 @dataclass
-class PartyIdentification26Tsmt01200105:
+class PartyIdentification26Tsmt01200105(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1245,7 +1246,7 @@ class PartyIdentification26Tsmt01200105:
 
 
 @dataclass
-class PartyIdentification27Tsmt01200105:
+class PartyIdentification27Tsmt01200105(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1278,7 +1279,7 @@ class PartyIdentification27Tsmt01200105:
 
 
 @dataclass
-class PaymentPeriod3Tsmt01200105:
+class PaymentPeriod3Tsmt01200105(ISO20022MessageElement):
     cd: Optional[PaymentTime3Code] = field(
         default=None,
         metadata={
@@ -1301,7 +1302,7 @@ class PaymentPeriod3Tsmt01200105:
 
 
 @dataclass
-class PaymentPeriod4Tsmt01200105:
+class PaymentPeriod4Tsmt01200105(ISO20022MessageElement):
     cd: Optional[PaymentTime4Code] = field(
         default=None,
         metadata={
@@ -1324,7 +1325,7 @@ class PaymentPeriod4Tsmt01200105:
 
 
 @dataclass
-class ProductCategory1Tsmt01200105:
+class ProductCategory1Tsmt01200105(ISO20022MessageElement):
     tp: Optional[ProductCategory1Code] = field(
         default=None,
         metadata={
@@ -1348,7 +1349,7 @@ class ProductCategory1Tsmt01200105:
 
 
 @dataclass
-class ProductCharacteristics1Tsmt01200105:
+class ProductCharacteristics1Tsmt01200105(ISO20022MessageElement):
     tp: Optional[ProductCharacteristics1Code] = field(
         default=None,
         metadata={
@@ -1372,7 +1373,7 @@ class ProductCharacteristics1Tsmt01200105:
 
 
 @dataclass
-class ProductIdentifier2Tsmt01200105:
+class ProductIdentifier2Tsmt01200105(ISO20022MessageElement):
     tp: Optional[ProductIdentifier2Code] = field(
         default=None,
         metadata={
@@ -1396,7 +1397,7 @@ class ProductIdentifier2Tsmt01200105:
 
 
 @dataclass
-class RequiredSubmission2Tsmt01200105:
+class RequiredSubmission2Tsmt01200105(ISO20022MessageElement):
     submitr: list[Bicidentification1Tsmt01200105] = field(
         default_factory=list,
         metadata={
@@ -1409,7 +1410,7 @@ class RequiredSubmission2Tsmt01200105:
 
 
 @dataclass
-class RequiredSubmission6Tsmt01200105:
+class RequiredSubmission6Tsmt01200105(ISO20022MessageElement):
     submitr: list[Bicidentification1Tsmt01200105] = field(
         default_factory=list,
         metadata={
@@ -1443,7 +1444,7 @@ class RequiredSubmission6Tsmt01200105:
 
 
 @dataclass
-class ShipmentSchedule2ChoiceTsmt01200105:
+class ShipmentSchedule2ChoiceTsmt01200105(ISO20022MessageElement):
     shipmnt_dt_rg: Optional[ShipmentDateRange1Tsmt01200105] = field(
         default=None,
         metadata={
@@ -1463,7 +1464,7 @@ class ShipmentSchedule2ChoiceTsmt01200105:
 
 
 @dataclass
-class TaxType2ChoiceTsmt01200105:
+class TaxType2ChoiceTsmt01200105(ISO20022MessageElement):
     tp: Optional[TaxType9Code] = field(
         default=None,
         metadata={
@@ -1485,7 +1486,7 @@ class TaxType2ChoiceTsmt01200105:
 
 
 @dataclass
-class UnitOfMeasure3ChoiceTsmt01200105:
+class UnitOfMeasure3ChoiceTsmt01200105(ISO20022MessageElement):
     unit_of_measr_cd: Optional[UnitOfMeasure4Code] = field(
         default=None,
         metadata={
@@ -1507,7 +1508,7 @@ class UnitOfMeasure3ChoiceTsmt01200105:
 
 
 @dataclass
-class AccountIdentification4ChoiceTsmt01200105:
+class AccountIdentification4ChoiceTsmt01200105(ISO20022MessageElement):
     iban: Optional[str] = field(
         default=None,
         metadata={
@@ -1528,7 +1529,7 @@ class AccountIdentification4ChoiceTsmt01200105:
 
 
 @dataclass
-class Adjustment7Tsmt01200105:
+class Adjustment7Tsmt01200105(ISO20022MessageElement):
     tp: Optional[AdjustmentType1ChoiceTsmt01200105] = field(
         default=None,
         metadata={
@@ -1559,7 +1560,7 @@ class Adjustment7Tsmt01200105:
 
 
 @dataclass
-class BankContactPerson1ChoiceTsmt01200105:
+class BankContactPerson1ChoiceTsmt01200105(ISO20022MessageElement):
     buyr_bk_ctct_prsn: list[ContactIdentification1Tsmt01200105] = field(
         default_factory=list,
         metadata={
@@ -1579,7 +1580,7 @@ class BankContactPerson1ChoiceTsmt01200105:
 
 
 @dataclass
-class ChargesDetails3Tsmt01200105:
+class ChargesDetails3Tsmt01200105(ISO20022MessageElement):
     tp: Optional[ChargesType1ChoiceTsmt01200105] = field(
         default=None,
         metadata={
@@ -1601,7 +1602,7 @@ class ChargesDetails3Tsmt01200105:
 
 
 @dataclass
-class FinancialInstitutionIdentification4ChoiceTsmt01200105:
+class FinancialInstitutionIdentification4ChoiceTsmt01200105(ISO20022MessageElement):
     bic: Optional[str] = field(
         default=None,
         metadata={
@@ -1622,7 +1623,7 @@ class FinancialInstitutionIdentification4ChoiceTsmt01200105:
 
 
 @dataclass
-class Incoterms4Tsmt01200105:
+class Incoterms4Tsmt01200105(ISO20022MessageElement):
     incotrms_cd: Optional[Incoterms4ChoiceTsmt01200105] = field(
         default=None,
         metadata={
@@ -1645,7 +1646,7 @@ class Incoterms4Tsmt01200105:
 
 
 @dataclass
-class Location2Tsmt01200105:
+class Location2Tsmt01200105(ISO20022MessageElement):
     ctry: Optional[str] = field(
         default=None,
         metadata={
@@ -1676,7 +1677,7 @@ class Location2Tsmt01200105:
 
 
 @dataclass
-class PaymentCodeOrOther1ChoiceTsmt01200105:
+class PaymentCodeOrOther1ChoiceTsmt01200105(ISO20022MessageElement):
     pmt_cd: Optional[PaymentPeriod3Tsmt01200105] = field(
         default=None,
         metadata={
@@ -1706,7 +1707,7 @@ class PaymentCodeOrOther1ChoiceTsmt01200105:
 
 
 @dataclass
-class PaymentCodeOrOther2ChoiceTsmt01200105:
+class PaymentCodeOrOther2ChoiceTsmt01200105(ISO20022MessageElement):
     pmt_cd: Optional[PaymentPeriod4Tsmt01200105] = field(
         default=None,
         metadata={
@@ -1736,7 +1737,7 @@ class PaymentCodeOrOther2ChoiceTsmt01200105:
 
 
 @dataclass
-class ProductCategory1ChoiceTsmt01200105:
+class ProductCategory1ChoiceTsmt01200105(ISO20022MessageElement):
     strd_pdct_ctgy: Optional[ProductCategory1Tsmt01200105] = field(
         default=None,
         metadata={
@@ -1756,7 +1757,7 @@ class ProductCategory1ChoiceTsmt01200105:
 
 
 @dataclass
-class ProductCharacteristics1ChoiceTsmt01200105:
+class ProductCharacteristics1ChoiceTsmt01200105(ISO20022MessageElement):
     strd_pdct_chrtcs: Optional[ProductCharacteristics1Tsmt01200105] = field(
         default=None,
         metadata={
@@ -1776,7 +1777,7 @@ class ProductCharacteristics1ChoiceTsmt01200105:
 
 
 @dataclass
-class ProductIdentifier2ChoiceTsmt01200105:
+class ProductIdentifier2ChoiceTsmt01200105(ISO20022MessageElement):
     strd_pdct_idr: Optional[ProductIdentifier2Tsmt01200105] = field(
         default=None,
         metadata={
@@ -1796,7 +1797,7 @@ class ProductIdentifier2ChoiceTsmt01200105:
 
 
 @dataclass
-class Quantity9Tsmt01200105:
+class Quantity9Tsmt01200105(ISO20022MessageElement):
     unit_of_measr: Optional[UnitOfMeasure3ChoiceTsmt01200105] = field(
         default=None,
         metadata={
@@ -1829,7 +1830,7 @@ class Quantity9Tsmt01200105:
 
 
 @dataclass
-class RequiredSubmission3Tsmt01200105:
+class RequiredSubmission3Tsmt01200105(ISO20022MessageElement):
     submitr: list[Bicidentification1Tsmt01200105] = field(
         default_factory=list,
         metadata={
@@ -1893,7 +1894,7 @@ class RequiredSubmission3Tsmt01200105:
 
 
 @dataclass
-class RequiredSubmission4Tsmt01200105:
+class RequiredSubmission4Tsmt01200105(ISO20022MessageElement):
     submitr: list[Bicidentification1Tsmt01200105] = field(
         default_factory=list,
         metadata={
@@ -1977,7 +1978,7 @@ class RequiredSubmission4Tsmt01200105:
 
 
 @dataclass
-class Tax23Tsmt01200105:
+class Tax23Tsmt01200105(ISO20022MessageElement):
     tp: Optional[TaxType2ChoiceTsmt01200105] = field(
         default=None,
         metadata={
@@ -1999,7 +2000,7 @@ class Tax23Tsmt01200105:
 
 
 @dataclass
-class TransportByAir5Tsmt01200105:
+class TransportByAir5Tsmt01200105(ISO20022MessageElement):
     dprture_airprt: list[AirportName1ChoiceTsmt01200105] = field(
         default_factory=list,
         metadata={
@@ -2058,7 +2059,7 @@ class TransportByAir5Tsmt01200105:
 
 
 @dataclass
-class UnitPrice18Tsmt01200105:
+class UnitPrice18Tsmt01200105(ISO20022MessageElement):
     unit_pric: Optional[UnitOfMeasure3ChoiceTsmt01200105] = field(
         default=None,
         metadata={
@@ -2089,7 +2090,7 @@ class UnitPrice18Tsmt01200105:
 
 
 @dataclass
-class CashAccount24Tsmt01200105:
+class CashAccount24Tsmt01200105(ISO20022MessageElement):
     id: Optional[AccountIdentification4ChoiceTsmt01200105] = field(
         default=None,
         metadata={
@@ -2129,7 +2130,7 @@ class CashAccount24Tsmt01200105:
 
 
 @dataclass
-class Charge24Tsmt01200105:
+class Charge24Tsmt01200105(ISO20022MessageElement):
     tp: Optional[FreightCharges1Code] = field(
         default=None,
         metadata={
@@ -2150,7 +2151,7 @@ class Charge24Tsmt01200105:
 
 
 @dataclass
-class PaymentTerms4Tsmt01200105:
+class PaymentTerms4Tsmt01200105(ISO20022MessageElement):
     pmt_terms: Optional[PaymentCodeOrOther1ChoiceTsmt01200105] = field(
         default=None,
         metadata={
@@ -2172,7 +2173,7 @@ class PaymentTerms4Tsmt01200105:
 
 
 @dataclass
-class PaymentTerms5Tsmt01200105:
+class PaymentTerms5Tsmt01200105(ISO20022MessageElement):
     pmt_terms: Optional[PaymentCodeOrOther2ChoiceTsmt01200105] = field(
         default=None,
         metadata={
@@ -2194,7 +2195,7 @@ class PaymentTerms5Tsmt01200105:
 
 
 @dataclass
-class SingleTransport7Tsmt01200105:
+class SingleTransport7Tsmt01200105(ISO20022MessageElement):
     trnsprt_by_air: list[TransportByAir5Tsmt01200105] = field(
         default_factory=list,
         metadata={
@@ -2230,7 +2231,7 @@ class SingleTransport7Tsmt01200105:
 
 
 @dataclass
-class SettlementTerms3Tsmt01200105:
+class SettlementTerms3Tsmt01200105(ISO20022MessageElement):
     cdtr_agt: Optional[FinancialInstitutionIdentification4ChoiceTsmt01200105] = field(
         default=None,
         metadata={
@@ -2251,7 +2252,7 @@ class SettlementTerms3Tsmt01200105:
 
 
 @dataclass
-class TransportMeans5Tsmt01200105:
+class TransportMeans5Tsmt01200105(ISO20022MessageElement):
     indv_trnsprt: Optional[SingleTransport7Tsmt01200105] = field(
         default=None,
         metadata={
@@ -2272,7 +2273,7 @@ class TransportMeans5Tsmt01200105:
 
 
 @dataclass
-class LineItemDetails13Tsmt01200105:
+class LineItemDetails13Tsmt01200105(ISO20022MessageElement):
     line_itm_id: Optional[str] = field(
         default=None,
         metadata={
@@ -2420,7 +2421,7 @@ class LineItemDetails13Tsmt01200105:
 
 
 @dataclass
-class PaymentObligation2Tsmt01200105:
+class PaymentObligation2Tsmt01200105(ISO20022MessageElement):
     oblgr_bk: Optional[Bicidentification1Tsmt01200105] = field(
         default=None,
         metadata={
@@ -2509,7 +2510,7 @@ class PaymentObligation2Tsmt01200105:
 
 
 @dataclass
-class LineItem13Tsmt01200105:
+class LineItem13Tsmt01200105(ISO20022MessageElement):
     goods_and_or_svcs_desc: Optional[str] = field(
         default=None,
         metadata={
@@ -2631,7 +2632,7 @@ class LineItem13Tsmt01200105:
 
 
 @dataclass
-class Baseline5Tsmt01200105:
+class Baseline5Tsmt01200105(ISO20022MessageElement):
     submitr_baseln_id: Optional[DocumentIdentification1Tsmt01200105] = field(
         default=None,
         metadata={
@@ -2830,7 +2831,7 @@ class Baseline5Tsmt01200105:
 
 
 @dataclass
-class BaselineReSubmissionV05Tsmt01200105:
+class BaselineReSubmissionV05Tsmt01200105(ISO20022MessageElement):
     submissn_id: Optional[MessageIdentification1Tsmt01200105] = field(
         default=None,
         metadata={
@@ -2902,7 +2903,7 @@ class BaselineReSubmissionV05Tsmt01200105:
 
 
 @dataclass
-class Tsmt01200105:
+class Tsmt01200105(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.012.001.05"
 

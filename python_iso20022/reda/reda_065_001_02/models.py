@@ -3,6 +3,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import ErrorHandling1Code
 from python_iso20022.reda.reda_065_001_02.enums import SystemStatus3Code
 
@@ -10,7 +11,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:reda.065.001.02"
 
 
 @dataclass
-class GenericIdentification1Reda06500102:
+class GenericIdentification1Reda06500102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -45,7 +46,7 @@ class GenericIdentification1Reda06500102:
 
 
 @dataclass
-class MarketInfrastructureIdentification1ChoiceReda06500102:
+class MarketInfrastructureIdentification1ChoiceReda06500102(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -69,7 +70,7 @@ class MarketInfrastructureIdentification1ChoiceReda06500102:
 
 
 @dataclass
-class OriginalBusinessQuery1Reda06500102:
+class OriginalBusinessQuery1Reda06500102(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -102,7 +103,7 @@ class OriginalBusinessQuery1Reda06500102:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Reda06500102:
+class SupplementaryDataEnvelope1Reda06500102(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -113,7 +114,7 @@ class SupplementaryDataEnvelope1Reda06500102:
 
 
 @dataclass
-class ErrorHandling2ChoiceReda06500102:
+class ErrorHandling2ChoiceReda06500102(ISO20022MessageElement):
     cd: Optional[ErrorHandling1Code] = field(
         default=None,
         metadata={
@@ -135,7 +136,7 @@ class ErrorHandling2ChoiceReda06500102:
 
 
 @dataclass
-class RequestType4ChoiceReda06500102:
+class RequestType4ChoiceReda06500102(ISO20022MessageElement):
     pmt_ctrl: Optional[str] = field(
         default=None,
         metadata={
@@ -167,7 +168,7 @@ class RequestType4ChoiceReda06500102:
 
 
 @dataclass
-class SupplementaryData1Reda06500102:
+class SupplementaryData1Reda06500102(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -190,7 +191,7 @@ class SupplementaryData1Reda06500102:
 
 
 @dataclass
-class SystemIdentification2ChoiceReda06500102:
+class SystemIdentification2ChoiceReda06500102(ISO20022MessageElement):
     mkt_infrstrctr_id: Optional[
         MarketInfrastructureIdentification1ChoiceReda06500102
     ] = field(
@@ -213,7 +214,7 @@ class SystemIdentification2ChoiceReda06500102:
 
 
 @dataclass
-class SystemStatus3ChoiceReda06500102:
+class SystemStatus3ChoiceReda06500102(ISO20022MessageElement):
     cd: Optional[SystemStatus3Code] = field(
         default=None,
         metadata={
@@ -233,7 +234,7 @@ class SystemStatus3ChoiceReda06500102:
 
 
 @dataclass
-class CalendarData1Reda06500102:
+class CalendarData1Reda06500102(ISO20022MessageElement):
     sys_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -255,7 +256,7 @@ class CalendarData1Reda06500102:
 
 
 @dataclass
-class ErrorHandling4Reda06500102:
+class ErrorHandling4Reda06500102(ISO20022MessageElement):
     err: Optional[ErrorHandling2ChoiceReda06500102] = field(
         default=None,
         metadata={
@@ -278,7 +279,7 @@ class ErrorHandling4Reda06500102:
 
 
 @dataclass
-class MessageHeader11Reda06500102:
+class MessageHeader11Reda06500102(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -317,7 +318,7 @@ class MessageHeader11Reda06500102:
 
 
 @dataclass
-class SystemAndCurrency1Reda06500102:
+class SystemAndCurrency1Reda06500102(ISO20022MessageElement):
     sys_id: Optional[SystemIdentification2ChoiceReda06500102] = field(
         default=None,
         metadata={
@@ -339,7 +340,7 @@ class SystemAndCurrency1Reda06500102:
 
 
 @dataclass
-class CalendarOrBusinessError1ChoiceReda06500102:
+class CalendarOrBusinessError1ChoiceReda06500102(ISO20022MessageElement):
     cal_data: list[CalendarData1Reda06500102] = field(
         default_factory=list,
         metadata={
@@ -359,7 +360,7 @@ class CalendarOrBusinessError1ChoiceReda06500102:
 
 
 @dataclass
-class CalendarReport1Reda06500102:
+class CalendarReport1Reda06500102(ISO20022MessageElement):
     svc: Optional[SystemAndCurrency1Reda06500102] = field(
         default=None,
         metadata={
@@ -380,7 +381,7 @@ class CalendarReport1Reda06500102:
 
 
 @dataclass
-class CalendarReportOrError1ChoiceReda06500102:
+class CalendarReportOrError1ChoiceReda06500102(ISO20022MessageElement):
     cal_rpt: Optional[CalendarReport1Reda06500102] = field(
         default=None,
         metadata={
@@ -400,7 +401,7 @@ class CalendarReportOrError1ChoiceReda06500102:
 
 
 @dataclass
-class CalendarReportV02Reda06500102:
+class CalendarReportV02Reda06500102(ISO20022MessageElement):
     msg_hdr: Optional[MessageHeader11Reda06500102] = field(
         default=None,
         metadata={
@@ -430,7 +431,7 @@ class CalendarReportV02Reda06500102:
 
 
 @dataclass
-class Reda06500102:
+class Reda06500102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:reda.065.001.02"
 

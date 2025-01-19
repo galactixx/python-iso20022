@@ -3,11 +3,13 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime, XmlPeriod
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
+
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:reda.064.001.02"
 
 
 @dataclass
-class GenericIdentification1Reda06400102:
+class GenericIdentification1Reda06400102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -42,7 +44,7 @@ class GenericIdentification1Reda06400102:
 
 
 @dataclass
-class MarketInfrastructureIdentification1ChoiceReda06400102:
+class MarketInfrastructureIdentification1ChoiceReda06400102(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -66,7 +68,7 @@ class MarketInfrastructureIdentification1ChoiceReda06400102:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Reda06400102:
+class SupplementaryDataEnvelope1Reda06400102(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -77,7 +79,7 @@ class SupplementaryDataEnvelope1Reda06400102:
 
 
 @dataclass
-class RequestType4ChoiceReda06400102:
+class RequestType4ChoiceReda06400102(ISO20022MessageElement):
     pmt_ctrl: Optional[str] = field(
         default=None,
         metadata={
@@ -109,7 +111,7 @@ class RequestType4ChoiceReda06400102:
 
 
 @dataclass
-class SupplementaryData1Reda06400102:
+class SupplementaryData1Reda06400102(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -132,7 +134,7 @@ class SupplementaryData1Reda06400102:
 
 
 @dataclass
-class SystemIdentification2ChoiceReda06400102:
+class SystemIdentification2ChoiceReda06400102(ISO20022MessageElement):
     mkt_infrstrctr_id: Optional[
         MarketInfrastructureIdentification1ChoiceReda06400102
     ] = field(
@@ -155,7 +157,7 @@ class SystemIdentification2ChoiceReda06400102:
 
 
 @dataclass
-class MessageHeader9Reda06400102:
+class MessageHeader9Reda06400102(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -186,7 +188,7 @@ class MessageHeader9Reda06400102:
 
 
 @dataclass
-class SystemAndCurrency1Reda06400102:
+class SystemAndCurrency1Reda06400102(ISO20022MessageElement):
     sys_id: Optional[SystemIdentification2ChoiceReda06400102] = field(
         default=None,
         metadata={
@@ -208,7 +210,7 @@ class SystemAndCurrency1Reda06400102:
 
 
 @dataclass
-class CalendarSearchCriteria1Reda06400102:
+class CalendarSearchCriteria1Reda06400102(ISO20022MessageElement):
     yr: Optional[XmlPeriod] = field(
         default=None,
         metadata={
@@ -236,7 +238,7 @@ class CalendarSearchCriteria1Reda06400102:
 
 
 @dataclass
-class CalendarQueryV02Reda06400102:
+class CalendarQueryV02Reda06400102(ISO20022MessageElement):
     msg_hdr: Optional[MessageHeader9Reda06400102] = field(
         default=None,
         metadata={
@@ -265,7 +267,7 @@ class CalendarQueryV02Reda06400102:
 
 
 @dataclass
-class Reda06400102:
+class Reda06400102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:reda.064.001.02"
 

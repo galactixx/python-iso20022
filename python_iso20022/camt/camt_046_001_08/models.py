@@ -3,6 +3,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.camt.enums import QueryType2Code
 from python_iso20022.enums import AddressType2Code
 
@@ -10,7 +11,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:camt.046.001.08"
 
 
 @dataclass
-class AccountSchemeName1ChoiceCamt04600108:
+class AccountSchemeName1ChoiceCamt04600108(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -34,7 +35,7 @@ class AccountSchemeName1ChoiceCamt04600108:
 
 
 @dataclass
-class ClearingSystemIdentification2ChoiceCamt04600108:
+class ClearingSystemIdentification2ChoiceCamt04600108(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -58,7 +59,7 @@ class ClearingSystemIdentification2ChoiceCamt04600108:
 
 
 @dataclass
-class DateTimePeriod1Camt04600108:
+class DateTimePeriod1Camt04600108(ISO20022MessageElement):
     fr_dt_tm: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -80,7 +81,7 @@ class DateTimePeriod1Camt04600108:
 
 
 @dataclass
-class FinancialIdentificationSchemeName1ChoiceCamt04600108:
+class FinancialIdentificationSchemeName1ChoiceCamt04600108(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -104,7 +105,7 @@ class FinancialIdentificationSchemeName1ChoiceCamt04600108:
 
 
 @dataclass
-class GenericIdentification1Camt04600108:
+class GenericIdentification1Camt04600108(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -139,7 +140,7 @@ class GenericIdentification1Camt04600108:
 
 
 @dataclass
-class GenericIdentification30Camt04600108:
+class GenericIdentification30Camt04600108(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -174,7 +175,7 @@ class GenericIdentification30Camt04600108:
 
 
 @dataclass
-class MarketInfrastructureIdentification1ChoiceCamt04600108:
+class MarketInfrastructureIdentification1ChoiceCamt04600108(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -198,7 +199,7 @@ class MarketInfrastructureIdentification1ChoiceCamt04600108:
 
 
 @dataclass
-class ReservationReturnCriteria1Camt04600108:
+class ReservationReturnCriteria1Camt04600108(ISO20022MessageElement):
     start_dt_tm_ind: Optional[bool] = field(
         default=None,
         metadata={
@@ -218,7 +219,7 @@ class ReservationReturnCriteria1Camt04600108:
 
 
 @dataclass
-class ReservationType2ChoiceCamt04600108:
+class ReservationType2ChoiceCamt04600108(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -242,7 +243,7 @@ class ReservationType2ChoiceCamt04600108:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Camt04600108:
+class SupplementaryDataEnvelope1Camt04600108(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -253,7 +254,7 @@ class SupplementaryDataEnvelope1Camt04600108:
 
 
 @dataclass
-class AddressType3ChoiceCamt04600108:
+class AddressType3ChoiceCamt04600108(ISO20022MessageElement):
     cd: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -273,7 +274,7 @@ class AddressType3ChoiceCamt04600108:
 
 
 @dataclass
-class ClearingSystemMemberIdentification2Camt04600108:
+class ClearingSystemMemberIdentification2Camt04600108(ISO20022MessageElement):
     clr_sys_id: Optional[ClearingSystemIdentification2ChoiceCamt04600108] = field(
         default=None,
         metadata={
@@ -296,7 +297,7 @@ class ClearingSystemMemberIdentification2Camt04600108:
 
 
 @dataclass
-class DateTimeSearch2ChoiceCamt04600108:
+class DateTimeSearch2ChoiceCamt04600108(ISO20022MessageElement):
     fr_dt_tm: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -340,7 +341,7 @@ class DateTimeSearch2ChoiceCamt04600108:
 
 
 @dataclass
-class GenericAccountIdentification1Camt04600108:
+class GenericAccountIdentification1Camt04600108(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -373,7 +374,7 @@ class GenericAccountIdentification1Camt04600108:
 
 
 @dataclass
-class GenericFinancialIdentification1Camt04600108:
+class GenericFinancialIdentification1Camt04600108(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -406,7 +407,7 @@ class GenericFinancialIdentification1Camt04600108:
 
 
 @dataclass
-class RequestType4ChoiceCamt04600108:
+class RequestType4ChoiceCamt04600108(ISO20022MessageElement):
     pmt_ctrl: Optional[str] = field(
         default=None,
         metadata={
@@ -438,7 +439,7 @@ class RequestType4ChoiceCamt04600108:
 
 
 @dataclass
-class SupplementaryData1Camt04600108:
+class SupplementaryData1Camt04600108(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -461,7 +462,7 @@ class SupplementaryData1Camt04600108:
 
 
 @dataclass
-class SystemIdentification2ChoiceCamt04600108:
+class SystemIdentification2ChoiceCamt04600108(ISO20022MessageElement):
     mkt_infrstrctr_id: Optional[
         MarketInfrastructureIdentification1ChoiceCamt04600108
     ] = field(
@@ -484,7 +485,7 @@ class SystemIdentification2ChoiceCamt04600108:
 
 
 @dataclass
-class AccountIdentification4ChoiceCamt04600108:
+class AccountIdentification4ChoiceCamt04600108(ISO20022MessageElement):
     iban: Optional[str] = field(
         default=None,
         metadata={
@@ -505,7 +506,7 @@ class AccountIdentification4ChoiceCamt04600108:
 
 
 @dataclass
-class MessageHeader9Camt04600108:
+class MessageHeader9Camt04600108(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -536,7 +537,7 @@ class MessageHeader9Camt04600108:
 
 
 @dataclass
-class PostalAddress27Camt04600108:
+class PostalAddress27Camt04600108(ISO20022MessageElement):
     adr_tp: Optional[AddressType3ChoiceCamt04600108] = field(
         default=None,
         metadata={
@@ -718,7 +719,7 @@ class PostalAddress27Camt04600108:
 
 
 @dataclass
-class BranchData5Camt04600108:
+class BranchData5Camt04600108(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -759,7 +760,7 @@ class BranchData5Camt04600108:
 
 
 @dataclass
-class FinancialInstitutionIdentification23Camt04600108:
+class FinancialInstitutionIdentification23Camt04600108(ISO20022MessageElement):
     bicfi: Optional[str] = field(
         default=None,
         metadata={
@@ -815,7 +816,7 @@ class FinancialInstitutionIdentification23Camt04600108:
 
 
 @dataclass
-class BranchAndFinancialInstitutionIdentification8Camt04600108:
+class BranchAndFinancialInstitutionIdentification8Camt04600108(ISO20022MessageElement):
     fin_instn_id: Optional[FinancialInstitutionIdentification23Camt04600108] = field(
         default=None,
         metadata={
@@ -836,7 +837,7 @@ class BranchAndFinancialInstitutionIdentification8Camt04600108:
 
 
 @dataclass
-class ReservationSearchCriteria6Camt04600108:
+class ReservationSearchCriteria6Camt04600108(ISO20022MessageElement):
     dt_tm: Optional[DateTimeSearch2ChoiceCamt04600108] = field(
         default=None,
         metadata={
@@ -890,7 +891,7 @@ class ReservationSearchCriteria6Camt04600108:
 
 
 @dataclass
-class ReservationCriteria7Camt04600108:
+class ReservationCriteria7Camt04600108(ISO20022MessageElement):
     new_qry_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -920,7 +921,7 @@ class ReservationCriteria7Camt04600108:
 
 
 @dataclass
-class ReservationCriteria6ChoiceCamt04600108:
+class ReservationCriteria6ChoiceCamt04600108(ISO20022MessageElement):
     qry_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -942,7 +943,7 @@ class ReservationCriteria6ChoiceCamt04600108:
 
 
 @dataclass
-class ReservationQuery6Camt04600108:
+class ReservationQuery6Camt04600108(ISO20022MessageElement):
     qry_tp: Optional[QueryType2Code] = field(
         default=None,
         metadata={
@@ -962,7 +963,7 @@ class ReservationQuery6Camt04600108:
 
 
 @dataclass
-class GetReservationV08Camt04600108:
+class GetReservationV08Camt04600108(ISO20022MessageElement):
     msg_hdr: Optional[MessageHeader9Camt04600108] = field(
         default=None,
         metadata={
@@ -991,7 +992,7 @@ class GetReservationV08Camt04600108:
 
 
 @dataclass
-class Camt04600108:
+class Camt04600108(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:camt.046.001.08"
 

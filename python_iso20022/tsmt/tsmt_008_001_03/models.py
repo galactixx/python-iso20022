@@ -4,13 +4,14 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.tsmt.enums import Action2Code, BaselineStatus3Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:tsmt.008.001.03"
 
 
 @dataclass
-class Bicidentification1Tsmt00800103:
+class Bicidentification1Tsmt00800103(ISO20022MessageElement):
     class Meta:
         name = "BICIdentification1"
 
@@ -27,7 +28,7 @@ class Bicidentification1Tsmt00800103:
 
 
 @dataclass
-class Count1Tsmt00800103:
+class Count1Tsmt00800103(ISO20022MessageElement):
     nb: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -42,7 +43,7 @@ class Count1Tsmt00800103:
 
 
 @dataclass
-class DocumentIdentification3Tsmt00800103:
+class DocumentIdentification3Tsmt00800103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -68,7 +69,7 @@ class DocumentIdentification3Tsmt00800103:
 
 
 @dataclass
-class MessageIdentification1Tsmt00800103:
+class MessageIdentification1Tsmt00800103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -92,7 +93,7 @@ class MessageIdentification1Tsmt00800103:
 
 
 @dataclass
-class Reason2Tsmt00800103:
+class Reason2Tsmt00800103(ISO20022MessageElement):
     desc: Optional[str] = field(
         default=None,
         metadata={
@@ -107,7 +108,7 @@ class Reason2Tsmt00800103:
 
 
 @dataclass
-class RejectedElement1Tsmt00800103:
+class RejectedElement1Tsmt00800103(ISO20022MessageElement):
     elmt_seq_nb: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -133,7 +134,7 @@ class RejectedElement1Tsmt00800103:
 
 
 @dataclass
-class SimpleIdentificationInformationTsmt00800103:
+class SimpleIdentificationInformationTsmt00800103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -148,7 +149,7 @@ class SimpleIdentificationInformationTsmt00800103:
 
 
 @dataclass
-class DocumentIdentification5Tsmt00800103:
+class DocumentIdentification5Tsmt00800103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -172,7 +173,7 @@ class DocumentIdentification5Tsmt00800103:
 
 
 @dataclass
-class PendingActivity2Tsmt00800103:
+class PendingActivity2Tsmt00800103(ISO20022MessageElement):
     tp: Optional[Action2Code] = field(
         default=None,
         metadata={
@@ -195,7 +196,7 @@ class PendingActivity2Tsmt00800103:
 
 
 @dataclass
-class RejectionReason1ChoiceTsmt00800103:
+class RejectionReason1ChoiceTsmt00800103(ISO20022MessageElement):
     gbl_rjctn_rsn: Optional[Reason2Tsmt00800103] = field(
         default=None,
         metadata={
@@ -215,7 +216,7 @@ class RejectionReason1ChoiceTsmt00800103:
 
 
 @dataclass
-class TransactionStatus4Tsmt00800103:
+class TransactionStatus4Tsmt00800103(ISO20022MessageElement):
     sts: Optional[BaselineStatus3Code] = field(
         default=None,
         metadata={
@@ -228,7 +229,7 @@ class TransactionStatus4Tsmt00800103:
 
 
 @dataclass
-class AmendmentRejectionNotificationV03Tsmt00800103:
+class AmendmentRejectionNotificationV03Tsmt00800103(ISO20022MessageElement):
     ntfctn_id: Optional[MessageIdentification1Tsmt00800103] = field(
         default=None,
         metadata={
@@ -321,7 +322,7 @@ class AmendmentRejectionNotificationV03Tsmt00800103:
 
 
 @dataclass
-class Tsmt00800103:
+class Tsmt00800103(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.008.001.03"
 

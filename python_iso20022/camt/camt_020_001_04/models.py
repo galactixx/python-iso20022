@@ -3,13 +3,14 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.camt.enums import Priority1Code, QueryType2Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:camt.020.001.04"
 
 
 @dataclass
-class CharacterSearch1ChoiceCamt02000104:
+class CharacterSearch1ChoiceCamt02000104(ISO20022MessageElement):
     eq: Optional[str] = field(
         default=None,
         metadata={
@@ -53,7 +54,7 @@ class CharacterSearch1ChoiceCamt02000104:
 
 
 @dataclass
-class GeneralBusinessInformationReturnCriteria1Camt02000104:
+class GeneralBusinessInformationReturnCriteria1Camt02000104(ISO20022MessageElement):
     qlfr_ind: Optional[bool] = field(
         default=None,
         metadata={
@@ -81,7 +82,7 @@ class GeneralBusinessInformationReturnCriteria1Camt02000104:
 
 
 @dataclass
-class MessageHeader1Camt02000104:
+class MessageHeader1Camt02000104(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -104,7 +105,7 @@ class MessageHeader1Camt02000104:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Camt02000104:
+class SupplementaryDataEnvelope1Camt02000104(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -115,7 +116,7 @@ class SupplementaryDataEnvelope1Camt02000104:
 
 
 @dataclass
-class InformationQualifierType1Camt02000104:
+class InformationQualifierType1Camt02000104(ISO20022MessageElement):
     is_frmtd: Optional[bool] = field(
         default=None,
         metadata={
@@ -135,7 +136,7 @@ class InformationQualifierType1Camt02000104:
 
 
 @dataclass
-class SupplementaryData1Camt02000104:
+class SupplementaryData1Camt02000104(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -158,7 +159,7 @@ class SupplementaryData1Camt02000104:
 
 
 @dataclass
-class GeneralBusinessInformationSearchCriteria1Camt02000104:
+class GeneralBusinessInformationSearchCriteria1Camt02000104(ISO20022MessageElement):
     ref: list[str] = field(
         default_factory=list,
         metadata={
@@ -188,7 +189,7 @@ class GeneralBusinessInformationSearchCriteria1Camt02000104:
 
 
 @dataclass
-class BusinessInformationCriteria1Camt02000104:
+class BusinessInformationCriteria1Camt02000104(ISO20022MessageElement):
     new_qry_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -218,7 +219,9 @@ class BusinessInformationCriteria1Camt02000104:
 
 
 @dataclass
-class GeneralBusinessInformationCriteriaDefinition1ChoiceCamt02000104:
+class GeneralBusinessInformationCriteriaDefinition1ChoiceCamt02000104(
+    ISO20022MessageElement
+):
     qry_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -240,7 +243,7 @@ class GeneralBusinessInformationCriteriaDefinition1ChoiceCamt02000104:
 
 
 @dataclass
-class BusinessInformationQueryDefinition3Camt02000104:
+class BusinessInformationQueryDefinition3Camt02000104(ISO20022MessageElement):
     qry_tp: Optional[QueryType2Code] = field(
         default=None,
         metadata={
@@ -262,7 +265,7 @@ class BusinessInformationQueryDefinition3Camt02000104:
 
 
 @dataclass
-class GetGeneralBusinessInformationV04Camt02000104:
+class GetGeneralBusinessInformationV04Camt02000104(ISO20022MessageElement):
     msg_hdr: Optional[MessageHeader1Camt02000104] = field(
         default=None,
         metadata={
@@ -293,7 +296,7 @@ class GetGeneralBusinessInformationV04Camt02000104:
 
 
 @dataclass
-class Camt02000104:
+class Camt02000104(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:camt.020.001.04"
 

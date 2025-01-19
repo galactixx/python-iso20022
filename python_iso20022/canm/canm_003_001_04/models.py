@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.canm.enums import CardServiceType5Code, KeyType1Code
 from python_iso20022.enums import (
     Algorithm5Code,
@@ -31,7 +32,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:canm.003.001.04"
 
 
 @dataclass
-class AdditionalData1Canm00300104:
+class AdditionalData1Canm00300104(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -55,7 +56,7 @@ class AdditionalData1Canm00300104:
 
 
 @dataclass
-class BatchManagementInformation1Canm00300104:
+class BatchManagementInformation1Canm00300104(ISO20022MessageElement):
     colltn_id: Optional[str] = field(
         default=None,
         metadata={
@@ -100,7 +101,7 @@ class BatchManagementInformation1Canm00300104:
 
 
 @dataclass
-class EncryptedData2ChoiceCanm00300104:
+class EncryptedData2ChoiceCanm00300104(ISO20022MessageElement):
     binry: Optional[bytes] = field(
         default=None,
         metadata={
@@ -124,7 +125,7 @@ class EncryptedData2ChoiceCanm00300104:
 
 
 @dataclass
-class Jurisdiction2Canm00300104:
+class Jurisdiction2Canm00300104(ISO20022MessageElement):
     dmst_ind: Optional[bool] = field(
         default=None,
         metadata={
@@ -146,7 +147,7 @@ class Jurisdiction2Canm00300104:
 
 
 @dataclass
-class Kekidentifier2Canm00300104:
+class Kekidentifier2Canm00300104(ISO20022MessageElement):
     class Meta:
         name = "KEKIdentifier2"
 
@@ -196,7 +197,7 @@ class Kekidentifier2Canm00300104:
 
 
 @dataclass
-class Kekidentifier6Canm00300104:
+class Kekidentifier6Canm00300104(ISO20022MessageElement):
     class Meta:
         name = "KEKIdentifier6"
 
@@ -245,7 +246,7 @@ class Kekidentifier6Canm00300104:
 
 
 @dataclass
-class KeyExchangeData1Canm00300104:
+class KeyExchangeData1Canm00300104(ISO20022MessageElement):
     ctrl: Optional[str] = field(
         default=None,
         metadata={
@@ -330,7 +331,7 @@ class KeyExchangeData1Canm00300104:
 
 
 @dataclass
-class Macdata1Canm00300104:
+class Macdata1Canm00300104(ISO20022MessageElement):
     class Meta:
         name = "MACData1"
 
@@ -421,7 +422,7 @@ class Macdata1Canm00300104:
 
 
 @dataclass
-class Reconciliation4Canm00300104:
+class Reconciliation4Canm00300104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -453,7 +454,7 @@ class Reconciliation4Canm00300104:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Canm00300104:
+class SupplementaryDataEnvelope1Canm00300104(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -464,7 +465,7 @@ class SupplementaryDataEnvelope1Canm00300104:
 
 
 @dataclass
-class AdditionalData2Canm00300104:
+class AdditionalData2Canm00300104(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -486,7 +487,7 @@ class AdditionalData2Canm00300104:
 
 
 @dataclass
-class AdditionalFee3Canm00300104:
+class AdditionalFee3Canm00300104(ISO20022MessageElement):
     tp: Optional[TypeOfAmount21Code] = field(
         default=None,
         metadata={
@@ -616,7 +617,7 @@ class AdditionalFee3Canm00300104:
 
 
 @dataclass
-class AlgorithmIdentification26Canm00300104:
+class AlgorithmIdentification26Canm00300104(ISO20022MessageElement):
     algo: Optional[Algorithm8Code] = field(
         default=None,
         metadata={
@@ -637,7 +638,7 @@ class AlgorithmIdentification26Canm00300104:
 
 
 @dataclass
-class ContentInformationType41Canm00300104:
+class ContentInformationType41Canm00300104(ISO20022MessageElement):
     macdata: Optional[Macdata1Canm00300104] = field(
         default=None,
         metadata={
@@ -660,7 +661,7 @@ class ContentInformationType41Canm00300104:
 
 
 @dataclass
-class EncryptedDataElement2Canm00300104:
+class EncryptedDataElement2Canm00300104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -701,7 +702,7 @@ class EncryptedDataElement2Canm00300104:
 
 
 @dataclass
-class GenericIdentification183Canm00300104:
+class GenericIdentification183Canm00300104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -761,7 +762,7 @@ class GenericIdentification183Canm00300104:
 
 
 @dataclass
-class Parameter14Canm00300104:
+class Parameter14Canm00300104(ISO20022MessageElement):
     ncrptn_frmt: Optional[EncryptionFormat3Code] = field(
         default=None,
         metadata={
@@ -792,7 +793,7 @@ class Parameter14Canm00300104:
 
 
 @dataclass
-class Parameter7Canm00300104:
+class Parameter7Canm00300104(ISO20022MessageElement):
     initlstn_vctr: Optional[bytes] = field(
         default=None,
         metadata={
@@ -815,7 +816,7 @@ class Parameter7Canm00300104:
 
 
 @dataclass
-class ProcessingResult26Canm00300104:
+class ProcessingResult26Canm00300104(ISO20022MessageElement):
     rspn_src_id: Optional[str] = field(
         default=None,
         metadata={
@@ -891,7 +892,7 @@ class ProcessingResult26Canm00300104:
 
 
 @dataclass
-class ProgrammeMode5Canm00300104:
+class ProgrammeMode5Canm00300104(ISO20022MessageElement):
     apld_id: Optional[str] = field(
         default=None,
         metadata={
@@ -914,7 +915,7 @@ class ProgrammeMode5Canm00300104:
 
 
 @dataclass
-class RelativeDistinguishedName1Canm00300104:
+class RelativeDistinguishedName1Canm00300104(ISO20022MessageElement):
     attr_tp: Optional[AttributeType1Code] = field(
         default=None,
         metadata={
@@ -938,7 +939,7 @@ class RelativeDistinguishedName1Canm00300104:
 
 
 @dataclass
-class SettlementService6Canm00300104:
+class SettlementService6Canm00300104(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -1040,7 +1041,7 @@ class SettlementService6Canm00300104:
 
 
 @dataclass
-class SupplementaryData1Canm00300104:
+class SupplementaryData1Canm00300104(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1063,7 +1064,7 @@ class SupplementaryData1Canm00300104:
 
 
 @dataclass
-class Traceability10Canm00300104:
+class Traceability10Canm00300104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1139,7 +1140,7 @@ class Traceability10Canm00300104:
 
 
 @dataclass
-class AlgorithmIdentification25Canm00300104:
+class AlgorithmIdentification25Canm00300104(ISO20022MessageElement):
     algo: Optional[Algorithm23Code] = field(
         default=None,
         metadata={
@@ -1160,7 +1161,7 @@ class AlgorithmIdentification25Canm00300104:
 
 
 @dataclass
-class AlgorithmIdentification28Canm00300104:
+class AlgorithmIdentification28Canm00300104(ISO20022MessageElement):
     algo: Optional[Algorithm13Code] = field(
         default=None,
         metadata={
@@ -1181,7 +1182,7 @@ class AlgorithmIdentification28Canm00300104:
 
 
 @dataclass
-class CertificateIssuer1Canm00300104:
+class CertificateIssuer1Canm00300104(ISO20022MessageElement):
     rltv_dstngshd_nm: list[RelativeDistinguishedName1Canm00300104] = field(
         default_factory=list,
         metadata={
@@ -1194,7 +1195,7 @@ class CertificateIssuer1Canm00300104:
 
 
 @dataclass
-class EncryptedData2Canm00300104:
+class EncryptedData2Canm00300104(ISO20022MessageElement):
     ctrl: Optional[str] = field(
         default=None,
         metadata={
@@ -1288,7 +1289,7 @@ class EncryptedData2Canm00300104:
 
 
 @dataclass
-class Header71Canm00300104:
+class Header71Canm00300104(ISO20022MessageElement):
     msg_fctn: Optional[str] = field(
         default=None,
         metadata={
@@ -1383,7 +1384,7 @@ class Header71Canm00300104:
 
 
 @dataclass
-class Parameter13Canm00300104:
+class Parameter13Canm00300104(ISO20022MessageElement):
     dgst_algo: Optional[Algorithm20Code] = field(
         default=None,
         metadata={
@@ -1403,7 +1404,7 @@ class Parameter13Canm00300104:
 
 
 @dataclass
-class AlgorithmIdentification27Canm00300104:
+class AlgorithmIdentification27Canm00300104(ISO20022MessageElement):
     algo: Optional[Algorithm7Code] = field(
         default=None,
         metadata={
@@ -1424,7 +1425,7 @@ class AlgorithmIdentification27Canm00300104:
 
 
 @dataclass
-class EncryptedContent8Canm00300104:
+class EncryptedContent8Canm00300104(ISO20022MessageElement):
     cntt_tp: Optional[ContentType2Code] = field(
         default=None,
         metadata={
@@ -1455,7 +1456,7 @@ class EncryptedContent8Canm00300104:
 
 
 @dataclass
-class IssuerAndSerialNumber1Canm00300104:
+class IssuerAndSerialNumber1Canm00300104(ISO20022MessageElement):
     issr: Optional[CertificateIssuer1Canm00300104] = field(
         default=None,
         metadata={
@@ -1480,7 +1481,7 @@ class IssuerAndSerialNumber1Canm00300104:
 
 
 @dataclass
-class Kek6Canm00300104:
+class Kek6Canm00300104(ISO20022MessageElement):
     class Meta:
         name = "KEK6"
 
@@ -1526,7 +1527,7 @@ class Kek6Canm00300104:
 
 
 @dataclass
-class Recipient5ChoiceCanm00300104:
+class Recipient5ChoiceCanm00300104(ISO20022MessageElement):
     issr_and_srl_nb: Optional[IssuerAndSerialNumber1Canm00300104] = field(
         default=None,
         metadata={
@@ -1546,7 +1547,7 @@ class Recipient5ChoiceCanm00300104:
 
 
 @dataclass
-class KeyTransport6Canm00300104:
+class KeyTransport6Canm00300104(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -1590,7 +1591,7 @@ class KeyTransport6Canm00300104:
 
 
 @dataclass
-class Recipient7ChoiceCanm00300104:
+class Recipient7ChoiceCanm00300104(ISO20022MessageElement):
     key_trnsprt: Optional[KeyTransport6Canm00300104] = field(
         default=None,
         metadata={
@@ -1618,7 +1619,7 @@ class Recipient7ChoiceCanm00300104:
 
 
 @dataclass
-class EnvelopedData12Canm00300104:
+class EnvelopedData12Canm00300104(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -1649,7 +1650,7 @@ class EnvelopedData12Canm00300104:
 
 
 @dataclass
-class ProtectedData2Canm00300104:
+class ProtectedData2Canm00300104(ISO20022MessageElement):
     cntt_tp: Optional[ContentType3Code] = field(
         default=None,
         metadata={
@@ -1678,7 +1679,7 @@ class ProtectedData2Canm00300104:
 
 
 @dataclass
-class KeyExchangeInitiationV04Canm00300104:
+class KeyExchangeInitiationV04Canm00300104(ISO20022MessageElement):
     hdr: Optional[Header71Canm00300104] = field(
         default=None,
         metadata={
@@ -1872,7 +1873,7 @@ class KeyExchangeInitiationV04Canm00300104:
 
 
 @dataclass
-class Canm00300104:
+class Canm00300104(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:canm.003.001.04"
 

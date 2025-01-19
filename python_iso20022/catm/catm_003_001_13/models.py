@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime, XmlTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.catm.enums import (
     BatchTransactionType1Code,
     CancellationProcess2Code,
@@ -47,7 +48,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:catm.003.001.13"
 
 
 @dataclass
-class GenericInformation1Catm00300113:
+class GenericInformation1Catm00300113(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -72,7 +73,7 @@ class GenericInformation1Catm00300113:
 
 
 @dataclass
-class GeolocationGeographicCoordinates1Catm00300113:
+class GeolocationGeographicCoordinates1Catm00300113(ISO20022MessageElement):
     lat: Optional[str] = field(
         default=None,
         metadata={
@@ -98,7 +99,7 @@ class GeolocationGeographicCoordinates1Catm00300113:
 
 
 @dataclass
-class GeolocationUtmcoordinates1Catm00300113:
+class GeolocationUtmcoordinates1Catm00300113(ISO20022MessageElement):
     class Meta:
         name = "GeolocationUTMCoordinates1"
 
@@ -138,7 +139,7 @@ class GeolocationUtmcoordinates1Catm00300113:
 
 
 @dataclass
-class Kekidentifier7Catm00300113:
+class Kekidentifier7Catm00300113(ISO20022MessageElement):
     class Meta:
         name = "KEKIdentifier7"
 
@@ -188,7 +189,7 @@ class Kekidentifier7Catm00300113:
 
 
 @dataclass
-class LocalDateTime1Catm00300113:
+class LocalDateTime1Catm00300113(ISO20022MessageElement):
     fr_dt_tm: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -219,7 +220,7 @@ class LocalDateTime1Catm00300113:
 
 
 @dataclass
-class Organisation26Catm00300113:
+class Organisation26Catm00300113(ISO20022MessageElement):
     cmon_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -276,7 +277,7 @@ class Organisation26Catm00300113:
 
 
 @dataclass
-class OriginatorInformation1Catm00300113:
+class OriginatorInformation1Catm00300113(ISO20022MessageElement):
     cert: list[bytes] = field(
         default_factory=list,
         metadata={
@@ -291,7 +292,7 @@ class OriginatorInformation1Catm00300113:
 
 
 @dataclass
-class PointOfInteractionComponentIdentification2Catm00300113:
+class PointOfInteractionComponentIdentification2Catm00300113(ISO20022MessageElement):
     itm_nb: Optional[str] = field(
         default=None,
         metadata={
@@ -335,7 +336,7 @@ class PointOfInteractionComponentIdentification2Catm00300113:
 
 
 @dataclass
-class AcquirerHostConfiguration9Catm00300113:
+class AcquirerHostConfiguration9Catm00300113(ISO20022MessageElement):
     hst_id: Optional[str] = field(
         default=None,
         metadata={
@@ -378,7 +379,7 @@ class AcquirerHostConfiguration9Catm00300113:
 
 
 @dataclass
-class AlgorithmIdentification36Catm00300113:
+class AlgorithmIdentification36Catm00300113(ISO20022MessageElement):
     algo: Optional[Algorithm26Code] = field(
         default=None,
         metadata={
@@ -391,7 +392,7 @@ class AlgorithmIdentification36Catm00300113:
 
 
 @dataclass
-class DataSetIdentification10Catm00300113:
+class DataSetIdentification10Catm00300113(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -432,7 +433,7 @@ class DataSetIdentification10Catm00300113:
 
 
 @dataclass
-class EncapsulatedContent3Catm00300113:
+class EncapsulatedContent3Catm00300113(ISO20022MessageElement):
     cntt_tp: Optional[ContentType2Code] = field(
         default=None,
         metadata={
@@ -456,7 +457,7 @@ class EncapsulatedContent3Catm00300113:
 
 
 @dataclass
-class GenericIdentification176Catm00300113:
+class GenericIdentification176Catm00300113(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -506,7 +507,7 @@ class GenericIdentification176Catm00300113:
 
 
 @dataclass
-class GenericIdentification186Catm00300113:
+class GenericIdentification186Catm00300113(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -530,7 +531,7 @@ class GenericIdentification186Catm00300113:
 
 
 @dataclass
-class Geolocation1Catm00300113:
+class Geolocation1Catm00300113(ISO20022MessageElement):
     geogc_cordints: Optional[GeolocationGeographicCoordinates1Catm00300113] = field(
         default=None,
         metadata={
@@ -550,7 +551,7 @@ class Geolocation1Catm00300113:
 
 
 @dataclass
-class Kekidentifier5Catm00300113:
+class Kekidentifier5Catm00300113(ISO20022MessageElement):
     class Meta:
         name = "KEKIdentifier5"
 
@@ -616,7 +617,7 @@ class Kekidentifier5Catm00300113:
 
 
 @dataclass
-class MessageItemCondition2Catm00300113:
+class MessageItemCondition2Catm00300113(ISO20022MessageElement):
     itm_id: Optional[str] = field(
         default=None,
         metadata={
@@ -650,7 +651,7 @@ class MessageItemCondition2Catm00300113:
 
 
 @dataclass
-class NetworkParameters9Catm00300113:
+class NetworkParameters9Catm00300113(ISO20022MessageElement):
     ntwk_tp: Optional[NetworkType1Code] = field(
         default=None,
         metadata={
@@ -674,7 +675,7 @@ class NetworkParameters9Catm00300113:
 
 
 @dataclass
-class Parameter12Catm00300113:
+class Parameter12Catm00300113(ISO20022MessageElement):
     ncrptn_frmt: Optional[EncryptionFormat2Code] = field(
         default=None,
         metadata={
@@ -705,7 +706,7 @@ class Parameter12Catm00300113:
 
 
 @dataclass
-class Parameter18Catm00300113:
+class Parameter18Catm00300113(ISO20022MessageElement):
     dgst_algo: Optional[Algorithm26Code] = field(
         default=None,
         metadata={
@@ -717,7 +718,7 @@ class Parameter18Catm00300113:
 
 
 @dataclass
-class Parameter7Catm00300113:
+class Parameter7Catm00300113(ISO20022MessageElement):
     initlstn_vctr: Optional[bytes] = field(
         default=None,
         metadata={
@@ -740,7 +741,7 @@ class Parameter7Catm00300113:
 
 
 @dataclass
-class PhysicalInterfaceParameter1Catm00300113:
+class PhysicalInterfaceParameter1Catm00300113(ISO20022MessageElement):
     intrfc_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -805,7 +806,7 @@ class PhysicalInterfaceParameter1Catm00300113:
 
 
 @dataclass
-class ProcessRetry3Catm00300113:
+class ProcessRetry3Catm00300113(ISO20022MessageElement):
     dely: Optional[str] = field(
         default=None,
         metadata={
@@ -837,7 +838,7 @@ class ProcessRetry3Catm00300113:
 
 
 @dataclass
-class ProcessTiming6Catm00300113:
+class ProcessTiming6Catm00300113(ISO20022MessageElement):
     start_tm: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -874,7 +875,7 @@ class ProcessTiming6Catm00300113:
 
 
 @dataclass
-class RelativeDistinguishedName1Catm00300113:
+class RelativeDistinguishedName1Catm00300113(ISO20022MessageElement):
     attr_tp: Optional[AttributeType1Code] = field(
         default=None,
         metadata={
@@ -898,7 +899,7 @@ class RelativeDistinguishedName1Catm00300113:
 
 
 @dataclass
-class SaleToPoiprotocolParameter3Catm00300113:
+class SaleToPoiprotocolParameter3Catm00300113(ISO20022MessageElement):
     class Meta:
         name = "SaleToPOIProtocolParameter3"
 
@@ -1006,7 +1007,7 @@ class SaleToPoiprotocolParameter3Catm00300113:
 
 
 @dataclass
-class AlgorithmIdentification31Catm00300113:
+class AlgorithmIdentification31Catm00300113(ISO20022MessageElement):
     algo: Optional[Algorithm27Code] = field(
         default=None,
         metadata={
@@ -1027,7 +1028,7 @@ class AlgorithmIdentification31Catm00300113:
 
 
 @dataclass
-class AlgorithmIdentification32Catm00300113:
+class AlgorithmIdentification32Catm00300113(ISO20022MessageElement):
     algo: Optional[Algorithm28Code] = field(
         default=None,
         metadata={
@@ -1048,7 +1049,7 @@ class AlgorithmIdentification32Catm00300113:
 
 
 @dataclass
-class AlgorithmIdentification34Catm00300113:
+class AlgorithmIdentification34Catm00300113(ISO20022MessageElement):
     algo: Optional[Algorithm8Code] = field(
         default=None,
         metadata={
@@ -1069,7 +1070,7 @@ class AlgorithmIdentification34Catm00300113:
 
 
 @dataclass
-class CertificateIssuer1Catm00300113:
+class CertificateIssuer1Catm00300113(ISO20022MessageElement):
     rltv_dstngshd_nm: list[RelativeDistinguishedName1Catm00300113] = field(
         default_factory=list,
         metadata={
@@ -1082,7 +1083,7 @@ class CertificateIssuer1Catm00300113:
 
 
 @dataclass
-class DigestedData6Catm00300113:
+class DigestedData6Catm00300113(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -1126,7 +1127,7 @@ class DigestedData6Catm00300113:
 
 
 @dataclass
-class ExchangeConfiguration10Catm00300113:
+class ExchangeConfiguration10Catm00300113(ISO20022MessageElement):
     xchg_plcy: list[ExchangePolicy2Code] = field(
         default_factory=list,
         metadata={
@@ -1192,7 +1193,7 @@ class ExchangeConfiguration10Catm00300113:
 
 
 @dataclass
-class ExchangeConfiguration9Catm00300113:
+class ExchangeConfiguration9Catm00300113(ISO20022MessageElement):
     xchg_plcy: list[ExchangePolicy2Code] = field(
         default_factory=list,
         metadata={
@@ -1242,7 +1243,7 @@ class ExchangeConfiguration9Catm00300113:
 
 
 @dataclass
-class NetworkParameters7Catm00300113:
+class NetworkParameters7Catm00300113(ISO20022MessageElement):
     adr: list[NetworkParameters9Catm00300113] = field(
         default_factory=list,
         metadata={
@@ -1319,7 +1320,7 @@ class NetworkParameters7Catm00300113:
 
 
 @dataclass
-class ServiceProviderParameters3Catm00300113:
+class ServiceProviderParameters3Catm00300113(ISO20022MessageElement):
     actn_tp: Optional[TerminalManagementAction3Code] = field(
         default=None,
         metadata={
@@ -1378,7 +1379,7 @@ class ServiceProviderParameters3Catm00300113:
 
 
 @dataclass
-class TmsprotocolParameters7Catm00300113:
+class TmsprotocolParameters7Catm00300113(ISO20022MessageElement):
     class Meta:
         name = "TMSProtocolParameters7"
 
@@ -1510,7 +1511,7 @@ class TmsprotocolParameters7Catm00300113:
 
 
 @dataclass
-class AcquirerProtocolExchangeBehavior2Catm00300113:
+class AcquirerProtocolExchangeBehavior2Catm00300113(ISO20022MessageElement):
     fin_captr: Optional[FinancialCapture1Code] = field(
         default=None,
         metadata={
@@ -1547,7 +1548,7 @@ class AcquirerProtocolExchangeBehavior2Catm00300113:
 
 
 @dataclass
-class ClockSynchronisation3Catm00300113:
+class ClockSynchronisation3Catm00300113(ISO20022MessageElement):
     poitm_zone: Optional[str] = field(
         default=None,
         metadata={
@@ -1578,7 +1579,7 @@ class ClockSynchronisation3Catm00300113:
 
 
 @dataclass
-class EncryptedContent7Catm00300113:
+class EncryptedContent7Catm00300113(ISO20022MessageElement):
     cntt_tp: Optional[ContentType2Code] = field(
         default=None,
         metadata={
@@ -1611,7 +1612,7 @@ class EncryptedContent7Catm00300113:
 
 
 @dataclass
-class GenericIdentification177Catm00300113:
+class GenericIdentification177Catm00300113(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1677,7 +1678,7 @@ class GenericIdentification177Catm00300113:
 
 
 @dataclass
-class HostCommunicationParameter6Catm00300113:
+class HostCommunicationParameter6Catm00300113(ISO20022MessageElement):
     actn_tp: Optional[TerminalManagementAction3Code] = field(
         default=None,
         metadata={
@@ -1733,7 +1734,7 @@ class HostCommunicationParameter6Catm00300113:
 
 
 @dataclass
-class IssuerAndSerialNumber2Catm00300113:
+class IssuerAndSerialNumber2Catm00300113(ISO20022MessageElement):
     issr: Optional[CertificateIssuer1Catm00300113] = field(
         default=None,
         metadata={
@@ -1758,7 +1759,7 @@ class IssuerAndSerialNumber2Catm00300113:
 
 
 @dataclass
-class Kek9Catm00300113:
+class Kek9Catm00300113(ISO20022MessageElement):
     class Meta:
         name = "KEK9"
 
@@ -1804,7 +1805,7 @@ class Kek9Catm00300113:
 
 
 @dataclass
-class NetworkParameters8Catm00300113:
+class NetworkParameters8Catm00300113(ISO20022MessageElement):
     tp: Optional[NetworkType2Code] = field(
         default=None,
         metadata={
@@ -1826,7 +1827,7 @@ class NetworkParameters8Catm00300113:
 
 
 @dataclass
-class Parameter16Catm00300113:
+class Parameter16Catm00300113(ISO20022MessageElement):
     dgst_algo: Optional[Algorithm26Code] = field(
         default=None,
         metadata={
@@ -1876,7 +1877,7 @@ class Parameter16Catm00300113:
 
 
 @dataclass
-class Parameter17Catm00300113:
+class Parameter17Catm00300113(ISO20022MessageElement):
     ncrptn_frmt: Optional[EncryptionFormat2Code] = field(
         default=None,
         metadata={
@@ -1904,7 +1905,7 @@ class Parameter17Catm00300113:
 
 
 @dataclass
-class AcquirerProtocolParameters16Catm00300113:
+class AcquirerProtocolParameters16Catm00300113(ISO20022MessageElement):
     actn_tp: Optional[TerminalManagementAction3Code] = field(
         default=None,
         metadata={
@@ -2108,7 +2109,7 @@ class AcquirerProtocolParameters16Catm00300113:
 
 
 @dataclass
-class AlgorithmIdentification33Catm00300113:
+class AlgorithmIdentification33Catm00300113(ISO20022MessageElement):
     algo: Optional[Algorithm29Code] = field(
         default=None,
         metadata={
@@ -2129,7 +2130,7 @@ class AlgorithmIdentification33Catm00300113:
 
 
 @dataclass
-class AlgorithmIdentification35Catm00300113:
+class AlgorithmIdentification35Catm00300113(ISO20022MessageElement):
     algo: Optional[Algorithm7Code] = field(
         default=None,
         metadata={
@@ -2150,7 +2151,7 @@ class AlgorithmIdentification35Catm00300113:
 
 
 @dataclass
-class MerchantConfigurationParameters6Catm00300113:
+class MerchantConfigurationParameters6Catm00300113(ISO20022MessageElement):
     actn_tp: Optional[TerminalManagementAction3Code] = field(
         default=None,
         metadata={
@@ -2245,7 +2246,7 @@ class MerchantConfigurationParameters6Catm00300113:
 
 
 @dataclass
-class PaymentTerminalParameters8Catm00300113:
+class PaymentTerminalParameters8Catm00300113(ISO20022MessageElement):
     actn_tp: Optional[TerminalManagementAction3Code] = field(
         default=None,
         metadata={
@@ -2358,7 +2359,7 @@ class PaymentTerminalParameters8Catm00300113:
 
 
 @dataclass
-class Recipient13ChoiceCatm00300113:
+class Recipient13ChoiceCatm00300113(ISO20022MessageElement):
     issr_and_srl_nb: Optional[IssuerAndSerialNumber2Catm00300113] = field(
         default=None,
         metadata={
@@ -2381,7 +2382,7 @@ class Recipient13ChoiceCatm00300113:
 
 
 @dataclass
-class Traceability8Catm00300113:
+class Traceability8Catm00300113(ISO20022MessageElement):
     rlay_id: Optional[GenericIdentification177Catm00300113] = field(
         default=None,
         metadata={
@@ -2432,7 +2433,7 @@ class Traceability8Catm00300113:
 
 
 @dataclass
-class KeyTransport10Catm00300113:
+class KeyTransport10Catm00300113(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -2476,7 +2477,7 @@ class KeyTransport10Catm00300113:
 
 
 @dataclass
-class Signer8Catm00300113:
+class Signer8Catm00300113(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -2536,7 +2537,7 @@ class Signer8Catm00300113:
 
 
 @dataclass
-class Tmsheader1Catm00300113:
+class Tmsheader1Catm00300113(ISO20022MessageElement):
     class Meta:
         name = "TMSHeader1"
 
@@ -2608,7 +2609,7 @@ class Tmsheader1Catm00300113:
 
 
 @dataclass
-class Recipient15ChoiceCatm00300113:
+class Recipient15ChoiceCatm00300113(ISO20022MessageElement):
     key_trnsprt: Optional[KeyTransport10Catm00300113] = field(
         default=None,
         metadata={
@@ -2636,7 +2637,7 @@ class Recipient15ChoiceCatm00300113:
 
 
 @dataclass
-class SignedData9Catm00300113:
+class SignedData9Catm00300113(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -2685,7 +2686,7 @@ class SignedData9Catm00300113:
 
 
 @dataclass
-class AuthenticatedData10Catm00300113:
+class AuthenticatedData10Catm00300113(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -2738,7 +2739,7 @@ class AuthenticatedData10Catm00300113:
 
 
 @dataclass
-class EnvelopedData11Catm00300113:
+class EnvelopedData11Catm00300113(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -2777,7 +2778,7 @@ class EnvelopedData11Catm00300113:
 
 
 @dataclass
-class ContentInformationType38Catm00300113:
+class ContentInformationType38Catm00300113(ISO20022MessageElement):
     cntt_tp: Optional[ContentType2Code] = field(
         default=None,
         metadata={
@@ -2806,7 +2807,7 @@ class ContentInformationType38Catm00300113:
 
 
 @dataclass
-class ContentInformationType39Catm00300113:
+class ContentInformationType39Catm00300113(ISO20022MessageElement):
     cntt_tp: Optional[ContentType2Code] = field(
         default=None,
         metadata={
@@ -2851,7 +2852,7 @@ class ContentInformationType39Catm00300113:
 
 
 @dataclass
-class ContentInformationType40Catm00300113:
+class ContentInformationType40Catm00300113(ISO20022MessageElement):
     cntt_tp: Optional[ContentType2Code] = field(
         default=None,
         metadata={
@@ -2873,7 +2874,7 @@ class ContentInformationType40Catm00300113:
 
 
 @dataclass
-class ApplicationParameters13Catm00300113:
+class ApplicationParameters13Catm00300113(ISO20022MessageElement):
     actn_tp: Optional[TerminalManagementAction3Code] = field(
         default=None,
         metadata={
@@ -2969,7 +2970,7 @@ class ApplicationParameters13Catm00300113:
 
 
 @dataclass
-class CryptographicKey18Catm00300113:
+class CryptographicKey18Catm00300113(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -3111,7 +3112,7 @@ class CryptographicKey18Catm00300113:
 
 
 @dataclass
-class ExternallyDefinedData5Catm00300113:
+class ExternallyDefinedData5Catm00300113(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -3155,7 +3156,7 @@ class ExternallyDefinedData5Catm00300113:
 
 
 @dataclass
-class PackageType5Catm00300113:
+class PackageType5Catm00300113(ISO20022MessageElement):
     packg_id: Optional[GenericIdentification176Catm00300113] = field(
         default=None,
         metadata={
@@ -3208,7 +3209,7 @@ class PackageType5Catm00300113:
 
 
 @dataclass
-class SecurityParameters16Catm00300113:
+class SecurityParameters16Catm00300113(ISO20022MessageElement):
     actn_tp: Optional[TerminalManagementAction3Code] = field(
         default=None,
         metadata={
@@ -3262,7 +3263,7 @@ class SecurityParameters16Catm00300113:
 
 
 @dataclass
-class TerminalPackageType5Catm00300113:
+class TerminalPackageType5Catm00300113(ISO20022MessageElement):
     poicmpnt_id: list[PointOfInteractionComponentIdentification2Catm00300113] = field(
         default_factory=list,
         metadata={
@@ -3283,7 +3284,7 @@ class TerminalPackageType5Catm00300113:
 
 
 @dataclass
-class AcceptorConfigurationContent13Catm00300113:
+class AcceptorConfigurationContent13Catm00300113(ISO20022MessageElement):
     rplc_cfgtn: Optional[bool] = field(
         default=None,
         metadata={
@@ -3375,7 +3376,7 @@ class AcceptorConfigurationContent13Catm00300113:
 
 
 @dataclass
-class AcceptorConfigurationDataSet5Catm00300113:
+class AcceptorConfigurationDataSet5Catm00300113(ISO20022MessageElement):
     id: Optional[DataSetIdentification10Catm00300113] = field(
         default=None,
         metadata={
@@ -3430,7 +3431,7 @@ class AcceptorConfigurationDataSet5Catm00300113:
 
 
 @dataclass
-class AcceptorConfiguration13Catm00300113:
+class AcceptorConfiguration13Catm00300113(ISO20022MessageElement):
     termnl_mgr_id: Optional[GenericIdentification176Catm00300113] = field(
         default=None,
         metadata={
@@ -3462,7 +3463,7 @@ class AcceptorConfiguration13Catm00300113:
 
 
 @dataclass
-class AcceptorConfigurationUpdateV13Catm00300113:
+class AcceptorConfigurationUpdateV13Catm00300113(ISO20022MessageElement):
     hdr: Optional[Tmsheader1Catm00300113] = field(
         default=None,
         metadata={
@@ -3492,7 +3493,7 @@ class AcceptorConfigurationUpdateV13Catm00300113:
 
 
 @dataclass
-class Catm00300113:
+class Catm00300113(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:catm.003.001.13"
 

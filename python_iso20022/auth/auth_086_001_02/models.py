@@ -12,12 +12,13 @@ from python_iso20022.auth.enums import (
     TradeRepositoryReportingType1Code,
     TransactionOperationType6Code,
 )
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.086.001.02"
 
 
 @dataclass
-class ActiveOrHistoricCurrencyAndAmountAuth08600102:
+class ActiveOrHistoricCurrencyAndAmountAuth08600102(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -39,7 +40,7 @@ class ActiveOrHistoricCurrencyAndAmountAuth08600102:
 
 
 @dataclass
-class GenericIdentification175Auth08600102:
+class GenericIdentification175Auth08600102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -74,7 +75,7 @@ class GenericIdentification175Auth08600102:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth08600102:
+class SupplementaryDataEnvelope1Auth08600102(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -85,7 +86,7 @@ class SupplementaryDataEnvelope1Auth08600102:
 
 
 @dataclass
-class AmountAndDirection53Auth08600102:
+class AmountAndDirection53Auth08600102(ISO20022MessageElement):
     amt: Optional[ActiveOrHistoricCurrencyAndAmountAuth08600102] = field(
         default=None,
         metadata={
@@ -106,7 +107,7 @@ class AmountAndDirection53Auth08600102:
 
 
 @dataclass
-class ContractModification3Auth08600102:
+class ContractModification3Auth08600102(ISO20022MessageElement):
     actn_tp: Optional[TransactionOperationType6Code] = field(
         default=None,
         metadata={
@@ -127,7 +128,7 @@ class ContractModification3Auth08600102:
 
 
 @dataclass
-class OrganisationIdentification38Auth08600102:
+class OrganisationIdentification38Auth08600102(ISO20022MessageElement):
     id: Optional[GenericIdentification175Auth08600102] = field(
         default=None,
         metadata={
@@ -160,7 +161,7 @@ class OrganisationIdentification38Auth08600102:
 
 
 @dataclass
-class ReconciliationFlag2Auth08600102:
+class ReconciliationFlag2Auth08600102(ISO20022MessageElement):
     rpt_tp: Optional[TradeRepositoryReportingType1Code] = field(
         default=None,
         metadata={
@@ -212,7 +213,7 @@ class ReconciliationFlag2Auth08600102:
 
 
 @dataclass
-class ReinvestedCashTypeAndAmount1Auth08600102:
+class ReinvestedCashTypeAndAmount1Auth08600102(ISO20022MessageElement):
     tp: Optional[ReinvestmentType1Code] = field(
         default=None,
         metadata={
@@ -234,7 +235,7 @@ class ReinvestedCashTypeAndAmount1Auth08600102:
 
 
 @dataclass
-class ReuseValue1ChoiceAuth08600102:
+class ReuseValue1ChoiceAuth08600102(ISO20022MessageElement):
     actl: Optional[ActiveOrHistoricCurrencyAndAmountAuth08600102] = field(
         default=None,
         metadata={
@@ -254,7 +255,7 @@ class ReuseValue1ChoiceAuth08600102:
 
 
 @dataclass
-class SupplementaryData1Auth08600102:
+class SupplementaryData1Auth08600102(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -277,7 +278,7 @@ class SupplementaryData1Auth08600102:
 
 
 @dataclass
-class CashReuseData1Auth08600102:
+class CashReuseData1Auth08600102(ISO20022MessageElement):
     rinvstd_csh: list[ReinvestedCashTypeAndAmount1Auth08600102] = field(
         default_factory=list,
         metadata={
@@ -301,7 +302,7 @@ class CashReuseData1Auth08600102:
 
 
 @dataclass
-class FundingSource3Auth08600102:
+class FundingSource3Auth08600102(ISO20022MessageElement):
     tp: Optional[FundingSourceType1Code] = field(
         default=None,
         metadata={
@@ -323,7 +324,7 @@ class FundingSource3Auth08600102:
 
 
 @dataclass
-class OrganisationIdentification15ChoiceAuth08600102:
+class OrganisationIdentification15ChoiceAuth08600102(ISO20022MessageElement):
     lei: Optional[str] = field(
         default=None,
         metadata={
@@ -353,7 +354,7 @@ class OrganisationIdentification15ChoiceAuth08600102:
 
 
 @dataclass
-class SecurityReuseData1Auth08600102:
+class SecurityReuseData1Auth08600102(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -376,7 +377,7 @@ class SecurityReuseData1Auth08600102:
 
 
 @dataclass
-class CollateralType19Auth08600102:
+class CollateralType19Auth08600102(ISO20022MessageElement):
     scty: list[SecurityReuseData1Auth08600102] = field(
         default_factory=list,
         metadata={
@@ -396,7 +397,7 @@ class CollateralType19Auth08600102:
 
 
 @dataclass
-class CounterpartyData87Auth08600102:
+class CounterpartyData87Auth08600102(ISO20022MessageElement):
     rpt_submitg_ntty: Optional[OrganisationIdentification15ChoiceAuth08600102] = field(
         default=None,
         metadata={
@@ -428,7 +429,7 @@ class CounterpartyData87Auth08600102:
 
 
 @dataclass
-class ReuseDataReportCorrection15Auth08600102:
+class ReuseDataReportCorrection15Auth08600102(ISO20022MessageElement):
     tech_rcrd_id: Optional[str] = field(
         default=None,
         metadata={
@@ -510,7 +511,7 @@ class ReuseDataReportCorrection15Auth08600102:
 
 
 @dataclass
-class TradeData37ChoiceAuth08600102:
+class TradeData37ChoiceAuth08600102(ISO20022MessageElement):
     data_set_actn: Optional[ReportPeriodActivity1Code] = field(
         default=None,
         metadata={
@@ -530,7 +531,9 @@ class TradeData37ChoiceAuth08600102:
 
 
 @dataclass
-class SecuritiesFinancingReportingReusedCollateralDataTransactionStateReportV02Auth08600102:
+class SecuritiesFinancingReportingReusedCollateralDataTransactionStateReportV02Auth08600102(
+    ISO20022MessageElement
+):
     trad_data: Optional[TradeData37ChoiceAuth08600102] = field(
         default=None,
         metadata={
@@ -551,7 +554,7 @@ class SecuritiesFinancingReportingReusedCollateralDataTransactionStateReportV02A
 
 
 @dataclass
-class Auth08600102:
+class Auth08600102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.086.001.02"
 

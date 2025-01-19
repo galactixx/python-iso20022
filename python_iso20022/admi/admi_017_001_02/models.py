@@ -1,13 +1,14 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import AddressType2Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:admi.017.001.02"
 
 
 @dataclass
-class ClearingSystemIdentification2ChoiceAdmi01700102:
+class ClearingSystemIdentification2ChoiceAdmi01700102(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -31,7 +32,7 @@ class ClearingSystemIdentification2ChoiceAdmi01700102:
 
 
 @dataclass
-class PartyIdentification265Admi01700102:
+class PartyIdentification265Admi01700102(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -56,7 +57,7 @@ class PartyIdentification265Admi01700102:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Admi01700102:
+class SupplementaryDataEnvelope1Admi01700102(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -67,7 +68,7 @@ class SupplementaryDataEnvelope1Admi01700102:
 
 
 @dataclass
-class PartyIdentification266Admi01700102:
+class PartyIdentification266Admi01700102(ISO20022MessageElement):
     pty_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -126,7 +127,7 @@ class PartyIdentification266Admi01700102:
 
 
 @dataclass
-class PostalAddress1Admi01700102:
+class PostalAddress1Admi01700102(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -209,7 +210,7 @@ class PostalAddress1Admi01700102:
 
 
 @dataclass
-class SupplementaryData1Admi01700102:
+class SupplementaryData1Admi01700102(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -232,7 +233,7 @@ class SupplementaryData1Admi01700102:
 
 
 @dataclass
-class NameAndAddress8Admi01700102:
+class NameAndAddress8Admi01700102(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -266,7 +267,7 @@ class NameAndAddress8Admi01700102:
 
 
 @dataclass
-class PartyIdentification242ChoiceAdmi01700102:
+class PartyIdentification242ChoiceAdmi01700102(ISO20022MessageElement):
     nm_and_adr: Optional[NameAndAddress8Admi01700102] = field(
         default=None,
         metadata={
@@ -294,7 +295,7 @@ class PartyIdentification242ChoiceAdmi01700102:
 
 
 @dataclass
-class RequestDetails30Admi01700102:
+class RequestDetails30Admi01700102(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -327,7 +328,7 @@ class RequestDetails30Admi01700102:
 
 
 @dataclass
-class ProcessingRequestV02Admi01700102:
+class ProcessingRequestV02Admi01700102(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -368,7 +369,7 @@ class ProcessingRequestV02Admi01700102:
 
 
 @dataclass
-class Admi01700102:
+class Admi01700102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:admi.017.001.02"
 

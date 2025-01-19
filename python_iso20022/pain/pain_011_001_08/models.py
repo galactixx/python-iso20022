@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     AddressType2Code,
     Authorisation1Code,
@@ -19,7 +20,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:pain.011.001.08"
 
 
 @dataclass
-class AccountSchemeName1ChoicePain01100108:
+class AccountSchemeName1ChoicePain01100108(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -43,7 +44,7 @@ class AccountSchemeName1ChoicePain01100108:
 
 
 @dataclass
-class ActiveCurrencyAndAmountPain01100108:
+class ActiveCurrencyAndAmountPain01100108(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -65,7 +66,7 @@ class ActiveCurrencyAndAmountPain01100108:
 
 
 @dataclass
-class ActiveOrHistoricCurrencyAndAmountPain01100108:
+class ActiveOrHistoricCurrencyAndAmountPain01100108(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -87,7 +88,7 @@ class ActiveOrHistoricCurrencyAndAmountPain01100108:
 
 
 @dataclass
-class AuthenticationChannel1ChoicePain01100108:
+class AuthenticationChannel1ChoicePain01100108(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -111,7 +112,7 @@ class AuthenticationChannel1ChoicePain01100108:
 
 
 @dataclass
-class CashAccountType2ChoicePain01100108:
+class CashAccountType2ChoicePain01100108(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -135,7 +136,7 @@ class CashAccountType2ChoicePain01100108:
 
 
 @dataclass
-class CategoryPurpose1ChoicePain01100108:
+class CategoryPurpose1ChoicePain01100108(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -159,7 +160,7 @@ class CategoryPurpose1ChoicePain01100108:
 
 
 @dataclass
-class ClearingSystemIdentification2ChoicePain01100108:
+class ClearingSystemIdentification2ChoicePain01100108(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -183,7 +184,7 @@ class ClearingSystemIdentification2ChoicePain01100108:
 
 
 @dataclass
-class DateAndPlaceOfBirth1Pain01100108:
+class DateAndPlaceOfBirth1Pain01100108(ISO20022MessageElement):
     birth_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -227,7 +228,7 @@ class DateAndPlaceOfBirth1Pain01100108:
 
 
 @dataclass
-class DatePeriod3Pain01100108:
+class DatePeriod3Pain01100108(ISO20022MessageElement):
     fr_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -248,7 +249,7 @@ class DatePeriod3Pain01100108:
 
 
 @dataclass
-class DateType2ChoicePain01100108:
+class DateType2ChoicePain01100108(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -272,7 +273,7 @@ class DateType2ChoicePain01100108:
 
 
 @dataclass
-class DocumentType2ChoicePain01100108:
+class DocumentType2ChoicePain01100108(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -296,7 +297,7 @@ class DocumentType2ChoicePain01100108:
 
 
 @dataclass
-class FinancialIdentificationSchemeName1ChoicePain01100108:
+class FinancialIdentificationSchemeName1ChoicePain01100108(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -320,7 +321,7 @@ class FinancialIdentificationSchemeName1ChoicePain01100108:
 
 
 @dataclass
-class GenericIdentification30Pain01100108:
+class GenericIdentification30Pain01100108(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -355,7 +356,7 @@ class GenericIdentification30Pain01100108:
 
 
 @dataclass
-class LocalInstrument2ChoicePain01100108:
+class LocalInstrument2ChoicePain01100108(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -379,7 +380,7 @@ class LocalInstrument2ChoicePain01100108:
 
 
 @dataclass
-class MandateReason1ChoicePain01100108:
+class MandateReason1ChoicePain01100108(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -403,7 +404,7 @@ class MandateReason1ChoicePain01100108:
 
 
 @dataclass
-class MandateSetupReason1ChoicePain01100108:
+class MandateSetupReason1ChoicePain01100108(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -427,7 +428,7 @@ class MandateSetupReason1ChoicePain01100108:
 
 
 @dataclass
-class OrganisationIdentificationSchemeName1ChoicePain01100108:
+class OrganisationIdentificationSchemeName1ChoicePain01100108(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -451,7 +452,7 @@ class OrganisationIdentificationSchemeName1ChoicePain01100108:
 
 
 @dataclass
-class OriginalMessageInformation1Pain01100108:
+class OriginalMessageInformation1Pain01100108(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -485,7 +486,7 @@ class OriginalMessageInformation1Pain01100108:
 
 
 @dataclass
-class OtherContact1Pain01100108:
+class OtherContact1Pain01100108(ISO20022MessageElement):
     chanl_tp: Optional[str] = field(
         default=None,
         metadata={
@@ -510,7 +511,7 @@ class OtherContact1Pain01100108:
 
 
 @dataclass
-class PersonIdentificationSchemeName1ChoicePain01100108:
+class PersonIdentificationSchemeName1ChoicePain01100108(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -534,7 +535,7 @@ class PersonIdentificationSchemeName1ChoicePain01100108:
 
 
 @dataclass
-class ProxyAccountType1ChoicePain01100108:
+class ProxyAccountType1ChoicePain01100108(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -558,7 +559,7 @@ class ProxyAccountType1ChoicePain01100108:
 
 
 @dataclass
-class ServiceLevel8ChoicePain01100108:
+class ServiceLevel8ChoicePain01100108(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -582,7 +583,7 @@ class ServiceLevel8ChoicePain01100108:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Pain01100108:
+class SupplementaryDataEnvelope1Pain01100108(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -593,7 +594,7 @@ class SupplementaryDataEnvelope1Pain01100108:
 
 
 @dataclass
-class AddressType3ChoicePain01100108:
+class AddressType3ChoicePain01100108(ISO20022MessageElement):
     cd: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -613,7 +614,7 @@ class AddressType3ChoicePain01100108:
 
 
 @dataclass
-class Authorisation1ChoicePain01100108:
+class Authorisation1ChoicePain01100108(ISO20022MessageElement):
     cd: Optional[Authorisation1Code] = field(
         default=None,
         metadata={
@@ -635,7 +636,7 @@ class Authorisation1ChoicePain01100108:
 
 
 @dataclass
-class ClearingSystemMemberIdentification2Pain01100108:
+class ClearingSystemMemberIdentification2Pain01100108(ISO20022MessageElement):
     clr_sys_id: Optional[ClearingSystemIdentification2ChoicePain01100108] = field(
         default=None,
         metadata={
@@ -658,7 +659,7 @@ class ClearingSystemMemberIdentification2Pain01100108:
 
 
 @dataclass
-class Contact13Pain01100108:
+class Contact13Pain01100108(ISO20022MessageElement):
     nm_prfx: Optional[NamePrefix2Code] = field(
         default=None,
         metadata={
@@ -783,7 +784,7 @@ class Contact13Pain01100108:
 
 
 @dataclass
-class DateAndType1Pain01100108:
+class DateAndType1Pain01100108(ISO20022MessageElement):
     tp: Optional[DateType2ChoicePain01100108] = field(
         default=None,
         metadata={
@@ -805,7 +806,7 @@ class DateAndType1Pain01100108:
 
 
 @dataclass
-class DocumentType1Pain01100108:
+class DocumentType1Pain01100108(ISO20022MessageElement):
     cd_or_prtry: Optional[DocumentType2ChoicePain01100108] = field(
         default=None,
         metadata={
@@ -828,7 +829,7 @@ class DocumentType1Pain01100108:
 
 
 @dataclass
-class Frequency37ChoicePain01100108:
+class Frequency37ChoicePain01100108(ISO20022MessageElement):
     cd: Optional[Frequency10Code] = field(
         default=None,
         metadata={
@@ -850,7 +851,7 @@ class Frequency37ChoicePain01100108:
 
 
 @dataclass
-class FrequencyAndMoment1Pain01100108:
+class FrequencyAndMoment1Pain01100108(ISO20022MessageElement):
     tp: Optional[Frequency6Code] = field(
         default=None,
         metadata={
@@ -873,7 +874,7 @@ class FrequencyAndMoment1Pain01100108:
 
 
 @dataclass
-class FrequencyPeriod1Pain01100108:
+class FrequencyPeriod1Pain01100108(ISO20022MessageElement):
     tp: Optional[Frequency6Code] = field(
         default=None,
         metadata={
@@ -897,7 +898,7 @@ class FrequencyPeriod1Pain01100108:
 
 
 @dataclass
-class GenericAccountIdentification1Pain01100108:
+class GenericAccountIdentification1Pain01100108(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -930,7 +931,7 @@ class GenericAccountIdentification1Pain01100108:
 
 
 @dataclass
-class GenericFinancialIdentification1Pain01100108:
+class GenericFinancialIdentification1Pain01100108(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -963,7 +964,7 @@ class GenericFinancialIdentification1Pain01100108:
 
 
 @dataclass
-class GenericOrganisationIdentification3Pain01100108:
+class GenericOrganisationIdentification3Pain01100108(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -996,7 +997,7 @@ class GenericOrganisationIdentification3Pain01100108:
 
 
 @dataclass
-class GenericPersonIdentification2Pain01100108:
+class GenericPersonIdentification2Pain01100108(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1029,7 +1030,7 @@ class GenericPersonIdentification2Pain01100108:
 
 
 @dataclass
-class MandateAuthentication1Pain01100108:
+class MandateAuthentication1Pain01100108(ISO20022MessageElement):
     msg_authntcn_cd: Optional[str] = field(
         default=None,
         metadata={
@@ -1059,7 +1060,7 @@ class MandateAuthentication1Pain01100108:
 
 
 @dataclass
-class MandateClassification1ChoicePain01100108:
+class MandateClassification1ChoicePain01100108(ISO20022MessageElement):
     cd: Optional[MandateClassification1Code] = field(
         default=None,
         metadata={
@@ -1081,7 +1082,7 @@ class MandateClassification1ChoicePain01100108:
 
 
 @dataclass
-class ProxyAccountIdentification1Pain01100108:
+class ProxyAccountIdentification1Pain01100108(ISO20022MessageElement):
     tp: Optional[ProxyAccountType1ChoicePain01100108] = field(
         default=None,
         metadata={
@@ -1104,7 +1105,7 @@ class ProxyAccountIdentification1Pain01100108:
 
 
 @dataclass
-class SupplementaryData1Pain01100108:
+class SupplementaryData1Pain01100108(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1127,7 +1128,7 @@ class SupplementaryData1Pain01100108:
 
 
 @dataclass
-class AccountIdentification4ChoicePain01100108:
+class AccountIdentification4ChoicePain01100108(ISO20022MessageElement):
     iban: Optional[str] = field(
         default=None,
         metadata={
@@ -1148,7 +1149,7 @@ class AccountIdentification4ChoicePain01100108:
 
 
 @dataclass
-class Frequency36ChoicePain01100108:
+class Frequency36ChoicePain01100108(ISO20022MessageElement):
     tp: Optional[Frequency6Code] = field(
         default=None,
         metadata={
@@ -1176,7 +1177,7 @@ class Frequency36ChoicePain01100108:
 
 
 @dataclass
-class MandateAdjustment1Pain01100108:
+class MandateAdjustment1Pain01100108(ISO20022MessageElement):
     dt_adjstmnt_rule_ind: Optional[bool] = field(
         default=None,
         metadata={
@@ -1215,7 +1216,7 @@ class MandateAdjustment1Pain01100108:
 
 
 @dataclass
-class MandateTypeInformation2Pain01100108:
+class MandateTypeInformation2Pain01100108(ISO20022MessageElement):
     svc_lvl: Optional[ServiceLevel8ChoicePain01100108] = field(
         default=None,
         metadata={
@@ -1251,7 +1252,7 @@ class MandateTypeInformation2Pain01100108:
 
 
 @dataclass
-class OrganisationIdentification39Pain01100108:
+class OrganisationIdentification39Pain01100108(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -1281,7 +1282,7 @@ class OrganisationIdentification39Pain01100108:
 
 
 @dataclass
-class PersonIdentification18Pain01100108:
+class PersonIdentification18Pain01100108(ISO20022MessageElement):
     dt_and_plc_of_birth: Optional[DateAndPlaceOfBirth1Pain01100108] = field(
         default=None,
         metadata={
@@ -1301,7 +1302,7 @@ class PersonIdentification18Pain01100108:
 
 
 @dataclass
-class PostalAddress27Pain01100108:
+class PostalAddress27Pain01100108(ISO20022MessageElement):
     adr_tp: Optional[AddressType3ChoicePain01100108] = field(
         default=None,
         metadata={
@@ -1483,7 +1484,7 @@ class PostalAddress27Pain01100108:
 
 
 @dataclass
-class ReferredMandateDocument2Pain01100108:
+class ReferredMandateDocument2Pain01100108(ISO20022MessageElement):
     tp: Optional[DocumentType1Pain01100108] = field(
         default=None,
         metadata={
@@ -1523,7 +1524,7 @@ class ReferredMandateDocument2Pain01100108:
 
 
 @dataclass
-class BranchData5Pain01100108:
+class BranchData5Pain01100108(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1564,7 +1565,7 @@ class BranchData5Pain01100108:
 
 
 @dataclass
-class CashAccount40Pain01100108:
+class CashAccount40Pain01100108(ISO20022MessageElement):
     id: Optional[AccountIdentification4ChoicePain01100108] = field(
         default=None,
         metadata={
@@ -1611,7 +1612,7 @@ class CashAccount40Pain01100108:
 
 
 @dataclass
-class FinancialInstitutionIdentification23Pain01100108:
+class FinancialInstitutionIdentification23Pain01100108(ISO20022MessageElement):
     bicfi: Optional[str] = field(
         default=None,
         metadata={
@@ -1667,7 +1668,7 @@ class FinancialInstitutionIdentification23Pain01100108:
 
 
 @dataclass
-class MandateOccurrences5Pain01100108:
+class MandateOccurrences5Pain01100108(ISO20022MessageElement):
     seq_tp: Optional[SequenceType2Code] = field(
         default=None,
         metadata={
@@ -1712,7 +1713,7 @@ class MandateOccurrences5Pain01100108:
 
 
 @dataclass
-class Party52ChoicePain01100108:
+class Party52ChoicePain01100108(ISO20022MessageElement):
     org_id: Optional[OrganisationIdentification39Pain01100108] = field(
         default=None,
         metadata={
@@ -1732,7 +1733,7 @@ class Party52ChoicePain01100108:
 
 
 @dataclass
-class BranchAndFinancialInstitutionIdentification8Pain01100108:
+class BranchAndFinancialInstitutionIdentification8Pain01100108(ISO20022MessageElement):
     fin_instn_id: Optional[FinancialInstitutionIdentification23Pain01100108] = field(
         default=None,
         metadata={
@@ -1753,7 +1754,7 @@ class BranchAndFinancialInstitutionIdentification8Pain01100108:
 
 
 @dataclass
-class PartyIdentification272Pain01100108:
+class PartyIdentification272Pain01100108(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1800,7 +1801,7 @@ class PartyIdentification272Pain01100108:
 
 
 @dataclass
-class GroupHeader110Pain01100108:
+class GroupHeader110Pain01100108(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -1861,7 +1862,7 @@ class GroupHeader110Pain01100108:
 
 
 @dataclass
-class Mandate20Pain01100108:
+class Mandate20Pain01100108(ISO20022MessageElement):
     mndt_id: Optional[str] = field(
         default=None,
         metadata={
@@ -2056,7 +2057,7 @@ class Mandate20Pain01100108:
 
 
 @dataclass
-class MandateCancellationReason2Pain01100108:
+class MandateCancellationReason2Pain01100108(ISO20022MessageElement):
     orgtr: Optional[PartyIdentification272Pain01100108] = field(
         default=None,
         metadata={
@@ -2087,7 +2088,7 @@ class MandateCancellationReason2Pain01100108:
 
 
 @dataclass
-class OriginalMandate10ChoicePain01100108:
+class OriginalMandate10ChoicePain01100108(ISO20022MessageElement):
     orgnl_mndt_id: Optional[str] = field(
         default=None,
         metadata={
@@ -2109,7 +2110,7 @@ class OriginalMandate10ChoicePain01100108:
 
 
 @dataclass
-class MandateCancellation8Pain01100108:
+class MandateCancellation8Pain01100108(ISO20022MessageElement):
     orgnl_msg_inf: Optional[OriginalMessageInformation1Pain01100108] = field(
         default=None,
         metadata={
@@ -2147,7 +2148,7 @@ class MandateCancellation8Pain01100108:
 
 
 @dataclass
-class MandateCancellationRequestV08Pain01100108:
+class MandateCancellationRequestV08Pain01100108(ISO20022MessageElement):
     grp_hdr: Optional[GroupHeader110Pain01100108] = field(
         default=None,
         metadata={
@@ -2177,7 +2178,7 @@ class MandateCancellationRequestV08Pain01100108:
 
 
 @dataclass
-class Pain01100108:
+class Pain01100108(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:pain.011.001.08"
 

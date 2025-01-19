@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlPeriod
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     AddressType2Code,
     CardType1Code,
@@ -45,7 +46,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:setr.048.001.01"
 
 
 @dataclass
-class ActiveCurrencyAnd13DecimalAmountSetr04800101:
+class ActiveCurrencyAnd13DecimalAmountSetr04800101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -67,7 +68,7 @@ class ActiveCurrencyAnd13DecimalAmountSetr04800101:
 
 
 @dataclass
-class ActiveCurrencyAndAmountSetr04800101:
+class ActiveCurrencyAndAmountSetr04800101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -89,7 +90,7 @@ class ActiveCurrencyAndAmountSetr04800101:
 
 
 @dataclass
-class ActiveOrHistoricCurrencyAndAmountSetr04800101:
+class ActiveOrHistoricCurrencyAndAmountSetr04800101(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -111,7 +112,7 @@ class ActiveOrHistoricCurrencyAndAmountSetr04800101:
 
 
 @dataclass
-class AlternateSecurityIdentification1Setr04800101:
+class AlternateSecurityIdentification1Setr04800101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -145,7 +146,7 @@ class AlternateSecurityIdentification1Setr04800101:
 
 
 @dataclass
-class Bicidentification1Setr04800101:
+class Bicidentification1Setr04800101(ISO20022MessageElement):
     class Meta:
         name = "BICIdentification1"
 
@@ -162,7 +163,7 @@ class Bicidentification1Setr04800101:
 
 
 @dataclass
-class ClearingSystemMemberIdentificationChoiceSetr04800101:
+class ClearingSystemMemberIdentificationChoiceSetr04800101(ISO20022MessageElement):
     uschu: Optional[str] = field(
         default=None,
         metadata={
@@ -337,7 +338,7 @@ class ClearingSystemMemberIdentificationChoiceSetr04800101:
 
 
 @dataclass
-class DateAndDateTimeChoiceSetr04800101:
+class DateAndDateTimeChoiceSetr04800101(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -357,7 +358,7 @@ class DateAndDateTimeChoiceSetr04800101:
 
 
 @dataclass
-class Extension1Setr04800101:
+class Extension1Setr04800101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -383,7 +384,7 @@ class Extension1Setr04800101:
 
 
 @dataclass
-class FinancialInstrumentQuantity1Setr04800101:
+class FinancialInstrumentQuantity1Setr04800101(ISO20022MessageElement):
     unit: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -398,7 +399,7 @@ class FinancialInstrumentQuantity1Setr04800101:
 
 
 @dataclass
-class GenericIdentification1Setr04800101:
+class GenericIdentification1Setr04800101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -433,7 +434,7 @@ class GenericIdentification1Setr04800101:
 
 
 @dataclass
-class MessageIdentification1Setr04800101:
+class MessageIdentification1Setr04800101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -457,7 +458,7 @@ class MessageIdentification1Setr04800101:
 
 
 @dataclass
-class PlaceOfTradeIdentification1ChoiceSetr04800101:
+class PlaceOfTradeIdentification1ChoiceSetr04800101(ISO20022MessageElement):
     ctry: Optional[str] = field(
         default=None,
         metadata={
@@ -498,7 +499,7 @@ class PlaceOfTradeIdentification1ChoiceSetr04800101:
 
 
 @dataclass
-class SimpleIdentificationInformationSetr04800101:
+class SimpleIdentificationInformationSetr04800101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -513,7 +514,7 @@ class SimpleIdentificationInformationSetr04800101:
 
 
 @dataclass
-class AccountIdentification1Setr04800101:
+class AccountIdentification1Setr04800101(ISO20022MessageElement):
     prtry: Optional[SimpleIdentificationInformationSetr04800101] = field(
         default=None,
         metadata={
@@ -526,7 +527,7 @@ class AccountIdentification1Setr04800101:
 
 
 @dataclass
-class CashAccountIdentification1ChoiceSetr04800101:
+class CashAccountIdentification1ChoiceSetr04800101(ISO20022MessageElement):
     iban: Optional[str] = field(
         default=None,
         metadata={
@@ -565,7 +566,7 @@ class CashAccountIdentification1ChoiceSetr04800101:
 
 
 @dataclass
-class CommissionWaiver3Setr04800101:
+class CommissionWaiver3Setr04800101(ISO20022MessageElement):
     instr_bsis: Optional[WaivingInstruction1Code] = field(
         default=None,
         metadata={
@@ -598,7 +599,7 @@ class CommissionWaiver3Setr04800101:
 
 
 @dataclass
-class CopyInformation2Setr04800101:
+class CopyInformation2Setr04800101(ISO20022MessageElement):
     cpy_ind: Optional[bool] = field(
         default=None,
         metadata={
@@ -619,7 +620,7 @@ class CopyInformation2Setr04800101:
 
 
 @dataclass
-class CountryAndResidentialStatusType1Setr04800101:
+class CountryAndResidentialStatusType1Setr04800101(ISO20022MessageElement):
     ctry: Optional[str] = field(
         default=None,
         metadata={
@@ -642,7 +643,7 @@ class CountryAndResidentialStatusType1Setr04800101:
 
 
 @dataclass
-class Equalisation1Setr04800101:
+class Equalisation1Setr04800101(ISO20022MessageElement):
     amt: Optional[ActiveOrHistoricCurrencyAndAmountSetr04800101] = field(
         default=None,
         metadata={
@@ -664,7 +665,7 @@ class Equalisation1Setr04800101:
 
 
 @dataclass
-class FundOrderType3Setr04800101:
+class FundOrderType3Setr04800101(ISO20022MessageElement):
     ordr_tp: Optional[FundOrderType4Code] = field(
         default=None,
         metadata={
@@ -686,7 +687,7 @@ class FundOrderType3Setr04800101:
 
 
 @dataclass
-class GenericIdentification11Setr04800101:
+class GenericIdentification11Setr04800101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -729,7 +730,7 @@ class GenericIdentification11Setr04800101:
 
 
 @dataclass
-class InvestmentFundsOrderBreakdown1Setr04800101:
+class InvestmentFundsOrderBreakdown1Setr04800101(ISO20022MessageElement):
     ordr_brkdwn_tp: Optional[FundOrderType5Code] = field(
         default=None,
         metadata={
@@ -760,7 +761,7 @@ class InvestmentFundsOrderBreakdown1Setr04800101:
 
 
 @dataclass
-class PostalAddress1Setr04800101:
+class PostalAddress1Setr04800101(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -843,7 +844,7 @@ class PostalAddress1Setr04800101:
 
 
 @dataclass
-class PriceValue1Setr04800101:
+class PriceValue1Setr04800101(ISO20022MessageElement):
     amt: Optional[ActiveCurrencyAnd13DecimalAmountSetr04800101] = field(
         default=None,
         metadata={
@@ -856,7 +857,7 @@ class PriceValue1Setr04800101:
 
 
 @dataclass
-class ProfitAndLoss1ChoiceSetr04800101:
+class ProfitAndLoss1ChoiceSetr04800101(ISO20022MessageElement):
     prft: Optional[ActiveCurrencyAnd13DecimalAmountSetr04800101] = field(
         default=None,
         metadata={
@@ -876,7 +877,7 @@ class ProfitAndLoss1ChoiceSetr04800101:
 
 
 @dataclass
-class SecurityIdentification3ChoiceSetr04800101:
+class SecurityIdentification3ChoiceSetr04800101(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -1011,7 +1012,7 @@ class SecurityIdentification3ChoiceSetr04800101:
 
 
 @dataclass
-class TaxCalculationInformation6Setr04800101:
+class TaxCalculationInformation6Setr04800101(ISO20022MessageElement):
     bsis: Optional[TaxationBasis2Code] = field(
         default=None,
         metadata={
@@ -1041,7 +1042,7 @@ class TaxCalculationInformation6Setr04800101:
 
 
 @dataclass
-class AccountIdentificationAndName3Setr04800101:
+class AccountIdentificationAndName3Setr04800101(ISO20022MessageElement):
     id: Optional[CashAccountIdentification1ChoiceSetr04800101] = field(
         default=None,
         metadata={
@@ -1064,7 +1065,7 @@ class AccountIdentificationAndName3Setr04800101:
 
 
 @dataclass
-class BranchDataSetr04800101:
+class BranchDataSetr04800101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1096,7 +1097,7 @@ class BranchDataSetr04800101:
 
 
 @dataclass
-class FinancialInstrument10Setr04800101:
+class FinancialInstrument10Setr04800101(ISO20022MessageElement):
     id: Optional[SecurityIdentification3ChoiceSetr04800101] = field(
         default=None,
         metadata={
@@ -1165,7 +1166,7 @@ class FinancialInstrument10Setr04800101:
 
 
 @dataclass
-class IndividualPerson12Setr04800101:
+class IndividualPerson12Setr04800101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1203,7 +1204,7 @@ class IndividualPerson12Setr04800101:
 
 
 @dataclass
-class InvestmentAccount20Setr04800101:
+class InvestmentAccount20Setr04800101(ISO20022MessageElement):
     acct_id: Optional[AccountIdentification1Setr04800101] = field(
         default=None,
         metadata={
@@ -1233,7 +1234,7 @@ class InvestmentAccount20Setr04800101:
 
 
 @dataclass
-class NameAndAddress4Setr04800101:
+class NameAndAddress4Setr04800101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1256,7 +1257,7 @@ class NameAndAddress4Setr04800101:
 
 
 @dataclass
-class NameAndAddress5Setr04800101:
+class NameAndAddress5Setr04800101(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1279,7 +1280,7 @@ class NameAndAddress5Setr04800101:
 
 
 @dataclass
-class SubAccount1Setr04800101:
+class SubAccount1Setr04800101(ISO20022MessageElement):
     id: Optional[AccountIdentification1Setr04800101] = field(
         default=None,
         metadata={
@@ -1312,7 +1313,7 @@ class SubAccount1Setr04800101:
 
 
 @dataclass
-class UnitPrice10Setr04800101:
+class UnitPrice10Setr04800101(ISO20022MessageElement):
     tp: Optional[TypeOfPrice10Code] = field(
         default=None,
         metadata={
@@ -1397,7 +1398,7 @@ class UnitPrice10Setr04800101:
 
 
 @dataclass
-class DeliveryParameters3Setr04800101:
+class DeliveryParameters3Setr04800101(ISO20022MessageElement):
     adr: Optional[NameAndAddress4Setr04800101] = field(
         default=None,
         metadata={
@@ -1420,7 +1421,7 @@ class DeliveryParameters3Setr04800101:
 
 
 @dataclass
-class FinancialInstitutionIdentification3ChoiceSetr04800101:
+class FinancialInstitutionIdentification3ChoiceSetr04800101(ISO20022MessageElement):
     nm_and_adr: Optional[NameAndAddress5Setr04800101] = field(
         default=None,
         metadata={
@@ -1459,7 +1460,7 @@ class FinancialInstitutionIdentification3ChoiceSetr04800101:
 
 
 @dataclass
-class PartyIdentification2ChoiceSetr04800101:
+class PartyIdentification2ChoiceSetr04800101(ISO20022MessageElement):
     bicor_bei: Optional[str] = field(
         default=None,
         metadata={
@@ -1488,7 +1489,7 @@ class PartyIdentification2ChoiceSetr04800101:
 
 
 @dataclass
-class Account7Setr04800101:
+class Account7Setr04800101(ISO20022MessageElement):
     id: Optional[AccountIdentification1Setr04800101] = field(
         default=None,
         metadata={
@@ -1509,7 +1510,7 @@ class Account7Setr04800101:
 
 
 @dataclass
-class AdditionalReference3Setr04800101:
+class AdditionalReference3Setr04800101(ISO20022MessageElement):
     ref: Optional[str] = field(
         default=None,
         metadata={
@@ -1542,7 +1543,7 @@ class AdditionalReference3Setr04800101:
 
 
 @dataclass
-class Charge18Setr04800101:
+class Charge18Setr04800101(ISO20022MessageElement):
     tp: Optional[ChargeType11Code] = field(
         default=None,
         metadata={
@@ -1609,7 +1610,7 @@ class Charge18Setr04800101:
 
 
 @dataclass
-class Cheque3Setr04800101:
+class Cheque3Setr04800101(ISO20022MessageElement):
     nb: Optional[str] = field(
         default=None,
         metadata={
@@ -1648,7 +1649,7 @@ class Cheque3Setr04800101:
 
 
 @dataclass
-class Commission10Setr04800101:
+class Commission10Setr04800101(ISO20022MessageElement):
     tp: Optional[CommissionType6Code] = field(
         default=None,
         metadata={
@@ -1732,7 +1733,7 @@ class Commission10Setr04800101:
 
 
 @dataclass
-class CreditTransfer6Setr04800101:
+class CreditTransfer6Setr04800101(ISO20022MessageElement):
     ref: Optional[str] = field(
         default=None,
         metadata={
@@ -1848,7 +1849,7 @@ class CreditTransfer6Setr04800101:
 
 
 @dataclass
-class DirectDebitMandate4Setr04800101:
+class DirectDebitMandate4Setr04800101(ISO20022MessageElement):
     dbtr_acct: Optional[AccountIdentificationAndName3Setr04800101] = field(
         default=None,
         metadata={
@@ -1950,7 +1951,7 @@ class DirectDebitMandate4Setr04800101:
 
 
 @dataclass
-class ForeignExchangeTerms7Setr04800101:
+class ForeignExchangeTerms7Setr04800101(ISO20022MessageElement):
     to_amt: Optional[ActiveCurrencyAnd13DecimalAmountSetr04800101] = field(
         default=None,
         metadata={
@@ -2017,7 +2018,7 @@ class ForeignExchangeTerms7Setr04800101:
 
 
 @dataclass
-class InvestmentAccount21Setr04800101:
+class InvestmentAccount21Setr04800101(ISO20022MessageElement):
     acct_id: Optional[AccountIdentification1Setr04800101] = field(
         default=None,
         metadata={
@@ -2082,7 +2083,7 @@ class InvestmentAccount21Setr04800101:
 
 
 @dataclass
-class PartyIdentificationAndAccount3Setr04800101:
+class PartyIdentificationAndAccount3Setr04800101(ISO20022MessageElement):
     pty_id: Optional[PartyIdentification2ChoiceSetr04800101] = field(
         default=None,
         metadata={
@@ -2103,7 +2104,7 @@ class PartyIdentificationAndAccount3Setr04800101:
 
 
 @dataclass
-class PaymentCard2Setr04800101:
+class PaymentCard2Setr04800101(ISO20022MessageElement):
     tp: Optional[CardType1Code] = field(
         default=None,
         metadata={
@@ -2193,7 +2194,7 @@ class PaymentCard2Setr04800101:
 
 
 @dataclass
-class Tax14Setr04800101:
+class Tax14Setr04800101(ISO20022MessageElement):
     tp: Optional[TaxType11Code] = field(
         default=None,
         metadata={
@@ -2286,7 +2287,7 @@ class Tax14Setr04800101:
 
 
 @dataclass
-class DeliveringPartiesAndAccount3Setr04800101:
+class DeliveringPartiesAndAccount3Setr04800101(ISO20022MessageElement):
     dlvrrs_ctdn_dtls: Optional[PartyIdentificationAndAccount3Setr04800101] = field(
         default=None,
         metadata={
@@ -2315,7 +2316,7 @@ class DeliveringPartiesAndAccount3Setr04800101:
 
 
 @dataclass
-class Intermediary9Setr04800101:
+class Intermediary9Setr04800101(ISO20022MessageElement):
     id: Optional[PartyIdentification2ChoiceSetr04800101] = field(
         default=None,
         metadata={
@@ -2370,7 +2371,7 @@ class Intermediary9Setr04800101:
 
 
 @dataclass
-class PaymentInstrument12ChoiceSetr04800101:
+class PaymentInstrument12ChoiceSetr04800101(ISO20022MessageElement):
     pmt_card_dtls: Optional[PaymentCard2Setr04800101] = field(
         default=None,
         metadata={
@@ -2422,7 +2423,7 @@ class PaymentInstrument12ChoiceSetr04800101:
 
 
 @dataclass
-class ReceivingPartiesAndAccount3Setr04800101:
+class ReceivingPartiesAndAccount3Setr04800101(ISO20022MessageElement):
     rcvrs_ctdn_dtls: Optional[PartyIdentificationAndAccount3Setr04800101] = field(
         default=None,
         metadata={
@@ -2451,7 +2452,7 @@ class ReceivingPartiesAndAccount3Setr04800101:
 
 
 @dataclass
-class TotalCharges3Setr04800101:
+class TotalCharges3Setr04800101(ISO20022MessageElement):
     ttl_amt_of_chrgs: Optional[ActiveCurrencyAnd13DecimalAmountSetr04800101] = field(
         default=None,
         metadata={
@@ -2472,7 +2473,7 @@ class TotalCharges3Setr04800101:
 
 
 @dataclass
-class TotalCommissions3Setr04800101:
+class TotalCommissions3Setr04800101(ISO20022MessageElement):
     ttl_amt_of_comssns: Optional[ActiveCurrencyAnd13DecimalAmountSetr04800101] = field(
         default=None,
         metadata={
@@ -2493,7 +2494,7 @@ class TotalCommissions3Setr04800101:
 
 
 @dataclass
-class TotalTaxes3Setr04800101:
+class TotalTaxes3Setr04800101(ISO20022MessageElement):
     ttl_amt_of_taxs: Optional[ActiveCurrencyAnd13DecimalAmountSetr04800101] = field(
         default=None,
         metadata={
@@ -2567,7 +2568,7 @@ class TotalTaxes3Setr04800101:
 
 
 @dataclass
-class FundSettlementParameters3Setr04800101:
+class FundSettlementParameters3Setr04800101(ISO20022MessageElement):
     sttlm_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -2623,7 +2624,7 @@ class FundSettlementParameters3Setr04800101:
 
 
 @dataclass
-class PaymentTransaction24Setr04800101:
+class PaymentTransaction24Setr04800101(ISO20022MessageElement):
     pmt_instrm: Optional[PaymentInstrument12ChoiceSetr04800101] = field(
         default=None,
         metadata={
@@ -2635,7 +2636,7 @@ class PaymentTransaction24Setr04800101:
 
 
 @dataclass
-class SubscriptionExecution6Setr04800101:
+class SubscriptionExecution6Setr04800101(ISO20022MessageElement):
     ordr_ref: Optional[str] = field(
         default=None,
         metadata={
@@ -3023,7 +3024,7 @@ class SubscriptionExecution6Setr04800101:
 
 
 @dataclass
-class SubscriptionMultipleExecution3Setr04800101:
+class SubscriptionMultipleExecution3Setr04800101(ISO20022MessageElement):
     mstr_ref: Optional[str] = field(
         default=None,
         metadata={
@@ -3129,7 +3130,7 @@ class SubscriptionMultipleExecution3Setr04800101:
 
 
 @dataclass
-class SubscriptionOrderConfirmationAmendmentV01Setr04800101:
+class SubscriptionOrderConfirmationAmendmentV01Setr04800101(ISO20022MessageElement):
     msg_id: Optional[MessageIdentification1Setr04800101] = field(
         default=None,
         metadata={
@@ -3200,7 +3201,7 @@ class SubscriptionOrderConfirmationAmendmentV01Setr04800101:
 
 
 @dataclass
-class Setr04800101:
+class Setr04800101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:setr.048.001.01"
 

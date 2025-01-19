@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.colr.colr_009_001_05.enums import (
     DisputeResolutionType1Code,
     DisputeResolutionType2Code,
@@ -14,7 +15,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:colr.009.001.05"
 
 
 @dataclass
-class ActiveCurrencyAndAmountColr00900105:
+class ActiveCurrencyAndAmountColr00900105(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -36,7 +37,7 @@ class ActiveCurrencyAndAmountColr00900105:
 
 
 @dataclass
-class DateAndDateTime2ChoiceColr00900105:
+class DateAndDateTime2ChoiceColr00900105(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -56,7 +57,7 @@ class DateAndDateTime2ChoiceColr00900105:
 
 
 @dataclass
-class GenericIdentification30Colr00900105:
+class GenericIdentification30Colr00900105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -91,7 +92,7 @@ class GenericIdentification30Colr00900105:
 
 
 @dataclass
-class GenericIdentification36Colr00900105:
+class GenericIdentification36Colr00900105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -127,7 +128,7 @@ class GenericIdentification36Colr00900105:
 
 
 @dataclass
-class PostalAddress2Colr00900105:
+class PostalAddress2Colr00900105(ISO20022MessageElement):
     strt_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -183,7 +184,7 @@ class PostalAddress2Colr00900105:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Colr00900105:
+class SupplementaryDataEnvelope1Colr00900105(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -194,7 +195,7 @@ class SupplementaryDataEnvelope1Colr00900105:
 
 
 @dataclass
-class CollateralAccountIdentificationType3ChoiceColr00900105:
+class CollateralAccountIdentificationType3ChoiceColr00900105(ISO20022MessageElement):
     tp: Optional[CollateralAccountType1Code] = field(
         default=None,
         metadata={
@@ -214,7 +215,7 @@ class CollateralAccountIdentificationType3ChoiceColr00900105:
 
 
 @dataclass
-class Dispute1Colr00900105:
+class Dispute1Colr00900105(ISO20022MessageElement):
     mrgn_call_req_id: Optional[str] = field(
         default=None,
         metadata={
@@ -247,7 +248,7 @@ class Dispute1Colr00900105:
 
 
 @dataclass
-class DisputeResolutionType1ChoiceColr00900105:
+class DisputeResolutionType1ChoiceColr00900105(ISO20022MessageElement):
     cd: Optional[DisputeResolutionType1Code] = field(
         default=None,
         metadata={
@@ -267,7 +268,7 @@ class DisputeResolutionType1ChoiceColr00900105:
 
 
 @dataclass
-class DisputeResolutionType2ChoiceColr00900105:
+class DisputeResolutionType2ChoiceColr00900105(ISO20022MessageElement):
     cd: Optional[DisputeResolutionType2Code] = field(
         default=None,
         metadata={
@@ -287,7 +288,7 @@ class DisputeResolutionType2ChoiceColr00900105:
 
 
 @dataclass
-class NameAndAddress6Colr00900105:
+class NameAndAddress6Colr00900105(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -311,7 +312,7 @@ class NameAndAddress6Colr00900105:
 
 
 @dataclass
-class SupplementaryData1Colr00900105:
+class SupplementaryData1Colr00900105(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -334,7 +335,7 @@ class SupplementaryData1Colr00900105:
 
 
 @dataclass
-class BlockChainAddressWallet5Colr00900105:
+class BlockChainAddressWallet5Colr00900105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -367,7 +368,7 @@ class BlockChainAddressWallet5Colr00900105:
 
 
 @dataclass
-class CollateralAccount3Colr00900105:
+class CollateralAccount3Colr00900105(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -400,7 +401,7 @@ class CollateralAccount3Colr00900105:
 
 
 @dataclass
-class PartyIdentification178ChoiceColr00900105:
+class PartyIdentification178ChoiceColr00900105(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -429,7 +430,7 @@ class PartyIdentification178ChoiceColr00900105:
 
 
 @dataclass
-class SegregatedIndependentAmountDispute2Colr00900105:
+class SegregatedIndependentAmountDispute2Colr00900105(ISO20022MessageElement):
     dspt_dtls: Optional[Dispute1Colr00900105] = field(
         default=None,
         metadata={
@@ -450,7 +451,7 @@ class SegregatedIndependentAmountDispute2Colr00900105:
 
 
 @dataclass
-class VariationMarginDispute1Colr00900105:
+class VariationMarginDispute1Colr00900105(ISO20022MessageElement):
     dspt_dtls: Optional[Dispute1Colr00900105] = field(
         default=None,
         metadata={
@@ -471,7 +472,7 @@ class VariationMarginDispute1Colr00900105:
 
 
 @dataclass
-class DisputeNotification2Colr00900105:
+class DisputeNotification2Colr00900105(ISO20022MessageElement):
     vartn_mrgn_dspt: Optional[VariationMarginDispute1Colr00900105] = field(
         default=None,
         metadata={
@@ -494,7 +495,7 @@ class DisputeNotification2Colr00900105:
 
 
 @dataclass
-class Obligation9Colr00900105:
+class Obligation9Colr00900105(ISO20022MessageElement):
     pty_a: Optional[PartyIdentification178ChoiceColr00900105] = field(
         default=None,
         metadata={
@@ -565,7 +566,7 @@ class Obligation9Colr00900105:
 
 
 @dataclass
-class DisputeNotification2ChoiceColr00900105:
+class DisputeNotification2ChoiceColr00900105(ISO20022MessageElement):
     dspt_ntfctn_dtls: Optional[DisputeNotification2Colr00900105] = field(
         default=None,
         metadata={
@@ -587,7 +588,7 @@ class DisputeNotification2ChoiceColr00900105:
 
 
 @dataclass
-class MarginCallDisputeNotificationV05Colr00900105:
+class MarginCallDisputeNotificationV05Colr00900105(ISO20022MessageElement):
     tx_id: Optional[str] = field(
         default=None,
         metadata={
@@ -628,7 +629,7 @@ class MarginCallDisputeNotificationV05Colr00900105:
 
 
 @dataclass
-class Colr00900105:
+class Colr00900105(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:colr.009.001.05"
 

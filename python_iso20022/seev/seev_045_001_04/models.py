@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import AddressType2Code, DateType1Code
 from python_iso20022.seev.seev_045_001_04.enums import (
     DateCalculationMethod1Code,
@@ -14,7 +15,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:seev.045.001.04"
 
 
 @dataclass
-class DateAndDateTime2ChoiceSeev04500104:
+class DateAndDateTime2ChoiceSeev04500104(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -34,7 +35,7 @@ class DateAndDateTime2ChoiceSeev04500104:
 
 
 @dataclass
-class GenericIdentification30Seev04500104:
+class GenericIdentification30Seev04500104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -69,7 +70,7 @@ class GenericIdentification30Seev04500104:
 
 
 @dataclass
-class GenericIdentification36Seev04500104:
+class GenericIdentification36Seev04500104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -105,7 +106,7 @@ class GenericIdentification36Seev04500104:
 
 
 @dataclass
-class IdentificationSource3ChoiceSeev04500104:
+class IdentificationSource3ChoiceSeev04500104(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -129,7 +130,7 @@ class IdentificationSource3ChoiceSeev04500104:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Seev04500104:
+class SupplementaryDataEnvelope1Seev04500104(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -140,7 +141,7 @@ class SupplementaryDataEnvelope1Seev04500104:
 
 
 @dataclass
-class DateCode20ChoiceSeev04500104:
+class DateCode20ChoiceSeev04500104(ISO20022MessageElement):
     cd: Optional[DateType1Code] = field(
         default=None,
         metadata={
@@ -160,7 +161,7 @@ class DateCode20ChoiceSeev04500104:
 
 
 @dataclass
-class OtherIdentification1Seev04500104:
+class OtherIdentification1Seev04500104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -194,7 +195,7 @@ class OtherIdentification1Seev04500104:
 
 
 @dataclass
-class PartyIdentification203ChoiceSeev04500104:
+class PartyIdentification203ChoiceSeev04500104(ISO20022MessageElement):
     prtry_id: Optional[GenericIdentification36Seev04500104] = field(
         default=None,
         metadata={
@@ -215,7 +216,7 @@ class PartyIdentification203ChoiceSeev04500104:
 
 
 @dataclass
-class PostalAddress1Seev04500104:
+class PostalAddress1Seev04500104(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -298,7 +299,7 @@ class PostalAddress1Seev04500104:
 
 
 @dataclass
-class PostalAddress26Seev04500104:
+class PostalAddress26Seev04500104(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -391,7 +392,7 @@ class PostalAddress26Seev04500104:
 
 
 @dataclass
-class RequestShareHeldDate1ChoiceSeev04500104:
+class RequestShareHeldDate1ChoiceSeev04500104(ISO20022MessageElement):
     dt_clctn_mtd: Optional[DateCalculationMethod1Code] = field(
         default=None,
         metadata={
@@ -413,7 +414,7 @@ class RequestShareHeldDate1ChoiceSeev04500104:
 
 
 @dataclass
-class SupplementaryData1Seev04500104:
+class SupplementaryData1Seev04500104(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -436,7 +437,7 @@ class SupplementaryData1Seev04500104:
 
 
 @dataclass
-class DateFormat46ChoiceSeev04500104:
+class DateFormat46ChoiceSeev04500104(ISO20022MessageElement):
     dt: Optional[DateAndDateTime2ChoiceSeev04500104] = field(
         default=None,
         metadata={
@@ -456,7 +457,7 @@ class DateFormat46ChoiceSeev04500104:
 
 
 @dataclass
-class NameAndAddress5Seev04500104:
+class NameAndAddress5Seev04500104(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -479,7 +480,7 @@ class NameAndAddress5Seev04500104:
 
 
 @dataclass
-class PartyAddress1Seev04500104:
+class PartyAddress1Seev04500104(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -520,7 +521,7 @@ class PartyAddress1Seev04500104:
 
 
 @dataclass
-class SecurityIdentification19Seev04500104:
+class SecurityIdentification19Seev04500104(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -551,7 +552,7 @@ class SecurityIdentification19Seev04500104:
 
 
 @dataclass
-class PartyIdentification129ChoiceSeev04500104:
+class PartyIdentification129ChoiceSeev04500104(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -589,7 +590,7 @@ class PartyIdentification129ChoiceSeev04500104:
 
 
 @dataclass
-class PartyIdentification214Seev04500104:
+class PartyIdentification214Seev04500104(ISO20022MessageElement):
     id: Optional[PartyIdentification203ChoiceSeev04500104] = field(
         default=None,
         metadata={
@@ -622,7 +623,9 @@ class PartyIdentification214Seev04500104:
 
 
 @dataclass
-class ShareholdersIdentificationDisclosureRequestV04Seev04500104:
+class ShareholdersIdentificationDisclosureRequestV04Seev04500104(
+    ISO20022MessageElement
+):
     issr_dsclsr_req_id: Optional[str] = field(
         default=None,
         metadata={
@@ -777,7 +780,7 @@ class ShareholdersIdentificationDisclosureRequestV04Seev04500104:
 
 
 @dataclass
-class Seev04500104:
+class Seev04500104(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:seev.045.001.04"
 

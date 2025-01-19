@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.casr.casr_001_001_03.enums import SettlementReportType1Code
 from python_iso20022.enums import (
     Algorithm5Code,
@@ -29,7 +30,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:casr.001.001.03"
 
 
 @dataclass
-class AdditionalData1Casr00100103:
+class AdditionalData1Casr00100103(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -53,7 +54,7 @@ class AdditionalData1Casr00100103:
 
 
 @dataclass
-class BatchManagementInformation1Casr00100103:
+class BatchManagementInformation1Casr00100103(ISO20022MessageElement):
     colltn_id: Optional[str] = field(
         default=None,
         metadata={
@@ -98,7 +99,7 @@ class BatchManagementInformation1Casr00100103:
 
 
 @dataclass
-class EncryptedData2ChoiceCasr00100103:
+class EncryptedData2ChoiceCasr00100103(ISO20022MessageElement):
     binry: Optional[bytes] = field(
         default=None,
         metadata={
@@ -122,7 +123,7 @@ class EncryptedData2ChoiceCasr00100103:
 
 
 @dataclass
-class Jurisdiction2Casr00100103:
+class Jurisdiction2Casr00100103(ISO20022MessageElement):
     dmst_ind: Optional[bool] = field(
         default=None,
         metadata={
@@ -144,7 +145,7 @@ class Jurisdiction2Casr00100103:
 
 
 @dataclass
-class Kekidentifier2Casr00100103:
+class Kekidentifier2Casr00100103(ISO20022MessageElement):
     class Meta:
         name = "KEKIdentifier2"
 
@@ -194,7 +195,7 @@ class Kekidentifier2Casr00100103:
 
 
 @dataclass
-class Kekidentifier6Casr00100103:
+class Kekidentifier6Casr00100103(ISO20022MessageElement):
     class Meta:
         name = "KEKIdentifier6"
 
@@ -243,7 +244,7 @@ class Kekidentifier6Casr00100103:
 
 
 @dataclass
-class Macdata1Casr00100103:
+class Macdata1Casr00100103(ISO20022MessageElement):
     class Meta:
         name = "MACData1"
 
@@ -334,7 +335,7 @@ class Macdata1Casr00100103:
 
 
 @dataclass
-class Reconciliation4Casr00100103:
+class Reconciliation4Casr00100103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -366,7 +367,7 @@ class Reconciliation4Casr00100103:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Casr00100103:
+class SupplementaryDataEnvelope1Casr00100103(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -377,7 +378,7 @@ class SupplementaryDataEnvelope1Casr00100103:
 
 
 @dataclass
-class AdditionalData2Casr00100103:
+class AdditionalData2Casr00100103(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -399,7 +400,7 @@ class AdditionalData2Casr00100103:
 
 
 @dataclass
-class AdditionalFee3Casr00100103:
+class AdditionalFee3Casr00100103(ISO20022MessageElement):
     tp: Optional[TypeOfAmount21Code] = field(
         default=None,
         metadata={
@@ -529,7 +530,7 @@ class AdditionalFee3Casr00100103:
 
 
 @dataclass
-class AlgorithmIdentification26Casr00100103:
+class AlgorithmIdentification26Casr00100103(ISO20022MessageElement):
     algo: Optional[Algorithm8Code] = field(
         default=None,
         metadata={
@@ -550,7 +551,7 @@ class AlgorithmIdentification26Casr00100103:
 
 
 @dataclass
-class Amount17Casr00100103:
+class Amount17Casr00100103(ISO20022MessageElement):
     amt: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -583,7 +584,7 @@ class Amount17Casr00100103:
 
 
 @dataclass
-class ContentInformationType41Casr00100103:
+class ContentInformationType41Casr00100103(ISO20022MessageElement):
     macdata: Optional[Macdata1Casr00100103] = field(
         default=None,
         metadata={
@@ -606,7 +607,7 @@ class ContentInformationType41Casr00100103:
 
 
 @dataclass
-class EncryptedDataElement2Casr00100103:
+class EncryptedDataElement2Casr00100103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -647,7 +648,7 @@ class EncryptedDataElement2Casr00100103:
 
 
 @dataclass
-class GenericIdentification183Casr00100103:
+class GenericIdentification183Casr00100103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -707,7 +708,7 @@ class GenericIdentification183Casr00100103:
 
 
 @dataclass
-class LocalData14Casr00100103:
+class LocalData14Casr00100103(ISO20022MessageElement):
     lang: Optional[str] = field(
         default=None,
         metadata={
@@ -759,7 +760,7 @@ class LocalData14Casr00100103:
 
 
 @dataclass
-class Parameter14Casr00100103:
+class Parameter14Casr00100103(ISO20022MessageElement):
     ncrptn_frmt: Optional[EncryptionFormat3Code] = field(
         default=None,
         metadata={
@@ -790,7 +791,7 @@ class Parameter14Casr00100103:
 
 
 @dataclass
-class Parameter7Casr00100103:
+class Parameter7Casr00100103(ISO20022MessageElement):
     initlstn_vctr: Optional[bytes] = field(
         default=None,
         metadata={
@@ -813,7 +814,7 @@ class Parameter7Casr00100103:
 
 
 @dataclass
-class ProgrammeMode5Casr00100103:
+class ProgrammeMode5Casr00100103(ISO20022MessageElement):
     apld_id: Optional[str] = field(
         default=None,
         metadata={
@@ -836,7 +837,7 @@ class ProgrammeMode5Casr00100103:
 
 
 @dataclass
-class RelativeDistinguishedName1Casr00100103:
+class RelativeDistinguishedName1Casr00100103(ISO20022MessageElement):
     attr_tp: Optional[AttributeType1Code] = field(
         default=None,
         metadata={
@@ -860,7 +861,7 @@ class RelativeDistinguishedName1Casr00100103:
 
 
 @dataclass
-class SettlementCategoryTotal3Casr00100103:
+class SettlementCategoryTotal3Casr00100103(ISO20022MessageElement):
     cnt: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -958,7 +959,7 @@ class SettlementCategoryTotal3Casr00100103:
 
 
 @dataclass
-class SettlementService6Casr00100103:
+class SettlementService6Casr00100103(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -1060,7 +1061,7 @@ class SettlementService6Casr00100103:
 
 
 @dataclass
-class SupplementaryData1Casr00100103:
+class SupplementaryData1Casr00100103(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1083,7 +1084,7 @@ class SupplementaryData1Casr00100103:
 
 
 @dataclass
-class Traceability10Casr00100103:
+class Traceability10Casr00100103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1159,7 +1160,7 @@ class Traceability10Casr00100103:
 
 
 @dataclass
-class AlgorithmIdentification25Casr00100103:
+class AlgorithmIdentification25Casr00100103(ISO20022MessageElement):
     algo: Optional[Algorithm23Code] = field(
         default=None,
         metadata={
@@ -1180,7 +1181,7 @@ class AlgorithmIdentification25Casr00100103:
 
 
 @dataclass
-class AlgorithmIdentification28Casr00100103:
+class AlgorithmIdentification28Casr00100103(ISO20022MessageElement):
     algo: Optional[Algorithm13Code] = field(
         default=None,
         metadata={
@@ -1201,7 +1202,7 @@ class AlgorithmIdentification28Casr00100103:
 
 
 @dataclass
-class CertificateIssuer1Casr00100103:
+class CertificateIssuer1Casr00100103(ISO20022MessageElement):
     rltv_dstngshd_nm: list[RelativeDistinguishedName1Casr00100103] = field(
         default_factory=list,
         metadata={
@@ -1214,7 +1215,7 @@ class CertificateIssuer1Casr00100103:
 
 
 @dataclass
-class EncryptedData2Casr00100103:
+class EncryptedData2Casr00100103(ISO20022MessageElement):
     ctrl: Optional[str] = field(
         default=None,
         metadata={
@@ -1308,7 +1309,7 @@ class EncryptedData2Casr00100103:
 
 
 @dataclass
-class FinancialInstitution9Casr00100103:
+class FinancialInstitution9Casr00100103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1388,7 +1389,7 @@ class FinancialInstitution9Casr00100103:
 
 
 @dataclass
-class Header71Casr00100103:
+class Header71Casr00100103(ISO20022MessageElement):
     msg_fctn: Optional[str] = field(
         default=None,
         metadata={
@@ -1483,7 +1484,7 @@ class Header71Casr00100103:
 
 
 @dataclass
-class Parameter13Casr00100103:
+class Parameter13Casr00100103(ISO20022MessageElement):
     dgst_algo: Optional[Algorithm20Code] = field(
         default=None,
         metadata={
@@ -1503,7 +1504,7 @@ class Parameter13Casr00100103:
 
 
 @dataclass
-class PartyIdentification285Casr00100103:
+class PartyIdentification285Casr00100103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1573,7 +1574,7 @@ class PartyIdentification285Casr00100103:
 
 
 @dataclass
-class PartyIdentification286Casr00100103:
+class PartyIdentification286Casr00100103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1642,7 +1643,7 @@ class PartyIdentification286Casr00100103:
 
 
 @dataclass
-class SettlementCategoryTotal2Casr00100103:
+class SettlementCategoryTotal2Casr00100103(ISO20022MessageElement):
     cnt: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -1681,7 +1682,7 @@ class SettlementCategoryTotal2Casr00100103:
 
 
 @dataclass
-class AlgorithmIdentification27Casr00100103:
+class AlgorithmIdentification27Casr00100103(ISO20022MessageElement):
     algo: Optional[Algorithm7Code] = field(
         default=None,
         metadata={
@@ -1702,7 +1703,7 @@ class AlgorithmIdentification27Casr00100103:
 
 
 @dataclass
-class EncryptedContent8Casr00100103:
+class EncryptedContent8Casr00100103(ISO20022MessageElement):
     cntt_tp: Optional[ContentType2Code] = field(
         default=None,
         metadata={
@@ -1733,7 +1734,7 @@ class EncryptedContent8Casr00100103:
 
 
 @dataclass
-class IssuerAndSerialNumber1Casr00100103:
+class IssuerAndSerialNumber1Casr00100103(ISO20022MessageElement):
     issr: Optional[CertificateIssuer1Casr00100103] = field(
         default=None,
         metadata={
@@ -1758,7 +1759,7 @@ class IssuerAndSerialNumber1Casr00100103:
 
 
 @dataclass
-class Kek6Casr00100103:
+class Kek6Casr00100103(ISO20022MessageElement):
     class Meta:
         name = "KEK6"
 
@@ -1804,7 +1805,7 @@ class Kek6Casr00100103:
 
 
 @dataclass
-class Recipient5ChoiceCasr00100103:
+class Recipient5ChoiceCasr00100103(ISO20022MessageElement):
     issr_and_srl_nb: Optional[IssuerAndSerialNumber1Casr00100103] = field(
         default=None,
         metadata={
@@ -1824,7 +1825,7 @@ class Recipient5ChoiceCasr00100103:
 
 
 @dataclass
-class KeyTransport6Casr00100103:
+class KeyTransport6Casr00100103(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -1868,7 +1869,7 @@ class KeyTransport6Casr00100103:
 
 
 @dataclass
-class Recipient7ChoiceCasr00100103:
+class Recipient7ChoiceCasr00100103(ISO20022MessageElement):
     key_trnsprt: Optional[KeyTransport6Casr00100103] = field(
         default=None,
         metadata={
@@ -1896,7 +1897,7 @@ class Recipient7ChoiceCasr00100103:
 
 
 @dataclass
-class EnvelopedData12Casr00100103:
+class EnvelopedData12Casr00100103(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -1927,7 +1928,7 @@ class EnvelopedData12Casr00100103:
 
 
 @dataclass
-class ProtectedData2Casr00100103:
+class ProtectedData2Casr00100103(ISO20022MessageElement):
     cntt_tp: Optional[ContentType3Code] = field(
         default=None,
         metadata={
@@ -1956,7 +1957,7 @@ class ProtectedData2Casr00100103:
 
 
 @dataclass
-class SettlementReportingInitiationV03Casr00100103:
+class SettlementReportingInitiationV03Casr00100103(ISO20022MessageElement):
     hdr: Optional[Header71Casr00100103] = field(
         default=None,
         metadata={
@@ -2222,7 +2223,7 @@ class SettlementReportingInitiationV03Casr00100103:
 
 
 @dataclass
-class Casr00100103:
+class Casr00100103(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:casr.001.001.03"
 

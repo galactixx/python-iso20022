@@ -7,13 +7,14 @@ from python_iso20022.auth.auth_049_001_02.enums import (
     MarketIdentification1Code,
     MicentityType1Code,
 )
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import Modification1Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.049.001.02"
 
 
 @dataclass
-class CountryCodeAndName3Auth04900102:
+class CountryCodeAndName3Auth04900102(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -38,7 +39,7 @@ class CountryCodeAndName3Auth04900102:
 
 
 @dataclass
-class Period2Auth04900102:
+class Period2Auth04900102(ISO20022MessageElement):
     fr_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -60,7 +61,7 @@ class Period2Auth04900102:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth04900102:
+class SupplementaryDataEnvelope1Auth04900102(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -71,7 +72,7 @@ class SupplementaryDataEnvelope1Auth04900102:
 
 
 @dataclass
-class Period4ChoiceAuth04900102:
+class Period4ChoiceAuth04900102(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -107,7 +108,7 @@ class Period4ChoiceAuth04900102:
 
 
 @dataclass
-class SupplementaryData1Auth04900102:
+class SupplementaryData1Auth04900102(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -130,7 +131,7 @@ class SupplementaryData1Auth04900102:
 
 
 @dataclass
-class MarketIdentification95Auth04900102:
+class MarketIdentification95Auth04900102(ISO20022MessageElement):
     oprg: Optional[str] = field(
         default=None,
         metadata={
@@ -282,7 +283,9 @@ class MarketIdentification95Auth04900102:
 
 
 @dataclass
-class FinancialInstrumentReportingMarketIdentificationCodeReportV02Auth04900102:
+class FinancialInstrumentReportingMarketIdentificationCodeReportV02Auth04900102(
+    ISO20022MessageElement
+):
     mkt_id: list[MarketIdentification95Auth04900102] = field(
         default_factory=list,
         metadata={
@@ -303,7 +306,7 @@ class FinancialInstrumentReportingMarketIdentificationCodeReportV02Auth04900102:
 
 
 @dataclass
-class Auth04900102:
+class Auth04900102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.049.001.02"
 

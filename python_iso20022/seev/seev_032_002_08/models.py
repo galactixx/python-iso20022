@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import NoReasonCode
 from python_iso20022.seev.enums import (
     CorporateActionEventType34Code,
@@ -11,7 +12,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:seev.032.002.08"
 
 
 @dataclass
-class CorporateActionNarrative19Seev03200208:
+class CorporateActionNarrative19Seev03200208(ISO20022MessageElement):
     addtl_txt: list[str] = field(
         default_factory=list,
         metadata={
@@ -37,7 +38,7 @@ class CorporateActionNarrative19Seev03200208:
 
 
 @dataclass
-class DocumentIdentification17Seev03200208:
+class DocumentIdentification17Seev03200208(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -53,7 +54,7 @@ class DocumentIdentification17Seev03200208:
 
 
 @dataclass
-class DocumentIdentification4ChoiceSeev03200208:
+class DocumentIdentification4ChoiceSeev03200208(ISO20022MessageElement):
     acct_svcr_doc_id: Optional[str] = field(
         default=None,
         metadata={
@@ -79,7 +80,7 @@ class DocumentIdentification4ChoiceSeev03200208:
 
 
 @dataclass
-class GenericIdentification47Seev03200208:
+class GenericIdentification47Seev03200208(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -116,7 +117,7 @@ class GenericIdentification47Seev03200208:
 
 
 @dataclass
-class GenericIdentification86Seev03200208:
+class GenericIdentification86Seev03200208(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -155,7 +156,7 @@ class GenericIdentification86Seev03200208:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Seev03200208:
+class SupplementaryDataEnvelope1Seev03200208(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -166,7 +167,7 @@ class SupplementaryDataEnvelope1Seev03200208:
 
 
 @dataclass
-class CorporateActionEventType103ChoiceSeev03200208:
+class CorporateActionEventType103ChoiceSeev03200208(ISO20022MessageElement):
     cd: Optional[CorporateActionEventType34Code] = field(
         default=None,
         metadata={
@@ -186,7 +187,7 @@ class CorporateActionEventType103ChoiceSeev03200208:
 
 
 @dataclass
-class DocumentNumber6ChoiceSeev03200208:
+class DocumentNumber6ChoiceSeev03200208(ISO20022MessageElement):
     shrt_nb: Optional[str] = field(
         default=None,
         metadata={
@@ -216,7 +217,7 @@ class DocumentNumber6ChoiceSeev03200208:
 
 
 @dataclass
-class NoSpecifiedReason1Seev03200208:
+class NoSpecifiedReason1Seev03200208(ISO20022MessageElement):
     no_spcfd_rsn: Optional[NoReasonCode] = field(
         default=None,
         metadata={
@@ -229,7 +230,7 @@ class NoSpecifiedReason1Seev03200208:
 
 
 @dataclass
-class PendingReason55ChoiceSeev03200208:
+class PendingReason55ChoiceSeev03200208(ISO20022MessageElement):
     cd: Optional[PendingReason19Code] = field(
         default=None,
         metadata={
@@ -249,7 +250,7 @@ class PendingReason55ChoiceSeev03200208:
 
 
 @dataclass
-class ProprietaryReason5Seev03200208:
+class ProprietaryReason5Seev03200208(ISO20022MessageElement):
     rsn: Optional[GenericIdentification47Seev03200208] = field(
         default=None,
         metadata={
@@ -272,7 +273,7 @@ class ProprietaryReason5Seev03200208:
 
 
 @dataclass
-class SupplementaryData1Seev03200208:
+class SupplementaryData1Seev03200208(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -295,7 +296,7 @@ class SupplementaryData1Seev03200208:
 
 
 @dataclass
-class CorporateActionGeneralInformation158Seev03200208:
+class CorporateActionGeneralInformation158Seev03200208(ISO20022MessageElement):
     corp_actn_evt_id: Optional[str] = field(
         default=None,
         metadata={
@@ -342,7 +343,7 @@ class CorporateActionGeneralInformation158Seev03200208:
 
 
 @dataclass
-class DocumentIdentification34Seev03200208:
+class DocumentIdentification34Seev03200208(ISO20022MessageElement):
     id: Optional[DocumentIdentification4ChoiceSeev03200208] = field(
         default=None,
         metadata={
@@ -363,7 +364,7 @@ class DocumentIdentification34Seev03200208:
 
 
 @dataclass
-class PendingStatusReason19Seev03200208:
+class PendingStatusReason19Seev03200208(ISO20022MessageElement):
     rsn_cd: Optional[PendingReason55ChoiceSeev03200208] = field(
         default=None,
         metadata={
@@ -387,7 +388,7 @@ class PendingStatusReason19Seev03200208:
 
 
 @dataclass
-class ProprietaryStatusAndReason7Seev03200208:
+class ProprietaryStatusAndReason7Seev03200208(ISO20022MessageElement):
     prtry_sts: Optional[GenericIdentification47Seev03200208] = field(
         default=None,
         metadata={
@@ -408,7 +409,7 @@ class ProprietaryStatusAndReason7Seev03200208:
 
 
 @dataclass
-class PendingStatus59ChoiceSeev03200208:
+class PendingStatus59ChoiceSeev03200208(ISO20022MessageElement):
     no_spcfd_rsn: Optional[NoReasonCode] = field(
         default=None,
         metadata={
@@ -428,7 +429,7 @@ class PendingStatus59ChoiceSeev03200208:
 
 
 @dataclass
-class EventProcessingStatus6ChoiceSeev03200208:
+class EventProcessingStatus6ChoiceSeev03200208(ISO20022MessageElement):
     cmplt: Optional[NoSpecifiedReason1Seev03200208] = field(
         default=None,
         metadata={
@@ -464,7 +465,9 @@ class EventProcessingStatus6ChoiceSeev03200208:
 
 
 @dataclass
-class CorporateActionEventProcessingStatusAdvice002V08Seev03200208:
+class CorporateActionEventProcessingStatusAdvice002V08Seev03200208(
+    ISO20022MessageElement
+):
     ntfctn_id: Optional[DocumentIdentification17Seev03200208] = field(
         default=None,
         metadata={
@@ -520,7 +523,7 @@ class CorporateActionEventProcessingStatusAdvice002V08Seev03200208:
 
 
 @dataclass
-class Seev03200208:
+class Seev03200208(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:seev.032.002.08"
 

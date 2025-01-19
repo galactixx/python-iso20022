@@ -3,6 +3,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime, XmlPeriod
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import AddressType2Code
 from python_iso20022.sese.enums import TransferInFunction2Code
 
@@ -10,7 +11,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:sese.008.001.09"
 
 
 @dataclass
-class CopyInformation5Sese00800109:
+class CopyInformation5Sese00800109(ISO20022MessageElement):
     cpy_ind: Optional[bool] = field(
         default=None,
         metadata={
@@ -32,7 +33,7 @@ class CopyInformation5Sese00800109:
 
 
 @dataclass
-class GenericIdentification1Sese00800109:
+class GenericIdentification1Sese00800109(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -67,7 +68,7 @@ class GenericIdentification1Sese00800109:
 
 
 @dataclass
-class MarketPracticeVersion1Sese00800109:
+class MarketPracticeVersion1Sese00800109(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -100,7 +101,7 @@ class MarketPracticeVersion1Sese00800109:
 
 
 @dataclass
-class MessageIdentification1Sese00800109:
+class MessageIdentification1Sese00800109(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -124,7 +125,7 @@ class MessageIdentification1Sese00800109:
 
 
 @dataclass
-class PostalAddress1Sese00800109:
+class PostalAddress1Sese00800109(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -207,7 +208,7 @@ class PostalAddress1Sese00800109:
 
 
 @dataclass
-class NameAndAddress5Sese00800109:
+class NameAndAddress5Sese00800109(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -230,7 +231,7 @@ class NameAndAddress5Sese00800109:
 
 
 @dataclass
-class PartyIdentification125ChoiceSese00800109:
+class PartyIdentification125ChoiceSese00800109(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -259,7 +260,7 @@ class PartyIdentification125ChoiceSese00800109:
 
 
 @dataclass
-class PartyIdentification139Sese00800109:
+class PartyIdentification139Sese00800109(ISO20022MessageElement):
     pty: Optional[PartyIdentification125ChoiceSese00800109] = field(
         default=None,
         metadata={
@@ -281,7 +282,7 @@ class PartyIdentification139Sese00800109:
 
 
 @dataclass
-class AdditionalReference10Sese00800109:
+class AdditionalReference10Sese00800109(ISO20022MessageElement):
     ref: Optional[str] = field(
         default=None,
         metadata={
@@ -314,7 +315,7 @@ class AdditionalReference10Sese00800109:
 
 
 @dataclass
-class AdditionalReference11Sese00800109:
+class AdditionalReference11Sese00800109(ISO20022MessageElement):
     ref: Optional[str] = field(
         default=None,
         metadata={
@@ -347,7 +348,7 @@ class AdditionalReference11Sese00800109:
 
 
 @dataclass
-class TransferReference16Sese00800109:
+class TransferReference16Sese00800109(ISO20022MessageElement):
     trf_ref: Optional[str] = field(
         default=None,
         metadata={
@@ -408,7 +409,7 @@ class TransferReference16Sese00800109:
 
 
 @dataclass
-class ReversalOfTransferInConfirmationV09Sese00800109:
+class ReversalOfTransferInConfirmationV09Sese00800109(ISO20022MessageElement):
     msg_id: Optional[MessageIdentification1Sese00800109] = field(
         default=None,
         metadata={
@@ -488,7 +489,7 @@ class ReversalOfTransferInConfirmationV09Sese00800109:
 
 
 @dataclass
-class Sese00800109:
+class Sese00800109(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:sese.008.001.09"
 

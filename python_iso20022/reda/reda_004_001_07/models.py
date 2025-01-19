@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlPeriod, XmlTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     AddressType2Code,
     BusinessDayConvention1Code,
@@ -51,7 +52,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:reda.004.001.07"
 
 
 @dataclass
-class AccountSchemeName1ChoiceReda00400107:
+class AccountSchemeName1ChoiceReda00400107(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -75,7 +76,7 @@ class AccountSchemeName1ChoiceReda00400107:
 
 
 @dataclass
-class ActiveCurrencyAnd13DecimalAmountReda00400107:
+class ActiveCurrencyAnd13DecimalAmountReda00400107(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -97,7 +98,7 @@ class ActiveCurrencyAnd13DecimalAmountReda00400107:
 
 
 @dataclass
-class ActiveCurrencyAndAmountReda00400107:
+class ActiveCurrencyAndAmountReda00400107(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -119,7 +120,7 @@ class ActiveCurrencyAndAmountReda00400107:
 
 
 @dataclass
-class AdditionalProductInformation3Reda00400107:
+class AdditionalProductInformation3Reda00400107(ISO20022MessageElement):
     fin_instrm_tx_costs_ex_ante_uk: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -143,7 +144,7 @@ class AdditionalProductInformation3Reda00400107:
 
 
 @dataclass
-class Extension1Reda00400107:
+class Extension1Reda00400107(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -169,7 +170,7 @@ class Extension1Reda00400107:
 
 
 @dataclass
-class GenericIdentification1Reda00400107:
+class GenericIdentification1Reda00400107(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -204,7 +205,7 @@ class GenericIdentification1Reda00400107:
 
 
 @dataclass
-class GenericIdentification3Reda00400107:
+class GenericIdentification3Reda00400107(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -229,7 +230,7 @@ class GenericIdentification3Reda00400107:
 
 
 @dataclass
-class GenericIdentification36Reda00400107:
+class GenericIdentification36Reda00400107(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -265,7 +266,7 @@ class GenericIdentification36Reda00400107:
 
 
 @dataclass
-class GenericIdentification47Reda00400107:
+class GenericIdentification47Reda00400107(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -302,7 +303,7 @@ class GenericIdentification47Reda00400107:
 
 
 @dataclass
-class IdentificationSource3ChoiceReda00400107:
+class IdentificationSource3ChoiceReda00400107(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -326,7 +327,7 @@ class IdentificationSource3ChoiceReda00400107:
 
 
 @dataclass
-class MarketPracticeVersion1Reda00400107:
+class MarketPracticeVersion1Reda00400107(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -359,7 +360,7 @@ class MarketPracticeVersion1Reda00400107:
 
 
 @dataclass
-class MessageIdentification1Reda00400107:
+class MessageIdentification1Reda00400107(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -383,7 +384,7 @@ class MessageIdentification1Reda00400107:
 
 
 @dataclass
-class Period15Reda00400107:
+class Period15Reda00400107(ISO20022MessageElement):
     start_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -405,7 +406,7 @@ class Period15Reda00400107:
 
 
 @dataclass
-class TimeFrame7ChoiceReda00400107:
+class TimeFrame7ChoiceReda00400107(ISO20022MessageElement):
     tplus: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -427,7 +428,7 @@ class TimeFrame7ChoiceReda00400107:
 
 
 @dataclass
-class TimeFrame8ChoiceReda00400107:
+class TimeFrame8ChoiceReda00400107(ISO20022MessageElement):
     tplus: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -451,7 +452,7 @@ class TimeFrame8ChoiceReda00400107:
 
 
 @dataclass
-class Utcoffset1Reda00400107:
+class Utcoffset1Reda00400107(ISO20022MessageElement):
     class Meta:
         name = "UTCOffset1"
 
@@ -476,7 +477,7 @@ class Utcoffset1Reda00400107:
 
 
 @dataclass
-class AdditionalInformation15Reda00400107:
+class AdditionalInformation15Reda00400107(ISO20022MessageElement):
     inf_tp: Optional[GenericIdentification36Reda00400107] = field(
         default=None,
         metadata={
@@ -500,7 +501,7 @@ class AdditionalInformation15Reda00400107:
 
 
 @dataclass
-class ChargeType8ChoiceReda00400107:
+class ChargeType8ChoiceReda00400107(ISO20022MessageElement):
     cd: Optional[InvestmentFundMiFidfee2Code] = field(
         default=None,
         metadata={
@@ -520,7 +521,7 @@ class ChargeType8ChoiceReda00400107:
 
 
 @dataclass
-class DistributionStrategy1ChoiceReda00400107:
+class DistributionStrategy1ChoiceReda00400107(ISO20022MessageElement):
     cd: Optional[InvestorType3Code] = field(
         default=None,
         metadata={
@@ -540,7 +541,7 @@ class DistributionStrategy1ChoiceReda00400107:
 
 
 @dataclass
-class ExPostCostCalculationBasis1ChoiceReda00400107:
+class ExPostCostCalculationBasis1ChoiceReda00400107(ISO20022MessageElement):
     cd: Optional[ExPostCostCalculationBasis1Code] = field(
         default=None,
         metadata={
@@ -560,7 +561,7 @@ class ExPostCostCalculationBasis1ChoiceReda00400107:
 
 
 @dataclass
-class Forms1Reda00400107:
+class Forms1Reda00400107(ISO20022MessageElement):
     appl_form: Optional[bool] = field(
         default=None,
         metadata={
@@ -582,7 +583,7 @@ class Forms1Reda00400107:
 
 
 @dataclass
-class Frequency20ChoiceReda00400107:
+class Frequency20ChoiceReda00400107(ISO20022MessageElement):
     cd: Optional[EventFrequency8Code] = field(
         default=None,
         metadata={
@@ -602,7 +603,7 @@ class Frequency20ChoiceReda00400107:
 
 
 @dataclass
-class FundOrderType5ChoiceReda00400107:
+class FundOrderType5ChoiceReda00400107(ISO20022MessageElement):
     cd: Optional[FundOrderType10Code] = field(
         default=None,
         metadata={
@@ -622,7 +623,7 @@ class FundOrderType5ChoiceReda00400107:
 
 
 @dataclass
-class FundPaymentType1ChoiceReda00400107:
+class FundPaymentType1ChoiceReda00400107(ISO20022MessageElement):
     cd: Optional[FundPaymentType1Code] = field(
         default=None,
         metadata={
@@ -642,7 +643,7 @@ class FundPaymentType1ChoiceReda00400107:
 
 
 @dataclass
-class GenericAccountIdentification1Reda00400107:
+class GenericAccountIdentification1Reda00400107(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -675,7 +676,7 @@ class GenericAccountIdentification1Reda00400107:
 
 
 @dataclass
-class GovernanceProcess1ChoiceReda00400107:
+class GovernanceProcess1ChoiceReda00400107(ISO20022MessageElement):
     cd: Optional[GovernanceProcessType1Code] = field(
         default=None,
         metadata={
@@ -695,7 +696,7 @@ class GovernanceProcess1ChoiceReda00400107:
 
 
 @dataclass
-class InvestmentFundPlanType1ChoiceReda00400107:
+class InvestmentFundPlanType1ChoiceReda00400107(ISO20022MessageElement):
     cd: Optional[InvestmentFundPlanType1Code] = field(
         default=None,
         metadata={
@@ -715,7 +716,7 @@ class InvestmentFundPlanType1ChoiceReda00400107:
 
 
 @dataclass
-class InvestmentNeed2ChoiceReda00400107:
+class InvestmentNeed2ChoiceReda00400107(ISO20022MessageElement):
     cd: Optional[InvestmentNeed2Code] = field(
         default=None,
         metadata={
@@ -735,7 +736,7 @@ class InvestmentNeed2ChoiceReda00400107:
 
 
 @dataclass
-class MainFundOrderDeskLocation1Reda00400107:
+class MainFundOrderDeskLocation1Reda00400107(ISO20022MessageElement):
     ctry: Optional[str] = field(
         default=None,
         metadata={
@@ -758,7 +759,7 @@ class MainFundOrderDeskLocation1Reda00400107:
 
 
 @dataclass
-class NotionalOrUnitBased1ChoiceReda00400107:
+class NotionalOrUnitBased1ChoiceReda00400107(ISO20022MessageElement):
     cd: Optional[NotionalOrUnitBased1Code] = field(
         default=None,
         metadata={
@@ -778,7 +779,7 @@ class NotionalOrUnitBased1ChoiceReda00400107:
 
 
 @dataclass
-class OtherIdentification1Reda00400107:
+class OtherIdentification1Reda00400107(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -812,7 +813,7 @@ class OtherIdentification1Reda00400107:
 
 
 @dataclass
-class PostalAddress1Reda00400107:
+class PostalAddress1Reda00400107(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -895,7 +896,7 @@ class PostalAddress1Reda00400107:
 
 
 @dataclass
-class ProductStructure1ChoiceReda00400107:
+class ProductStructure1ChoiceReda00400107(ISO20022MessageElement):
     cd: Optional[ProductStructure1Code] = field(
         default=None,
         metadata={
@@ -915,7 +916,7 @@ class ProductStructure1ChoiceReda00400107:
 
 
 @dataclass
-class QuotationType1ChoiceReda00400107:
+class QuotationType1ChoiceReda00400107(ISO20022MessageElement):
     cd: Optional[QuotationType1Code] = field(
         default=None,
         metadata={
@@ -935,7 +936,7 @@ class QuotationType1ChoiceReda00400107:
 
 
 @dataclass
-class SecurityClassificationType2ChoiceReda00400107:
+class SecurityClassificationType2ChoiceReda00400107(ISO20022MessageElement):
     cfi: Optional[str] = field(
         default=None,
         metadata={
@@ -956,7 +957,7 @@ class SecurityClassificationType2ChoiceReda00400107:
 
 
 @dataclass
-class TargetMarket1ChoiceReda00400107:
+class TargetMarket1ChoiceReda00400107(ISO20022MessageElement):
     cd: Optional[TargetMarket1Code] = field(
         default=None,
         metadata={
@@ -976,7 +977,7 @@ class TargetMarket1ChoiceReda00400107:
 
 
 @dataclass
-class TargetMarket3ChoiceReda00400107:
+class TargetMarket3ChoiceReda00400107(ISO20022MessageElement):
     tp: Optional[InvestorType2Code] = field(
         default=None,
         metadata={
@@ -1004,7 +1005,7 @@ class TargetMarket3ChoiceReda00400107:
 
 
 @dataclass
-class TargetMarket5ChoiceReda00400107:
+class TargetMarket5ChoiceReda00400107(ISO20022MessageElement):
     tp: Optional[InvestorType4Code] = field(
         default=None,
         metadata={
@@ -1024,7 +1025,7 @@ class TargetMarket5ChoiceReda00400107:
 
 
 @dataclass
-class TimeFrame10Reda00400107:
+class TimeFrame10Reda00400107(ISO20022MessageElement):
     othr_tm_frame_desc: Optional[str] = field(
         default=None,
         metadata={
@@ -1064,7 +1065,7 @@ class TimeFrame10Reda00400107:
 
 
 @dataclass
-class TimeFrame11Reda00400107:
+class TimeFrame11Reda00400107(ISO20022MessageElement):
     othr_tm_frame_desc: Optional[str] = field(
         default=None,
         metadata={
@@ -1104,7 +1105,7 @@ class TimeFrame11Reda00400107:
 
 
 @dataclass
-class TimeFrame8Reda00400107:
+class TimeFrame8Reda00400107(ISO20022MessageElement):
     othr_tm_frame_desc: Optional[str] = field(
         default=None,
         metadata={
@@ -1144,7 +1145,7 @@ class TimeFrame8Reda00400107:
 
 
 @dataclass
-class TimeFrame9Reda00400107:
+class TimeFrame9Reda00400107(ISO20022MessageElement):
     othr_tm_frame_desc: Optional[str] = field(
         default=None,
         metadata={
@@ -1184,7 +1185,7 @@ class TimeFrame9Reda00400107:
 
 
 @dataclass
-class TimeFrame9ChoiceReda00400107:
+class TimeFrame9ChoiceReda00400107(ISO20022MessageElement):
     cd: Optional[TimeFrame2Code] = field(
         default=None,
         metadata={
@@ -1204,7 +1205,7 @@ class TimeFrame9ChoiceReda00400107:
 
 
 @dataclass
-class UnitsOrAmount1ChoiceReda00400107:
+class UnitsOrAmount1ChoiceReda00400107(ISO20022MessageElement):
     amt: Optional[ActiveCurrencyAndAmountReda00400107] = field(
         default=None,
         metadata={
@@ -1226,7 +1227,7 @@ class UnitsOrAmount1ChoiceReda00400107:
 
 
 @dataclass
-class ValueForMoney1Reda00400107:
+class ValueForMoney1Reda00400107(ISO20022MessageElement):
     emtdata_rptg_vfmuk: Optional[EmtdataReportingVfmuktype1Code] = field(
         default=None,
         metadata={
@@ -1304,7 +1305,7 @@ class ValueForMoney1Reda00400107:
 
 
 @dataclass
-class CashAccountIdentification8ChoiceReda00400107:
+class CashAccountIdentification8ChoiceReda00400107(ISO20022MessageElement):
     othr: Optional[GenericAccountIdentification1Reda00400107] = field(
         default=None,
         metadata={
@@ -1325,7 +1326,7 @@ class CashAccountIdentification8ChoiceReda00400107:
 
 
 @dataclass
-class ContactAttributes5Reda00400107:
+class ContactAttributes5Reda00400107(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1404,7 +1405,7 @@ class ContactAttributes5Reda00400107:
 
 
 @dataclass
-class ContactAttributes6Reda00400107:
+class ContactAttributes6Reda00400107(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1482,7 +1483,7 @@ class ContactAttributes6Reda00400107:
 
 
 @dataclass
-class FinancialInstrument96Reda00400107:
+class FinancialInstrument96Reda00400107(ISO20022MessageElement):
     phys_br_scties: Optional[bool] = field(
         default=None,
         metadata={
@@ -1710,7 +1711,7 @@ class FinancialInstrument96Reda00400107:
 
 
 @dataclass
-class IndividualCostOrCharge2Reda00400107:
+class IndividualCostOrCharge2Reda00400107(ISO20022MessageElement):
     cost_tp: Optional[ChargeType8ChoiceReda00400107] = field(
         default=None,
         metadata={
@@ -1774,7 +1775,7 @@ class IndividualCostOrCharge2Reda00400107:
 
 
 @dataclass
-class InvestmentPlanCharacteristics1Reda00400107:
+class InvestmentPlanCharacteristics1Reda00400107(ISO20022MessageElement):
     plan_tp: Optional[InvestmentFundPlanType1ChoiceReda00400107] = field(
         default=None,
         metadata={
@@ -1845,7 +1846,7 @@ class InvestmentPlanCharacteristics1Reda00400107:
 
 
 @dataclass
-class InvestmentRestrictions3Reda00400107:
+class InvestmentRestrictions3Reda00400107(ISO20022MessageElement):
     min_initl_sbcpt_amt: Optional[ActiveCurrencyAndAmountReda00400107] = field(
         default=None,
         metadata={
@@ -2013,7 +2014,7 @@ class InvestmentRestrictions3Reda00400107:
 
 
 @dataclass
-class NameAndAddress5Reda00400107:
+class NameAndAddress5Reda00400107(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -2036,7 +2037,7 @@ class NameAndAddress5Reda00400107:
 
 
 @dataclass
-class OtherDistributionStrategy1Reda00400107:
+class OtherDistributionStrategy1Reda00400107(ISO20022MessageElement):
     dstrbtn_strtgy_tp: Optional[str] = field(
         default=None,
         metadata={
@@ -2066,7 +2067,7 @@ class OtherDistributionStrategy1Reda00400107:
 
 
 @dataclass
-class OtherInvestmentNeed1Reda00400107:
+class OtherInvestmentNeed1Reda00400107(ISO20022MessageElement):
     clnt_objctvs_and_needs_tp: Optional[str] = field(
         default=None,
         metadata={
@@ -2096,7 +2097,7 @@ class OtherInvestmentNeed1Reda00400107:
 
 
 @dataclass
-class OtherTargetMarket1Reda00400107:
+class OtherTargetMarket1Reda00400107(ISO20022MessageElement):
     trgt_mkt_tp: Optional[str] = field(
         default=None,
         metadata={
@@ -2119,7 +2120,7 @@ class OtherTargetMarket1Reda00400107:
 
 
 @dataclass
-class OtherTargetMarketInvestor1Reda00400107:
+class OtherTargetMarketInvestor1Reda00400107(ISO20022MessageElement):
     invstr_tp: Optional[str] = field(
         default=None,
         metadata={
@@ -2149,7 +2150,7 @@ class OtherTargetMarketInvestor1Reda00400107:
 
 
 @dataclass
-class OtherTargetMarketInvestorKnowledge1Reda00400107:
+class OtherTargetMarketInvestorKnowledge1Reda00400107(ISO20022MessageElement):
     invstr_knwldg_tp: Optional[str] = field(
         default=None,
         metadata={
@@ -2179,7 +2180,7 @@ class OtherTargetMarketInvestorKnowledge1Reda00400107:
 
 
 @dataclass
-class OtherTargetMarketLossBearing1Reda00400107:
+class OtherTargetMarketLossBearing1Reda00400107(ISO20022MessageElement):
     ablty_to_bear_losses_tp: Optional[str] = field(
         default=None,
         metadata={
@@ -2209,7 +2210,7 @@ class OtherTargetMarketLossBearing1Reda00400107:
 
 
 @dataclass
-class OtherTargetMarketRiskTolerance1Reda00400107:
+class OtherTargetMarketRiskTolerance1Reda00400107(ISO20022MessageElement):
     rsk_tlrnce_tp: Optional[str] = field(
         default=None,
         metadata={
@@ -2239,7 +2240,7 @@ class OtherTargetMarketRiskTolerance1Reda00400107:
 
 
 @dataclass
-class PaymentInstrument16Reda00400107:
+class PaymentInstrument16Reda00400107(ISO20022MessageElement):
     ordr_tp: Optional[FundOrderType5ChoiceReda00400107] = field(
         default=None,
         metadata={
@@ -2269,7 +2270,7 @@ class PaymentInstrument16Reda00400107:
 
 
 @dataclass
-class ProcessingCharacteristics10Reda00400107:
+class ProcessingCharacteristics10Reda00400107(ISO20022MessageElement):
     dealg_ccy_accptd: list[str] = field(
         default_factory=list,
         metadata={
@@ -2406,7 +2407,7 @@ class ProcessingCharacteristics10Reda00400107:
 
 
 @dataclass
-class ProcessingCharacteristics11Reda00400107:
+class ProcessingCharacteristics11Reda00400107(ISO20022MessageElement):
     dealg_ccy_accptd: list[str] = field(
         default_factory=list,
         metadata={
@@ -2543,7 +2544,7 @@ class ProcessingCharacteristics11Reda00400107:
 
 
 @dataclass
-class ProcessingCharacteristics12Reda00400107:
+class ProcessingCharacteristics12Reda00400107(ISO20022MessageElement):
     dealg_ccy_accptd: list[str] = field(
         default_factory=list,
         metadata={
@@ -2680,7 +2681,7 @@ class ProcessingCharacteristics12Reda00400107:
 
 
 @dataclass
-class ProcessingCharacteristics9Reda00400107:
+class ProcessingCharacteristics9Reda00400107(ISO20022MessageElement):
     dealg_ccy_accptd: list[str] = field(
         default_factory=list,
         metadata={
@@ -2809,7 +2810,7 @@ class ProcessingCharacteristics9Reda00400107:
 
 
 @dataclass
-class SecurityIdentification40Reda00400107:
+class SecurityIdentification40Reda00400107(ISO20022MessageElement):
     othr_id: list[OtherIdentification1Reda00400107] = field(
         default_factory=list,
         metadata={
@@ -2840,7 +2841,7 @@ class SecurityIdentification40Reda00400107:
 
 
 @dataclass
-class TimeHorizon2ChoiceReda00400107:
+class TimeHorizon2ChoiceReda00400107(ISO20022MessageElement):
     nb_of_yrs: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -2862,7 +2863,7 @@ class TimeHorizon2ChoiceReda00400107:
 
 
 @dataclass
-class ValuationDealingProcessingCharacteristics3Reda00400107:
+class ValuationDealingProcessingCharacteristics3Reda00400107(ISO20022MessageElement):
     valtn_frqcy: Optional[EventFrequency5Code] = field(
         default=None,
         metadata={
@@ -2945,7 +2946,7 @@ class ValuationDealingProcessingCharacteristics3Reda00400107:
 
 
 @dataclass
-class AccountIdentificationAndName7Reda00400107:
+class AccountIdentificationAndName7Reda00400107(ISO20022MessageElement):
     id: Optional[CashAccountIdentification8ChoiceReda00400107] = field(
         default=None,
         metadata={
@@ -2968,7 +2969,7 @@ class AccountIdentificationAndName7Reda00400107:
 
 
 @dataclass
-class CostsAndCharges2Reda00400107:
+class CostsAndCharges2Reda00400107(ISO20022MessageElement):
     ex_ante_ref_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -2997,7 +2998,7 @@ class CostsAndCharges2Reda00400107:
 
 
 @dataclass
-class DistributionStrategy1Reda00400107:
+class DistributionStrategy1Reda00400107(ISO20022MessageElement):
     exctn_only: Optional[DistributionStrategy1ChoiceReda00400107] = field(
         default=None,
         metadata={
@@ -3043,7 +3044,7 @@ class DistributionStrategy1Reda00400107:
 
 
 @dataclass
-class ExtendedParty13Reda00400107:
+class ExtendedParty13Reda00400107(ISO20022MessageElement):
     pty_role: Optional[GenericIdentification36Reda00400107] = field(
         default=None,
         metadata={
@@ -3065,7 +3066,7 @@ class ExtendedParty13Reda00400107:
 
 
 @dataclass
-class InvestorKnowledge1Reda00400107:
+class InvestorKnowledge1Reda00400107(ISO20022MessageElement):
     bsic_invstr: Optional[TargetMarket1Code] = field(
         default=None,
         metadata={
@@ -3109,7 +3110,7 @@ class InvestorKnowledge1Reda00400107:
 
 
 @dataclass
-class InvestorRequirements4Reda00400107:
+class InvestorRequirements4Reda00400107(ISO20022MessageElement):
     rtr_prfl_prsrvtn: Optional[TargetMarket1Code] = field(
         default=None,
         metadata={
@@ -3193,7 +3194,7 @@ class InvestorRequirements4Reda00400107:
 
 
 @dataclass
-class InvestorType2Reda00400107:
+class InvestorType2Reda00400107(ISO20022MessageElement):
     invstr_tp_rtl: Optional[TargetMarket1Code] = field(
         default=None,
         metadata={
@@ -3229,7 +3230,7 @@ class InvestorType2Reda00400107:
 
 
 @dataclass
-class LossBearing2Reda00400107:
+class LossBearing2Reda00400107(ISO20022MessageElement):
     no_cptl_loss: Optional[TargetMarket1Code] = field(
         default=None,
         metadata={
@@ -3283,7 +3284,7 @@ class LossBearing2Reda00400107:
 
 
 @dataclass
-class OrderDesk1Reda00400107:
+class OrderDesk1Reda00400107(ISO20022MessageElement):
     ordr_dsk: Optional[ContactAttributes5Reda00400107] = field(
         default=None,
         metadata={
@@ -3311,7 +3312,7 @@ class OrderDesk1Reda00400107:
 
 
 @dataclass
-class PartyIdentification125ChoiceReda00400107:
+class PartyIdentification125ChoiceReda00400107(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -3340,7 +3341,7 @@ class PartyIdentification125ChoiceReda00400107:
 
 
 @dataclass
-class RiskTolerance1Reda00400107:
+class RiskTolerance1Reda00400107(ISO20022MessageElement):
     rsk_tlrnce_priipsmthdlgy: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -3398,7 +3399,7 @@ class RiskTolerance1Reda00400107:
 
 
 @dataclass
-class SecurityIdentification47Reda00400107:
+class SecurityIdentification47Reda00400107(ISO20022MessageElement):
     id: Optional[SecurityIdentification40Reda00400107] = field(
         default=None,
         metadata={
@@ -3589,7 +3590,7 @@ class SecurityIdentification47Reda00400107:
 
 
 @dataclass
-class CashAccount206Reda00400107:
+class CashAccount206Reda00400107(ISO20022MessageElement):
     acct_id: Optional[AccountIdentificationAndName7Reda00400107] = field(
         default=None,
         metadata={
@@ -3621,7 +3622,7 @@ class CashAccount206Reda00400107:
 
 
 @dataclass
-class FundParties1Reda00400107:
+class FundParties1Reda00400107(ISO20022MessageElement):
     guarntr: Optional[ContactAttributes5Reda00400107] = field(
         default=None,
         metadata={
@@ -3657,7 +3658,7 @@ class FundParties1Reda00400107:
 
 
 @dataclass
-class PartyIdentification139Reda00400107:
+class PartyIdentification139Reda00400107(ISO20022MessageElement):
     pty: Optional[PartyIdentification125ChoiceReda00400107] = field(
         default=None,
         metadata={
@@ -3679,7 +3680,7 @@ class PartyIdentification139Reda00400107:
 
 
 @dataclass
-class TargetMarket4Reda00400107:
+class TargetMarket4Reda00400107(ISO20022MessageElement):
     ref_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -3739,7 +3740,7 @@ class TargetMarket4Reda00400107:
 
 
 @dataclass
-class AdditionalReference10Reda00400107:
+class AdditionalReference10Reda00400107(ISO20022MessageElement):
     ref: Optional[str] = field(
         default=None,
         metadata={
@@ -3772,7 +3773,7 @@ class AdditionalReference10Reda00400107:
 
 
 @dataclass
-class CashAccount205Reda00400107:
+class CashAccount205Reda00400107(ISO20022MessageElement):
     ccy: Optional[str] = field(
         default=None,
         metadata={
@@ -3801,7 +3802,7 @@ class CashAccount205Reda00400107:
 
 
 @dataclass
-class LocalMarketAnnex6Reda00400107:
+class LocalMarketAnnex6Reda00400107(ISO20022MessageElement):
     ctry: list[str] = field(
         default_factory=list,
         metadata={
@@ -3864,7 +3865,7 @@ class LocalMarketAnnex6Reda00400107:
 
 
 @dataclass
-class FundReferenceDataReport5Reda00400107:
+class FundReferenceDataReport5Reda00400107(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -4091,7 +4092,7 @@ class FundReferenceDataReport5Reda00400107:
 
 
 @dataclass
-class FundReferenceDataReportV07Reda00400107:
+class FundReferenceDataReportV07Reda00400107(ISO20022MessageElement):
     msg_id: Optional[MessageIdentification1Reda00400107] = field(
         default=None,
         metadata={
@@ -4139,7 +4140,7 @@ class FundReferenceDataReportV07Reda00400107:
 
 
 @dataclass
-class Reda00400107:
+class Reda00400107(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:reda.004.001.07"
 

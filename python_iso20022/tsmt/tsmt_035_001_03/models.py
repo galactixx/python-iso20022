@@ -3,13 +3,14 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.tsmt.enums import BaselineStatus3Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:tsmt.035.001.03"
 
 
 @dataclass
-class MessageIdentification1Tsmt03500103:
+class MessageIdentification1Tsmt03500103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -33,7 +34,7 @@ class MessageIdentification1Tsmt03500103:
 
 
 @dataclass
-class SimpleIdentificationInformationTsmt03500103:
+class SimpleIdentificationInformationTsmt03500103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -48,7 +49,7 @@ class SimpleIdentificationInformationTsmt03500103:
 
 
 @dataclass
-class TransactionStatus5Tsmt03500103:
+class TransactionStatus5Tsmt03500103(ISO20022MessageElement):
     sts: Optional[BaselineStatus3Code] = field(
         default=None,
         metadata={
@@ -80,7 +81,7 @@ class TransactionStatus5Tsmt03500103:
 
 
 @dataclass
-class StatusExtensionRequestV03Tsmt03500103:
+class StatusExtensionRequestV03Tsmt03500103(ISO20022MessageElement):
     req_id: Optional[MessageIdentification1Tsmt03500103] = field(
         default=None,
         metadata={
@@ -119,7 +120,7 @@ class StatusExtensionRequestV03Tsmt03500103:
 
 
 @dataclass
-class Tsmt03500103:
+class Tsmt03500103(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.035.001.03"
 

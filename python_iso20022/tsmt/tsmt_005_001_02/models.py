@@ -4,11 +4,13 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
+
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:tsmt.005.001.02"
 
 
 @dataclass
-class Count1Tsmt00500102:
+class Count1Tsmt00500102(ISO20022MessageElement):
     nb: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -23,7 +25,7 @@ class Count1Tsmt00500102:
 
 
 @dataclass
-class MessageIdentification1Tsmt00500102:
+class MessageIdentification1Tsmt00500102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -47,7 +49,7 @@ class MessageIdentification1Tsmt00500102:
 
 
 @dataclass
-class SimpleIdentificationInformationTsmt00500102:
+class SimpleIdentificationInformationTsmt00500102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -62,7 +64,7 @@ class SimpleIdentificationInformationTsmt00500102:
 
 
 @dataclass
-class AmendmentAcceptanceV02Tsmt00500102:
+class AmendmentAcceptanceV02Tsmt00500102(ISO20022MessageElement):
     accptnc_id: Optional[MessageIdentification1Tsmt00500102] = field(
         default=None,
         metadata={
@@ -110,7 +112,7 @@ class AmendmentAcceptanceV02Tsmt00500102:
 
 
 @dataclass
-class Tsmt00500102:
+class Tsmt00500102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.005.001.02"
 

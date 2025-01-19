@@ -9,12 +9,13 @@ from python_iso20022.auth.enums import (
     ReinvestmentType1Code,
     ReportPeriodActivity1Code,
 )
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.071.001.02"
 
 
 @dataclass
-class ActiveOrHistoricCurrencyAndAmountAuth07100102:
+class ActiveOrHistoricCurrencyAndAmountAuth07100102(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -36,7 +37,7 @@ class ActiveOrHistoricCurrencyAndAmountAuth07100102:
 
 
 @dataclass
-class GenericIdentification175Auth07100102:
+class GenericIdentification175Auth07100102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -71,7 +72,7 @@ class GenericIdentification175Auth07100102:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth07100102:
+class SupplementaryDataEnvelope1Auth07100102(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -82,7 +83,7 @@ class SupplementaryDataEnvelope1Auth07100102:
 
 
 @dataclass
-class AmountAndDirection53Auth07100102:
+class AmountAndDirection53Auth07100102(ISO20022MessageElement):
     amt: Optional[ActiveOrHistoricCurrencyAndAmountAuth07100102] = field(
         default=None,
         metadata={
@@ -103,7 +104,7 @@ class AmountAndDirection53Auth07100102:
 
 
 @dataclass
-class OrganisationIdentification38Auth07100102:
+class OrganisationIdentification38Auth07100102(ISO20022MessageElement):
     id: Optional[GenericIdentification175Auth07100102] = field(
         default=None,
         metadata={
@@ -136,7 +137,7 @@ class OrganisationIdentification38Auth07100102:
 
 
 @dataclass
-class ReinvestedCashTypeAndAmount1Auth07100102:
+class ReinvestedCashTypeAndAmount1Auth07100102(ISO20022MessageElement):
     tp: Optional[ReinvestmentType1Code] = field(
         default=None,
         metadata={
@@ -158,7 +159,7 @@ class ReinvestedCashTypeAndAmount1Auth07100102:
 
 
 @dataclass
-class ReuseValue1ChoiceAuth07100102:
+class ReuseValue1ChoiceAuth07100102(ISO20022MessageElement):
     actl: Optional[ActiveOrHistoricCurrencyAndAmountAuth07100102] = field(
         default=None,
         metadata={
@@ -178,7 +179,7 @@ class ReuseValue1ChoiceAuth07100102:
 
 
 @dataclass
-class SupplementaryData1Auth07100102:
+class SupplementaryData1Auth07100102(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -201,7 +202,7 @@ class SupplementaryData1Auth07100102:
 
 
 @dataclass
-class CashReuseData1Auth07100102:
+class CashReuseData1Auth07100102(ISO20022MessageElement):
     rinvstd_csh: list[ReinvestedCashTypeAndAmount1Auth07100102] = field(
         default_factory=list,
         metadata={
@@ -225,7 +226,7 @@ class CashReuseData1Auth07100102:
 
 
 @dataclass
-class FundingSource3Auth07100102:
+class FundingSource3Auth07100102(ISO20022MessageElement):
     tp: Optional[FundingSourceType1Code] = field(
         default=None,
         metadata={
@@ -247,7 +248,7 @@ class FundingSource3Auth07100102:
 
 
 @dataclass
-class OrganisationIdentification15ChoiceAuth07100102:
+class OrganisationIdentification15ChoiceAuth07100102(ISO20022MessageElement):
     lei: Optional[str] = field(
         default=None,
         metadata={
@@ -277,7 +278,7 @@ class OrganisationIdentification15ChoiceAuth07100102:
 
 
 @dataclass
-class SecurityReuseData1Auth07100102:
+class SecurityReuseData1Auth07100102(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -300,7 +301,7 @@ class SecurityReuseData1Auth07100102:
 
 
 @dataclass
-class CollateralType19Auth07100102:
+class CollateralType19Auth07100102(ISO20022MessageElement):
     scty: list[SecurityReuseData1Auth07100102] = field(
         default_factory=list,
         metadata={
@@ -320,7 +321,7 @@ class CollateralType19Auth07100102:
 
 
 @dataclass
-class CounterpartyData87Auth07100102:
+class CounterpartyData87Auth07100102(ISO20022MessageElement):
     rpt_submitg_ntty: Optional[OrganisationIdentification15ChoiceAuth07100102] = field(
         default=None,
         metadata={
@@ -352,7 +353,7 @@ class CounterpartyData87Auth07100102:
 
 
 @dataclass
-class ReuseDataReportCorrection14Auth07100102:
+class ReuseDataReportCorrection14Auth07100102(ISO20022MessageElement):
     tech_rcrd_id: Optional[str] = field(
         default=None,
         metadata={
@@ -417,7 +418,7 @@ class ReuseDataReportCorrection14Auth07100102:
 
 
 @dataclass
-class ReuseDataReportError5Auth07100102:
+class ReuseDataReportError5Auth07100102(ISO20022MessageElement):
     tech_rcrd_id: Optional[str] = field(
         default=None,
         metadata={
@@ -457,7 +458,7 @@ class ReuseDataReportError5Auth07100102:
 
 
 @dataclass
-class ReuseDataReportNew6Auth07100102:
+class ReuseDataReportNew6Auth07100102(ISO20022MessageElement):
     tech_rcrd_id: Optional[str] = field(
         default=None,
         metadata={
@@ -522,7 +523,7 @@ class ReuseDataReportNew6Auth07100102:
 
 
 @dataclass
-class ReuseDataReport6ChoiceAuth07100102:
+class ReuseDataReport6ChoiceAuth07100102(ISO20022MessageElement):
     new: Optional[ReuseDataReportNew6Auth07100102] = field(
         default=None,
         metadata={
@@ -558,7 +559,7 @@ class ReuseDataReport6ChoiceAuth07100102:
 
 
 @dataclass
-class TradeData36ChoiceAuth07100102:
+class TradeData36ChoiceAuth07100102(ISO20022MessageElement):
     data_set_actn: Optional[ReportPeriodActivity1Code] = field(
         default=None,
         metadata={
@@ -578,7 +579,9 @@ class TradeData36ChoiceAuth07100102:
 
 
 @dataclass
-class SecuritiesFinancingReportingTransactionReusedCollateralDataReportV02Auth07100102:
+class SecuritiesFinancingReportingTransactionReusedCollateralDataReportV02Auth07100102(
+    ISO20022MessageElement
+):
     trad_data: Optional[TradeData36ChoiceAuth07100102] = field(
         default=None,
         metadata={
@@ -599,7 +602,7 @@ class SecuritiesFinancingReportingTransactionReusedCollateralDataReportV02Auth07
 
 
 @dataclass
-class Auth07100102:
+class Auth07100102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.071.001.02"
 

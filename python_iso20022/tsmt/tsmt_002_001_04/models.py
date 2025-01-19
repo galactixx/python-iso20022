@@ -3,13 +3,14 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.tsmt.enums import Action2Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:tsmt.002.001.04"
 
 
 @dataclass
-class Activity1Tsmt00200104:
+class Activity1Tsmt00200104(ISO20022MessageElement):
     msg_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -34,7 +35,7 @@ class Activity1Tsmt00200104:
 
 
 @dataclass
-class Bicidentification1Tsmt00200104:
+class Bicidentification1Tsmt00200104(ISO20022MessageElement):
     class Meta:
         name = "BICIdentification1"
 
@@ -51,7 +52,7 @@ class Bicidentification1Tsmt00200104:
 
 
 @dataclass
-class MessageIdentification1Tsmt00200104:
+class MessageIdentification1Tsmt00200104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -75,7 +76,7 @@ class MessageIdentification1Tsmt00200104:
 
 
 @dataclass
-class ActivityDetails1Tsmt00200104:
+class ActivityDetails1Tsmt00200104(ISO20022MessageElement):
     dt_tm: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -106,7 +107,7 @@ class ActivityDetails1Tsmt00200104:
 
 
 @dataclass
-class DocumentIdentification5Tsmt00200104:
+class DocumentIdentification5Tsmt00200104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -130,7 +131,7 @@ class DocumentIdentification5Tsmt00200104:
 
 
 @dataclass
-class PendingActivity2Tsmt00200104:
+class PendingActivity2Tsmt00200104(ISO20022MessageElement):
     tp: Optional[Action2Code] = field(
         default=None,
         metadata={
@@ -153,7 +154,7 @@ class PendingActivity2Tsmt00200104:
 
 
 @dataclass
-class ActivityReportItems3Tsmt00200104:
+class ActivityReportItems3Tsmt00200104(ISO20022MessageElement):
     tx_id: Optional[str] = field(
         default=None,
         metadata={
@@ -203,7 +204,7 @@ class ActivityReportItems3Tsmt00200104:
 
 
 @dataclass
-class ActivityReportV04Tsmt00200104:
+class ActivityReportV04Tsmt00200104(ISO20022MessageElement):
     rpt_id: Optional[MessageIdentification1Tsmt00200104] = field(
         default=None,
         metadata={
@@ -232,7 +233,7 @@ class ActivityReportV04Tsmt00200104:
 
 
 @dataclass
-class Tsmt00200104:
+class Tsmt00200104(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.002.001.04"
 

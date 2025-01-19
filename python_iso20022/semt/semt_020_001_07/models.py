@@ -1,13 +1,14 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import DeliveryReceiptType2Code, ReceiveDelivery1Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:semt.020.001.07"
 
 
 @dataclass
-class GenericIdentification30Semt02000107:
+class GenericIdentification30Semt02000107(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -42,7 +43,7 @@ class GenericIdentification30Semt02000107:
 
 
 @dataclass
-class GenericIdentification36Semt02000107:
+class GenericIdentification36Semt02000107(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -78,7 +79,7 @@ class GenericIdentification36Semt02000107:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Semt02000107:
+class SupplementaryDataEnvelope1Semt02000107(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -89,7 +90,7 @@ class SupplementaryDataEnvelope1Semt02000107:
 
 
 @dataclass
-class BlockChainAddressWallet3Semt02000107:
+class BlockChainAddressWallet3Semt02000107(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -122,7 +123,7 @@ class BlockChainAddressWallet3Semt02000107:
 
 
 @dataclass
-class PartyIdentification127ChoiceSemt02000107:
+class PartyIdentification127ChoiceSemt02000107(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -143,7 +144,7 @@ class PartyIdentification127ChoiceSemt02000107:
 
 
 @dataclass
-class SecuritiesAccount19Semt02000107:
+class SecuritiesAccount19Semt02000107(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -176,7 +177,7 @@ class SecuritiesAccount19Semt02000107:
 
 
 @dataclass
-class SettlementTypeAndIdentification18Semt02000107:
+class SettlementTypeAndIdentification18Semt02000107(ISO20022MessageElement):
     tx_id: Optional[str] = field(
         default=None,
         metadata={
@@ -209,7 +210,7 @@ class SettlementTypeAndIdentification18Semt02000107:
 
 
 @dataclass
-class SupplementaryData1Semt02000107:
+class SupplementaryData1Semt02000107(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -232,7 +233,7 @@ class SupplementaryData1Semt02000107:
 
 
 @dataclass
-class PartyIdentification144Semt02000107:
+class PartyIdentification144Semt02000107(ISO20022MessageElement):
     id: Optional[PartyIdentification127ChoiceSemt02000107] = field(
         default=None,
         metadata={
@@ -254,7 +255,7 @@ class PartyIdentification144Semt02000107:
 
 
 @dataclass
-class References69ChoiceSemt02000107:
+class References69ChoiceSemt02000107(ISO20022MessageElement):
     scties_sttlm_tx_conf_id: Optional[SettlementTypeAndIdentification18Semt02000107] = (
         field(
             default=None,
@@ -428,7 +429,7 @@ class References69ChoiceSemt02000107:
 
 
 @dataclass
-class SecuritiesMessageCancellationAdviceV07Semt02000107:
+class SecuritiesMessageCancellationAdviceV07Semt02000107(ISO20022MessageElement):
     ref: Optional[References69ChoiceSemt02000107] = field(
         default=None,
         metadata={
@@ -473,7 +474,7 @@ class SecuritiesMessageCancellationAdviceV07Semt02000107:
 
 
 @dataclass
-class Semt02000107:
+class Semt02000107(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:semt.020.001.07"
 

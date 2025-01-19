@@ -3,6 +3,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import DateType8Code
 from python_iso20022.fxtr.fxtr_032_001_01.enums import (
     QueryDataType1Code,
@@ -13,7 +14,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:fxtr.032.001.01"
 
 
 @dataclass
-class DateAndDateTimeChoiceFxtr03200101:
+class DateAndDateTimeChoiceFxtr03200101(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -33,7 +34,7 @@ class DateAndDateTimeChoiceFxtr03200101:
 
 
 @dataclass
-class MessageIdentification1Fxtr03200101:
+class MessageIdentification1Fxtr03200101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -57,7 +58,7 @@ class MessageIdentification1Fxtr03200101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Fxtr03200101:
+class SupplementaryDataEnvelope1Fxtr03200101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -68,7 +69,7 @@ class SupplementaryDataEnvelope1Fxtr03200101:
 
 
 @dataclass
-class DateFormat18ChoiceFxtr03200101:
+class DateFormat18ChoiceFxtr03200101(ISO20022MessageElement):
     dt: Optional[DateAndDateTimeChoiceFxtr03200101] = field(
         default=None,
         metadata={
@@ -88,7 +89,7 @@ class DateFormat18ChoiceFxtr03200101:
 
 
 @dataclass
-class SupplementaryData1Fxtr03200101:
+class SupplementaryData1Fxtr03200101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -111,7 +112,7 @@ class SupplementaryData1Fxtr03200101:
 
 
 @dataclass
-class Period4Fxtr03200101:
+class Period4Fxtr03200101(ISO20022MessageElement):
     start_dt: Optional[DateFormat18ChoiceFxtr03200101] = field(
         default=None,
         metadata={
@@ -133,7 +134,7 @@ class Period4Fxtr03200101:
 
 
 @dataclass
-class ForeignExchangeTradeCaptureReportRequestV01Fxtr03200101:
+class ForeignExchangeTradeCaptureReportRequestV01Fxtr03200101(ISO20022MessageElement):
     qry_req_id: Optional[MessageIdentification1Fxtr03200101] = field(
         default=None,
         metadata={
@@ -237,7 +238,7 @@ class ForeignExchangeTradeCaptureReportRequestV01Fxtr03200101:
 
 
 @dataclass
-class Fxtr03200101:
+class Fxtr03200101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:fxtr.032.001.01"
 

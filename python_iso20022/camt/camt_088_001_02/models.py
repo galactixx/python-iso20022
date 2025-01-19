@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.camt.camt_088_001_02.enums import PaymentReceipt1Code
 from python_iso20022.enums import AddressType2Code
 
@@ -11,7 +12,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:camt.088.001.02"
 
 
 @dataclass
-class ActiveCurrencyAndAmountCamt08800102:
+class ActiveCurrencyAndAmountCamt08800102(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -33,7 +34,7 @@ class ActiveCurrencyAndAmountCamt08800102:
 
 
 @dataclass
-class ClearingSystemIdentification2ChoiceCamt08800102:
+class ClearingSystemIdentification2ChoiceCamt08800102(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -57,7 +58,7 @@ class ClearingSystemIdentification2ChoiceCamt08800102:
 
 
 @dataclass
-class Pagination1Camt08800102:
+class Pagination1Camt08800102(ISO20022MessageElement):
     pg_nb: Optional[str] = field(
         default=None,
         metadata={
@@ -80,7 +81,7 @@ class Pagination1Camt08800102:
 
 
 @dataclass
-class PartyIdentification265Camt08800102:
+class PartyIdentification265Camt08800102(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -105,7 +106,7 @@ class PartyIdentification265Camt08800102:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Camt08800102:
+class SupplementaryDataEnvelope1Camt08800102(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -116,7 +117,7 @@ class SupplementaryDataEnvelope1Camt08800102:
 
 
 @dataclass
-class PartyIdentification266Camt08800102:
+class PartyIdentification266Camt08800102(ISO20022MessageElement):
     pty_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -175,7 +176,7 @@ class PartyIdentification266Camt08800102:
 
 
 @dataclass
-class PostalAddress1Camt08800102:
+class PostalAddress1Camt08800102(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -258,7 +259,7 @@ class PostalAddress1Camt08800102:
 
 
 @dataclass
-class SupplementaryData1Camt08800102:
+class SupplementaryData1Camt08800102(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -281,7 +282,7 @@ class SupplementaryData1Camt08800102:
 
 
 @dataclass
-class NameAndAddress8Camt08800102:
+class NameAndAddress8Camt08800102(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -315,7 +316,7 @@ class NameAndAddress8Camt08800102:
 
 
 @dataclass
-class PartyIdentification242ChoiceCamt08800102:
+class PartyIdentification242ChoiceCamt08800102(ISO20022MessageElement):
     nm_and_adr: Optional[NameAndAddress8Camt08800102] = field(
         default=None,
         metadata={
@@ -343,7 +344,7 @@ class PartyIdentification242ChoiceCamt08800102:
 
 
 @dataclass
-class NetReportData2Camt08800102:
+class NetReportData2Camt08800102(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -430,7 +431,7 @@ class NetReportData2Camt08800102:
 
 
 @dataclass
-class NettingIdentification2ChoiceCamt08800102:
+class NettingIdentification2ChoiceCamt08800102(ISO20022MessageElement):
     trad_pty: Optional[PartyIdentification242ChoiceCamt08800102] = field(
         default=None,
         metadata={
@@ -452,7 +453,7 @@ class NettingIdentification2ChoiceCamt08800102:
 
 
 @dataclass
-class SettlementParties120Camt08800102:
+class SettlementParties120Camt08800102(ISO20022MessageElement):
     dlvry_agt: Optional[PartyIdentification242ChoiceCamt08800102] = field(
         default=None,
         metadata={
@@ -489,7 +490,7 @@ class SettlementParties120Camt08800102:
 
 
 @dataclass
-class NetObligation2Camt08800102:
+class NetObligation2Camt08800102(ISO20022MessageElement):
     oblgtn_id: Optional[str] = field(
         default=None,
         metadata={
@@ -565,7 +566,7 @@ class NetObligation2Camt08800102:
 
 
 @dataclass
-class NetReportV02Camt08800102:
+class NetReportV02Camt08800102(ISO20022MessageElement):
     net_rpt_data: Optional[NetReportData2Camt08800102] = field(
         default=None,
         metadata={
@@ -612,7 +613,7 @@ class NetReportV02Camt08800102:
 
 
 @dataclass
-class Camt08800102:
+class Camt08800102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:camt.088.001.02"
 

@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.tsmt.enums import (
     Action2Code,
     BaselineStatus3Code,
@@ -18,7 +19,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:tsmt.011.001.04"
 
 
 @dataclass
-class Bicidentification1Tsmt01100104:
+class Bicidentification1Tsmt01100104(ISO20022MessageElement):
     class Meta:
         name = "BICIdentification1"
 
@@ -35,7 +36,7 @@ class Bicidentification1Tsmt01100104:
 
 
 @dataclass
-class CurrencyAndAmountTsmt01100104:
+class CurrencyAndAmountTsmt01100104(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -57,7 +58,7 @@ class CurrencyAndAmountTsmt01100104:
 
 
 @dataclass
-class DocumentIdentification6Tsmt01100104:
+class DocumentIdentification6Tsmt01100104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -92,7 +93,7 @@ class DocumentIdentification6Tsmt01100104:
 
 
 @dataclass
-class GenericIdentification4Tsmt01100104:
+class GenericIdentification4Tsmt01100104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -118,7 +119,7 @@ class GenericIdentification4Tsmt01100104:
 
 
 @dataclass
-class MessageIdentification1Tsmt01100104:
+class MessageIdentification1Tsmt01100104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -142,7 +143,7 @@ class MessageIdentification1Tsmt01100104:
 
 
 @dataclass
-class PercentageTolerance1Tsmt01100104:
+class PercentageTolerance1Tsmt01100104(ISO20022MessageElement):
     plus_pct: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -168,7 +169,7 @@ class PercentageTolerance1Tsmt01100104:
 
 
 @dataclass
-class PostalAddress5Tsmt01100104:
+class PostalAddress5Tsmt01100104(ISO20022MessageElement):
     strt_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -222,7 +223,7 @@ class PostalAddress5Tsmt01100104:
 
 
 @dataclass
-class SimpleIdentificationInformationTsmt01100104:
+class SimpleIdentificationInformationTsmt01100104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -237,7 +238,7 @@ class SimpleIdentificationInformationTsmt01100104:
 
 
 @dataclass
-class DocumentIdentification5Tsmt01100104:
+class DocumentIdentification5Tsmt01100104(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -261,7 +262,7 @@ class DocumentIdentification5Tsmt01100104:
 
 
 @dataclass
-class PartyIdentification26Tsmt01100104:
+class PartyIdentification26Tsmt01100104(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -293,7 +294,7 @@ class PartyIdentification26Tsmt01100104:
 
 
 @dataclass
-class PendingActivity2Tsmt01100104:
+class PendingActivity2Tsmt01100104(ISO20022MessageElement):
     tp: Optional[Action2Code] = field(
         default=None,
         metadata={
@@ -316,7 +317,7 @@ class PendingActivity2Tsmt01100104:
 
 
 @dataclass
-class ProductCategory1Tsmt01100104:
+class ProductCategory1Tsmt01100104(ISO20022MessageElement):
     tp: Optional[ProductCategory1Code] = field(
         default=None,
         metadata={
@@ -340,7 +341,7 @@ class ProductCategory1Tsmt01100104:
 
 
 @dataclass
-class ProductCharacteristics1Tsmt01100104:
+class ProductCharacteristics1Tsmt01100104(ISO20022MessageElement):
     tp: Optional[ProductCharacteristics1Code] = field(
         default=None,
         metadata={
@@ -364,7 +365,7 @@ class ProductCharacteristics1Tsmt01100104:
 
 
 @dataclass
-class ProductIdentifier2Tsmt01100104:
+class ProductIdentifier2Tsmt01100104(ISO20022MessageElement):
     tp: Optional[ProductIdentifier2Code] = field(
         default=None,
         metadata={
@@ -388,7 +389,7 @@ class ProductIdentifier2Tsmt01100104:
 
 
 @dataclass
-class ReportType2Tsmt01100104:
+class ReportType2Tsmt01100104(ISO20022MessageElement):
     tp: Optional[ReportType2Code] = field(
         default=None,
         metadata={
@@ -401,7 +402,7 @@ class ReportType2Tsmt01100104:
 
 
 @dataclass
-class TransactionStatus4Tsmt01100104:
+class TransactionStatus4Tsmt01100104(ISO20022MessageElement):
     sts: Optional[BaselineStatus3Code] = field(
         default=None,
         metadata={
@@ -414,7 +415,7 @@ class TransactionStatus4Tsmt01100104:
 
 
 @dataclass
-class UnitOfMeasure3ChoiceTsmt01100104:
+class UnitOfMeasure3ChoiceTsmt01100104(ISO20022MessageElement):
     unit_of_measr_cd: Optional[UnitOfMeasure4Code] = field(
         default=None,
         metadata={
@@ -436,7 +437,7 @@ class UnitOfMeasure3ChoiceTsmt01100104:
 
 
 @dataclass
-class ProductCategory1ChoiceTsmt01100104:
+class ProductCategory1ChoiceTsmt01100104(ISO20022MessageElement):
     strd_pdct_ctgy: Optional[ProductCategory1Tsmt01100104] = field(
         default=None,
         metadata={
@@ -456,7 +457,7 @@ class ProductCategory1ChoiceTsmt01100104:
 
 
 @dataclass
-class ProductCharacteristics1ChoiceTsmt01100104:
+class ProductCharacteristics1ChoiceTsmt01100104(ISO20022MessageElement):
     strd_pdct_chrtcs: Optional[ProductCharacteristics1Tsmt01100104] = field(
         default=None,
         metadata={
@@ -476,7 +477,7 @@ class ProductCharacteristics1ChoiceTsmt01100104:
 
 
 @dataclass
-class ProductIdentifier2ChoiceTsmt01100104:
+class ProductIdentifier2ChoiceTsmt01100104(ISO20022MessageElement):
     strd_pdct_idr: Optional[ProductIdentifier2Tsmt01100104] = field(
         default=None,
         metadata={
@@ -496,7 +497,7 @@ class ProductIdentifier2ChoiceTsmt01100104:
 
 
 @dataclass
-class Quantity9Tsmt01100104:
+class Quantity9Tsmt01100104(ISO20022MessageElement):
     unit_of_measr: Optional[UnitOfMeasure3ChoiceTsmt01100104] = field(
         default=None,
         metadata={
@@ -529,7 +530,7 @@ class Quantity9Tsmt01100104:
 
 
 @dataclass
-class LineItemDetails12Tsmt01100104:
+class LineItemDetails12Tsmt01100104(ISO20022MessageElement):
     line_itm_id: Optional[str] = field(
         default=None,
         metadata={
@@ -666,7 +667,7 @@ class LineItemDetails12Tsmt01100104:
 
 
 @dataclass
-class LineItem14Tsmt01100104:
+class LineItem14Tsmt01100104(ISO20022MessageElement):
     line_itm_dtls: list[LineItemDetails12Tsmt01100104] = field(
         default_factory=list,
         metadata={
@@ -751,7 +752,7 @@ class LineItem14Tsmt01100104:
 
 
 @dataclass
-class BaselineReportV04Tsmt01100104:
+class BaselineReportV04Tsmt01100104(ISO20022MessageElement):
     rpt_id: Optional[MessageIdentification1Tsmt01100104] = field(
         default=None,
         metadata={
@@ -870,7 +871,7 @@ class BaselineReportV04Tsmt01100104:
 
 
 @dataclass
-class Tsmt01100104:
+class Tsmt01100104(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.011.001.04"
 

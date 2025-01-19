@@ -1,11 +1,13 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
+
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:camt.063.001.02"
 
 
 @dataclass
-class AcknowledgementDetails1ChoiceCamt06300102:
+class AcknowledgementDetails1ChoiceCamt06300102(ISO20022MessageElement):
     pay_in_schdl_ref: Optional[str] = field(
         default=None,
         metadata={
@@ -29,7 +31,7 @@ class AcknowledgementDetails1ChoiceCamt06300102:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Camt06300102:
+class SupplementaryDataEnvelope1Camt06300102(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -40,7 +42,7 @@ class SupplementaryDataEnvelope1Camt06300102:
 
 
 @dataclass
-class SupplementaryData1Camt06300102:
+class SupplementaryData1Camt06300102(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -63,7 +65,7 @@ class SupplementaryData1Camt06300102:
 
 
 @dataclass
-class PayInEventAcknowledgementV02Camt06300102:
+class PayInEventAcknowledgementV02Camt06300102(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -104,7 +106,7 @@ class PayInEventAcknowledgementV02Camt06300102:
 
 
 @dataclass
-class Camt06300102:
+class Camt06300102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:camt.063.001.02"
 

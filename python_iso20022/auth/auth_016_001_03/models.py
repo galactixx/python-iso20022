@@ -20,13 +20,14 @@ from python_iso20022.auth.enums import (
     RateBasis1Code,
     RegulatoryTradingCapacity1Code,
 )
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import NoReasonCode, VariationType1Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.016.001.03"
 
 
 @dataclass
-class ActiveCurrencyAnd13DecimalAmountAuth01600103:
+class ActiveCurrencyAnd13DecimalAmountAuth01600103(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -48,7 +49,7 @@ class ActiveCurrencyAnd13DecimalAmountAuth01600103:
 
 
 @dataclass
-class ActiveOrHistoricCurrencyAndAmountAuth01600103:
+class ActiveOrHistoricCurrencyAndAmountAuth01600103(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -70,7 +71,7 @@ class ActiveOrHistoricCurrencyAndAmountAuth01600103:
 
 
 @dataclass
-class DebtInstrument4Auth01600103:
+class DebtInstrument4Auth01600103(ISO20022MessageElement):
     mtrty_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -83,7 +84,7 @@ class DebtInstrument4Auth01600103:
 
 
 @dataclass
-class DerivativeForeignExchange2Auth01600103:
+class DerivativeForeignExchange2Auth01600103(ISO20022MessageElement):
     othr_ntnl_ccy: Optional[str] = field(
         default=None,
         metadata={
@@ -97,7 +98,7 @@ class DerivativeForeignExchange2Auth01600103:
 
 
 @dataclass
-class DerivativeInterest2Auth01600103:
+class DerivativeInterest2Auth01600103(ISO20022MessageElement):
     othr_ntnl_ccy: Optional[str] = field(
         default=None,
         metadata={
@@ -111,7 +112,7 @@ class DerivativeInterest2Auth01600103:
 
 
 @dataclass
-class DigitalTokenAmount2Auth01600103:
+class DigitalTokenAmount2Auth01600103(ISO20022MessageElement):
     idr: Optional[str] = field(
         default=None,
         metadata={
@@ -144,7 +145,7 @@ class DigitalTokenAmount2Auth01600103:
 
 
 @dataclass
-class IdentificationSource3ChoiceAuth01600103:
+class IdentificationSource3ChoiceAuth01600103(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -168,7 +169,7 @@ class IdentificationSource3ChoiceAuth01600103:
 
 
 @dataclass
-class PersonIdentificationSchemeName1ChoiceAuth01600103:
+class PersonIdentificationSchemeName1ChoiceAuth01600103(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -192,7 +193,7 @@ class PersonIdentificationSchemeName1ChoiceAuth01600103:
 
 
 @dataclass
-class RecordTechnicalData5Auth01600103:
+class RecordTechnicalData5Auth01600103(ISO20022MessageElement):
     rct_dt_tm: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -216,7 +217,7 @@ class RecordTechnicalData5Auth01600103:
 
 
 @dataclass
-class SecuritiesTransactionTransmission2Auth01600103:
+class SecuritiesTransactionTransmission2Auth01600103(ISO20022MessageElement):
     trnsmssn_ind: Optional[bool] = field(
         default=None,
         metadata={
@@ -247,7 +248,7 @@ class SecuritiesTransactionTransmission2Auth01600103:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth01600103:
+class SupplementaryDataEnvelope1Auth01600103(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -258,7 +259,7 @@ class SupplementaryDataEnvelope1Auth01600103:
 
 
 @dataclass
-class AmountAndDirection53Auth01600103:
+class AmountAndDirection53Auth01600103(ISO20022MessageElement):
     amt: Optional[ActiveOrHistoricCurrencyAndAmountAuth01600103] = field(
         default=None,
         metadata={
@@ -279,7 +280,7 @@ class AmountAndDirection53Auth01600103:
 
 
 @dataclass
-class AmountAndDirection61Auth01600103:
+class AmountAndDirection61Auth01600103(ISO20022MessageElement):
     amt: Optional[ActiveCurrencyAnd13DecimalAmountAuth01600103] = field(
         default=None,
         metadata={
@@ -300,7 +301,7 @@ class AmountAndDirection61Auth01600103:
 
 
 @dataclass
-class AssetClassAttributes1Auth01600103:
+class AssetClassAttributes1Auth01600103(ISO20022MessageElement):
     intrst: Optional[DerivativeInterest2Auth01600103] = field(
         default=None,
         metadata={
@@ -322,7 +323,7 @@ class AssetClassAttributes1Auth01600103:
 
 
 @dataclass
-class BenchmarkCurveName5ChoiceAuth01600103:
+class BenchmarkCurveName5ChoiceAuth01600103(ISO20022MessageElement):
     indx: Optional[BenchmarkCurveName2Code] = field(
         default=None,
         metadata={
@@ -344,7 +345,7 @@ class BenchmarkCurveName5ChoiceAuth01600103:
 
 
 @dataclass
-class FinancialInstrumentQuantity25ChoiceAuth01600103:
+class FinancialInstrumentQuantity25ChoiceAuth01600103(ISO20022MessageElement):
     unit: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -374,7 +375,7 @@ class FinancialInstrumentQuantity25ChoiceAuth01600103:
 
 
 @dataclass
-class GenericPersonIdentification1Auth01600103:
+class GenericPersonIdentification1Auth01600103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -407,7 +408,7 @@ class GenericPersonIdentification1Auth01600103:
 
 
 @dataclass
-class InterestRateContractTerm2Auth01600103:
+class InterestRateContractTerm2Auth01600103(ISO20022MessageElement):
     unit: Optional[RateBasis1Code] = field(
         default=None,
         metadata={
@@ -431,7 +432,7 @@ class InterestRateContractTerm2Auth01600103:
 
 
 @dataclass
-class OtherIdentification1Auth01600103:
+class OtherIdentification1Auth01600103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -465,7 +466,7 @@ class OtherIdentification1Auth01600103:
 
 
 @dataclass
-class RecordTechnicalData2Auth01600103:
+class RecordTechnicalData2Auth01600103(ISO20022MessageElement):
     rct_dt_tm: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -487,7 +488,7 @@ class RecordTechnicalData2Auth01600103:
 
 
 @dataclass
-class SecuritiesTransactionIndicator2Auth01600103:
+class SecuritiesTransactionIndicator2Auth01600103(ISO20022MessageElement):
     wvr_ind: list[ReportingWaiverType1Code] = field(
         default_factory=list,
         metadata={
@@ -532,7 +533,7 @@ class SecuritiesTransactionIndicator2Auth01600103:
 
 
 @dataclass
-class SecuritiesTransactionPrice1Auth01600103:
+class SecuritiesTransactionPrice1Auth01600103(ISO20022MessageElement):
     pdg: Optional[PriceStatus1Code] = field(
         default=None,
         metadata={
@@ -554,7 +555,7 @@ class SecuritiesTransactionPrice1Auth01600103:
 
 
 @dataclass
-class SecuritiesTransactionPrice6Auth01600103:
+class SecuritiesTransactionPrice6Auth01600103(ISO20022MessageElement):
     pdg: Optional[PriceStatus1Code] = field(
         default=None,
         metadata={
@@ -584,7 +585,7 @@ class SecuritiesTransactionPrice6Auth01600103:
 
 
 @dataclass
-class SupplementaryData1Auth01600103:
+class SupplementaryData1Auth01600103(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -607,7 +608,7 @@ class SupplementaryData1Auth01600103:
 
 
 @dataclass
-class AssetClassAttributes1ChoiceAuth01600103:
+class AssetClassAttributes1ChoiceAuth01600103(ISO20022MessageElement):
     intrst: Optional[DerivativeInterest2Auth01600103] = field(
         default=None,
         metadata={
@@ -635,7 +636,7 @@ class AssetClassAttributes1ChoiceAuth01600103:
 
 
 @dataclass
-class FloatingInterestRate8Auth01600103:
+class FloatingInterestRate8Auth01600103(ISO20022MessageElement):
     ref_rate: Optional[BenchmarkCurveName5ChoiceAuth01600103] = field(
         default=None,
         metadata={
@@ -656,7 +657,7 @@ class FloatingInterestRate8Auth01600103:
 
 
 @dataclass
-class PersonIdentification10Auth01600103:
+class PersonIdentification10Auth01600103(ISO20022MessageElement):
     frst_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -700,7 +701,7 @@ class PersonIdentification10Auth01600103:
 
 
 @dataclass
-class PersonIdentification12Auth01600103:
+class PersonIdentification12Auth01600103(ISO20022MessageElement):
     ctry_of_brnch: Optional[str] = field(
         default=None,
         metadata={
@@ -723,7 +724,7 @@ class PersonIdentification12Auth01600103:
 
 
 @dataclass
-class SecuritiesTransactionPrice2ChoiceAuth01600103:
+class SecuritiesTransactionPrice2ChoiceAuth01600103(ISO20022MessageElement):
     mntry_val: Optional[AmountAndDirection61Auth01600103] = field(
         default=None,
         metadata={
@@ -765,7 +766,7 @@ class SecuritiesTransactionPrice2ChoiceAuth01600103:
 
 
 @dataclass
-class SecuritiesTransactionPrice7Auth01600103:
+class SecuritiesTransactionPrice7Auth01600103(ISO20022MessageElement):
     mntry_val: Optional[AmountAndDirection61Auth01600103] = field(
         default=None,
         metadata={
@@ -787,7 +788,7 @@ class SecuritiesTransactionPrice7Auth01600103:
 
 
 @dataclass
-class SecuritiesTransactionReport2Auth01600103:
+class SecuritiesTransactionReport2Auth01600103(ISO20022MessageElement):
     tx_id: Optional[str] = field(
         default=None,
         metadata={
@@ -838,7 +839,7 @@ class SecuritiesTransactionReport2Auth01600103:
 
 
 @dataclass
-class SecurityIdentification19Auth01600103:
+class SecurityIdentification19Auth01600103(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -869,7 +870,7 @@ class SecurityIdentification19Auth01600103:
 
 
 @dataclass
-class SecurityInstrumentDescription23Auth01600103:
+class SecurityInstrumentDescription23Auth01600103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -920,7 +921,7 @@ class SecurityInstrumentDescription23Auth01600103:
 
 
 @dataclass
-class ExecutingParty1ChoiceAuth01600103:
+class ExecutingParty1ChoiceAuth01600103(ISO20022MessageElement):
     prsn: Optional[PersonIdentification12Auth01600103] = field(
         default=None,
         metadata={
@@ -950,7 +951,7 @@ class ExecutingParty1ChoiceAuth01600103:
 
 
 @dataclass
-class FinancialInstrument58Auth01600103:
+class FinancialInstrument58Auth01600103(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -972,7 +973,7 @@ class FinancialInstrument58Auth01600103:
 
 
 @dataclass
-class InvestmentParty1ChoiceAuth01600103:
+class InvestmentParty1ChoiceAuth01600103(ISO20022MessageElement):
     prsn: Optional[PersonIdentification12Auth01600103] = field(
         default=None,
         metadata={
@@ -994,7 +995,7 @@ class InvestmentParty1ChoiceAuth01600103:
 
 
 @dataclass
-class PersonOrOrganisation1ChoiceAuth01600103:
+class PersonOrOrganisation1ChoiceAuth01600103(ISO20022MessageElement):
     lei: Optional[str] = field(
         default=None,
         metadata={
@@ -1032,7 +1033,7 @@ class PersonOrOrganisation1ChoiceAuth01600103:
 
 
 @dataclass
-class PersonOrOrganisation2ChoiceAuth01600103:
+class PersonOrOrganisation2ChoiceAuth01600103(ISO20022MessageElement):
     lei: Optional[str] = field(
         default=None,
         metadata={
@@ -1053,7 +1054,7 @@ class PersonOrOrganisation2ChoiceAuth01600103:
 
 
 @dataclass
-class SecuritiesTransactionPrice22ChoiceAuth01600103:
+class SecuritiesTransactionPrice22ChoiceAuth01600103(ISO20022MessageElement):
     pric: Optional[SecuritiesTransactionPrice2ChoiceAuth01600103] = field(
         default=None,
         metadata={
@@ -1081,7 +1082,7 @@ class SecuritiesTransactionPrice22ChoiceAuth01600103:
 
 
 @dataclass
-class SecuritiesTransactionPrice4ChoiceAuth01600103:
+class SecuritiesTransactionPrice4ChoiceAuth01600103(ISO20022MessageElement):
     pric: Optional[SecuritiesTransactionPrice2ChoiceAuth01600103] = field(
         default=None,
         metadata={
@@ -1101,7 +1102,7 @@ class SecuritiesTransactionPrice4ChoiceAuth01600103:
 
 
 @dataclass
-class BasketDescription3Auth01600103:
+class BasketDescription3Auth01600103(ISO20022MessageElement):
     isin: list[str] = field(
         default_factory=list,
         metadata={
@@ -1122,7 +1123,7 @@ class BasketDescription3Auth01600103:
 
 
 @dataclass
-class FinancialInstrumentIdentification6ChoiceAuth01600103:
+class FinancialInstrumentIdentification6ChoiceAuth01600103(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
@@ -1143,7 +1144,7 @@ class FinancialInstrumentIdentification6ChoiceAuth01600103:
 
 
 @dataclass
-class PartyIdentification76Auth01600103:
+class PartyIdentification76Auth01600103(ISO20022MessageElement):
     id: Optional[PersonOrOrganisation1ChoiceAuth01600103] = field(
         default=None,
         metadata={
@@ -1165,7 +1166,7 @@ class PartyIdentification76Auth01600103:
 
 
 @dataclass
-class SecuritiesTransaction3Auth01600103:
+class SecuritiesTransaction3Auth01600103(ISO20022MessageElement):
     trad_dt: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -1279,7 +1280,7 @@ class SecuritiesTransaction3Auth01600103:
 
 
 @dataclass
-class FinancialInstrumentIdentification7ChoiceAuth01600103:
+class FinancialInstrumentIdentification7ChoiceAuth01600103(ISO20022MessageElement):
     sngl: Optional[FinancialInstrumentIdentification6ChoiceAuth01600103] = field(
         default=None,
         metadata={
@@ -1299,7 +1300,7 @@ class FinancialInstrumentIdentification7ChoiceAuth01600103:
 
 
 @dataclass
-class PartyIdentification79Auth01600103:
+class PartyIdentification79Auth01600103(ISO20022MessageElement):
     acct_ownr: list[PartyIdentification76Auth01600103] = field(
         default_factory=list,
         metadata={
@@ -1320,7 +1321,7 @@ class PartyIdentification79Auth01600103:
 
 
 @dataclass
-class SwapLegIdentification2Auth01600103:
+class SwapLegIdentification2Auth01600103(ISO20022MessageElement):
     swp_in: Optional[FinancialInstrumentIdentification7ChoiceAuth01600103] = field(
         default=None,
         metadata={
@@ -1340,7 +1341,7 @@ class SwapLegIdentification2Auth01600103:
 
 
 @dataclass
-class UnderlyingIdentification2ChoiceAuth01600103:
+class UnderlyingIdentification2ChoiceAuth01600103(ISO20022MessageElement):
     swp: Optional[SwapLegIdentification2Auth01600103] = field(
         default=None,
         metadata={
@@ -1360,7 +1361,7 @@ class UnderlyingIdentification2ChoiceAuth01600103:
 
 
 @dataclass
-class DerivativeInstrument6Auth01600103:
+class DerivativeInstrument6Auth01600103(ISO20022MessageElement):
     xpry_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -1434,7 +1435,7 @@ class DerivativeInstrument6Auth01600103:
 
 
 @dataclass
-class SecurityInstrumentDescription22Auth01600103:
+class SecurityInstrumentDescription22Auth01600103(ISO20022MessageElement):
     fin_instrm_gnl_attrbts: Optional[SecurityInstrumentDescription23Auth01600103] = (
         field(
             default=None,
@@ -1466,7 +1467,7 @@ class SecurityInstrumentDescription22Auth01600103:
 
 
 @dataclass
-class FinancialInstrumentAttributes5ChoiceAuth01600103:
+class FinancialInstrumentAttributes5ChoiceAuth01600103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1495,7 +1496,7 @@ class FinancialInstrumentAttributes5ChoiceAuth01600103:
 
 
 @dataclass
-class SecuritiesTransactionReport7Auth01600103:
+class SecuritiesTransactionReport7Auth01600103(ISO20022MessageElement):
     tx_id: Optional[str] = field(
         default=None,
         metadata={
@@ -1626,7 +1627,7 @@ class SecuritiesTransactionReport7Auth01600103:
 
 
 @dataclass
-class ReportingTransactionType3ChoiceAuth01600103:
+class ReportingTransactionType3ChoiceAuth01600103(ISO20022MessageElement):
     new: Optional[SecuritiesTransactionReport7Auth01600103] = field(
         default=None,
         metadata={
@@ -1654,7 +1655,9 @@ class ReportingTransactionType3ChoiceAuth01600103:
 
 
 @dataclass
-class FinancialInstrumentReportingTransactionReportV03Auth01600103:
+class FinancialInstrumentReportingTransactionReportV03Auth01600103(
+    ISO20022MessageElement
+):
     tx: list[ReportingTransactionType3ChoiceAuth01600103] = field(
         default_factory=list,
         metadata={
@@ -1675,7 +1678,7 @@ class FinancialInstrumentReportingTransactionReportV03Auth01600103:
 
 
 @dataclass
-class Auth01600103:
+class Auth01600103(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.016.001.03"
 

@@ -3,11 +3,13 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
+
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:reda.050.001.01"
 
 
 @dataclass
-class AccountSchemeName1ChoiceReda05000101:
+class AccountSchemeName1ChoiceReda05000101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -31,7 +33,7 @@ class AccountSchemeName1ChoiceReda05000101:
 
 
 @dataclass
-class CashAccountType2ChoiceReda05000101:
+class CashAccountType2ChoiceReda05000101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -55,7 +57,7 @@ class CashAccountType2ChoiceReda05000101:
 
 
 @dataclass
-class DateAndDateTime2ChoiceReda05000101:
+class DateAndDateTime2ChoiceReda05000101(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -75,7 +77,7 @@ class DateAndDateTime2ChoiceReda05000101:
 
 
 @dataclass
-class GenericIdentification30Reda05000101:
+class GenericIdentification30Reda05000101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -110,7 +112,7 @@ class GenericIdentification30Reda05000101:
 
 
 @dataclass
-class MessageHeader1Reda05000101:
+class MessageHeader1Reda05000101(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
@@ -133,7 +135,7 @@ class MessageHeader1Reda05000101:
 
 
 @dataclass
-class ProxyAccountType1ChoiceReda05000101:
+class ProxyAccountType1ChoiceReda05000101(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
@@ -157,7 +159,7 @@ class ProxyAccountType1ChoiceReda05000101:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Reda05000101:
+class SupplementaryDataEnvelope1Reda05000101(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -168,7 +170,7 @@ class SupplementaryDataEnvelope1Reda05000101:
 
 
 @dataclass
-class AccountLinkUpdate2Reda05000101:
+class AccountLinkUpdate2Reda05000101(ISO20022MessageElement):
     vld_to: Optional[DateAndDateTime2ChoiceReda05000101] = field(
         default=None,
         metadata={
@@ -181,7 +183,7 @@ class AccountLinkUpdate2Reda05000101:
 
 
 @dataclass
-class BlockChainAddressWallet3Reda05000101:
+class BlockChainAddressWallet3Reda05000101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -214,7 +216,7 @@ class BlockChainAddressWallet3Reda05000101:
 
 
 @dataclass
-class GenericAccountIdentification1Reda05000101:
+class GenericAccountIdentification1Reda05000101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -247,7 +249,7 @@ class GenericAccountIdentification1Reda05000101:
 
 
 @dataclass
-class ProxyAccountIdentification1Reda05000101:
+class ProxyAccountIdentification1Reda05000101(ISO20022MessageElement):
     tp: Optional[ProxyAccountType1ChoiceReda05000101] = field(
         default=None,
         metadata={
@@ -270,7 +272,7 @@ class ProxyAccountIdentification1Reda05000101:
 
 
 @dataclass
-class SecuritiesAccount19Reda05000101:
+class SecuritiesAccount19Reda05000101(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -303,7 +305,7 @@ class SecuritiesAccount19Reda05000101:
 
 
 @dataclass
-class SupplementaryData1Reda05000101:
+class SupplementaryData1Reda05000101(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -326,7 +328,7 @@ class SupplementaryData1Reda05000101:
 
 
 @dataclass
-class AccountIdentification4ChoiceReda05000101:
+class AccountIdentification4ChoiceReda05000101(ISO20022MessageElement):
     iban: Optional[str] = field(
         default=None,
         metadata={
@@ -347,7 +349,7 @@ class AccountIdentification4ChoiceReda05000101:
 
 
 @dataclass
-class CashAccount38Reda05000101:
+class CashAccount38Reda05000101(ISO20022MessageElement):
     id: Optional[AccountIdentification4ChoiceReda05000101] = field(
         default=None,
         metadata={
@@ -395,7 +397,7 @@ class CashAccount38Reda05000101:
 
 
 @dataclass
-class AccountLink8Reda05000101:
+class AccountLink8Reda05000101(ISO20022MessageElement):
     scties_acct: Optional[SecuritiesAccount19Reda05000101] = field(
         default=None,
         metadata={
@@ -433,7 +435,7 @@ class AccountLink8Reda05000101:
 
 
 @dataclass
-class AccountLinkMaintenanceRequestV01Reda05000101:
+class AccountLinkMaintenanceRequestV01Reda05000101(ISO20022MessageElement):
     msg_hdr: Optional[MessageHeader1Reda05000101] = field(
         default=None,
         metadata={
@@ -471,7 +473,7 @@ class AccountLinkMaintenanceRequestV01Reda05000101:
 
 
 @dataclass
-class Reda05000101:
+class Reda05000101(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:reda.050.001.01"
 

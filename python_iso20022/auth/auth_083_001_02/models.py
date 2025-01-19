@@ -1,11 +1,13 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
+
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.083.001.02"
 
 
 @dataclass
-class AgreementType2ChoiceAuth08300102:
+class AgreementType2ChoiceAuth08300102(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -29,7 +31,7 @@ class AgreementType2ChoiceAuth08300102:
 
 
 @dataclass
-class GenericIdentification175Auth08300102:
+class GenericIdentification175Auth08300102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -64,7 +66,7 @@ class GenericIdentification175Auth08300102:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth08300102:
+class SupplementaryDataEnvelope1Auth08300102(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -75,7 +77,7 @@ class SupplementaryDataEnvelope1Auth08300102:
 
 
 @dataclass
-class MasterAgreement7Auth08300102:
+class MasterAgreement7Auth08300102(ISO20022MessageElement):
     tp: Optional[AgreementType2ChoiceAuth08300102] = field(
         default=None,
         metadata={
@@ -108,7 +110,7 @@ class MasterAgreement7Auth08300102:
 
 
 @dataclass
-class NaturalPersonIdentification2Auth08300102:
+class NaturalPersonIdentification2Auth08300102(ISO20022MessageElement):
     id: Optional[GenericIdentification175Auth08300102] = field(
         default=None,
         metadata={
@@ -141,7 +143,7 @@ class NaturalPersonIdentification2Auth08300102:
 
 
 @dataclass
-class OrganisationIdentification38Auth08300102:
+class OrganisationIdentification38Auth08300102(ISO20022MessageElement):
     id: Optional[GenericIdentification175Auth08300102] = field(
         default=None,
         metadata={
@@ -174,7 +176,7 @@ class OrganisationIdentification38Auth08300102:
 
 
 @dataclass
-class SupplementaryData1Auth08300102:
+class SupplementaryData1Auth08300102(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -197,7 +199,7 @@ class SupplementaryData1Auth08300102:
 
 
 @dataclass
-class OrganisationIdentification15ChoiceAuth08300102:
+class OrganisationIdentification15ChoiceAuth08300102(ISO20022MessageElement):
     lei: Optional[str] = field(
         default=None,
         metadata={
@@ -227,7 +229,7 @@ class OrganisationIdentification15ChoiceAuth08300102:
 
 
 @dataclass
-class PartyIdentification236ChoiceAuth08300102:
+class PartyIdentification236ChoiceAuth08300102(ISO20022MessageElement):
     lgl: Optional[OrganisationIdentification15ChoiceAuth08300102] = field(
         default=None,
         metadata={
@@ -247,7 +249,7 @@ class PartyIdentification236ChoiceAuth08300102:
 
 
 @dataclass
-class TradeTransactionIdentification18Auth08300102:
+class TradeTransactionIdentification18Auth08300102(ISO20022MessageElement):
     rptg_ctr_pty: Optional[OrganisationIdentification15ChoiceAuth08300102] = field(
         default=None,
         metadata={
@@ -287,7 +289,9 @@ class TradeTransactionIdentification18Auth08300102:
 
 
 @dataclass
-class SecuritiesFinancingReportingMissingCollateralRequestV02Auth08300102:
+class SecuritiesFinancingReportingMissingCollateralRequestV02Auth08300102(
+    ISO20022MessageElement
+):
     tx_id: list[TradeTransactionIdentification18Auth08300102] = field(
         default_factory=list,
         metadata={
@@ -308,7 +312,7 @@ class SecuritiesFinancingReportingMissingCollateralRequestV02Auth08300102:
 
 
 @dataclass
-class Auth08300102:
+class Auth08300102(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:auth.083.001.02"
 

@@ -4,6 +4,7 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
+from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     AddressType2Code,
     Algorithm7Code,
@@ -68,7 +69,7 @@ __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:casp.009.001.06"
 
 
 @dataclass
-class AddressVerification1Casp00900106:
+class AddressVerification1Casp00900106(ISO20022MessageElement):
     adr_dgts: Optional[str] = field(
         default=None,
         metadata={
@@ -90,7 +91,7 @@ class AddressVerification1Casp00900106:
 
 
 @dataclass
-class CriteriaOrder1Casp00900106:
+class CriteriaOrder1Casp00900106(ISO20022MessageElement):
     trgt: Optional[str] = field(
         default=None,
         metadata={
@@ -105,7 +106,7 @@ class CriteriaOrder1Casp00900106:
 
 
 @dataclass
-class CustomerDevice3Casp00900106:
+class CustomerDevice3Casp00900106(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -139,7 +140,7 @@ class CustomerDevice3Casp00900106:
 
 
 @dataclass
-class DateAndPlaceOfBirth1Casp00900106:
+class DateAndPlaceOfBirth1Casp00900106(ISO20022MessageElement):
     birth_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
@@ -183,7 +184,7 @@ class DateAndPlaceOfBirth1Casp00900106:
 
 
 @dataclass
-class GenericIdentification36Casp00900106:
+class GenericIdentification36Casp00900106(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -219,7 +220,7 @@ class GenericIdentification36Casp00900106:
 
 
 @dataclass
-class GenericIdentification4Casp00900106:
+class GenericIdentification4Casp00900106(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -245,7 +246,7 @@ class GenericIdentification4Casp00900106:
 
 
 @dataclass
-class GenericIdentification48Casp00900106:
+class GenericIdentification48Casp00900106(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -282,7 +283,7 @@ class GenericIdentification48Casp00900106:
 
 
 @dataclass
-class GenericInformation1Casp00900106:
+class GenericInformation1Casp00900106(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -307,7 +308,7 @@ class GenericInformation1Casp00900106:
 
 
 @dataclass
-class GeolocationGeographicCoordinates1Casp00900106:
+class GeolocationGeographicCoordinates1Casp00900106(ISO20022MessageElement):
     lat: Optional[str] = field(
         default=None,
         metadata={
@@ -333,7 +334,7 @@ class GeolocationGeographicCoordinates1Casp00900106:
 
 
 @dataclass
-class GeolocationUtmcoordinates1Casp00900106:
+class GeolocationUtmcoordinates1Casp00900106(ISO20022MessageElement):
     class Meta:
         name = "GeolocationUTMCoordinates1"
 
@@ -373,7 +374,7 @@ class GeolocationUtmcoordinates1Casp00900106:
 
 
 @dataclass
-class Kekidentifier7Casp00900106:
+class Kekidentifier7Casp00900106(ISO20022MessageElement):
     class Meta:
         name = "KEKIdentifier7"
 
@@ -423,7 +424,7 @@ class Kekidentifier7Casp00900106:
 
 
 @dataclass
-class MandateRelatedInformation13Casp00900106:
+class MandateRelatedInformation13Casp00900106(ISO20022MessageElement):
     mndt_id: Optional[str] = field(
         default=None,
         metadata={
@@ -457,7 +458,7 @@ class MandateRelatedInformation13Casp00900106:
 
 
 @dataclass
-class Organisation26Casp00900106:
+class Organisation26Casp00900106(ISO20022MessageElement):
     cmon_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -514,7 +515,7 @@ class Organisation26Casp00900106:
 
 
 @dataclass
-class OriginatorInformation1Casp00900106:
+class OriginatorInformation1Casp00900106(ISO20022MessageElement):
     cert: list[bytes] = field(
         default_factory=list,
         metadata={
@@ -529,7 +530,7 @@ class OriginatorInformation1Casp00900106:
 
 
 @dataclass
-class PaymentTokenIdentifiers1Casp00900106:
+class PaymentTokenIdentifiers1Casp00900106(ISO20022MessageElement):
     prvdr_id: Optional[str] = field(
         default=None,
         metadata={
@@ -555,7 +556,7 @@ class PaymentTokenIdentifiers1Casp00900106:
 
 
 @dataclass
-class PlainCardData22Casp00900106:
+class PlainCardData22Casp00900106(ISO20022MessageElement):
     pan: Optional[str] = field(
         default=None,
         metadata={
@@ -647,7 +648,7 @@ class PlainCardData22Casp00900106:
 
 
 @dataclass
-class PointOfInteractionComponentIdentification2Casp00900106:
+class PointOfInteractionComponentIdentification2Casp00900106(ISO20022MessageElement):
     itm_nb: Optional[str] = field(
         default=None,
         metadata={
@@ -691,7 +692,7 @@ class PointOfInteractionComponentIdentification2Casp00900106:
 
 
 @dataclass
-class PostalAddress2Casp00900106:
+class PostalAddress2Casp00900106(ISO20022MessageElement):
     strt_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -747,7 +748,7 @@ class PostalAddress2Casp00900106:
 
 
 @dataclass
-class SensitiveMobileData1Casp00900106:
+class SensitiveMobileData1Casp00900106(ISO20022MessageElement):
     msisdn: Optional[str] = field(
         default=None,
         metadata={
@@ -779,7 +780,7 @@ class SensitiveMobileData1Casp00900106:
 
 
 @dataclass
-class SimpleIdentificationInformation4Casp00900106:
+class SimpleIdentificationInformation4Casp00900106(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -794,7 +795,7 @@ class SimpleIdentificationInformation4Casp00900106:
 
 
 @dataclass
-class SupplementaryDataEnvelope1Casp00900106:
+class SupplementaryDataEnvelope1Casp00900106(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -805,7 +806,7 @@ class SupplementaryDataEnvelope1Casp00900106:
 
 
 @dataclass
-class Token1Casp00900106:
+class Token1Casp00900106(ISO20022MessageElement):
     pmt_tkn: Optional[str] = field(
         default=None,
         metadata={
@@ -863,7 +864,7 @@ class Token1Casp00900106:
 
 
 @dataclass
-class TotalFilter1Casp00900106:
+class TotalFilter1Casp00900106(ISO20022MessageElement):
     poiid: Optional[str] = field(
         default=None,
         metadata={
@@ -917,7 +918,7 @@ class TotalFilter1Casp00900106:
 
 
 @dataclass
-class AlgorithmIdentification36Casp00900106:
+class AlgorithmIdentification36Casp00900106(ISO20022MessageElement):
     algo: Optional[Algorithm26Code] = field(
         default=None,
         metadata={
@@ -930,7 +931,7 @@ class AlgorithmIdentification36Casp00900106:
 
 
 @dataclass
-class CashAccountIdentification7ChoiceCasp00900106:
+class CashAccountIdentification7ChoiceCasp00900106(ISO20022MessageElement):
     iban: Optional[str] = field(
         default=None,
         metadata={
@@ -969,7 +970,7 @@ class CashAccountIdentification7ChoiceCasp00900106:
 
 
 @dataclass
-class DisplayCapabilities4Casp00900106:
+class DisplayCapabilities4Casp00900106(ISO20022MessageElement):
     dstn: list[UserInterface4Code] = field(
         default_factory=list,
         metadata={
@@ -1018,7 +1019,7 @@ class DisplayCapabilities4Casp00900106:
 
 
 @dataclass
-class EncapsulatedContent3Casp00900106:
+class EncapsulatedContent3Casp00900106(ISO20022MessageElement):
     cntt_tp: Optional[ContentType2Code] = field(
         default=None,
         metadata={
@@ -1042,7 +1043,7 @@ class EncapsulatedContent3Casp00900106:
 
 
 @dataclass
-class GenericIdentification176Casp00900106:
+class GenericIdentification176Casp00900106(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1092,7 +1093,7 @@ class GenericIdentification176Casp00900106:
 
 
 @dataclass
-class GenericIdentification186Casp00900106:
+class GenericIdentification186Casp00900106(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1116,7 +1117,7 @@ class GenericIdentification186Casp00900106:
 
 
 @dataclass
-class GenericIdentification32Casp00900106:
+class GenericIdentification32Casp00900106(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1157,7 +1158,7 @@ class GenericIdentification32Casp00900106:
 
 
 @dataclass
-class Geolocation1Casp00900106:
+class Geolocation1Casp00900106(ISO20022MessageElement):
     geogc_cordints: Optional[GeolocationGeographicCoordinates1Casp00900106] = field(
         default=None,
         metadata={
@@ -1177,7 +1178,7 @@ class Geolocation1Casp00900106:
 
 
 @dataclass
-class LoyaltyAccount3Casp00900106:
+class LoyaltyAccount3Casp00900106(ISO20022MessageElement):
     llty_id: Optional[str] = field(
         default=None,
         metadata={
@@ -1266,7 +1267,7 @@ class LoyaltyAccount3Casp00900106:
 
 
 @dataclass
-class MemoryCharacteristics1Casp00900106:
+class MemoryCharacteristics1Casp00900106(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -1312,7 +1313,7 @@ class MemoryCharacteristics1Casp00900106:
 
 
 @dataclass
-class MerchantToken2Casp00900106:
+class MerchantToken2Casp00900106(ISO20022MessageElement):
     tkn: Optional[str] = field(
         default=None,
         metadata={
@@ -1392,7 +1393,7 @@ class MerchantToken2Casp00900106:
 
 
 @dataclass
-class NameAndAddress6Casp00900106:
+class NameAndAddress6Casp00900106(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1416,7 +1417,7 @@ class NameAndAddress6Casp00900106:
 
 
 @dataclass
-class NetworkParameters9Casp00900106:
+class NetworkParameters9Casp00900106(ISO20022MessageElement):
     ntwk_tp: Optional[NetworkType1Code] = field(
         default=None,
         metadata={
@@ -1440,7 +1441,7 @@ class NetworkParameters9Casp00900106:
 
 
 @dataclass
-class Parameter12Casp00900106:
+class Parameter12Casp00900106(ISO20022MessageElement):
     ncrptn_frmt: Optional[EncryptionFormat2Code] = field(
         default=None,
         metadata={
@@ -1471,7 +1472,7 @@ class Parameter12Casp00900106:
 
 
 @dataclass
-class Parameter18Casp00900106:
+class Parameter18Casp00900106(ISO20022MessageElement):
     dgst_algo: Optional[Algorithm26Code] = field(
         default=None,
         metadata={
@@ -1483,7 +1484,7 @@ class Parameter18Casp00900106:
 
 
 @dataclass
-class Parameter7Casp00900106:
+class Parameter7Casp00900106(ISO20022MessageElement):
     initlstn_vctr: Optional[bytes] = field(
         default=None,
         metadata={
@@ -1506,7 +1507,7 @@ class Parameter7Casp00900106:
 
 
 @dataclass
-class PaymentContext29Casp00900106:
+class PaymentContext29Casp00900106(ISO20022MessageElement):
     card_pres: Optional[bool] = field(
         default=None,
         metadata={
@@ -1606,7 +1607,7 @@ class PaymentContext29Casp00900106:
 
 
 @dataclass
-class PersonIdentification15Casp00900106:
+class PersonIdentification15Casp00900106(ISO20022MessageElement):
     drvr_lic_nb: Optional[str] = field(
         default=None,
         metadata={
@@ -1776,7 +1777,7 @@ class PersonIdentification15Casp00900106:
 
 
 @dataclass
-class PhysicalInterfaceParameter1Casp00900106:
+class PhysicalInterfaceParameter1Casp00900106(ISO20022MessageElement):
     intrfc_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -1841,7 +1842,7 @@ class PhysicalInterfaceParameter1Casp00900106:
 
 
 @dataclass
-class PlainCardData17Casp00900106:
+class PlainCardData17Casp00900106(ISO20022MessageElement):
     pan: Optional[str] = field(
         default=None,
         metadata={
@@ -1902,7 +1903,7 @@ class PlainCardData17Casp00900106:
 
 
 @dataclass
-class PointOfInteractionComponentAssessment1Casp00900106:
+class PointOfInteractionComponentAssessment1Casp00900106(ISO20022MessageElement):
     tp: Optional[PoicomponentAssessment1Code] = field(
         default=None,
         metadata={
@@ -1953,7 +1954,7 @@ class PointOfInteractionComponentAssessment1Casp00900106:
 
 
 @dataclass
-class PointOfInteractionComponentStatus3Casp00900106:
+class PointOfInteractionComponentStatus3Casp00900106(ISO20022MessageElement):
     vrsn_nb: Optional[str] = field(
         default=None,
         metadata={
@@ -1983,7 +1984,7 @@ class PointOfInteractionComponentStatus3Casp00900106:
 
 
 @dataclass
-class PostalAddress22Casp00900106:
+class PostalAddress22Casp00900106(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
@@ -2086,7 +2087,7 @@ class PostalAddress22Casp00900106:
 
 
 @dataclass
-class RelativeDistinguishedName1Casp00900106:
+class RelativeDistinguishedName1Casp00900106(ISO20022MessageElement):
     attr_tp: Optional[AttributeType1Code] = field(
         default=None,
         metadata={
@@ -2110,7 +2111,7 @@ class RelativeDistinguishedName1Casp00900106:
 
 
 @dataclass
-class ReportGetTotalsRequest1Casp00900106:
+class ReportGetTotalsRequest1Casp00900106(ISO20022MessageElement):
     ttl_dtls: Optional[TotalDetails1Code] = field(
         default=None,
         metadata={
@@ -2130,7 +2131,7 @@ class ReportGetTotalsRequest1Casp00900106:
 
 
 @dataclass
-class RetailerSaleEnvironment2Casp00900106:
+class RetailerSaleEnvironment2Casp00900106(ISO20022MessageElement):
     sale_cpblties: list[SaleCapabilities1Code] = field(
         default_factory=list,
         metadata={
@@ -2200,7 +2201,7 @@ class RetailerSaleEnvironment2Casp00900106:
 
 
 @dataclass
-class SaleContext4Casp00900106:
+class SaleContext4Casp00900106(ISO20022MessageElement):
     sale_id: Optional[str] = field(
         default=None,
         metadata={
@@ -2368,7 +2369,7 @@ class SaleContext4Casp00900106:
 
 
 @dataclass
-class SearchAnd1Casp00900106:
+class SearchAnd1Casp00900106(ISO20022MessageElement):
     trgt: Optional[str] = field(
         default=None,
         metadata={
@@ -2403,7 +2404,7 @@ class SearchAnd1Casp00900106:
 
 
 @dataclass
-class SearchOutputOrder1Casp00900106:
+class SearchOutputOrder1Casp00900106(ISO20022MessageElement):
     crit_ordr: list[CriteriaOrder1Casp00900106] = field(
         default_factory=list,
         metadata={
@@ -2416,7 +2417,7 @@ class SearchOutputOrder1Casp00900106:
 
 
 @dataclass
-class StoredValueAccount2Casp00900106:
+class StoredValueAccount2Casp00900106(ISO20022MessageElement):
     acct_tp: Optional[StoredValueAccountType1Code] = field(
         default=None,
         metadata={
@@ -2514,7 +2515,7 @@ class StoredValueAccount2Casp00900106:
 
 
 @dataclass
-class SupplementaryData1Casp00900106:
+class SupplementaryData1Casp00900106(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
@@ -2537,7 +2538,7 @@ class SupplementaryData1Casp00900106:
 
 
 @dataclass
-class TrackData2Casp00900106:
+class TrackData2Casp00900106(ISO20022MessageElement):
     trck_nb: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -2570,7 +2571,7 @@ class TrackData2Casp00900106:
 
 
 @dataclass
-class TransactionVerificationResult4Casp00900106:
+class TransactionVerificationResult4Casp00900106(ISO20022MessageElement):
     mtd: Optional[AuthenticationMethod6Code] = field(
         default=None,
         metadata={
@@ -2609,7 +2610,7 @@ class TransactionVerificationResult4Casp00900106:
 
 
 @dataclass
-class Vehicle2Casp00900106:
+class Vehicle2Casp00900106(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
@@ -2642,7 +2643,7 @@ class Vehicle2Casp00900106:
 
 
 @dataclass
-class AlgorithmIdentification31Casp00900106:
+class AlgorithmIdentification31Casp00900106(ISO20022MessageElement):
     algo: Optional[Algorithm27Code] = field(
         default=None,
         metadata={
@@ -2663,7 +2664,7 @@ class AlgorithmIdentification31Casp00900106:
 
 
 @dataclass
-class AlgorithmIdentification32Casp00900106:
+class AlgorithmIdentification32Casp00900106(ISO20022MessageElement):
     algo: Optional[Algorithm28Code] = field(
         default=None,
         metadata={
@@ -2684,7 +2685,7 @@ class AlgorithmIdentification32Casp00900106:
 
 
 @dataclass
-class AlgorithmIdentification34Casp00900106:
+class AlgorithmIdentification34Casp00900106(ISO20022MessageElement):
     algo: Optional[Algorithm8Code] = field(
         default=None,
         metadata={
@@ -2705,7 +2706,7 @@ class AlgorithmIdentification34Casp00900106:
 
 
 @dataclass
-class CertificateIssuer1Casp00900106:
+class CertificateIssuer1Casp00900106(ISO20022MessageElement):
     rltv_dstngshd_nm: list[RelativeDistinguishedName1Casp00900106] = field(
         default_factory=list,
         metadata={
@@ -2718,7 +2719,7 @@ class CertificateIssuer1Casp00900106:
 
 
 @dataclass
-class Check1Casp00900106:
+class Check1Casp00900106(ISO20022MessageElement):
     bk_id: Optional[str] = field(
         default=None,
         metadata={
@@ -2788,7 +2789,7 @@ class Check1Casp00900106:
 
 
 @dataclass
-class CommunicationAddress9Casp00900106:
+class CommunicationAddress9Casp00900106(ISO20022MessageElement):
     pstl_adr: Optional[PostalAddress22Casp00900106] = field(
         default=None,
         metadata={
@@ -2848,7 +2849,7 @@ class CommunicationAddress9Casp00900106:
 
 
 @dataclass
-class DigestedData6Casp00900106:
+class DigestedData6Casp00900106(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -2892,7 +2893,7 @@ class DigestedData6Casp00900106:
 
 
 @dataclass
-class NetworkParameters7Casp00900106:
+class NetworkParameters7Casp00900106(ISO20022MessageElement):
     adr: list[NetworkParameters9Casp00900106] = field(
         default_factory=list,
         metadata={
@@ -2969,7 +2970,7 @@ class NetworkParameters7Casp00900106:
 
 
 @dataclass
-class PartyIdentification178ChoiceCasp00900106:
+class PartyIdentification178ChoiceCasp00900106(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
@@ -2998,7 +2999,7 @@ class PartyIdentification178ChoiceCasp00900106:
 
 
 @dataclass
-class PointOfInteractionCapabilities9Casp00900106:
+class PointOfInteractionCapabilities9Casp00900106(ISO20022MessageElement):
     card_rdng_cpblties: list[CardDataReading8Code] = field(
         default_factory=list,
         metadata={
@@ -3075,7 +3076,7 @@ class PointOfInteractionCapabilities9Casp00900106:
 
 
 @dataclass
-class SearchOr1Casp00900106:
+class SearchOr1Casp00900106(ISO20022MessageElement):
     sch_and: list[SearchAnd1Casp00900106] = field(
         default_factory=list,
         metadata={
@@ -3088,7 +3089,7 @@ class SearchOr1Casp00900106:
 
 
 @dataclass
-class Vehicle1Casp00900106:
+class Vehicle1Casp00900106(ISO20022MessageElement):
     vhcl_nb: Optional[str] = field(
         default=None,
         metadata={
@@ -3211,7 +3212,7 @@ class Vehicle1Casp00900106:
 
 
 @dataclass
-class CommunicationCharacteristics5Casp00900106:
+class CommunicationCharacteristics5Casp00900106(ISO20022MessageElement):
     com_tp: Optional[PoicommunicationType2Code] = field(
         default=None,
         metadata={
@@ -3258,7 +3259,7 @@ class CommunicationCharacteristics5Casp00900106:
 
 
 @dataclass
-class Creditor4Casp00900106:
+class Creditor4Casp00900106(ISO20022MessageElement):
     cdtr: Optional[PartyIdentification178ChoiceCasp00900106] = field(
         default=None,
         metadata={
@@ -3281,7 +3282,7 @@ class Creditor4Casp00900106:
 
 
 @dataclass
-class Debtor4Casp00900106:
+class Debtor4Casp00900106(ISO20022MessageElement):
     dbtr: Optional[PartyIdentification178ChoiceCasp00900106] = field(
         default=None,
         metadata={
@@ -3301,7 +3302,7 @@ class Debtor4Casp00900106:
 
 
 @dataclass
-class EncryptedContent7Casp00900106:
+class EncryptedContent7Casp00900106(ISO20022MessageElement):
     cntt_tp: Optional[ContentType2Code] = field(
         default=None,
         metadata={
@@ -3334,7 +3335,7 @@ class EncryptedContent7Casp00900106:
 
 
 @dataclass
-class GenericIdentification177Casp00900106:
+class GenericIdentification177Casp00900106(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -3400,7 +3401,7 @@ class GenericIdentification177Casp00900106:
 
 
 @dataclass
-class IssuerAndSerialNumber2Casp00900106:
+class IssuerAndSerialNumber2Casp00900106(ISO20022MessageElement):
     issr: Optional[CertificateIssuer1Casp00900106] = field(
         default=None,
         metadata={
@@ -3425,7 +3426,7 @@ class IssuerAndSerialNumber2Casp00900106:
 
 
 @dataclass
-class Kek9Casp00900106:
+class Kek9Casp00900106(ISO20022MessageElement):
     class Meta:
         name = "KEK9"
 
@@ -3471,7 +3472,7 @@ class Kek9Casp00900106:
 
 
 @dataclass
-class Organisation41Casp00900106:
+class Organisation41Casp00900106(ISO20022MessageElement):
     id: Optional[GenericIdentification32Casp00900106] = field(
         default=None,
         metadata={
@@ -3519,7 +3520,7 @@ class Organisation41Casp00900106:
 
 
 @dataclass
-class Parameter16Casp00900106:
+class Parameter16Casp00900106(ISO20022MessageElement):
     dgst_algo: Optional[Algorithm26Code] = field(
         default=None,
         metadata={
@@ -3569,7 +3570,7 @@ class Parameter16Casp00900106:
 
 
 @dataclass
-class Parameter17Casp00900106:
+class Parameter17Casp00900106(ISO20022MessageElement):
     ncrptn_frmt: Optional[EncryptionFormat2Code] = field(
         default=None,
         metadata={
@@ -3597,7 +3598,7 @@ class Parameter17Casp00900106:
 
 
 @dataclass
-class SearchCriteria1Casp00900106:
+class SearchCriteria1Casp00900106(ISO20022MessageElement):
     sch_or: list[SearchOr1Casp00900106] = field(
         default_factory=list,
         metadata={
@@ -3610,7 +3611,7 @@ class SearchCriteria1Casp00900106:
 
 
 @dataclass
-class Acquirer10Casp00900106:
+class Acquirer10Casp00900106(ISO20022MessageElement):
     id: Optional[GenericIdentification177Casp00900106] = field(
         default=None,
         metadata={
@@ -3632,7 +3633,7 @@ class Acquirer10Casp00900106:
 
 
 @dataclass
-class AlgorithmIdentification33Casp00900106:
+class AlgorithmIdentification33Casp00900106(ISO20022MessageElement):
     algo: Optional[Algorithm29Code] = field(
         default=None,
         metadata={
@@ -3653,7 +3654,7 @@ class AlgorithmIdentification33Casp00900106:
 
 
 @dataclass
-class AlgorithmIdentification35Casp00900106:
+class AlgorithmIdentification35Casp00900106(ISO20022MessageElement):
     algo: Optional[Algorithm7Code] = field(
         default=None,
         metadata={
@@ -3674,7 +3675,7 @@ class AlgorithmIdentification35Casp00900106:
 
 
 @dataclass
-class CardDirectDebit2Casp00900106:
+class CardDirectDebit2Casp00900106(ISO20022MessageElement):
     dbtr_id: Optional[Debtor4Casp00900106] = field(
         default=None,
         metadata={
@@ -3704,7 +3705,7 @@ class CardDirectDebit2Casp00900106:
 
 
 @dataclass
-class Recipient13ChoiceCasp00900106:
+class Recipient13ChoiceCasp00900106(ISO20022MessageElement):
     issr_and_srl_nb: Optional[IssuerAndSerialNumber2Casp00900106] = field(
         default=None,
         metadata={
@@ -3727,7 +3728,7 @@ class Recipient13ChoiceCasp00900106:
 
 
 @dataclass
-class ReportTransactionRequest1Casp00900106:
+class ReportTransactionRequest1Casp00900106(ISO20022MessageElement):
     sch_crit: list[SearchCriteria1Casp00900106] = field(
         default_factory=list,
         metadata={
@@ -3778,7 +3779,7 @@ class ReportTransactionRequest1Casp00900106:
 
 
 @dataclass
-class Traceability8Casp00900106:
+class Traceability8Casp00900106(ISO20022MessageElement):
     rlay_id: Optional[GenericIdentification177Casp00900106] = field(
         default=None,
         metadata={
@@ -3829,7 +3830,7 @@ class Traceability8Casp00900106:
 
 
 @dataclass
-class CardPaymentContext30Casp00900106:
+class CardPaymentContext30Casp00900106(ISO20022MessageElement):
     pmt_cntxt: Optional[PaymentContext29Casp00900106] = field(
         default=None,
         metadata={
@@ -3857,7 +3858,7 @@ class CardPaymentContext30Casp00900106:
 
 
 @dataclass
-class Header41Casp00900106:
+class Header41Casp00900106(ISO20022MessageElement):
     msg_fctn: Optional[RetailerMessage1Code] = field(
         default=None,
         metadata={
@@ -3926,7 +3927,7 @@ class Header41Casp00900106:
 
 
 @dataclass
-class KeyTransport10Casp00900106:
+class KeyTransport10Casp00900106(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -3970,7 +3971,7 @@ class KeyTransport10Casp00900106:
 
 
 @dataclass
-class Signer8Casp00900106:
+class Signer8Casp00900106(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -4030,7 +4031,7 @@ class Signer8Casp00900106:
 
 
 @dataclass
-class Recipient15ChoiceCasp00900106:
+class Recipient15ChoiceCasp00900106(ISO20022MessageElement):
     key_trnsprt: Optional[KeyTransport10Casp00900106] = field(
         default=None,
         metadata={
@@ -4058,7 +4059,7 @@ class Recipient15ChoiceCasp00900106:
 
 
 @dataclass
-class SignedData9Casp00900106:
+class SignedData9Casp00900106(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -4107,7 +4108,7 @@ class SignedData9Casp00900106:
 
 
 @dataclass
-class AuthenticatedData10Casp00900106:
+class AuthenticatedData10Casp00900106(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -4160,7 +4161,7 @@ class AuthenticatedData10Casp00900106:
 
 
 @dataclass
-class EnvelopedData11Casp00900106:
+class EnvelopedData11Casp00900106(ISO20022MessageElement):
     vrsn: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -4199,7 +4200,7 @@ class EnvelopedData11Casp00900106:
 
 
 @dataclass
-class ContentInformationType38Casp00900106:
+class ContentInformationType38Casp00900106(ISO20022MessageElement):
     cntt_tp: Optional[ContentType2Code] = field(
         default=None,
         metadata={
@@ -4228,7 +4229,7 @@ class ContentInformationType38Casp00900106:
 
 
 @dataclass
-class ContentInformationType39Casp00900106:
+class ContentInformationType39Casp00900106(ISO20022MessageElement):
     cntt_tp: Optional[ContentType2Code] = field(
         default=None,
         metadata={
@@ -4273,7 +4274,7 @@ class ContentInformationType39Casp00900106:
 
 
 @dataclass
-class ContentInformationType40Casp00900106:
+class ContentInformationType40Casp00900106(ISO20022MessageElement):
     cntt_tp: Optional[ContentType2Code] = field(
         default=None,
         metadata={
@@ -4295,7 +4296,7 @@ class ContentInformationType40Casp00900106:
 
 
 @dataclass
-class CryptographicKey18Casp00900106:
+class CryptographicKey18Casp00900106(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -4437,7 +4438,7 @@ class CryptographicKey18Casp00900106:
 
 
 @dataclass
-class ExternallyDefinedData5Casp00900106:
+class ExternallyDefinedData5Casp00900106(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
@@ -4481,7 +4482,7 @@ class ExternallyDefinedData5Casp00900106:
 
 
 @dataclass
-class MobileData6Casp00900106:
+class MobileData6Casp00900106(ISO20022MessageElement):
     mob_ctry_cd: Optional[str] = field(
         default=None,
         metadata={
@@ -4537,7 +4538,7 @@ class MobileData6Casp00900106:
 
 
 @dataclass
-class OnLinePin11Casp00900106:
+class OnLinePin11Casp00900106(ISO20022MessageElement):
     class Meta:
         name = "OnLinePIN11"
 
@@ -4572,7 +4573,7 @@ class OnLinePin11Casp00900106:
 
 
 @dataclass
-class PaymentCard35Casp00900106:
+class PaymentCard35Casp00900106(ISO20022MessageElement):
     prtctd_card_data: Optional[ContentInformationType40Casp00900106] = field(
         default=None,
         metadata={
@@ -4726,7 +4727,7 @@ class PaymentCard35Casp00900106:
 
 
 @dataclass
-class CardholderAuthentication17Casp00900106:
+class CardholderAuthentication17Casp00900106(ISO20022MessageElement):
     authntcn_mtd: Optional[AuthenticationMethod8Code] = field(
         default=None,
         metadata={
@@ -4825,7 +4826,7 @@ class CardholderAuthentication17Casp00900106:
 
 
 @dataclass
-class PackageType5Casp00900106:
+class PackageType5Casp00900106(ISO20022MessageElement):
     packg_id: Optional[GenericIdentification176Casp00900106] = field(
         default=None,
         metadata={
@@ -4878,7 +4879,7 @@ class PackageType5Casp00900106:
 
 
 @dataclass
-class PointOfInteractionComponentCharacteristics10Casp00900106:
+class PointOfInteractionComponentCharacteristics10Casp00900106(ISO20022MessageElement):
     mmry: list[MemoryCharacteristics1Casp00900106] = field(
         default_factory=list,
         metadata={
@@ -4926,7 +4927,7 @@ class PointOfInteractionComponentCharacteristics10Casp00900106:
 
 
 @dataclass
-class Cardholder21Casp00900106:
+class Cardholder21Casp00900106(ISO20022MessageElement):
     id: Optional[PersonIdentification15Casp00900106] = field(
         default=None,
         metadata={
@@ -5024,7 +5025,7 @@ class Cardholder21Casp00900106:
 
 
 @dataclass
-class PointOfInteractionComponent15Casp00900106:
+class PointOfInteractionComponent15Casp00900106(ISO20022MessageElement):
     tp: Optional[PoicomponentType6Code] = field(
         default=None,
         metadata={
@@ -5096,7 +5097,7 @@ class PointOfInteractionComponent15Casp00900106:
 
 
 @dataclass
-class PointOfInteraction14Casp00900106:
+class PointOfInteraction14Casp00900106(ISO20022MessageElement):
     id: Optional[GenericIdentification177Casp00900106] = field(
         default=None,
         metadata={
@@ -5163,7 +5164,7 @@ class PointOfInteraction14Casp00900106:
 
 
 @dataclass
-class CardPaymentEnvironment80Casp00900106:
+class CardPaymentEnvironment80Casp00900106(ISO20022MessageElement):
     acqrr: Optional[Acquirer10Casp00900106] = field(
         default=None,
         metadata={
@@ -5287,7 +5288,7 @@ class CardPaymentEnvironment80Casp00900106:
 
 
 @dataclass
-class ReportRequest7Casp00900106:
+class ReportRequest7Casp00900106(ISO20022MessageElement):
     envt: Optional[CardPaymentEnvironment80Casp00900106] = field(
         default=None,
         metadata={
@@ -5342,7 +5343,7 @@ class ReportRequest7Casp00900106:
 
 
 @dataclass
-class SaleToPoireportRequestV06Casp00900106:
+class SaleToPoireportRequestV06Casp00900106(ISO20022MessageElement):
     class Meta:
         name = "SaleToPOIReportRequestV06"
 
@@ -5375,7 +5376,7 @@ class SaleToPoireportRequestV06Casp00900106:
 
 
 @dataclass
-class Casp00900106:
+class Casp00900106(ISO20022Message):
     class Meta:
         namespace = "urn:iso:std:iso:20022:tech:xsd:casp.009.001.06"
 
