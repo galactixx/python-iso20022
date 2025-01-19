@@ -36,8 +36,8 @@ class MessageSetImports:
     public_api_elements: List[cst.Element] = field(default_factory=list)
 
     def sort_all_imports(self) -> None:
-        self.imports.sort()
-        self.public_api_elements.sort()
+        self.imports.sort(key=lambda x: parse_import_module(x.body[0]))
+        self.public_api_elements.sort(key=lambda x: x.value.value)
 
     def add_import(self, path: Path, model_name: str) -> None:
         self.imports.append(
