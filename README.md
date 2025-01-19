@@ -1,5 +1,11 @@
 # python-iso20022
 
+[![PyPI version](https://img.shields.io/pypi/v/python-iso20022.svg)](https://pypi.org/project/python-iso20022/)
+[![Python versions](https://img.shields.io/pypi/pyversions/python-iso20022.svg)](https://pypi.org/project/python-iso20022/)
+[![License](https://img.shields.io/github/license/galactixx/python-iso20022.svg)](https://github.com/galactixx/python-iso20022/blob/main/LICENSE)
+![PyPI Downloads](https://static.pepy.tech/badge/python-iso20022/month)
+![PyPI Downloads](https://static.pepy.tech/badge/python-iso20022)
+
 A Python package that automatically generates and updates dataclasses from ISO20022 schemas daily, making it easy to integrate and validate financial message data.
 
 ## Features
