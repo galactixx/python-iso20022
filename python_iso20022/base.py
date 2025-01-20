@@ -30,7 +30,7 @@ class AbstractISO20022Model(ABC):
     def deep_copy(self: _Model) -> _Model:
         """Return a deep copy of the instance."""
         return copy.deepcopy(self)
-    
+
     def _render(self, pretty_print: bool, xml_declaration: bool) -> str:
         """Private method that renders the XML string."""
         serializer = AbstractISO20022Model._get_serializer(
@@ -43,7 +43,7 @@ class AbstractISO20022Model(ABC):
         """Private method to render the XML string a `XmlSerializer` object."""
         xml_string = serializer.render(self)
         return xml_string
-        
+
     @staticmethod
     def _get_serializer(
         pretty_print: bool, xml_declaration: bool = True
