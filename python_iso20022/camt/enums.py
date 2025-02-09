@@ -160,6 +160,12 @@ class LimitType3Code(Enum):
     EXGT = "EXGT"
 
 
+class LimitType4Code(Enum):
+    EXGT = "EXGT"
+    UCDT = "UCDT"
+    ACOL = "ACOL"
+
+
 class MemberStatus1Code(Enum):
     ENBL = "ENBL"
     DSBL = "DSBL"
