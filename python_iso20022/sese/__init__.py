@@ -55,8 +55,8 @@ from python_iso20022.sese.sese_039_001_06.models import Sese03900106
 from python_iso20022.sese.sese_039_002_06.models import Sese03900206
 from python_iso20022.sese.sese_040_001_04.models import Sese04000104
 from python_iso20022.sese.sese_040_002_04.models import Sese04000204
-from python_iso20022.sese.sese_041_001_01.models import Sese04100101
-from python_iso20022.sese.sese_042_001_01.models import Sese04200101
+from python_iso20022.sese.sese_041_001_02.models import Sese04100102
+from python_iso20022.sese.sese_042_001_02.models import Sese04200102
 
 __all__ = [
     "Sese00100109",
@@ -116,6 +116,6 @@ __all__ = [
     "Sese03900206",
     "Sese04000104",
     "Sese04000204",
-    "Sese04100101",
-    "Sese04200101",
+    "Sese04100102",
+    "Sese04200102",
 ]

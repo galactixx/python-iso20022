@@ -7,11 +7,11 @@ from xsdata.models.datatype import XmlDate, XmlDateTime
 from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.sese.enums import BuyInDeferral1Code, BuyInState1Code
 
-__NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01"
+__NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02"
 
 
 @dataclass
-class ActiveCurrencyAnd13DecimalAmountSese04100101(ISO20022MessageElement):
+class ActiveCurrencyAnd13DecimalAmountSese04100102(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -33,7 +33,7 @@ class ActiveCurrencyAnd13DecimalAmountSese04100101(ISO20022MessageElement):
 
 
 @dataclass
-class ActiveCurrencyAndAmountSese04100101(ISO20022MessageElement):
+class ActiveCurrencyAndAmountSese04100102(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -55,13 +55,13 @@ class ActiveCurrencyAndAmountSese04100101(ISO20022MessageElement):
 
 
 @dataclass
-class DateAndDateTime2ChoiceSese04100101(ISO20022MessageElement):
+class DateAndDateTime2ChoiceSese04100102(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "Dt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
         },
     )
     dt_tm: Optional[XmlDateTime] = field(
@@ -69,19 +69,19 @@ class DateAndDateTime2ChoiceSese04100101(ISO20022MessageElement):
         metadata={
             "name": "DtTm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
         },
     )
 
 
 @dataclass
-class FinancialInstrumentQuantity1ChoiceSese04100101(ISO20022MessageElement):
+class FinancialInstrumentQuantity1ChoiceSese04100102(ISO20022MessageElement):
     unit: Optional[Decimal] = field(
         default=None,
         metadata={
             "name": "Unit",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "total_digits": 18,
             "fraction_digits": 17,
         },
@@ -91,7 +91,7 @@ class FinancialInstrumentQuantity1ChoiceSese04100101(ISO20022MessageElement):
         metadata={
             "name": "FaceAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "min_inclusive": Decimal("0"),
             "total_digits": 18,
             "fraction_digits": 5,
@@ -102,7 +102,7 @@ class FinancialInstrumentQuantity1ChoiceSese04100101(ISO20022MessageElement):
         metadata={
             "name": "AmtsdVal",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "min_inclusive": Decimal("0"),
             "total_digits": 18,
             "fraction_digits": 5,
@@ -111,13 +111,13 @@ class FinancialInstrumentQuantity1ChoiceSese04100101(ISO20022MessageElement):
 
 
 @dataclass
-class GenericIdentification30Sese04100101(ISO20022MessageElement):
+class GenericIdentification30Sese04100102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "required": True,
             "pattern": r"[a-zA-Z0-9]{4}",
         },
@@ -127,7 +127,7 @@ class GenericIdentification30Sese04100101(ISO20022MessageElement):
         metadata={
             "name": "Issr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -138,7 +138,7 @@ class GenericIdentification30Sese04100101(ISO20022MessageElement):
         metadata={
             "name": "SchmeNm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "min_length": 1,
             "max_length": 35,
         },
@@ -146,13 +146,13 @@ class GenericIdentification30Sese04100101(ISO20022MessageElement):
 
 
 @dataclass
-class GenericIdentification36Sese04100101(ISO20022MessageElement):
+class GenericIdentification36Sese04100102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -163,7 +163,7 @@ class GenericIdentification36Sese04100101(ISO20022MessageElement):
         metadata={
             "name": "Issr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -174,7 +174,7 @@ class GenericIdentification36Sese04100101(ISO20022MessageElement):
         metadata={
             "name": "SchmeNm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "min_length": 1,
             "max_length": 35,
         },
@@ -182,13 +182,13 @@ class GenericIdentification36Sese04100101(ISO20022MessageElement):
 
 
 @dataclass
-class IdentificationSource3ChoiceSese04100101(ISO20022MessageElement):
+class IdentificationSource3ChoiceSese04100102(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "min_length": 1,
             "max_length": 4,
         },
@@ -198,7 +198,7 @@ class IdentificationSource3ChoiceSese04100101(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "min_length": 1,
             "max_length": 35,
         },
@@ -206,13 +206,13 @@ class IdentificationSource3ChoiceSese04100101(ISO20022MessageElement):
 
 
 @dataclass
-class References23Sese04100101(ISO20022MessageElement):
+class References31Sese04100102(ISO20022MessageElement):
     acct_ownr_tx_id: Optional[str] = field(
         default=None,
         metadata={
             "name": "AcctOwnrTxId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "min_length": 1,
             "max_length": 35,
         },
@@ -222,7 +222,7 @@ class References23Sese04100101(ISO20022MessageElement):
         metadata={
             "name": "AcctSvcrTxId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "min_length": 1,
             "max_length": 35,
         },
@@ -232,7 +232,7 @@ class References23Sese04100101(ISO20022MessageElement):
         metadata={
             "name": "MktInfrstrctrTxId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "min_length": 1,
             "max_length": 35,
         },
@@ -242,7 +242,7 @@ class References23Sese04100101(ISO20022MessageElement):
         metadata={
             "name": "PrcrTxId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "min_length": 1,
             "max_length": 35,
         },
@@ -252,7 +252,7 @@ class References23Sese04100101(ISO20022MessageElement):
         metadata={
             "name": "PoolId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "min_length": 1,
             "max_length": 35,
         },
@@ -262,7 +262,7 @@ class References23Sese04100101(ISO20022MessageElement):
         metadata={
             "name": "CmonId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "min_length": 1,
             "max_length": 35,
         },
@@ -272,15 +272,24 @@ class References23Sese04100101(ISO20022MessageElement):
         metadata={
             "name": "TradId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "min_length": 1,
-            "max_length": 52,
+            "max_length": 35,
+        },
+    )
+    unq_tx_idr: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "UnqTxIdr",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
+            "pattern": r"[A-Z0-9]{18}[0-9]{2}[A-Z0-9]{0,32}",
         },
     )
 
 
 @dataclass
-class SupplementaryDataEnvelope1Sese04100101(ISO20022MessageElement):
+class SupplementaryDataEnvelope1Sese04100102(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -291,13 +300,13 @@ class SupplementaryDataEnvelope1Sese04100101(ISO20022MessageElement):
 
 
 @dataclass
-class AmountAndDirection102Sese04100101(ISO20022MessageElement):
-    amt: Optional[ActiveCurrencyAndAmountSese04100101] = field(
+class AmountAndDirection102Sese04100102(ISO20022MessageElement):
+    amt: Optional[ActiveCurrencyAndAmountSese04100102] = field(
         default=None,
         metadata={
             "name": "Amt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "required": True,
         },
     )
@@ -306,20 +315,20 @@ class AmountAndDirection102Sese04100101(ISO20022MessageElement):
         metadata={
             "name": "Sgn",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "required": True,
         },
     )
 
 
 @dataclass
-class OtherIdentification1Sese04100101(ISO20022MessageElement):
+class OtherIdentification1Sese04100102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -330,84 +339,84 @@ class OtherIdentification1Sese04100101(ISO20022MessageElement):
         metadata={
             "name": "Sfx",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "min_length": 1,
             "max_length": 16,
         },
     )
-    tp: Optional[IdentificationSource3ChoiceSese04100101] = field(
+    tp: Optional[IdentificationSource3ChoiceSese04100102] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "required": True,
         },
     )
 
 
 @dataclass
-class PartyIdentification127ChoiceSese04100101(ISO20022MessageElement):
+class PartyIdentification127ChoiceSese04100102(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
             "name": "AnyBIC",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "pattern": r"[A-Z0-9]{4,4}[A-Z]{2,2}[A-Z0-9]{2,2}([A-Z0-9]{3,3}){0,1}",
         },
     )
-    prtry_id: Optional[GenericIdentification36Sese04100101] = field(
+    prtry_id: Optional[GenericIdentification36Sese04100102] = field(
         default=None,
         metadata={
             "name": "PrtryId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
         },
     )
 
 
 @dataclass
-class RateAndAmountFormat39ChoiceSese04100101(ISO20022MessageElement):
+class RateAndAmountFormat39ChoiceSese04100102(ISO20022MessageElement):
     rate: Optional[Decimal] = field(
         default=None,
         metadata={
             "name": "Rate",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "total_digits": 11,
             "fraction_digits": 10,
         },
     )
-    amt: Optional[ActiveCurrencyAnd13DecimalAmountSese04100101] = field(
+    amt: Optional[ActiveCurrencyAnd13DecimalAmountSese04100102] = field(
         default=None,
         metadata={
             "name": "Amt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
         },
     )
 
 
 @dataclass
-class SecuritiesAccount19Sese04100101(ISO20022MessageElement):
+class SecuritiesAccount19Sese04100102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "required": True,
             "min_length": 1,
             "max_length": 35,
         },
     )
-    tp: Optional[GenericIdentification30Sese04100101] = field(
+    tp: Optional[GenericIdentification30Sese04100102] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
         },
     )
     nm: Optional[str] = field(
@@ -415,7 +424,7 @@ class SecuritiesAccount19Sese04100101(ISO20022MessageElement):
         metadata={
             "name": "Nm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "min_length": 1,
             "max_length": 70,
         },
@@ -423,36 +432,36 @@ class SecuritiesAccount19Sese04100101(ISO20022MessageElement):
 
 
 @dataclass
-class SupplementaryData1Sese04100101(ISO20022MessageElement):
+class SupplementaryData1Sese04100102(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
             "name": "PlcAndNm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "min_length": 1,
             "max_length": 350,
         },
     )
-    envlp: Optional[SupplementaryDataEnvelope1Sese04100101] = field(
+    envlp: Optional[SupplementaryDataEnvelope1Sese04100102] = field(
         default=None,
         metadata={
             "name": "Envlp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "required": True,
         },
     )
 
 
 @dataclass
-class PartyIdentification144Sese04100101(ISO20022MessageElement):
-    id: Optional[PartyIdentification127ChoiceSese04100101] = field(
+class PartyIdentification144Sese04100102(ISO20022MessageElement):
+    id: Optional[PartyIdentification127ChoiceSese04100102] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "required": True,
         },
     )
@@ -461,29 +470,29 @@ class PartyIdentification144Sese04100101(ISO20022MessageElement):
         metadata={
             "name": "LEI",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "pattern": r"[A-Z0-9]{18,18}[0-9]{2,2}",
         },
     )
 
 
 @dataclass
-class SecurityIdentification19Sese04100101(ISO20022MessageElement):
+class SecurityIdentification19Sese04100102(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
             "name": "ISIN",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "pattern": r"[A-Z]{2,2}[A-Z0-9]{9,9}[0-9]{1,1}",
         },
     )
-    othr_id: list[OtherIdentification1Sese04100101] = field(
+    othr_id: list[OtherIdentification1Sese04100102] = field(
         default_factory=list,
         metadata={
             "name": "OthrId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
         },
     )
     desc: Optional[str] = field(
@@ -491,7 +500,7 @@ class SecurityIdentification19Sese04100101(ISO20022MessageElement):
         metadata={
             "name": "Desc",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "min_length": 1,
             "max_length": 140,
         },
@@ -499,13 +508,13 @@ class SecurityIdentification19Sese04100101(ISO20022MessageElement):
 
 
 @dataclass
-class BuyInAdviceDetails1Sese04100101(ISO20022MessageElement):
-    ref: Optional[References23Sese04100101] = field(
+class BuyInAdviceDetails2Sese04100102(ISO20022MessageElement):
+    ref: Optional[References31Sese04100102] = field(
         default=None,
         metadata={
             "name": "Ref",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "required": True,
         },
     )
@@ -514,7 +523,7 @@ class BuyInAdviceDetails1Sese04100101(ISO20022MessageElement):
         metadata={
             "name": "BuyInStat",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "required": True,
         },
     )
@@ -523,96 +532,96 @@ class BuyInAdviceDetails1Sese04100101(ISO20022MessageElement):
         metadata={
             "name": "BuyInDfrrl",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "required": True,
         },
     )
-    fin_instrm_id: Optional[SecurityIdentification19Sese04100101] = field(
+    fin_instrm_id: Optional[SecurityIdentification19Sese04100102] = field(
         default=None,
         metadata={
             "name": "FinInstrmId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
         },
     )
-    qty: Optional[FinancialInstrumentQuantity1ChoiceSese04100101] = field(
+    qty: Optional[FinancialInstrumentQuantity1ChoiceSese04100102] = field(
         default=None,
         metadata={
             "name": "Qty",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
         },
     )
-    buy_in_pric: Optional[RateAndAmountFormat39ChoiceSese04100101] = field(
+    buy_in_pric: Optional[RateAndAmountFormat39ChoiceSese04100102] = field(
         default=None,
         metadata={
             "name": "BuyInPric",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
         },
     )
-    csh_compstn_amt: Optional[AmountAndDirection102Sese04100101] = field(
+    csh_compstn_amt: Optional[AmountAndDirection102Sese04100102] = field(
         default=None,
         metadata={
             "name": "CshCompstnAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
         },
     )
-    buy_in_sttlm_dt: Optional[DateAndDateTime2ChoiceSese04100101] = field(
+    buy_in_sttlm_dt: Optional[DateAndDateTime2ChoiceSese04100102] = field(
         default=None,
         metadata={
             "name": "BuyInSttlmDt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
         },
     )
 
 
 @dataclass
-class BuyInRegulatoryAdviceV01Sese04100101(ISO20022MessageElement):
-    acct_ownr: Optional[PartyIdentification144Sese04100101] = field(
+class BuyInRegulatoryAdviceV02Sese04100102(ISO20022MessageElement):
+    acct_ownr: Optional[PartyIdentification144Sese04100102] = field(
         default=None,
         metadata={
             "name": "AcctOwnr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
         },
     )
-    sfkpg_acct: Optional[SecuritiesAccount19Sese04100101] = field(
+    sfkpg_acct: Optional[SecuritiesAccount19Sese04100102] = field(
         default=None,
         metadata={
             "name": "SfkpgAcct",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "required": True,
         },
     )
-    buy_in_attrbts: list[BuyInAdviceDetails1Sese04100101] = field(
+    buy_in_attrbts: list[BuyInAdviceDetails2Sese04100102] = field(
         default_factory=list,
         metadata={
             "name": "BuyInAttrbts",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
             "min_occurs": 1,
         },
     )
-    splmtry_data: list[SupplementaryData1Sese04100101] = field(
+    splmtry_data: list[SupplementaryData1Sese04100102] = field(
         default_factory=list,
         metadata={
             "name": "SplmtryData",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02",
         },
     )
 
 
 @dataclass
-class Sese04100101(ISO20022Message):
+class Sese04100102(ISO20022Message):
     class Meta:
-        namespace = "urn:iso:std:iso:20022:tech:xsd:sese.041.001.01"
+        namespace = "urn:iso:std:iso:20022:tech:xsd:sese.041.001.02"
 
-    buy_in_rgltry_advc: Optional[BuyInRegulatoryAdviceV01Sese04100101] = field(
+    buy_in_rgltry_advc: Optional[BuyInRegulatoryAdviceV02Sese04100102] = field(
         default=None,
         metadata={
             "name": "BuyInRgltryAdvc",

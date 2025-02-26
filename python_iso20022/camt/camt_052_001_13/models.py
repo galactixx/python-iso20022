@@ -38,17 +38,17 @@ from python_iso20022.enums import (
     UnitOfMeasure1Code,
 )
 
-__NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12"
+__NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13"
 
 
 @dataclass
-class AccountSchemeName1ChoiceCamt05200112(ISO20022MessageElement):
+class AccountSchemeName1ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
@@ -58,7 +58,7 @@ class AccountSchemeName1ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -66,7 +66,7 @@ class AccountSchemeName1ChoiceCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class ActiveCurrencyAndAmountCamt05200112(ISO20022MessageElement):
+class ActiveCurrencyAndAmountCamt05200113(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -88,7 +88,7 @@ class ActiveCurrencyAndAmountCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class ActiveOrHistoricCurrencyAnd13DecimalAmountCamt05200112(ISO20022MessageElement):
+class ActiveOrHistoricCurrencyAnd13DecimalAmountCamt05200113(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -110,7 +110,7 @@ class ActiveOrHistoricCurrencyAnd13DecimalAmountCamt05200112(ISO20022MessageElem
 
 
 @dataclass
-class ActiveOrHistoricCurrencyAndAmountCamt05200112(ISO20022MessageElement):
+class ActiveOrHistoricCurrencyAndAmountCamt05200113(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -132,13 +132,13 @@ class ActiveOrHistoricCurrencyAndAmountCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class AmountRangeBoundary1Camt05200112(ISO20022MessageElement):
+class AmountRangeBoundary1Camt05200113(ISO20022MessageElement):
     bdry_amt: Optional[Decimal] = field(
         default=None,
         metadata={
             "name": "BdryAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_inclusive": Decimal("0"),
             "total_digits": 18,
@@ -150,20 +150,20 @@ class AmountRangeBoundary1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Incl",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
 
 
 @dataclass
-class BalanceSubType1ChoiceCamt05200112(ISO20022MessageElement):
+class BalanceSubType1ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
@@ -173,7 +173,7 @@ class BalanceSubType1ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -181,13 +181,13 @@ class BalanceSubType1ChoiceCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class BalanceType10ChoiceCamt05200112(ISO20022MessageElement):
+class BalanceType10ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
@@ -197,7 +197,7 @@ class BalanceType10ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -205,13 +205,13 @@ class BalanceType10ChoiceCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class BankTransactionCodeStructure6Camt05200112(ISO20022MessageElement):
+class BankTransactionCodeStructure6Camt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 4,
@@ -222,7 +222,7 @@ class BankTransactionCodeStructure6Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "SubFmlyCd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 4,
@@ -231,13 +231,13 @@ class BankTransactionCodeStructure6Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class CardSequenceNumberRange1Camt05200112(ISO20022MessageElement):
+class CardSequenceNumberRange1Camt05200113(ISO20022MessageElement):
     frst_tx: Optional[str] = field(
         default=None,
         metadata={
             "name": "FrstTx",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -247,7 +247,7 @@ class CardSequenceNumberRange1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "LastTx",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -255,13 +255,13 @@ class CardSequenceNumberRange1Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class CashAccountType2ChoiceCamt05200112(ISO20022MessageElement):
+class CashAccountType2ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
@@ -271,7 +271,7 @@ class CashAccountType2ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -279,13 +279,13 @@ class CashAccountType2ChoiceCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class CashAvailabilityDate1ChoiceCamt05200112(ISO20022MessageElement):
+class CashAvailabilityDate1ChoiceCamt05200113(ISO20022MessageElement):
     nb_of_days: Optional[str] = field(
         default=None,
         metadata={
             "name": "NbOfDays",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"[\+]{0,1}[0-9]{1,15}",
         },
     )
@@ -294,19 +294,19 @@ class CashAvailabilityDate1ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "ActlDt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class CategoryPurpose1ChoiceCamt05200112(ISO20022MessageElement):
+class CategoryPurpose1ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
@@ -316,7 +316,7 @@ class CategoryPurpose1ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -324,13 +324,13 @@ class CategoryPurpose1ChoiceCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class ClearingSystemIdentification2ChoiceCamt05200112(ISO20022MessageElement):
+class ClearingSystemIdentification2ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 5,
         },
@@ -340,7 +340,7 @@ class ClearingSystemIdentification2ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -348,39 +348,13 @@ class ClearingSystemIdentification2ChoiceCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class CorporateAction9Camt05200112(ISO20022MessageElement):
-    evt_tp: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "EvtTp",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
-            "required": True,
-            "min_length": 1,
-            "max_length": 35,
-        },
-    )
-    evt_id: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "EvtId",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
-            "required": True,
-            "min_length": 1,
-            "max_length": 35,
-        },
-    )
-
-
-@dataclass
-class CreditLineType1ChoiceCamt05200112(ISO20022MessageElement):
+class CreditLineType1ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
@@ -390,7 +364,7 @@ class CreditLineType1ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -398,13 +372,13 @@ class CreditLineType1ChoiceCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class CreditorReferenceType2ChoiceCamt05200112(ISO20022MessageElement):
+class CreditorReferenceType2ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
@@ -414,7 +388,7 @@ class CreditorReferenceType2ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -422,13 +396,13 @@ class CreditorReferenceType2ChoiceCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class CurrencyExchange24Camt05200112(ISO20022MessageElement):
+class CurrencyExchange24Camt05200113(ISO20022MessageElement):
     src_ccy: Optional[str] = field(
         default=None,
         metadata={
             "name": "SrcCcy",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "pattern": r"[A-Z]{3,3}",
         },
@@ -438,7 +412,7 @@ class CurrencyExchange24Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "TrgtCcy",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"[A-Z]{3,3}",
         },
     )
@@ -447,7 +421,7 @@ class CurrencyExchange24Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "UnitCcy",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"[A-Z]{3,3}",
         },
     )
@@ -456,7 +430,7 @@ class CurrencyExchange24Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "XchgRate",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "total_digits": 11,
             "fraction_digits": 10,
@@ -467,7 +441,7 @@ class CurrencyExchange24Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "CtrctId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -477,7 +451,7 @@ class CurrencyExchange24Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "QtnDt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     xchg_rate_base: Optional[Decimal] = field(
@@ -485,7 +459,7 @@ class CurrencyExchange24Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "XchgRateBase",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_inclusive": Decimal("1"),
             "total_digits": 18,
             "fraction_digits": 0,
@@ -494,13 +468,13 @@ class CurrencyExchange24Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class DateAndDateTime2ChoiceCamt05200112(ISO20022MessageElement):
+class DateAndDateTime2ChoiceCamt05200113(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "Dt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     dt_tm: Optional[XmlDateTime] = field(
@@ -508,19 +482,19 @@ class DateAndDateTime2ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "DtTm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class DateAndPlaceOfBirth1Camt05200112(ISO20022MessageElement):
+class DateAndPlaceOfBirth1Camt05200113(ISO20022MessageElement):
     birth_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "BirthDt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
@@ -529,7 +503,7 @@ class DateAndPlaceOfBirth1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "PrvcOfBirth",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -539,7 +513,7 @@ class DateAndPlaceOfBirth1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "CityOfBirth",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -550,7 +524,7 @@ class DateAndPlaceOfBirth1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "CtryOfBirth",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "pattern": r"[A-Z]{2,2}",
         },
@@ -558,13 +532,13 @@ class DateAndPlaceOfBirth1Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class DatePeriod2Camt05200112(ISO20022MessageElement):
+class DatePeriod2Camt05200113(ISO20022MessageElement):
     fr_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "FrDt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
@@ -573,20 +547,20 @@ class DatePeriod2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "ToDt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
 
 
 @dataclass
-class DateTimePeriod1Camt05200112(ISO20022MessageElement):
+class DateTimePeriod1Camt05200113(ISO20022MessageElement):
     fr_dt_tm: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "FrDtTm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
@@ -595,20 +569,20 @@ class DateTimePeriod1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "ToDtTm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
 
 
 @dataclass
-class DateType2ChoiceCamt05200112(ISO20022MessageElement):
+class DateType2ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
@@ -618,7 +592,7 @@ class DateType2ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -626,13 +600,13 @@ class DateType2ChoiceCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class DocumentAmountType1ChoiceCamt05200112(ISO20022MessageElement):
+class DocumentAmountType1ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
@@ -642,7 +616,7 @@ class DocumentAmountType1ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -650,13 +624,13 @@ class DocumentAmountType1ChoiceCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class DocumentLineType1ChoiceCamt05200112(ISO20022MessageElement):
+class DocumentLineType1ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
@@ -666,7 +640,7 @@ class DocumentLineType1ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -674,13 +648,13 @@ class DocumentLineType1ChoiceCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class DocumentType2ChoiceCamt05200112(ISO20022MessageElement):
+class DocumentType2ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
@@ -690,7 +664,7 @@ class DocumentType2ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -698,13 +672,13 @@ class DocumentType2ChoiceCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class EntryStatus1ChoiceCamt05200112(ISO20022MessageElement):
+class EntryStatus1ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
@@ -714,7 +688,7 @@ class EntryStatus1ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -722,13 +696,13 @@ class EntryStatus1ChoiceCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class FinancialIdentificationSchemeName1ChoiceCamt05200112(ISO20022MessageElement):
+class FinancialIdentificationSchemeName1ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
@@ -738,7 +712,7 @@ class FinancialIdentificationSchemeName1ChoiceCamt05200112(ISO20022MessageElemen
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -746,13 +720,13 @@ class FinancialIdentificationSchemeName1ChoiceCamt05200112(ISO20022MessageElemen
 
 
 @dataclass
-class FinancialInstrumentQuantity1ChoiceCamt05200112(ISO20022MessageElement):
+class FinancialInstrumentQuantity33ChoiceCamt05200113(ISO20022MessageElement):
     unit: Optional[Decimal] = field(
         default=None,
         metadata={
             "name": "Unit",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "total_digits": 18,
             "fraction_digits": 17,
         },
@@ -762,7 +736,7 @@ class FinancialInstrumentQuantity1ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "FaceAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_inclusive": Decimal("0"),
             "total_digits": 18,
             "fraction_digits": 5,
@@ -773,22 +747,32 @@ class FinancialInstrumentQuantity1ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "AmtsdVal",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_inclusive": Decimal("0"),
             "total_digits": 18,
             "fraction_digits": 5,
         },
     )
+    dgtl_tkn_unit: Optional[Decimal] = field(
+        default=None,
+        metadata={
+            "name": "DgtlTknUnit",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+            "total_digits": 30,
+            "fraction_digits": 29,
+        },
+    )
 
 
 @dataclass
-class GarnishmentType1ChoiceCamt05200112(ISO20022MessageElement):
+class GarnishmentType1ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
@@ -798,7 +782,7 @@ class GarnishmentType1ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -806,13 +790,13 @@ class GarnishmentType1ChoiceCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class GenericIdentification1Camt05200112(ISO20022MessageElement):
+class GenericIdentification1Camt05200113(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -823,7 +807,7 @@ class GenericIdentification1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "SchmeNm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -833,7 +817,7 @@ class GenericIdentification1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Issr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -841,13 +825,13 @@ class GenericIdentification1Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class GenericIdentification3Camt05200112(ISO20022MessageElement):
+class GenericIdentification3Camt05200113(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -858,7 +842,7 @@ class GenericIdentification3Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Issr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -866,13 +850,13 @@ class GenericIdentification3Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class GenericIdentification30Camt05200112(ISO20022MessageElement):
+class GenericIdentification30Camt05200113(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "pattern": r"[a-zA-Z0-9]{4}",
         },
@@ -882,7 +866,7 @@ class GenericIdentification30Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Issr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -893,7 +877,7 @@ class GenericIdentification30Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "SchmeNm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -901,13 +885,13 @@ class GenericIdentification30Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class IdentificationSource3ChoiceCamt05200112(ISO20022MessageElement):
+class IdentificationSource3ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
@@ -917,7 +901,7 @@ class IdentificationSource3ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -925,13 +909,13 @@ class IdentificationSource3ChoiceCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class LocalInstrument2ChoiceCamt05200112(ISO20022MessageElement):
+class LocalInstrument2ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -941,7 +925,7 @@ class LocalInstrument2ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -949,13 +933,13 @@ class LocalInstrument2ChoiceCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class MessageIdentification2Camt05200112(ISO20022MessageElement):
+class MessageIdentification2Camt05200113(ISO20022MessageElement):
     msg_nm_id: Optional[str] = field(
         default=None,
         metadata={
             "name": "MsgNmId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -965,7 +949,7 @@ class MessageIdentification2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "MsgId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -973,13 +957,13 @@ class MessageIdentification2Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class NumberAndSumOfTransactions1Camt05200112(ISO20022MessageElement):
+class NumberAndSumOfTransactions1Camt05200113(ISO20022MessageElement):
     nb_of_ntries: Optional[str] = field(
         default=None,
         metadata={
             "name": "NbOfNtries",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"[0-9]{1,15}",
         },
     )
@@ -988,7 +972,7 @@ class NumberAndSumOfTransactions1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Sum",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "total_digits": 18,
             "fraction_digits": 17,
         },
@@ -996,13 +980,13 @@ class NumberAndSumOfTransactions1Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class OrganisationIdentificationSchemeName1ChoiceCamt05200112(ISO20022MessageElement):
+class OrganisationIdentificationSchemeName1ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
@@ -1012,7 +996,7 @@ class OrganisationIdentificationSchemeName1ChoiceCamt05200112(ISO20022MessageEle
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -1020,13 +1004,13 @@ class OrganisationIdentificationSchemeName1ChoiceCamt05200112(ISO20022MessageEle
 
 
 @dataclass
-class OriginalAndCurrentQuantities1Camt05200112(ISO20022MessageElement):
+class OriginalAndCurrentQuantities1Camt05200113(ISO20022MessageElement):
     face_amt: Optional[Decimal] = field(
         default=None,
         metadata={
             "name": "FaceAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_inclusive": Decimal("0"),
             "total_digits": 18,
@@ -1038,7 +1022,7 @@ class OriginalAndCurrentQuantities1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "AmtsdVal",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_inclusive": Decimal("0"),
             "total_digits": 18,
@@ -1048,13 +1032,13 @@ class OriginalAndCurrentQuantities1Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class OriginalBusinessQuery1Camt05200112(ISO20022MessageElement):
+class OriginalBusinessQuery1Camt05200113(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
             "name": "MsgId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -1065,7 +1049,7 @@ class OriginalBusinessQuery1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "MsgNmId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -1075,19 +1059,19 @@ class OriginalBusinessQuery1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "CreDtTm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class OtherContact1Camt05200112(ISO20022MessageElement):
+class OtherContact1Camt05200113(ISO20022MessageElement):
     chanl_tp: Optional[str] = field(
         default=None,
         metadata={
             "name": "ChanlTp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 4,
@@ -1098,7 +1082,7 @@ class OtherContact1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 128,
         },
@@ -1106,13 +1090,13 @@ class OtherContact1Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class Pagination1Camt05200112(ISO20022MessageElement):
+class Pagination1Camt05200113(ISO20022MessageElement):
     pg_nb: Optional[str] = field(
         default=None,
         metadata={
             "name": "PgNb",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "pattern": r"[0-9]{1,5}",
         },
@@ -1122,20 +1106,20 @@ class Pagination1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "LastPgInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
 
 
 @dataclass
-class PersonIdentificationSchemeName1ChoiceCamt05200112(ISO20022MessageElement):
+class PersonIdentificationSchemeName1ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
@@ -1145,7 +1129,7 @@ class PersonIdentificationSchemeName1ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -1153,13 +1137,13 @@ class PersonIdentificationSchemeName1ChoiceCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class ProprietaryBankTransactionCodeStructure1Camt05200112(ISO20022MessageElement):
+class ProprietaryBankTransactionCodeStructure1Camt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -1170,7 +1154,7 @@ class ProprietaryBankTransactionCodeStructure1Camt05200112(ISO20022MessageElemen
         metadata={
             "name": "Issr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -1178,13 +1162,13 @@ class ProprietaryBankTransactionCodeStructure1Camt05200112(ISO20022MessageElemen
 
 
 @dataclass
-class ProprietaryQuantity1Camt05200112(ISO20022MessageElement):
+class ProprietaryQuantity1Camt05200113(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -1195,7 +1179,7 @@ class ProprietaryQuantity1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Qty",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -1204,13 +1188,13 @@ class ProprietaryQuantity1Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class ProprietaryReference1Camt05200112(ISO20022MessageElement):
+class ProprietaryReference1Camt05200113(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -1221,7 +1205,7 @@ class ProprietaryReference1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Ref",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -1230,13 +1214,13 @@ class ProprietaryReference1Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class ProxyAccountType1ChoiceCamt05200112(ISO20022MessageElement):
+class ProxyAccountType1ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
@@ -1246,7 +1230,7 @@ class ProxyAccountType1ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -1254,13 +1238,13 @@ class ProxyAccountType1ChoiceCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class Purpose2ChoiceCamt05200112(ISO20022MessageElement):
+class Purpose2ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
@@ -1270,7 +1254,7 @@ class Purpose2ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -1278,13 +1262,13 @@ class Purpose2ChoiceCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class RateType4ChoiceCamt05200112(ISO20022MessageElement):
+class RateType4ChoiceCamt05200113(ISO20022MessageElement):
     pctg: Optional[Decimal] = field(
         default=None,
         metadata={
             "name": "Pctg",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "total_digits": 11,
             "fraction_digits": 10,
         },
@@ -1294,7 +1278,7 @@ class RateType4ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "Othr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -1302,13 +1286,117 @@ class RateType4ChoiceCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class ReportingSource1ChoiceCamt05200112(ISO20022MessageElement):
+class References74ChoiceCamt05200113(ISO20022MessageElement):
+    scties_sttlm_tx_id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "SctiesSttlmTxId",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+            "min_length": 1,
+            "max_length": 35,
+        },
+    )
+    intra_pos_mvmnt_id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "IntraPosMvmntId",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+            "min_length": 1,
+            "max_length": 35,
+        },
+    )
+    intra_bal_mvmnt_id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "IntraBalMvmntId",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+            "min_length": 1,
+            "max_length": 35,
+        },
+    )
+    acct_svcr_tx_id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "AcctSvcrTxId",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+            "min_length": 1,
+            "max_length": 35,
+        },
+    )
+    mkt_infrstrctr_tx_id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "MktInfrstrctrTxId",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+            "min_length": 1,
+            "max_length": 35,
+        },
+    )
+    ctr_pty_mkt_infrstrctr_tx_id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "CtrPtyMktInfrstrctrTxId",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+            "min_length": 1,
+            "max_length": 35,
+        },
+    )
+    pool_id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "PoolId",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+            "min_length": 1,
+            "max_length": 35,
+        },
+    )
+    cmon_id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "CmonId",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+            "min_length": 1,
+            "max_length": 35,
+        },
+    )
+    trad_id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "TradId",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+            "min_length": 1,
+            "max_length": 52,
+        },
+    )
+    othr_tx_id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "OthrTxId",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+            "min_length": 1,
+            "max_length": 35,
+        },
+    )
+
+
+@dataclass
+class ReportingSource1ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
@@ -1318,7 +1406,7 @@ class ReportingSource1ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -1326,13 +1414,13 @@ class ReportingSource1ChoiceCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class ReturnReason5ChoiceCamt05200112(ISO20022MessageElement):
+class ReturnReason5ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
@@ -1342,7 +1430,7 @@ class ReturnReason5ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -1350,13 +1438,13 @@ class ReturnReason5ChoiceCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class SequenceRange1Camt05200112(ISO20022MessageElement):
+class SequenceRange1Camt05200113(ISO20022MessageElement):
     fr_seq: Optional[str] = field(
         default=None,
         metadata={
             "name": "FrSeq",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -1367,7 +1455,7 @@ class SequenceRange1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "ToSeq",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -1376,13 +1464,13 @@ class SequenceRange1Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class ServiceLevel8ChoiceCamt05200112(ISO20022MessageElement):
+class ServiceLevel8ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
@@ -1392,7 +1480,7 @@ class ServiceLevel8ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -1400,7 +1488,7 @@ class ServiceLevel8ChoiceCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class SupplementaryDataEnvelope1Camt05200112(ISO20022MessageElement):
+class SupplementaryDataEnvelope1Camt05200113(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -1411,13 +1499,13 @@ class SupplementaryDataEnvelope1Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class TaxAuthorisation1Camt05200112(ISO20022MessageElement):
+class TaxAuthorisation1Camt05200113(ISO20022MessageElement):
     titl: Optional[str] = field(
         default=None,
         metadata={
             "name": "Titl",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -1427,7 +1515,7 @@ class TaxAuthorisation1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Nm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 140,
         },
@@ -1435,13 +1523,13 @@ class TaxAuthorisation1Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class TaxParty1Camt05200112(ISO20022MessageElement):
+class TaxParty1Camt05200113(ISO20022MessageElement):
     tax_id: Optional[str] = field(
         default=None,
         metadata={
             "name": "TaxId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -1451,7 +1539,7 @@ class TaxParty1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "RegnId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -1461,7 +1549,7 @@ class TaxParty1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "TaxTp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -1469,13 +1557,13 @@ class TaxParty1Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class TechnicalInputChannel1ChoiceCamt05200112(ISO20022MessageElement):
+class TechnicalInputChannel1ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
@@ -1485,7 +1573,7 @@ class TechnicalInputChannel1ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -1493,13 +1581,13 @@ class TechnicalInputChannel1ChoiceCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class TrackData1Camt05200112(ISO20022MessageElement):
+class TrackData1Camt05200113(ISO20022MessageElement):
     trck_nb: Optional[str] = field(
         default=None,
         metadata={
             "name": "TrckNb",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"[0-9]",
         },
     )
@@ -1508,7 +1596,7 @@ class TrackData1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "TrckVal",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 140,
@@ -1517,13 +1605,13 @@ class TrackData1Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class TransactionIdentifier1Camt05200112(ISO20022MessageElement):
+class TransactionIdentifier1Camt05200113(ISO20022MessageElement):
     tx_dt_tm: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "TxDtTm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
@@ -1532,7 +1620,7 @@ class TransactionIdentifier1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "TxRef",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -1541,86 +1629,86 @@ class TransactionIdentifier1Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class AddressType3ChoiceCamt05200112(ISO20022MessageElement):
+class AddressType3ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[AddressType2Code] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    prtry: Optional[GenericIdentification30Camt05200112] = field(
+    prtry: Optional[GenericIdentification30Camt05200113] = field(
         default=None,
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class AmountAndCurrencyExchangeDetails5Camt05200112(ISO20022MessageElement):
-    amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200112] = field(
+class AmountAndCurrencyExchangeDetails5Camt05200113(ISO20022MessageElement):
+    amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200113] = field(
         default=None,
         metadata={
             "name": "Amt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
-    ccy_xchg: Optional[CurrencyExchange24Camt05200112] = field(
+    ccy_xchg: Optional[CurrencyExchange24Camt05200113] = field(
         default=None,
         metadata={
             "name": "CcyXchg",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class AmountAndCurrencyExchangeDetails6Camt05200112(ISO20022MessageElement):
+class AmountAndCurrencyExchangeDetails6Camt05200113(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 35,
         },
     )
-    amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200112] = field(
+    amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200113] = field(
         default=None,
         metadata={
             "name": "Amt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
-    ccy_xchg: Optional[CurrencyExchange24Camt05200112] = field(
+    ccy_xchg: Optional[CurrencyExchange24Camt05200113] = field(
         default=None,
         metadata={
             "name": "CcyXchg",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class AmountAndDirection35Camt05200112(ISO20022MessageElement):
+class AmountAndDirection35Camt05200113(ISO20022MessageElement):
     amt: Optional[Decimal] = field(
         default=None,
         metadata={
             "name": "Amt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_inclusive": Decimal("0"),
             "total_digits": 18,
@@ -1632,65 +1720,65 @@ class AmountAndDirection35Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "CdtDbtInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
 
 
 @dataclass
-class BalanceType13Camt05200112(ISO20022MessageElement):
-    cd_or_prtry: Optional[BalanceType10ChoiceCamt05200112] = field(
+class BalanceType13Camt05200113(ISO20022MessageElement):
+    cd_or_prtry: Optional[BalanceType10ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "CdOrPrtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
-    sub_tp: Optional[BalanceSubType1ChoiceCamt05200112] = field(
+    sub_tp: Optional[BalanceSubType1ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "SubTp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class BankTransactionCodeStructure5Camt05200112(ISO20022MessageElement):
+class BankTransactionCodeStructure5Camt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 4,
         },
     )
-    fmly: Optional[BankTransactionCodeStructure6Camt05200112] = field(
+    fmly: Optional[BankTransactionCodeStructure6Camt05200113] = field(
         default=None,
         metadata={
             "name": "Fmly",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
 
 
 @dataclass
-class BatchInformation2Camt05200112(ISO20022MessageElement):
+class BatchInformation2Camt05200113(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
             "name": "MsgId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -1700,7 +1788,7 @@ class BatchInformation2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "PmtInfId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -1710,16 +1798,16 @@ class BatchInformation2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "NbOfTxs",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"[0-9]{1,15}",
         },
     )
-    ttl_amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200112] = field(
+    ttl_amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200113] = field(
         default=None,
         metadata={
             "name": "TtlAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     cdt_dbt_ind: Optional[CreditDebitCode] = field(
@@ -1727,19 +1815,19 @@ class BatchInformation2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "CdtDbtInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class CardSecurityInformation1Camt05200112(ISO20022MessageElement):
+class CardSecurityInformation1Camt05200113(ISO20022MessageElement):
     cscmgmt: Optional[Cscmanagement1Code] = field(
         default=None,
         metadata={
             "name": "CSCMgmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
@@ -1748,20 +1836,20 @@ class CardSecurityInformation1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "CSCVal",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"[0-9]{3,4}",
         },
     )
 
 
 @dataclass
-class CardholderAuthentication2Camt05200112(ISO20022MessageElement):
+class CardholderAuthentication2Camt05200113(ISO20022MessageElement):
     authntcn_mtd: Optional[AuthenticationMethod1Code] = field(
         default=None,
         metadata={
             "name": "AuthntcnMtd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
@@ -1770,29 +1858,29 @@ class CardholderAuthentication2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "AuthntcnNtty",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
 
 
 @dataclass
-class CashAvailability1Camt05200112(ISO20022MessageElement):
-    dt: Optional[CashAvailabilityDate1ChoiceCamt05200112] = field(
+class CashAvailability1Camt05200113(ISO20022MessageElement):
+    dt: Optional[CashAvailabilityDate1ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "Dt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
-    amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200112] = field(
+    amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200113] = field(
         default=None,
         metadata={
             "name": "Amt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
@@ -1801,20 +1889,20 @@ class CashAvailability1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "CdtDbtInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
 
 
 @dataclass
-class CashDeposit1Camt05200112(ISO20022MessageElement):
-    note_dnmtn: Optional[ActiveCurrencyAndAmountCamt05200112] = field(
+class CashDeposit1Camt05200113(ISO20022MessageElement):
+    note_dnmtn: Optional[ActiveCurrencyAndAmountCamt05200113] = field(
         default=None,
         metadata={
             "name": "NoteDnmtn",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
@@ -1823,52 +1911,52 @@ class CashDeposit1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "NbOfNotes",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "pattern": r"[0-9]{1,15}",
         },
     )
-    amt: Optional[ActiveCurrencyAndAmountCamt05200112] = field(
+    amt: Optional[ActiveCurrencyAndAmountCamt05200113] = field(
         default=None,
         metadata={
             "name": "Amt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
 
 
 @dataclass
-class ChargeType3ChoiceCamt05200112(ISO20022MessageElement):
+class ChargeType3ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
     )
-    prtry: Optional[GenericIdentification3Camt05200112] = field(
+    prtry: Optional[GenericIdentification3Camt05200113] = field(
         default=None,
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class ClearingSystemMemberIdentification2Camt05200112(ISO20022MessageElement):
-    clr_sys_id: Optional[ClearingSystemIdentification2ChoiceCamt05200112] = field(
+class ClearingSystemMemberIdentification2Camt05200113(ISO20022MessageElement):
+    clr_sys_id: Optional[ClearingSystemIdentification2ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "ClrSysId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     mmb_id: Optional[str] = field(
@@ -1876,7 +1964,7 @@ class ClearingSystemMemberIdentification2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "MmbId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -1885,13 +1973,13 @@ class ClearingSystemMemberIdentification2Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class Contact13Camt05200112(ISO20022MessageElement):
+class Contact13Camt05200113(ISO20022MessageElement):
     nm_prfx: Optional[NamePrefix2Code] = field(
         default=None,
         metadata={
             "name": "NmPrfx",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     nm: Optional[str] = field(
@@ -1899,7 +1987,7 @@ class Contact13Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Nm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 140,
         },
@@ -1909,7 +1997,7 @@ class Contact13Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "PhneNb",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"\+[0-9]{1,3}-[0-9()+\-]{1,30}",
         },
     )
@@ -1918,7 +2006,7 @@ class Contact13Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "MobNb",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"\+[0-9]{1,3}-[0-9()+\-]{1,30}",
         },
     )
@@ -1927,7 +2015,7 @@ class Contact13Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "FaxNb",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"\+[0-9]{1,3}-[0-9()+\-]{1,30}",
         },
     )
@@ -1936,7 +2024,7 @@ class Contact13Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "URLAdr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 2048,
         },
@@ -1946,7 +2034,7 @@ class Contact13Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "EmailAdr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 256,
         },
@@ -1956,7 +2044,7 @@ class Contact13Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "EmailPurp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -1966,7 +2054,7 @@ class Contact13Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "JobTitl",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -1976,7 +2064,7 @@ class Contact13Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Rspnsblty",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -1986,17 +2074,17 @@ class Contact13Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Dept",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 70,
         },
     )
-    othr: list[OtherContact1Camt05200112] = field(
+    othr: list[OtherContact1Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "Othr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     prefrd_mtd: Optional[PreferredContactMethod2Code] = field(
@@ -2004,56 +2092,78 @@ class Contact13Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "PrefrdMtd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class CreditLine3Camt05200112(ISO20022MessageElement):
+class CorporateActionEventType104ChoiceCamt05200113(ISO20022MessageElement):
+    cd: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Cd",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+            "min_length": 1,
+            "max_length": 4,
+        },
+    )
+    prtry: Optional[GenericIdentification30Camt05200113] = field(
+        default=None,
+        metadata={
+            "name": "Prtry",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+        },
+    )
+
+
+@dataclass
+class CreditLine3Camt05200113(ISO20022MessageElement):
     incl: Optional[bool] = field(
         default=None,
         metadata={
             "name": "Incl",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
-    tp: Optional[CreditLineType1ChoiceCamt05200112] = field(
+    tp: Optional[CreditLineType1ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200112] = field(
+    amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200113] = field(
         default=None,
         metadata={
             "name": "Amt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    dt: Optional[DateAndDateTime2ChoiceCamt05200112] = field(
+    dt: Optional[DateAndDateTime2ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "Dt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class CreditorReferenceType3Camt05200112(ISO20022MessageElement):
-    cd_or_prtry: Optional[CreditorReferenceType2ChoiceCamt05200112] = field(
+class CreditorReferenceType3Camt05200113(ISO20022MessageElement):
+    cd_or_prtry: Optional[CreditorReferenceType2ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "CdOrPrtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
@@ -2062,7 +2172,7 @@ class CreditorReferenceType3Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Issr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -2070,13 +2180,13 @@ class CreditorReferenceType3Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class DateAndType1Camt05200112(ISO20022MessageElement):
-    tp: Optional[DateType2ChoiceCamt05200112] = field(
+class DateAndType1Camt05200113(ISO20022MessageElement):
+    tp: Optional[DateType2ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
@@ -2085,40 +2195,40 @@ class DateAndType1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Dt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
 
 
 @dataclass
-class DateOrDateTimePeriod1ChoiceCamt05200112(ISO20022MessageElement):
-    dt: Optional[DatePeriod2Camt05200112] = field(
+class DateOrDateTimePeriod1ChoiceCamt05200113(ISO20022MessageElement):
+    dt: Optional[DatePeriod2Camt05200113] = field(
         default=None,
         metadata={
             "name": "Dt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    dt_tm: Optional[DateTimePeriod1Camt05200112] = field(
+    dt_tm: Optional[DateTimePeriod1Camt05200113] = field(
         default=None,
         metadata={
             "name": "DtTm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class DisplayCapabilities1Camt05200112(ISO20022MessageElement):
+class DisplayCapabilities1Camt05200113(ISO20022MessageElement):
     disp_tp: Optional[UserInterface2Code] = field(
         default=None,
         metadata={
             "name": "DispTp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
@@ -2127,7 +2237,7 @@ class DisplayCapabilities1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "NbOfLines",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "pattern": r"[0-9]{1,3}",
         },
@@ -2137,7 +2247,7 @@ class DisplayCapabilities1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "LineWidth",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "pattern": r"[0-9]{1,3}",
         },
@@ -2145,13 +2255,13 @@ class DisplayCapabilities1Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class DocumentAdjustment1Camt05200112(ISO20022MessageElement):
-    amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200112] = field(
+class DocumentAdjustment1Camt05200113(ISO20022MessageElement):
+    amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200113] = field(
         default=None,
         metadata={
             "name": "Amt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
@@ -2160,7 +2270,7 @@ class DocumentAdjustment1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "CdtDbtInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     rsn: Optional[str] = field(
@@ -2168,7 +2278,7 @@ class DocumentAdjustment1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Rsn",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
@@ -2178,7 +2288,7 @@ class DocumentAdjustment1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "AddtlInf",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 140,
         },
@@ -2186,35 +2296,35 @@ class DocumentAdjustment1Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class DocumentAmount1Camt05200112(ISO20022MessageElement):
-    tp: Optional[DocumentAmountType1ChoiceCamt05200112] = field(
+class DocumentAmount1Camt05200113(ISO20022MessageElement):
+    tp: Optional[DocumentAmountType1ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
-    amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200112] = field(
+    amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200113] = field(
         default=None,
         metadata={
             "name": "Amt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
 
 
 @dataclass
-class DocumentLineType1Camt05200112(ISO20022MessageElement):
-    cd_or_prtry: Optional[DocumentLineType1ChoiceCamt05200112] = field(
+class DocumentLineType1Camt05200113(ISO20022MessageElement):
+    cd_or_prtry: Optional[DocumentLineType1ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "CdOrPrtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
@@ -2223,7 +2333,7 @@ class DocumentLineType1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Issr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -2231,13 +2341,13 @@ class DocumentLineType1Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class DocumentType1Camt05200112(ISO20022MessageElement):
-    cd_or_prtry: Optional[DocumentType2ChoiceCamt05200112] = field(
+class DocumentType1Camt05200113(ISO20022MessageElement):
+    cd_or_prtry: Optional[DocumentType2ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "CdOrPrtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
@@ -2246,7 +2356,7 @@ class DocumentType1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Issr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -2254,35 +2364,35 @@ class DocumentType1Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class FromToAmountRange1Camt05200112(ISO20022MessageElement):
-    fr_amt: Optional[AmountRangeBoundary1Camt05200112] = field(
+class FromToAmountRange1Camt05200113(ISO20022MessageElement):
+    fr_amt: Optional[AmountRangeBoundary1Camt05200113] = field(
         default=None,
         metadata={
             "name": "FrAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
-    to_amt: Optional[AmountRangeBoundary1Camt05200112] = field(
+    to_amt: Optional[AmountRangeBoundary1Camt05200113] = field(
         default=None,
         metadata={
             "name": "ToAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
 
 
 @dataclass
-class GarnishmentType1Camt05200112(ISO20022MessageElement):
-    cd_or_prtry: Optional[GarnishmentType1ChoiceCamt05200112] = field(
+class GarnishmentType1Camt05200113(ISO20022MessageElement):
+    cd_or_prtry: Optional[GarnishmentType1ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "CdOrPrtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
@@ -2291,7 +2401,7 @@ class GarnishmentType1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Issr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -2299,24 +2409,24 @@ class GarnishmentType1Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class GenericAccountIdentification1Camt05200112(ISO20022MessageElement):
+class GenericAccountIdentification1Camt05200113(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 34,
         },
     )
-    schme_nm: Optional[AccountSchemeName1ChoiceCamt05200112] = field(
+    schme_nm: Optional[AccountSchemeName1ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "SchmeNm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     issr: Optional[str] = field(
@@ -2324,7 +2434,7 @@ class GenericAccountIdentification1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Issr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -2332,24 +2442,24 @@ class GenericAccountIdentification1Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class GenericFinancialIdentification1Camt05200112(ISO20022MessageElement):
+class GenericFinancialIdentification1Camt05200113(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 35,
         },
     )
-    schme_nm: Optional[FinancialIdentificationSchemeName1ChoiceCamt05200112] = field(
+    schme_nm: Optional[FinancialIdentificationSchemeName1ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "SchmeNm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     issr: Optional[str] = field(
@@ -2357,7 +2467,7 @@ class GenericFinancialIdentification1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Issr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -2365,13 +2475,13 @@ class GenericFinancialIdentification1Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class GenericIdentification32Camt05200112(ISO20022MessageElement):
+class GenericIdentification32Camt05200113(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -2382,7 +2492,7 @@ class GenericIdentification32Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     issr: Optional[PartyType4Code] = field(
@@ -2390,7 +2500,7 @@ class GenericIdentification32Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Issr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     shrt_nm: Optional[str] = field(
@@ -2398,7 +2508,7 @@ class GenericIdentification32Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "ShrtNm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -2406,24 +2516,24 @@ class GenericIdentification32Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class GenericOrganisationIdentification3Camt05200112(ISO20022MessageElement):
+class GenericOrganisationIdentification3Camt05200113(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 256,
         },
     )
-    schme_nm: Optional[OrganisationIdentificationSchemeName1ChoiceCamt05200112] = field(
+    schme_nm: Optional[OrganisationIdentificationSchemeName1ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "SchmeNm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     issr: Optional[str] = field(
@@ -2431,7 +2541,7 @@ class GenericOrganisationIdentification3Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Issr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -2439,24 +2549,24 @@ class GenericOrganisationIdentification3Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class GenericPersonIdentification2Camt05200112(ISO20022MessageElement):
+class GenericPersonIdentification2Camt05200113(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 256,
         },
     )
-    schme_nm: Optional[PersonIdentificationSchemeName1ChoiceCamt05200112] = field(
+    schme_nm: Optional[PersonIdentificationSchemeName1ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "SchmeNm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     issr: Optional[str] = field(
@@ -2464,7 +2574,7 @@ class GenericPersonIdentification2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Issr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -2472,13 +2582,13 @@ class GenericPersonIdentification2Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class InterestType1ChoiceCamt05200112(ISO20022MessageElement):
+class InterestType1ChoiceCamt05200113(ISO20022MessageElement):
     cd: Optional[InterestType1Code] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     prtry: Optional[str] = field(
@@ -2486,7 +2596,7 @@ class InterestType1ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -2494,13 +2604,13 @@ class InterestType1ChoiceCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class OtherIdentification1Camt05200112(ISO20022MessageElement):
+class OtherIdentification1Camt05200113(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -2511,30 +2621,30 @@ class OtherIdentification1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Sfx",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 16,
         },
     )
-    tp: Optional[IdentificationSource3ChoiceCamt05200112] = field(
+    tp: Optional[IdentificationSource3ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
 
 
 @dataclass
-class PaymentTypeInformation27Camt05200112(ISO20022MessageElement):
+class PaymentTypeInformation27Camt05200113(ISO20022MessageElement):
     instr_prty: Optional[Priority2Code] = field(
         default=None,
         metadata={
             "name": "InstrPrty",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     clr_chanl: Optional[ClearingChannel2Code] = field(
@@ -2542,23 +2652,23 @@ class PaymentTypeInformation27Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "ClrChanl",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    svc_lvl: list[ServiceLevel8ChoiceCamt05200112] = field(
+    svc_lvl: list[ServiceLevel8ChoiceCamt05200113] = field(
         default_factory=list,
         metadata={
             "name": "SvcLvl",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    lcl_instrm: Optional[LocalInstrument2ChoiceCamt05200112] = field(
+    lcl_instrm: Optional[LocalInstrument2ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "LclInstrm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     seq_tp: Optional[SequenceType3Code] = field(
@@ -2566,27 +2676,27 @@ class PaymentTypeInformation27Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "SeqTp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    ctgy_purp: Optional[CategoryPurpose1ChoiceCamt05200112] = field(
+    ctgy_purp: Optional[CategoryPurpose1ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "CtgyPurp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class PointOfInteractionComponent1Camt05200112(ISO20022MessageElement):
+class PointOfInteractionComponent1Camt05200113(ISO20022MessageElement):
     poicmpnt_tp: Optional[PoicomponentType1Code] = field(
         default=None,
         metadata={
             "name": "POICmpntTp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
@@ -2595,7 +2705,7 @@ class PointOfInteractionComponent1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "ManfctrId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -2605,7 +2715,7 @@ class PointOfInteractionComponent1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Mdl",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -2615,7 +2725,7 @@ class PointOfInteractionComponent1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "VrsnNb",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 16,
         },
@@ -2625,7 +2735,7 @@ class PointOfInteractionComponent1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "SrlNb",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -2635,7 +2745,7 @@ class PointOfInteractionComponent1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "ApprvlNb",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 70,
         },
@@ -2643,35 +2753,35 @@ class PointOfInteractionComponent1Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class PriceRateOrAmount3ChoiceCamt05200112(ISO20022MessageElement):
+class PriceRateOrAmount3ChoiceCamt05200113(ISO20022MessageElement):
     rate: Optional[Decimal] = field(
         default=None,
         metadata={
             "name": "Rate",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "total_digits": 11,
             "fraction_digits": 10,
         },
     )
-    amt: Optional[ActiveOrHistoricCurrencyAnd13DecimalAmountCamt05200112] = field(
+    amt: Optional[ActiveOrHistoricCurrencyAnd13DecimalAmountCamt05200113] = field(
         default=None,
         metadata={
             "name": "Amt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class Product2Camt05200112(ISO20022MessageElement):
+class Product2Camt05200113(ISO20022MessageElement):
     pdct_cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "PdctCd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 70,
@@ -2682,7 +2792,7 @@ class Product2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "UnitOfMeasr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     pdct_qty: Optional[Decimal] = field(
@@ -2690,7 +2800,7 @@ class Product2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "PdctQty",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "total_digits": 18,
             "fraction_digits": 17,
         },
@@ -2700,7 +2810,7 @@ class Product2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "UnitPric",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_inclusive": Decimal("0"),
             "total_digits": 18,
             "fraction_digits": 5,
@@ -2711,7 +2821,7 @@ class Product2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "PdctAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_inclusive": Decimal("0"),
             "total_digits": 18,
             "fraction_digits": 5,
@@ -2722,7 +2832,7 @@ class Product2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "TaxTp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -2732,7 +2842,7 @@ class Product2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "AddtlPdctInf",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -2740,61 +2850,61 @@ class Product2Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class ProprietaryDate3Camt05200112(ISO20022MessageElement):
+class ProprietaryDate3Camt05200113(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 35,
         },
     )
-    dt: Optional[DateAndDateTime2ChoiceCamt05200112] = field(
+    dt: Optional[DateAndDateTime2ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "Dt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
 
 
 @dataclass
-class ProprietaryPrice2Camt05200112(ISO20022MessageElement):
+class ProprietaryPrice2Camt05200113(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 35,
         },
     )
-    pric: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200112] = field(
+    pric: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200113] = field(
         default=None,
         metadata={
             "name": "Pric",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
 
 
 @dataclass
-class ProxyAccountIdentification1Camt05200112(ISO20022MessageElement):
-    tp: Optional[ProxyAccountType1ChoiceCamt05200112] = field(
+class ProxyAccountIdentification1Camt05200113(ISO20022MessageElement):
+    tp: Optional[ProxyAccountType1ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     id: Optional[str] = field(
@@ -2802,7 +2912,7 @@ class ProxyAccountIdentification1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 2048,
@@ -2811,24 +2921,24 @@ class ProxyAccountIdentification1Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class SecuritiesAccount19Camt05200112(ISO20022MessageElement):
+class SecuritiesAccount19Camt05200113(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 35,
         },
     )
-    tp: Optional[GenericIdentification30Camt05200112] = field(
+    tp: Optional[GenericIdentification30Camt05200113] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     nm: Optional[str] = field(
@@ -2836,7 +2946,7 @@ class SecuritiesAccount19Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Nm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 70,
         },
@@ -2844,13 +2954,13 @@ class SecuritiesAccount19Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class SequenceRange1ChoiceCamt05200112(ISO20022MessageElement):
+class SequenceRange1ChoiceCamt05200113(ISO20022MessageElement):
     fr_seq: Optional[str] = field(
         default=None,
         metadata={
             "name": "FrSeq",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -2860,17 +2970,17 @@ class SequenceRange1ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "ToSeq",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
     )
-    fr_to_seq: list[SequenceRange1Camt05200112] = field(
+    fr_to_seq: list[SequenceRange1Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "FrToSeq",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     eqseq: list[str] = field(
@@ -2878,7 +2988,7 @@ class SequenceRange1ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "EQSeq",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -2888,7 +2998,7 @@ class SequenceRange1ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "NEQSeq",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -2896,36 +3006,36 @@ class SequenceRange1ChoiceCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class SupplementaryData1Camt05200112(ISO20022MessageElement):
+class SupplementaryData1Camt05200113(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
             "name": "PlcAndNm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 350,
         },
     )
-    envlp: Optional[SupplementaryDataEnvelope1Camt05200112] = field(
+    envlp: Optional[SupplementaryDataEnvelope1Camt05200113] = field(
         default=None,
         metadata={
             "name": "Envlp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
 
 
 @dataclass
-class TaxCharges2Camt05200112(ISO20022MessageElement):
+class TaxCharges2Camt05200113(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -2935,29 +3045,29 @@ class TaxCharges2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Rate",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "total_digits": 11,
             "fraction_digits": 10,
         },
     )
-    amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200112] = field(
+    amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200113] = field(
         default=None,
         metadata={
             "name": "Amt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class TaxParty2Camt05200112(ISO20022MessageElement):
+class TaxParty2Camt05200113(ISO20022MessageElement):
     tax_id: Optional[str] = field(
         default=None,
         metadata={
             "name": "TaxId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -2967,7 +3077,7 @@ class TaxParty2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "RegnId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -2977,29 +3087,29 @@ class TaxParty2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "TaxTp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
     )
-    authstn: Optional[TaxAuthorisation1Camt05200112] = field(
+    authstn: Optional[TaxAuthorisation1Camt05200113] = field(
         default=None,
         metadata={
             "name": "Authstn",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class TaxPeriod3Camt05200112(ISO20022MessageElement):
+class TaxPeriod3Camt05200113(ISO20022MessageElement):
     yr: Optional[XmlPeriod] = field(
         default=None,
         metadata={
             "name": "Yr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     tp: Optional[TaxRecordPeriod1Code] = field(
@@ -3007,55 +3117,55 @@ class TaxPeriod3Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    fr_to_dt: Optional[DatePeriod2Camt05200112] = field(
+    fr_to_dt: Optional[DatePeriod2Camt05200113] = field(
         default=None,
         metadata={
             "name": "FrToDt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class TransactionQuantities3ChoiceCamt05200112(ISO20022MessageElement):
-    qty: Optional[FinancialInstrumentQuantity1ChoiceCamt05200112] = field(
+class TransactionQuantities4ChoiceCamt05200113(ISO20022MessageElement):
+    qty: Optional[FinancialInstrumentQuantity33ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "Qty",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    orgnl_and_cur_face_amt: Optional[OriginalAndCurrentQuantities1Camt05200112] = field(
+    orgnl_and_cur_face_amt: Optional[OriginalAndCurrentQuantities1Camt05200113] = field(
         default=None,
         metadata={
             "name": "OrgnlAndCurFaceAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    prtry: Optional[ProprietaryQuantity1Camt05200112] = field(
+    prtry: Optional[ProprietaryQuantity1Camt05200113] = field(
         default=None,
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class TransactionReferences6Camt05200112(ISO20022MessageElement):
+class TransactionReferences6Camt05200113(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
             "name": "MsgId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -3065,7 +3175,7 @@ class TransactionReferences6Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "AcctSvcrRef",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -3075,7 +3185,7 @@ class TransactionReferences6Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "PmtInfId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -3085,7 +3195,7 @@ class TransactionReferences6Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "InstrId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -3095,7 +3205,7 @@ class TransactionReferences6Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "EndToEndId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -3105,7 +3215,7 @@ class TransactionReferences6Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "UETR",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}",
         },
     )
@@ -3114,7 +3224,7 @@ class TransactionReferences6Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "TxId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -3124,7 +3234,7 @@ class TransactionReferences6Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "MndtId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -3134,7 +3244,7 @@ class TransactionReferences6Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "ChqNb",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -3144,7 +3254,7 @@ class TransactionReferences6Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "ClrSysRef",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -3154,7 +3264,7 @@ class TransactionReferences6Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "AcctOwnrTxId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -3164,7 +3274,7 @@ class TransactionReferences6Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "AcctSvcrTxId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -3174,7 +3284,7 @@ class TransactionReferences6Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "MktInfrstrctrTxId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -3184,29 +3294,29 @@ class TransactionReferences6Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "PrcgId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
     )
-    prtry: list[ProprietaryReference1Camt05200112] = field(
+    prtry: list[ProprietaryReference1Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class YieldedOrValueType1ChoiceCamt05200112(ISO20022MessageElement):
+class YieldedOrValueType1ChoiceCamt05200113(ISO20022MessageElement):
     yldd: Optional[bool] = field(
         default=None,
         metadata={
             "name": "Yldd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     val_tp: Optional[PriceValueType1Code] = field(
@@ -3214,104 +3324,104 @@ class YieldedOrValueType1ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "ValTp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class AccountIdentification4ChoiceCamt05200112(ISO20022MessageElement):
+class AccountIdentification4ChoiceCamt05200113(ISO20022MessageElement):
     iban: Optional[str] = field(
         default=None,
         metadata={
             "name": "IBAN",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"[A-Z]{2,2}[0-9]{2,2}[a-zA-Z0-9]{1,30}",
         },
     )
-    othr: Optional[GenericAccountIdentification1Camt05200112] = field(
+    othr: Optional[GenericAccountIdentification1Camt05200113] = field(
         default=None,
         metadata={
             "name": "Othr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class AmountAndCurrencyExchange4Camt05200112(ISO20022MessageElement):
-    instd_amt: Optional[AmountAndCurrencyExchangeDetails5Camt05200112] = field(
+class AmountAndCurrencyExchange4Camt05200113(ISO20022MessageElement):
+    instd_amt: Optional[AmountAndCurrencyExchangeDetails5Camt05200113] = field(
         default=None,
         metadata={
             "name": "InstdAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    tx_amt: Optional[AmountAndCurrencyExchangeDetails5Camt05200112] = field(
+    tx_amt: Optional[AmountAndCurrencyExchangeDetails5Camt05200113] = field(
         default=None,
         metadata={
             "name": "TxAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    cntr_val_amt: Optional[AmountAndCurrencyExchangeDetails5Camt05200112] = field(
+    cntr_val_amt: Optional[AmountAndCurrencyExchangeDetails5Camt05200113] = field(
         default=None,
         metadata={
             "name": "CntrValAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    anncd_pstng_amt: Optional[AmountAndCurrencyExchangeDetails5Camt05200112] = field(
+    anncd_pstng_amt: Optional[AmountAndCurrencyExchangeDetails5Camt05200113] = field(
         default=None,
         metadata={
             "name": "AnncdPstngAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    prtry_amt: list[AmountAndCurrencyExchangeDetails6Camt05200112] = field(
+    prtry_amt: list[AmountAndCurrencyExchangeDetails6Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "PrtryAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class BankTransactionCodeStructure4Camt05200112(ISO20022MessageElement):
-    domn: Optional[BankTransactionCodeStructure5Camt05200112] = field(
+class BankTransactionCodeStructure4Camt05200113(ISO20022MessageElement):
+    domn: Optional[BankTransactionCodeStructure5Camt05200113] = field(
         default=None,
         metadata={
             "name": "Domn",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    prtry: Optional[ProprietaryBankTransactionCodeStructure1Camt05200112] = field(
+    prtry: Optional[ProprietaryBankTransactionCodeStructure1Camt05200113] = field(
         default=None,
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class CardAggregated2Camt05200112(ISO20022MessageElement):
+class CardAggregated2Camt05200113(ISO20022MessageElement):
     addtl_svc: Optional[CardPaymentServiceType2Code] = field(
         default=None,
         metadata={
             "name": "AddtlSvc",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     tx_ctgy: Optional[str] = field(
@@ -3319,7 +3429,7 @@ class CardAggregated2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "TxCtgy",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
@@ -3329,54 +3439,54 @@ class CardAggregated2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "SaleRcncltnId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
     )
-    seq_nb_rg: Optional[CardSequenceNumberRange1Camt05200112] = field(
+    seq_nb_rg: Optional[CardSequenceNumberRange1Camt05200113] = field(
         default=None,
         metadata={
             "name": "SeqNbRg",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    tx_dt_rg: Optional[DateOrDateTimePeriod1ChoiceCamt05200112] = field(
+    tx_dt_rg: Optional[DateOrDateTimePeriod1ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "TxDtRg",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class CashBalance8Camt05200112(ISO20022MessageElement):
-    tp: Optional[BalanceType13Camt05200112] = field(
+class CashBalance8Camt05200113(ISO20022MessageElement):
+    tp: Optional[BalanceType13Camt05200113] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
-    cdt_line: list[CreditLine3Camt05200112] = field(
+    cdt_line: list[CreditLine3Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "CdtLine",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200112] = field(
+    amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200113] = field(
         default=None,
         metadata={
             "name": "Amt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
@@ -3385,45 +3495,57 @@ class CashBalance8Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "CdtDbtInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
-    dt: Optional[DateAndDateTime2ChoiceCamt05200112] = field(
+    dt: Optional[DateAndDateTime2ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "Dt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
-    avlbty: list[CashAvailability1Camt05200112] = field(
+    avlbty: list[CashAvailability1Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "Avlbty",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class CreditorReferenceInformation3Camt05200112(ISO20022MessageElement):
-    tp: Optional[CreditorReferenceType3Camt05200112] = field(
+class CorporateAction82Camt05200113(ISO20022MessageElement):
+    evt_tp: Optional[CorporateActionEventType104ChoiceCamt05200113] = field(
         default=None,
         metadata={
-            "name": "Tp",
+            "name": "EvtTp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+            "required": True,
         },
     )
-    ref: Optional[str] = field(
+    corp_actn_evt_id: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Ref",
+            "name": "CorpActnEvtId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+            "required": True,
+            "min_length": 1,
+            "max_length": 35,
+        },
+    )
+    offcl_corp_actn_evt_id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "OffclCorpActnEvtId",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -3431,13 +3553,35 @@ class CreditorReferenceInformation3Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class DocumentLineIdentification1Camt05200112(ISO20022MessageElement):
-    tp: Optional[DocumentLineType1Camt05200112] = field(
+class CreditorReferenceInformation3Camt05200113(ISO20022MessageElement):
+    tp: Optional[CreditorReferenceType3Camt05200113] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+        },
+    )
+    ref: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Ref",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+            "min_length": 1,
+            "max_length": 35,
+        },
+    )
+
+
+@dataclass
+class DocumentLineIdentification1Camt05200113(ISO20022MessageElement):
+    tp: Optional[DocumentLineType1Camt05200113] = field(
+        default=None,
+        metadata={
+            "name": "Tp",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     nb: Optional[str] = field(
@@ -3445,7 +3589,7 @@ class DocumentLineIdentification1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Nb",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -3455,35 +3599,35 @@ class DocumentLineIdentification1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "RltdDt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class ImpliedCurrencyAmountRange1ChoiceCamt05200112(ISO20022MessageElement):
-    fr_amt: Optional[AmountRangeBoundary1Camt05200112] = field(
+class ImpliedCurrencyAmountRange1ChoiceCamt05200113(ISO20022MessageElement):
+    fr_amt: Optional[AmountRangeBoundary1Camt05200113] = field(
         default=None,
         metadata={
             "name": "FrAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    to_amt: Optional[AmountRangeBoundary1Camt05200112] = field(
+    to_amt: Optional[AmountRangeBoundary1Camt05200113] = field(
         default=None,
         metadata={
             "name": "ToAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    fr_to_amt: Optional[FromToAmountRange1Camt05200112] = field(
+    fr_to_amt: Optional[FromToAmountRange1Camt05200113] = field(
         default=None,
         metadata={
             "name": "FrToAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     eqamt: Optional[Decimal] = field(
@@ -3491,7 +3635,7 @@ class ImpliedCurrencyAmountRange1ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "EQAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_inclusive": Decimal("0"),
             "total_digits": 18,
             "fraction_digits": 5,
@@ -3502,7 +3646,7 @@ class ImpliedCurrencyAmountRange1ChoiceCamt05200112(ISO20022MessageElement):
         metadata={
             "name": "NEQAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_inclusive": Decimal("0"),
             "total_digits": 18,
             "fraction_digits": 5,
@@ -3511,13 +3655,13 @@ class ImpliedCurrencyAmountRange1ChoiceCamt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class NumberAndSumOfTransactions4Camt05200112(ISO20022MessageElement):
+class NumberAndSumOfTransactions4Camt05200113(ISO20022MessageElement):
     nb_of_ntries: Optional[str] = field(
         default=None,
         metadata={
             "name": "NbOfNtries",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"[0-9]{1,15}",
         },
     )
@@ -3526,29 +3670,29 @@ class NumberAndSumOfTransactions4Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Sum",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "total_digits": 18,
             "fraction_digits": 17,
         },
     )
-    ttl_net_ntry: Optional[AmountAndDirection35Camt05200112] = field(
+    ttl_net_ntry: Optional[AmountAndDirection35Camt05200113] = field(
         default=None,
         metadata={
             "name": "TtlNetNtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class OrganisationIdentification39Camt05200112(ISO20022MessageElement):
+class OrganisationIdentification39Camt05200113(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
             "name": "AnyBIC",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"[A-Z0-9]{4,4}[A-Z]{2,2}[A-Z0-9]{2,2}([A-Z0-9]{3,3}){0,1}",
         },
     )
@@ -3557,28 +3701,28 @@ class OrganisationIdentification39Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "LEI",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"[A-Z0-9]{18,18}[0-9]{2,2}",
         },
     )
-    othr: list[GenericOrganisationIdentification3Camt05200112] = field(
+    othr: list[GenericOrganisationIdentification3Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "Othr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class PaymentContext3Camt05200112(ISO20022MessageElement):
+class PaymentContext3Camt05200113(ISO20022MessageElement):
     card_pres: Optional[bool] = field(
         default=None,
         metadata={
             "name": "CardPres",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     crdhldr_pres: Optional[bool] = field(
@@ -3586,7 +3730,7 @@ class PaymentContext3Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "CrdhldrPres",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     on_line_cntxt: Optional[bool] = field(
@@ -3594,7 +3738,7 @@ class PaymentContext3Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "OnLineCntxt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     attndnc_cntxt: Optional[AttendanceContext1Code] = field(
@@ -3602,7 +3746,7 @@ class PaymentContext3Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "AttndncCntxt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     tx_envt: Optional[TransactionEnvironment1Code] = field(
@@ -3610,7 +3754,7 @@ class PaymentContext3Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "TxEnvt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     tx_chanl: Optional[TransactionChannel1Code] = field(
@@ -3618,7 +3762,7 @@ class PaymentContext3Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "TxChanl",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     attndnt_msg_cpbl: Optional[bool] = field(
@@ -3626,7 +3770,7 @@ class PaymentContext3Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "AttndntMsgCpbl",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     attndnt_lang: Optional[str] = field(
@@ -3634,7 +3778,7 @@ class PaymentContext3Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "AttndntLang",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"[a-z]{2,2}",
         },
     )
@@ -3643,7 +3787,7 @@ class PaymentContext3Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "CardDataNtryMd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
@@ -3652,47 +3796,47 @@ class PaymentContext3Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "FllbckInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    authntcn_mtd: Optional[CardholderAuthentication2Camt05200112] = field(
+    authntcn_mtd: Optional[CardholderAuthentication2Camt05200113] = field(
         default=None,
         metadata={
             "name": "AuthntcnMtd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class PersonIdentification18Camt05200112(ISO20022MessageElement):
-    dt_and_plc_of_birth: Optional[DateAndPlaceOfBirth1Camt05200112] = field(
+class PersonIdentification18Camt05200113(ISO20022MessageElement):
+    dt_and_plc_of_birth: Optional[DateAndPlaceOfBirth1Camt05200113] = field(
         default=None,
         metadata={
             "name": "DtAndPlcOfBirth",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    othr: list[GenericPersonIdentification2Camt05200112] = field(
+    othr: list[GenericPersonIdentification2Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "Othr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class PlainCardData1Camt05200112(ISO20022MessageElement):
+class PlainCardData1Camt05200113(ISO20022MessageElement):
     pan: Optional[str] = field(
         default=None,
         metadata={
             "name": "PAN",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "pattern": r"[0-9]{8,28}",
         },
@@ -3702,7 +3846,7 @@ class PlainCardData1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "CardSeqNb",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"[0-9]{2,3}",
         },
     )
@@ -3711,7 +3855,7 @@ class PlainCardData1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "FctvDt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     xpry_dt: Optional[XmlPeriod] = field(
@@ -3719,7 +3863,7 @@ class PlainCardData1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "XpryDt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
@@ -3728,36 +3872,36 @@ class PlainCardData1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "SvcCd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"[0-9]{3}",
         },
     )
-    trck_data: list[TrackData1Camt05200112] = field(
+    trck_data: list[TrackData1Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "TrckData",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    card_scty_cd: Optional[CardSecurityInformation1Camt05200112] = field(
+    card_scty_cd: Optional[CardSecurityInformation1Camt05200113] = field(
         default=None,
         metadata={
             "name": "CardSctyCd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class PointOfInteractionCapabilities1Camt05200112(ISO20022MessageElement):
+class PointOfInteractionCapabilities1Camt05200113(ISO20022MessageElement):
     card_rdng_cpblties: list[CardDataReading1Code] = field(
         default_factory=list,
         metadata={
             "name": "CardRdngCpblties",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     crdhldr_vrfctn_cpblties: list[CardholderVerificationCapability1Code] = field(
@@ -3765,7 +3909,7 @@ class PointOfInteractionCapabilities1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "CrdhldrVrfctnCpblties",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     on_line_cpblties: Optional[OnLineCapability1Code] = field(
@@ -3773,15 +3917,15 @@ class PointOfInteractionCapabilities1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "OnLineCpblties",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    disp_cpblties: list[DisplayCapabilities1Camt05200112] = field(
+    disp_cpblties: list[DisplayCapabilities1Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "DispCpblties",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     prt_line_width: Optional[str] = field(
@@ -3789,20 +3933,20 @@ class PointOfInteractionCapabilities1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "PrtLineWidth",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"[0-9]{1,3}",
         },
     )
 
 
 @dataclass
-class PostalAddress27Camt05200112(ISO20022MessageElement):
-    adr_tp: Optional[AddressType3ChoiceCamt05200112] = field(
+class PostalAddress27Camt05200113(ISO20022MessageElement):
+    adr_tp: Optional[AddressType3ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "AdrTp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     care_of: Optional[str] = field(
@@ -3810,7 +3954,7 @@ class PostalAddress27Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "CareOf",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 140,
         },
@@ -3820,7 +3964,7 @@ class PostalAddress27Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Dept",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 70,
         },
@@ -3830,7 +3974,7 @@ class PostalAddress27Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "SubDept",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 70,
         },
@@ -3840,7 +3984,7 @@ class PostalAddress27Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "StrtNm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 140,
         },
@@ -3850,7 +3994,7 @@ class PostalAddress27Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "BldgNb",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 16,
         },
@@ -3860,7 +4004,7 @@ class PostalAddress27Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "BldgNm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 140,
         },
@@ -3870,7 +4014,7 @@ class PostalAddress27Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Flr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 70,
         },
@@ -3880,7 +4024,7 @@ class PostalAddress27Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "UnitNb",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 16,
         },
@@ -3890,7 +4034,7 @@ class PostalAddress27Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "PstBx",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 16,
         },
@@ -3900,7 +4044,7 @@ class PostalAddress27Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Room",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 70,
         },
@@ -3910,7 +4054,7 @@ class PostalAddress27Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "PstCd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 16,
         },
@@ -3920,7 +4064,7 @@ class PostalAddress27Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "TwnNm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 140,
         },
@@ -3930,7 +4074,7 @@ class PostalAddress27Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "TwnLctnNm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 140,
         },
@@ -3940,7 +4084,7 @@ class PostalAddress27Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "DstrctNm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 140,
         },
@@ -3950,7 +4094,7 @@ class PostalAddress27Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "CtrySubDvsn",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -3960,7 +4104,7 @@ class PostalAddress27Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Ctry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"[A-Z]{2,2}",
         },
     )
@@ -3969,7 +4113,7 @@ class PostalAddress27Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "AdrLine",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "max_occurs": 7,
             "min_length": 1,
             "max_length": 70,
@@ -3978,64 +4122,64 @@ class PostalAddress27Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class Price7Camt05200112(ISO20022MessageElement):
-    tp: Optional[YieldedOrValueType1ChoiceCamt05200112] = field(
+class Price7Camt05200113(ISO20022MessageElement):
+    tp: Optional[YieldedOrValueType1ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
-    val: Optional[PriceRateOrAmount3ChoiceCamt05200112] = field(
+    val: Optional[PriceRateOrAmount3ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "Val",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
 
 
 @dataclass
-class RemittanceAmount4Camt05200112(ISO20022MessageElement):
-    rmt_amt_and_tp: list[DocumentAmount1Camt05200112] = field(
+class RemittanceAmount4Camt05200113(ISO20022MessageElement):
+    rmt_amt_and_tp: list[DocumentAmount1Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "RmtAmtAndTp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    adjstmnt_amt_and_rsn: list[DocumentAdjustment1Camt05200112] = field(
+    adjstmnt_amt_and_rsn: list[DocumentAdjustment1Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "AdjstmntAmtAndRsn",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class SecurityIdentification19Camt05200112(ISO20022MessageElement):
+class SecurityIdentification19Camt05200113(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
             "name": "ISIN",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"[A-Z]{2,2}[A-Z0-9]{9,9}[0-9]{1,1}",
         },
     )
-    othr_id: list[OtherIdentification1Camt05200112] = field(
+    othr_id: list[OtherIdentification1Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "OthrId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     desc: Optional[str] = field(
@@ -4043,7 +4187,7 @@ class SecurityIdentification19Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Desc",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 140,
         },
@@ -4051,34 +4195,34 @@ class SecurityIdentification19Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class TaxRecordDetails3Camt05200112(ISO20022MessageElement):
-    prd: Optional[TaxPeriod3Camt05200112] = field(
+class TaxRecordDetails3Camt05200113(ISO20022MessageElement):
+    prd: Optional[TaxPeriod3Camt05200113] = field(
         default=None,
         metadata={
             "name": "Prd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200112] = field(
+    amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200113] = field(
         default=None,
         metadata={
             "name": "Amt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
 
 
 @dataclass
-class TransactionDates3Camt05200112(ISO20022MessageElement):
+class TransactionDates3Camt05200113(ISO20022MessageElement):
     accptnc_dt_tm: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "AccptncDtTm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     trad_actvty_ctrctl_sttlm_dt: Optional[XmlDate] = field(
@@ -4086,7 +4230,7 @@ class TransactionDates3Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "TradActvtyCtrctlSttlmDt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     trad_dt: Optional[XmlDate] = field(
@@ -4094,7 +4238,7 @@ class TransactionDates3Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "TradDt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     intr_bk_sttlm_dt: Optional[XmlDate] = field(
@@ -4102,7 +4246,7 @@ class TransactionDates3Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "IntrBkSttlmDt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     start_dt: Optional[XmlDate] = field(
@@ -4110,7 +4254,7 @@ class TransactionDates3Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "StartDt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     end_dt: Optional[XmlDate] = field(
@@ -4118,7 +4262,7 @@ class TransactionDates3Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "EndDt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     tx_dt_tm: Optional[XmlDateTime] = field(
@@ -4126,27 +4270,27 @@ class TransactionDates3Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "TxDtTm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    prtry: list[ProprietaryDate3Camt05200112] = field(
+    prtry: list[ProprietaryDate3Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class ActiveOrHistoricCurrencyAndAmountRange2Camt05200112(ISO20022MessageElement):
-    amt: Optional[ImpliedCurrencyAmountRange1ChoiceCamt05200112] = field(
+class ActiveOrHistoricCurrencyAndAmountRange2Camt05200113(ISO20022MessageElement):
+    amt: Optional[ImpliedCurrencyAmountRange1ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "Amt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
@@ -4155,7 +4299,7 @@ class ActiveOrHistoricCurrencyAndAmountRange2Camt05200112(ISO20022MessageElement
         metadata={
             "name": "CdtDbtInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     ccy: Optional[str] = field(
@@ -4163,7 +4307,7 @@ class ActiveOrHistoricCurrencyAndAmountRange2Camt05200112(ISO20022MessageElement
         metadata={
             "name": "Ccy",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "pattern": r"[A-Z]{3,3}",
         },
@@ -4171,13 +4315,13 @@ class ActiveOrHistoricCurrencyAndAmountRange2Camt05200112(ISO20022MessageElement
 
 
 @dataclass
-class BranchData5Camt05200112(ISO20022MessageElement):
+class BranchData5Camt05200113(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -4187,7 +4331,7 @@ class BranchData5Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "LEI",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"[A-Z0-9]{18,18}[0-9]{2,2}",
         },
     )
@@ -4196,39 +4340,39 @@ class BranchData5Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Nm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 140,
         },
     )
-    pstl_adr: Optional[PostalAddress27Camt05200112] = field(
+    pstl_adr: Optional[PostalAddress27Camt05200113] = field(
         default=None,
         metadata={
             "name": "PstlAdr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class CardIndividualTransaction2Camt05200112(ISO20022MessageElement):
+class CardIndividualTransaction2Camt05200113(ISO20022MessageElement):
     iccrltd_data: Optional[str] = field(
         default=None,
         metadata={
             "name": "ICCRltdData",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 1025,
         },
     )
-    pmt_cntxt: Optional[PaymentContext3Camt05200112] = field(
+    pmt_cntxt: Optional[PaymentContext3Camt05200113] = field(
         default=None,
         metadata={
             "name": "PmtCntxt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     addtl_svc: Optional[CardPaymentServiceType2Code] = field(
@@ -4236,7 +4380,7 @@ class CardIndividualTransaction2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "AddtlSvc",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     tx_ctgy: Optional[str] = field(
@@ -4244,7 +4388,7 @@ class CardIndividualTransaction2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "TxCtgy",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
@@ -4254,7 +4398,7 @@ class CardIndividualTransaction2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "SaleRcncltnId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -4264,7 +4408,7 @@ class CardIndividualTransaction2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "SaleRefNb",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -4274,7 +4418,7 @@ class CardIndividualTransaction2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "RePresntmntRsn",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 4,
         },
@@ -4284,25 +4428,25 @@ class CardIndividualTransaction2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "SeqNb",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
     )
-    tx_id: Optional[TransactionIdentifier1Camt05200112] = field(
+    tx_id: Optional[TransactionIdentifier1Camt05200113] = field(
         default=None,
         metadata={
             "name": "TxId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    pdct: Optional[Product2Camt05200112] = field(
+    pdct: Optional[Product2Camt05200113] = field(
         default=None,
         metadata={
             "name": "Pdct",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     vldtn_dt: Optional[XmlDate] = field(
@@ -4310,7 +4454,7 @@ class CardIndividualTransaction2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "VldtnDt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     vldtn_seq_nb: Optional[str] = field(
@@ -4318,7 +4462,7 @@ class CardIndividualTransaction2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "VldtnSeqNb",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -4326,21 +4470,21 @@ class CardIndividualTransaction2Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class CashAccount40Camt05200112(ISO20022MessageElement):
-    id: Optional[AccountIdentification4ChoiceCamt05200112] = field(
+class CashAccount40Camt05200113(ISO20022MessageElement):
+    id: Optional[AccountIdentification4ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    tp: Optional[CashAccountType2ChoiceCamt05200112] = field(
+    tp: Optional[CashAccountType2ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     ccy: Optional[str] = field(
@@ -4348,7 +4492,7 @@ class CashAccount40Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Ccy",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"[A-Z]{3,3}",
         },
     )
@@ -4357,29 +4501,29 @@ class CashAccount40Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Nm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 70,
         },
     )
-    prxy: Optional[ProxyAccountIdentification1Camt05200112] = field(
+    prxy: Optional[ProxyAccountIdentification1Camt05200113] = field(
         default=None,
         metadata={
             "name": "Prxy",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class DocumentLineInformation2Camt05200112(ISO20022MessageElement):
-    id: list[DocumentLineIdentification1Camt05200112] = field(
+class DocumentLineInformation2Camt05200113(ISO20022MessageElement):
+    id: list[DocumentLineIdentification1Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_occurs": 1,
         },
     )
@@ -4388,38 +4532,38 @@ class DocumentLineInformation2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Desc",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 2048,
         },
     )
-    amt: Optional[RemittanceAmount4Camt05200112] = field(
+    amt: Optional[RemittanceAmount4Camt05200113] = field(
         default=None,
         metadata={
             "name": "Amt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class FinancialInstitutionIdentification23Camt05200112(ISO20022MessageElement):
+class FinancialInstitutionIdentification23Camt05200113(ISO20022MessageElement):
     bicfi: Optional[str] = field(
         default=None,
         metadata={
             "name": "BICFI",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"[A-Z0-9]{4,4}[A-Z]{2,2}[A-Z0-9]{2,2}([A-Z0-9]{3,3}){0,1}",
         },
     )
-    clr_sys_mmb_id: Optional[ClearingSystemMemberIdentification2Camt05200112] = field(
+    clr_sys_mmb_id: Optional[ClearingSystemMemberIdentification2Camt05200113] = field(
         default=None,
         metadata={
             "name": "ClrSysMmbId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     lei: Optional[str] = field(
@@ -4427,7 +4571,7 @@ class FinancialInstitutionIdentification23Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "LEI",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"[A-Z0-9]{18,18}[0-9]{2,2}",
         },
     )
@@ -4436,81 +4580,81 @@ class FinancialInstitutionIdentification23Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Nm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 140,
         },
     )
-    pstl_adr: Optional[PostalAddress27Camt05200112] = field(
+    pstl_adr: Optional[PostalAddress27Camt05200113] = field(
         default=None,
         metadata={
             "name": "PstlAdr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    othr: Optional[GenericFinancialIdentification1Camt05200112] = field(
+    othr: Optional[GenericFinancialIdentification1Camt05200113] = field(
         default=None,
         metadata={
             "name": "Othr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class NameAndAddress18Camt05200112(ISO20022MessageElement):
+class NameAndAddress18Camt05200113(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
             "name": "Nm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 140,
         },
     )
-    adr: Optional[PostalAddress27Camt05200112] = field(
+    adr: Optional[PostalAddress27Camt05200113] = field(
         default=None,
         metadata={
             "name": "Adr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
 
 
 @dataclass
-class Party52ChoiceCamt05200112(ISO20022MessageElement):
-    org_id: Optional[OrganisationIdentification39Camt05200112] = field(
+class Party52ChoiceCamt05200113(ISO20022MessageElement):
+    org_id: Optional[OrganisationIdentification39Camt05200113] = field(
         default=None,
         metadata={
             "name": "OrgId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    prvt_id: Optional[PersonIdentification18Camt05200112] = field(
+    prvt_id: Optional[PersonIdentification18Camt05200113] = field(
         default=None,
         metadata={
             "name": "PrvtId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class PaymentCard4Camt05200112(ISO20022MessageElement):
-    plain_card_data: Optional[PlainCardData1Camt05200112] = field(
+class PaymentCard4Camt05200113(ISO20022MessageElement):
+    plain_card_data: Optional[PlainCardData1Camt05200113] = field(
         default=None,
         metadata={
             "name": "PlainCardData",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     card_ctry_cd: Optional[str] = field(
@@ -4518,16 +4662,16 @@ class PaymentCard4Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "CardCtryCd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"[0-9]{3}",
         },
     )
-    card_brnd: Optional[GenericIdentification1Camt05200112] = field(
+    card_brnd: Optional[GenericIdentification1Camt05200113] = field(
         default=None,
         metadata={
             "name": "CardBrnd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     addtl_card_data: Optional[str] = field(
@@ -4535,7 +4679,7 @@ class PaymentCard4Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "AddtlCardData",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 70,
         },
@@ -4543,13 +4687,13 @@ class PaymentCard4Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class PointOfInteraction1Camt05200112(ISO20022MessageElement):
-    id: Optional[GenericIdentification32Camt05200112] = field(
+class PointOfInteraction1Camt05200113(ISO20022MessageElement):
+    id: Optional[GenericIdentification32Camt05200113] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
@@ -4558,7 +4702,7 @@ class PointOfInteraction1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "SysNm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 70,
         },
@@ -4568,75 +4712,75 @@ class PointOfInteraction1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "GrpId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
     )
-    cpblties: Optional[PointOfInteractionCapabilities1Camt05200112] = field(
+    cpblties: Optional[PointOfInteractionCapabilities1Camt05200113] = field(
         default=None,
         metadata={
             "name": "Cpblties",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    cmpnt: list[PointOfInteractionComponent1Camt05200112] = field(
+    cmpnt: list[PointOfInteractionComponent1Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "Cmpnt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class TaxAmount3Camt05200112(ISO20022MessageElement):
+class TaxAmount3Camt05200113(ISO20022MessageElement):
     rate: Optional[Decimal] = field(
         default=None,
         metadata={
             "name": "Rate",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "total_digits": 11,
             "fraction_digits": 10,
         },
     )
-    taxbl_base_amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200112] = field(
+    taxbl_base_amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200113] = field(
         default=None,
         metadata={
             "name": "TaxblBaseAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    ttl_amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200112] = field(
+    ttl_amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200113] = field(
         default=None,
         metadata={
             "name": "TtlAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    dtls: list[TaxRecordDetails3Camt05200112] = field(
+    dtls: list[TaxRecordDetails3Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "Dtls",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class TotalsPerBankTransactionCode5Camt05200112(ISO20022MessageElement):
+class TotalsPerBankTransactionCode5Camt05200113(ISO20022MessageElement):
     nb_of_ntries: Optional[str] = field(
         default=None,
         metadata={
             "name": "NbOfNtries",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"[0-9]{1,15}",
         },
     )
@@ -4645,33 +4789,33 @@ class TotalsPerBankTransactionCode5Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Sum",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "total_digits": 18,
             "fraction_digits": 17,
         },
     )
-    ttl_net_ntry: Optional[AmountAndDirection35Camt05200112] = field(
+    ttl_net_ntry: Optional[AmountAndDirection35Camt05200113] = field(
         default=None,
         metadata={
             "name": "TtlNetNtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    cdt_ntries: Optional[NumberAndSumOfTransactions1Camt05200112] = field(
+    cdt_ntries: Optional[NumberAndSumOfTransactions1Camt05200113] = field(
         default=None,
         metadata={
             "name": "CdtNtries",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    dbt_ntries: Optional[NumberAndSumOfTransactions1Camt05200112] = field(
+    dbt_ntries: Optional[NumberAndSumOfTransactions1Camt05200113] = field(
         default=None,
         metadata={
             "name": "DbtNtries",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     fcst_ind: Optional[bool] = field(
@@ -4679,159 +4823,159 @@ class TotalsPerBankTransactionCode5Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "FcstInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    bk_tx_cd: Optional[BankTransactionCodeStructure4Camt05200112] = field(
+    bk_tx_cd: Optional[BankTransactionCodeStructure4Camt05200113] = field(
         default=None,
         metadata={
             "name": "BkTxCd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
-    avlbty: list[CashAvailability1Camt05200112] = field(
+    avlbty: list[CashAvailability1Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "Avlbty",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    dt: Optional[DateAndDateTime2ChoiceCamt05200112] = field(
+    dt: Optional[DateAndDateTime2ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "Dt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class TransactionPrice4ChoiceCamt05200112(ISO20022MessageElement):
-    deal_pric: Optional[Price7Camt05200112] = field(
+class TransactionPrice4ChoiceCamt05200113(ISO20022MessageElement):
+    deal_pric: Optional[Price7Camt05200113] = field(
         default=None,
         metadata={
             "name": "DealPric",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    prtry: list[ProprietaryPrice2Camt05200112] = field(
+    prtry: list[ProprietaryPrice2Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class BranchAndFinancialInstitutionIdentification8Camt05200112(ISO20022MessageElement):
-    fin_instn_id: Optional[FinancialInstitutionIdentification23Camt05200112] = field(
+class BranchAndFinancialInstitutionIdentification8Camt05200113(ISO20022MessageElement):
+    fin_instn_id: Optional[FinancialInstitutionIdentification23Camt05200113] = field(
         default=None,
         metadata={
             "name": "FinInstnId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
-    brnch_id: Optional[BranchData5Camt05200112] = field(
+    brnch_id: Optional[BranchData5Camt05200113] = field(
         default=None,
         metadata={
             "name": "BrnchId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class CardEntry5Camt05200112(ISO20022MessageElement):
-    card: Optional[PaymentCard4Camt05200112] = field(
+class CardEntry5Camt05200113(ISO20022MessageElement):
+    card: Optional[PaymentCard4Camt05200113] = field(
         default=None,
         metadata={
             "name": "Card",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    poi: Optional[PointOfInteraction1Camt05200112] = field(
+    poi: Optional[PointOfInteraction1Camt05200113] = field(
         default=None,
         metadata={
             "name": "POI",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    aggtd_ntry: Optional[CardAggregated2Camt05200112] = field(
+    aggtd_ntry: Optional[CardAggregated2Camt05200113] = field(
         default=None,
         metadata={
             "name": "AggtdNtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    pre_pd_acct: Optional[CashAccount40Camt05200112] = field(
+    pre_pd_acct: Optional[CashAccount40Camt05200113] = field(
         default=None,
         metadata={
             "name": "PrePdAcct",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class CardTransaction3ChoiceCamt05200112(ISO20022MessageElement):
-    aggtd: Optional[CardAggregated2Camt05200112] = field(
+class CardTransaction3ChoiceCamt05200113(ISO20022MessageElement):
+    aggtd: Optional[CardAggregated2Camt05200113] = field(
         default=None,
         metadata={
             "name": "Aggtd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    indv: Optional[CardIndividualTransaction2Camt05200112] = field(
+    indv: Optional[CardIndividualTransaction2Camt05200113] = field(
         default=None,
         metadata={
             "name": "Indv",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class PartyIdentification272Camt05200112(ISO20022MessageElement):
+class PartyIdentification272Camt05200113(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
             "name": "Nm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 140,
         },
     )
-    pstl_adr: Optional[PostalAddress27Camt05200112] = field(
+    pstl_adr: Optional[PostalAddress27Camt05200113] = field(
         default=None,
         metadata={
             "name": "PstlAdr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    id: Optional[Party52ChoiceCamt05200112] = field(
+    id: Optional[Party52ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     ctry_of_res: Optional[str] = field(
@@ -4839,49 +4983,49 @@ class PartyIdentification272Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "CtryOfRes",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "pattern": r"[A-Z]{2,2}",
         },
     )
-    ctct_dtls: Optional[Contact13Camt05200112] = field(
+    ctct_dtls: Optional[Contact13Camt05200113] = field(
         default=None,
         metadata={
             "name": "CtctDtls",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class Rate4Camt05200112(ISO20022MessageElement):
-    tp: Optional[RateType4ChoiceCamt05200112] = field(
+class Rate4Camt05200113(ISO20022MessageElement):
+    tp: Optional[RateType4ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
-    vldty_rg: Optional[ActiveOrHistoricCurrencyAndAmountRange2Camt05200112] = field(
+    vldty_rg: Optional[ActiveOrHistoricCurrencyAndAmountRange2Camt05200113] = field(
         default=None,
         metadata={
             "name": "VldtyRg",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class ReferredDocumentInformation8Camt05200112(ISO20022MessageElement):
-    tp: Optional[DocumentType1Camt05200112] = field(
+class ReferredDocumentInformation8Camt05200113(ISO20022MessageElement):
+    tp: Optional[DocumentType1Camt05200113] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     nb: Optional[str] = field(
@@ -4889,37 +5033,37 @@ class ReferredDocumentInformation8Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Nb",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
     )
-    rltd_dt: Optional[DateAndType1Camt05200112] = field(
+    rltd_dt: Optional[DateAndType1Camt05200113] = field(
         default=None,
         metadata={
             "name": "RltdDt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    line_dtls: list[DocumentLineInformation2Camt05200112] = field(
+    line_dtls: list[DocumentLineInformation2Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "LineDtls",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class RemittanceLocationData2Camt05200112(ISO20022MessageElement):
+class RemittanceLocationData2Camt05200113(ISO20022MessageElement):
     mtd: Optional[RemittanceLocationMethod2Code] = field(
         default=None,
         metadata={
             "name": "Mtd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
@@ -4928,29 +5072,29 @@ class RemittanceLocationData2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "ElctrncAdr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 2048,
         },
     )
-    pstl_adr: Optional[NameAndAddress18Camt05200112] = field(
+    pstl_adr: Optional[NameAndAddress18Camt05200113] = field(
         default=None,
         metadata={
             "name": "PstlAdr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class TaxRecord3Camt05200112(ISO20022MessageElement):
+class TaxRecord3Camt05200113(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -4960,7 +5104,7 @@ class TaxRecord3Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Ctgy",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -4970,7 +5114,7 @@ class TaxRecord3Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "CtgyDtls",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -4980,7 +5124,7 @@ class TaxRecord3Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "DbtrSts",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -4990,7 +5134,7 @@ class TaxRecord3Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "CertId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -5000,25 +5144,25 @@ class TaxRecord3Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "FrmsCd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
     )
-    prd: Optional[TaxPeriod3Camt05200112] = field(
+    prd: Optional[TaxPeriod3Camt05200113] = field(
         default=None,
         metadata={
             "name": "Prd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    tax_amt: Optional[TaxAmount3Camt05200112] = field(
+    tax_amt: Optional[TaxAmount3Camt05200113] = field(
         default=None,
         metadata={
             "name": "TaxAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     addtl_inf: Optional[str] = field(
@@ -5026,7 +5170,7 @@ class TaxRecord3Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "AddtlInf",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 140,
         },
@@ -5034,194 +5178,49 @@ class TaxRecord3Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class TotalTransactions6Camt05200112(ISO20022MessageElement):
-    ttl_ntries: Optional[NumberAndSumOfTransactions4Camt05200112] = field(
+class TotalTransactions6Camt05200113(ISO20022MessageElement):
+    ttl_ntries: Optional[NumberAndSumOfTransactions4Camt05200113] = field(
         default=None,
         metadata={
             "name": "TtlNtries",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    ttl_cdt_ntries: Optional[NumberAndSumOfTransactions1Camt05200112] = field(
+    ttl_cdt_ntries: Optional[NumberAndSumOfTransactions1Camt05200113] = field(
         default=None,
         metadata={
             "name": "TtlCdtNtries",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    ttl_dbt_ntries: Optional[NumberAndSumOfTransactions1Camt05200112] = field(
+    ttl_dbt_ntries: Optional[NumberAndSumOfTransactions1Camt05200113] = field(
         default=None,
         metadata={
             "name": "TtlDbtNtries",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    ttl_ntries_per_bk_tx_cd: list[TotalsPerBankTransactionCode5Camt05200112] = field(
+    ttl_ntries_per_bk_tx_cd: list[TotalsPerBankTransactionCode5Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "TtlNtriesPerBkTxCd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class AccountInterest4Camt05200112(ISO20022MessageElement):
-    tp: Optional[InterestType1ChoiceCamt05200112] = field(
-        default=None,
-        metadata={
-            "name": "Tp",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
-        },
-    )
-    rate: list[Rate4Camt05200112] = field(
-        default_factory=list,
-        metadata={
-            "name": "Rate",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
-        },
-    )
-    fr_to_dt: Optional[DateTimePeriod1Camt05200112] = field(
-        default=None,
-        metadata={
-            "name": "FrToDt",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
-        },
-    )
-    rsn: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Rsn",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
-            "min_length": 1,
-            "max_length": 35,
-        },
-    )
-    tax: Optional[TaxCharges2Camt05200112] = field(
-        default=None,
-        metadata={
-            "name": "Tax",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
-        },
-    )
-
-
-@dataclass
-class CardTransaction18Camt05200112(ISO20022MessageElement):
-    card: Optional[PaymentCard4Camt05200112] = field(
-        default=None,
-        metadata={
-            "name": "Card",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
-        },
-    )
-    poi: Optional[PointOfInteraction1Camt05200112] = field(
-        default=None,
-        metadata={
-            "name": "POI",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
-        },
-    )
-    tx: Optional[CardTransaction3ChoiceCamt05200112] = field(
-        default=None,
-        metadata={
-            "name": "Tx",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
-        },
-    )
-    pre_pd_acct: Optional[CashAccount40Camt05200112] = field(
-        default=None,
-        metadata={
-            "name": "PrePdAcct",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
-        },
-    )
-
-
-@dataclass
-class CashAccount43Camt05200112(ISO20022MessageElement):
-    id: Optional[AccountIdentification4ChoiceCamt05200112] = field(
-        default=None,
-        metadata={
-            "name": "Id",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
-        },
-    )
-    tp: Optional[CashAccountType2ChoiceCamt05200112] = field(
-        default=None,
-        metadata={
-            "name": "Tp",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
-        },
-    )
-    ccy: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Ccy",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
-            "pattern": r"[A-Z]{3,3}",
-        },
-    )
-    nm: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Nm",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
-            "min_length": 1,
-            "max_length": 70,
-        },
-    )
-    prxy: Optional[ProxyAccountIdentification1Camt05200112] = field(
-        default=None,
-        metadata={
-            "name": "Prxy",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
-        },
-    )
-    ownr: Optional[PartyIdentification272Camt05200112] = field(
-        default=None,
-        metadata={
-            "name": "Ownr",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
-        },
-    )
-    svcr: Optional[BranchAndFinancialInstitutionIdentification8Camt05200112] = field(
-        default=None,
-        metadata={
-            "name": "Svcr",
-            "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
-        },
-    )
-
-
-@dataclass
-class ChargesRecord8Camt05200112(ISO20022MessageElement):
-    amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200112] = field(
+class TransactionAllocation1Camt05200113(ISO20022MessageElement):
+    amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200113] = field(
         default=None,
         metadata={
             "name": "Amt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
@@ -5230,7 +5229,211 @@ class ChargesRecord8Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "CdtDbtInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+            "required": True,
+        },
+    )
+    acct: Optional[CashAccount40Camt05200113] = field(
+        default=None,
+        metadata={
+            "name": "Acct",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+            "required": True,
+        },
+    )
+    purp: Optional[Purpose2ChoiceCamt05200113] = field(
+        default=None,
+        metadata={
+            "name": "Purp",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+            "required": True,
+        },
+    )
+    ref: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Ref",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+            "required": True,
+            "min_length": 1,
+            "max_length": 35,
+        },
+    )
+    rltd_refs: list[References74ChoiceCamt05200113] = field(
+        default_factory=list,
+        metadata={
+            "name": "RltdRefs",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+        },
+    )
+
+
+@dataclass
+class AccountInterest4Camt05200113(ISO20022MessageElement):
+    tp: Optional[InterestType1ChoiceCamt05200113] = field(
+        default=None,
+        metadata={
+            "name": "Tp",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+        },
+    )
+    rate: list[Rate4Camt05200113] = field(
+        default_factory=list,
+        metadata={
+            "name": "Rate",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+        },
+    )
+    fr_to_dt: Optional[DateTimePeriod1Camt05200113] = field(
+        default=None,
+        metadata={
+            "name": "FrToDt",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+        },
+    )
+    rsn: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Rsn",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+            "min_length": 1,
+            "max_length": 35,
+        },
+    )
+    tax: Optional[TaxCharges2Camt05200113] = field(
+        default=None,
+        metadata={
+            "name": "Tax",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+        },
+    )
+
+
+@dataclass
+class CardTransaction18Camt05200113(ISO20022MessageElement):
+    card: Optional[PaymentCard4Camt05200113] = field(
+        default=None,
+        metadata={
+            "name": "Card",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+        },
+    )
+    poi: Optional[PointOfInteraction1Camt05200113] = field(
+        default=None,
+        metadata={
+            "name": "POI",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+        },
+    )
+    tx: Optional[CardTransaction3ChoiceCamt05200113] = field(
+        default=None,
+        metadata={
+            "name": "Tx",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+        },
+    )
+    pre_pd_acct: Optional[CashAccount40Camt05200113] = field(
+        default=None,
+        metadata={
+            "name": "PrePdAcct",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+        },
+    )
+
+
+@dataclass
+class CashAccount43Camt05200113(ISO20022MessageElement):
+    id: Optional[AccountIdentification4ChoiceCamt05200113] = field(
+        default=None,
+        metadata={
+            "name": "Id",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+        },
+    )
+    tp: Optional[CashAccountType2ChoiceCamt05200113] = field(
+        default=None,
+        metadata={
+            "name": "Tp",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+        },
+    )
+    ccy: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Ccy",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+            "pattern": r"[A-Z]{3,3}",
+        },
+    )
+    nm: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Nm",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+            "min_length": 1,
+            "max_length": 70,
+        },
+    )
+    prxy: Optional[ProxyAccountIdentification1Camt05200113] = field(
+        default=None,
+        metadata={
+            "name": "Prxy",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+        },
+    )
+    ownr: Optional[PartyIdentification272Camt05200113] = field(
+        default=None,
+        metadata={
+            "name": "Ownr",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+        },
+    )
+    svcr: Optional[BranchAndFinancialInstitutionIdentification8Camt05200113] = field(
+        default=None,
+        metadata={
+            "name": "Svcr",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+        },
+    )
+
+
+@dataclass
+class ChargesRecord8Camt05200113(ISO20022MessageElement):
+    amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200113] = field(
+        default=None,
+        metadata={
+            "name": "Amt",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+            "required": True,
+        },
+    )
+    cdt_dbt_ind: Optional[CreditDebitCode] = field(
+        default=None,
+        metadata={
+            "name": "CdtDbtInd",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     chrg_incl_ind: Optional[bool] = field(
@@ -5238,15 +5441,15 @@ class ChargesRecord8Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "ChrgInclInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    tp: Optional[ChargeType3ChoiceCamt05200112] = field(
+    tp: Optional[ChargeType3ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     rate: Optional[Decimal] = field(
@@ -5254,7 +5457,7 @@ class ChargesRecord8Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Rate",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "total_digits": 11,
             "fraction_digits": 10,
         },
@@ -5264,52 +5467,52 @@ class ChargesRecord8Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Br",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    agt: Optional[BranchAndFinancialInstitutionIdentification8Camt05200112] = field(
+    agt: Optional[BranchAndFinancialInstitutionIdentification8Camt05200113] = field(
         default=None,
         metadata={
             "name": "Agt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    tax: Optional[TaxCharges2Camt05200112] = field(
+    tax: Optional[TaxCharges2Camt05200113] = field(
         default=None,
         metadata={
             "name": "Tax",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class Garnishment4Camt05200112(ISO20022MessageElement):
-    tp: Optional[GarnishmentType1Camt05200112] = field(
+class Garnishment4Camt05200113(ISO20022MessageElement):
+    tp: Optional[GarnishmentType1Camt05200113] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
-    grnshee: Optional[PartyIdentification272Camt05200112] = field(
+    grnshee: Optional[PartyIdentification272Camt05200113] = field(
         default=None,
         metadata={
             "name": "Grnshee",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    grnshmt_admstr: Optional[PartyIdentification272Camt05200112] = field(
+    grnshmt_admstr: Optional[PartyIdentification272Camt05200113] = field(
         default=None,
         metadata={
             "name": "GrnshmtAdmstr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     ref_nb: Optional[str] = field(
@@ -5317,7 +5520,7 @@ class Garnishment4Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "RefNb",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 140,
         },
@@ -5327,15 +5530,15 @@ class Garnishment4Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Dt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    rmtd_amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200112] = field(
+    rmtd_amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200113] = field(
         default=None,
         metadata={
             "name": "RmtdAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     fmly_mdcl_insrnc_ind: Optional[bool] = field(
@@ -5343,7 +5546,7 @@ class Garnishment4Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "FmlyMdclInsrncInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     mplyee_termntn_ind: Optional[bool] = field(
@@ -5351,19 +5554,19 @@ class Garnishment4Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "MplyeeTermntnInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class GroupHeader116Camt05200112(ISO20022MessageElement):
+class GroupHeader116Camt05200113(ISO20022MessageElement):
     msg_id: Optional[str] = field(
         default=None,
         metadata={
             "name": "MsgId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -5374,32 +5577,32 @@ class GroupHeader116Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "CreDtTm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
-    msg_rcpt: Optional[PartyIdentification272Camt05200112] = field(
+    msg_rcpt: Optional[PartyIdentification272Camt05200113] = field(
         default=None,
         metadata={
             "name": "MsgRcpt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    msg_pgntn: Optional[Pagination1Camt05200112] = field(
+    msg_pgntn: Optional[Pagination1Camt05200113] = field(
         default=None,
         metadata={
             "name": "MsgPgntn",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    orgnl_biz_qry: Optional[OriginalBusinessQuery1Camt05200112] = field(
+    orgnl_biz_qry: Optional[OriginalBusinessQuery1Camt05200113] = field(
         default=None,
         metadata={
             "name": "OrgnlBizQry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     addtl_inf: Optional[str] = field(
@@ -5407,7 +5610,7 @@ class GroupHeader116Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "AddtlInf",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 500,
         },
@@ -5415,13 +5618,13 @@ class GroupHeader116Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class InterestRecord2Camt05200112(ISO20022MessageElement):
-    amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200112] = field(
+class InterestRecord2Camt05200113(ISO20022MessageElement):
+    amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200113] = field(
         default=None,
         metadata={
             "name": "Amt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
@@ -5430,32 +5633,32 @@ class InterestRecord2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "CdtDbtInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
-    tp: Optional[InterestType1ChoiceCamt05200112] = field(
+    tp: Optional[InterestType1ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    rate: Optional[Rate4Camt05200112] = field(
+    rate: Optional[Rate4Camt05200113] = field(
         default=None,
         metadata={
             "name": "Rate",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    fr_to_dt: Optional[DateTimePeriod1Camt05200112] = field(
+    fr_to_dt: Optional[DateTimePeriod1Camt05200113] = field(
         default=None,
         metadata={
             "name": "FrToDt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     rsn: Optional[str] = field(
@@ -5463,65 +5666,65 @@ class InterestRecord2Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Rsn",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
     )
-    tax: Optional[TaxCharges2Camt05200112] = field(
+    tax: Optional[TaxCharges2Camt05200113] = field(
         default=None,
         metadata={
             "name": "Tax",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class Party50ChoiceCamt05200112(ISO20022MessageElement):
-    pty: Optional[PartyIdentification272Camt05200112] = field(
+class Party50ChoiceCamt05200113(ISO20022MessageElement):
+    pty: Optional[PartyIdentification272Camt05200113] = field(
         default=None,
         metadata={
             "name": "Pty",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    agt: Optional[BranchAndFinancialInstitutionIdentification8Camt05200112] = field(
+    agt: Optional[BranchAndFinancialInstitutionIdentification8Camt05200113] = field(
         default=None,
         metadata={
             "name": "Agt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class PaymentReturnReason8Camt05200112(ISO20022MessageElement):
-    orgnl_bk_tx_cd: Optional[BankTransactionCodeStructure4Camt05200112] = field(
+class PaymentReturnReason8Camt05200113(ISO20022MessageElement):
+    orgnl_bk_tx_cd: Optional[BankTransactionCodeStructure4Camt05200113] = field(
         default=None,
         metadata={
             "name": "OrgnlBkTxCd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    orgtr: Optional[PartyIdentification272Camt05200112] = field(
+    orgtr: Optional[PartyIdentification272Camt05200113] = field(
         default=None,
         metadata={
             "name": "Orgtr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    rsn: Optional[ReturnReason5ChoiceCamt05200112] = field(
+    rsn: Optional[ReturnReason5ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "Rsn",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     addtl_inf: list[str] = field(
@@ -5529,7 +5732,7 @@ class PaymentReturnReason8Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "AddtlInf",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 105,
         },
@@ -5537,75 +5740,75 @@ class PaymentReturnReason8Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class ProprietaryAgent5Camt05200112(ISO20022MessageElement):
+class ProprietaryAgent5Camt05200113(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 35,
         },
     )
-    agt: Optional[BranchAndFinancialInstitutionIdentification8Camt05200112] = field(
+    agt: Optional[BranchAndFinancialInstitutionIdentification8Camt05200113] = field(
         default=None,
         metadata={
             "name": "Agt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
 
 
 @dataclass
-class RemittanceLocation8Camt05200112(ISO20022MessageElement):
+class RemittanceLocation8Camt05200113(ISO20022MessageElement):
     rmt_id: Optional[str] = field(
         default=None,
         metadata={
             "name": "RmtId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
     )
-    rmt_lctn_dtls: list[RemittanceLocationData2Camt05200112] = field(
+    rmt_lctn_dtls: list[RemittanceLocationData2Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "RmtLctnDtls",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class TaxData1Camt05200112(ISO20022MessageElement):
-    cdtr: Optional[TaxParty1Camt05200112] = field(
+class TaxData1Camt05200113(ISO20022MessageElement):
+    cdtr: Optional[TaxParty1Camt05200113] = field(
         default=None,
         metadata={
             "name": "Cdtr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    dbtr: Optional[TaxParty2Camt05200112] = field(
+    dbtr: Optional[TaxParty2Camt05200113] = field(
         default=None,
         metadata={
             "name": "Dbtr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    ultmt_dbtr: Optional[TaxParty2Camt05200112] = field(
+    ultmt_dbtr: Optional[TaxParty2Camt05200113] = field(
         default=None,
         metadata={
             "name": "UltmtDbtr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     admstn_zone: Optional[str] = field(
@@ -5613,7 +5816,7 @@ class TaxData1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "AdmstnZone",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
@@ -5623,7 +5826,7 @@ class TaxData1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "RefNb",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 140,
         },
@@ -5633,25 +5836,25 @@ class TaxData1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Mtd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
     )
-    ttl_taxbl_base_amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200112] = field(
+    ttl_taxbl_base_amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200113] = field(
         default=None,
         metadata={
             "name": "TtlTaxblBaseAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    ttl_tax_amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200112] = field(
+    ttl_tax_amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200113] = field(
         default=None,
         metadata={
             "name": "TtlTaxAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     dt: Optional[XmlDate] = field(
@@ -5659,7 +5862,7 @@ class TaxData1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "Dt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     seq_nb: Optional[Decimal] = field(
@@ -5667,123 +5870,123 @@ class TaxData1Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "SeqNb",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "total_digits": 18,
             "fraction_digits": 0,
         },
     )
-    rcrd: list[TaxRecord3Camt05200112] = field(
+    rcrd: list[TaxRecord3Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "Rcrd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class Charges15Camt05200112(ISO20022MessageElement):
-    ttl_chrgs_and_tax_amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200112] = (
+class Charges15Camt05200113(ISO20022MessageElement):
+    ttl_chrgs_and_tax_amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200113] = (
         field(
             default=None,
             metadata={
                 "name": "TtlChrgsAndTaxAmt",
                 "type": "Element",
-                "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+                "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             },
         )
     )
-    rcrd: list[ChargesRecord8Camt05200112] = field(
+    rcrd: list[ChargesRecord8Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "Rcrd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class ProprietaryParty6Camt05200112(ISO20022MessageElement):
+class ProprietaryParty6Camt05200113(ISO20022MessageElement):
     tp: Optional[str] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 35,
         },
     )
-    pty: Optional[Party50ChoiceCamt05200112] = field(
+    pty: Optional[Party50ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "Pty",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
 
 
 @dataclass
-class StructuredRemittanceInformation18Camt05200112(ISO20022MessageElement):
-    rfrd_doc_inf: list[ReferredDocumentInformation8Camt05200112] = field(
+class StructuredRemittanceInformation18Camt05200113(ISO20022MessageElement):
+    rfrd_doc_inf: list[ReferredDocumentInformation8Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "RfrdDocInf",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    rfrd_doc_amt: Optional[RemittanceAmount4Camt05200112] = field(
+    rfrd_doc_amt: Optional[RemittanceAmount4Camt05200113] = field(
         default=None,
         metadata={
             "name": "RfrdDocAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    cdtr_ref_inf: Optional[CreditorReferenceInformation3Camt05200112] = field(
+    cdtr_ref_inf: Optional[CreditorReferenceInformation3Camt05200113] = field(
         default=None,
         metadata={
             "name": "CdtrRefInf",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    invcr: Optional[PartyIdentification272Camt05200112] = field(
+    invcr: Optional[PartyIdentification272Camt05200113] = field(
         default=None,
         metadata={
             "name": "Invcr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    invcee: Optional[PartyIdentification272Camt05200112] = field(
+    invcee: Optional[PartyIdentification272Camt05200113] = field(
         default=None,
         metadata={
             "name": "Invcee",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    tax_rmt: Optional[TaxData1Camt05200112] = field(
+    tax_rmt: Optional[TaxData1Camt05200113] = field(
         default=None,
         metadata={
             "name": "TaxRmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    grnshmt_rmt: Optional[Garnishment4Camt05200112] = field(
+    grnshmt_rmt: Optional[Garnishment4Camt05200113] = field(
         default=None,
         metadata={
             "name": "GrnshmtRmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     addtl_rmt_inf: list[str] = field(
@@ -5791,7 +5994,7 @@ class StructuredRemittanceInformation18Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "AddtlRmtInf",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "max_occurs": 3,
             "min_length": 1,
             "max_length": 140,
@@ -5800,263 +6003,263 @@ class StructuredRemittanceInformation18Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class TransactionAgents6Camt05200112(ISO20022MessageElement):
-    instg_agt: Optional[BranchAndFinancialInstitutionIdentification8Camt05200112] = (
+class TransactionAgents6Camt05200113(ISO20022MessageElement):
+    instg_agt: Optional[BranchAndFinancialInstitutionIdentification8Camt05200113] = (
         field(
             default=None,
             metadata={
                 "name": "InstgAgt",
                 "type": "Element",
-                "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+                "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             },
         )
     )
-    instd_agt: Optional[BranchAndFinancialInstitutionIdentification8Camt05200112] = (
+    instd_agt: Optional[BranchAndFinancialInstitutionIdentification8Camt05200113] = (
         field(
             default=None,
             metadata={
                 "name": "InstdAgt",
                 "type": "Element",
-                "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+                "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             },
         )
     )
-    dbtr_agt: Optional[BranchAndFinancialInstitutionIdentification8Camt05200112] = (
+    dbtr_agt: Optional[BranchAndFinancialInstitutionIdentification8Camt05200113] = (
         field(
             default=None,
             metadata={
                 "name": "DbtrAgt",
                 "type": "Element",
-                "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+                "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             },
         )
     )
-    cdtr_agt: Optional[BranchAndFinancialInstitutionIdentification8Camt05200112] = (
+    cdtr_agt: Optional[BranchAndFinancialInstitutionIdentification8Camt05200113] = (
         field(
             default=None,
             metadata={
                 "name": "CdtrAgt",
                 "type": "Element",
-                "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+                "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             },
         )
     )
-    intrmy_agt1: Optional[BranchAndFinancialInstitutionIdentification8Camt05200112] = (
+    intrmy_agt1: Optional[BranchAndFinancialInstitutionIdentification8Camt05200113] = (
         field(
             default=None,
             metadata={
                 "name": "IntrmyAgt1",
                 "type": "Element",
-                "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+                "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             },
         )
     )
-    intrmy_agt2: Optional[BranchAndFinancialInstitutionIdentification8Camt05200112] = (
+    intrmy_agt2: Optional[BranchAndFinancialInstitutionIdentification8Camt05200113] = (
         field(
             default=None,
             metadata={
                 "name": "IntrmyAgt2",
                 "type": "Element",
-                "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+                "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             },
         )
     )
-    intrmy_agt3: Optional[BranchAndFinancialInstitutionIdentification8Camt05200112] = (
+    intrmy_agt3: Optional[BranchAndFinancialInstitutionIdentification8Camt05200113] = (
         field(
             default=None,
             metadata={
                 "name": "IntrmyAgt3",
                 "type": "Element",
-                "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+                "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             },
         )
     )
-    rcvg_agt: Optional[BranchAndFinancialInstitutionIdentification8Camt05200112] = (
+    rcvg_agt: Optional[BranchAndFinancialInstitutionIdentification8Camt05200113] = (
         field(
             default=None,
             metadata={
                 "name": "RcvgAgt",
                 "type": "Element",
-                "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+                "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             },
         )
     )
-    dlvrg_agt: Optional[BranchAndFinancialInstitutionIdentification8Camt05200112] = (
+    dlvrg_agt: Optional[BranchAndFinancialInstitutionIdentification8Camt05200113] = (
         field(
             default=None,
             metadata={
                 "name": "DlvrgAgt",
                 "type": "Element",
-                "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+                "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             },
         )
     )
-    issg_agt: Optional[BranchAndFinancialInstitutionIdentification8Camt05200112] = (
+    issg_agt: Optional[BranchAndFinancialInstitutionIdentification8Camt05200113] = (
         field(
             default=None,
             metadata={
                 "name": "IssgAgt",
                 "type": "Element",
-                "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+                "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             },
         )
     )
-    sttlm_plc: Optional[BranchAndFinancialInstitutionIdentification8Camt05200112] = (
+    sttlm_plc: Optional[BranchAndFinancialInstitutionIdentification8Camt05200113] = (
         field(
             default=None,
             metadata={
                 "name": "SttlmPlc",
                 "type": "Element",
-                "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+                "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             },
         )
     )
-    prtry: list[ProprietaryAgent5Camt05200112] = field(
+    prtry: list[ProprietaryAgent5Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class TransactionInterest4Camt05200112(ISO20022MessageElement):
-    ttl_intrst_and_tax_amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200112] = (
+class TransactionInterest4Camt05200113(ISO20022MessageElement):
+    ttl_intrst_and_tax_amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200113] = (
         field(
             default=None,
             metadata={
                 "name": "TtlIntrstAndTaxAmt",
                 "type": "Element",
-                "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+                "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             },
         )
     )
-    rcrd: list[InterestRecord2Camt05200112] = field(
+    rcrd: list[InterestRecord2Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "Rcrd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class RemittanceInformation22Camt05200112(ISO20022MessageElement):
+class RemittanceInformation22Camt05200113(ISO20022MessageElement):
     ustrd: list[str] = field(
         default_factory=list,
         metadata={
             "name": "Ustrd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 140,
         },
     )
-    strd: list[StructuredRemittanceInformation18Camt05200112] = field(
+    strd: list[StructuredRemittanceInformation18Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "Strd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class TransactionParties12Camt05200112(ISO20022MessageElement):
-    initg_pty: Optional[Party50ChoiceCamt05200112] = field(
+class TransactionParties12Camt05200113(ISO20022MessageElement):
+    initg_pty: Optional[Party50ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "InitgPty",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    dbtr: Optional[Party50ChoiceCamt05200112] = field(
+    dbtr: Optional[Party50ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "Dbtr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    dbtr_acct: Optional[CashAccount40Camt05200112] = field(
+    dbtr_acct: Optional[CashAccount40Camt05200113] = field(
         default=None,
         metadata={
             "name": "DbtrAcct",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    ultmt_dbtr: Optional[Party50ChoiceCamt05200112] = field(
+    ultmt_dbtr: Optional[Party50ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "UltmtDbtr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    cdtr: Optional[Party50ChoiceCamt05200112] = field(
+    cdtr: Optional[Party50ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "Cdtr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    cdtr_acct: Optional[CashAccount40Camt05200112] = field(
+    cdtr_acct: Optional[CashAccount40Camt05200113] = field(
         default=None,
         metadata={
             "name": "CdtrAcct",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    ultmt_cdtr: Optional[Party50ChoiceCamt05200112] = field(
+    ultmt_cdtr: Optional[Party50ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "UltmtCdtr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    tradg_pty: Optional[Party50ChoiceCamt05200112] = field(
+    tradg_pty: Optional[Party50ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "TradgPty",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    prtry: list[ProprietaryParty6Camt05200112] = field(
+    prtry: list[ProprietaryParty6Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class EntryTransaction14Camt05200112(ISO20022MessageElement):
-    refs: Optional[TransactionReferences6Camt05200112] = field(
+class EntryTransaction15Camt05200113(ISO20022MessageElement):
+    refs: Optional[TransactionReferences6Camt05200113] = field(
         default=None,
         metadata={
             "name": "Refs",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200112] = field(
+    amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200113] = field(
         default=None,
         metadata={
             "name": "Amt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     cdt_dbt_ind: Optional[CreditDebitCode] = field(
@@ -6064,184 +6267,202 @@ class EntryTransaction14Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "CdtDbtInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    amt_dtls: Optional[AmountAndCurrencyExchange4Camt05200112] = field(
+    amt_dtls: Optional[AmountAndCurrencyExchange4Camt05200113] = field(
         default=None,
         metadata={
             "name": "AmtDtls",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    avlbty: list[CashAvailability1Camt05200112] = field(
+    avlbty: list[CashAvailability1Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "Avlbty",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    bk_tx_cd: Optional[BankTransactionCodeStructure4Camt05200112] = field(
+    bk_tx_cd: Optional[BankTransactionCodeStructure4Camt05200113] = field(
         default=None,
         metadata={
             "name": "BkTxCd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    chrgs: Optional[Charges15Camt05200112] = field(
+    chrgs: Optional[Charges15Camt05200113] = field(
         default=None,
         metadata={
             "name": "Chrgs",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    intrst: Optional[TransactionInterest4Camt05200112] = field(
+    intrst: Optional[TransactionInterest4Camt05200113] = field(
         default=None,
         metadata={
             "name": "Intrst",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    rltd_pties: Optional[TransactionParties12Camt05200112] = field(
+    rltd_pties: Optional[TransactionParties12Camt05200113] = field(
         default=None,
         metadata={
             "name": "RltdPties",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    rltd_agts: Optional[TransactionAgents6Camt05200112] = field(
+    rltd_agts: Optional[TransactionAgents6Camt05200113] = field(
         default=None,
         metadata={
             "name": "RltdAgts",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    lcl_instrm: Optional[LocalInstrument2ChoiceCamt05200112] = field(
+    lcl_instrm: Optional[LocalInstrument2ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "LclInstrm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    pmt_tp_inf: Optional[PaymentTypeInformation27Camt05200112] = field(
+    pmt_tp_inf: Optional[PaymentTypeInformation27Camt05200113] = field(
         default=None,
         metadata={
             "name": "PmtTpInf",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    purp: Optional[Purpose2ChoiceCamt05200112] = field(
+    purp: Optional[Purpose2ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "Purp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    rltd_rmt_inf: list[RemittanceLocation8Camt05200112] = field(
+    rltd_rmt_inf: list[RemittanceLocation8Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "RltdRmtInf",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "max_occurs": 10,
         },
     )
-    rmt_inf: Optional[RemittanceInformation22Camt05200112] = field(
+    rmt_inf: Optional[RemittanceInformation22Camt05200113] = field(
         default=None,
         metadata={
             "name": "RmtInf",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    rltd_dts: Optional[TransactionDates3Camt05200112] = field(
+    rltd_dts: Optional[TransactionDates3Camt05200113] = field(
         default=None,
         metadata={
             "name": "RltdDts",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    rltd_pric: Optional[TransactionPrice4ChoiceCamt05200112] = field(
+    rltd_pric: Optional[TransactionPrice4ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "RltdPric",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    rltd_qties: list[TransactionQuantities3ChoiceCamt05200112] = field(
+    rltd_qties: list[TransactionQuantities4ChoiceCamt05200113] = field(
         default_factory=list,
         metadata={
             "name": "RltdQties",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    fin_instrm_id: Optional[SecurityIdentification19Camt05200112] = field(
+    fin_instrm_id: Optional[SecurityIdentification19Camt05200113] = field(
         default=None,
         metadata={
             "name": "FinInstrmId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    tax: Optional[TaxData1Camt05200112] = field(
+    tax: Optional[TaxData1Camt05200113] = field(
         default=None,
         metadata={
             "name": "Tax",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    rtr_inf: Optional[PaymentReturnReason8Camt05200112] = field(
+    rtr_inf: Optional[PaymentReturnReason8Camt05200113] = field(
         default=None,
         metadata={
             "name": "RtrInf",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    corp_actn: Optional[CorporateAction9Camt05200112] = field(
+    rltd_corp_actn: Optional[CorporateAction82Camt05200113] = field(
         default=None,
         metadata={
-            "name": "CorpActn",
+            "name": "RltdCorpActn",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    sfkpg_acct: Optional[SecuritiesAccount19Camt05200112] = field(
+    sfkpg_acct: Optional[SecuritiesAccount19Camt05200113] = field(
         default=None,
         metadata={
             "name": "SfkpgAcct",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    csh_dpst: list[CashDeposit1Camt05200112] = field(
+    undrlyg_allcn: list[TransactionAllocation1Camt05200113] = field(
+        default_factory=list,
+        metadata={
+            "name": "UndrlygAllcn",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+        },
+    )
+    csh_dpst: list[CashDeposit1Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "CshDpst",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    card_tx: Optional[CardTransaction18Camt05200112] = field(
+    card_tx: Optional[CardTransaction18Camt05200113] = field(
         default=None,
         metadata={
             "name": "CardTx",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+        },
+    )
+    instr_cpy: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "InstrCpy",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
+            "min_length": 1,
+            "max_length": 20000,
         },
     )
     addtl_tx_inf: Optional[str] = field(
@@ -6249,59 +6470,59 @@ class EntryTransaction14Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "AddtlTxInf",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 500,
         },
     )
-    splmtry_data: list[SupplementaryData1Camt05200112] = field(
+    splmtry_data: list[SupplementaryData1Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "SplmtryData",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class EntryDetails13Camt05200112(ISO20022MessageElement):
-    btch: Optional[BatchInformation2Camt05200112] = field(
+class EntryDetails14Camt05200113(ISO20022MessageElement):
+    btch: Optional[BatchInformation2Camt05200113] = field(
         default=None,
         metadata={
             "name": "Btch",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    tx_dtls: list[EntryTransaction14Camt05200112] = field(
+    tx_dtls: list[EntryTransaction15Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "TxDtls",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class ReportEntry14Camt05200112(ISO20022MessageElement):
+class ReportEntry15Camt05200113(ISO20022MessageElement):
     ntry_ref: Optional[str] = field(
         default=None,
         metadata={
             "name": "NtryRef",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
     )
-    amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200112] = field(
+    amt: Optional[ActiveOrHistoricCurrencyAndAmountCamt05200113] = field(
         default=None,
         metadata={
             "name": "Amt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
@@ -6310,7 +6531,7 @@ class ReportEntry14Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "CdtDbtInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
@@ -6319,32 +6540,32 @@ class ReportEntry14Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "RvslInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    sts: Optional[EntryStatus1ChoiceCamt05200112] = field(
+    sts: Optional[EntryStatus1ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "Sts",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
-    bookg_dt: Optional[DateAndDateTime2ChoiceCamt05200112] = field(
+    bookg_dt: Optional[DateAndDateTime2ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "BookgDt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    val_dt: Optional[DateAndDateTime2ChoiceCamt05200112] = field(
+    val_dt: Optional[DateAndDateTime2ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "ValDt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     acct_svcr_ref: Optional[str] = field(
@@ -6352,25 +6573,25 @@ class ReportEntry14Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "AcctSvcrRef",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 35,
         },
     )
-    avlbty: list[CashAvailability1Camt05200112] = field(
+    avlbty: list[CashAvailability1Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "Avlbty",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    bk_tx_cd: Optional[BankTransactionCodeStructure4Camt05200112] = field(
+    bk_tx_cd: Optional[BankTransactionCodeStructure4Camt05200113] = field(
         default=None,
         metadata={
             "name": "BkTxCd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
@@ -6379,63 +6600,63 @@ class ReportEntry14Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "ComssnWvrInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    addtl_inf_ind: Optional[MessageIdentification2Camt05200112] = field(
+    addtl_inf_ind: Optional[MessageIdentification2Camt05200113] = field(
         default=None,
         metadata={
             "name": "AddtlInfInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    amt_dtls: Optional[AmountAndCurrencyExchange4Camt05200112] = field(
+    amt_dtls: Optional[AmountAndCurrencyExchange4Camt05200113] = field(
         default=None,
         metadata={
             "name": "AmtDtls",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    chrgs: Optional[Charges15Camt05200112] = field(
+    chrgs: Optional[Charges15Camt05200113] = field(
         default=None,
         metadata={
             "name": "Chrgs",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    tech_inpt_chanl: Optional[TechnicalInputChannel1ChoiceCamt05200112] = field(
+    tech_inpt_chanl: Optional[TechnicalInputChannel1ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "TechInptChanl",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    intrst: Optional[TransactionInterest4Camt05200112] = field(
+    intrst: Optional[TransactionInterest4Camt05200113] = field(
         default=None,
         metadata={
             "name": "Intrst",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    card_tx: Optional[CardEntry5Camt05200112] = field(
+    card_tx: Optional[CardEntry5Camt05200113] = field(
         default=None,
         metadata={
             "name": "CardTx",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    ntry_dtls: list[EntryDetails13Camt05200112] = field(
+    ntry_dtls: list[EntryDetails14Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "NtryDtls",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     addtl_ntry_inf: Optional[str] = field(
@@ -6443,7 +6664,7 @@ class ReportEntry14Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "AddtlNtryInf",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 500,
         },
@@ -6451,24 +6672,24 @@ class ReportEntry14Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class AccountReport33Camt05200112(ISO20022MessageElement):
+class AccountReport37Camt05200113(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
             "min_length": 1,
             "max_length": 35,
         },
     )
-    rpt_pgntn: Optional[Pagination1Camt05200112] = field(
+    rpt_pgntn: Optional[Pagination1Camt05200113] = field(
         default=None,
         metadata={
             "name": "RptPgntn",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     elctrnc_seq_nb: Optional[Decimal] = field(
@@ -6476,17 +6697,17 @@ class AccountReport33Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "ElctrncSeqNb",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "total_digits": 18,
             "fraction_digits": 0,
         },
     )
-    rptg_seq: Optional[SequenceRange1ChoiceCamt05200112] = field(
+    rptg_seq: Optional[SequenceRange1ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "RptgSeq",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     lgl_seq_nb: Optional[Decimal] = field(
@@ -6494,7 +6715,7 @@ class AccountReport33Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "LglSeqNb",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "total_digits": 18,
             "fraction_digits": 0,
         },
@@ -6504,15 +6725,15 @@ class AccountReport33Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "CreDtTm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    fr_to_dt: Optional[DateTimePeriod1Camt05200112] = field(
+    fr_to_dt: Optional[DateTimePeriod1Camt05200113] = field(
         default=None,
         metadata={
             "name": "FrToDt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     cpy_dplct_ind: Optional[CopyDuplicate1Code] = field(
@@ -6520,64 +6741,64 @@ class AccountReport33Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "CpyDplctInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    rptg_src: Optional[ReportingSource1ChoiceCamt05200112] = field(
+    rptg_src: Optional[ReportingSource1ChoiceCamt05200113] = field(
         default=None,
         metadata={
             "name": "RptgSrc",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    acct: Optional[CashAccount43Camt05200112] = field(
+    acct: Optional[CashAccount43Camt05200113] = field(
         default=None,
         metadata={
             "name": "Acct",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
-    rltd_acct: Optional[CashAccount40Camt05200112] = field(
+    rltd_acct: Optional[CashAccount40Camt05200113] = field(
         default=None,
         metadata={
             "name": "RltdAcct",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    intrst: list[AccountInterest4Camt05200112] = field(
+    intrst: list[AccountInterest4Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "Intrst",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    bal: list[CashBalance8Camt05200112] = field(
+    bal: list[CashBalance8Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "Bal",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    txs_summry: Optional[TotalTransactions6Camt05200112] = field(
+    txs_summry: Optional[TotalTransactions6Camt05200113] = field(
         default=None,
         metadata={
             "name": "TxsSummry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
-    ntry: list[ReportEntry14Camt05200112] = field(
+    ntry: list[ReportEntry15Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "Ntry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
     addtl_rpt_inf: Optional[str] = field(
@@ -6585,7 +6806,7 @@ class AccountReport33Camt05200112(ISO20022MessageElement):
         metadata={
             "name": "AddtlRptInf",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_length": 1,
             "max_length": 500,
         },
@@ -6593,41 +6814,41 @@ class AccountReport33Camt05200112(ISO20022MessageElement):
 
 
 @dataclass
-class BankToCustomerAccountReportV12Camt05200112(ISO20022MessageElement):
-    grp_hdr: Optional[GroupHeader116Camt05200112] = field(
+class BankToCustomerAccountReportV13Camt05200113(ISO20022MessageElement):
+    grp_hdr: Optional[GroupHeader116Camt05200113] = field(
         default=None,
         metadata={
             "name": "GrpHdr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "required": True,
         },
     )
-    rpt: list[AccountReport33Camt05200112] = field(
+    rpt: list[AccountReport37Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "Rpt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
             "min_occurs": 1,
         },
     )
-    splmtry_data: list[SupplementaryData1Camt05200112] = field(
+    splmtry_data: list[SupplementaryData1Camt05200113] = field(
         default_factory=list,
         metadata={
             "name": "SplmtryData",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13",
         },
     )
 
 
 @dataclass
-class Camt05200112(ISO20022Message):
+class Camt05200113(ISO20022Message):
     class Meta:
-        namespace = "urn:iso:std:iso:20022:tech:xsd:camt.052.001.12"
+        namespace = "urn:iso:std:iso:20022:tech:xsd:camt.052.001.13"
 
-    bk_to_cstmr_acct_rpt: Optional[BankToCustomerAccountReportV12Camt05200112] = field(
+    bk_to_cstmr_acct_rpt: Optional[BankToCustomerAccountReportV13Camt05200113] = field(
         default=None,
         metadata={
             "name": "BkToCstmrAcctRpt",
