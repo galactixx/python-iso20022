@@ -17,7 +17,6 @@ from python_iso20022.enums import (
     TypeOfIdentification1Code,
 )
 from python_iso20022.seev.enums import (
-    AdditionalBusinessProcess11Code,
     AmountPriceType1Code,
     AmountPriceType2Code,
     CorporateActionEventStage4Code,
@@ -42,6 +41,7 @@ from python_iso20022.seev.enums import (
     RateType7Code,
     WithholdingTaxRateType1Code,
 )
+from python_iso20022.seev.seev_036_002_15.enums import AdditionalBusinessProcess11Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:seev.036.002.15"
 

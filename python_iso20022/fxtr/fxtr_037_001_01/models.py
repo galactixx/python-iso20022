@@ -21,11 +21,11 @@ from python_iso20022.fxtr.enums import (
     IdentificationType2Code,
     PartyIdentificationType1Code,
     SettlementDateCode,
-    TradeConfirmationStatus1Code,
     TradingMethodType1Code,
     TradingModeType1Code,
     UnderlyingProductIdentifier1Code,
 )
+from python_iso20022.fxtr.fxtr_037_001_01.enums import TradeConfirmationStatus1Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:fxtr.037.001.01"
 

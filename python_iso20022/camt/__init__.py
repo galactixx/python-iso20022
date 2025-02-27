@@ -85,8 +85,8 @@ from python_iso20022.camt.camt_101_001_02.models import Camt10100102
 from python_iso20022.camt.camt_102_001_03.models import Camt10200103
 from python_iso20022.camt.camt_103_001_03.models import Camt10300103
 from python_iso20022.camt.camt_104_001_01.models import Camt10400101
-from python_iso20022.camt.camt_105_001_02.models import Camt10500102
-from python_iso20022.camt.camt_106_001_02.models import Camt10600102
+from python_iso20022.camt.camt_105_001_03.models import Camt10500103
+from python_iso20022.camt.camt_106_001_03.models import Camt10600103
 from python_iso20022.camt.camt_107_001_02.models import Camt10700102
 from python_iso20022.camt.camt_108_001_02.models import Camt10800102
 from python_iso20022.camt.camt_109_001_02.models import Camt10900102
@@ -181,8 +181,8 @@ __all__ = [
     "Camt10200103",
     "Camt10300103",
     "Camt10400101",
-    "Camt10500102",
-    "Camt10600102",
+    "Camt10500103",
+    "Camt10600103",
     "Camt10700102",
     "Camt10800102",
     "Camt10900102",

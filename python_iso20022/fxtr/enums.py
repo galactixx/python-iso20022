@@ -226,18 +226,6 @@ class StatusSubType2Code(Enum):
     SMDY = "SMDY"
 
 
-class TradeConfirmationStatus1Code(Enum):
-    ALST = "ALST"
-    CONF = "CONF"
-    DISA = "DISA"
-    EMCN = "EMCN"
-    MISM = "MISM"
-    SCCN = "SCCN"
-    SNCC = "SNCC"
-    SNCN = "SNCN"
-    UNCN = "UNCN"
-
-
 class TradeStatus6Code(Enum):
     INVA = "INVA"
     FMTC = "FMTC"

@@ -3,10 +3,8 @@ from typing import Optional
 
 from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import NoReasonCode
-from python_iso20022.seev.enums import (
-    CorporateActionEventType34Code,
-    PendingReason19Code,
-)
+from python_iso20022.seev.enums import CorporateActionEventType34Code
+from python_iso20022.seev.seev_032_002_08.enums import PendingReason19Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:seev.032.002.08"
 
