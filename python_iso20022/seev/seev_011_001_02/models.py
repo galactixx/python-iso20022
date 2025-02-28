@@ -11,11 +11,11 @@ from python_iso20022.enums import (
 )
 from python_iso20022.seev.enums import (
     CorporateActionEventProcessingType1Code,
-    CorporateActionEventType31Code,
     CorporateActionMandatoryVoluntary1Code,
     ProcessedStatus2Code,
 )
 from python_iso20022.seev.seev_011_001_02.enums import (
+    CorporateActionEventType31Code,
     ProcessedStatus7Code,
     RejectionReason80Code,
     RejectionReason81Code,

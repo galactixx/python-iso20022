@@ -577,19 +577,6 @@ class BeneficiaryCertificationCompletion1Code(Enum):
     PHYS = "PHYS"
 
 
-class BeneficiaryCertificationType4Code(Enum):
-    ACCI = "ACCI"
-    DOMI = "DOMI"
-    NDOM = "NDOM"
-    FULL = "FULL"
-    NCOM = "NCOM"
-    QIBB = "QIBB"
-    TRBD = "TRBD"
-    PAPW = "PAPW"
-    PABD = "PABD"
-    FRAC = "FRAC"
-
-
 class BlockTrade1Code(Enum):
     BLPA = "BLPA"
     BLCH = "BLCH"

@@ -43,6 +43,7 @@ from python_iso20022.seev.enums import (
     DeemedRateType1Code,
     DistributionType3Code,
     DividendRateType1Code,
+    DutchAuctionType1Code,
     ElectionMovementType2Code,
     EventCompletenessStatus1Code,
     EventConfirmationStatus1Code,
@@ -62,9 +63,11 @@ from python_iso20022.seev.enums import (
     OptionAvailabilityStatus1Code,
     OptionFeatures13Code,
     Payment2Code,
+    PriceCalculationMethod1Code,
     PriceRateType3Code,
     PriceValueType8Code,
     PriceValueType10Code,
+    ProrationBelowMinimumQuantity1Code,
     Quantity4Code,
     Quantity5Code,
     RateStatus1Code,
@@ -76,11 +79,6 @@ from python_iso20022.seev.enums import (
     RenounceableStatus1Code,
     SafekeepingAccountIdentification1Code,
     WithholdingTaxRateType1Code,
-)
-from python_iso20022.seev.seev_031_001_15.enums import (
-    DutchAuctionType1Code,
-    PriceCalculationMethod1Code,
-    ProrationBelowMinimumQuantity1Code,
 )
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:seev.031.001.15"

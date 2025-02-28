@@ -1,6 +1,19 @@
 from enum import Enum
 
 
+class BeneficiaryCertificationType4Code(Enum):
+    ACCI = "ACCI"
+    DOMI = "DOMI"
+    NDOM = "NDOM"
+    FULL = "FULL"
+    NCOM = "NCOM"
+    QIBB = "QIBB"
+    TRBD = "TRBD"
+    PAPW = "PAPW"
+    PABD = "PABD"
+    FRAC = "FRAC"
+
+
 class FrequencyGranularityType1Code(Enum):
     EMON = "EMON"
     EWEK = "EWEK"

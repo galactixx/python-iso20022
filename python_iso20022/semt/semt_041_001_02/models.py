@@ -7,7 +7,6 @@ from xsdata.models.datatype import XmlDate, XmlDateTime, XmlPeriod
 from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     AddressType2Code,
-    BeneficiaryCertificationType4Code,
     EventFrequency7Code,
     FormOfSecurity1Code,
     InvestmentFundRole2Code,
@@ -16,6 +15,7 @@ from python_iso20022.enums import (
     StatementUpdateType1Code,
 )
 from python_iso20022.semt.semt_041_001_02.enums import (
+    BeneficiaryCertificationType4Code,
     FrequencyGranularityType1Code,
     PersonIdentificationType6Code,
     PriceSource2Code,
