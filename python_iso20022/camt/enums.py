@@ -81,6 +81,12 @@ class ChequePartyRole1Code(Enum):
     PAYR = "PAYR"
 
 
+class CommissionType6Code(Enum):
+    FEND = "FEND"
+    BEND = "BEND"
+    CDPL = "CDPL"
+
+
 class Cscmanagement1Code(Enum):
     PRST = "PRST"
     BYPS = "BYPS"

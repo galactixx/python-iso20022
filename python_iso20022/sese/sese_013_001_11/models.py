@@ -29,23 +29,21 @@ from python_iso20022.sese.enums import (
     AccountOwnershipType6Code,
     BusinessFlowType1Code,
     CashAssetType1Code,
+    DrawdownStatus1Code,
     DrawdownType2Code,
     GeneralInvestmentAccountType2Code,
     HolderType1Code,
+    LumpSumType1Code,
     OtherAmountType1Code,
     OtherAsset2Code,
+    PensionOrderType1Code,
     PensionSchemeType3Code,
     PensionTransferScope1Code,
     PersonIdentificationType7Code,
-    TaxEfficientProductType2Code,
-    TransferType4Code,
-)
-from python_iso20022.sese.sese_013_001_11.enums import (
-    DrawdownStatus1Code,
-    LumpSumType1Code,
-    PensionOrderType1Code,
     PortfolioWithdrawalReason1Code,
+    TaxEfficientProductType2Code,
     TaxWrapperAmountType1Code,
+    TransferType4Code,
 )
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:sese.013.001.11"

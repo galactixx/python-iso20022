@@ -194,27 +194,27 @@ class QueryTradeStatus1Code(Enum):
     QRTR = "QRTR"
 
 
-class SettlementDateCode(Enum):
-    REGU = "REGU"
-    CASH = "CASH"
-    NXTD = "NXTD"
-    TONE = "TONE"
-    TTWO = "TTWO"
-    TTRE = "TTRE"
-    TFOR = "TFOR"
-    TFIV = "TFIV"
-    SELL = "SELL"
-    FUTU = "FUTU"
+class SettlementDate8Code(Enum):
     ASAP = "ASAP"
     ENDC = "ENDC"
+    CASH = "CASH"
+    CLEA = "CLEA"
+    MONT = "MONT"
+    FUTU = "FUTU"
+    PRVD = "PRVD"
+    REGU = "REGU"
+    SAVE = "SAVE"
+    SELL = "SELL"
+    TBAT = "TBAT"
+    TFIV = "TFIV"
+    TFOR = "TFOR"
+    TONE = "TONE"
+    TTRE = "TTRE"
+    TTWO = "TTWO"
     WHIF = "WHIF"
     WDIS = "WDIS"
-    WHID = "WHID"
-    TBAT = "TBAT"
-    MONT = "MONT"
-    CLEA = "CLEA"
-    SAVE = "SAVE"
     WISS = "WISS"
+    WHID = "WHID"
 
 
 class SideIndicator1Code(Enum):

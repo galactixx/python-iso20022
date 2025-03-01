@@ -17,6 +17,7 @@ from python_iso20022.enums import (
 )
 from python_iso20022.sese.enums import (
     AccountOwnershipType6Code,
+    BusinessFlowDirectionType1Code,
     CashAssetType1Code,
     GeneralInvestmentAccountType2Code,
     HolderType1Code,
@@ -26,7 +27,6 @@ from python_iso20022.sese.enums import (
     PersonIdentificationType7Code,
     TaxEfficientProductType2Code,
 )
-from python_iso20022.sese.sese_019_001_08.enums import BusinessFlowDirectionType1Code
 
 __NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:sese.019.001.08"
 

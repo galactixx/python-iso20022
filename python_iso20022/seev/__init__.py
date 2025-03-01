@@ -59,10 +59,10 @@ from python_iso20022.seev.seev_046_001_01.models import Seev04600101
 from python_iso20022.seev.seev_047_001_03.models import Seev04700103
 from python_iso20022.seev.seev_048_001_01.models import Seev04800101
 from python_iso20022.seev.seev_049_001_01.models import Seev04900101
-from python_iso20022.seev.seev_050_001_02.models import Seev05000102
-from python_iso20022.seev.seev_052_001_02.models import Seev05200102
-from python_iso20022.seev.seev_053_001_01.models import Seev05300101
-from python_iso20022.seev.seev_053_001_02.models import Seev05300102
+from python_iso20022.seev.seev_050_001_03.models import Seev05000103
+from python_iso20022.seev.seev_051_001_02.models import Seev05100102
+from python_iso20022.seev.seev_052_001_03.models import Seev05200103
+from python_iso20022.seev.seev_053_001_03.models import Seev05300103
 
 __all__ = [
     "Seev00100112",
@@ -126,8 +126,8 @@ __all__ = [
     "Seev04700103",
     "Seev04800101",
     "Seev04900101",
-    "Seev05000102",
-    "Seev05200102",
-    "Seev05300101",
-    "Seev05300102",
+    "Seev05000103",
+    "Seev05100102",
+    "Seev05200103",
+    "Seev05300103",
 ]

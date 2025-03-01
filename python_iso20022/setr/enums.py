@@ -34,25 +34,6 @@ class ChargeTaxBasis1Code(Enum):
     PERU = "PERU"
 
 
-class ChargeType11Code(Enum):
-    BEND = "BEND"
-    FEND = "FEND"
-    SWIT = "SWIT"
-    DLEV = "DLEV"
-    DISC = "DISC"
-    PENA = "PENA"
-    POST = "POST"
-    REGF = "REGF"
-    SHIP = "SHIP"
-    CHAR = "CHAR"
-    CDSC = "CDSC"
-    CBCH = "CBCH"
-    PREM = "PREM"
-    INIT = "INIT"
-    BRKF = "BRKF"
-    UCIC = "UCIC"
-
-
 class ClearingSide1Code(Enum):
     BUYI = "BUYI"
     SELL = "SELL"
@@ -118,16 +99,6 @@ class FundCashAccount2Code(Enum):
     SRSA = "SRSA"
 
 
-class FundOrderType4Code(Enum):
-    BEDB = "BEDB"
-    INVP = "INVP"
-    PREA = "PREA"
-    STAF = "STAF"
-    RGSV = "RGSV"
-    RGSU = "RGSU"
-    RDIV = "RDIV"
-
-
 class FundOrderType5Code(Enum):
     NSPN = "NSPN"
     NCPN = "NCPN"
@@ -184,18 +155,6 @@ class OrderWaiverReason1Code(Enum):
     BMIN = "BMIN"
     CUTO = "CUTO"
     COMW = "COMW"
-
-
-class PersonIdentificationType2Code(Enum):
-    PASS = "PASS"
-    CPFA = "CPFA"
-    SRSA = "SRSA"
-    NRIN = "NRIN"
-    DRLC = "DRLC"
-    SOCS = "SOCS"
-    AREG = "AREG"
-    IDCD = "IDCD"
-    EMID = "EMID"
 
 
 class PositionEffect2Code(Enum):
@@ -271,33 +230,6 @@ class SourceOfCash1Code(Enum):
     WINS = "WINS"
 
 
-class TaxType11Code(Enum):
-    PROV = "PROV"
-    NATI = "NATI"
-    STAT = "STAT"
-    WITH = "WITH"
-    KAPA = "KAPA"
-    INPO = "INPO"
-    STAM = "STAM"
-    WTAX = "WTAX"
-    INHT = "INHT"
-    SOSU = "SOSU"
-    CTAX = "CTAX"
-    GIFT = "GIFT"
-    COAX = "COAX"
-    EUTR = "EUTR"
-    AKT1 = "AKT1"
-    AKT2 = "AKT2"
-    ZWIS = "ZWIS"
-
-
-class TaxationBasis4Code(Enum):
-    FLAT = "FLAT"
-    PERU = "PERU"
-    GRAM = "GRAM"
-    NEAM = "NEAM"
-
-
 class TradeRegulatoryConditions1Code(Enum):
     SOLI = "SOLI"
     USOL = "USOL"
@@ -330,11 +262,6 @@ class TradeType3Code(Enum):
     FUTR = "FUTR"
 
 
-class TradingCapacity2Code(Enum):
-    PRIN = "PRIN"
-    TAGN = "TAGN"
-
-
 class TradingCapacity8Code(Enum):
     AGEN = "AGEN"
     PRIN = "PRIN"
@@ -352,11 +279,6 @@ class TypeOfPrice3Code(Enum):
     NET1 = "NET1"
     PARV = "PARV"
     RDAV = "RDAV"
-
-
-class UktaxGroupUnitCode(Enum):
-    GRP1 = "GRP1"
-    GRP2 = "GRP2"
 
 
 class UnaffirmedReason1Code(Enum):

@@ -7,6 +7,7 @@ from xsdata.models.datatype import XmlDate, XmlDateTime
 from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.camt.enums import (
     ChargeType12Code,
+    CommissionType6Code,
     CurrencyDesignation1Code,
     FlowDirectionType1Code,
     InvestmentFundTransactionInType1Code,
@@ -15,7 +16,6 @@ from python_iso20022.camt.enums import (
 )
 from python_iso20022.enums import (
     AddressType2Code,
-    CommissionType6Code,
     DistributionPolicy1Code,
     FormOfSecurity1Code,
     TypeOfPrice10Code,

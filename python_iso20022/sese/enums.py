@@ -36,6 +36,11 @@ class AutoBorrowing2Code(Enum):
     RTRN = "RTRN"
 
 
+class BusinessFlowDirectionType1Code(Enum):
+    ADLV = "ADLV"
+    ARCV = "ARCV"
+
+
 class BusinessFlowType1Code(Enum):
     SLDP = "SLDP"
     SLRP = "SLRP"
@@ -105,6 +110,12 @@ class DeniedReason3Code(Enum):
     OTHR = "OTHR"
 
 
+class DrawdownStatus1Code(Enum):
+    FULL = "FULL"
+    NONE = "NONE"
+    PART = "PART"
+
+
 class DrawdownType2Code(Enum):
     BOTH = "BOTH"
     CAPP = "CAPP"
@@ -152,6 +163,12 @@ class InvestmentFundRole8Code(Enum):
     CACO = "CACO"
     CONC = "CONC"
     DATP = "DATP"
+
+
+class LumpSumType1Code(Enum):
+    DEAB = "DEAB"
+    PCLS = "PCLS"
+    UFPL = "UFPL"
 
 
 class MatchingProcess1Code(Enum):
@@ -249,6 +266,11 @@ class PendingReason1Code(Enum):
     PRSY = "PRSY"
 
 
+class PensionOrderType1Code(Enum):
+    EARM = "EARM"
+    SHAR = "SHAR"
+
+
 class PensionSchemeType3Code(Enum):
     AAVC = "AAVC"
     DBEN = "DBEN"
@@ -283,6 +305,10 @@ class PersonIdentificationType7Code(Enum):
     ATIN = "ATIN"
     GTIN = "GTIN"
     ITIN = "ITIN"
+
+
+class PortfolioWithdrawalReason1Code(Enum):
+    FTRS = "FTRS"
 
 
 class PreConfirmation1Code(Enum):
@@ -852,6 +878,11 @@ class TaxType16Code(Enum):
     WITH = "WITH"
     NKAP = "NKAP"
     KAPA = "KAPA"
+
+
+class TaxWrapperAmountType1Code(Enum):
+    BONU = "BONU"
+    WTHD = "WTHD"
 
 
 class TransferInFunction1Code(Enum):

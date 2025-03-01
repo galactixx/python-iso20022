@@ -19,7 +19,7 @@ from python_iso20022.camt.camt_020_001_04.models import Camt02000104
 from python_iso20022.camt.camt_021_001_06.models import Camt02100106
 from python_iso20022.camt.camt_023_001_07.models import Camt02300107
 from python_iso20022.camt.camt_024_001_08.models import Camt02400108
-from python_iso20022.camt.camt_025_001_08.models import Camt02500108
+from python_iso20022.camt.camt_025_001_09.models import Camt02500109
 from python_iso20022.camt.camt_026_001_10.models import Camt02600110
 from python_iso20022.camt.camt_027_001_10.models import Camt02700110
 from python_iso20022.camt.camt_028_001_12.models import Camt02800112
@@ -115,7 +115,7 @@ __all__ = [
     "Camt02100106",
     "Camt02300107",
     "Camt02400108",
-    "Camt02500108",
+    "Camt02500109",
     "Camt02600110",
     "Camt02700110",
     "Camt02800112",
