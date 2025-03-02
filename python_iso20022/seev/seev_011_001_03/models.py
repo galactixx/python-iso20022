@@ -10,28 +10,28 @@ from python_iso20022.enums import (
     SafekeepingPlace2Code,
 )
 from python_iso20022.seev.enums import (
-    CorporateActionEventProcessingType1Code,
+    CorporateActionEventProcessingType2Code,
+    CorporateActionEventType35Code,
     CorporateActionMandatoryVoluntary1Code,
     ProcessedStatus2Code,
 )
-from python_iso20022.seev.seev_011_001_02.enums import (
-    CorporateActionEventType31Code,
+from python_iso20022.seev.seev_011_001_03.enums import (
     ProcessedStatus7Code,
     RejectionReason80Code,
     RejectionReason81Code,
 )
 
-__NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02"
+__NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03"
 
 
 @dataclass
-class GenericIdentification30Seev01100102(ISO20022MessageElement):
+class GenericIdentification30Seev01100103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "required": True,
             "pattern": r"[a-zA-Z0-9]{4}",
         },
@@ -41,7 +41,7 @@ class GenericIdentification30Seev01100102(ISO20022MessageElement):
         metadata={
             "name": "Issr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -52,7 +52,7 @@ class GenericIdentification30Seev01100102(ISO20022MessageElement):
         metadata={
             "name": "SchmeNm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "min_length": 1,
             "max_length": 35,
         },
@@ -60,13 +60,13 @@ class GenericIdentification30Seev01100102(ISO20022MessageElement):
 
 
 @dataclass
-class GenericIdentification36Seev01100102(ISO20022MessageElement):
+class GenericIdentification36Seev01100103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -77,7 +77,7 @@ class GenericIdentification36Seev01100102(ISO20022MessageElement):
         metadata={
             "name": "Issr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -88,7 +88,7 @@ class GenericIdentification36Seev01100102(ISO20022MessageElement):
         metadata={
             "name": "SchmeNm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "min_length": 1,
             "max_length": 35,
         },
@@ -96,13 +96,13 @@ class GenericIdentification36Seev01100102(ISO20022MessageElement):
 
 
 @dataclass
-class IdentificationSource3ChoiceSeev01100102(ISO20022MessageElement):
+class IdentificationSource3ChoiceSeev01100103(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "min_length": 1,
             "max_length": 4,
         },
@@ -112,7 +112,7 @@ class IdentificationSource3ChoiceSeev01100102(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "min_length": 1,
             "max_length": 35,
         },
@@ -120,13 +120,13 @@ class IdentificationSource3ChoiceSeev01100102(ISO20022MessageElement):
 
 
 @dataclass
-class MarketIdentification3ChoiceSeev01100102(ISO20022MessageElement):
+class MarketIdentification3ChoiceSeev01100103(ISO20022MessageElement):
     mkt_idr_cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "MktIdrCd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "pattern": r"[A-Z0-9]{4,4}",
         },
     )
@@ -135,7 +135,7 @@ class MarketIdentification3ChoiceSeev01100102(ISO20022MessageElement):
         metadata={
             "name": "Desc",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "min_length": 1,
             "max_length": 35,
         },
@@ -143,73 +143,73 @@ class MarketIdentification3ChoiceSeev01100102(ISO20022MessageElement):
 
 
 @dataclass
-class CorporateActionEventProcessingType2ChoiceSeev01100102(ISO20022MessageElement):
-    cd: Optional[CorporateActionEventProcessingType1Code] = field(
+class CorporateActionEventProcessingType4ChoiceSeev01100103(ISO20022MessageElement):
+    cd: Optional[CorporateActionEventProcessingType2Code] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
-    prtry: Optional[GenericIdentification30Seev01100102] = field(
+    prtry: Optional[GenericIdentification30Seev01100103] = field(
         default=None,
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
 
 
 @dataclass
-class CorporateActionEventType84ChoiceSeev01100102(ISO20022MessageElement):
-    cd: Optional[CorporateActionEventType31Code] = field(
+class CorporateActionEventType107ChoiceSeev01100103(ISO20022MessageElement):
+    cd: Optional[CorporateActionEventType35Code] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
-    prtry: Optional[GenericIdentification30Seev01100102] = field(
+    prtry: Optional[GenericIdentification30Seev01100103] = field(
         default=None,
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
 
 
 @dataclass
-class CorporateActionMandatoryVoluntary3ChoiceSeev01100102(ISO20022MessageElement):
+class CorporateActionMandatoryVoluntary3ChoiceSeev01100103(ISO20022MessageElement):
     cd: Optional[CorporateActionMandatoryVoluntary1Code] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
-    prtry: Optional[GenericIdentification30Seev01100102] = field(
+    prtry: Optional[GenericIdentification30Seev01100103] = field(
         default=None,
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
 
 
 @dataclass
-class GenericIdentification78Seev01100102(ISO20022MessageElement):
-    tp: Optional[GenericIdentification30Seev01100102] = field(
+class GenericIdentification78Seev01100103(ISO20022MessageElement):
+    tp: Optional[GenericIdentification30Seev01100103] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "required": True,
         },
     )
@@ -218,7 +218,7 @@ class GenericIdentification78Seev01100102(ISO20022MessageElement):
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "min_length": 1,
             "max_length": 35,
         },
@@ -226,13 +226,13 @@ class GenericIdentification78Seev01100102(ISO20022MessageElement):
 
 
 @dataclass
-class OtherIdentification1Seev01100102(ISO20022MessageElement):
+class OtherIdentification1Seev01100103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -243,30 +243,30 @@ class OtherIdentification1Seev01100102(ISO20022MessageElement):
         metadata={
             "name": "Sfx",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "min_length": 1,
             "max_length": 16,
         },
     )
-    tp: Optional[IdentificationSource3ChoiceSeev01100102] = field(
+    tp: Optional[IdentificationSource3ChoiceSeev01100103] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "required": True,
         },
     )
 
 
 @dataclass
-class PostalAddress1Seev01100102(ISO20022MessageElement):
+class PostalAddress1Seev01100103(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
             "name": "AdrTp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
     adr_line: list[str] = field(
@@ -274,7 +274,7 @@ class PostalAddress1Seev01100102(ISO20022MessageElement):
         metadata={
             "name": "AdrLine",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "max_occurs": 5,
             "min_length": 1,
             "max_length": 70,
@@ -285,7 +285,7 @@ class PostalAddress1Seev01100102(ISO20022MessageElement):
         metadata={
             "name": "StrtNm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "min_length": 1,
             "max_length": 70,
         },
@@ -295,7 +295,7 @@ class PostalAddress1Seev01100102(ISO20022MessageElement):
         metadata={
             "name": "BldgNb",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "min_length": 1,
             "max_length": 16,
         },
@@ -305,7 +305,7 @@ class PostalAddress1Seev01100102(ISO20022MessageElement):
         metadata={
             "name": "PstCd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "min_length": 1,
             "max_length": 16,
         },
@@ -315,7 +315,7 @@ class PostalAddress1Seev01100102(ISO20022MessageElement):
         metadata={
             "name": "TwnNm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "min_length": 1,
             "max_length": 35,
         },
@@ -325,7 +325,7 @@ class PostalAddress1Seev01100102(ISO20022MessageElement):
         metadata={
             "name": "CtrySubDvsn",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "min_length": 1,
             "max_length": 35,
         },
@@ -335,7 +335,7 @@ class PostalAddress1Seev01100102(ISO20022MessageElement):
         metadata={
             "name": "Ctry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "required": True,
             "pattern": r"[A-Z]{2,2}",
         },
@@ -343,93 +343,93 @@ class PostalAddress1Seev01100102(ISO20022MessageElement):
 
 
 @dataclass
-class ProcessedStatus1Format1ChoiceSeev01100102(ISO20022MessageElement):
+class ProcessedStatus1Format1ChoiceSeev01100103(ISO20022MessageElement):
     cd: Optional[ProcessedStatus7Code] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
-    prtry: Optional[GenericIdentification30Seev01100102] = field(
+    prtry: Optional[GenericIdentification30Seev01100103] = field(
         default=None,
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
 
 
 @dataclass
-class ProcessedStatus2Format1ChoiceSeev01100102(ISO20022MessageElement):
+class ProcessedStatus2Format1ChoiceSeev01100103(ISO20022MessageElement):
     cd: Optional[ProcessedStatus2Code] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
-    prtry: Optional[GenericIdentification30Seev01100102] = field(
+    prtry: Optional[GenericIdentification30Seev01100103] = field(
         default=None,
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
 
 
 @dataclass
-class RejectionReason11Format1ChoiceSeev01100102(ISO20022MessageElement):
+class RejectionReason11Format1ChoiceSeev01100103(ISO20022MessageElement):
     cd: Optional[RejectionReason81Code] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
-    prtry: Optional[GenericIdentification30Seev01100102] = field(
+    prtry: Optional[GenericIdentification30Seev01100103] = field(
         default=None,
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
 
 
 @dataclass
-class RejectionReason6Format1ChoiceSeev01100102(ISO20022MessageElement):
+class RejectionReason6Format1ChoiceSeev01100103(ISO20022MessageElement):
     cd: Optional[RejectionReason80Code] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
-    prtry: Optional[GenericIdentification30Seev01100102] = field(
+    prtry: Optional[GenericIdentification30Seev01100103] = field(
         default=None,
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
 
 
 @dataclass
-class SafekeepingPlaceTypeAndIdentification1Seev01100102(ISO20022MessageElement):
+class SafekeepingPlaceTypeAndIdentification1Seev01100103(ISO20022MessageElement):
     sfkpg_plc_tp: Optional[SafekeepingPlace1Code] = field(
         default=None,
         metadata={
             "name": "SfkpgPlcTp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "required": True,
         },
     )
@@ -438,7 +438,7 @@ class SafekeepingPlaceTypeAndIdentification1Seev01100102(ISO20022MessageElement)
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "required": True,
             "pattern": r"[A-Z0-9]{4,4}[A-Z]{2,2}[A-Z0-9]{2,2}([A-Z0-9]{3,3}){0,1}",
         },
@@ -446,13 +446,13 @@ class SafekeepingPlaceTypeAndIdentification1Seev01100102(ISO20022MessageElement)
 
 
 @dataclass
-class SafekeepingPlaceTypeAndText6Seev01100102(ISO20022MessageElement):
+class SafekeepingPlaceTypeAndText6Seev01100103(ISO20022MessageElement):
     sfkpg_plc_tp: Optional[SafekeepingPlace2Code] = field(
         default=None,
         metadata={
             "name": "SfkpgPlcTp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "required": True,
         },
     )
@@ -461,7 +461,7 @@ class SafekeepingPlaceTypeAndText6Seev01100102(ISO20022MessageElement):
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "min_length": 1,
             "max_length": 35,
         },
@@ -469,36 +469,36 @@ class SafekeepingPlaceTypeAndText6Seev01100102(ISO20022MessageElement):
 
 
 @dataclass
-class NameAndAddress5Seev01100102(ISO20022MessageElement):
+class NameAndAddress5Seev01100103(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
             "name": "Nm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "required": True,
             "min_length": 1,
             "max_length": 350,
         },
     )
-    adr: Optional[PostalAddress1Seev01100102] = field(
+    adr: Optional[PostalAddress1Seev01100103] = field(
         default=None,
         metadata={
             "name": "Adr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
 
 
 @dataclass
-class NotificationCancellationProcessingStatus2Seev01100102(ISO20022MessageElement):
-    sts: Optional[ProcessedStatus2Format1ChoiceSeev01100102] = field(
+class NotificationCancellationProcessingStatus2Seev01100103(ISO20022MessageElement):
+    sts: Optional[ProcessedStatus2Format1ChoiceSeev01100103] = field(
         default=None,
         metadata={
             "name": "Sts",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "required": True,
         },
     )
@@ -507,7 +507,7 @@ class NotificationCancellationProcessingStatus2Seev01100102(ISO20022MessageEleme
         metadata={
             "name": "AddtlInf",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "min_length": 1,
             "max_length": 350,
         },
@@ -515,13 +515,13 @@ class NotificationCancellationProcessingStatus2Seev01100102(ISO20022MessageEleme
 
 
 @dataclass
-class NotificationCancellationRejectionReason2Seev01100102(ISO20022MessageElement):
-    rsn: list[RejectionReason11Format1ChoiceSeev01100102] = field(
+class NotificationCancellationRejectionReason2Seev01100103(ISO20022MessageElement):
+    rsn: list[RejectionReason11Format1ChoiceSeev01100103] = field(
         default_factory=list,
         metadata={
             "name": "Rsn",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "min_occurs": 1,
         },
     )
@@ -530,7 +530,7 @@ class NotificationCancellationRejectionReason2Seev01100102(ISO20022MessageElemen
         metadata={
             "name": "AddtlInf",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "min_length": 1,
             "max_length": 350,
         },
@@ -538,13 +538,13 @@ class NotificationCancellationRejectionReason2Seev01100102(ISO20022MessageElemen
 
 
 @dataclass
-class NotificationProcessingStatus2Seev01100102(ISO20022MessageElement):
-    sts: Optional[ProcessedStatus1Format1ChoiceSeev01100102] = field(
+class NotificationProcessingStatus2Seev01100103(ISO20022MessageElement):
+    sts: Optional[ProcessedStatus1Format1ChoiceSeev01100103] = field(
         default=None,
         metadata={
             "name": "Sts",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "required": True,
         },
     )
@@ -553,7 +553,7 @@ class NotificationProcessingStatus2Seev01100102(ISO20022MessageElement):
         metadata={
             "name": "AddtlInf",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "min_length": 1,
             "max_length": 350,
         },
@@ -561,13 +561,13 @@ class NotificationProcessingStatus2Seev01100102(ISO20022MessageElement):
 
 
 @dataclass
-class NotificationRejectionReason2Seev01100102(ISO20022MessageElement):
-    rsn: list[RejectionReason6Format1ChoiceSeev01100102] = field(
+class NotificationRejectionReason2Seev01100103(ISO20022MessageElement):
+    rsn: list[RejectionReason6Format1ChoiceSeev01100103] = field(
         default_factory=list,
         metadata={
             "name": "Rsn",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "min_occurs": 1,
         },
     )
@@ -576,7 +576,7 @@ class NotificationRejectionReason2Seev01100102(ISO20022MessageElement):
         metadata={
             "name": "AddtlInf",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "min_length": 1,
             "max_length": 350,
         },
@@ -584,13 +584,13 @@ class NotificationRejectionReason2Seev01100102(ISO20022MessageElement):
 
 
 @dataclass
-class SafekeepingPlaceFormat28ChoiceSeev01100102(ISO20022MessageElement):
-    id: Optional[SafekeepingPlaceTypeAndText6Seev01100102] = field(
+class SafekeepingPlaceFormat42ChoiceSeev01100103(ISO20022MessageElement):
+    id: Optional[SafekeepingPlaceTypeAndText6Seev01100103] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
     ctry: Optional[str] = field(
@@ -598,45 +598,54 @@ class SafekeepingPlaceFormat28ChoiceSeev01100102(ISO20022MessageElement):
         metadata={
             "name": "Ctry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "pattern": r"[A-Z]{2,2}",
         },
     )
-    tp_and_id: Optional[SafekeepingPlaceTypeAndIdentification1Seev01100102] = field(
+    dgtl_ldgr_id: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "DgtlLdgrId",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
+            "pattern": r"[1-9B-DF-HJ-NP-TV-XZ][0-9B-DF-HJ-NP-TV-XZ]{8,8}",
+        },
+    )
+    tp_and_id: Optional[SafekeepingPlaceTypeAndIdentification1Seev01100103] = field(
         default=None,
         metadata={
             "name": "TpAndId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
-    prtry: Optional[GenericIdentification78Seev01100102] = field(
+    prtry: Optional[GenericIdentification78Seev01100103] = field(
         default=None,
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
 
 
 @dataclass
-class SecurityIdentification19Seev01100102(ISO20022MessageElement):
+class SecurityIdentification19Seev01100103(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
             "name": "ISIN",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "pattern": r"[A-Z]{2,2}[A-Z0-9]{9,9}[0-9]{1,1}",
         },
     )
-    othr_id: list[OtherIdentification1Seev01100102] = field(
+    othr_id: list[OtherIdentification1Seev01100103] = field(
         default_factory=list,
         metadata={
             "name": "OthrId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
     desc: Optional[str] = field(
@@ -644,7 +653,7 @@ class SecurityIdentification19Seev01100102(ISO20022MessageElement):
         metadata={
             "name": "Desc",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "min_length": 1,
             "max_length": 140,
         },
@@ -652,99 +661,99 @@ class SecurityIdentification19Seev01100102(ISO20022MessageElement):
 
 
 @dataclass
-class FinancialInstrumentDescription4Seev01100102(ISO20022MessageElement):
-    fin_instrm_id: Optional[SecurityIdentification19Seev01100102] = field(
+class FinancialInstrumentDescription5Seev01100103(ISO20022MessageElement):
+    fin_instrm_id: Optional[SecurityIdentification19Seev01100103] = field(
         default=None,
         metadata={
             "name": "FinInstrmId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "required": True,
         },
     )
-    plc_of_listg: Optional[MarketIdentification3ChoiceSeev01100102] = field(
+    plc_of_listg: Optional[MarketIdentification3ChoiceSeev01100103] = field(
         default=None,
         metadata={
             "name": "PlcOfListg",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
-    sfkpg_plc: Optional[SafekeepingPlaceFormat28ChoiceSeev01100102] = field(
+    sfkpg_plc: Optional[SafekeepingPlaceFormat42ChoiceSeev01100103] = field(
         default=None,
         metadata={
             "name": "SfkpgPlc",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
 
 
 @dataclass
-class NotificationAdviceStatus2ChoiceSeev01100102(ISO20022MessageElement):
-    prcd_sts: Optional[NotificationProcessingStatus2Seev01100102] = field(
+class NotificationAdviceStatus2ChoiceSeev01100103(ISO20022MessageElement):
+    prcd_sts: Optional[NotificationProcessingStatus2Seev01100103] = field(
         default=None,
         metadata={
             "name": "PrcdSts",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
-    rjctd_sts: Optional[NotificationRejectionReason2Seev01100102] = field(
+    rjctd_sts: Optional[NotificationRejectionReason2Seev01100103] = field(
         default=None,
         metadata={
             "name": "RjctdSts",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
 
 
 @dataclass
-class NotificationCancellationRequestStatus2ChoiceSeev01100102(ISO20022MessageElement):
-    prcd_sts: Optional[NotificationCancellationProcessingStatus2Seev01100102] = field(
+class NotificationCancellationRequestStatus2ChoiceSeev01100103(ISO20022MessageElement):
+    prcd_sts: Optional[NotificationCancellationProcessingStatus2Seev01100103] = field(
         default=None,
         metadata={
             "name": "PrcdSts",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
-    rjctd_sts: Optional[NotificationCancellationRejectionReason2Seev01100102] = field(
+    rjctd_sts: Optional[NotificationCancellationRejectionReason2Seev01100103] = field(
         default=None,
         metadata={
             "name": "RjctdSts",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
 
 
 @dataclass
-class PartyIdentification129ChoiceSeev01100102(ISO20022MessageElement):
+class PartyIdentification129ChoiceSeev01100103(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
             "name": "AnyBIC",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "pattern": r"[A-Z0-9]{4,4}[A-Z]{2,2}[A-Z0-9]{2,2}([A-Z0-9]{3,3}){0,1}",
         },
     )
-    prtry_id: Optional[GenericIdentification36Seev01100102] = field(
+    prtry_id: Optional[GenericIdentification36Seev01100103] = field(
         default=None,
         metadata={
             "name": "PrtryId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
-    nm_and_adr: Optional[NameAndAddress5Seev01100102] = field(
+    nm_and_adr: Optional[NameAndAddress5Seev01100103] = field(
         default=None,
         metadata={
             "name": "NmAndAdr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
     lei: Optional[str] = field(
@@ -752,14 +761,14 @@ class PartyIdentification129ChoiceSeev01100102(ISO20022MessageElement):
         metadata={
             "name": "LEI",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "pattern": r"[A-Z0-9]{18,18}[0-9]{2,2}",
         },
     )
 
 
 @dataclass
-class AgentNotificationCancellationIdentificationAndStatus1Seev01100102(
+class AgentNotificationCancellationIdentificationAndStatus1Seev01100103(
     ISO20022MessageElement
 ):
     id: Optional[str] = field(
@@ -767,7 +776,7 @@ class AgentNotificationCancellationIdentificationAndStatus1Seev01100102(
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -778,28 +787,28 @@ class AgentNotificationCancellationIdentificationAndStatus1Seev01100102(
         metadata={
             "name": "CreDtTm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
-    sts: Optional[NotificationCancellationRequestStatus2ChoiceSeev01100102] = field(
+    sts: Optional[NotificationCancellationRequestStatus2ChoiceSeev01100103] = field(
         default=None,
         metadata={
             "name": "Sts",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "required": True,
         },
     )
 
 
 @dataclass
-class AgentNotificationIdentificationAndStatus1Seev01100102(ISO20022MessageElement):
+class AgentNotificationIdentificationAndStatus1Seev01100103(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -810,28 +819,28 @@ class AgentNotificationIdentificationAndStatus1Seev01100102(ISO20022MessageEleme
         metadata={
             "name": "CreDtTm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
-    sts: Optional[NotificationAdviceStatus2ChoiceSeev01100102] = field(
+    sts: Optional[NotificationAdviceStatus2ChoiceSeev01100103] = field(
         default=None,
         metadata={
             "name": "Sts",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "required": True,
         },
     )
 
 
 @dataclass
-class CorporateActionGeneralInformation171Seev01100102(ISO20022MessageElement):
-    agt_id: Optional[PartyIdentification129ChoiceSeev01100102] = field(
+class CorporateActionGeneralInformation175Seev01100103(ISO20022MessageElement):
+    agt_id: Optional[PartyIdentification129ChoiceSeev01100103] = field(
         default=None,
         metadata={
             "name": "AgtId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "required": True,
         },
     )
@@ -840,7 +849,7 @@ class CorporateActionGeneralInformation171Seev01100102(ISO20022MessageElement):
         metadata={
             "name": "CorpActnEvtId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -851,99 +860,99 @@ class CorporateActionGeneralInformation171Seev01100102(ISO20022MessageElement):
         metadata={
             "name": "OffclCorpActnEvtId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "min_length": 1,
             "max_length": 35,
         },
     )
-    evt_prcg_tp: Optional[CorporateActionEventProcessingType2ChoiceSeev01100102] = (
+    evt_prcg_tp: Optional[CorporateActionEventProcessingType4ChoiceSeev01100103] = (
         field(
             default=None,
             metadata={
                 "name": "EvtPrcgTp",
                 "type": "Element",
-                "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+                "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             },
         )
     )
-    evt_tp: Optional[CorporateActionEventType84ChoiceSeev01100102] = field(
+    evt_tp: Optional[CorporateActionEventType107ChoiceSeev01100103] = field(
         default=None,
         metadata={
             "name": "EvtTp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "required": True,
         },
     )
     mndtry_vlntry_evt_tp: Optional[
-        CorporateActionMandatoryVoluntary3ChoiceSeev01100102
+        CorporateActionMandatoryVoluntary3ChoiceSeev01100103
     ] = field(
         default=None,
         metadata={
             "name": "MndtryVlntryEvtTp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "required": True,
         },
     )
-    undrlyg_scty: Optional[FinancialInstrumentDescription4Seev01100102] = field(
+    undrlyg_scty: Optional[FinancialInstrumentDescription5Seev01100103] = field(
         default=None,
         metadata={
             "name": "UndrlygScty",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "required": True,
         },
     )
 
 
 @dataclass
-class AgentDocumentIdentificationAndStatus1ChoiceSeev01100102(ISO20022MessageElement):
+class AgentDocumentIdentificationAndStatus1ChoiceSeev01100103(ISO20022MessageElement):
     agt_cantfctn_advc_id_and_sts: Optional[
-        AgentNotificationIdentificationAndStatus1Seev01100102
+        AgentNotificationIdentificationAndStatus1Seev01100103
     ] = field(
         default=None,
         metadata={
             "name": "AgtCANtfctnAdvcIdAndSts",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
     agt_cantfctn_cxl_req_id_and_sts: Optional[
-        AgentNotificationCancellationIdentificationAndStatus1Seev01100102
+        AgentNotificationCancellationIdentificationAndStatus1Seev01100103
     ] = field(
         default=None,
         metadata={
             "name": "AgtCANtfctnCxlReqIdAndSts",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
         },
     )
 
 
 @dataclass
-class AgentCanotificationStatusAdviceV02Seev01100102(ISO20022MessageElement):
+class AgentCanotificationStatusAdviceV03Seev01100103(ISO20022MessageElement):
     class Meta:
-        name = "AgentCANotificationStatusAdviceV02"
+        name = "AgentCANotificationStatusAdviceV03"
 
     agt_doc_id_and_sts: Optional[
-        AgentDocumentIdentificationAndStatus1ChoiceSeev01100102
+        AgentDocumentIdentificationAndStatus1ChoiceSeev01100103
     ] = field(
         default=None,
         metadata={
             "name": "AgtDocIdAndSts",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
             "required": True,
         },
     )
-    corp_actn_gnl_inf: Optional[CorporateActionGeneralInformation171Seev01100102] = (
+    corp_actn_gnl_inf: Optional[CorporateActionGeneralInformation175Seev01100103] = (
         field(
             default=None,
             metadata={
                 "name": "CorpActnGnlInf",
                 "type": "Element",
-                "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02",
+                "namespace": "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03",
                 "required": True,
             },
         )
@@ -951,11 +960,11 @@ class AgentCanotificationStatusAdviceV02Seev01100102(ISO20022MessageElement):
 
 
 @dataclass
-class Seev01100102(ISO20022Message):
+class Seev01100103(ISO20022Message):
     class Meta:
-        namespace = "urn:iso:std:iso:20022:tech:xsd:seev.011.001.02"
+        namespace = "urn:iso:std:iso:20022:tech:xsd:seev.011.001.03"
 
-    agt_cantfctn_sts_advc: Optional[AgentCanotificationStatusAdviceV02Seev01100102] = (
+    agt_cantfctn_sts_advc: Optional[AgentCanotificationStatusAdviceV03Seev01100103] = (
         field(
             default=None,
             metadata={

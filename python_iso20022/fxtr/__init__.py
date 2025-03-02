@@ -1,5 +1,4 @@
 from python_iso20022.fxtr.fxtr_008_001_07.models import Fxtr00800107
-from python_iso20022.fxtr.fxtr_013_001_03.models import Fxtr01300103
 from python_iso20022.fxtr.fxtr_014_001_05.models import Fxtr01400105
 from python_iso20022.fxtr.fxtr_015_001_05.models import Fxtr01500105
 from python_iso20022.fxtr.fxtr_016_001_05.models import Fxtr01600105
@@ -15,7 +14,6 @@ from python_iso20022.fxtr.fxtr_037_001_02.models import Fxtr03700102
 
 __all__ = [
     "Fxtr00800107",
-    "Fxtr01300103",
     "Fxtr01400105",
     "Fxtr01500105",
     "Fxtr01600105",

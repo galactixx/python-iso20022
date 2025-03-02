@@ -69,14 +69,6 @@ class AdditionalBusinessProcess9Code(Enum):
     INCP = "INCP"
 
 
-class AgentRole2Code(Enum):
-    SPAY = "SPAY"
-    CODO = "CODO"
-    ISAG = "ISAG"
-    REGR = "REGR"
-    PAYA = "PAYA"
-
-
 class AmountPriceType1Code(Enum):
     ACTU = "ACTU"
     DISC = "DISC"
@@ -151,18 +143,6 @@ class ConsentType1Code(Enum):
     DUPY = "DUPY"
 
 
-class ConversionType1Code(Enum):
-    FINL = "FINL"
-    INTE = "INTE"
-
-
-class CorporateActionCalculationMethod1Code(Enum):
-    PROR = "PROR"
-    LOTT = "LOTT"
-    NOMI = "NOMI"
-    NNOM = "NNOM"
-
-
 class CorporateActionCancellationReason1Code(Enum):
     WITH = "WITH"
     PROC = "PROC"
@@ -201,17 +181,11 @@ class CorporateActionEventProcessingType1Code(Enum):
     REOR = "REOR"
 
 
-class CorporateActionEventStage1Code(Enum):
-    APPD = "APPD"
-    CLDE = "CLDE"
-    PWAL = "PWAL"
-    SUAP = "SUAP"
-    UNAC = "UNAC"
-    WHOU = "WHOU"
-    FULL = "FULL"
-    LAPS = "LAPS"
-    PART = "PART"
-    RESC = "RESC"
+class CorporateActionEventProcessingType2Code(Enum):
+    DISN = "DISN"
+    GENL = "GENL"
+    REDM = "REDM"
+    REOR = "REOR"
 
 
 class CorporateActionEventStage3Code(Enum):
@@ -231,12 +205,6 @@ class CorporateActionEventStage4Code(Enum):
     FULL = "FULL"
     PART = "PART"
     RESC = "RESC"
-
-
-class CorporateActionEventStatus2Code(Enum):
-    ACTI = "ACTI"
-    CANC = "CANC"
-    INAC = "INAC"
 
 
 class CorporateActionEventType2Code(Enum):
@@ -650,13 +618,6 @@ class CorporateActionEventType40Code(Enum):
     ACCU = "ACCU"
 
 
-class CorporateActionFrequencyType1Code(Enum):
-    FINL = "FINL"
-    INTE = "INTE"
-    REGR = "REGR"
-    SPEC = "SPEC"
-
-
 class CorporateActionFrequencyType5Code(Enum):
     FINL = "FINL"
     INTE = "INTE"
@@ -922,10 +883,6 @@ class DistributionInstructionType1Code(Enum):
     IRET = "IRET"
 
 
-class DistributionType1Code(Enum):
-    ROLL = "ROLL"
-
-
 class DistributionType3Code(Enum):
     FINL = "FINL"
     INTE = "INTE"
@@ -940,11 +897,6 @@ class DividendRateType1Code(Enum):
 class DutchAuctionType1Code(Enum):
     MDFD = "MDFD"
     UNMD = "UNMD"
-
-
-class ElectionMovementType1Code(Enum):
-    REST = "REST"
-    DRCT = "DRCT"
 
 
 class ElectionMovementType2Code(Enum):
@@ -983,15 +935,6 @@ class FractionDispositionType11Code(Enum):
     RDUP = "RDUP"
 
 
-class FractionDispositionType1Code(Enum):
-    BUYU = "BUYU"
-    CINL = "CINL"
-    DIST = "DIST"
-    RDDN = "RDDN"
-    RDUP = "RDUP"
-    STAN = "STAN"
-
-
 class FractionDispositionType8Code(Enum):
     BUYU = "BUYU"
     CINL = "CINL"
@@ -1008,20 +951,6 @@ class FractionDispositionType9Code(Enum):
     STAN = "STAN"
     RDUP = "RDUP"
     UKWN = "UKWN"
-
-
-class GrossDividendRateType1Code(Enum):
-    CAPO = "CAPO"
-    FLFR = "FLFR"
-    INCO = "INCO"
-    INTR = "INTR"
-    SOIC = "SOIC"
-    TXBL = "TXBL"
-    TXDF = "TXDF"
-    TXFR = "TXFR"
-    UNFR = "UNFR"
-    LTCG = "LTCG"
-    STCG = "STCG"
 
 
 class GrossDividendRateType6Code(Enum):
@@ -1056,21 +985,6 @@ class GrossDividendRateType7Code(Enum):
     TXDF = "TXDF"
     TXFR = "TXFR"
     UNFR = "UNFR"
-
-
-class IntermediateSecurityDistributionType1Code(Enum):
-    BIDS = "BIDS"
-    BONU = "BONU"
-    DRIP = "DRIP"
-    DVCA = "DVCA"
-    DVOP = "DVOP"
-    EXRI = "EXRI"
-    PRIO = "PRIO"
-    DVSC = "DVSC"
-    DVSE = "DVSE"
-    INTR = "INTR"
-    LIQU = "LIQU"
-    SOFF = "SOFF"
 
 
 class IntermediateSecurityDistributionType5Code(Enum):
@@ -1115,18 +1029,6 @@ class MeetingTypeClassification2Code(Enum):
     ISSU = "ISSU"
     OMET = "OMET"
     VRHI = "VRHI"
-
-
-class NetDividendRateType1Code(Enum):
-    CAPO = "CAPO"
-    FLFR = "FLFR"
-    INCO = "INCO"
-    INTR = "INTR"
-    SOIC = "SOIC"
-    TXBL = "TXBL"
-    TXDF = "TXDF"
-    TXFR = "TXFR"
-    UNFR = "UNFR"
 
 
 class NetDividendRateType6Code(Enum):
@@ -1194,16 +1096,6 @@ class NotificationType2Code(Enum):
     REPL = "REPL"
 
 
-class OfferType1Code(Enum):
-    DISS = "DISS"
-    ERUN = "ERUN"
-    FCFS = "FCFS"
-    FINL = "FINL"
-    MINI = "MINI"
-    PART = "PART"
-    SQUE = "SQUE"
-
-
 class OfferType5Code(Enum):
     DISS = "DISS"
     NDIS = "NDIS"
@@ -1251,17 +1143,6 @@ class OptionFeatures14Code(Enum):
     VVPR = "VVPR"
     RGRS = "RGRS"
     RNET = "RNET"
-
-
-class OptionFeatures1Code(Enum):
-    COND = "COND"
-    MAXC = "MAXC"
-    MAXS = "MAXS"
-    OPLF = "OPLF"
-    PROR = "PROR"
-    QOVE = "QOVE"
-    QREC = "QREC"
-    VVPR = "VVPR"
 
 
 class OptionNumber1Code(Enum):
@@ -1339,18 +1220,6 @@ class PriceRateType3Code(Enum):
 
 class PriceValueType10Code(Enum):
     UKWN = "UKWN"
-
-
-class PriceValueType5Code(Enum):
-    UKWN = "UKWN"
-    OPEN = "OPEN"
-
-
-class PriceValueType6Code(Enum):
-    UKWN = "UKWN"
-    OPEN = "OPEN"
-    UNSP = "UNSP"
-    TBSP = "TBSP"
 
 
 class PriceValueType8Code(Enum):
@@ -1452,17 +1321,6 @@ class RateType5Code(Enum):
 class RateType7Code(Enum):
     SCHD = "SCHD"
     USCD = "USCD"
-
-
-class RateValueType2Code(Enum):
-    UKWN = "UKWN"
-    OPEN = "OPEN"
-    NILP = "NILP"
-
-
-class RateValueType6Code(Enum):
-    UKWN = "UKWN"
-    OPEN = "OPEN"
 
 
 class RateValueType7Code(Enum):
@@ -1623,11 +1481,6 @@ class SecuritiesEntryType2Code(Enum):
     REGO = "REGO"
 
 
-class ShareRanking1Code(Enum):
-    DIVI = "DIVI"
-    PARI = "PARI"
-
-
 class StampDutyType1Code(Enum):
     SDRU = "SDRU"
     SDRT = "SDRT"
@@ -1644,12 +1497,6 @@ class StandingInstructionType1Code(Enum):
     CASH = "CASH"
     PAYM = "PAYM"
     SECU = "SECU"
-
-
-class TaxType3Code(Enum):
-    LIDT = "LIDT"
-    WITF = "WITF"
-    WITL = "WITL"
 
 
 class TypeOfIdentification4Code(Enum):

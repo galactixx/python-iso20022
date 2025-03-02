@@ -16,6 +16,12 @@ class BusinessProcessType1Code(Enum):
     DPLX = "DPLX"
 
 
+class CallIn1Code(Enum):
+    CFAV = "CFAV"
+    CFST = "CFST"
+    CFCC = "CFCC"
+
+
 class CancellationRight1Code(Enum):
     VALI = "VALI"
     NOXO = "NOXO"

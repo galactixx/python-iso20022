@@ -8,7 +8,6 @@ from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.enums import (
     AddressType2Code,
     CalculationType1Code,
-    CallIn1Code,
     CreditDebitCode,
     DeliveryReceiptType2Code,
     Eligibility1Code,
@@ -25,6 +24,7 @@ from python_iso20022.enums import (
 )
 from python_iso20022.setr.enums import (
     BusinessProcessType1Code,
+    CallIn1Code,
     CashMarginOrder1Code,
     ChargeTaxBasis1Code,
     CommissionType9Code,
