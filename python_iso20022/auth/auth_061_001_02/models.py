@@ -4,14 +4,14 @@ from typing import Optional
 
 from xsdata.models.datatype import XmlDate
 
-from python_iso20022.auth.enums import ProductType7Code
+from python_iso20022.auth.enums import DebtIssuerType1Code, ProductType6Code
 from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 
-__NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01"
+__NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02"
 
 
 @dataclass
-class ActiveCurrencyAnd24AmountAuth06100101(ISO20022MessageElement):
+class ActiveCurrencyAnd24AmountAuth06100102(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -33,7 +33,7 @@ class ActiveCurrencyAnd24AmountAuth06100101(ISO20022MessageElement):
 
 
 @dataclass
-class ActiveCurrencyAndAmountAuth06100101(ISO20022MessageElement):
+class ActiveCurrencyAndAmountAuth06100102(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -55,13 +55,13 @@ class ActiveCurrencyAndAmountAuth06100101(ISO20022MessageElement):
 
 
 @dataclass
-class FinancialInstrument59Auth06100101(ISO20022MessageElement):
+class FinancialInstrument59Auth06100102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
             "required": True,
             "pattern": r"[A-Z]{2,2}[A-Z0-9]{9,9}[0-9]{1,1}",
         },
@@ -71,7 +71,7 @@ class FinancialInstrument59Auth06100101(ISO20022MessageElement):
         metadata={
             "name": "Issr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
             "required": True,
             "pattern": r"[A-Z0-9]{18,18}[0-9]{2,2}",
         },
@@ -81,13 +81,13 @@ class FinancialInstrument59Auth06100101(ISO20022MessageElement):
         metadata={
             "name": "Sctr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
         },
     )
 
 
 @dataclass
-class SupplementaryDataEnvelope1Auth06100101(ISO20022MessageElement):
+class SupplementaryDataEnvelope1Auth06100102(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -98,22 +98,22 @@ class SupplementaryDataEnvelope1Auth06100101(ISO20022MessageElement):
 
 
 @dataclass
-class Deposit1Auth06100101(ISO20022MessageElement):
+class Deposit1Auth06100102(ISO20022MessageElement):
     mtrty_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "MtrtyDt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
             "required": True,
         },
     )
-    val: Optional[ActiveCurrencyAndAmountAuth06100101] = field(
+    val: Optional[ActiveCurrencyAndAmountAuth06100102] = field(
         default=None,
         metadata={
             "name": "Val",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
             "required": True,
         },
     )
@@ -122,7 +122,7 @@ class Deposit1Auth06100101(ISO20022MessageElement):
         metadata={
             "name": "CtrPtyId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
             "required": True,
             "pattern": r"[A-Z0-9]{18,18}[0-9]{2,2}",
         },
@@ -130,13 +130,13 @@ class Deposit1Auth06100101(ISO20022MessageElement):
 
 
 @dataclass
-class GeneralCollateral3Auth06100101(ISO20022MessageElement):
-    fin_instrm_id: list[FinancialInstrument59Auth06100101] = field(
+class GeneralCollateral3Auth06100102(ISO20022MessageElement):
+    fin_instrm_id: list[FinancialInstrument59Auth06100102] = field(
         default_factory=list,
         metadata={
             "name": "FinInstrmId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
         },
     )
     elgbl_fin_instrm_id: list[str] = field(
@@ -144,150 +144,158 @@ class GeneralCollateral3Auth06100101(ISO20022MessageElement):
         metadata={
             "name": "ElgblFinInstrmId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
             "pattern": r"[A-Z]{2,2}[A-Z0-9]{9,9}[0-9]{1,1}",
         },
     )
 
 
 @dataclass
-class OtherInvestment1Auth06100101(ISO20022MessageElement):
+class OtherInvestment1Auth06100102(ISO20022MessageElement):
     desc: Optional[str] = field(
         default=None,
         metadata={
             "name": "Desc",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
             "required": True,
             "min_length": 1,
             "max_length": 140,
         },
     )
-    amt: Optional[ActiveCurrencyAndAmountAuth06100101] = field(
+    amt: Optional[ActiveCurrencyAndAmountAuth06100102] = field(
         default=None,
         metadata={
             "name": "Amt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
             "required": True,
         },
     )
 
 
 @dataclass
-class SecurityIdentificationAndAmount1Auth06100101(ISO20022MessageElement):
+class SecurityIdentificationAndAmount2Auth06100102(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
             "required": True,
             "pattern": r"[A-Z]{2,2}[A-Z0-9]{9,9}[0-9]{1,1}",
         },
     )
-    mkt_val: Optional[ActiveCurrencyAnd24AmountAuth06100101] = field(
+    mkt_val: Optional[ActiveCurrencyAnd24AmountAuth06100102] = field(
         default=None,
         metadata={
             "name": "MktVal",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
             "required": True,
         },
     )
-    fin_instrm_tp: Optional[ProductType7Code] = field(
+    fin_instrm_tp: Optional[ProductType6Code] = field(
         default=None,
         metadata={
             "name": "FinInstrmTp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
             "required": True,
+        },
+    )
+    debt_issr_tp: Optional[DebtIssuerType1Code] = field(
+        default=None,
+        metadata={
+            "name": "DebtIssrTp",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
         },
     )
 
 
 @dataclass
-class SpecificCollateral2Auth06100101(ISO20022MessageElement):
-    fin_instrm_id: Optional[FinancialInstrument59Auth06100101] = field(
+class SpecificCollateral2Auth06100102(ISO20022MessageElement):
+    fin_instrm_id: Optional[FinancialInstrument59Auth06100102] = field(
         default=None,
         metadata={
             "name": "FinInstrmId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
             "required": True,
         },
     )
 
 
 @dataclass
-class SupplementaryData1Auth06100101(ISO20022MessageElement):
+class SupplementaryData1Auth06100102(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
             "name": "PlcAndNm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
             "min_length": 1,
             "max_length": 350,
         },
     )
-    envlp: Optional[SupplementaryDataEnvelope1Auth06100101] = field(
+    envlp: Optional[SupplementaryDataEnvelope1Auth06100102] = field(
         default=None,
         metadata={
             "name": "Envlp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
             "required": True,
         },
     )
 
 
 @dataclass
-class RepurchaseAgreementType3ChoiceAuth06100101(ISO20022MessageElement):
-    spcfc_coll: Optional[SpecificCollateral2Auth06100101] = field(
+class RepurchaseAgreementType3ChoiceAuth06100102(ISO20022MessageElement):
+    spcfc_coll: Optional[SpecificCollateral2Auth06100102] = field(
         default=None,
         metadata={
             "name": "SpcfcColl",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
         },
     )
-    gnl_coll: Optional[GeneralCollateral3Auth06100101] = field(
+    gnl_coll: Optional[GeneralCollateral3Auth06100102] = field(
         default=None,
         metadata={
             "name": "GnlColl",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
         },
     )
 
 
 @dataclass
-class RepurchaseAgreement2Auth06100101(ISO20022MessageElement):
+class RepurchaseAgreement2Auth06100102(ISO20022MessageElement):
     mtrty_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "MtrtyDt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
             "required": True,
         },
     )
-    scnd_leg_pric: Optional[ActiveCurrencyAndAmountAuth06100101] = field(
+    scnd_leg_pric: Optional[ActiveCurrencyAndAmountAuth06100102] = field(
         default=None,
         metadata={
             "name": "ScndLegPric",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
             "required": True,
         },
     )
-    coll_mkt_val: Optional[ActiveCurrencyAndAmountAuth06100101] = field(
+    coll_mkt_val: Optional[ActiveCurrencyAndAmountAuth06100102] = field(
         default=None,
         metadata={
             "name": "CollMktVal",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
             "required": True,
         },
     )
@@ -296,17 +304,17 @@ class RepurchaseAgreement2Auth06100101(ISO20022MessageElement):
         metadata={
             "name": "CtrPty",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
             "required": True,
             "pattern": r"[A-Z0-9]{18,18}[0-9]{2,2}",
         },
     )
-    rp_agrmt_tp: Optional[RepurchaseAgreementType3ChoiceAuth06100101] = field(
+    rp_agrmt_tp: Optional[RepurchaseAgreementType3ChoiceAuth06100102] = field(
         default=None,
         metadata={
             "name": "RpAgrmtTp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
             "required": True,
         },
     )
@@ -315,86 +323,86 @@ class RepurchaseAgreement2Auth06100101(ISO20022MessageElement):
         metadata={
             "name": "TrptyAgtId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
             "pattern": r"[A-Z0-9]{18,18}[0-9]{2,2}",
         },
     )
 
 
 @dataclass
-class Investment1ChoiceAuth06100101(ISO20022MessageElement):
-    uscrd_csh_dpst: Optional[Deposit1Auth06100101] = field(
+class Investment2ChoiceAuth06100102(ISO20022MessageElement):
+    uscrd_csh_dpst: Optional[Deposit1Auth06100102] = field(
         default=None,
         metadata={
             "name": "UscrdCshDpst",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
         },
     )
-    cntrl_bk_dpst: Optional[Deposit1Auth06100101] = field(
+    cntrl_bk_dpst: Optional[Deposit1Auth06100102] = field(
         default=None,
         metadata={
             "name": "CntrlBkDpst",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
         },
     )
-    rp_agrmt: Optional[RepurchaseAgreement2Auth06100101] = field(
+    rp_agrmt: Optional[RepurchaseAgreement2Auth06100102] = field(
         default=None,
         metadata={
             "name": "RpAgrmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
         },
     )
-    othr_invstmts: Optional[OtherInvestment1Auth06100101] = field(
+    othr_invstmts: Optional[OtherInvestment1Auth06100102] = field(
         default=None,
         metadata={
             "name": "OthrInvstmts",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
         },
     )
-    outrght_invstmt: Optional[SecurityIdentificationAndAmount1Auth06100101] = field(
+    outrght_invstmt: Optional[SecurityIdentificationAndAmount2Auth06100102] = field(
         default=None,
         metadata={
             "name": "OutrghtInvstmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
         },
     )
 
 
 @dataclass
-class CcpinvestmentsReportV01Auth06100101(ISO20022MessageElement):
+class CcpinvestmentsReportV02Auth06100102(ISO20022MessageElement):
     class Meta:
-        name = "CCPInvestmentsReportV01"
+        name = "CCPInvestmentsReportV02"
 
-    invstmt: list[Investment1ChoiceAuth06100101] = field(
+    invstmt: list[Investment2ChoiceAuth06100102] = field(
         default_factory=list,
         metadata={
             "name": "Invstmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
             "min_occurs": 1,
         },
     )
-    splmtry_data: list[SupplementaryData1Auth06100101] = field(
+    splmtry_data: list[SupplementaryData1Auth06100102] = field(
         default_factory=list,
         metadata={
             "name": "SplmtryData",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02",
         },
     )
 
 
 @dataclass
-class Auth06100101(ISO20022Message):
+class Auth06100102(ISO20022Message):
     class Meta:
-        namespace = "urn:iso:std:iso:20022:tech:xsd:auth.061.001.01"
+        namespace = "urn:iso:std:iso:20022:tech:xsd:auth.061.001.02"
 
-    ccpinvstmts_rpt: Optional[CcpinvestmentsReportV01Auth06100101] = field(
+    ccpinvstmts_rpt: Optional[CcpinvestmentsReportV02Auth06100102] = field(
         default=None,
         metadata={
             "name": "CCPInvstmtsRpt",

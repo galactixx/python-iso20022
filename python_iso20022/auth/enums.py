@@ -658,6 +658,14 @@ class DebtInstrumentSeniorityType2Code(Enum):
     OTHR = "OTHR"
 
 
+class DebtIssuerType1Code(Enum):
+    CORP = "CORP"
+    MUNI = "MUNI"
+    SPVS = "SPVS"
+    SUPR = "SUPR"
+    SVGN = "SVGN"
+
+
 class DerivativeEventType3Code(Enum):
     ALOC = "ALOC"
     CLRG = "CLRG"
@@ -966,6 +974,13 @@ class ProductType4Code(Enum):
     INTR = "INTR"
     COMM = "COMM"
     OTHR = "OTHR"
+
+
+class ProductType6Code(Enum):
+    BOND = "BOND"
+    CASH = "CASH"
+    OTHR = "OTHR"
+    EQUI = "EQUI"
 
 
 class ProductType7Code(Enum):

@@ -45,17 +45,17 @@ from python_iso20022.auth.auth_055_001_01.models import Auth05500101
 from python_iso20022.auth.auth_056_001_01.models import Auth05600101
 from python_iso20022.auth.auth_057_001_02.models import Auth05700102
 from python_iso20022.auth.auth_058_001_01.models import Auth05800101
-from python_iso20022.auth.auth_059_001_01.models import Auth05900101
+from python_iso20022.auth.auth_059_001_02.models import Auth05900102
 from python_iso20022.auth.auth_060_001_02.models import Auth06000102
-from python_iso20022.auth.auth_061_001_01.models import Auth06100101
+from python_iso20022.auth.auth_061_001_02.models import Auth06100102
 from python_iso20022.auth.auth_062_001_01.models import Auth06200101
 from python_iso20022.auth.auth_063_001_01.models import Auth06300101
-from python_iso20022.auth.auth_064_001_01.models import Auth06400101
+from python_iso20022.auth.auth_064_001_02.models import Auth06400102
 from python_iso20022.auth.auth_065_001_01.models import Auth06500101
 from python_iso20022.auth.auth_066_001_01.models import Auth06600101
 from python_iso20022.auth.auth_067_001_01.models import Auth06700101
 from python_iso20022.auth.auth_068_001_01.models import Auth06800101
-from python_iso20022.auth.auth_069_001_01.models import Auth06900101
+from python_iso20022.auth.auth_069_001_02.models import Auth06900102
 from python_iso20022.auth.auth_070_001_02.models import Auth07000102
 from python_iso20022.auth.auth_071_001_02.models import Auth07100102
 from python_iso20022.auth.auth_072_001_01.models import Auth07200101
@@ -131,17 +131,17 @@ __all__ = [
     "Auth05600101",
     "Auth05700102",
     "Auth05800101",
-    "Auth05900101",
+    "Auth05900102",
     "Auth06000102",
-    "Auth06100101",
+    "Auth06100102",
     "Auth06200101",
     "Auth06300101",
-    "Auth06400101",
+    "Auth06400102",
     "Auth06500101",
     "Auth06600101",
     "Auth06700101",
     "Auth06800101",
-    "Auth06900101",
+    "Auth06900102",
     "Auth07000102",
     "Auth07100102",
     "Auth07200101",
