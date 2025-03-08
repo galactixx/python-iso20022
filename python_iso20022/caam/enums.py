@@ -172,7 +172,7 @@ class Algorithm8Code(Enum):
     MGF1 = "MGF1"
 
 
-class Atmcommand6Code(Enum):
+class Atmcommand7Code(Enum):
     ABAL = "ABAL"
     ASTS = "ASTS"
     CFGT = "CFGT"
@@ -189,14 +189,17 @@ class Atmcommand6Code(Enum):
     HKCG = "HKCG"
     HKRV = "HKRV"
     KCHG = "KCHG"
+    RREQ = "RREQ"
 
 
-class Atmoperation1Code(Enum):
+class Atmoperation2Code(Enum):
     ADJU = "ADJU"
     INSR = "INSR"
     LOAD = "LOAD"
     REMV = "REMV"
     UNLD = "UNLD"
+    RCUP = "RCUP"
+    SWAP = "SWAP"
 
 
 class AtmsecurityScheme3Code(Enum):
@@ -224,7 +227,7 @@ class AtmsecurityScheme4Code(Enum):
     TR34 = "TR34"
 
 
-class AtmserviceType10Code(Enum):
+class AtmserviceType11Code(Enum):
     TRFC = "TRFC"
     TRFI = "TRFI"
     TRFP = "TRFP"
@@ -247,6 +250,8 @@ class AtmserviceType10Code(Enum):
     STDR = "STDR"
     SPRV = "SPRV"
     DPSV = "DPSV"
+    ACCD = "ACCD"
+    MINI = "MINI"
 
 
 class Atmstatus2Code(Enum):

@@ -1,6 +1,102 @@
 from enum import Enum
 
 
+class ActionType15Code(Enum):
+    BUSY = "BUSY"
+    CPTR = "CPTR"
+    DISP = "DISP"
+    NOVR = "NOVR"
+    RQID = "RQID"
+    PINL = "PINL"
+    PINR = "PINR"
+    PRNT = "PRNT"
+    RFRL = "RFRL"
+    RQDT = "RQDT"
+    DCCQ = "DCCQ"
+    FLFW = "FLFW"
+    PINQ = "PINQ"
+    CDCV = "CDCV"
+    CHDA = "CHDA"
+    STAR = "STAR"
+    STOR = "STOR"
+    ACUP = "ACUP"
+    TALT = "TALT"
+    DNTA = "DNTA"
+    NCOF = "NCOF"
+
+
+class CardPaymentServiceType15Code(Enum):
+    IRES = "IRES"
+    URES = "URES"
+    PRES = "PRES"
+    ARES = "ARES"
+    FREC = "FREC"
+    RREC = "RREC"
+    GOPT = "GOPT"
+    DFCL = "DFCL"
+
+
+class CardPaymentServiceType16Code(Enum):
+    BALC = "BALC"
+    CACT = "CACT"
+    CRDP = "CRDP"
+    CAFH = "CAFH"
+    CAVR = "CAVR"
+    CSHW = "CSHW"
+    CSHD = "CSHD"
+    DEFR = "DEFR"
+    LOAD = "LOAD"
+    ORCR = "ORCR"
+    PINC = "PINC"
+    QUCH = "QUCH"
+    RFND = "RFND"
+    RESA = "RESA"
+    VALC = "VALC"
+    UNLD = "UNLD"
+    CAFT = "CAFT"
+    CAFL = "CAFL"
+    PPMS = "PPMS"
+
+
+class PaymentInstrumentType2Code(Enum):
+    CARD = "CARD"
+    CASH = "CASH"
+    CHCK = "CHCK"
+    LOYT = "LOYT"
+    SVAC = "SVAC"
+    DRDT = "DRDT"
+    CRTF = "CRTF"
+    VCHR = "VCHR"
+
+
+class PoicomponentType7Code(Enum):
+    AQPP = "AQPP"
+    APPR = "APPR"
+    TLPR = "TLPR"
+    SCPR = "SCPR"
+    SERV = "SERV"
+    TERM = "TERM"
+    DVCE = "DVCE"
+    SECM = "SECM"
+    APLI = "APLI"
+    EMVK = "EMVK"
+    EMVO = "EMVO"
+    MDWR = "MDWR"
+    DRVR = "DRVR"
+    OPST = "OPST"
+    MRPR = "MRPR"
+    CRTF = "CRTF"
+    TMSP = "TMSP"
+    SACP = "SACP"
+    SAPR = "SAPR"
+    LOGF = "LOGF"
+    MDFL = "MDFL"
+    SOFT = "SOFT"
+    CONF = "CONF"
+    RPFL = "RPFL"
+    PROB = "PROB"
+
+
 class ReconciliationType1Code(Enum):
     AREC = "AREC"
     ASYN = "ASYN"

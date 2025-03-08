@@ -1,6 +1,60 @@
 from enum import Enum
 
 
+class ActionType13Code(Enum):
+    BUSY = "BUSY"
+    CPTR = "CPTR"
+    DISP = "DISP"
+    NOVR = "NOVR"
+    RQID = "RQID"
+    PINL = "PINL"
+    PINR = "PINR"
+    PRNT = "PRNT"
+    RFRL = "RFRL"
+    RQDT = "RQDT"
+    DCCQ = "DCCQ"
+    FLFW = "FLFW"
+    PINQ = "PINQ"
+    CDCV = "CDCV"
+    CHDA = "CHDA"
+    STAR = "STAR"
+    STOR = "STOR"
+    ACUP = "ACUP"
+    TALT = "TALT"
+    DNTA = "DNTA"
+
+
+class CardPaymentServiceType14Code(Enum):
+    IRES = "IRES"
+    URES = "URES"
+    PRES = "PRES"
+    ARES = "ARES"
+    FREC = "FREC"
+    RREC = "RREC"
+    GOPT = "GOPT"
+
+
+class CardPaymentServiceType5Code(Enum):
+    BALC = "BALC"
+    CACT = "CACT"
+    CRDP = "CRDP"
+    CAFH = "CAFH"
+    CAVR = "CAVR"
+    CSHW = "CSHW"
+    CSHD = "CSHD"
+    DEFR = "DEFR"
+    LOAD = "LOAD"
+    ORCR = "ORCR"
+    PINC = "PINC"
+    QUCH = "QUCH"
+    RFND = "RFND"
+    RESA = "RESA"
+    VALC = "VALC"
+    UNLD = "UNLD"
+    CAFT = "CAFT"
+    CAFL = "CAFL"
+
+
 class DataSetCategory8Code(Enum):
     SWPK = "SWPK"
     VDPR = "VDPR"

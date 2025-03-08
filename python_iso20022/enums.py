@@ -45,29 +45,6 @@ class ActionDestination1Code(Enum):
     POFS = "POFS"
 
 
-class ActionType13Code(Enum):
-    BUSY = "BUSY"
-    CPTR = "CPTR"
-    DISP = "DISP"
-    NOVR = "NOVR"
-    RQID = "RQID"
-    PINL = "PINL"
-    PINR = "PINR"
-    PRNT = "PRNT"
-    RFRL = "RFRL"
-    RQDT = "RQDT"
-    DCCQ = "DCCQ"
-    FLFW = "FLFW"
-    PINQ = "PINQ"
-    CDCV = "CDCV"
-    CHDA = "CHDA"
-    STAR = "STAR"
-    STOR = "STOR"
-    ACUP = "ACUP"
-    TALT = "TALT"
-    DNTA = "DNTA"
-
-
 class ActionType14Code(Enum):
     CNTI = "CNTI"
     CNIS = "CNIS"
@@ -339,6 +316,19 @@ class Appearance1Code(Enum):
     GLOB = "GLOB"
 
 
+class AtmcassetteStatus1Code(Enum):
+    CUOK = "CUOK"
+    CUFL = "CUFL"
+    CUHG = "CUHG"
+    CULW = "CULW"
+    CUMT = "CUMT"
+    CUNP = "CUNP"
+    CUMS = "CUMS"
+    CUNA = "CUNA"
+    CUNR = "CUNR"
+    CUMP = "CUMP"
+
+
 class AtmcassetteType1Code(Enum):
     DPST = "DPST"
     DISP = "DISP"
@@ -358,13 +348,14 @@ class Atmcommand4Code(Enum):
     RPTC = "RPTC"
 
 
-class AtmcounterType1Code(Enum):
+class AtmcounterType3Code(Enum):
     INQU = "INQU"
     CTXN = "CTXN"
     CTOF = "CTOF"
     BDAY = "BDAY"
     PRTN = "PRTN"
     OPER = "OPER"
+    SLRP = "SLRP"
 
 
 class AtmcustomerProfile1Code(Enum):
@@ -408,7 +399,16 @@ class AtmmediaType1Code(Enum):
     UDTM = "UDTM"
 
 
-class AtmmediaType2Code(Enum):
+class AtmmediaType3Code(Enum):
+    CNTR = "CNTR"
+    FITN = "FITN"
+    FITU = "FITU"
+    SPCT = "SPCT"
+    UNFT = "UNFT"
+    UNRG = "UNRG"
+
+
+class AtmmediaType4Code(Enum):
     CARD = "CARD"
     COIN = "COIN"
     CMDT = "CMDT"
@@ -417,15 +417,8 @@ class AtmmediaType2Code(Enum):
     STMP = "STMP"
     UDTM = "UDTM"
     CHCK = "CHCK"
-
-
-class AtmmediaType3Code(Enum):
-    CNTR = "CNTR"
-    FITN = "FITN"
-    FITU = "FITU"
-    SPCT = "SPCT"
-    UNFT = "UNFT"
-    UNRG = "UNRG"
+    ENVP = "ENVP"
+    MLTP = "MLTP"
 
 
 class AtmnoteType1Code(Enum):
@@ -822,37 +815,6 @@ class CardPaymentServiceType12Code(Enum):
     CIDD = "CIDD"
 
 
-class CardPaymentServiceType14Code(Enum):
-    IRES = "IRES"
-    URES = "URES"
-    PRES = "PRES"
-    ARES = "ARES"
-    FREC = "FREC"
-    RREC = "RREC"
-    GOPT = "GOPT"
-
-
-class CardPaymentServiceType5Code(Enum):
-    BALC = "BALC"
-    CACT = "CACT"
-    CRDP = "CRDP"
-    CAFH = "CAFH"
-    CAVR = "CAVR"
-    CSHW = "CSHW"
-    CSHD = "CSHD"
-    DEFR = "DEFR"
-    LOAD = "LOAD"
-    ORCR = "ORCR"
-    PINC = "PINC"
-    QUCH = "QUCH"
-    RFND = "RFND"
-    RESA = "RESA"
-    VALC = "VALC"
-    UNLD = "UNLD"
-    CAFT = "CAFT"
-    CAFL = "CAFL"
-
-
 class CardPaymentServiceType9Code(Enum):
     AGGR = "AGGR"
     DCCV = "DCCV"
@@ -1106,31 +1068,6 @@ class DataModification1Code(Enum):
     INSE = "INSE"
     UPDT = "UPDT"
     DELT = "DELT"
-
-
-class DataSetCategory18Code(Enum):
-    AQPR = "AQPR"
-    APPR = "APPR"
-    TXCP = "TXCP"
-    AKCP = "AKCP"
-    DLGT = "DLGT"
-    MGTP = "MGTP"
-    MRPR = "MRPR"
-    SCPR = "SCPR"
-    SWPK = "SWPK"
-    STRP = "STRP"
-    TRPR = "TRPR"
-    VDPR = "VDPR"
-    PARA = "PARA"
-    TMSP = "TMSP"
-    CRTF = "CRTF"
-    LOGF = "LOGF"
-    CMRQ = "CMRQ"
-    MDFL = "MDFL"
-    CONF = "CONF"
-    RPFL = "RPFL"
-    SAPR = "SAPR"
-    SPRP = "SPRP"
 
 
 class DataSetCategory7Code(Enum):
@@ -1754,6 +1691,40 @@ class FailingReason5Code(Enum):
     INBC = "INBC"
     PATD = "PATD"
     PREL = "PREL"
+
+
+class FailureReason9Code(Enum):
+    CDCP = "CDCP"
+    CDCL = "CDCL"
+    CDER = "CDER"
+    CUCL = "CUCL"
+    CUDC = "CUDC"
+    CDFG = "CDFG"
+    FILL = "FILL"
+    MALF = "MALF"
+    NDCL = "NDCL"
+    SECU = "SECU"
+    SFRD = "SFRD"
+    TIMO = "TIMO"
+    LATE = "LATE"
+    UCPT = "UCPT"
+    UCMP = "UCMP"
+    USND = "USND"
+    CSRV = "CSRV"
+    CDRT = "CDRT"
+    CUTO = "CUTO"
+    RJCT = "RJCT"
+    FMTE = "FMTE"
+    VLTE = "VLTE"
+    CHFG = "CHFG"
+    DCFG = "DCFG"
+    CQFG = "CQFG"
+    DFGC = "DFGC"
+    CFGC = "CFGC"
+    QFGC = "QFGC"
+    CQRT = "CQRT"
+    DCRT = "DCRT"
+    RSTR = "RSTR"
 
 
 class FinancingStatusReason1Code(Enum):
@@ -2638,14 +2609,6 @@ class PartyType9Code(Enum):
     SCHP = "SCHP"
 
 
-class PaymentInstrumentType1Code(Enum):
-    CARD = "CARD"
-    CASH = "CASH"
-    CHCK = "CHCK"
-    LOYT = "LOYT"
-    SVAC = "SVAC"
-
-
 class PaymentMethod3Code(Enum):
     CHK = "CHK"
     TRF = "TRF"
@@ -3528,15 +3491,16 @@ class Response11Code(Enum):
     SUCC = "SUCC"
 
 
-class Response2Code(Enum):
-    APPR = "APPR"
-    DECL = "DECL"
-
-
-class Response4Code(Enum):
+class Response12Code(Enum):
     APPR = "APPR"
     DECL = "DECL"
     PART = "PART"
+    ASUP = "ASUP"
+
+
+class Response2Code(Enum):
+    APPR = "APPR"
+    DECL = "DECL"
 
 
 class Response9Code(Enum):
@@ -3554,7 +3518,7 @@ class ResponseMode2Code(Enum):
     PEND = "PEND"
 
 
-class ResultDetail4Code(Enum):
+class ResultDetail5Code(Enum):
     ACTF = "ACTF"
     ACQS = "ACQS"
     AMLV = "AMLV"
@@ -3649,6 +3613,11 @@ class ResultDetail4Code(Enum):
     CRDW = "CRDW"
     MEDI = "MEDI"
     SRVI = "SRVI"
+    AMMA = "AMMA"
+    AGFE = "AGFE"
+    SACT = "SACT"
+    ADCC = "ADCC"
+    FEEM = "FEEM"
 
 
 class RetailerMessage1Code(Enum):

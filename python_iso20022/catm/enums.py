@@ -36,6 +36,31 @@ class DataSetCategory10Code(Enum):
     TMSP = "TMSP"
 
 
+class DataSetCategory18Code(Enum):
+    AQPR = "AQPR"
+    APPR = "APPR"
+    TXCP = "TXCP"
+    AKCP = "AKCP"
+    DLGT = "DLGT"
+    MGTP = "MGTP"
+    MRPR = "MRPR"
+    SCPR = "SCPR"
+    SWPK = "SWPK"
+    STRP = "STRP"
+    TRPR = "TRPR"
+    VDPR = "VDPR"
+    PARA = "PARA"
+    TMSP = "TMSP"
+    CRTF = "CRTF"
+    LOGF = "LOGF"
+    CMRQ = "CMRQ"
+    MDFL = "MDFL"
+    CONF = "CONF"
+    RPFL = "RPFL"
+    SAPR = "SAPR"
+    SPRP = "SPRP"
+
+
 class DataSetCategory19Code(Enum):
     ACQP = "ACQP"
     APPR = "APPR"

@@ -5,7 +5,11 @@ from typing import Optional
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
 from python_iso20022.base import ISO20022Message, ISO20022MessageElement
-from python_iso20022.caaa.enums import MessageFunction46Code
+from python_iso20022.caaa.enums import (
+    CardPaymentServiceType5Code,
+    CardPaymentServiceType14Code,
+    MessageFunction46Code,
+)
 from python_iso20022.enums import (
     AddressType2Code,
     Algorithm7Code,
@@ -28,9 +32,7 @@ from python_iso20022.enums import (
     CardDataReading8Code,
     CardholderVerificationCapability4Code,
     CardIdentificationType1Code,
-    CardPaymentServiceType5Code,
     CardPaymentServiceType9Code,
-    CardPaymentServiceType14Code,
     CardProductType1Code,
     CheckType1Code,
     ContentType2Code,

@@ -6,6 +6,7 @@ from xsdata.models.datatype import XmlDate, XmlDateTime
 
 from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.catm.enums import (
+    DataSetCategory18Code,
     MessageItemCondition2Code,
     TerminalManagementActionTrigger1Code,
     TerminalManagementAdditionalProcess1Code,
@@ -38,7 +39,6 @@ from python_iso20022.enums import (
     CheckType1Code,
     ContentType2Code,
     CryptographicKeyType3Code,
-    DataSetCategory18Code,
     DocumentType7Code,
     EncryptionFormat2Code,
     Exemption1Code,

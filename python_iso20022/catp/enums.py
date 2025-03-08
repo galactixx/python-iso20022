@@ -16,6 +16,12 @@ class ActionType6Code(Enum):
     TRCK = "TRCK"
 
 
+class AtmaccountUsage1Code(Enum):
+    BOTH = "BOTH"
+    DSTN = "DSTN"
+    SRCE = "SRCE"
+
+
 class Atmdevice1Code(Enum):
     CDIS = "CDIS"
     DPRN = "DPRN"
@@ -25,15 +31,12 @@ class Atmdevice1Code(Enum):
     RWDR = "RWDR"
 
 
-class AtmserviceType1Code(Enum):
-    CHSN = "CHSN"
-    PATH = "PATH"
-    PRFL = "PRFL"
-    STDR = "STDR"
-    SPRV = "SPRV"
+class AtmmediaStatus1Code(Enum):
+    ACPT = "ACPT"
+    REJT = "REJT"
 
 
-class AtmserviceType3Code(Enum):
+class AtmserviceType12Code(Enum):
     ASTS = "ASTS"
     CDVF = "CDVF"
     DCCS = "DCCS"
@@ -42,6 +45,35 @@ class AtmserviceType3Code(Enum):
     EMVS = "EMVS"
     CMPF = "CMPF"
     BLCQ = "BLCQ"
+    ACCD = "ACCD"
+    MINI = "MINI"
+
+
+class AtmserviceType13Code(Enum):
+    ASTS = "ASTS"
+    BLCQ = "BLCQ"
+    PINC = "PINC"
+    STDR = "STDR"
+    PRFL = "PRFL"
+    PATH = "PATH"
+    CHSN = "CHSN"
+    TRFC = "TRFC"
+    TRFI = "TRFI"
+    MCHG = "MCHG"
+    DPSN = "DPSN"
+    PINR = "PINR"
+    PINU = "PINU"
+    SPRV = "SPRV"
+    DPSV = "DPSV"
+    TRFP = "TRFP"
+
+
+class AtmserviceType1Code(Enum):
+    CHSN = "CHSN"
+    PATH = "PATH"
+    PRFL = "PRFL"
+    STDR = "STDR"
+    SPRV = "SPRV"
 
 
 class AtmserviceType5Code(Enum):
@@ -91,28 +123,6 @@ class CheckCodeLine1Code(Enum):
     OCRA = "OCRA"
     OCRB = "OCRB"
     OCRF = "OCRF"
-
-
-class FailureReason7Code(Enum):
-    CDCP = "CDCP"
-    CDCL = "CDCL"
-    CDER = "CDER"
-    CUCL = "CUCL"
-    CUDC = "CUDC"
-    CDFG = "CDFG"
-    FILL = "FILL"
-    MALF = "MALF"
-    NDCL = "NDCL"
-    SECU = "SECU"
-    SFRD = "SFRD"
-    TIMO = "TIMO"
-    LATE = "LATE"
-    UCPT = "UCPT"
-    UCMP = "UCMP"
-    USND = "USND"
-    CSRV = "CSRV"
-    CDRT = "CDRT"
-    CUTO = "CUTO"
 
 
 class OutputFormat2Code(Enum):

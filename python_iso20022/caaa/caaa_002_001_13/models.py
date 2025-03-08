@@ -5,9 +5,8 @@ from typing import Optional
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
 from python_iso20022.base import ISO20022Message, ISO20022MessageElement
-from python_iso20022.caaa.enums import MessageFunction46Code
+from python_iso20022.caaa.enums import ActionType13Code, MessageFunction46Code
 from python_iso20022.enums import (
-    ActionType13Code,
     AddressType2Code,
     Algorithm7Code,
     Algorithm8Code,
