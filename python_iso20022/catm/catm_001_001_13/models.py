@@ -6,7 +6,11 @@ from xsdata.models.datatype import XmlDate, XmlDateTime
 
 from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.catm.catm_001_001_13.enums import PartyType5Code
-from python_iso20022.catm.enums import DataSetCategory18Code, ExchangePolicy2Code
+from python_iso20022.catm.enums import (
+    DataSetCategory18Code,
+    ExchangePolicy2Code,
+    PoicomponentType6Code,
+)
 from python_iso20022.enums import (
     AddressType2Code,
     Algorithm7Code,
@@ -54,7 +58,6 @@ from python_iso20022.enums import (
     PoicommunicationType2Code,
     PoicomponentAssessment1Code,
     PoicomponentStatus1Code,
-    PoicomponentType6Code,
     Response11Code,
     RetailerResultDetail1Code,
     RetailerService9Code,

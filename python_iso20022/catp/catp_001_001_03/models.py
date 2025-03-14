@@ -5,9 +5,8 @@ from typing import Optional
 from xsdata.models.datatype import XmlDateTime
 
 from python_iso20022.base import ISO20022Message, ISO20022MessageElement
-from python_iso20022.catp.enums import AtmserviceType1Code
+from python_iso20022.catp.enums import AccountChoiceMethod1Code, AtmserviceType1Code
 from python_iso20022.enums import (
-    AccountChoiceMethod1Code,
     AddressType2Code,
     Algorithm7Code,
     Algorithm8Code,

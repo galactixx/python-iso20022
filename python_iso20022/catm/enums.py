@@ -136,10 +136,46 @@ class NetworkType2Code(Enum):
     HTTP = "HTTP"
 
 
+class NonFinancialRequestType2Code(Enum):
+    ACQR = "ACQR"
+    PARQ = "PARQ"
+    RISK = "RISK"
+    TOKN = "TOKN"
+    ADDR = "ADDR"
+    INSM = "INSM"
+
+
 class PartyType15Code(Enum):
     PGRP = "PGRP"
     PSYS = "PSYS"
     PSNG = "PSNG"
+
+
+class PoicomponentType6Code(Enum):
+    AQPP = "AQPP"
+    APPR = "APPR"
+    TLPR = "TLPR"
+    SCPR = "SCPR"
+    SERV = "SERV"
+    TERM = "TERM"
+    DVCE = "DVCE"
+    SECM = "SECM"
+    APLI = "APLI"
+    EMVK = "EMVK"
+    EMVO = "EMVO"
+    MDWR = "MDWR"
+    DRVR = "DRVR"
+    OPST = "OPST"
+    MRPR = "MRPR"
+    CRTF = "CRTF"
+    TMSP = "TMSP"
+    SACP = "SACP"
+    SAPR = "SAPR"
+    LOGF = "LOGF"
+    MDFL = "MDFL"
+    SOFT = "SOFT"
+    CONF = "CONF"
+    RPFL = "RPFL"
 
 
 class ReconciliationCriteria1Code(Enum):

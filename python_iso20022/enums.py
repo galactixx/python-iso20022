@@ -1,15 +1,6 @@
 from enum import Enum
 
 
-class AccountChoiceMethod1Code(Enum):
-    ACSL = "ACSL"
-    ENTR = "ENTR"
-    IMAC = "IMAC"
-    IMPL = "IMPL"
-    NOSL = "NOSL"
-    TPSL = "TPSL"
-
-
 class AcknowledgementReason3Code(Enum):
     ADEA = "ADEA"
     SMPG = "SMPG"
@@ -440,14 +431,6 @@ class AttendanceContext1Code(Enum):
     UATT = "UATT"
 
 
-class AttendanceContext2Code(Enum):
-    ATTL = "ATTL"
-    CARR = "CARR"
-    CUST = "CUST"
-    FULL = "FULL"
-    SELF = "SELF"
-
-
 class AttributeType1Code(Enum):
     CNAT = "CNAT"
     LATT = "LATT"
@@ -793,45 +776,6 @@ class CardIdentificationType1Code(Enum):
     UUID = "UUID"
 
 
-class CardPaymentServiceType12Code(Enum):
-    BALC = "BALC"
-    CACT = "CACT"
-    CRDP = "CRDP"
-    CAFH = "CAFH"
-    CAVR = "CAVR"
-    CSHW = "CSHW"
-    CSHD = "CSHD"
-    DEFR = "DEFR"
-    LOAD = "LOAD"
-    ORCR = "ORCR"
-    PINC = "PINC"
-    QUCH = "QUCH"
-    RFND = "RFND"
-    RESA = "RESA"
-    VALC = "VALC"
-    UNLD = "UNLD"
-    CAFT = "CAFT"
-    CAFL = "CAFL"
-    CIDD = "CIDD"
-
-
-class CardPaymentServiceType9Code(Enum):
-    AGGR = "AGGR"
-    DCCV = "DCCV"
-    GRTT = "GRTT"
-    LOYT = "LOYT"
-    NRES = "NRES"
-    PUCO = "PUCO"
-    RECP = "RECP"
-    SOAF = "SOAF"
-    VCAU = "VCAU"
-    INSI = "INSI"
-    INSA = "INSA"
-    CSHB = "CSHB"
-    INST = "INST"
-    NRFD = "NRFD"
-
-
 class CardProductType1Code(Enum):
     COMM = "COMM"
     CONS = "CONS"
@@ -1026,18 +970,6 @@ class CryptographicKeyType3Code(Enum):
     AES9 = "AES9"
     AES5 = "AES5"
     EDE4 = "EDE4"
-
-
-class CurrencyConversionResponse3Code(Enum):
-    ODCC = "ODCC"
-    DCCA = "DCCA"
-    ICRD = "ICRD"
-    IMER = "IMER"
-    IPRD = "IPRD"
-    IRAT = "IRAT"
-    NDCC = "NDCC"
-    REST = "REST"
-    CATG = "CATG"
 
 
 class CustomerDeviceType2Code(Enum):
@@ -1940,19 +1872,6 @@ class InputCommand1Code(Enum):
     SIGN = "SIGN"
 
 
-class InstalmentAmountDetailsType1Code(Enum):
-    TAXX = "TAXX"
-    RQST = "RQST"
-    OTHP = "OTHP"
-    OTHN = "OTHN"
-    OTHC = "OTHC"
-    INSU = "INSU"
-    FUNA = "FUNA"
-    FEES = "FEES"
-    EXPN = "EXPN"
-    AFCO = "AFCO"
-
-
 class InstalmentAmountDetailsType3Code(Enum):
     AFCO = "AFCO"
     EXPN = "EXPN"
@@ -1972,12 +1891,6 @@ class InstalmentAmountDetailsType3Code(Enum):
 class InstalmentPeriod1Code(Enum):
     MNTH = "MNTH"
     ANNU = "ANNU"
-
-
-class InstalmentPlan1Code(Enum):
-    EQPM = "EQPM"
-    NQPM = "NQPM"
-    DFRI = "DFRI"
 
 
 class Instruction4Code(Enum):
@@ -2127,15 +2040,6 @@ class LoyaltyHandling1Code(Enum):
     PRCS = "PRCS"
     PROP = "PROP"
     REQU = "REQU"
-
-
-class LoyaltyTypeTransactionTotals1Code(Enum):
-    AWRD = "AWRD"
-    REBA = "REBA"
-    REDE = "REDE"
-    AWRR = "AWRR"
-    REBR = "REBR"
-    REDR = "REDR"
 
 
 class MandateClassification1Code(Enum):
@@ -2311,15 +2215,6 @@ class NoReasonCode(Enum):
     NORE = "NORE"
 
 
-class NonFinancialRequestType2Code(Enum):
-    ACQR = "ACQR"
-    PARQ = "PARQ"
-    RISK = "RISK"
-    TOKN = "TOKN"
-    ADDR = "ADDR"
-    INSM = "INSM"
-
-
 class OnLineCapability1Code(Enum):
     OFLN = "OFLN"
     ONLN = "ONLN"
@@ -2330,23 +2225,6 @@ class OnLineCapability2Code(Enum):
     OFLN = "OFLN"
     ONLN = "ONLN"
     BOTH = "BOTH"
-
-
-class OnLineReason2Code(Enum):
-    RNDM = "RNDM"
-    ICCF = "ICCF"
-    MERF = "MERF"
-    TRMF = "TRMF"
-    ISSF = "ISSF"
-    FRLT = "FRLT"
-    EXFL = "EXFL"
-    TAMT = "TAMT"
-    CBIN = "CBIN"
-    UBIN = "UBIN"
-    CPAN = "CPAN"
-    FLOW = "FLOW"
-    CRCY = "CRCY"
-    IFPR = "IFPR"
 
 
 class Operation1Code(Enum):
@@ -2472,17 +2350,6 @@ class PartyType12Code(Enum):
     HSTG = "HSTG"
     ITAG = "ITAG"
     OATM = "OATM"
-
-
-class PartyType14Code(Enum):
-    OPOI = "OPOI"
-    MERC = "MERC"
-    ACCP = "ACCP"
-    ITAG = "ITAG"
-    ACQR = "ACQR"
-    CISS = "CISS"
-    DLIS = "DLIS"
-    ICCA = "ICCA"
 
 
 class PartyType17Code(Enum):
@@ -3091,33 +2958,6 @@ class PoicomponentType5Code(Enum):
     SAPR = "SAPR"
 
 
-class PoicomponentType6Code(Enum):
-    AQPP = "AQPP"
-    APPR = "APPR"
-    TLPR = "TLPR"
-    SCPR = "SCPR"
-    SERV = "SERV"
-    TERM = "TERM"
-    DVCE = "DVCE"
-    SECM = "SECM"
-    APLI = "APLI"
-    EMVK = "EMVK"
-    EMVO = "EMVO"
-    MDWR = "MDWR"
-    DRVR = "DRVR"
-    OPST = "OPST"
-    MRPR = "MRPR"
-    CRTF = "CRTF"
-    TMSP = "TMSP"
-    SACP = "SACP"
-    SAPR = "SAPR"
-    LOGF = "LOGF"
-    MDFL = "MDFL"
-    SOFT = "SOFT"
-    CONF = "CONF"
-    RPFL = "RPFL"
-
-
 class PreferredContactMethod1Code(Enum):
     LETT = "LETT"
     MAIL = "MAIL"
@@ -3503,14 +3343,6 @@ class Response2Code(Enum):
     DECL = "DECL"
 
 
-class Response9Code(Enum):
-    APPR = "APPR"
-    DECL = "DECL"
-    PART = "PART"
-    SUSP = "SUSP"
-    TECH = "TECH"
-
-
 class ResponseMode2Code(Enum):
     SEND = "SEND"
     IMMD = "IMMD"
@@ -3669,28 +3501,6 @@ class RetailerService2Code(Enum):
     FSEQ = "FSEQ"
     FSAQ = "FSAQ"
     FSCQ = "FSCQ"
-
-
-class RetailerService3Code(Enum):
-    FSPP = "FSPP"
-    FSRP = "FSRP"
-    FSIP = "FSIP"
-    FSBP = "FSBP"
-    FSLP = "FSLP"
-    FSVP = "FSVP"
-    FSEP = "FSEP"
-    FSAP = "FSAP"
-    FSCP = "FSCP"
-
-
-class RetailerService6Code(Enum):
-    RPTQ = "RPTQ"
-    RPAQ = "RPAQ"
-
-
-class RetailerService7Code(Enum):
-    RPTP = "RPTP"
-    RPAP = "RPAP"
 
 
 class RetailerService8Code(Enum):
@@ -4060,19 +3870,6 @@ class StoredValueAccountType1Code(Enum):
     TRVL = "TRVL"
 
 
-class StoredValueTransactionType3Code(Enum):
-    ACTV = "ACTV"
-    DUPL = "DUPL"
-    LOAD = "LOAD"
-    RESV = "RESV"
-    REVS = "REVS"
-    ULOA = "ULOA"
-    CLOS = "CLOS"
-    DCTV = "DCTV"
-    OPEN = "OPEN"
-    BALC = "BALC"
-
-
 class SupportedPaymentOption2Code(Enum):
     PART = "PART"
     MSRV = "MSRV"
@@ -4246,25 +4043,11 @@ class TimeUnit1Code(Enum):
     YEAR = "YEAR"
 
 
-class TmscontactLevel1Code(Enum):
-    CRIT = "CRIT"
-    ASAP = "ASAP"
-    DTIM = "DTIM"
-
-
 class TmscontactLevel2Code(Enum):
     ASAP = "ASAP"
     CRIT = "CRIT"
     DTIM = "DTIM"
     ENCS = "ENCS"
-
-
-class TotalDetails1Code(Enum):
-    OPID = "OPID"
-    PIID = "PIID"
-    TGID = "TGID"
-    SNID = "SNID"
-    SAID = "SAID"
 
 
 class TrackFormat1Code(Enum):
@@ -4483,16 +4266,6 @@ class TypeOfPrice14Code(Enum):
     AVER = "AVER"
 
 
-class TypeTransactionTotals3Code(Enum):
-    CRDT = "CRDT"
-    CRDR = "CRDR"
-    DEBT = "DEBT"
-    DBTR = "DBTR"
-    DECL = "DECL"
-    FAIL = "FAIL"
-    RESV = "RESV"
-
-
 class UktaxGroupUnit1Code(Enum):
     GRP1 = "GRP1"
     GRP2 = "GRP2"
@@ -4539,47 +4312,6 @@ class UnitOfMeasure1Code(Enum):
     SQFO = "SQFO"
     SQIN = "SQIN"
     ACRE = "ACRE"
-
-
-class UnitOfMeasure6Code(Enum):
-    PIEC = "PIEC"
-    TONS = "TONS"
-    FOOT = "FOOT"
-    GBGA = "GBGA"
-    USGA = "USGA"
-    GRAM = "GRAM"
-    INCH = "INCH"
-    KILO = "KILO"
-    PUND = "PUND"
-    METR = "METR"
-    CMET = "CMET"
-    MMET = "MMET"
-    LITR = "LITR"
-    CELI = "CELI"
-    MILI = "MILI"
-    GBOU = "GBOU"
-    USOU = "USOU"
-    GBQA = "GBQA"
-    USQA = "USQA"
-    GBPI = "GBPI"
-    USPI = "USPI"
-    MILE = "MILE"
-    KMET = "KMET"
-    YARD = "YARD"
-    SQKI = "SQKI"
-    HECT = "HECT"
-    ARES = "ARES"
-    SMET = "SMET"
-    SCMT = "SCMT"
-    SMIL = "SMIL"
-    SQMI = "SQMI"
-    SQYA = "SQYA"
-    SQFO = "SQFO"
-    SQIN = "SQIN"
-    ACRE = "ACRE"
-    KWHO = "KWHO"
-    DGEU = "DGEU"
-    GGEU = "GGEU"
 
 
 class UnmatchedReason11Code(Enum):

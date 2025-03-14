@@ -1,6 +1,15 @@
 from enum import Enum
 
 
+class AccountChoiceMethod1Code(Enum):
+    ACSL = "ACSL"
+    ENTR = "ENTR"
+    IMAC = "IMAC"
+    IMPL = "IMPL"
+    NOSL = "NOSL"
+    TPSL = "TPSL"
+
+
 class ActionType6Code(Enum):
     DCCQ = "DCCQ"
     FEES = "FEES"

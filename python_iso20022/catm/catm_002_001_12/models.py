@@ -8,6 +8,7 @@ from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.catm.enums import (
     DataSetCategory18Code,
     MessageItemCondition2Code,
+    PoicomponentType6Code,
     TerminalManagementActionTrigger1Code,
     TerminalManagementAdditionalProcess1Code,
     TerminalManagementErrorAction2Code,
@@ -62,7 +63,6 @@ from python_iso20022.enums import (
     PoicommunicationType2Code,
     PoicomponentAssessment1Code,
     PoicomponentStatus1Code,
-    PoicomponentType6Code,
     ProcessingPosition2Code,
     QrcodeEncodingMode1Code,
     QrcodeErrorCorrection1Code,
