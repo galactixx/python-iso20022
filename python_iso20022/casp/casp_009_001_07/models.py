@@ -5,11 +5,6 @@ from typing import Optional
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
 from python_iso20022.base import ISO20022Message, ISO20022MessageElement
-from python_iso20022.casp.casp_009_001_07.enums import (
-    RetailerService6Code,
-    TotalDetails1Code,
-)
-from python_iso20022.casp.enums import PoicomponentType7Code
 from python_iso20022.enums import (
     AddressType2Code,
     Algorithm7Code,
@@ -56,12 +51,15 @@ from python_iso20022.enums import (
     PoicommunicationType2Code,
     PoicomponentAssessment1Code,
     PoicomponentStatus1Code,
+    PoicomponentType7Code,
     PreferredContactMethod2Code,
     RetailerMessage1Code,
+    RetailerService6Code,
     SaleCapabilities1Code,
     SaleTokenScope1Code,
     StoredValueAccountType1Code,
     SupportedPaymentOption2Code,
+    TotalDetails1Code,
     TrackFormat1Code,
     TransactionChannel5Code,
     TransactionEnvironment1Code,

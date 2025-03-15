@@ -5,7 +5,6 @@ from typing import Optional
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
 from python_iso20022.base import ISO20022Message, ISO20022MessageElement
-from python_iso20022.casp.enums import PoicomponentType7Code
 from python_iso20022.enums import (
     AddressType2Code,
     Algorithm7Code,
@@ -51,6 +50,7 @@ from python_iso20022.enums import (
     PoicommunicationType2Code,
     PoicomponentAssessment1Code,
     PoicomponentStatus1Code,
+    PoicomponentType7Code,
     PreferredContactMethod2Code,
     Response11Code,
     RetailerMessage1Code,

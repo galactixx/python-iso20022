@@ -9,7 +9,6 @@ from python_iso20022.casp.casp_012_001_07.enums import (
     EventToNotify2Code,
     RetailerService1Code,
 )
-from python_iso20022.casp.enums import PoicomponentType7Code
 from python_iso20022.enums import (
     AddressType2Code,
     Algorithm7Code,
@@ -58,6 +57,7 @@ from python_iso20022.enums import (
     PoicommunicationType2Code,
     PoicomponentAssessment1Code,
     PoicomponentStatus1Code,
+    PoicomponentType7Code,
     PreferredContactMethod2Code,
     QrcodeEncodingMode1Code,
     QrcodeErrorCorrection1Code,

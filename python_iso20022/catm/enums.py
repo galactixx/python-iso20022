@@ -15,6 +15,16 @@ class CancellationProcess2Code(Enum):
     APPL = "APPL"
 
 
+class CapeencodingMode1Code(Enum):
+    XMLE = "XMLE"
+    JSON = "JSON"
+
+
+class CapeexchangeMode1Code(Enum):
+    APIE = "APIE"
+    MSGE = "MSGE"
+
+
 class CardPaymentServiceType10Code(Enum):
     CRTC = "CRTC"
     CRTR = "CRTR"
@@ -34,31 +44,6 @@ class DataSetCategory10Code(Enum):
     TRPR = "TRPR"
     CRTF = "CRTF"
     TMSP = "TMSP"
-
-
-class DataSetCategory18Code(Enum):
-    AQPR = "AQPR"
-    APPR = "APPR"
-    TXCP = "TXCP"
-    AKCP = "AKCP"
-    DLGT = "DLGT"
-    MGTP = "MGTP"
-    MRPR = "MRPR"
-    SCPR = "SCPR"
-    SWPK = "SWPK"
-    STRP = "STRP"
-    TRPR = "TRPR"
-    VDPR = "VDPR"
-    PARA = "PARA"
-    TMSP = "TMSP"
-    CRTF = "CRTF"
-    LOGF = "LOGF"
-    CMRQ = "CMRQ"
-    MDFL = "MDFL"
-    CONF = "CONF"
-    RPFL = "RPFL"
-    SAPR = "SAPR"
-    SPRP = "SPRP"
 
 
 class DataSetCategory19Code(Enum):
@@ -100,7 +85,7 @@ class FinancialCapture1Code(Enum):
     BTCH = "BTCH"
 
 
-class MessageFunction43Code(Enum):
+class MessageFunction47Code(Enum):
     FAUQ = "FAUQ"
     CCAQ = "CCAQ"
     CMPV = "CMPV"
@@ -117,6 +102,7 @@ class MessageFunction43Code(Enum):
     TRNA = "TRNA"
     NFRQ = "NFRQ"
     TRPQ = "TRPQ"
+    ATAF = "ATAF"
 
 
 class MessageItemCondition2Code(Enum):
@@ -136,46 +122,10 @@ class NetworkType2Code(Enum):
     HTTP = "HTTP"
 
 
-class NonFinancialRequestType2Code(Enum):
-    ACQR = "ACQR"
-    PARQ = "PARQ"
-    RISK = "RISK"
-    TOKN = "TOKN"
-    ADDR = "ADDR"
-    INSM = "INSM"
-
-
 class PartyType15Code(Enum):
     PGRP = "PGRP"
     PSYS = "PSYS"
     PSNG = "PSNG"
-
-
-class PoicomponentType6Code(Enum):
-    AQPP = "AQPP"
-    APPR = "APPR"
-    TLPR = "TLPR"
-    SCPR = "SCPR"
-    SERV = "SERV"
-    TERM = "TERM"
-    DVCE = "DVCE"
-    SECM = "SECM"
-    APLI = "APLI"
-    EMVK = "EMVK"
-    EMVO = "EMVO"
-    MDWR = "MDWR"
-    DRVR = "DRVR"
-    OPST = "OPST"
-    MRPR = "MRPR"
-    CRTF = "CRTF"
-    TMSP = "TMSP"
-    SACP = "SACP"
-    SAPR = "SAPR"
-    LOGF = "LOGF"
-    MDFL = "MDFL"
-    SOFT = "SOFT"
-    CONF = "CONF"
-    RPFL = "RPFL"
 
 
 class ReconciliationCriteria1Code(Enum):

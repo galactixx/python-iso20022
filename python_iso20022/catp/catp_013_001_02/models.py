@@ -6,7 +6,6 @@ from xsdata.models.datatype import XmlDate, XmlDateTime
 
 from python_iso20022.base import ISO20022Message, ISO20022MessageElement
 from python_iso20022.catp.enums import (
-    AccountChoiceMethod1Code,
     ActionType6Code,
     AtmaccountUsage1Code,
     Atmdevice1Code,
@@ -18,6 +17,7 @@ from python_iso20022.catp.enums import (
     PartyType16Code,
 )
 from python_iso20022.enums import (
+    AccountChoiceMethod1Code,
     AddressType2Code,
     Algorithm7Code,
     Algorithm8Code,

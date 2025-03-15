@@ -5,13 +5,7 @@ from typing import Optional
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
 from python_iso20022.base import ISO20022Message, ISO20022MessageElement
-from python_iso20022.casp.enums import (
-    LoyaltyTypeTransactionTotals1Code,
-    PaymentInstrumentType2Code,
-    PoicomponentType7Code,
-    ReconciliationType1Code,
-    TypeTransactionTotals3Code,
-)
+from python_iso20022.casp.enums import ReconciliationType1Code
 from python_iso20022.enums import (
     AddressType2Code,
     Algorithm7Code,
@@ -44,6 +38,7 @@ from python_iso20022.enums import (
     LocationCategory3Code,
     LocationCategory4Code,
     LoyaltyHandling1Code,
+    LoyaltyTypeTransactionTotals1Code,
     MemoryUnit1Code,
     NamePrefix2Code,
     NetworkType1Code,
@@ -53,10 +48,12 @@ from python_iso20022.enums import (
     PartyType4Code,
     PartyType7Code,
     PartyType33Code,
+    PaymentInstrumentType2Code,
     Pinformat3Code,
     PoicommunicationType2Code,
     PoicomponentAssessment1Code,
     PoicomponentStatus1Code,
+    PoicomponentType7Code,
     PreferredContactMethod2Code,
     Response11Code,
     RetailerMessage1Code,
@@ -68,6 +65,7 @@ from python_iso20022.enums import (
     TrackFormat1Code,
     TransactionChannel5Code,
     TransactionEnvironment1Code,
+    TypeTransactionTotals3Code,
     UserInterface4Code,
     Verification1Code,
 )
