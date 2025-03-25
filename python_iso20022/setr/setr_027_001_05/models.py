@@ -11,6 +11,7 @@ from python_iso20022.enums import (
     AutoBorrowing1Code,
     BlockTrade1Code,
     CalculationType1Code,
+    CallIn1Code,
     CashSettlementSystem2Code,
     ClearingAccountType1Code,
     CreditDebitCode,
@@ -50,7 +51,6 @@ from python_iso20022.enums import (
 )
 from python_iso20022.setr.enums import (
     BusinessProcessType1Code,
-    CallIn1Code,
     CashMarginOrder1Code,
     ChargeTaxBasis1Code,
     ClearingSide1Code,

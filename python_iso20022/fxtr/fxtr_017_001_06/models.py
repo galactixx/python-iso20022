@@ -18,11 +18,11 @@ from python_iso20022.fxtr.enums import (
     UnderlyingProductIdentifier1Code,
 )
 
-__NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05"
+__NAMESPACE__ = "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06"
 
 
 @dataclass
-class ActiveCurrencyAndAmountFxtr01700105(ISO20022MessageElement):
+class ActiveCurrencyAndAmountFxtr01700106(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -44,7 +44,7 @@ class ActiveCurrencyAndAmountFxtr01700105(ISO20022MessageElement):
 
 
 @dataclass
-class ActiveOrHistoricCurrencyAndAmountFxtr01700105(ISO20022MessageElement):
+class ActiveOrHistoricCurrencyAndAmountFxtr01700106(ISO20022MessageElement):
     value: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -66,13 +66,13 @@ class ActiveOrHistoricCurrencyAndAmountFxtr01700105(ISO20022MessageElement):
 
 
 @dataclass
-class AgreedRate3Fxtr01700105(ISO20022MessageElement):
+class AgreedRate3Fxtr01700106(ISO20022MessageElement):
     xchg_rate: Optional[Decimal] = field(
         default=None,
         metadata={
             "name": "XchgRate",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
             "total_digits": 11,
             "fraction_digits": 10,
@@ -83,7 +83,7 @@ class AgreedRate3Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "UnitCcy",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "pattern": r"[A-Z]{3,3}",
         },
     )
@@ -92,20 +92,20 @@ class AgreedRate3Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "QtdCcy",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "pattern": r"[A-Z]{3,3}",
         },
     )
 
 
 @dataclass
-class AgreementConditions1Fxtr01700105(ISO20022MessageElement):
+class AgreementConditions1Fxtr01700106(ISO20022MessageElement):
     agrmt_cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "AgrmtCd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
             "pattern": r"[a-zA-Z]{1,6}",
         },
@@ -115,7 +115,7 @@ class AgreementConditions1Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "Dt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     vrsn: Optional[str] = field(
@@ -123,20 +123,44 @@ class AgreementConditions1Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "Vrsn",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "pattern": r"[0-9]{4}",
         },
     )
 
 
 @dataclass
-class ClearingSystemIdentification2ChoiceFxtr01700105(ISO20022MessageElement):
+class CalculationAgent1ChoiceFxtr01700106(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
+            "min_length": 1,
+            "max_length": 4,
+        },
+    )
+    prtry: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Prtry",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
+            "min_length": 1,
+            "max_length": 35,
+        },
+    )
+
+
+@dataclass
+class ClearingSystemIdentification2ChoiceFxtr01700106(ISO20022MessageElement):
+    cd: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Cd",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 5,
         },
@@ -146,7 +170,7 @@ class ClearingSystemIdentification2ChoiceFxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 35,
         },
@@ -154,13 +178,13 @@ class ClearingSystemIdentification2ChoiceFxtr01700105(ISO20022MessageElement):
 
 
 @dataclass
-class ContactInformation1Fxtr01700105(ISO20022MessageElement):
+class ContactInformation1Fxtr01700106(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
             "name": "Nm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 350,
         },
@@ -170,7 +194,7 @@ class ContactInformation1Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "FaxNb",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "pattern": r"\+[0-9]{1,3}-[0-9()+\-]{1,30}",
         },
     )
@@ -179,7 +203,7 @@ class ContactInformation1Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "TelNb",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "pattern": r"\+[0-9]{1,3}-[0-9()+\-]{1,30}",
         },
     )
@@ -188,7 +212,7 @@ class ContactInformation1Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "EmailAdr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 256,
         },
@@ -196,13 +220,13 @@ class ContactInformation1Fxtr01700105(ISO20022MessageElement):
 
 
 @dataclass
-class DateAndDateTime2ChoiceFxtr01700105(ISO20022MessageElement):
+class DateAndDateTime2ChoiceFxtr01700106(ISO20022MessageElement):
     dt: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "Dt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     dt_tm: Optional[XmlDateTime] = field(
@@ -210,20 +234,20 @@ class DateAndDateTime2ChoiceFxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "DtTm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
 
 
 @dataclass
-class DigitalTokenAmount1Fxtr01700105(ISO20022MessageElement):
+class DigitalTokenAmount3Fxtr01700106(ISO20022MessageElement):
     idr: Optional[str] = field(
         default=None,
         metadata={
             "name": "Idr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
-            "pattern": r"[1-9B-DF-HJ-NP-XZ][0-9B-DF-HJ-NP-XZ]{8,8}",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
+            "pattern": r"[1-9B-DF-HJ-NP-TV-XZ][0-9B-DF-HJ-NP-TV-XZ]{8,8}",
         },
     )
     unit: Optional[Decimal] = field(
@@ -231,7 +255,7 @@ class DigitalTokenAmount1Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "Unit",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
             "total_digits": 30,
             "fraction_digits": 29,
@@ -242,20 +266,20 @@ class DigitalTokenAmount1Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "Desc",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "max_length": 30,
         },
     )
 
 
 @dataclass
-class IdentificationSource3ChoiceFxtr01700105(ISO20022MessageElement):
+class IdentificationSource3ChoiceFxtr01700106(ISO20022MessageElement):
     cd: Optional[str] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 4,
         },
@@ -265,7 +289,7 @@ class IdentificationSource3ChoiceFxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 35,
         },
@@ -273,13 +297,13 @@ class IdentificationSource3ChoiceFxtr01700105(ISO20022MessageElement):
 
 
 @dataclass
-class PartyIdentification265Fxtr01700105(ISO20022MessageElement):
+class PartyIdentification265Fxtr01700106(ISO20022MessageElement):
     any_bic: Optional[str] = field(
         default=None,
         metadata={
             "name": "AnyBIC",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
             "pattern": r"[A-Z0-9]{4,4}[A-Z]{2,2}[A-Z0-9]{2,2}([A-Z0-9]{3,3}){0,1}",
         },
@@ -289,7 +313,7 @@ class PartyIdentification265Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "AltrntvIdr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "max_occurs": 10,
             "min_length": 1,
             "max_length": 35,
@@ -298,13 +322,37 @@ class PartyIdentification265Fxtr01700105(ISO20022MessageElement):
 
 
 @dataclass
-class SettlementRateSource1Fxtr01700105(ISO20022MessageElement):
+class PostTradeEventType2ChoiceFxtr01700106(ISO20022MessageElement):
+    cd: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Cd",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
+            "min_length": 1,
+            "max_length": 4,
+        },
+    )
+    prtry: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "Prtry",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
+            "min_length": 1,
+            "max_length": 35,
+        },
+    )
+
+
+@dataclass
+class SettlementRateSource1Fxtr01700106(ISO20022MessageElement):
     rate_src: Optional[str] = field(
         default=None,
         metadata={
             "name": "RateSrc",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
             "pattern": r"[a-zA-Z]{3}[0-9]{1,2}",
         },
@@ -314,7 +362,7 @@ class SettlementRateSource1Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "Tm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "pattern": r"[0-9]{4}",
         },
     )
@@ -323,7 +371,7 @@ class SettlementRateSource1Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "CtryCd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "pattern": r"[A-Z]{2,2}",
         },
     )
@@ -332,14 +380,14 @@ class SettlementRateSource1Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "LctnCd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "pattern": r"[a-zA-Z0-9]{2}",
         },
     )
 
 
 @dataclass
-class SupplementaryDataEnvelope1Fxtr01700105(ISO20022MessageElement):
+class SupplementaryDataEnvelope1Fxtr01700106(ISO20022MessageElement):
     any_element: Optional[object] = field(
         default=None,
         metadata={
@@ -350,13 +398,13 @@ class SupplementaryDataEnvelope1Fxtr01700105(ISO20022MessageElement):
 
 
 @dataclass
-class TradeAgreement12Fxtr01700105(ISO20022MessageElement):
+class TradeAgreement12Fxtr01700106(ISO20022MessageElement):
     trad_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "TradDt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
         },
     )
@@ -365,7 +413,7 @@ class TradeAgreement12Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "MsgId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -376,7 +424,7 @@ class TradeAgreement12Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "OrgtrRef",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -387,7 +435,7 @@ class TradeAgreement12Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "CmonRef",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 35,
         },
@@ -397,7 +445,7 @@ class TradeAgreement12Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "AmdOrCclRsn",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 35,
         },
@@ -407,7 +455,7 @@ class TradeAgreement12Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "RltdRef",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 35,
         },
@@ -417,7 +465,7 @@ class TradeAgreement12Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "PdctTp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 35,
         },
@@ -427,7 +475,7 @@ class TradeAgreement12Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "OprTp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 4,
         },
@@ -437,7 +485,7 @@ class TradeAgreement12Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "OprScp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 4,
         },
@@ -447,7 +495,7 @@ class TradeAgreement12Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "SttlmSsnIdr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "pattern": r"[a-zA-Z0-9]{4}",
         },
     )
@@ -456,7 +504,7 @@ class TradeAgreement12Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "SpltTradInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
         },
     )
@@ -465,22 +513,21 @@ class TradeAgreement12Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "PmtVrssPmtInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
 
 
 @dataclass
-class UniqueTransactionIdentifier2Fxtr01700105(ISO20022MessageElement):
+class UniqueTransactionIdentifier3Fxtr01700106(ISO20022MessageElement):
     unq_tx_idr: Optional[str] = field(
         default=None,
         metadata={
             "name": "UnqTxIdr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
-            "min_length": 1,
-            "max_length": 52,
+            "pattern": r"[A-Z0-9]{18}[0-9]{2}[A-Z0-9]{0,32}",
         },
     )
     prr_unq_tx_idr: list[str] = field(
@@ -488,21 +535,20 @@ class UniqueTransactionIdentifier2Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "PrrUnqTxIdr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
-            "min_length": 1,
-            "max_length": 52,
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
+            "pattern": r"[A-Z0-9]{18}[0-9]{2}[A-Z0-9]{0,32}",
         },
     )
 
 
 @dataclass
-class AmountOrRate4ChoiceFxtr01700105(ISO20022MessageElement):
-    amt: Optional[ActiveCurrencyAndAmountFxtr01700105] = field(
+class AmountOrRate4ChoiceFxtr01700106(ISO20022MessageElement):
+    amt: Optional[ActiveCurrencyAndAmountFxtr01700106] = field(
         default=None,
         metadata={
             "name": "Amt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     rate: Optional[Decimal] = field(
@@ -510,7 +556,7 @@ class AmountOrRate4ChoiceFxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "Rate",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "total_digits": 11,
             "fraction_digits": 10,
         },
@@ -518,13 +564,13 @@ class AmountOrRate4ChoiceFxtr01700105(ISO20022MessageElement):
 
 
 @dataclass
-class ClearingBrokerIdentification1Fxtr01700105(ISO20022MessageElement):
+class ClearingBrokerIdentification1Fxtr01700106(ISO20022MessageElement):
     sd_ind: Optional[SideIndicator1Code] = field(
         default=None,
         metadata={
             "name": "SdInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
         },
     )
@@ -533,7 +579,7 @@ class ClearingBrokerIdentification1Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "ClrBrkrId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -542,27 +588,27 @@ class ClearingBrokerIdentification1Fxtr01700105(ISO20022MessageElement):
 
 
 @dataclass
-class CurrencyOrDigitalTokenAmount1ChoiceFxtr01700105(ISO20022MessageElement):
-    amt: Optional[ActiveOrHistoricCurrencyAndAmountFxtr01700105] = field(
+class CurrencyOrDigitalTokenAmount2ChoiceFxtr01700106(ISO20022MessageElement):
+    amt: Optional[ActiveOrHistoricCurrencyAndAmountFxtr01700106] = field(
         default=None,
         metadata={
             "name": "Amt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    dgtl_tkn_amt: Optional[DigitalTokenAmount1Fxtr01700105] = field(
+    dgtl_tkn_amt: Optional[DigitalTokenAmount3Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "DgtlTknAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
 
 
 @dataclass
-class FxamountType1ChoiceFxtr01700105(ISO20022MessageElement):
+class FxamountType1ChoiceFxtr01700106(ISO20022MessageElement):
     class Meta:
         name = "FXAmountType1Choice"
 
@@ -571,7 +617,7 @@ class FxamountType1ChoiceFxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     prtry: Optional[str] = field(
@@ -579,7 +625,7 @@ class FxamountType1ChoiceFxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 35,
         },
@@ -587,13 +633,13 @@ class FxamountType1ChoiceFxtr01700105(ISO20022MessageElement):
 
 
 @dataclass
-class FixingConditions1Fxtr01700105(ISO20022MessageElement):
+class FixingConditions1Fxtr01700106(ISO20022MessageElement):
     trad_dt: Optional[XmlDate] = field(
         default=None,
         metadata={
             "name": "TradDt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
         },
     )
@@ -602,7 +648,7 @@ class FixingConditions1Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "OrgtrRef",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -613,7 +659,7 @@ class FixingConditions1Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "CmonRef",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 35,
         },
@@ -623,26 +669,26 @@ class FixingConditions1Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "RltdRef",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 35,
         },
     )
-    tradg_sd_buy_amt: Optional[ActiveOrHistoricCurrencyAndAmountFxtr01700105] = field(
+    tradg_sd_buy_amt: Optional[ActiveOrHistoricCurrencyAndAmountFxtr01700106] = field(
         default=None,
         metadata={
             "name": "TradgSdBuyAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
         },
     )
-    tradg_sd_sell_amt: Optional[ActiveOrHistoricCurrencyAndAmountFxtr01700105] = field(
+    tradg_sd_sell_amt: Optional[ActiveOrHistoricCurrencyAndAmountFxtr01700106] = field(
         default=None,
         metadata={
             "name": "TradgSdSellAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
         },
     )
@@ -651,7 +697,7 @@ class FixingConditions1Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "XchgRate",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
             "total_digits": 11,
             "fraction_digits": 10,
@@ -660,13 +706,13 @@ class FixingConditions1Fxtr01700105(ISO20022MessageElement):
 
 
 @dataclass
-class OpeningConditions1Fxtr01700105(ISO20022MessageElement):
+class OpeningConditions1Fxtr01700106(ISO20022MessageElement):
     sttlm_ccy: Optional[str] = field(
         default=None,
         metadata={
             "name": "SttlmCcy",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
             "pattern": r"[A-Z]{3,3}",
         },
@@ -676,16 +722,16 @@ class OpeningConditions1Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "ValtnDt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
         },
     )
-    sttlm_rate_src: list[SettlementRateSource1Fxtr01700105] = field(
+    sttlm_rate_src: list[SettlementRateSource1Fxtr01700106] = field(
         default_factory=list,
         metadata={
             "name": "SttlmRateSrc",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_occurs": 1,
             "max_occurs": 2,
         },
@@ -693,13 +739,13 @@ class OpeningConditions1Fxtr01700105(ISO20022MessageElement):
 
 
 @dataclass
-class OtherIdentification1Fxtr01700105(ISO20022MessageElement):
+class OtherIdentification1Fxtr01700106(ISO20022MessageElement):
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -710,40 +756,40 @@ class OtherIdentification1Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "Sfx",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 16,
         },
     )
-    tp: Optional[IdentificationSource3ChoiceFxtr01700105] = field(
+    tp: Optional[IdentificationSource3ChoiceFxtr01700106] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
         },
     )
 
 
 @dataclass
-class PartyIdentification266Fxtr01700105(ISO20022MessageElement):
+class PartyIdentification266Fxtr01700106(ISO20022MessageElement):
     pty_nm: Optional[str] = field(
         default=None,
         metadata={
             "name": "PtyNm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 34,
         },
     )
-    any_bic: Optional[PartyIdentification265Fxtr01700105] = field(
+    any_bic: Optional[PartyIdentification265Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "AnyBIC",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     acct_nb: Optional[str] = field(
@@ -751,7 +797,7 @@ class PartyIdentification266Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "AcctNb",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 34,
         },
@@ -761,17 +807,17 @@ class PartyIdentification266Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "Adr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 105,
         },
     )
-    clr_sys_id: Optional[ClearingSystemIdentification2ChoiceFxtr01700105] = field(
+    clr_sys_id: Optional[ClearingSystemIdentification2ChoiceFxtr01700106] = field(
         default=None,
         metadata={
             "name": "ClrSysId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     lgl_ntty_idr: Optional[str] = field(
@@ -779,20 +825,20 @@ class PartyIdentification266Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "LglNttyIdr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "pattern": r"[A-Z0-9]{18,18}[0-9]{2,2}",
         },
     )
 
 
 @dataclass
-class PostalAddress1Fxtr01700105(ISO20022MessageElement):
+class PostalAddress1Fxtr01700106(ISO20022MessageElement):
     adr_tp: Optional[AddressType2Code] = field(
         default=None,
         metadata={
             "name": "AdrTp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     adr_line: list[str] = field(
@@ -800,7 +846,7 @@ class PostalAddress1Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "AdrLine",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "max_occurs": 5,
             "min_length": 1,
             "max_length": 70,
@@ -811,7 +857,7 @@ class PostalAddress1Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "StrtNm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 70,
         },
@@ -821,7 +867,7 @@ class PostalAddress1Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "BldgNb",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 16,
         },
@@ -831,7 +877,7 @@ class PostalAddress1Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "PstCd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 16,
         },
@@ -841,7 +887,7 @@ class PostalAddress1Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "TwnNm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 35,
         },
@@ -851,7 +897,7 @@ class PostalAddress1Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "CtrySubDvsn",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 35,
         },
@@ -861,7 +907,7 @@ class PostalAddress1Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "Ctry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
             "pattern": r"[A-Z]{2,2}",
         },
@@ -869,13 +915,56 @@ class PostalAddress1Fxtr01700105(ISO20022MessageElement):
 
 
 @dataclass
-class Status27ChoiceFxtr01700105(ISO20022MessageElement):
+class ProductIdentifier3ChoiceFxtr01700106(ISO20022MessageElement):
+    undrlyg_pdct_idr: Optional[UnderlyingProductIdentifier1Code] = field(
+        default=None,
+        metadata={
+            "name": "UndrlygPdctIdr",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
+        },
+    )
+    unq_pdct_idr: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "UnqPdctIdr",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
+            "min_length": 1,
+            "max_length": 12,
+        },
+    )
+
+
+@dataclass
+class ProfitAndLossAmount2Fxtr01700106(ISO20022MessageElement):
+    amt: Optional[ActiveCurrencyAndAmountFxtr01700106] = field(
+        default=None,
+        metadata={
+            "name": "Amt",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
+            "required": True,
+        },
+    )
+    sgn: Optional[bool] = field(
+        default=None,
+        metadata={
+            "name": "Sgn",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
+        },
+    )
+
+
+@dataclass
+class Status27ChoiceFxtr01700106(ISO20022MessageElement):
     cd: Optional[TradeStatus6Code] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     prtry: Optional[str] = field(
@@ -883,7 +972,7 @@ class Status27ChoiceFxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 35,
         },
@@ -891,13 +980,13 @@ class Status27ChoiceFxtr01700105(ISO20022MessageElement):
 
 
 @dataclass
-class Status28ChoiceFxtr01700105(ISO20022MessageElement):
+class Status28ChoiceFxtr01700106(ISO20022MessageElement):
     cd: Optional[TradeStatus7Code] = field(
         default=None,
         metadata={
             "name": "Cd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     prtry: Optional[str] = field(
@@ -905,7 +994,7 @@ class Status28ChoiceFxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "Prtry",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 35,
         },
@@ -913,46 +1002,46 @@ class Status28ChoiceFxtr01700105(ISO20022MessageElement):
 
 
 @dataclass
-class SupplementaryData1Fxtr01700105(ISO20022MessageElement):
+class SupplementaryData1Fxtr01700106(ISO20022MessageElement):
     plc_and_nm: Optional[str] = field(
         default=None,
         metadata={
             "name": "PlcAndNm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 350,
         },
     )
-    envlp: Optional[SupplementaryDataEnvelope1Fxtr01700105] = field(
+    envlp: Optional[SupplementaryDataEnvelope1Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "Envlp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
         },
     )
 
 
 @dataclass
-class AmountsAndValueDate6Fxtr01700105(ISO20022MessageElement):
-    tradg_sd_buy_amt: Optional[CurrencyOrDigitalTokenAmount1ChoiceFxtr01700105] = field(
+class AmountsAndValueDate8Fxtr01700106(ISO20022MessageElement):
+    tradg_sd_buy_amt: Optional[CurrencyOrDigitalTokenAmount2ChoiceFxtr01700106] = field(
         default=None,
         metadata={
             "name": "TradgSdBuyAmt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
         },
     )
-    tradg_sd_sell_amt: Optional[CurrencyOrDigitalTokenAmount1ChoiceFxtr01700105] = (
+    tradg_sd_sell_amt: Optional[CurrencyOrDigitalTokenAmount2ChoiceFxtr01700106] = (
         field(
             default=None,
             metadata={
                 "name": "TradgSdSellAmt",
                 "type": "Element",
-                "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+                "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
                 "required": True,
             },
         )
@@ -962,32 +1051,32 @@ class AmountsAndValueDate6Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "SttlmDt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
         },
     )
 
 
 @dataclass
-class FxcommissionOrFee1Fxtr01700105(ISO20022MessageElement):
+class FxcommissionOrFee1Fxtr01700106(ISO20022MessageElement):
     class Meta:
         name = "FXCommissionOrFee1"
 
-    tp: Optional[FxamountType1ChoiceFxtr01700105] = field(
+    tp: Optional[FxamountType1ChoiceFxtr01700106] = field(
         default=None,
         metadata={
             "name": "Tp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
         },
     )
-    amt_or_rate: Optional[AmountOrRate4ChoiceFxtr01700105] = field(
+    amt_or_rate: Optional[AmountOrRate4ChoiceFxtr01700106] = field(
         default=None,
         metadata={
             "name": "AmtOrRate",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
         },
     )
@@ -996,30 +1085,30 @@ class FxcommissionOrFee1Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "Sgn",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
 
 
 @dataclass
-class NameAndAddress8Fxtr01700105(ISO20022MessageElement):
+class NameAndAddress8Fxtr01700106(ISO20022MessageElement):
     nm: Optional[str] = field(
         default=None,
         metadata={
             "name": "Nm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
             "min_length": 1,
             "max_length": 350,
         },
     )
-    adr: Optional[PostalAddress1Fxtr01700105] = field(
+    adr: Optional[PostalAddress1Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "Adr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     altrntv_idr: list[str] = field(
@@ -1027,7 +1116,7 @@ class NameAndAddress8Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "AltrntvIdr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "max_occurs": 10,
             "min_length": 1,
             "max_length": 35,
@@ -1036,43 +1125,101 @@ class NameAndAddress8Fxtr01700105(ISO20022MessageElement):
 
 
 @dataclass
-class NonDeliverableForwardConditions2Fxtr01700105(ISO20022MessageElement):
-    opng_conds: Optional[OpeningConditions1Fxtr01700105] = field(
+class NonDeliverableForwardConditions2Fxtr01700106(ISO20022MessageElement):
+    opng_conds: Optional[OpeningConditions1Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "OpngConds",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
         },
     )
-    fxg_conds: Optional[FixingConditions1Fxtr01700105] = field(
+    fxg_conds: Optional[FixingConditions1Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "FxgConds",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
 
 
 @dataclass
-class SecurityIdentification19Fxtr01700105(ISO20022MessageElement):
+class PostTradeEvent1Fxtr01700106(ISO20022MessageElement):
+    tp: Optional[PostTradeEventType2ChoiceFxtr01700106] = field(
+        default=None,
+        metadata={
+            "name": "Tp",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
+            "required": True,
+        },
+    )
+    orgnl_ref: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "OrgnlRef",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
+            "required": True,
+            "min_length": 1,
+            "max_length": 35,
+        },
+    )
+    undrlyg_lblty_ref: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "UndrlygLbltyRef",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
+            "min_length": 1,
+            "max_length": 35,
+        },
+    )
+    prft_or_loss_sttlm_dt: Optional[XmlDate] = field(
+        default=None,
+        metadata={
+            "name": "PrftOrLossSttlmDt",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
+        },
+    )
+    prft_or_loss: Optional[ProfitAndLossAmount2Fxtr01700106] = field(
+        default=None,
+        metadata={
+            "name": "PrftOrLoss",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
+        },
+    )
+    outsdng_sttlm_amt: Optional[ActiveOrHistoricCurrencyAndAmountFxtr01700106] = field(
+        default=None,
+        metadata={
+            "name": "OutsdngSttlmAmt",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
+        },
+    )
+
+
+@dataclass
+class SecurityIdentification19Fxtr01700106(ISO20022MessageElement):
     isin: Optional[str] = field(
         default=None,
         metadata={
             "name": "ISIN",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "pattern": r"[A-Z]{2,2}[A-Z0-9]{9,9}[0-9]{1,1}",
         },
     )
-    othr_id: list[OtherIdentification1Fxtr01700105] = field(
+    othr_id: list[OtherIdentification1Fxtr01700106] = field(
         default_factory=list,
         metadata={
             "name": "OthrId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     desc: Optional[str] = field(
@@ -1080,7 +1227,7 @@ class SecurityIdentification19Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "Desc",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 140,
         },
@@ -1088,13 +1235,13 @@ class SecurityIdentification19Fxtr01700105(ISO20022MessageElement):
 
 
 @dataclass
-class StatusAndSubStatus2Fxtr01700105(ISO20022MessageElement):
-    sts_cd: Optional[Status27ChoiceFxtr01700105] = field(
+class StatusAndSubStatus2Fxtr01700106(ISO20022MessageElement):
+    sts_cd: Optional[Status27ChoiceFxtr01700106] = field(
         default=None,
         metadata={
             "name": "StsCd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
         },
     )
@@ -1103,59 +1250,59 @@ class StatusAndSubStatus2Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "SubStsCd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "pattern": r"[a-zA-Z0-9]{4}",
         },
     )
 
 
 @dataclass
-class PartyIdentification242ChoiceFxtr01700105(ISO20022MessageElement):
-    nm_and_adr: Optional[NameAndAddress8Fxtr01700105] = field(
+class PartyIdentification242ChoiceFxtr01700106(ISO20022MessageElement):
+    nm_and_adr: Optional[NameAndAddress8Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "NmAndAdr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    any_bic: Optional[PartyIdentification265Fxtr01700105] = field(
+    any_bic: Optional[PartyIdentification265Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "AnyBIC",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    pty_id: Optional[PartyIdentification266Fxtr01700105] = field(
+    pty_id: Optional[PartyIdentification266Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "PtyId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
 
 
 @dataclass
-class PartyIdentification60Fxtr01700105(ISO20022MessageElement):
+class PartyIdentification60Fxtr01700106(ISO20022MessageElement):
     fnd_id: Optional[str] = field(
         default=None,
         metadata={
             "name": "FndId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
             "min_length": 1,
             "max_length": 35,
         },
     )
-    nm_and_adr: Optional[NameAndAddress8Fxtr01700105] = field(
+    nm_and_adr: Optional[NameAndAddress8Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "NmAndAdr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     lgl_ntty_idr: Optional[str] = field(
@@ -1163,20 +1310,20 @@ class PartyIdentification60Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "LglNttyIdr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "pattern": r"[A-Z0-9]{18,18}[0-9]{2,2}",
         },
     )
 
 
 @dataclass
-class TradeData14Fxtr01700105(ISO20022MessageElement):
+class TradeData14Fxtr01700106(ISO20022MessageElement):
     mtchg_sys_unq_ref: Optional[str] = field(
         default=None,
         metadata={
             "name": "MtchgSysUnqRef",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -1187,7 +1334,7 @@ class TradeData14Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "MtchgSysMtchgRef",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 35,
         },
@@ -1197,7 +1344,7 @@ class TradeData14Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "MtchgSysMtchdSdRef",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 35,
         },
@@ -1207,17 +1354,17 @@ class TradeData14Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "StsOrgtr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 35,
         },
     )
-    cur_sts: Optional[StatusAndSubStatus2Fxtr01700105] = field(
+    cur_sts: Optional[StatusAndSubStatus2Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "CurSts",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
         },
     )
@@ -1226,7 +1373,7 @@ class TradeData14Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "CurStsSubTp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     cur_sts_dt_tm: Optional[XmlDateTime] = field(
@@ -1234,15 +1381,15 @@ class TradeData14Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "CurStsDtTm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    prvs_sts: Optional[Status28ChoiceFxtr01700105] = field(
+    prvs_sts: Optional[Status28ChoiceFxtr01700106] = field(
         default=None,
         metadata={
             "name": "PrvsSts",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     allgd_trad: Optional[bool] = field(
@@ -1250,7 +1397,7 @@ class TradeData14Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "AllgdTrad",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     prvs_sts_sub_tp: Optional[StatusSubType2Code] = field(
@@ -1258,19 +1405,19 @@ class TradeData14Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "PrvsStsSubTp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
 
 
 @dataclass
-class TradeData16Fxtr01700105(ISO20022MessageElement):
+class TradeData16Fxtr01700106(ISO20022MessageElement):
     mtchg_sys_unq_ref: Optional[str] = field(
         default=None,
         metadata={
             "name": "MtchgSysUnqRef",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
             "min_length": 1,
             "max_length": 35,
@@ -1281,7 +1428,7 @@ class TradeData16Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "MtchgSysMtchgRef",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 35,
         },
@@ -1291,7 +1438,7 @@ class TradeData16Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "MtchgSysMtchdSdRef",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 35,
         },
@@ -1301,17 +1448,17 @@ class TradeData16Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "StsOrgtr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 35,
         },
     )
-    cur_sts: Optional[StatusAndSubStatus2Fxtr01700105] = field(
+    cur_sts: Optional[StatusAndSubStatus2Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "CurSts",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
         },
     )
@@ -1320,7 +1467,7 @@ class TradeData16Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "CurStsSubTp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     cur_sts_dt_tm: Optional[XmlDateTime] = field(
@@ -1328,15 +1475,15 @@ class TradeData16Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "CurStsDtTm",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    prvs_sts: Optional[Status28ChoiceFxtr01700105] = field(
+    prvs_sts: Optional[Status28ChoiceFxtr01700106] = field(
         default=None,
         metadata={
             "name": "PrvsSts",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     prvs_sts_sub_tp: Optional[StatusSubType2Code] = field(
@@ -1344,49 +1491,49 @@ class TradeData16Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "PrvsStsSubTp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
 
 
 @dataclass
-class CounterpartySideTransactionReporting2Fxtr01700105(ISO20022MessageElement):
+class CounterpartySideTransactionReporting3Fxtr01700106(ISO20022MessageElement):
     rptg_jursdctn: Optional[str] = field(
         default=None,
         metadata={
             "name": "RptgJursdctn",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 35,
         },
     )
-    rptg_pty: Optional[PartyIdentification242ChoiceFxtr01700105] = field(
+    rptg_pty: Optional[PartyIdentification242ChoiceFxtr01700106] = field(
         default=None,
         metadata={
             "name": "RptgPty",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    ctr_pty_sd_unq_tx_idr: list[UniqueTransactionIdentifier2Fxtr01700105] = field(
+    ctr_pty_sd_unq_tx_idr: list[UniqueTransactionIdentifier3Fxtr01700106] = field(
         default_factory=list,
         metadata={
             "name": "CtrPtySdUnqTxIdr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
 
 
 @dataclass
-class FundIdentification5Fxtr01700105(ISO20022MessageElement):
-    fnd_id: Optional[PartyIdentification60Fxtr01700105] = field(
+class FundIdentification5Fxtr01700106(ISO20022MessageElement):
+    fnd_id: Optional[PartyIdentification60Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "FndId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
         },
     )
@@ -1395,29 +1542,29 @@ class FundIdentification5Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "AcctIdWthCtdn",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 35,
         },
     )
-    ctdn_id: Optional[PartyIdentification242ChoiceFxtr01700105] = field(
+    ctdn_id: Optional[PartyIdentification242ChoiceFxtr01700106] = field(
         default=None,
         metadata={
             "name": "CtdnId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
 
 
 @dataclass
-class GeneralInformation8Fxtr01700105(ISO20022MessageElement):
+class GeneralInformation9Fxtr01700106(ISO20022MessageElement):
     blck_ind: Optional[bool] = field(
         default=None,
         metadata={
             "name": "BlckInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     rltd_trad_ref: Optional[str] = field(
@@ -1425,7 +1572,7 @@ class GeneralInformation8Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "RltdTradRef",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 35,
         },
@@ -1435,15 +1582,15 @@ class GeneralInformation8Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "DealgMtd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    brkr_id: Optional[PartyIdentification242ChoiceFxtr01700105] = field(
+    brkr_id: Optional[PartyIdentification242ChoiceFxtr01700106] = field(
         default=None,
         metadata={
             "name": "BrkrId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     ctr_pty_ref: Optional[str] = field(
@@ -1451,17 +1598,17 @@ class GeneralInformation8Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "CtrPtyRef",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 35,
         },
     )
-    brkrs_comssn: Optional[ActiveCurrencyAndAmountFxtr01700105] = field(
+    brkrs_comssn: Optional[ActiveCurrencyAndAmountFxtr01700106] = field(
         default=None,
         metadata={
             "name": "BrkrsComssn",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     sndr_to_rcvr_inf: Optional[str] = field(
@@ -1469,41 +1616,41 @@ class GeneralInformation8Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "SndrToRcvrInf",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 210,
         },
     )
-    dealg_brnch_tradg_sd: Optional[PartyIdentification242ChoiceFxtr01700105] = field(
+    dealg_brnch_tradg_sd: Optional[PartyIdentification242ChoiceFxtr01700106] = field(
         default=None,
         metadata={
             "name": "DealgBrnchTradgSd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    dealg_brnch_ctr_pty_sd: Optional[PartyIdentification242ChoiceFxtr01700105] = field(
+    dealg_brnch_ctr_pty_sd: Optional[PartyIdentification242ChoiceFxtr01700106] = field(
         default=None,
         metadata={
             "name": "DealgBrnchCtrPtySd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    ctct_inf: Optional[ContactInformation1Fxtr01700105] = field(
+    ctct_inf: Optional[ContactInformation1Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "CtctInf",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    agrmt_dtls: Optional[AgreementConditions1Fxtr01700105] = field(
+    agrmt_dtls: Optional[AgreementConditions1Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "AgrmtDtls",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     defs_yr: Optional[XmlPeriod] = field(
@@ -1511,7 +1658,7 @@ class GeneralInformation8Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "DefsYr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     brkrs_ref: Optional[str] = field(
@@ -1519,157 +1666,174 @@ class GeneralInformation8Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "BrkrsRef",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 35,
         },
     )
+    pmt_clr_centr: Optional[str] = field(
+        default=None,
+        metadata={
+            "name": "PmtClrCentr",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
+            "pattern": r"[A-Z]{2,2}",
+        },
+    )
+    clctn_agt: Optional[CalculationAgent1ChoiceFxtr01700106] = field(
+        default=None,
+        metadata={
+            "name": "ClctnAgt",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
+        },
+    )
 
 
 @dataclass
-class SettlementParties120Fxtr01700105(ISO20022MessageElement):
-    dlvry_agt: Optional[PartyIdentification242ChoiceFxtr01700105] = field(
+class SettlementParties120Fxtr01700106(ISO20022MessageElement):
+    dlvry_agt: Optional[PartyIdentification242ChoiceFxtr01700106] = field(
         default=None,
         metadata={
             "name": "DlvryAgt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    intrmy: Optional[PartyIdentification242ChoiceFxtr01700105] = field(
+    intrmy: Optional[PartyIdentification242ChoiceFxtr01700106] = field(
         default=None,
         metadata={
             "name": "Intrmy",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    rcvg_agt: Optional[PartyIdentification242ChoiceFxtr01700105] = field(
+    rcvg_agt: Optional[PartyIdentification242ChoiceFxtr01700106] = field(
         default=None,
         metadata={
             "name": "RcvgAgt",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
         },
     )
-    bnfcry_instn: Optional[PartyIdentification242ChoiceFxtr01700105] = field(
+    bnfcry_instn: Optional[PartyIdentification242ChoiceFxtr01700106] = field(
         default=None,
         metadata={
             "name": "BnfcryInstn",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
 
 
 @dataclass
-class SplitTradeDetails4Fxtr01700105(ISO20022MessageElement):
-    sts_dtls: Optional[TradeData16Fxtr01700105] = field(
+class SplitTradeDetails5Fxtr01700106(ISO20022MessageElement):
+    sts_dtls: Optional[TradeData16Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "StsDtls",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    trad_amts: Optional[AmountsAndValueDate6Fxtr01700105] = field(
+    trad_amts: Optional[AmountsAndValueDate8Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "TradAmts",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
         },
     )
-    agrd_rate: Optional[AgreedRate3Fxtr01700105] = field(
+    agrd_rate: Optional[AgreedRate3Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "AgrdRate",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
 
 
 @dataclass
-class TradingSideTransactionReporting2Fxtr01700105(ISO20022MessageElement):
+class TradingSideTransactionReporting3Fxtr01700106(ISO20022MessageElement):
     rptg_jursdctn: Optional[str] = field(
         default=None,
         metadata={
             "name": "RptgJursdctn",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 35,
         },
     )
-    rptg_pty: Optional[PartyIdentification242ChoiceFxtr01700105] = field(
+    rptg_pty: Optional[PartyIdentification242ChoiceFxtr01700106] = field(
         default=None,
         metadata={
             "name": "RptgPty",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    tradg_sd_unq_tx_idr: list[UniqueTransactionIdentifier2Fxtr01700105] = field(
+    tradg_sd_unq_tx_idr: list[UniqueTransactionIdentifier3Fxtr01700106] = field(
         default_factory=list,
         metadata={
             "name": "TradgSdUnqTxIdr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
 
 
 @dataclass
-class RegulatoryReporting7Fxtr01700105(ISO20022MessageElement):
-    tradg_sd_tx_rptg: list[TradingSideTransactionReporting2Fxtr01700105] = field(
+class RegulatoryReporting8Fxtr01700106(ISO20022MessageElement):
+    tradg_sd_tx_rptg: list[TradingSideTransactionReporting3Fxtr01700106] = field(
         default_factory=list,
         metadata={
             "name": "TradgSdTxRptg",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    ctr_pty_sd_tx_rptg: list[CounterpartySideTransactionReporting2Fxtr01700105] = field(
+    ctr_pty_sd_tx_rptg: list[CounterpartySideTransactionReporting3Fxtr01700106] = field(
         default_factory=list,
         metadata={
             "name": "CtrPtySdTxRptg",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    cntrl_ctr_pty_clr_hs: Optional[PartyIdentification242ChoiceFxtr01700105] = field(
+    cntrl_ctr_pty_clr_hs: Optional[PartyIdentification242ChoiceFxtr01700106] = field(
         default=None,
         metadata={
             "name": "CntrlCtrPtyClrHs",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    clr_brkr: Optional[PartyIdentification242ChoiceFxtr01700105] = field(
+    clr_brkr: Optional[PartyIdentification242ChoiceFxtr01700106] = field(
         default=None,
         metadata={
             "name": "ClrBrkr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    clr_xcptn_pty: Optional[PartyIdentification242ChoiceFxtr01700105] = field(
+    clr_xcptn_pty: Optional[PartyIdentification242ChoiceFxtr01700106] = field(
         default=None,
         metadata={
             "name": "ClrXcptnPty",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    clr_brkr_id: Optional[ClearingBrokerIdentification1Fxtr01700105] = field(
+    clr_brkr_id: Optional[ClearingBrokerIdentification1Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "ClrBrkrId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     clr_thrshld_ind: Optional[bool] = field(
@@ -1677,7 +1841,7 @@ class RegulatoryReporting7Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "ClrThrshldInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     clrd_pdct_id: Optional[str] = field(
@@ -1685,17 +1849,17 @@ class RegulatoryReporting7Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "ClrdPdctId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 35,
         },
     )
-    undrlyg_pdct_idr: Optional[UnderlyingProductIdentifier1Code] = field(
+    pdct_idr: Optional[ProductIdentifier3ChoiceFxtr01700106] = field(
         default=None,
         metadata={
-            "name": "UndrlygPdctIdr",
+            "name": "PdctIdr",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     allcn_ind: Optional[AllocationIndicator1Code] = field(
@@ -1703,7 +1867,7 @@ class RegulatoryReporting7Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "AllcnInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     collstn_ind: Optional[CollateralisationIndicator1Code] = field(
@@ -1711,7 +1875,7 @@ class RegulatoryReporting7Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "CollstnInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     exctn_vn: Optional[str] = field(
@@ -1719,17 +1883,17 @@ class RegulatoryReporting7Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "ExctnVn",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 35,
         },
     )
-    exctn_tmstmp: Optional[DateAndDateTime2ChoiceFxtr01700105] = field(
+    exctn_tmstmp: Optional[DateAndDateTime2ChoiceFxtr01700106] = field(
         default=None,
         metadata={
             "name": "ExctnTmstmp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     non_std_flg: Optional[bool] = field(
@@ -1737,7 +1901,7 @@ class RegulatoryReporting7Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "NonStdFlg",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     lk_swp_id: Optional[str] = field(
@@ -1745,7 +1909,7 @@ class RegulatoryReporting7Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "LkSwpId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "length": 42,
         },
     )
@@ -1754,7 +1918,7 @@ class RegulatoryReporting7Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "FinNtrOfTheCtrPtyInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     coll_prtfl_ind: Optional[bool] = field(
@@ -1762,7 +1926,7 @@ class RegulatoryReporting7Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "CollPrtflInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     coll_prtfl_cd: Optional[str] = field(
@@ -1770,7 +1934,7 @@ class RegulatoryReporting7Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "CollPrtflCd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 10,
         },
@@ -1780,7 +1944,7 @@ class RegulatoryReporting7Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "PrtflCmprssnInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     corp_sctr_ind: Optional[CorporateSectorIdentifier1Code] = field(
@@ -1788,7 +1952,7 @@ class RegulatoryReporting7Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "CorpSctrInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     trad_wth_non_eeactr_pty_ind: Optional[bool] = field(
@@ -1796,7 +1960,7 @@ class RegulatoryReporting7Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "TradWthNonEEACtrPtyInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     ntrgrp_trad_ind: Optional[bool] = field(
@@ -1804,7 +1968,7 @@ class RegulatoryReporting7Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "NtrgrpTradInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     comrcl_or_trsr_fincg_ind: Optional[bool] = field(
@@ -1812,15 +1976,15 @@ class RegulatoryReporting7Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "ComrclOrTrsrFincgInd",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    fin_instrm_id: Optional[SecurityIdentification19Fxtr01700105] = field(
+    fin_instrm_id: Optional[SecurityIdentification19Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "FinInstrmId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     conf_dt_and_tmstmp: Optional[XmlDateTime] = field(
@@ -1828,7 +1992,7 @@ class RegulatoryReporting7Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "ConfDtAndTmstmp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     clr_tmstmp: Optional[XmlTime] = field(
@@ -1836,15 +2000,15 @@ class RegulatoryReporting7Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "ClrTmstmp",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    comssns_and_fees: list[FxcommissionOrFee1Fxtr01700105] = field(
+    comssns_and_fees: list[FxcommissionOrFee1Fxtr01700106] = field(
         default_factory=list,
         metadata={
             "name": "ComssnsAndFees",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
     addtl_rptg_inf: Optional[str] = field(
@@ -1852,7 +2016,7 @@ class RegulatoryReporting7Fxtr01700105(ISO20022MessageElement):
         metadata={
             "name": "AddtlRptgInf",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "min_length": 1,
             "max_length": 210,
         },
@@ -1860,157 +2024,165 @@ class RegulatoryReporting7Fxtr01700105(ISO20022MessageElement):
 
 
 @dataclass
-class TradePartyIdentification8Fxtr01700105(ISO20022MessageElement):
-    submitg_pty: Optional[PartyIdentification242ChoiceFxtr01700105] = field(
+class TradePartyIdentification8Fxtr01700106(ISO20022MessageElement):
+    submitg_pty: Optional[PartyIdentification242ChoiceFxtr01700106] = field(
         default=None,
         metadata={
             "name": "SubmitgPty",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
         },
     )
-    trad_pty: Optional[PartyIdentification242ChoiceFxtr01700105] = field(
+    trad_pty: Optional[PartyIdentification242ChoiceFxtr01700106] = field(
         default=None,
         metadata={
             "name": "TradPty",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    fnd_id: list[FundIdentification5Fxtr01700105] = field(
+    fnd_id: list[FundIdentification5Fxtr01700106] = field(
         default_factory=list,
         metadata={
             "name": "FndId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
 
 
 @dataclass
-class ForeignExchangeTradeStatusAndDetailsNotificationV05Fxtr01700105(
+class ForeignExchangeTradeStatusAndDetailsNotificationV06Fxtr01700106(
     ISO20022MessageElement
 ):
-    sts_dtls: Optional[TradeData14Fxtr01700105] = field(
+    sts_dtls: Optional[TradeData14Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "StsDtls",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
         },
     )
-    trad_inf: Optional[TradeAgreement12Fxtr01700105] = field(
+    trad_inf: Optional[TradeAgreement12Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "TradInf",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
         },
     )
-    tradg_sd_id: Optional[TradePartyIdentification8Fxtr01700105] = field(
+    tradg_sd_id: Optional[TradePartyIdentification8Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "TradgSdId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
         },
     )
-    ctr_pty_sd_id: Optional[TradePartyIdentification8Fxtr01700105] = field(
+    ctr_pty_sd_id: Optional[TradePartyIdentification8Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "CtrPtySdId",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
         },
     )
-    trad_amts: Optional[AmountsAndValueDate6Fxtr01700105] = field(
+    trad_amts: Optional[AmountsAndValueDate8Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "TradAmts",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
         },
     )
-    agrd_rate: Optional[AgreedRate3Fxtr01700105] = field(
+    agrd_rate: Optional[AgreedRate3Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "AgrdRate",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
             "required": True,
         },
     )
-    ndfconds: Optional[NonDeliverableForwardConditions2Fxtr01700105] = field(
+    ndfconds: Optional[NonDeliverableForwardConditions2Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "NDFConds",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    tradg_sd_sttlm_instrs: Optional[SettlementParties120Fxtr01700105] = field(
+    tradg_sd_sttlm_instrs: Optional[SettlementParties120Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "TradgSdSttlmInstrs",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    ctr_pty_sd_sttlm_instrs: Optional[SettlementParties120Fxtr01700105] = field(
+    ctr_pty_sd_sttlm_instrs: Optional[SettlementParties120Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "CtrPtySdSttlmInstrs",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    gnl_inf: Optional[GeneralInformation8Fxtr01700105] = field(
+    gnl_inf: Optional[GeneralInformation9Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "GnlInf",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    splt_trad_inf: list[SplitTradeDetails4Fxtr01700105] = field(
+    splt_trad_inf: list[SplitTradeDetails5Fxtr01700106] = field(
         default_factory=list,
         metadata={
             "name": "SpltTradInf",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    rgltry_rptg: Optional[RegulatoryReporting7Fxtr01700105] = field(
+    rgltry_rptg: Optional[RegulatoryReporting8Fxtr01700106] = field(
         default=None,
         metadata={
             "name": "RgltryRptg",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
-    splmtry_data: list[SupplementaryData1Fxtr01700105] = field(
+    pst_trad_evt: Optional[PostTradeEvent1Fxtr01700106] = field(
+        default=None,
+        metadata={
+            "name": "PstTradEvt",
+            "type": "Element",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
+        },
+    )
+    splmtry_data: list[SupplementaryData1Fxtr01700106] = field(
         default_factory=list,
         metadata={
             "name": "SplmtryData",
             "type": "Element",
-            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05",
+            "namespace": "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06",
         },
     )
 
 
 @dataclass
-class Fxtr01700105(ISO20022Message):
+class Fxtr01700106(ISO20022Message):
     class Meta:
-        namespace = "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.05"
+        namespace = "urn:iso:std:iso:20022:tech:xsd:fxtr.017.001.06"
 
     fxtrad_sts_and_dtls_ntfctn: Optional[
-        ForeignExchangeTradeStatusAndDetailsNotificationV05Fxtr01700105
+        ForeignExchangeTradeStatusAndDetailsNotificationV06Fxtr01700106
     ] = field(
         default=None,
         metadata={

@@ -656,6 +656,12 @@ class CalculationType1Code(Enum):
     WRST = "WRST"
 
 
+class CallIn1Code(Enum):
+    CFAV = "CFAV"
+    CFST = "CFST"
+    CFCC = "CFCC"
+
+
 class CancelledStatusReason16Code(Enum):
     SCEX = "SCEX"
     OTHR = "OTHR"
