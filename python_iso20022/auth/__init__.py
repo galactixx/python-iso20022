@@ -82,6 +82,7 @@ from python_iso20022.auth.auth_108_001_02.models import Auth10800102
 from python_iso20022.auth.auth_109_001_02.models import Auth10900102
 from python_iso20022.auth.auth_112_001_01.models import Auth11200101
 from python_iso20022.auth.auth_113_001_01.models import Auth11300101
+from python_iso20022.auth.auth_114_001_01.models import Auth11400101
 
 __all__ = [
     "Auth00100102",
@@ -168,4 +169,5 @@ __all__ = [
     "Auth10900102",
     "Auth11200101",
     "Auth11300101",
+    "Auth11400101",
 ]
