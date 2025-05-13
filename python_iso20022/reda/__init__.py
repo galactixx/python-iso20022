@@ -19,6 +19,11 @@ from python_iso20022.reda.reda_020_001_01.models import Reda02000101
 from python_iso20022.reda.reda_021_001_01.models import Reda02100101
 from python_iso20022.reda.reda_022_001_02.models import Reda02200102
 from python_iso20022.reda.reda_023_001_01.models import Reda02300101
+from python_iso20022.reda.reda_024_001_01.models import Reda02400101
+from python_iso20022.reda.reda_025_001_01.models import Reda02500101
+from python_iso20022.reda.reda_026_001_01.models import Reda02600101
+from python_iso20022.reda.reda_027_001_01.models import Reda02700101
+from python_iso20022.reda.reda_028_001_01.models import Reda02800101
 from python_iso20022.reda.reda_029_001_01.models import Reda02900101
 from python_iso20022.reda.reda_030_001_01.models import Reda03000101
 from python_iso20022.reda.reda_031_001_01.models import Reda03100101
@@ -31,6 +36,7 @@ from python_iso20022.reda.reda_037_001_01.models import Reda03700101
 from python_iso20022.reda.reda_041_001_02.models import Reda04100102
 from python_iso20022.reda.reda_042_001_01.models import Reda04200101
 from python_iso20022.reda.reda_043_001_02.models import Reda04300102
+from python_iso20022.reda.reda_044_001_01.models import Reda04400101
 from python_iso20022.reda.reda_045_001_01.models import Reda04500101
 from python_iso20022.reda.reda_046_001_01.models import Reda04600101
 from python_iso20022.reda.reda_047_001_01.models import Reda04700101
@@ -41,6 +47,8 @@ from python_iso20022.reda.reda_056_001_01.models import Reda05600101
 from python_iso20022.reda.reda_057_001_01.models import Reda05700101
 from python_iso20022.reda.reda_058_001_01.models import Reda05800101
 from python_iso20022.reda.reda_059_001_01.models import Reda05900101
+from python_iso20022.reda.reda_060_001_02.models import Reda06000102
+from python_iso20022.reda.reda_061_001_02.models import Reda06100102
 from python_iso20022.reda.reda_064_001_02.models import Reda06400102
 from python_iso20022.reda.reda_065_001_02.models import Reda06500102
 from python_iso20022.reda.reda_066_001_02.models import Reda06600102
@@ -52,6 +60,8 @@ from python_iso20022.reda.reda_071_001_02.models import Reda07100102
 from python_iso20022.reda.reda_072_001_02.models import Reda07200102
 from python_iso20022.reda.reda_073_001_02.models import Reda07300102
 from python_iso20022.reda.reda_074_001_01.models import Reda07400101
+from python_iso20022.reda.reda_075_001_01.models import Reda07500101
+from python_iso20022.reda.reda_077_001_01.models import Reda07700101
 
 __all__ = [
     "Reda00100104",
@@ -75,6 +85,11 @@ __all__ = [
     "Reda02100101",
     "Reda02200102",
     "Reda02300101",
+    "Reda02400101",
+    "Reda02500101",
+    "Reda02600101",
+    "Reda02700101",
+    "Reda02800101",
     "Reda02900101",
     "Reda03000101",
     "Reda03100101",
@@ -87,6 +102,7 @@ __all__ = [
     "Reda04100102",
     "Reda04200101",
     "Reda04300102",
+    "Reda04400101",
     "Reda04500101",
     "Reda04600101",
     "Reda04700101",
@@ -97,6 +113,8 @@ __all__ = [
     "Reda05700101",
     "Reda05800101",
     "Reda05900101",
+    "Reda06000102",
+    "Reda06100102",
     "Reda06400102",
     "Reda06500102",
     "Reda06600102",
@@ -108,4 +126,6 @@ __all__ = [
     "Reda07200102",
     "Reda07300102",
     "Reda07400101",
+    "Reda07500101",
+    "Reda07700101",
 ]
